@@ -22,7 +22,19 @@ def summarize_file(path: Path) -> Dict[str, Any]:
     epochs = mne.read_epochs(str(path), preload=False, verbose=False)
 
     info = epochs.info
-    ch_types = mne.io.pick.channel_type_count(epochs.info)
+    # Derive basic channel type counts in a version-agnostic way
+    def count(**kwargs) -> int:
+        return int(len(mne.pick_types(info, **kwargs)))
+
+    ch_types = {
+        "meg": count(meg=True, eeg=False, eog=False, ecg=False, emg=False, stim=False, misc=False),
+        "eeg": count(meg=False, eeg=True, eog=False, ecg=False, emg=False, stim=False, misc=False),
+        "eog": count(meg=False, eeg=False, eog=True, ecg=False, emg=False, stim=False, misc=False),
+        "ecg": count(meg=False, eeg=False, eog=False, ecg=True, emg=False, stim=False, misc=False),
+        "emg": count(meg=False, eeg=False, eog=False, ecg=False, emg=True, stim=False, misc=False),
+        "stim": count(meg=False, eeg=False, eog=False, ecg=False, emg=False, stim=True, misc=False),
+        "misc": count(meg=False, eeg=False, eog=False, ecg=False, emg=False, stim=False, misc=True),
+    }
     event_id = epochs.event_id.copy() if epochs.event_id is not None else {}
     has_metadata = epochs.metadata is not None
     metadata_cols: List[str] = list(epochs.metadata.columns) if has_metadata else []
@@ -119,4 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
