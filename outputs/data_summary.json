@@ -1,0 +1,122 @@
+[
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-02_preprocessed-epo.fif",
+    "subject": "sub-02",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-03_preprocessed-epo.fif",
+    "subject": "sub-03",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-04_preprocessed-epo.fif",
+    "subject": "sub-04",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-05_preprocessed-epo.fif",
+    "subject": "sub-05",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-08_preprocessed-epo.fif",
+    "subject": "sub-08",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-09_preprocessed-epo.fif",
+    "subject": "sub-09",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-10_preprocessed-epo.fif",
+    "subject": "sub-10",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-11_preprocessed-epo.fif",
+    "subject": "sub-11",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-12_preprocessed-epo.fif",
+    "subject": "sub-12",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-13_preprocessed-epo.fif",
+    "subject": "sub-13",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-14_preprocessed-epo.fif",
+    "subject": "sub-14",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-15_preprocessed-epo.fif",
+    "subject": "sub-15",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-17_preprocessed-epo.fif",
+    "subject": "sub-17",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-21_preprocessed-epo.fif",
+    "subject": "sub-21",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-22_preprocessed-epo.fif",
+    "subject": "sub-22",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-23_preprocessed-epo.fif",
+    "subject": "sub-23",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-25_preprocessed-epo.fif",
+    "subject": "sub-25",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-26_preprocessed-epo.fif",
+    "subject": "sub-26",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-27_preprocessed-epo.fif",
+    "subject": "sub-27",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-28_preprocessed-epo.fif",
+    "subject": "sub-28",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-29_preprocessed-epo.fif",
+    "subject": "sub-29",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-31_preprocessed-epo.fif",
+    "subject": "sub-31",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-32_preprocessed-epo.fif",
+    "subject": "sub-32",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  },
+  {
+    "file": "data\\hpf_1.5_lpf_35_baseline-on\\sub-33_preprocessed-epo.fif",
+    "subject": "sub-33",
+    "error": "module 'mne.io.pick' has no attribute 'channel_type_count'"
+  }
+]
