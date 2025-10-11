@@ -1,0 +1,20 @@
+# Ignore large local data and generated artifacts
+/data/
+
+# If needed explicitly (redundant due to /data/)
+/data/outputs/
+/data/scripts/
+
+# Local tooling directories
+/.codex/
+/.specify/
+
+# Common Python ignores
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.mypy_cache/
+
