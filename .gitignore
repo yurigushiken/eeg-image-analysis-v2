@@ -1,9 +1,15 @@
 # Ignore large local data and generated artifacts
-/data/
+# Explicitly ignore raw epochs directory
+/data/hpf_1.5_lpf_35_baseline-on/
 
-# If needed explicitly (redundant due to /data/)
+# If you later want to track other items under data/,
+# leave the line above and remove the catch‑all /data/ ignore.
+# (Currently we do not include a blanket /data/ ignore.)
+
+# Generated outputs and local scripts under data
 /data/outputs/
 /data/scripts/
+/data/hpf_1.5_lpf_35_baseline-on/
 
 # Local tooling directories
 /.codex/
@@ -17,4 +23,3 @@ __pycache__/
 .venv/
 venv/
 .mypy_cache/
-
