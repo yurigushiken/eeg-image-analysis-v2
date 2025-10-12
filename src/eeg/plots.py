@@ -37,7 +37,8 @@ def make_erp_figure(
     Returns:
         matplotlib Figure object
     """
-    fig, ax = plt.subplots(figsize=(6, 3.5), constrained_layout=True)
+    # Widen the ERP overlay by ~15% for better latency granularity
+    fig, ax = plt.subplots(figsize=(6.9, 3.5), constrained_layout=True)
     for label, y in curves_by_label.items():
         kw = {}
         if colors and label in colors:
@@ -98,7 +99,8 @@ def make_component_figure(
     import mne  # local import for plotting
 
     n_cols = max(1, len(topomap_by_label) or 1)
-    fig = plt.figure(figsize=(6.5, 5.5), constrained_layout=True)
+    # Make the composite figure wider while keeping height the same
+    fig = plt.figure(figsize=(7.475, 5.5), constrained_layout=True)
     gs = fig.add_gridspec(2, n_cols, height_ratios=[2.2, 1.8])
 
     # Check if any condition used fallback (for overlay annotation)
@@ -156,9 +158,9 @@ def make_component_figure(
         ax = fig.add_subplot(gs[1, idx])
         mne.viz.plot_topomap(vec, info, axes=ax, contours=0, show=False)
 
-        # Add asterisk to title if fallback was used
+        # Add asterisk to title if fallback was used and break long text into lines
         title_suffix = "*" if used_fallback else ""
-        ax.set_title(f"{label}{title_suffix} – Peak {peak_ms} ms (±{half_win} ms)", fontsize=8)
+        ax.set_title(f"{label}{title_suffix}\nPeak {peak_ms} ms\n(±{half_win} ms)", fontsize=8)
 
     return fig
 

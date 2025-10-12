@@ -107,10 +107,11 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     sep = "</thead>"
     rows = []
     for ln in lines:
-        if ln.strip().startswith("<thead>") or ln.strip().startswith("</thead>"):
+        s = ln.strip()
+        if s.startswith("<thead>") or s.startswith("</thead>"):
             continue
-        if ln.strip().startswith("<tr>"):
-            rows.append(ln.strip())
+        if s.startswith("<tr>"):
+            rows.append(s)
 
     def make_cell(comp: str) -> str:
         img = component_to_image.get(comp)
@@ -126,11 +127,14 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     )
 
     # Replace if exists, else insert
+    import re
     row_map = {}
+    pattern = re.compile(r"<tr><td>([^<]+)</td>.*</tr>")
     for r in rows:
-        parts = [p.strip() for p in r.strip('|').split('|')]
-        if parts:
-            row_map[parts[0]] = r
+        m = pattern.match(r)
+        key = m.group(1) if m else r
+        row_map[key] = r
+    # Replace or insert this analysis row
     row_map[analysis_id] = new_row
 
     # Rebuild sorted rows
