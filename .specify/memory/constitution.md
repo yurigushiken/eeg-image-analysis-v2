@@ -1,50 +1,82 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: (none) -> 1.0.0
+- Modified principles: Initial creation
+- Added sections: Core Principles, Additional Constraints, Development Workflow, Governance
+- Removed sections: None
+- Templates requiring updates (pending):
+  - .specify/templates/plan-template.md
+  - .specify/templates/spec-template.md
+  - .specify/templates/tasks-template.md
+- Follow-up TODOs:
+  - TODO(ENV_FILE): Add environment.yml for `numbers-eeg` with exact versions
+  - TODO(CONFIGS): Add configs/electrodes.yaml, components.yaml, analyses/*.yaml
+  - TODO(MAPPINGS): Optional mapping from numeric event labels to descriptive names
+-->
+
+# EEG Image Analysis Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Reproducible Environment (NON-NEGOTIABLE)
+All analysis must run under a declared Python environment. The canonical
+environment name is `numbers-eeg` (Python 3.12). Dependencies must be pinned and
+captured in a shareable spec (environment.yml). Analyses and figures must be
+rebuildable by running documented commands without manual steps.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Data Governance and Local-Only Raw Files
+Raw/participant EEG FIF files live under `data/` and are not tracked by Git.
+Generated intermediates go to `data/outputs/` (ignored). Only finalized plots
+and summary tables required for publication are committed to `docs/`.
+No PII is allowed in the repository.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Declarative, YAML‑Driven Analyses
+Analyses are defined via YAML configurations under `configs/`. A small, stable
+CLI loads these configs, selects trials using metadata fields (e.g.,
+`direction`, `change_group`, `size`), computes ERPs/measures, and writes
+results. Adding a new analysis means adding a YAML file, not new imperative
+code.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. ERP Component Standards and ROIs
+We predefine components and time windows (e.g., N1: 125–200 ms; P3b: 300–600 ms)
+and named ROIs using electrode labels. The Net montage is
+`net/AdultAverageNet128_v1.sfp`. Plots use consistent baselining (−100–0 ms),
+overlay style, and SEM shading for group results.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Documentation as an Artifact
+Every analysis writes a Markdown page under `docs/analysis/` with a brief method
+summary, figure gallery, and links to CSV tables. GitHub Pages publishes from
+`/docs`.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Additional Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+1. Performance: Scripts must stream or batch-load subjects; avoid loading all
+   data into memory at once when not required.
+2. Integrity checks: Before computation, validate epochs: sample rate, channel
+   count, metadata columns presence, and event_id sanity. Fail fast with clear
+   messages.
+3. Determinism: Random operations must set seeds recorded in outputs.
+4. Paths: Use relative project paths and `Path` utilities; do not hard-code
+   user-specific directories.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+1. Config-first changes: propose/edit YAML in `configs/` and review diffs.
+2. Small core library under `src/eeg/` with modules for I/O, selection, ERP,
+   measures, plots, and reporting. Avoid proliferation of ad-hoc scripts.
+3. QC then analysis: each run emits a QC summary alongside figures; CI may run
+   lightweight schema checks on YAML and smoke tests (no raw data in CI).
+4. Output policy: commit only items in `docs/**` needed for the website. Leave
+   `data/**` outputs untracked.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- This constitution governs analysis structure, environment, and publication
+  standards. It supersedes ad-hoc conventions.
+- Amendments require: a proposal PR, a version bump per semantic versioning,
+  migration notes if breaking, and README/docs updates as needed.
+- Compliance: PR reviewers must verify that new analyses adhere to YAML-driven
+  patterns, environment reproducibility, and documentation outputs.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-10-11 | **Last Amended**: 2025-10-11
+

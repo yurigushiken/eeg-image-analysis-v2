@@ -1,7 +1,7 @@
 EEG Image Analysis – Data Overview and Usage
 
 - Python: `3.12`
-- Recommended env: `conda activate numbers-eeg`
+- Recommended env: `conda activate eeg-image`
 
 If `conda` is not available on your PATH, you can still run the scripts with any Python 3.12 environment that has `mne`, `pandas`, `numpy`, and `matplotlib` installed.
 
@@ -72,3 +72,12 @@ Mentor notes (understanding the objects)
 Next steps (optional)
 - Map numeric event labels ("0"–"29") to descriptive names using combinations of `Condition`, `direction`, `change_group`, and `size` for clearer figures.
 - Add group-level plots (e.g., grand averages across subjects) and basic QC (channel type counts, bad channels, etc.).
+
+Website
+- GitHub Pages serves from /docs
+- Homepage (docs/index.md) shows a grid of analysis thumbnails:
+  - Rows are analysis_id (alphabetical)
+  - Columns per row are P1, N1, P3b thumbnails when present
+  - Clicking a thumbnail opens a full-size overlay (lightbox)
+- Figures are PNG at high DPI (configurable); thumbnails are smaller copies
+- Each figure has a title (analysis id, response, component) and a subtitle (baseline, �peak window, ROI rule, condition summary)
