@@ -6,10 +6,16 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "Small_Increasing"
-      conditions: ["12", "13", "23"]
-    - name: "Small_Decreasing"
-      conditions: ["32", "31", "21"]
+    - name: "Increasing 1 to 2"
+      conditions: ["12"]
+    - name: "Cardinality2"
+      conditions: ["22"]
+    - name: "Decreasing 3 to 2"
+      conditions: ["32"]
+    - name: "Decreasing 4 to 2"
+      conditions: ["42"]
+    - name: "Decreasing 5 to 2"
+      conditions: ["52"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
@@ -19,13 +25,8 @@ plots:
   formats: ["png"]
   dpi: 300
   colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
-  linestyles:
-    NC: "-"
-    Decrease: ":"
-    Increasing: "--"
 outputs:
   page: "single"
-  plots_dir: "docs/assets/plots/small_increasing_vs_decreasing"
-  tables_dir: "docs/assets/tables/small_increasing_vs_decreasing"
-  page: "docs/analysis/small_increasing_vs_decreasing.md"
-
+  plots_dir: "docs/assets/plots/landing_on_2"
+  tables_dir: "docs/assets/tables/landing_on_2"
+  page: "docs/analysis/landing_on_2.md"

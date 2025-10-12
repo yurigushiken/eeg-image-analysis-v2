@@ -38,10 +38,10 @@ def make_erp_figure(
         matplotlib Figure object
     """
     # Widen the ERP overlay by ~15% for better latency granularity
-    fig, ax = plt.subplots(figsize=(6.9, 3.9), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(6.9, 4.2), constrained_layout=True)
     # Increase padding between suptitle and axes to avoid overlap
     try:
-        fig.set_constrained_layout_pads(h_pad=0.2, hspace=0.3, w_pad=0.12, wspace=0.2)
+        fig.set_constrained_layout_pads(h_pad=0.35, hspace=0.35, w_pad=0.14, wspace=0.22)
     except Exception:
         pass
     for label, y in curves_by_label.items():
@@ -80,12 +80,12 @@ def make_erp_figure(
     if subtitle:
         # Place subtitle just below the main title at figure level
         try:
-            fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
+            fig.text(0.5, 0.90, subtitle, ha="center", fontsize=9)
         except Exception:
             pass
     if annotate_fallback:
         ax.text(0.99, 0.02, "Fallback window used", transform=ax.transAxes, fontsize=8, va="bottom", ha="right")
-    ax.legend(loc="best", fontsize=8)
+    ax.legend(loc="lower right", fontsize=7, frameon=True, framealpha=0.9)
     return fig
 
 
@@ -125,13 +125,14 @@ def make_component_figure(
 
     n_cols = max(1, len(topomap_by_label) or 1)
     # Make the composite figure wider while keeping height the same
-    fig = plt.figure(figsize=(7.475, 6.0), constrained_layout=True)
+    fig = plt.figure(figsize=(7.475, 6.4), constrained_layout=True)
     # Increase global padding to separate suptitle from axes titles
     try:
-        fig.set_constrained_layout_pads(h_pad=0.22, hspace=0.3, w_pad=0.12, wspace=0.2)
+        # Reserve ample top margin for title/subtitle, minimize gap between overlay and topomaps
+        fig.set_constrained_layout_pads(h_pad=0.70, hspace=0.04, w_pad=0.14, wspace=0.22)
     except Exception:
         pass
-    gs = fig.add_gridspec(2, n_cols, height_ratios=[2.2, 1.8])
+    gs = fig.add_gridspec(2, n_cols, height_ratios=[2.0, 1.9])
 
     # Check if any condition used fallback (for overlay annotation)
     any_fallback = False
@@ -167,7 +168,7 @@ def make_component_figure(
     # Figure-level main title
     if title:
         try:
-            fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
+            t = fig.suptitle(title, fontsize=11, fontweight="bold", y=0.985, va="bottom")
         except Exception:
             pass
     ax_overlay.set_xlabel("Time (ms)")
@@ -190,12 +191,13 @@ def make_component_figure(
 
     # Add asterisk note to legend if any fallback used
     legend_title = "* = fallback window used" if any_fallback else None
-    ax_overlay.legend(loc="best", fontsize=8, title=legend_title, title_fontsize=7)
+    ax_overlay.legend(loc="lower right", fontsize=7, title=legend_title, title_fontsize=7, frameon=True, framealpha=0.9)
 
     # Figure-level subtitle to avoid occlusion
     if subtitle:
         try:
-            fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
+            # Subtitle slightly below the figure title, anchored by its top edge
+            fig.text(0.5, 0.945, subtitle, ha="center", va="top", fontsize=9)
         except Exception:
             pass
 

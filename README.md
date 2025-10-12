@@ -156,7 +156,7 @@ roi:
 # Plotting options
 plots:
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a"]
+  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
   linestyles:
     NC: "-"
     Decrease: ":"

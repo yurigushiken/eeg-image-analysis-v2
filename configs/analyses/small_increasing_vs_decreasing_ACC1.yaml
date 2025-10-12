@@ -18,6 +18,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
+  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
 outputs:
   page: "single"
   plots_dir: "docs/assets/plots/small_increasing_vs_decreasing_ACC1"
