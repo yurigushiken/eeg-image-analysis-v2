@@ -38,7 +38,12 @@ def make_erp_figure(
         matplotlib Figure object
     """
     # Widen the ERP overlay by ~15% for better latency granularity
-    fig, ax = plt.subplots(figsize=(6.9, 3.5), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(6.9, 3.9), constrained_layout=True)
+    # Increase padding between suptitle and axes to avoid overlap
+    try:
+        fig.set_constrained_layout_pads(h_pad=0.2, hspace=0.3, w_pad=0.12, wspace=0.2)
+    except Exception:
+        pass
     for label, y in curves_by_label.items():
         kw = {}
         if colors and label in colors:
@@ -49,15 +54,35 @@ def make_erp_figure(
     ax.axvline(0, color="#999", linewidth=1, alpha=0.6)
     ax.set_xlabel("Time (ms)")
     ax.set_ylabel("Amplitude (a.u.)")
-    ax.set_title(title)
+    # Use figure-level title to keep consistent placement across figures
+    if title:
+        try:
+            fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
+        except Exception:
+            pass
 
     # Set x-axis limits if requested (e.g., start from baseline onset)
     if xlim_ms is not None:
         ax.set_xlim(xlim_ms)
 
+    # Light gridlines to aid visual alignment
+    try:
+        from matplotlib.ticker import MultipleLocator, AutoMinorLocator
+        ax.xaxis.set_major_locator(MultipleLocator(100))  # 100 ms major ticks
+        ax.xaxis.set_minor_locator(MultipleLocator(50))   # 50 ms minor ticks
+        ax.yaxis.set_minor_locator(AutoMinorLocator(2))   # 2 minor intervals per major
+    except Exception:
+        pass
+    ax.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
+
     # Avoid overlapping text at the top; use figure-level subtitle instead
     if subtitle:
-        fig.suptitle(f"\n{subtitle}", fontsize=9, y=0.98)
+        # Place subtitle just below the main title at figure level
+        try:
+            fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
+        except Exception:
+            pass
     if annotate_fallback:
         ax.text(0.99, 0.02, "Fallback window used", transform=ax.transAxes, fontsize=8, va="bottom", ha="right")
     ax.legend(loc="best", fontsize=8)
@@ -100,7 +125,12 @@ def make_component_figure(
 
     n_cols = max(1, len(topomap_by_label) or 1)
     # Make the composite figure wider while keeping height the same
-    fig = plt.figure(figsize=(7.475, 5.5), constrained_layout=True)
+    fig = plt.figure(figsize=(7.475, 6.0), constrained_layout=True)
+    # Increase global padding to separate suptitle from axes titles
+    try:
+        fig.set_constrained_layout_pads(h_pad=0.22, hspace=0.3, w_pad=0.12, wspace=0.2)
+    except Exception:
+        pass
     gs = fig.add_gridspec(2, n_cols, height_ratios=[2.2, 1.8])
 
     # Check if any condition used fallback (for overlay annotation)
@@ -134,7 +164,12 @@ def make_component_figure(
         vkw = {"color": (colors.get(label) if colors and label in colors else "#666"), "alpha": 0.25, "linestyle": "--"}
         ax_overlay.axvline(peak_ms, **vkw)
 
-    ax_overlay.set_title(title)
+    # Figure-level main title
+    if title:
+        try:
+            fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
+        except Exception:
+            pass
     ax_overlay.set_xlabel("Time (ms)")
     ax_overlay.set_ylabel("Amplitude (a.u.)")
 
@@ -142,13 +177,27 @@ def make_component_figure(
     if xlim_ms is not None:
         ax_overlay.set_xlim(xlim_ms)
 
+    # Light gridlines for overlay
+    try:
+        from matplotlib.ticker import MultipleLocator, AutoMinorLocator
+        ax_overlay.xaxis.set_major_locator(MultipleLocator(100))
+        ax_overlay.xaxis.set_minor_locator(MultipleLocator(50))
+        ax_overlay.yaxis.set_minor_locator(AutoMinorLocator(2))
+    except Exception:
+        pass
+    ax_overlay.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
+    ax_overlay.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
+
     # Add asterisk note to legend if any fallback used
     legend_title = "* = fallback window used" if any_fallback else None
     ax_overlay.legend(loc="best", fontsize=8, title=legend_title, title_fontsize=7)
 
     # Figure-level subtitle to avoid occlusion
     if subtitle:
-        fig.suptitle(f"\n{subtitle}", fontsize=9, y=0.98)
+        try:
+            fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
+        except Exception:
+            pass
 
     # Bottom row: topomaps per condition set
     for idx, (label, tup) in enumerate(sorted(topomap_by_label.items())):

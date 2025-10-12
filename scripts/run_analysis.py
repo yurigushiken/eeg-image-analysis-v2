@@ -25,10 +25,10 @@ if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
 from eeg.config import load_config, load_components_config, load_electrodes_config
-from eeg.plots import make_collapsed_localizer_figure, make_component_figure
+from eeg.plots import make_collapsed_localizer_figure, make_component_figure, make_erp_figure
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
-from eeg.collapsed_localizer import compute_all_collapsed_localizers
+from eeg.collapsed_localizer import compute_collapsed_localizer
 from eeg.measures import mean_amplitude
 import matplotlib.pyplot as plt
 import mne
@@ -198,24 +198,37 @@ def main() -> int:
     print("Computing GFP-based collapsed localizer...")
     print("(Averaging ALL conditions to find unbiased component peaks)\n")
 
-    try:
-        collapsed_results = compute_all_collapsed_localizers(
-            evokeds_by_set=set_name_to_evokeds,
-            components_config=components_cfg,
-            requested_components=cfg.components,  # Only analyze requested components
-        )
-    except ValueError as e:
-        print(f"\nERROR: Collapsed localizer failed: {e}")
-        print("\nThis means a component could not be detected in your data.")
-        print("Possible reasons:")
-        print("  1. Component not present in this paradigm")
-        print("  2. Search range in components.yaml is incorrect")
-        print("  3. Data quality issues (check preprocessing)")
-        print("\nAnalysis cannot proceed without valid component detection.")
-        return 1
+    # Compute collapsed localizer per component so failures don't abort the run
+    collapsed_results = {}
+    failed_components = []
+    for comp in cfg.components:
+        comp_cfg = components_cfg.get(comp, {})
+        sr = comp_cfg.get("window_ms")
+        if not sr or len(sr) != 2:
+            print(f"  Skipping {comp}: invalid search range in components.yaml -> {sr}")
+            failed_components.append(comp)
+            continue
+        try:
+            res = compute_collapsed_localizer(
+                evokeds_by_set=set_name_to_evokeds,
+                component_name=comp,
+                search_range_ms=tuple(sr),
+            )
+            collapsed_results[comp] = res
+            print(
+                f"  {comp}: peak at {res['peak_latency_ms']} ms, FWHM window "
+                f"[{res['window_start_ms']:.1f}, {res['window_end_ms']:.1f}] ms "
+                f"(width: {res['fwhm_ms']:.1f} ms)"
+            )
+        except ValueError as e:
+            print(f"  Warning: {comp} collapsed localizer failed: {e}")
+            failed_components.append(comp)
 
-    print(f"\nCollapsed localizer completed successfully!")
-    print(f"Detected {len(collapsed_results)} components.\n")
+    if collapsed_results:
+        print(f"\nCollapsed localizer completed successfully for: {list(collapsed_results.keys())}\n")
+    else:
+        print("\nERROR: Collapsed localizer failed for all requested components; aborting.")
+        return 1
 
     # Generate collapsed localizer plot
     first_evoked = list(set_name_to_evokeds.values())[0][0]
@@ -247,17 +260,24 @@ def main() -> int:
 
     for comp in cfg.components:
         if comp not in collapsed_results:
-            print(f"  Skipping {comp}: not detected in collapsed localizer")
-            continue
+            print(f"  {comp}: No GFP window detected; generating ERP overlay only (no topomaps).")
 
-        # Get GFP-derived window for this component
-        comp_result = collapsed_results[comp]
-        peak_lat = comp_result['peak_latency_ms']
-        window_start = comp_result['window_start_ms']
-        window_end = comp_result['window_end_ms']
-        fwhm = comp_result['fwhm_ms']
-
-        print(f"  Processing {comp}: peak {peak_lat} ms, FWHM window [{window_start:.1f}, {window_end:.1f}] ms")
+        # Get GFP-derived window for this component if available
+        comp_result = collapsed_results.get(comp)
+        if comp_result is not None:
+            peak_lat = comp_result['peak_latency_ms']
+            window_start = comp_result['window_start_ms']
+            window_end = comp_result['window_end_ms']
+            fwhm = comp_result['fwhm_ms']
+            print(
+                f"  Processing {comp}: peak {peak_lat} ms, FWHM window "
+                f"[{window_start:.1f}, {window_end:.1f}] ms"
+            )
+        else:
+            peak_lat = None
+            window_start = None
+            window_end = None
+            fwhm = None
 
         # Get ROI channels for this component
         comp_cfg = components_cfg.get(comp, {})
@@ -299,46 +319,54 @@ def main() -> int:
                 print(f"    Warning: Could not extract ROI channels for {set_name}: {e}")
                 continue
 
-            # Extract topomap data using GFP-derived FWHM window
-            # Convert window to seconds for MNE
-            tmin = window_start / 1000.0
-            tmax = window_end / 1000.0
+            if comp_result is not None:
+                # Extract topomap data using GFP-derived FWHM window
+                tmin = window_start / 1000.0
+                tmax = window_end / 1000.0
+                try:
+                    evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
+                    mean_vec = evk_win.data.mean(axis=1)
+                    half_win = fwhm / 2.0
+                    topomap_by_label[set_name] = (mean_vec, int(peak_lat), int(half_win), False)
 
-            try:
-                evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
-                mean_vec = evk_win.data.mean(axis=1)
-                # Store: (topomap_vector, peak_latency_ms, half_window_ms, used_fallback)
-                # For GFP approach, used_fallback is always False
-                half_win = fwhm / 2.0
-                topomap_by_label[set_name] = (mean_vec, int(peak_lat), int(half_win), False)
+                    # Record amplitude measurement for statistical analysis
+                    roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
+                    condition_measurements.append({
+                        "analysis_id": analysis_id,
+                        "component": comp,
+                        "condition": set_name,
+                        "n_subjects": len(evoked_list),
+                        "peak_latency_ms": float(peak_lat),
+                        "window_start_ms": float(window_start),
+                        "window_end_ms": float(window_end),
+                        "fwhm_ms": float(fwhm),
+                        "mean_amplitude_roi": roi_mean_amplitude,
+                        "roi_channels": ";".join(roi_channels),
+                    })
+                except Exception as e:
+                    print(f"    Warning: Could not extract topomap for {set_name}: {e}")
+                    continue
 
-                # Record amplitude measurement for statistical analysis
-                # Calculate mean amplitude in ROI channels within FWHM window
-                roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
-
-                condition_measurements.append({
-                    "analysis_id": analysis_id,
-                    "component": comp,
-                    "condition": set_name,
-                    "n_subjects": len(evoked_list),
-                    "peak_latency_ms": float(peak_lat),
-                    "window_start_ms": float(window_start),
-                    "window_end_ms": float(window_end),
-                    "fwhm_ms": float(fwhm),
-                    "mean_amplitude_roi": roi_mean_amplitude,
-                    "roi_channels": ";".join(roi_channels),
-                })
-            except Exception as e:
-                print(f"    Warning: Could not extract topomap for {set_name}: {e}")
-                continue
-
-        # Generate component figure if we have data
+        # Generate component figure
         if curves_by_label and topomap_by_label and times_ms is not None and gav_info is not None:
-            # Prepare color/linestyle configuration
+            # Prepare color configuration
             color_list = cfg.plots.get("colors") or []
             colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
+
+            # Dynamic linestyle rules by label text
             styles_cfg = cfg.plots.get("linestyles") or {}
             linestyles = {k: v for k, v in styles_cfg.items()}
+            def _style_for(label: str) -> str:
+                lower = label.lower()
+                if "cardinality" in lower:
+                    return "-"
+                if "decreasing" in lower:
+                    return ":"
+                if "increasing" in lower:
+                    return "--"
+                return linestyles.get(label, "-")
+            # Apply rules
+            linestyles = {label: _style_for(label) for label in curves_by_label.keys()}
 
             # Set x-axis limits to start from baseline onset
             xlim_ms = (baseline[0], float(times_ms[-1]))
@@ -356,14 +384,46 @@ def main() -> int:
             )
 
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
-            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)))
+            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
             saved_figs.append(out_path)
             saved_figs_map[comp] = out_path
 
             print(f"    Saved: {os.path.basename(out_path)}")
+        elif curves_by_label and times_ms is not None:
+            # Overlay-only ERP figure (no topomaps, no dashed GFP lines)
+            color_list = cfg.plots.get("colors") or []
+            colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
+            styles_cfg = cfg.plots.get("linestyles") or {}
+            base_linestyles = {k: v for k, v in styles_cfg.items()}
+            def _style_for(label: str) -> str:
+                lower = label.lower()
+                if "cardinality" in lower:
+                    return "-"
+                if "decreasing" in lower:
+                    return ":"
+                if "increasing" in lower:
+                    return "--"
+                return base_linestyles.get(label, "-")
+            linestyles = {label: _style_for(label) for label in curves_by_label.keys()}
+            xlim_ms = (baseline[0], float(times_ms[-1]))
+            fig = make_erp_figure(
+                curves_by_label=curves_by_label,
+                times_ms=times_ms,
+                title=f"{analysis_id}: {comp} ({response})",
+                subtitle=f"baseline {baseline} ms; GFP window unavailable",
+                colors=colors,
+                linestyles=linestyles,
+                xlim_ms=xlim_ms,
+            )
+            out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
+            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+            plt.close(fig)
+            saved_figs.append(out_path)
+            saved_figs_map[comp] = out_path
+            print(f"    Saved (ERP only): {os.path.basename(out_path)}")
         else:
-            print(f"    Warning: Insufficient data to generate figure for {comp}")
+            print(f"    Warning: Insufficient data to generate ERP for {comp}")
 
     print()
 

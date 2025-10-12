@@ -7,6 +7,6 @@ components:
     window_ms: [125, 200]
     rois: [N1_L, N1_R]
   P3b:
-    window_ms: [320, 420]
+    window_ms: [320, 590]
     rois: [P3B]
 

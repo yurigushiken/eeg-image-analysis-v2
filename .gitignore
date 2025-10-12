@@ -6,13 +6,18 @@
 # leave the line above and remove the catch‑all /data/ ignore.
 # (Currently we do not include a blanket /data/ ignore.)
 
-# Ignore all dataset contents
+# Ignore all dataset contents, but keep placeholder files
 /data/**
+!/data/lab-data-original/
+!/data/lab-data-original/.gitkeep
+!/data/lab-data-original/README.md
+!/data/hpf_1.5_lpf_35_baseline-on/
+!/data/hpf_1.5_lpf_35_baseline-on/.gitkeep
+!/data/hpf_1.5_lpf_35_baseline-on/README.md
 
 # Generated outputs and local scripts under data (explicit for clarity)
 /data/outputs/
 /data/scripts/
-/data/hpf_1.5_lpf_35_baseline-on/
 
 # Build/artifacts and virtual envs
 dist/
@@ -60,7 +65,9 @@ venv/
 /temp/
 /manuscript/
 
+/lab_data/
 
+/(archive)/
 
 
 

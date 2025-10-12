@@ -1,6 +1,6 @@
 # EEG Image Analysis v2 – YAML-Driven ERP Pipeline
 
-A reproducible, configuration-driven pipeline for EEG event-related potential (ERP) analysis with automated figure generation and GitHub Pages publishing.
+Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZpuZeM0nJjyMoPFPM?usp=drive_link
 
 ## Overview
 
@@ -51,7 +51,7 @@ python -c "import mne; print(f'MNE version: {mne.__version__}')"
 ### 2. Run Your First Analysis
 
 ```bash
-# Run the sample "Small Increasing vs Decreasing" analysis
+# Run the sample "Small Increasing vs Decreasing" analysis (default dataset)
 python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing.yaml
 ```
 
@@ -127,8 +127,9 @@ Each analysis is defined by a YAML file with these key sections:
 ```yaml
 # Dataset configuration
 dataset:
-  root: "data"
-  pattern: "**/sub-*_preprocessed-epo.fif"
+  # Default dataset (FIFs converted from HAPPE-derived EEGLAB .set)
+  root: "data/lab-data-original"
+  pattern: "sub-*_preprocessed-epo.fif"
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 
 # Trial selection
@@ -175,6 +176,12 @@ See [configs/analyses/](configs/analyses/) for complete examples.
 ## The Data
 
 This repository analyzes preprocessed EEG epochs in MNE-Python FIF format:
+
+### Dataset options
+- Default: `data/lab-data-original` (empty in Git; place your converted FIFs here)
+- Alternate: `data/hpf_1.5_lpf_35_baseline-on` (empty in Git)
+
+Both directories include a small README placeholder and are kept empty in version control. Real data are gitignored. To switch datasets, edit `dataset.root` in the YAML(s) under `configs/analyses/`.
 
 **Dataset characteristics:**
 - 24 subjects (files like `sub-02_preprocessed-epo.fif`)
@@ -236,6 +243,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
 - **GFP-derived FWHM windows**: Component windows come from the GFP-based collapsed localizer (no manual ±20ms). All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
+- **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
 
 - **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
 

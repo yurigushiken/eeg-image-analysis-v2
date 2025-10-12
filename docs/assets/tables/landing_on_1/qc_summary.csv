@@ -1,0 +1,97 @@
+subject,set,included,epoch_count,exclusion_reason
+02,Cardinality1,False,7,insufficient_epochs(<8)
+02,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+02,Decreasing 3 to 1,True,8,
+02,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+03,Cardinality1,False,3,insufficient_epochs(<8)
+03,Decreasing 2 to 1,True,9,
+03,Decreasing 3 to 1,False,6,insufficient_epochs(<8)
+03,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+04,Cardinality1,True,8,
+04,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+04,Decreasing 3 to 1,True,9,
+04,Decreasing 4 to 1,False,6,insufficient_epochs(<8)
+05,Cardinality1,False,7,insufficient_epochs(<8)
+05,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+05,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+05,Decreasing 4 to 1,False,4,insufficient_epochs(<8)
+08,Cardinality1,False,6,insufficient_epochs(<8)
+08,Decreasing 2 to 1,False,7,insufficient_epochs(<8)
+08,Decreasing 3 to 1,False,6,insufficient_epochs(<8)
+08,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+09,Cardinality1,False,4,insufficient_epochs(<8)
+09,Decreasing 2 to 1,False,7,insufficient_epochs(<8)
+09,Decreasing 3 to 1,False,4,insufficient_epochs(<8)
+09,Decreasing 4 to 1,False,4,insufficient_epochs(<8)
+10,Cardinality1,False,5,insufficient_epochs(<8)
+10,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+10,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+10,Decreasing 4 to 1,False,3,insufficient_epochs(<8)
+11,Cardinality1,False,6,insufficient_epochs(<8)
+11,Decreasing 2 to 1,False,4,insufficient_epochs(<8)
+11,Decreasing 3 to 1,False,4,insufficient_epochs(<8)
+11,Decreasing 4 to 1,False,4,insufficient_epochs(<8)
+12,Cardinality1,False,4,insufficient_epochs(<8)
+12,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+12,Decreasing 3 to 1,True,8,
+12,Decreasing 4 to 1,False,5,insufficient_epochs(<8)
+13,Cardinality1,True,9,
+13,Decreasing 2 to 1,False,7,insufficient_epochs(<8)
+13,Decreasing 3 to 1,False,6,insufficient_epochs(<8)
+13,Decreasing 4 to 1,False,6,insufficient_epochs(<8)
+14,Cardinality1,False,6,insufficient_epochs(<8)
+14,Decreasing 2 to 1,True,9,
+14,Decreasing 3 to 1,False,6,insufficient_epochs(<8)
+14,Decreasing 4 to 1,False,6,insufficient_epochs(<8)
+15,Cardinality1,False,7,insufficient_epochs(<8)
+15,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+15,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+15,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+17,Cardinality1,False,6,insufficient_epochs(<8)
+17,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+17,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+17,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+21,Cardinality1,False,7,insufficient_epochs(<8)
+21,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+21,Decreasing 3 to 1,True,8,
+21,Decreasing 4 to 1,False,5,insufficient_epochs(<8)
+22,Cardinality1,False,7,insufficient_epochs(<8)
+22,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+22,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+22,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+23,Cardinality1,False,6,insufficient_epochs(<8)
+23,Decreasing 2 to 1,True,8,
+23,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+23,Decreasing 4 to 1,True,8,
+25,Cardinality1,True,9,
+25,Decreasing 2 to 1,False,7,insufficient_epochs(<8)
+25,Decreasing 3 to 1,False,5,insufficient_epochs(<8)
+25,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+26,Cardinality1,False,7,insufficient_epochs(<8)
+26,Decreasing 2 to 1,True,8,
+26,Decreasing 3 to 1,False,4,insufficient_epochs(<8)
+26,Decreasing 4 to 1,False,6,insufficient_epochs(<8)
+27,Cardinality1,False,7,insufficient_epochs(<8)
+27,Decreasing 2 to 1,True,8,
+27,Decreasing 3 to 1,False,7,insufficient_epochs(<8)
+27,Decreasing 4 to 1,True,8,
+28,Cardinality1,False,7,insufficient_epochs(<8)
+28,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+28,Decreasing 3 to 1,False,5,insufficient_epochs(<8)
+28,Decreasing 4 to 1,False,5,insufficient_epochs(<8)
+29,Cardinality1,False,5,insufficient_epochs(<8)
+29,Decreasing 2 to 1,True,8,
+29,Decreasing 3 to 1,True,8,
+29,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+31,Cardinality1,False,6,insufficient_epochs(<8)
+31,Decreasing 2 to 1,False,5,insufficient_epochs(<8)
+31,Decreasing 3 to 1,True,8,
+31,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+32,Cardinality1,False,3,insufficient_epochs(<8)
+32,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+32,Decreasing 3 to 1,True,8,
+32,Decreasing 4 to 1,False,7,insufficient_epochs(<8)
+33,Cardinality1,True,8,
+33,Decreasing 2 to 1,False,6,insufficient_epochs(<8)
+33,Decreasing 3 to 1,False,4,insufficient_epochs(<8)
+33,Decreasing 4 to 1,True,8,

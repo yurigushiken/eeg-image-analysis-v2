@@ -6,10 +6,12 @@
 
 ![figure](docs/assets/plots/cardinality_within_small/cardinality_within_small-N1.png)
 
+![figure](docs/assets/plots/cardinality_within_small/cardinality_within_small-P3b.png)
+
 
 ## Notes
 
-- GFP-based collapsed localizer analysis with 72 subject-condition combinations.
-- Components analyzed: P1, N1
-- P1: Peak at 112 ms, FWHM window [98.3, 124.8] ms (width: 26.5 ms)
-- N1: Peak at 180 ms, FWHM window [149.0, 207.0] ms (width: 58.0 ms)
+- GFP-based collapsed localizer analysis with 12 subject-condition combinations.
+- Components analyzed: P1, N1, P3b
+- P1: Peak at 116 ms, FWHM window [113.0, 120.6] ms (width: 7.6 ms)
+- N1: Peak at 176 ms, FWHM window [157.0, 193.6] ms (width: 36.6 ms)

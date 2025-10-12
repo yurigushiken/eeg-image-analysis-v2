@@ -1,0 +1,47 @@
+{
+  "analysis_id": "landing_on_1",
+  "date_analyzed": "2025-10-12T04:23:44.685108",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "n_subjects_total": 24,
+  "n_evokeds_included": 20,
+  "conditions": [
+    "Cardinality1",
+    "Decreasing 2 to 1",
+    "Decreasing 3 to 1",
+    "Decreasing 4 to 1"
+  ],
+  "components": {
+    "P1": {
+      "peak_latency_ms": 120.0,
+      "peak_gfp_amplitude": 1.1876265281651036e-06,
+      "fwhm_ms": 19.978026816951513,
+      "window_start_ms": 111.6019709145267,
+      "window_end_ms": 131.57999773147822,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 20,
+      "n_conditions": 4
+    },
+    "N1": {
+      "peak_latency_ms": 180.0,
+      "peak_gfp_amplitude": 1.9599411788048856e-06,
+      "fwhm_ms": 30.10067787991335,
+      "window_start_ms": 165.9510006757347,
+      "window_end_ms": 196.05167855564804,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 20,
+      "n_conditions": 4
+    }
+  }
+}

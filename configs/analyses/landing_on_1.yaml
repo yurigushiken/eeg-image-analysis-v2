@@ -6,12 +6,14 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "Increasing 1 to 2"
-      conditions: ["12"]
-    - name: "Increasing 1 to 3"
-      conditions: ["13"]
-    - name: "Increasing 1 to 4"
-      conditions: ["14"]
+    - name: "Cardinality1"
+      conditions: ["11"]
+    - name: "Decreasing 2 to 1"
+      conditions: ["21"]
+    - name: "Decreasing 3 to 1"
+      conditions: ["31"]
+    - name: "Decreasing 4 to 1"
+      conditions: ["41"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
@@ -22,7 +24,6 @@ plots:
   dpi: 300
 outputs:
   page: "single"
-  plots_dir: "docs/assets/plots/from1_to_any"
-  tables_dir: "docs/assets/tables/from1_to_any"
-  page: "docs/analysis/from1_to_any.md"
-
+  plots_dir: "docs/assets/plots/landing_on_1"
+  tables_dir: "docs/assets/tables/landing_on_1"
+  page: "docs/analysis/landing_on_1.md"

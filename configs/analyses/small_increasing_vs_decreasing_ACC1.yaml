@@ -1,6 +1,6 @@
 dataset:
-  root: "data"
-  pattern: "**/sub-*_preprocessed-epo.fif"
+  root: "data/lab-data-original"
+  pattern: "sub-*_preprocessed-epo.fif"
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 selection:
   response: "ACC1"
@@ -10,7 +10,7 @@ selection:
       conditions: ["12", "13", "23"]
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
-components: ["P1", "N1"]  # P3b excluded: peak at epoch edge, FWHM cannot be computed
+components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
 roi:
