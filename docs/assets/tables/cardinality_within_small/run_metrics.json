@@ -1,0 +1,16 @@
+{
+  "analysis_id": "cardinality_within_small",
+  "duration_seconds": 4.636,
+  "num_figures": 3,
+  "largest_png_bytes": 708633,
+  "total_png_bytes": 2071393,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "largest_png_limit_bytes": 2097152,
+  "total_png_limit_bytes": 20971520,
+  "figures": {
+    "cardinality_within_small-P1.png": 702095,
+    "cardinality_within_small-N1.png": 660665,
+    "cardinality_within_small-P3b.png": 708633
+  }
+}
