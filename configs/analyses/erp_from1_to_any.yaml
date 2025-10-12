@@ -1,0 +1,29 @@
+dataset:
+  root: "data"
+  pattern: "**/sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "From1_to_any"
+      conditions: ["12", "13", "14"]
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  topomap_peak_window_ms: 50
+  peak_level: "cohort"
+  smoothing:
+    method: "moving_average"
+    window_ms: 10
+  formats: ["png"]
+  dpi: 300
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/erp_from1_to_any"
+  tables_dir: "docs/assets/tables/erp_from1_to_any"
+  page: "docs/analysis/erp_from1_to_any.md"
+

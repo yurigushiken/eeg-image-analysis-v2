@@ -93,4 +93,15 @@ def select_conditions(epochs, condition_codes: Sequence[str]):
     return sel
 
 
+def validate_baseline_window(epochs, baseline_ms: Tuple[int, int]) -> None:
+    """Ensure baseline window lies within epoch time range; raise actionable error otherwise."""
+    start_ms, end_ms = baseline_ms
+    tmin_ms = int(round(epochs.tmin * 1000.0))
+    tmax_ms = int(round(epochs.tmax * 1000.0))
+    if start_ms < tmin_ms or end_ms > tmax_ms:
+        raise ValueError(
+            f"Baseline [{start_ms}, {end_ms}] ms outside epoch range [{tmin_ms}, {tmax_ms}] ms"
+        )
+
+
 

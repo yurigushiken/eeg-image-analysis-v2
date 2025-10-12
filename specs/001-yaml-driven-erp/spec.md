@@ -240,9 +240,10 @@ and tables link to CSVs.
 - **FR-026**: Plots MUST be saved at high DPI (configurable). Provide
   `plots.dpi` (default 300). Thumbnails on the index grid are CSS‑scaled
   from the full‑size PNGs (no separate thumbnail files).
- - **FR-027**: The reporting step MUST update `docs/index.md` to include a
-   sorted table/grid of thumbnails sorted by analysis with consistent styling
-   and alt text. Existing entries must be updated idempotently (no duplicates).
+- **FR-027**: The reporting step MUST update `docs/index.md` to include a
+  sorted table/grid of thumbnails sorted by analysis with consistent styling
+  and alt text. Existing entries must be updated idempotently (no duplicates).
+  Thumbnails are CSS‑scaled from full‑size PNGs and open in an accessible lightbox.
 
 ### Key Entities *(include if feature involves data)*
 

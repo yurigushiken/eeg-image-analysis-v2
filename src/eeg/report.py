@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import os
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
-def write_analysis_page(page_path: str, title: str, figure_paths: List[str] | None = None) -> None:
+def write_analysis_page(page_path: str, title: str, figure_paths: Optional[List[str]] = None, notes: Optional[List[str]] = None) -> None:
     os.makedirs(os.path.dirname(page_path), exist_ok=True)
     with open(page_path, "w", encoding="utf-8") as f:
         f.write(f"# {title}\n\n")
@@ -12,6 +12,10 @@ def write_analysis_page(page_path: str, title: str, figure_paths: List[str] | No
             for p in figure_paths:
                 rel = p.replace("\\", "/")
                 f.write(f"![figure]({rel})\n\n")
+        if notes:
+            f.write("\n## Notes\n\n")
+            for n in notes:
+                f.write(f"- {n}\n")
 
 
 def ensure_index_template(index_path: str) -> None:

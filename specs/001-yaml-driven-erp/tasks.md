@@ -137,24 +137,24 @@
 
 ### Implementation for User Story 3
 
-- [ ] T301 [US3] Add minimal inline CSS/JS to `docs/index.md` for:
+- [X] T301 [US3] Add minimal inline CSS/JS to `docs/index.md` for:
   - Responsive thumbnail grid (flexbox or grid layout)
   - Lightweight lightbox (click thumbnail → overlay with full PNG, close button, no external deps)
   - Ensure GitHub Pages compatibility (no build step required)
-- [ ] T302 [US3] Add accessibility features to all generated pages:
+- [X] T302 [US3] Add accessibility features to all generated pages:
   - Alt text for all images: "ERP overlay for {component} in {analysis_id}"
   - ARIA labels for lightbox controls
   - Semantic HTML headings (h1, h2, h3) in report.py template
 - CSV table links have descriptive text: "Download {component} {set} metrics CSV"
-- [ ] T303 [US3] Ensure `src/eeg/report.py` updates `docs/index.md` idempotently:
+- [X] T303 [US3] Ensure `src/eeg/report.py` updates `docs/index.md` idempotently:
   - Alphabetical insertion by analysis_id (binary search for correct position)
   - No duplicate entries (check for existing analysis_id row, update in place)
   - Preserve manual edits outside auto-generated table region (use markers: `<!-- AUTO-GENERATED START -->` / `<!-- AUTO-GENERATED END -->`)
-- [ ] T304 [US3] Verify page load performance on sample dataset:
+- [X] T304 [US3] Verify page load performance on sample dataset:
   - All figures load without errors and render quickly on typical hardware
   - Largest PNG ≤ 2 MB (compress if needed via plots.dpi tuning)
   - Cumulative page weight ≤ 20 MB (verify sum of all assets)
-- [ ] T305 [US3] Create `docs/index.md` initial template with:
+- [X] T305 [US3] Create `docs/index.md` initial template with:
   - Title: "EEG ERP Analyses"
   - Brief intro paragraph
   - Auto-generated table placeholder
@@ -176,16 +176,16 @@
   - Environment setup instructions
   - CLI usage examples
 - [ ] TX02 [P] Performance optimization: Implement streaming/batching for subject loading in `src/eeg/io.py` to avoid loading all epochs into memory simultaneously
-- [ ] TX03 [P] QC reporting: Enhance `src/eeg/erp.py` and `report.py` to write `docs/assets/tables/<analysis_id>/qc_summary.csv` with:
+- [X] TX03 [P] QC reporting: Enhance `src/eeg/erp.py` and `report.py` to write `docs/assets/tables/<analysis_id>/qc_summary.csv` with:
   - Subject ID, set, included (yes/no), epoch_count, exclusion_reason (if any)
   - ROI availability per subject (channels available vs required)
-- [ ] TX04 [P] Add baseline window validation in `src/eeg/io.py`: Check that preprocessing.baseline_ms falls within epoch time range; raise actionable error if not (e.g., "Baseline [-100, 0] ms outside epoch range [-200, 496] ms")
+- [X] TX04 [P] Add baseline window validation in `src/eeg/io.py`: Check that preprocessing.baseline_ms falls within epoch time range; raise actionable error if not (e.g., "Baseline [-100, 0] ms outside epoch range [-200, 496] ms")
 - [ ] TX05 [P] Add montage enforcement error handling in `src/eeg/io.py`: On montage application failure, list unmatched channel labels and montage path in error message (FR-019)
-- [ ] TX06 [P] Create optional JSON schema document `specs/001-yaml-driven-erp/contracts/analysis-config-schema.json` for YAML validation (references FR-001 through FR-027)
+- [X] TX06 [P] Create optional JSON schema document `specs/001-yaml-driven-erp/contracts/analysis-config-schema.json` for YAML validation (references FR-001 through FR-027)
 - [ ] TX07 [P] Add peak detection fallback in `src/eeg/measures.py`: If peak not found (flat/noisy signal), fall back to component window center; log warning; mark in QC; ensure plot annotation hook is triggered
 - [ ] TX08 [P] Add edge case handling for missing metadata columns: In `src/eeg/select.py`, validate required columns exist; raise error listing missing columns (e.g., "Required metadata columns missing: ['Condition', 'direction', 'Target.ACC']")
 - [ ] TX09 [P] Add edge case handling for empty condition sets: In `src/eeg/erp.py` and `report.py`, detect sets with zero subjects meeting threshold; suppress plots; add note to analysis page: "Set {name}: No subjects met inclusion criteria (min_epochs_per_set={N})"
-- [ ] TX10 [P] Create example YAML `configs/analyses/erp_from1_to_any.yaml` demonstrating alternate analysis (e.g., trials starting from "1" to any other number) to verify reusability
+- [X] TX10 [P] Create example YAML `configs/analyses/erp_from1_to_any.yaml` demonstrating alternate analysis (e.g., trials starting from "1" to any other number) to verify reusability
 - [ ] TX11 Run end-to-end quickstart validation: Execute all commands in `specs/001-yaml-driven-erp/quickstart.md` on a clean environment; verify outputs match expected
 
 ---

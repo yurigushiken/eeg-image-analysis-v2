@@ -136,9 +136,9 @@ Phase 2 (Implementation outline)
 - select.py apply explicit condition lists + metadata query helpers.
 - erp.py subject evokeds, grand average, SEM, ROI aggregation per component.
 - measures.py mean/peak amplitude + latency per component window.
-- plots.py ERP overlays and peak-locked topomaps as PNG.
+- plots.py ERP overlays and peak-locked topomaps as PNG; composite figures (overlay + per-condition topomaps) with peak markers.
 - report.py analysis page under docs/analysis/ and index grid generator that
-  maintains docs/index.md and thumbnail assets.
+  maintains docs/index.md with CSS thumbnails + lightbox (no separate thumb files).
 - run_analysis.py CLI wiring + argument validation.
 
 ## Acceptance Criteria
