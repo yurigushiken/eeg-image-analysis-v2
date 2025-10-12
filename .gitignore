@@ -37,9 +37,16 @@ Thumbs.db
 
 # Docs site outputs are kept under version control (do not ignore)
 
-# Local tooling directories
+# Local tooling directories (ignore and stop tracking)
 /.codex/
 /.specify/
+/.cursor/
+/.claude/
+/.cursor/commands
+/.specify/**
+/.codex/**
+/.claude/**
+specs/**
 
 # Common Python ignores
 __pycache__/
