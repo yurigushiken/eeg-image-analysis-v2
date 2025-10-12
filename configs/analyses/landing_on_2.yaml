@@ -6,15 +6,15 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "Increasing 1 to 2"
+    - name: "1 to 2"
       conditions: ["12"]
     - name: "Cardinality2"
       conditions: ["22"]
-    - name: "Decreasing 3 to 2"
+    - name: "3 to 2"
       conditions: ["32"]
-    - name: "Decreasing 4 to 2"
+    - name: "4 to 2"
       conditions: ["42"]
-    - name: "Decreasing 5 to 2"
+    - name: "5 to 2"
       conditions: ["52"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
@@ -24,7 +24,8 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#377eb8", "#f472b6", "#dc143c", "#ff4500", "#ff7f00", "#ffbf00"]
+
 outputs:
   page: "single"
   plots_dir: "docs/assets/plots/landing_on_2"
