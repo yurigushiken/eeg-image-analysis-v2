@@ -20,7 +20,7 @@ Sync Impact Report
 
 ### I. Reproducible Environment (NON-NEGOTIABLE)
 All analysis must run under a declared Python environment. The canonical
-environment name is `numbers-eeg` (Python 3.12). Dependencies must be pinned and
+environment name is `eeg-image` (Python 3.12). Dependencies must be pinned and
 captured in a shareable spec (environment.yml). Analyses and figures must be
 rebuildable by running documented commands without manual steps.
 

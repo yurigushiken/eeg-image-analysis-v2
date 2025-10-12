@@ -9,7 +9,7 @@ Deliver a YAML-driven ERP pipeline that:
 - Loads subject Epochs, enforces the AdultAverageNet128_v1 montage, and selects trials by metadata.
 - Computes P1, N1, and P3b in one run when listed in the YAML (components: ["P1","N1","P3b"]).
 - Supports response filtering: response: ALL | ACC1 (ACC1 means Target.ACC == 1).
-- Uses explicit condition lists per analysis YAML (no shared global conditions file).
+- Uses explicit numeric condition lists per analysis YAML (no shared global conditions file).
 - Produces PNG figures and CSV tables under docs/ and renders a single analysis page by default.
 
 ## Technical Context
@@ -21,7 +21,7 @@ Deliver a YAML-driven ERP pipeline that:
 **Target Platform**: Local Python; GitHub Pages for docs  
 **Project Type**: Single repo, library + CLI  
 **Performance Goals**: End-to-end on 24 subjects = 10 minutes; memory bounded by per-subject processing  
-**Constraints**: Reproducible env (numbers-eeg), YAML-driven, commit only docs assets  
+**Constraints**: Reproducible env (eeg-image), YAML-driven, commit only docs assets  
 **Scale/Scope**: 24±100 subjects; three core components (P1, N1, P3b)
 
 ## Constitution Check
@@ -84,21 +84,21 @@ YAML keys capturing requirements:
 - dataset: {root, pattern, montage_sfp}
 - selection:
   - response: ALL | ACC1  # ACC1 filters metadata Target.ACC == 1
-  - min_epochs_per_group: 8
-  - include_groups: [{name, filter: {metadata: {...}}}]  # explicit condition lists per analysis
+  - min_epochs_per_set: 8
+  - condition_sets: [{name, conditions: ["12", "13"]}]  # explicit numeric condition codes per set
 - components: ["P1","N1","P3b"]
 - preprocessing: {baseline_ms: [-100, 0]}
 - roi: {min_channels: 4}
 - plots:
   - topomap_peak_window_ms: 50     # ±50 ms around detected peak
-  - peak_level: group|subject      # default group
+  - peak_level: cohort|subject     # default cohort (aggregate across condition sets)
   - smoothing: {method: moving_average, window_ms: 10}
   - formats: [png]
   - dpi: 300
   - thumb_width_px: 320
   - colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33"]
   - linestyles:
-      NC: "-"           # No Change (cardinality; e.g., 11, 44, 55)
+      NC: "-"           # No Change (cardinality; e.g., 11, 22, 33, 44, 55, 66)
       Decrease: ":"
       Increasing: "--"
 - outputs: {page: single|by_component, plots_dir, tables_dir, page}
@@ -110,14 +110,14 @@ Website generation:
   using a small inline JS/CSS snippet compatible with GitHub Pages. New
   analyses insert into the correct sorted position idempotently.
 
-Subject/grouping logic:
-- Apply response filter before grouping; groups from explicit metadata filters.
+Subject/condition-set logic:
+- Apply response filter before selection; condition sets are explicit numeric condition lists.
 - Equal-weight subject grand averages; SEM across subjects.
-- Exclude subjects per-group if epochs < min threshold after filtering.
+- Exclude subjects per-set if epochs < min threshold after filtering.
 
 Topomap/peaks:
-- Peaks within component window (N1 min; P1/P3b max); topomaps average amplitude over ?topomap_peak_window_ms around the peak.
-- Peak level configurable (group default); optional smoothing before detection.
+- Peaks within component window (N1 min; P1/P3b max); topomaps average amplitude over ±plots.topomap_peak_window_ms around the peak.
+- Peak level configurable (cohort default); optional smoothing before detection.
 
 ## Milestones & Tasks
 
@@ -126,9 +126,9 @@ Phase 0 (Research)
 - Validate ACC1 filtering using metadata Target.ACC on a sample.
 
 Phase 1 (Design & Contracts)
-- data-model.md: AnalysisConfig, Group, Component, ROI, SubjectResult, GroupResult.
+- data-model.md: AnalysisConfig, ConditionSet, Component, ROI, SubjectResult, ConditionSetResult.
 - contracts/: Document YAML schema (markdown/JSON schema excerpt).
-- quickstart.md: End-to-end instructions (conda activate numbers-eeg; run CLI).
+- quickstart.md: End-to-end instructions (conda activate eeg-image; run CLI).
 
 Phase 2 (Implementation outline)
 - config.py schema + validation; load electrodes/components defaults.
@@ -144,7 +144,7 @@ Phase 2 (Implementation outline)
 ## Acceptance Criteria
 - One YAML listing components [P1,N1,P3b] produces 3 distinct ERP overlays and topomaps saved as PNG.
 - response: ACC1 filters Target.ACC == 1; ALL uses all data.
-- Each analysis YAML explicitly lists condition codes used for its groups.
+- Each analysis YAML explicitly lists condition codes used for its condition sets.
 - docs/analysis/<analysis_id>.md generated; assets under docs/assets/plots|tables/<analysis_id>/.
 - Reproducible run in = 10 minutes on 24 subjects.
 
