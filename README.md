@@ -14,6 +14,7 @@ This project implements a **declarative, YAML-driven ERP analysis pipeline** tha
 - 🌐 **Web publishing**: Automatic GitHub Pages integration with interactive lightbox gallery
 - ✅ **Quality control**: Built-in QC reporting for subject inclusion and data quality
 - 🎨 **Customizable styling**: Configure colors, line styles, and figure layout via YAML
+ - 🧪 **GFP-based collapsed localizer**: Component peak and FWHM window are data-driven and shared across conditions, preventing circular analysis. Measurements are saved to CSV/JSON for stats.
 
 ## Project Philosophy
 
@@ -65,9 +66,12 @@ python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_dec
 
 **Expected outputs:**
 - Figures: `docs/assets/plots/small_increasing_vs_decreasing/{P1,N1,P3b}.png`
+- Collapsed localizer figure: `docs/assets/plots/small_increasing_vs_decreasing-collapsed_localizer.png`
 - Analysis page: `docs/analysis/small_increasing_vs_decreasing.md`
 - QC report: `docs/assets/tables/small_increasing_vs_decreasing/qc_summary.csv`
 - Runtime metrics: `docs/assets/tables/small_increasing_vs_decreasing/run_metrics.json`
+- Collapsed localizer JSON: `docs/assets/tables/small_increasing_vs_decreasing/collapsed_localizer_results.json`
+- Condition measurements CSV: `docs/assets/tables/small_increasing_vs_decreasing/condition_measurements.csv`
 
 ### 3. View the Website
 
@@ -150,8 +154,6 @@ roi:
 
 # Plotting options
 plots:
-  topomap_peak_window_ms: 20
-  peak_level: "cohort"  # or "subject"
   dpi: 300
   colors: ["#e41a1c", "#377eb8", "#4daf4a"]
   linestyles:
@@ -211,10 +213,11 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
                    Compute SEM for uncertainty bands
                 ↓
 5. Metrics      → For each component (P1, N1, P3b):
-                  ├─ Detect peak within time window
+                  ├─ Detect cohort peak via GFP within configured search range
+                  ├─ Compute FWHM window around that peak
                   ├─ Aggregate ROI channels
-                  ├─ Compute mean/peak amplitude and latency
-                  └─ Extract topomap around peak (±20ms by default)
+                  ├─ Compute mean amplitude within FWHM window
+                  └─ Extract topomap averaged over FWHM window
                 ↓
 6. Plotting     → Generate composite figures:
                   ├─ Top panel: ERP overlay with SEM
@@ -232,7 +235,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
-- **Peak-locked topomaps**: Topomaps are centered on the detected peak latency (±20ms default, configurable via YAML), ensuring we capture the true component maximum rather than an arbitrary time point.
+- **GFP-derived FWHM windows**: Component windows come from the GFP-based collapsed localizer (no manual ±20ms). All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
 
 - **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
 
