@@ -3,7 +3,7 @@
 **Input**: Design documents from `specs/001-yaml-driven-erp/`
 **Prerequisites**: plan.md (required), spec.md (required), research.md, data-model.md
 
-**Tests**: Tests are NOT explicitly requested in this spec. Task list focuses on implementation.
+**Tests**: TDD required. Add unit/integration tests before implementation tasks; verify determinism and layout.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -22,7 +22,7 @@
 **Purpose**: Project initialization and basic structure needed by all user stories
 
 - [ ] T001 [P] Create directory structure: `configs/`, `configs/analyses/`, `src/eeg/`, `scripts/`, `docs/analysis/`, `docs/assets/plots/`, `docs/assets/tables/`
-- [ ] T002 [P] Create `environment.yml` for conda environment `eeg-image` (Python 3.12, mne==1.9, numpy, pandas, matplotlib, pyyaml, pytest)
+- [ ] T002 [P] Ensure `environment.yml` for conda environment `eeg-image` (Python 3.12, mne==1.10.1, numpy, pandas, matplotlib, pyyaml, pytest) is present and pinned
 - [ ] T003 [P]  `.gitignore` exists.  additions to ensure `data/**` is ignored and only `docs/**` assets are committed
 - [ ] T004 [P] Create `configs/electrodes.yaml` defining ROI electrode mappings (N1_L, N1_R, P1, P3B)
 - [ ] T005 [P] Create `configs/components.yaml` defining component time windows (P1: 60-120ms, N1: 125-200ms, P3b: 300-600ms) and default ROI mappings
@@ -35,13 +35,19 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
+### Tests (TDD first)
+- [ ] T006 [P] Write unit tests for selection in `src/eeg/select.py` (ACC1 filter, explicit Condition sets, missing metadata errors)
+- [ ] T007 [P] Write unit tests for measures in `src/eeg/measures.py` (peak detection within windows, smoothing, LOPO fallback behavior)
+- [ ] T008 [P] Write unit tests for plotting in `src/eeg/plots.py` (ERP overlay present, topomap layout per FR-016A, fallback annotation visible)
+- [ ] T009 [P] Write smoke test for CLI on small sample YAML to assert deterministic CSV/PNG outputs (hash compare) and directory structure
+
 - [ ] T010 Implement `src/eeg/__init__.py` as package initializer
 - [ ] T011 Implement `src/eeg/config.py`: YAML schema loader/validator for AnalysisConfig (dataset, selection, components, preprocessing, roi, plots, outputs)
-- [ ] T012 Implement `src/eeg/io.py`: Functions to read Epochs from FIF files, enforce montage from `assets/net/AdultAverageNet128_v1.sfp`, extract subject IDs, and return scalp-only channel picks
+- [ ] T012 Implement `src/eeg/io.py`: Functions to read Epochs from FIF files, enforce montage from `assets/net/AdultAverageNet128_v1.sfp`, validate sampling rate and channel count, extract subject IDs, and return scalp-only channel picks
 - [ ] T013 Implement `src/eeg/select.py`: Selection helpers (response: ALL vs ACC1 where ACC1 = Target.ACC==1), explicit numeric condition list filters, min_epochs_per_set validation
 - [ ] T014 Implement `src/eeg/erp.py`: Subject-level evoked computation, equal-weight grand averaging across subjects, SEM calculation, ROI aggregation with roi.min_channels threshold
 - [ ] T015 Implement `src/eeg/measures.py`: Component metrics functions (mean amplitude, peak amplitude, peak latency within windows) with optional smoothing
-- [ ] T016 Implement `src/eeg/plots.py`: ERP overlay plotting, peak detection (cohort/subject configurable), peak-locked topomaps, PNG output at plots.dpi, thumbnail generation
+- [ ] T016 Implement `src/eeg/plots.py`: ERP overlay plotting, peak detection (cohort/subject configurable), peak-locked topomaps, PNG output at plots.dpi, thumbnail generation; annotate plots when fallback window is used (legend/text/marker) per FR-016; enforce layout: ERP overlay on top row, per-condition topomaps below with labels "{condition} – Peak at {t} ms" per FR-016A
 - [ ] T017 Implement `src/eeg/report.py`: Functions to generate `docs/analysis/<analysis_id>.md` with embedded figures, CSV links, titles/subtitles from YAML; update `docs/index.md` grid with thumbnails and lightbox support
 - [ ] T018 Implement `scripts/run_analysis.py`: CLI entry point accepting `--config <yaml>` argument, orchestrating pipeline: load config → load data → select trials → compute ERPs → generate plots → write tables → generate reports
 
@@ -91,11 +97,12 @@
   - plots: {topomap_peak_window_ms: 50, peak_level: "cohort", smoothing: {method: "moving_average", window_ms: 10}, formats: ["png"], dpi: 300, thumb_width_px: 320}
   - outputs: {page: "single", plots_dir: "docs/assets/plots/cardinality_within_small", tables_dir: "docs/assets/tables/cardinality_within_small", page: "docs/analysis/cardinality_within_small.md"}
 - [ ] T102 [US1] Verify ACC1 vs ALL toggle: create alternate YAML with response: "ACC1" and confirm Target.ACC==1 filtering works
-- [ ] T103 [US1] Verify peak-locked topomaps render correctly with ±plots.topomap_peak_window_ms around detected peaks
+- [ ] T103 [US1] Verify peak-locked topomaps render correctly with ±plots.topomap_peak_window_ms around detected peaks and that each topomap is labeled with condition and peak time per FR-016A
 - [ ] T104 [US1] Verify plot styling: palette assignment, linestyles (NC=solid, Decrease=dotted, Increasing=dashed)
 - [ ] T105 [US1] Verify titles/subtitles on figures include: analysis_id, response (ALL/ACC1), component (P1/N1/P3b), baseline window, ±topomap window, roi.min_channels, condition summary
 - [ ] T106 [US1] Verify `docs/index.md` grid shows one row for "erp_increasing_vs_decreasing" with P1/N1/P3b thumbnail columns; clicking thumbnail opens full-size PNG in lightbox overlay
 - [ ] T107 [US1] Run end-to-end on 24-subject dataset and verify completion within 10 minutes (Success Criterion SC-001)
+ - [ ] T108 [US1] Integration test: run sample YAML and assert figure layout (overlay + labeled topomaps), fallback annotations when applicable, and bit-identical assets on re-run
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and produce complete published analysis page
 
@@ -124,7 +131,7 @@
 
 ## Phase 5: User Story 3 - Website visitor views analysis page (Priority: P3)
 
-**Goal**: A visitor can navigate to the project website and see the Small Increasing vs Small Decreasing ERP page with readable figures and a short methods summary
+**Goal**: A visitor can navigate to the project website and see the Small Increasing vs Small Decreasing ERP page with readable figures.
 
 **Independent Test**: Serve `docs/` via GitHub Pages or local static server; load `https://<site>/analysis/small_increasing_vs_decreasing.html`; verify images render, links work, page loads quickly
 
@@ -144,7 +151,7 @@
   - No duplicate entries (check for existing analysis_id row, update in place)
   - Preserve manual edits outside auto-generated table region (use markers: `<!-- AUTO-GENERATED START -->` / `<!-- AUTO-GENERATED END -->`)
 - [ ] T304 [US3] Verify page load performance on sample dataset:
-  - All figures load within 3 seconds each (SC-004 relaxed interpretation)
+  - All figures load without errors and render quickly on typical hardware
   - Largest PNG ≤ 2 MB (compress if needed via plots.dpi tuning)
   - Cumulative page weight ≤ 20 MB (verify sum of all assets)
 - [ ] T305 [US3] Create `docs/index.md` initial template with:
@@ -175,7 +182,7 @@
 - [ ] TX04 [P] Add baseline window validation in `src/eeg/io.py`: Check that preprocessing.baseline_ms falls within epoch time range; raise actionable error if not (e.g., "Baseline [-100, 0] ms outside epoch range [-200, 496] ms")
 - [ ] TX05 [P] Add montage enforcement error handling in `src/eeg/io.py`: On montage application failure, list unmatched channel labels and montage path in error message (FR-019)
 - [ ] TX06 [P] Create optional JSON schema document `specs/001-yaml-driven-erp/contracts/analysis-config-schema.json` for YAML validation (references FR-001 through FR-027)
-- [ ] TX07 [P] Add peak detection fallback in `src/eeg/measures.py`: If peak not found (flat/noisy signal), fall back to component window center; log warning; mark in QC
+- [ ] TX07 [P] Add peak detection fallback in `src/eeg/measures.py`: If peak not found (flat/noisy signal), fall back to component window center; log warning; mark in QC; ensure plot annotation hook is triggered
 - [ ] TX08 [P] Add edge case handling for missing metadata columns: In `src/eeg/select.py`, validate required columns exist; raise error listing missing columns (e.g., "Required metadata columns missing: ['Condition', 'direction', 'Target.ACC']")
 - [ ] TX09 [P] Add edge case handling for empty condition sets: In `src/eeg/erp.py` and `report.py`, detect sets with zero subjects meeting threshold; suppress plots; add note to analysis page: "Set {name}: No subjects met inclusion criteria (min_epochs_per_set={N})"
 - [ ] TX10 [P] Create example YAML `configs/analyses/erp_from1_to_any.yaml` demonstrating alternate analysis (e.g., trials starting from "1" to any other number) to verify reusability
@@ -287,11 +294,11 @@ With multiple developers:
 ## Task Count Summary
 
 - **Phase 1 (Setup)**: 5 tasks
-- **Phase 2 (Foundational)**: 9 tasks
-- **Phase 3 (User Story 1 - MVP)**: 7 tasks
-- **Phase 4 (User Story 2)**: 5 tasks
+- **Phase 2 (Foundational)**: 13 tasks
+- **Phase 3 (User Story 1 - MVP)**: 8 tasks
+- **Phase 4 (User Story 2)**: 3 tasks
 - **Phase 5 (User Story 3)**: 5 tasks
 - **Phase 6 (Polish)**: 11 tasks
-- **Total**: 42 tasks
+- **Total**: 45 tasks
 
 **MVP Scope** (Minimum for first working version): Phase 1 + Phase 2 + Phase 3 = 21 tasks

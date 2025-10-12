@@ -40,8 +40,14 @@ code.
 ### IV. ERP Component Standards and ROIs
 We predefine components and time windows (e.g., N1: 125–200 ms; P3b: 300–600 ms)
 and named ROIs using electrode labels. The Net montage is
-`net/AdultAverageNet128_v1.sfp`. Plots use consistent baselining (−100–0 ms),
+`assets/net/AdultAverageNet128_v1.sfp`. Plots use consistent baselining (−100–0 ms),
 overlay style, and SEM shading for group results.
+
+Baseline note: The default baseline is −100–0 ms. Analyses may optionally use −200–0 ms via YAML when justified; the selected window must lie within each subject's epoch range.
+
+Note: Component time windows stated here are project defaults. Individual analyses
+may override windows via YAML within documented ranges when justified; overrides
+must be explicit in the analysis config and reflected in reporting.
 
 ### V. Documentation as an Artifact
 Every analysis writes a Markdown page under `docs/analysis/` with a brief method

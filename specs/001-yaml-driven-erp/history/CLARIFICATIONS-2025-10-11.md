@@ -1,5 +1,7 @@
 # Clarifications & Updates - Session 2025-10-11
 
+This document has been archived; see `specs/001-yaml-driven-erp/history/CLARIFICATIONS-2025-10-11.md`.
+
 **Feature**: YAML-Driven ERP Analysis v1 (Inc vs Dec)
 **Branch**: 001-yaml-driven-erp
 **Date**: 2025-10-11

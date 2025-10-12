@@ -12,7 +12,7 @@ Project structure
 
 Quick start
 1) Activate the environment
-   - `conda activate numbers-eeg`
+   - `conda activate eeg-image`
 
 2) Summarize the dataset
    - `python scripts/summarize_epochs.py`

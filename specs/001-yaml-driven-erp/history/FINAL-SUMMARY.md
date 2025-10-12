@@ -12,7 +12,7 @@
 - **mne**: 1.10.1 (latest)
 - **All packages**: Latest versions
 - **File created**: `environment.yml`
-- **Action needed**: `conda install pytest -n eeg-image`
+- **Action needed**: (none)
 
 ### **2. Condition Definitions** ✅ **CRITICAL CORRECTION**
 **Previous (INCORRECT)**: Condition = "iSS", "dLL", "NC"
@@ -44,6 +44,7 @@
 
 ### **7. Success Criteria** ✅
 - **SC-001**: Added hardware baseline (16GB RAM, 4-core CPU)
+- **SC-003**: Median valid epochs per set is ≥8 (updated)
 - **SC-004/US3**: Removed network-dependent timing; focus on functional correctness
 
 ---
@@ -54,7 +55,7 @@
 2. ✅ `specs/001-yaml-driven-erp/contracts/peak-detection-algorithm.md` - LOPO algorithm
 3. ✅ `specs/001-yaml-driven-erp/CLARIFICATIONS-2025-10-11.md` - Original clarifications
 4. ✅ `specs/001-yaml-driven-erp/CRITICAL-UPDATE-CONDITIONS.md` - **Condition correction**
-5. ✅ `specs/001-yaml-driven-erp/FINAL-SUMMARY.md` - This document
+5. ✅ `specs/001-yaml-driven-erp/FINAL-SUMMARY.md` - Archived copy exists under `specs/001-yaml-driven-erp/history/FINAL-SUMMARY.md`
 6. ✅ `manuscript/works-cited.txt` - Full citations with quotes
 
 ---

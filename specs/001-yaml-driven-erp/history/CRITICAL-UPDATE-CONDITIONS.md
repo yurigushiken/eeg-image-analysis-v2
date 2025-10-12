@@ -255,7 +255,6 @@ rmdir assets/net  # If empty
 
 ---
 
-**Status**: ✅ **Condition definitions corrected**
-**Next**: Apply updates to all specification documents
+Archived copy exists under `specs/001-yaml-driven-erp/history/CRITICAL-UPDATE-CONDITIONS.md`.
 
 **This document supersedes**: CLARIFICATIONS-2025-10-11.md Section 7 "Terminology Clarification"

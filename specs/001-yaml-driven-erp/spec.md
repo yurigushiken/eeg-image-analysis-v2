@@ -22,7 +22,7 @@
   A: B) Allow partial ROI with a configurable minimum required channels; default 4.
 
 - Q: Peak detection level for topomap anchoring? (A aggregate grand-average; B per-subject; C configurable)
-  A: C) Configurable via YAML with default A (set-level peak); subject-level
+  A: C) Configurable via YAML with default A (cohort-level peak); subject-level
   optional when deeper variability analysis is desired.
 
 - Q: Smoothing before peak detection? (A none; B 10 ms moving average; C LPF 20 Hz; D configurable)
@@ -103,8 +103,8 @@ docs/assets vs baseline.
 **Acceptance Scenarios**:
 
 1. **Given** the repo and environment, **When** the reviewer runs the provided
-   command, **Then** the generated CSVs and PNGs match baseline hashes or are
-   within configured numeric tolerance.
+   command, **Then** the generated CSVs and PNGs are bit-identical to baseline
+   (no tolerance).
 
 ---
 
@@ -142,7 +142,9 @@ and tables link to CSVs.
 - Subject below min_epochs_per_set: exclude from that set; include in QC with counts; keep subject for other sets where threshold is met.
 - Baseline window outside available epoch range: abort with a message stating provided window and valid range (e.g., ~-200 to 496 ms).
 - ROI has fewer than roi.min_channels available electrodes: exclude that subject from that ROI's metrics; continue with others; report in QC.
-- Peak not found (flat/noisy signal): fall back to component window center and mark the case in QC; skip peak-locked topomap for that subject if necessary.## Requirements *(mandatory)*
+- Peak not found (flat/noisy signal): fall back to component window center and mark the case in QC; skip peak-locked topomap for that subject if necessary.
+
+## Requirements *(mandatory)*
 
 <!--
   ACTION REQUIRED: The content in this section represents placeholders.
@@ -162,7 +164,9 @@ and tables link to CSVs.
   summary CSVs and figures (PNG) to the configured output directories.
 - **FR-005**: The system MUST generate a Markdown analysis page that embeds
   figures, links CSVs, and records the YAML used.
-- **FR-006**: The system MUST support declarative selection via explicit numeric Condition lists organized into named condition sets under selection.condition_sets[]. Metadata-derived categories (e.g., iSS/dLL or direction) are not used for selection in this project.
+- **FR-006**: The system MUST support declarative selection via explicit numeric Condition lists organized into named condition sets under `selection.condition_sets[]`.
+  - Scope of this feature (v1): analyses use explicit two‑digit `Condition` codes (e.g., ["12","13"]).
+  - Library capability: metadata‑derived filters (e.g., `direction == "I"`) are supported but considered optional patterns, not used by this feature’s YAMLs.
 - **FR-007**: The system MUST validate prerequisites (required metadata
   columns, sampling rate, channel count) and fail with actionable messages.
 - **FR-008**: The system MUST support the AdultAverageNet128_v1.sfp montage
@@ -176,7 +180,7 @@ and tables link to CSVs.
    epochs across participants is not permitted.
 - **FR-012**: Subject inclusion per condition set MUST require at least a configurable
    minimum number of valid epochs (YAML: selection.min_epochs_per_set; default
-   8). Subjects below threshold for a given set are excluded from that set�s
+   8). Subjects below threshold for a given set are excluded from that set's
    averages and are listed in a QC table.
  - **FR-013**: Baseline correction MUST be configurable via YAML
    (preprocessing.baseline_ms: [start, end] ms relative to event) with default
@@ -196,8 +200,13 @@ and tables link to CSVs.
    plots.topomap_peak_window_ms, default 50 meaning ±50 ms). Figure styling
    should mirror temp/example.py where applicable while following these
    constraints.
+  - If no valid peak is found and the fallback (component window center) is used,
+    the affected plots MUST include a clear on-figure annotation indicating
+    the fallback (e.g., a label "fallback window" and/or an asterisk in the legend)
+    and the case MUST be recorded in QC.
+ - **FR-016A (Figure layout)**: Each component figure MUST place the ERP overlay panel on the top row and a row of per-condition topomap panels beneath it. Each topomap panel MUST include a visible label with the condition name (from YAML) and the detected peak time in ms (e.g., "From 3 – Peak at 108 ms").
  - **FR-017**: Peak detection level MUST be configurable via YAML
-   (plots.peak_level: 'cohort'|'subject', default 'set').
+  (plots.peak_level: 'cohort'|'subject', default 'cohort').
    - If 'cohort': detect the peak on the aggregate grand-average and compute
      topomaps using the ±window around that time for all subjects.
    - If 'subject': detect peaks per subject; compute each subject's topomap
@@ -233,7 +242,7 @@ and tables link to CSVs.
    (default 320). The runner generates both full PNGs and thumbnail copies for
    the index grid.
  - **FR-027**: The reporting step MUST update `docs/index.md` to include a
-   sorted table/grid of thumbnails seted by analysis with consistent styling
+   sorted table/grid of thumbnails sorted by analysis with consistent styling
    and alt text. Existing entries must be updated idempotently (no duplicates).
 
 ### Key Entities *(include if feature involves data)*
@@ -253,11 +262,10 @@ and tables link to CSVs.
 -->
 
 ### Measurable Outcomes
-### Measurable Outcomes
 
 - **SC-001**: End-to-end run produces a docs page and figures within 10 minutes on the provided 24-subject dataset (on typical laptop: 16GB RAM, 4-core CPU or better).
 - **SC-002**: Re-running with the same YAML yields identical CSVs and images (bit-identical outputs; no tolerance checks).
-- **SC-003**: All condition sets used in the YAML have =30 valid epochs per subject on median; empty sets are reported with clear notices.
+- **SC-003**: All condition sets used in the YAML have ≥8 valid epochs per subject on median; empty sets are reported with clear notices.
 
 
 

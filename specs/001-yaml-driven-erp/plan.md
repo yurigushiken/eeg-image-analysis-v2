@@ -15,7 +15,7 @@ Deliver a YAML-driven ERP pipeline that:
 ## Technical Context
 
 **Language/Version**: Python 3.12  
-**Primary Dependencies**: mne==1.9, numpy, pandas, matplotlib (Agg)  
+**Primary Dependencies**: mne==1.10.1, numpy, pandas, matplotlib (Agg)  
 **Storage**: Local files; raw FIF in data/ (ignored), published assets in docs/  
 **Testing**: pytest (unit on selection/metrics; smoke on small sample)  
 **Target Platform**: Local Python; GitHub Pages for docs  
@@ -27,7 +27,7 @@ Deliver a YAML-driven ERP pipeline that:
 ## Constitution Check
 
 Gates from constitution and status:
-- Reproducible Environment: environment.yml to be added; CLI documented. PASS (TODO env file).
+- Reproducible Environment: environment.yml present and pinned; CLI documented. PASS.
 - Data Governance: Raw data ignored; only docs committed. PASS.
 - Declarative Analyses: YAML config as contract. PASS.
 - ERP Standards/ROIs: Component windows + ROIs; montage enforced. PASS.
