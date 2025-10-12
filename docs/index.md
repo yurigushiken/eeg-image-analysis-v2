@@ -5,8 +5,6 @@ title: EEG ERP Analyses
 
 # EEG ERP Analyses
 
-Welcome to the **EEG ERP Analysis Pipeline**.
-
 ## Analysis Gallery
 
 Click any thumbnail to view the full-size ERP plot with topographic maps.
