@@ -8,11 +8,11 @@ selection:
   condition_sets:
     - name: "Cardinality1"
       conditions: ["11"]
-    - name: "Decreasing 2 to 1"
+    - name: "2 to 1"
       conditions: ["21"]
-    - name: "Decreasing 3 to 1"
+    - name: "3 to 1"
       conditions: ["31"]
-    - name: "Decreasing 4 to 1"
+    - name: "4 to 1"
       conditions: ["41"]
 components: ["P1", "N1", "P3b"]
 preprocessing:

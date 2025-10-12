@@ -6,11 +6,11 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "Increasing 1 to 2"
+    - name: "1 to 2"
       conditions: ["12"]
-    - name: "Increasing 1 to 3"
+    - name: "1 to 3"
       conditions: ["13"]
-    - name: "Increasing 1 to 4"
+    - name: "1 to 4"
       conditions: ["14"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
