@@ -377,6 +377,19 @@ def main() -> int:
             color_list = cfg.plots.get("colors") or []
             colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
 
+            # Apply semantic color rules: increasing=green, decreasing=red
+            # (matplotlib default colors, colorblind-friendly)
+            def _color_for(label: str, default_color: str) -> str:
+                lower = label.lower()
+                if "increasing" in lower:
+                    return "#2ca02c"  # Green
+                if "decreasing" in lower:
+                    return "#d62728"  # Red
+                return default_color  # Use YAML color list for cardinality/other
+
+            if colors:
+                colors = {label: _color_for(label, colors[label]) for label in colors}
+
             # Dynamic linestyle rules by label text
             styles_cfg = cfg.plots.get("linestyles") or {}
             linestyles = {k: v for k, v in styles_cfg.items()}
@@ -418,6 +431,20 @@ def main() -> int:
             # Overlay-only ERP figure (no topomaps, no dashed GFP lines)
             color_list = cfg.plots.get("colors") or []
             colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
+
+            # Apply semantic color rules: increasing=green, decreasing=red
+            # (matplotlib default colors, colorblind-friendly)
+            def _color_for(label: str, default_color: str) -> str:
+                lower = label.lower()
+                if "increasing" in lower:
+                    return "#2ca02c"  # Green
+                if "decreasing" in lower:
+                    return "#d62728"  # Red
+                return default_color  # Use YAML color list for cardinality/other
+
+            if colors:
+                colors = {label: _color_for(label, colors[label]) for label in colors}
+
             styles_cfg = cfg.plots.get("linestyles") or {}
             base_linestyles = {k: v for k, v in styles_cfg.items()}
             def _style_for(label: str) -> str:

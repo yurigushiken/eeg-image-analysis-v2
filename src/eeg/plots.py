@@ -203,7 +203,7 @@ def make_component_figure(
 
     # Bottom row: topomaps per condition set
     # Use fixed ±5µV color scale across all topomaps for direct visual comparison
-    vlim = 5.0  # microvolts
+    vlim_range = 5.0  # microvolts
 
     for idx, (label, tup) in enumerate(sorted(topomap_by_label.items())):
         vec, peak_ms, half_win = tup[0], tup[1], tup[2]
@@ -214,7 +214,7 @@ def make_component_figure(
         mne.viz.plot_topomap(
             vec, info, axes=ax,
             contours=6,  # Add contour lines for better spatial reading
-            vmin=-vlim, vmax=vlim,  # Fixed ±5µV across all conditions
+            vlim=(-vlim_range, vlim_range),  # Fixed ±5µV across all conditions
             show=False,
             cmap='RdBu_r'  # Diverging colormap (red=positive, blue=negative)
         )

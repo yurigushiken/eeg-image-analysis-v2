@@ -6,15 +6,15 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "2 to 1"
+    - name: "decreasing 2 to 1"
       conditions: ["21"]
-    - name: "3 to 2"
+    - name: "decreasing 3 to 2"
       conditions: ["32"]
-    - name: "4 to 3"
+    - name: "decreasing 4 to 3"
       conditions: ["34"]
-    - name: "5 to 4"
+    - name: "decreasing 5 to 4"
       conditions: ["54"]
-    - name: "6 to 5"
+    - name: "decreasing 6 to 5"
       conditions: ["65"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
