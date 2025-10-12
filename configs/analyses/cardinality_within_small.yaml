@@ -12,7 +12,7 @@ selection:
       conditions: ["22"]
     - name: "Cardinality3"
       conditions: ["33"]
-components: ["P1", "N1", "P3b"]
+components: ["P1", "N1"]  # P3b excluded: peak at epoch edge, FWHM cannot be computed
 preprocessing:
   baseline_ms: [-100, 0]
 roi:

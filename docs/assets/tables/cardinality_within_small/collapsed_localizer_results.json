@@ -1,0 +1,46 @@
+{
+  "analysis_id": "cardinality_within_small",
+  "date_analyzed": "2025-10-12T02:27:38.323290",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "n_subjects_total": 24,
+  "n_evokeds_included": 72,
+  "conditions": [
+    "Cardinality1",
+    "Cardinality2",
+    "Cardinality3"
+  ],
+  "components": {
+    "P1": {
+      "peak_latency_ms": 112.0,
+      "peak_gfp_amplitude": 1.0030781841345152e-06,
+      "fwhm_ms": 26.502012439441557,
+      "window_start_ms": 98.28791551155996,
+      "window_end_ms": 124.78992795100152,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    },
+    "N1": {
+      "peak_latency_ms": 180.0,
+      "peak_gfp_amplitude": 1.5986746968202484e-06,
+      "fwhm_ms": 58.03523515412667,
+      "window_start_ms": 149.0109994548518,
+      "window_end_ms": 207.04623460897847,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    }
+  }
+}

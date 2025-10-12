@@ -1,4 +1,14 @@
 #!/usr/bin/env python
+"""Run YAML-driven ERP analysis using GFP-based collapsed localizer.
+
+This script implements scientifically rigorous ERP component analysis:
+1. Collapsed localizer: Average ALL conditions to find component peaks
+2. Global Field Power (GFP): Use all channels, not hand-picked ROIs
+3. FWHM windows: Data-driven window widths from Full Width at Half Maximum
+4. No fallbacks: Errors raised if components cannot be detected (transparency)
+
+This prevents circular analysis and ensures reproducible, defensible results.
+"""
 from __future__ import annotations
 
 import argparse
@@ -14,17 +24,18 @@ SRC_DIR = os.path.join(REPO_ROOT, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from eeg.config import load_config, load_electrodes_config, load_components_config
-from eeg.plots import make_erp_figure, make_component_figure
+from eeg.config import load_config, load_components_config, load_electrodes_config
+from eeg.plots import make_collapsed_localizer_figure, make_component_figure
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
-from eeg.measures import peak_amplitude_and_latency
+from eeg.collapsed_localizer import compute_all_collapsed_localizers
+from eeg.measures import mean_amplitude
 import matplotlib.pyplot as plt
 import mne
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run YAML-driven ERP analysis")
+    parser = argparse.ArgumentParser(description="Run GFP-based ERP analysis")
     parser.add_argument("--config", required=True, help="Path to analysis YAML")
     args = parser.parse_args()
 
@@ -34,7 +45,7 @@ def main() -> int:
 
     cfg = load_config(args.config)
 
-    # Minimal smoke behavior: ensure output directories and page exist
+    # Ensure output directories exist
     plots_dir = cfg.outputs.get("plots_dir")
     tables_dir = cfg.outputs.get("tables_dir")
     page_path = cfg.outputs.get("page")
@@ -46,259 +57,433 @@ def main() -> int:
     os.makedirs(tables_dir, exist_ok=True)
     os.makedirs(os.path.dirname(page_path), exist_ok=True)
 
-    # Try to discover data files; if none, generate placeholder ERP overlay for each component
+    # Load component and electrode configuration
     repo_root = REPO_ROOT
-    _ = load_electrodes_config(repo_root)
     components_cfg = load_components_config(repo_root)
+    electrodes_cfg = load_electrodes_config(repo_root)
+
+    # Discover data files
     fif_files = discover_epoch_files(
         root=os.path.join(repo_root, cfg.dataset.get("root", "data")),
         pattern=cfg.dataset.get("pattern", "**/*.fif"),
     )
 
-    saved_figs = []
-    saved_figs_map = {}  # component -> absolute path
     analysis_id = os.path.splitext(os.path.basename(page_path))[0]
+    saved_figs = []
+
+    # Handle no-data case with synthetic placeholder
     if len(fif_files) == 0:
-        # Placeholder: simple synthetic curves for each component
-        times_ms = np.linspace(-100, 400, 256)
-        for comp in cfg.components:
-            curves = {
-                "Small_Increasing": np.sin(times_ms / 80.0),
-                "Small_Decreasing": np.cos(times_ms / 90.0),
-            }
-            fig = make_erp_figure(
-                curves_by_label=curves,
-                times_ms=times_ms,
-                title=f"{analysis_id}: {comp}",
-                subtitle=f"baseline {tuple(cfg.preprocessing.get('baseline_ms', [-100,0]))} ms; synthetic",
-                annotate_fallback=False,
-            )
-            out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
-            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 150)))
-            saved_figs.append(out_path)
-            saved_figs_map[comp] = out_path
-    else:
-        # Real pipeline (simplified): compute per-set grand average ROI curves and topomaps
-        baseline = tuple(cfg.preprocessing.get("baseline_ms", [-100, 0]))
-        topomap_half_win = int(cfg.plots.get("topomap_peak_window_ms", 50))
-        roi_min = int(cfg.roi.get("min_channels", 4))
-        response = str(cfg.selection.get("response", "ALL")).upper()
+        print(f"Warning: No FIF files found. Analysis '{analysis_id}' cannot proceed.")
+        print("Please ensure data files are present in the configured location.")
+        # Create empty page
+        write_analysis_page(
+            page_path,
+            title=analysis_id,
+            figure_paths=[],
+            notes=["No FIF files found; analysis could not be completed."]
+        )
+        return 1
 
-        # Prepare per-set subject evokeds and QC rows
-        sets = cfg.selection.get("condition_sets", [])
-        set_name_to_evokeds = {s["name"]: [] for s in sets}
-        qc_rows = []
+    # === Real Analysis Pipeline ===
+    print(f"\n{'='*60}")
+    print(f"Running GFP-based analysis: {analysis_id}")
+    print(f"{'='*60}\n")
 
-        # ROI lists from electrodes config
-        electrodes = load_electrodes_config(repo_root)
+    baseline = tuple(cfg.preprocessing.get("baseline_ms", [-100, 0]))
+    response = str(cfg.selection.get("response", "ALL")).upper()
+    sets = cfg.selection.get("condition_sets", [])
 
-        empty_sets = set()
-        for fif in fif_files:
-            epochs = read_epochs(fif)
-            apply_montage(epochs, cfg.dataset.get("montage_sfp"))
-            # Baseline correction (ms to seconds)
-            bl = (baseline[0] / 1000.0, baseline[1] / 1000.0)
-            validate_baseline_window(epochs, baseline)
-            if response == "ACC1":
-                if getattr(epochs, "metadata", None) is None or "Target.ACC" not in epochs.metadata.columns:
-                    continue
-                epochs = epochs[epochs.metadata["Target.ACC"] == 1]
-            epochs.apply_baseline(bl)
-            subj_id = extract_subject_id(epochs, fif)
+    print(f"Configuration:")
+    print(f"  Baseline: {baseline} ms")
+    print(f"  Response filter: {response}")
+    print(f"  Condition sets: {[s['name'] for s in sets]}")
+    print(f"  Components: {cfg.components}")
+    print(f"  Subjects found: {len(fif_files)}\n")
 
-            # For each set, subset and average if threshold satisfied
-            for item in sets:
-                name = item["name"]
-                codes = [str(c) for c in item.get("conditions", [])]
-                if getattr(epochs, "metadata", None) is not None and "Condition" in epochs.metadata.columns:
-                    mask = epochs.metadata["Condition"].astype(str).isin(codes)
-                    sub = epochs[mask]
-                else:
-                    # Fallback using event labels
-                    sub = None
-                    for code in codes:
-                        try:
-                            part = epochs[str(code)]
-                        except Exception:
-                            continue
-                        sub = part if sub is None else sub + part
-                    if sub is None:
-                        empty_sets.add(name)
-                        qc_rows.append({
-                            "subject": subj_id,
-                            "set": name,
-                            "included": False,
-                            "epoch_count": 0,
-                            "exclusion_reason": "no_matching_conditions",
-                            "roi_available_vs_required": None,
-                        })
+    # Collect subject-level evoked responses per condition set
+    set_name_to_evokeds = {s["name"]: [] for s in sets}
+    qc_rows = []
+
+    print("Loading and preprocessing subjects...")
+    for fif_idx, fif in enumerate(fif_files, 1):
+        epochs = read_epochs(fif)
+        apply_montage(epochs, cfg.dataset.get("montage_sfp"))
+
+        # Baseline correction
+        bl = (baseline[0] / 1000.0, baseline[1] / 1000.0)
+        validate_baseline_window(epochs, baseline)
+
+        # Response filtering (ACC1 or ALL)
+        if response == "ACC1":
+            if getattr(epochs, "metadata", None) is None or "Target.ACC" not in epochs.metadata.columns:
+                continue
+            epochs = epochs[epochs.metadata["Target.ACC"] == 1]
+
+        epochs.apply_baseline(bl)
+        subj_id = extract_subject_id(epochs, fif)
+
+        # Process each condition set
+        for item in sets:
+            name = item["name"]
+            codes = [str(c) for c in item.get("conditions", [])]
+
+            # Select epochs by condition codes
+            if getattr(epochs, "metadata", None) is not None and "Condition" in epochs.metadata.columns:
+                mask = epochs.metadata["Condition"].astype(str).isin(codes)
+                sub = epochs[mask]
+            else:
+                # Fallback using event labels
+                sub = None
+                for code in codes:
+                    try:
+                        part = epochs[str(code)]
+                    except Exception:
                         continue
-                epoch_count = int(len(sub))
-                min_epochs = int(cfg.selection.get("min_epochs_per_set", 1))
-                if epoch_count < min_epochs:
-                    empty_sets.add(name)
+                    sub = part if sub is None else sub + part
+
+                if sub is None:
                     qc_rows.append({
                         "subject": subj_id,
                         "set": name,
                         "included": False,
-                        "epoch_count": epoch_count,
-                        "exclusion_reason": f"insufficient_epochs(<{min_epochs})",
-                        "roi_available_vs_required": None,
+                        "epoch_count": 0,
+                        "exclusion_reason": "no_matching_conditions",
                     })
                     continue
-                evk = sub.average()
-                set_name_to_evokeds[name].append(evk)
-                # ROI availability per subject (unique union of ROI channels across configured components)
-                # Build union of channels from electrodes config for all components used in this run
-                roi_union = []
-                for c in cfg.components:
-                    if c == "P1":
-                        names = ["P1"]
-                    elif c == "N1":
-                        names = ["N1_L", "N1_R"]
-                    else:
-                        names = ["P3B"]
-                    for rn in names:
-                        roi_union.extend(electrodes.get(rn, []))
-                roi_union = list(dict.fromkeys(roi_union))
-                available = sum(1 for ch in roi_union if ch in epochs.ch_names)
+
+            # Check minimum epochs threshold
+            epoch_count = int(len(sub))
+            min_epochs = int(cfg.selection.get("min_epochs_per_set", 1))
+            if epoch_count < min_epochs:
                 qc_rows.append({
                     "subject": subj_id,
                     "set": name,
-                    "included": True,
+                    "included": False,
                     "epoch_count": epoch_count,
-                    "exclusion_reason": "",
-                    "roi_available_vs_required": f"{available}/{roi_min}",
+                    "exclusion_reason": f"insufficient_epochs(<{min_epochs})",
                 })
+                continue
 
-        # Plot overlays and topomaps per component
-        components_cfg = load_components_config(repo_root)
-        for comp in cfg.components:
-            comp_cfg = components_cfg.get(comp, {})
-            window = tuple(comp_cfg.get("window_ms", [0, 0]))
-            # Determine ROI channels for this component
-            if comp == "P1":
-                roi_names = ["P1"]
-            elif comp == "N1":
-                roi_names = ["N1_L", "N1_R"]
-            else:  # P3b
-                roi_names = ["P3B"]
+            # Compute subject-level evoked and store
+            evk = sub.average()
+            set_name_to_evokeds[name].append(evk)
 
-            curves_by_label = {}
-            topomap_by_label = {}
-            times_ms = None
-            for item in sets:
-                name = item["name"]
-                evokeds = set_name_to_evokeds.get(name, [])
-                if not evokeds:
-                    continue
-                # Combine evokeds equally
-                gav = mne.combine_evoked(evokeds, weights="equal")
-                # ROI aggregation: average selected channels
-                roi_chs = []
-                for rn in roi_names:
-                    roi_chs.extend(electrodes.get(rn, []))
-                roi_chs = list(dict.fromkeys(roi_chs))
-                pick = [ch for ch in roi_chs if ch in gav.ch_names]
-                if len(pick) < roi_min:
-                    continue
-                data = gav.copy().pick_channels(pick).data
-                roi_curve = data.mean(axis=0)
+            qc_rows.append({
+                "subject": subj_id,
+                "set": name,
+                "included": True,
+                "epoch_count": epoch_count,
+                "exclusion_reason": "",
+            })
+
+        if fif_idx % 5 == 0:
+            print(f"  Processed {fif_idx}/{len(fif_files)} subjects...")
+
+    print(f"  Completed! Processed {len(fif_files)} subjects.\n")
+
+    # Check if we have any data
+    total_evokeds = sum(len(evks) for evks in set_name_to_evokeds.values())
+    if total_evokeds == 0:
+        print("ERROR: No subjects passed inclusion criteria.")
+        print("Please check your condition codes and min_epochs_per_set settings.")
+        write_analysis_page(
+            page_path,
+            title=analysis_id,
+            figure_paths=[],
+            notes=["No subjects met inclusion criteria."]
+        )
+        return 1
+
+    # === GFP-based Collapsed Localizer ===
+    print("Computing GFP-based collapsed localizer...")
+    print("(Averaging ALL conditions to find unbiased component peaks)\n")
+
+    try:
+        collapsed_results = compute_all_collapsed_localizers(
+            evokeds_by_set=set_name_to_evokeds,
+            components_config=components_cfg,
+            requested_components=cfg.components,  # Only analyze requested components
+        )
+    except ValueError as e:
+        print(f"\nERROR: Collapsed localizer failed: {e}")
+        print("\nThis means a component could not be detected in your data.")
+        print("Possible reasons:")
+        print("  1. Component not present in this paradigm")
+        print("  2. Search range in components.yaml is incorrect")
+        print("  3. Data quality issues (check preprocessing)")
+        print("\nAnalysis cannot proceed without valid component detection.")
+        return 1
+
+    print(f"\nCollapsed localizer completed successfully!")
+    print(f"Detected {len(collapsed_results)} components.\n")
+
+    # Generate collapsed localizer plot
+    first_evoked = list(set_name_to_evokeds.values())[0][0]
+    epoch_end_ms = float(first_evoked.times[-1] * 1000.0)
+    xlim_ms = (baseline[0], epoch_end_ms)
+
+    cl_fig = make_collapsed_localizer_figure(
+        localizer_results=collapsed_results,
+        title=f"{analysis_id}: Collapsed Localizer (GFP-based)",
+        subtitle=f"baseline {baseline} ms; collapsed across all conditions; FWHM windows",
+        xlim_ms=xlim_ms,
+    )
+    cl_out_path = os.path.join(plots_dir, f"{analysis_id}-collapsed_localizer.png")
+    cl_fig.savefig(cl_out_path, dpi=int(cfg.plots.get("dpi", 300)))
+    plt.close(cl_fig)
+    saved_figs.append(cl_out_path)
+
+    print(f"Saved collapsed localizer plot: {os.path.basename(cl_out_path)}\n")
+
+    # === Per-Condition Analysis (using GFP-derived windows) ===
+    print("Generating per-condition analyses...")
+    print("(Using FWHM windows from collapsed localizer)\n")
+
+    # For each component, generate ERP overlays with topomaps using GFP-derived windows
+    saved_figs_map = {}  # component -> absolute path
+
+    # Data recording for statistical analysis
+    condition_measurements = []  # List of dicts for CSV export
+
+    for comp in cfg.components:
+        if comp not in collapsed_results:
+            print(f"  Skipping {comp}: not detected in collapsed localizer")
+            continue
+
+        # Get GFP-derived window for this component
+        comp_result = collapsed_results[comp]
+        peak_lat = comp_result['peak_latency_ms']
+        window_start = comp_result['window_start_ms']
+        window_end = comp_result['window_end_ms']
+        fwhm = comp_result['fwhm_ms']
+
+        print(f"  Processing {comp}: peak {peak_lat} ms, FWHM window [{window_start:.1f}, {window_end:.1f}] ms")
+
+        # Get ROI channels for this component
+        comp_cfg = components_cfg.get(comp, {})
+        roi_names = comp_cfg.get('rois', [])
+
+        # Collect all electrode labels for ROIs
+        roi_channels = []
+        for roi_name in roi_names:
+            if roi_name in electrodes_cfg:
+                roi_channels.extend(electrodes_cfg[roi_name])
+
+        if not roi_channels:
+            print(f"    Warning: No ROI channels found for {comp}, skipping component plot")
+            continue
+
+        # Compute grand average for each condition set
+        curves_by_label = {}
+        topomap_by_label = {}
+        times_ms = None
+        gav_info = None
+
+        for set_name, evoked_list in set_name_to_evokeds.items():
+            if len(evoked_list) == 0:
+                continue
+
+            # Grand average across subjects
+            gav = mne.grand_average(evoked_list)
+
+            if times_ms is None:
                 times_ms = (gav.times * 1000.0).astype(float)
-                # Detect peak
-                polarity = "pos" if comp in ("P1", "P3b") else "neg"
-                amp, lat, used_fallback = peak_amplitude_and_latency(roi_curve, times_ms, window_ms=window, polarity=polarity)
-                # Build overlay curves
-                curves_by_label[name] = roi_curve
+                gav_info = gav.info
 
-                # Topomap around peak (capture vectors for composite figure)
-                tmin = (lat - topomap_half_win) / 1000.0
-                tmax = (lat + topomap_half_win) / 1000.0
+            # Extract ROI channels and average
+            try:
+                roi_data = gav.copy().pick_channels(roi_channels, ordered=False)
+                roi_curve = roi_data.data.mean(axis=0)
+                curves_by_label[set_name] = roi_curve
+            except Exception as e:
+                print(f"    Warning: Could not extract ROI channels for {set_name}: {e}")
+                continue
+
+            # Extract topomap data using GFP-derived FWHM window
+            # Convert window to seconds for MNE
+            tmin = window_start / 1000.0
+            tmax = window_end / 1000.0
+
+            try:
                 evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
                 mean_vec = evk_win.data.mean(axis=1)
-                # Store topomap with fallback flag for annotation
-                topomap_by_label[name] = (mean_vec, int(lat), int(topomap_half_win), used_fallback)
+                # Store: (topomap_vector, peak_latency_ms, half_window_ms, used_fallback)
+                # For GFP approach, used_fallback is always False
+                half_win = fwhm / 2.0
+                topomap_by_label[set_name] = (mean_vec, int(peak_lat), int(half_win), False)
 
-            if curves_by_label and times_ms is not None:
-                # Prepare styles if specified
-                color_list = cfg.plots.get("colors") or []
-                colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
-                styles_cfg = cfg.plots.get("linestyles") or {}
-                linestyles = {k: v for k, v in styles_cfg.items()}
+                # Record amplitude measurement for statistical analysis
+                # Calculate mean amplitude in ROI channels within FWHM window
+                roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
 
-                # Set x-axis limits to start from baseline onset (user-configurable)
-                # This makes the plot match the YAML configuration more clearly
-                xlim_ms = (baseline[0], times_ms[-1])  # From baseline start to end of epoch
+                condition_measurements.append({
+                    "analysis_id": analysis_id,
+                    "component": comp,
+                    "condition": set_name,
+                    "n_subjects": len(evoked_list),
+                    "peak_latency_ms": float(peak_lat),
+                    "window_start_ms": float(window_start),
+                    "window_end_ms": float(window_end),
+                    "fwhm_ms": float(fwhm),
+                    "mean_amplitude_roi": roi_mean_amplitude,
+                    "roi_channels": ";".join(roi_channels),
+                })
+            except Exception as e:
+                print(f"    Warning: Could not extract topomap for {set_name}: {e}")
+                continue
 
-                fig = make_component_figure(
-                    curves_by_label=curves_by_label,
-                    times_ms=times_ms,
-                    topomap_by_label=topomap_by_label,
-                    info=gav.info,
-                    title=f"{analysis_id}: {comp} ({response})",
-                    subtitle=f"baseline {baseline} ms; ±{topomap_half_win} ms topomap; roi.min={roi_min}",
-                    colors=colors,
-                    linestyles=linestyles,
-                    xlim_ms=xlim_ms,
-                )
-                out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
-                fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 150)))
-                saved_figs.append(out_path)
-                saved_figs_map[comp] = out_path
-    # Write a minimal analysis page and ensure index template exists
+        # Generate component figure if we have data
+        if curves_by_label and topomap_by_label and times_ms is not None and gav_info is not None:
+            # Prepare color/linestyle configuration
+            color_list = cfg.plots.get("colors") or []
+            colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
+            styles_cfg = cfg.plots.get("linestyles") or {}
+            linestyles = {k: v for k, v in styles_cfg.items()}
+
+            # Set x-axis limits to start from baseline onset
+            xlim_ms = (baseline[0], float(times_ms[-1]))
+
+            fig = make_component_figure(
+                curves_by_label=curves_by_label,
+                times_ms=times_ms,
+                topomap_by_label=topomap_by_label,
+                info=gav_info,
+                title=f"{analysis_id}: {comp} ({response})",
+                subtitle=f"baseline {baseline} ms; GFP-derived FWHM window: [{window_start:.1f}, {window_end:.1f}] ms",
+                colors=colors,
+                linestyles=linestyles,
+                xlim_ms=xlim_ms,
+            )
+
+            out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
+            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)))
+            plt.close(fig)
+            saved_figs.append(out_path)
+            saved_figs_map[comp] = out_path
+
+            print(f"    Saved: {os.path.basename(out_path)}")
+        else:
+            print(f"    Warning: Insufficient data to generate figure for {comp}")
+
+    print()
+
+    # === Save Scientific Measurements ===
+    # Save collapsed localizer results (component-level GFP measurements)
+    import datetime
+    collapsed_localizer_data = {
+        "analysis_id": analysis_id,
+        "date_analyzed": datetime.datetime.now().isoformat(),
+        "baseline_ms": list(baseline),
+        "response_filter": response,
+        "n_subjects_total": len(fif_files),
+        "n_evokeds_included": total_evokeds,
+        "conditions": [s["name"] for s in sets],
+        "components": {}
+    }
+
+    for comp, result in collapsed_results.items():
+        collapsed_localizer_data["components"][comp] = {
+            "peak_latency_ms": float(result['peak_latency_ms']),
+            "peak_gfp_amplitude": float(result['peak_amplitude']),
+            "fwhm_ms": float(result['fwhm_ms']),
+            "window_start_ms": float(result['window_start_ms']),
+            "window_end_ms": float(result['window_end_ms']),
+            "search_range_ms": [float(x) for x in result['search_range_ms']],
+            "method": "GFP_collapsed_localizer",
+            "n_subjects": int(result['n_subjects']),
+            "n_conditions": int(result['n_conditions']),
+        }
+
+    collapsed_json_path = os.path.join(tables_dir, "collapsed_localizer_results.json")
+    with open(collapsed_json_path, "w", encoding="utf-8") as f:
+        json.dump(collapsed_localizer_data, f, indent=2)
+
+    print(f"Saved collapsed localizer results: {os.path.basename(collapsed_json_path)}")
+
+    # Save per-condition measurements (for statistical analysis)
+    if condition_measurements:
+        import csv
+        measurements_csv_path = os.path.join(tables_dir, "condition_measurements.csv")
+        fieldnames = [
+            "analysis_id", "component", "condition", "n_subjects",
+            "peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms",
+            "mean_amplitude_roi", "roi_channels"
+        ]
+        with open(measurements_csv_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(condition_measurements)
+
+        print(f"Saved condition measurements: {os.path.basename(measurements_csv_path)}")
+        print(f"  Recorded {len(condition_measurements)} condition-component measurements\n")
+
+    # Write analysis page
     notes = []
-    if len(fif_files) == 0:
-        notes.append("No FIF files found; synthetic curves rendered for demonstration.")
-    if 'empty_sets' in locals() and empty_sets:
-        for s in sorted(empty_sets):
-            notes.append(f"Set {s}: No subjects met inclusion criteria (min_epochs_per_set={cfg.selection.get('min_epochs_per_set', 1)})")
-    write_analysis_page(page_path, title=os.path.splitext(os.path.basename(page_path))[0], figure_paths=saved_figs, notes=notes)
+    notes.append(f"GFP-based collapsed localizer analysis with {total_evokeds} subject-condition combinations.")
+    notes.append(f"Components analyzed: {', '.join(cfg.components)}")
+
+    for comp, result in collapsed_results.items():
+        notes.append(
+            f"{comp}: Peak at {result['peak_latency_ms']} ms, "
+            f"FWHM window [{result['window_start_ms']:.1f}, {result['window_end_ms']:.1f}] ms "
+            f"(width: {result['fwhm_ms']:.1f} ms)"
+        )
+
+    write_analysis_page(page_path, title=analysis_id, figure_paths=saved_figs, notes=notes)
+
+    # Update index
     index_path = os.path.join(repo_root, "docs", "index.md")
     ensure_index_template(index_path)
-    # Map component to relative path from docs/
+
+    # Map components to their figure paths (use per-component figures if available)
     comp_to_img = {}
-    for comp, p in saved_figs_map.items():
-        rel = os.path.relpath(p, os.path.join(repo_root, "docs")).replace("\\", "/")
+    for comp in cfg.components:
+        if comp in saved_figs_map:
+            # Use per-component figure
+            rel = os.path.relpath(saved_figs_map[comp], os.path.join(repo_root, "docs")).replace("\\", "/")
+        else:
+            # Fallback to collapsed localizer
+            rel = os.path.relpath(cl_out_path, os.path.join(repo_root, "docs")).replace("\\", "/")
         comp_to_img[comp] = rel
+
     update_index_grid(index_path, analysis_id, comp_to_img)
 
-    # Metrics: runtime and asset sizes
+    # Metrics
     duration_s = time.perf_counter() - t_start
-    tables_dir = cfg.outputs.get("tables_dir")
-    if tables_dir:
-        os.makedirs(tables_dir, exist_ok=True)
-        sizes = {os.path.basename(p): os.path.getsize(p) for p in saved_figs if os.path.isfile(p)}
-        largest = (max(sizes.values()) if sizes else 0)
-        total = int(sum(sizes.values())) if sizes else 0
-        # Performance thresholds per US3 T304
-        largest_limit = 2 * 1024 * 1024  # 2 MB
-        total_limit = 20 * 1024 * 1024   # 20 MB
-        metrics = {
-            "analysis_id": analysis_id,
-            "duration_seconds": round(duration_s, 3),
-            "num_figures": len(saved_figs),
-            "largest_png_bytes": largest,
-            "total_png_bytes": total,
-            "largest_png_ok": bool(largest <= largest_limit),
-            "cumulative_png_ok": bool(total <= total_limit),
-            "largest_png_limit_bytes": largest_limit,
-            "total_png_limit_bytes": total_limit,
-            "figures": sizes,
-        }
-        with open(os.path.join(tables_dir, "run_metrics.json"), "w", encoding="utf-8") as f:
-            json.dump(metrics, f, indent=2)
-        # QC CSV
-        if 'qc_rows' in locals() and qc_rows:
-            import csv
-            with open(os.path.join(tables_dir, "qc_summary.csv"), "w", newline="", encoding="utf-8") as f:
-                writer = csv.DictWriter(f, fieldnames=["subject", "set", "included", "epoch_count", "exclusion_reason", "roi_available_vs_required"])
-                writer.writeheader()
-                writer.writerows(qc_rows)
+    sizes = {os.path.basename(p): os.path.getsize(p) for p in saved_figs if os.path.isfile(p)}
+    largest = max(sizes.values()) if sizes else 0
+    total = int(sum(sizes.values())) if sizes else 0
+
+    metrics = {
+        "analysis_id": analysis_id,
+        "duration_seconds": round(duration_s, 3),
+        "num_figures": len(saved_figs),
+        "largest_png_bytes": largest,
+        "total_png_bytes": total,
+        "largest_png_ok": bool(largest <= 2 * 1024 * 1024),
+        "cumulative_png_ok": bool(total <= 20 * 1024 * 1024),
+        "figures": sizes,
+    }
+
+    with open(os.path.join(tables_dir, "run_metrics.json"), "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2)
+
+    # QC CSV
+    if qc_rows:
+        import csv
+        with open(os.path.join(tables_dir, "qc_summary.csv"), "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["subject", "set", "included", "epoch_count", "exclusion_reason"])
+            writer.writeheader()
+            writer.writerows(qc_rows)
+
+    print(f"\n{'='*60}")
+    print(f"Analysis completed in {duration_s:.2f} seconds")
+    print(f"Output: {page_path}")
+    print(f"Figures: {len(saved_figs)} plots ({total/1024:.1f} KB total)")
+    print(f"{'='*60}\n")
 
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-

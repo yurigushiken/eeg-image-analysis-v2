@@ -10,7 +10,7 @@ selection:
       conditions: ["12", "13", "23"]
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
-components: ["P1", "N1", "P3b"]
+components: ["P1", "N1"]  # P3b excluded: peak at epoch edge, FWHM cannot be computed
 preprocessing:
   baseline_ms: [-100, 0]
 roi:

@@ -165,3 +165,123 @@ def make_component_figure(
     return fig
 
 
+def make_collapsed_localizer_figure(
+    localizer_results: Dict[str, Dict],
+    title: str = "Collapsed Localizer (GFP-based)",
+    subtitle: Optional[str] = None,
+    xlim_ms: Optional[Tuple[float, float]] = None,
+):
+    """
+    Create collapsed localizer figure using Global Field Power (GFP) approach.
+
+    This plot provides scientific justification for time window selection by showing:
+    - GFP trace (standard deviation across ALL channels)
+    - Detected peak within a priori search range (red dashed line)
+    - FWHM window (shaded region) - data-driven window width
+    - Search range boundaries (dotted lines)
+
+    This approach is unbiased, transparent, and prevents circular analysis.
+
+    Args:
+        localizer_results: Dict mapping component name to GFP analysis results dict:
+            - 'gfp': GFP array (n_times,)
+            - 'times_ms': Time points in milliseconds
+            - 'peak_latency_ms': Peak latency
+            - 'window_start_ms': FWHM window start
+            - 'window_end_ms': FWHM window end
+            - 'fwhm_ms': FWHM duration
+            - 'search_range_ms': A priori search range tuple
+        title: Figure title
+        subtitle: Optional subtitle explaining baseline and parameters
+        xlim_ms: Optional (min, max) tuple to limit x-axis display range
+
+    Returns:
+        matplotlib Figure object
+
+    Example:
+        >>> results = compute_all_collapsed_localizers(evokeds_by_set, components_config)
+        >>> fig = make_collapsed_localizer_figure(results)
+        >>> fig.savefig('collapsed_localizer.png', dpi=300)
+    """
+    import numpy as np
+
+    n_components = len(localizer_results)
+    if n_components == 0:
+        raise ValueError("No localizer results to plot")
+
+    # Create subplots: one per component
+    fig, axes = plt.subplots(
+        n_components, 1,
+        figsize=(8.5, 2.8 * n_components),
+        constrained_layout=True,
+        squeeze=False  # Always return 2D array
+    )
+    axes = axes.flatten()
+
+    for idx, (comp, result) in enumerate(sorted(localizer_results.items())):
+        # Extract GFP results
+        gfp = result['gfp']
+        times_ms = result['times_ms']
+        peak_lat = result['peak_latency_ms']
+        window_start = result['window_start_ms']
+        window_end = result['window_end_ms']
+        fwhm = result['fwhm_ms']
+        search_range = result['search_range_ms']
+
+        ax = axes[idx]
+
+        # Plot GFP trace
+        ax.plot(times_ms, gfp, label="GFP (all channels)", color="#2c7bb6", linewidth=2.0, zorder=3)
+
+        # Shade FWHM window
+        ax.axvspan(window_start, window_end, alpha=0.2, color="#d7191c",
+                   label=f"FWHM window ({fwhm:.1f} ms)", zorder=1)
+
+        # Mark stimulus onset
+        ax.axvline(0, color="#666", linewidth=1, alpha=0.5, linestyle="-",
+                   label="Stimulus onset", zorder=2)
+
+        # Mark detected peak
+        ax.axvline(peak_lat, color="#d7191c", linewidth=2, linestyle="--",
+                   label=f"Peak: {peak_lat} ms", zorder=4)
+
+        # Mark a priori search range boundaries
+        ax.axvline(search_range[0], color="#999", linewidth=1, alpha=0.4, linestyle=":",
+                   zorder=2)
+        ax.axvline(search_range[1], color="#999", linewidth=1, alpha=0.4, linestyle=":",
+                   label=f"Search range: [{search_range[0]}, {search_range[1]}] ms", zorder=2)
+
+        # Styling
+        ax.set_xlabel("Time (ms)", fontsize=10)
+        ax.set_ylabel("GFP (µV)", fontsize=10)
+        ax.set_title(f"{comp} Component", fontsize=11, loc="left", fontweight="bold")
+
+        if xlim_ms is not None:
+            ax.set_xlim(xlim_ms)
+
+        ax.legend(loc="best", fontsize=8, framealpha=0.9)
+        ax.grid(True, alpha=0.3, linewidth=0.5)
+
+        # Add annotation box with key metrics
+        metrics_text = (
+            f"Peak GFP: {result['peak_amplitude']:.2f} µV\n"
+            f"FWHM: {fwhm:.1f} ms\n"
+            f"Window: [{window_start:.1f}, {window_end:.1f}] ms"
+        )
+        ax.text(0.98, 0.97, metrics_text,
+                transform=ax.transAxes,
+                fontsize=7,
+                va="top", ha="right",
+                bbox=dict(boxstyle="round,pad=0.5", facecolor="white",
+                         edgecolor="#2c7bb6", alpha=0.8))
+
+    # Overall title
+    fig.suptitle(title, fontsize=13, fontweight="bold")
+
+    # Subtitle at bottom
+    if subtitle:
+        fig.text(0.5, 0.01, subtitle, ha="center", fontsize=9, style="italic")
+
+    return fig
+
+
