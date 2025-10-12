@@ -1,59 +1,61 @@
 {
   "analysis_id": "small_increasing_vs_decreasing_ACC1",
-  "date_analyzed": "2025-10-12T04:43:59.655853",
+  "date_analyzed": "2025-10-12T05:11:57.767255",
   "baseline_ms": [
     -100,
     0
   ],
   "response_filter": "ACC1",
   "n_subjects_total": 24,
-  "n_evokeds_included": 48,
+  "n_evokeds_included": 54,
   "conditions": [
     "Small_Increasing",
-    "Small_Decreasing"
+    "Small_Decreasing",
+    "decreasing 3 to 2",
+    "increasing 2 to 3"
   ],
   "components": {
     "P1": {
       "peak_latency_ms": 108.0,
-      "peak_gfp_amplitude": 5.480069751015188e-07,
-      "fwhm_ms": 17.1625733939336,
-      "window_start_ms": 100.49590117137078,
-      "window_end_ms": 117.65847456530437,
+      "peak_gfp_amplitude": 5.965685224744564e-07,
+      "fwhm_ms": 18.796783576713324,
+      "window_start_ms": 98.06170499556978,
+      "window_end_ms": 116.85848857228311,
       "search_range_ms": [
         60.0,
         120.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 48,
-      "n_conditions": 2
+      "n_subjects": 54,
+      "n_conditions": 4
     },
     "N1": {
       "peak_latency_ms": 176.0,
-      "peak_gfp_amplitude": 2.4624665278070402e-06,
-      "fwhm_ms": 55.61086480601341,
-      "window_start_ms": 156.56934020271183,
-      "window_end_ms": 212.18020500872524,
+      "peak_gfp_amplitude": 2.4826058162792736e-06,
+      "fwhm_ms": 54.25898302567907,
+      "window_start_ms": 156.8651459632119,
+      "window_end_ms": 211.12412898889096,
       "search_range_ms": [
         125.0,
         200.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 48,
-      "n_conditions": 2
+      "n_subjects": 54,
+      "n_conditions": 4
     },
     "P3b": {
-      "peak_latency_ms": 568.0,
-      "peak_gfp_amplitude": 4.648879840751293e-06,
-      "fwhm_ms": 29.442129361660022,
-      "window_start_ms": 556.6379433022272,
-      "window_end_ms": 586.0800726638872,
+      "peak_latency_ms": 572.0,
+      "peak_gfp_amplitude": 4.6189738958860354e-06,
+      "fwhm_ms": 34.57825006830342,
+      "window_start_ms": 554.9283321513353,
+      "window_end_ms": 589.5065822196387,
       "search_range_ms": [
         320.0,
         590.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 48,
-      "n_conditions": 2
+      "n_subjects": 54,
+      "n_conditions": 4
     }
   }
 }
