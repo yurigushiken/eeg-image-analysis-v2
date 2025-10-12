@@ -202,12 +202,22 @@ def make_component_figure(
             pass
 
     # Bottom row: topomaps per condition set
+    # Use fixed ±5µV color scale across all topomaps for direct visual comparison
+    vlim = 5.0  # microvolts
+
     for idx, (label, tup) in enumerate(sorted(topomap_by_label.items())):
         vec, peak_ms, half_win = tup[0], tup[1], tup[2]
         used_fallback = tup[3] if len(tup) > 3 else False
 
         ax = fig.add_subplot(gs[1, idx])
-        mne.viz.plot_topomap(vec, info, axes=ax, contours=0, show=False)
+        # Fixed symmetric color scaling ensures amplitude differences are visually comparable
+        mne.viz.plot_topomap(
+            vec, info, axes=ax,
+            contours=6,  # Add contour lines for better spatial reading
+            vmin=-vlim, vmax=vlim,  # Fixed ±5µV across all conditions
+            show=False,
+            cmap='RdBu_r'  # Diverging colormap (red=positive, blue=negative)
+        )
 
         # Add asterisk to title if fallback was used and break long text into lines
         title_suffix = "*" if used_fallback else ""

@@ -168,7 +168,7 @@ Both directories include a small README placeholder and are kept empty in versio
 - ~270 epochs per subject
 - 129 channels (128-channel EGI net + 1 reference)
 - 250 Hz sampling rate
-- Epoch duration: ~0.696s (approximately -200 to 496 ms)
+- Epoch duration: ~0.696s (-100 to 496 ms for )
 
 **Metadata columns** (in each epochs file):
 - `Condition`: Two-digit code (e.g., "12", "23", "33")
