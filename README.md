@@ -6,26 +6,6 @@ Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZp
 
 This project implements a **declarative, YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures and interactive web pages. Instead of writing custom analysis scripts for each research question, you define your analysis in a simple YAML configuration file.
 
-**Key Features:**
-- 🎯 **YAML-driven**: Define entire analyses in configuration files—no code changes needed
-- 📊 **Multi-component support**: Analyze P1, N1, and P3b components in a single run
-- 🔄 **Reproducible**: Deterministic outputs with pinned dependencies and seeded randomness
-- 📈 **Publication-ready**: High-DPI figures (PNG) and CSV tables automatically generated
-- 🌐 **Web publishing**: Automatic GitHub Pages integration with interactive lightbox gallery
-- ✅ **Quality control**: Built-in QC reporting for subject inclusion and data quality
-- 🎨 **Customizable styling**: Configure colors, line styles, and figure layout via YAML
- - 🧪 **GFP-based collapsed localizer**: Component peak and FWHM window are data-driven and shared across conditions, preventing circular analysis. Measurements are saved to CSV/JSON for stats.
-
-## Project Philosophy
-
-This project follows **Spec-Driven Development** principles with a strong constitution (see [.specify/memory/constitution.md](.specify/memory/constitution.md)) that enforces:
-
-1. **Reproducible Environment**: All analyses run in a declared Python environment with pinned dependencies
-2. **Data Governance**: Raw data never committed to Git; only published outputs in `docs/`
-3. **Declarative Configuration**: Analyses defined via YAML, not imperative scripts
-4. **ERP Standards**: Consistent component definitions, ROIs, and montage enforcement
-5. **Documentation as Artifact**: Every analysis generates a Markdown page with figures and tables
-
 ## Quick Start
 
 ### 1. Environment Setup
