@@ -90,7 +90,7 @@ eeg-image-analysis-v2/
 │   └── analyses/                     # Analysis YAML configurations
 │       ├── small_increasing_vs_decreasing.yaml
 │       ├── cardinality_within_small.yaml
-│       └── erp_from1_to_any.yaml
+│       └── from1_to_any.yaml
 ├── src/eeg/                          # Core analysis library
 │   ├── config.py                     # YAML schema loading/validation
 │   ├── io.py                         # Epochs I/O, montage enforcement
@@ -112,13 +112,8 @@ eeg-image-analysis-v2/
 ├── assets/net/                       # Montage file
 │   └── AdultAverageNet128_v1.sfp
 ├── environment.yml                   # Conda environment specification
-├── .specify/memory/constitution.md   # Project governance principles
-└── specs/001-yaml-driven-erp/        # Feature specification and planning
-    ├── spec.md                       # User stories and requirements
-    ├── plan.md                       # Technical implementation plan
-    ├── tasks.md                      # Task breakdown
-    ├── quickstart.md                 # Step-by-step reproduction guide
-    └── data-model.md                 # Data entities and validation
+├── .specify/                         # (local tooling; ignored in Git)
+└── specs/                            # (design docs; ignored in Git)
 ```
 
 ## Understanding the YAML Configuration
@@ -129,7 +124,7 @@ Each analysis is defined by a YAML file with these key sections:
 # Dataset configuration
 dataset:
   root: "data"
-  pattern: "**/sub-*_epo.fif"
+  pattern: "**/sub-*_preprocessed-epo.fif"
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 
 # Trial selection
@@ -155,7 +150,7 @@ roi:
 
 # Plotting options
 plots:
-  topomap_peak_window_ms: 50
+  topomap_peak_window_ms: 20
   peak_level: "cohort"  # or "subject"
   dpi: 300
   colors: ["#e41a1c", "#377eb8", "#4daf4a"]
@@ -170,6 +165,7 @@ outputs:
   plots_dir: "docs/assets/plots/small_increasing_vs_decreasing"
   tables_dir: "docs/assets/tables/small_increasing_vs_decreasing"
   page: "docs/analysis/small_increasing_vs_decreasing.md"
+  # Figures are saved as <analysis_id>-<Component>.png (e.g., small_increasing_vs_decreasing-P1.png)
 ```
 
 See [configs/analyses/](configs/analyses/) for complete examples.
@@ -218,7 +214,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
                   ├─ Detect peak within time window
                   ├─ Aggregate ROI channels
                   ├─ Compute mean/peak amplitude and latency
-                  └─ Extract topomap around peak (±50ms)
+                  └─ Extract topomap around peak (±20ms by default)
                 ↓
 6. Plotting     → Generate composite figures:
                   ├─ Top panel: ERP overlay with SEM
@@ -236,7 +232,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
-- **Peak-locked topomaps**: Topomaps are centered on the detected peak latency (±50ms configurable window), ensuring we capture the true component maximum rather than an arbitrary time point.
+- **Peak-locked topomaps**: Topomaps are centered on the detected peak latency (±20ms default, configurable via YAML), ensuring we capture the true component maximum rather than an arbitrary time point.
 
 - **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
 
@@ -271,14 +267,10 @@ pytest tests/test_plots.py       # Figure generation
 pytest tests/test_cli_smoke.py   # End-to-end smoke test
 ```
 
-## Documentation and Learning Resources
+## Documentation and Links
 
-- **Constitution**: [.specify/memory/constitution.md](.specify/memory/constitution.md) - Project governance and design principles
-- **Complete Specification**: [specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md) - User stories, requirements, edge cases
-- **Implementation Plan**: [specs/001-yaml-driven-erp/plan.md](specs/001-yaml-driven-erp/plan.md) - Technical decisions and architecture
-- **Task Breakdown**: [specs/001-yaml-driven-erp/tasks.md](specs/001-yaml-driven-erp/tasks.md) - Development roadmap
-- **Quickstart Guide**: [specs/001-yaml-driven-erp/quickstart.md](specs/001-yaml-driven-erp/quickstart.md) - Step-by-step reproduction
-- **Data Model**: [specs/001-yaml-driven-erp/data-model.md](specs/001-yaml-driven-erp/data-model.md) - Entities and validation rules
+- Website: docs/ (served via GitHub Pages)
+- Analyses: `docs/analysis/` pages and thumbnails on `docs/index.md`
 
 ## Website Publishing (GitHub Pages)
 
@@ -334,11 +326,7 @@ The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
 
 ## Contributing
 
-This project follows [Spec-Driven Development](https://github.com/github/spec-kit) methodology. Before contributing:
-
-1. Review the [constitution](.specify/memory/constitution.md) for project principles
-2. Check [tasks.md](specs/001-yaml-driven-erp/tasks.md) for planned work
-3. Propose changes via YAML configuration first (avoid code changes when possible)
+Please propose changes via YAML configuration when possible; open issues/PRs for code changes.
 
 ## License
 
