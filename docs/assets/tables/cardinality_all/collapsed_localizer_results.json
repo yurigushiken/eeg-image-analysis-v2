@@ -1,0 +1,63 @@
+{
+  "analysis_id": "cardinality_all",
+  "date_analyzed": "2025-10-12T08:03:30.523658",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "n_subjects_total": 24,
+  "n_evokeds_included": 144,
+  "conditions": [
+    "Cardinality1",
+    "Cardinality2",
+    "Cardinality3",
+    "Cardinality4",
+    "Cardinality5",
+    "Cardinality6"
+  ],
+  "components": {
+    "P1": {
+      "peak_latency_ms": 112.0,
+      "peak_gfp_amplitude": 1.1111881452296142,
+      "fwhm_ms": 41.4822354914682,
+      "window_start_ms": 85.13032319458671,
+      "window_end_ms": 126.61255868605491,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 144,
+      "n_conditions": 6
+    },
+    "N1": {
+      "peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -3.10920632881695,
+      "fwhm_ms": 67.60058856144201,
+      "window_start_ms": 140.28383166793986,
+      "window_end_ms": 207.88442022938187,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 144,
+      "n_conditions": 6
+    },
+    "P3b": {
+      "peak_latency_ms": 360.0,
+      "peak_gfp_amplitude": 0.6126015051489221,
+      "fwhm_ms": 56.50083781219598,
+      "window_start_ms": 340.19553721761974,
+      "window_end_ms": 396.6963750298157,
+      "search_range_ms": [
+        320.0,
+        590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 144,
+      "n_conditions": 6
+    }
+  }
+}
