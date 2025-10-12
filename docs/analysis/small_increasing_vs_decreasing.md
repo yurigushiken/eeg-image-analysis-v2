@@ -1,8 +1,11 @@
-# small_increasing_vs_decreasing
+---
+layout: analysis
+title: small_increasing_vs_decreasing
+---
 
-![figure](docs/assets/plots/small_increasing_vs_decreasing/P1.png)
+![P1]({{ '/assets/plots/small_increasing_vs_decreasing/P1.png' | relative_url }})
 
-![figure](docs/assets/plots/small_increasing_vs_decreasing/N1.png)
+![N1]({{ '/assets/plots/small_increasing_vs_decreasing/N1.png' | relative_url }})
 
-![figure](docs/assets/plots/small_increasing_vs_decreasing/P3b.png)
+![P3b]({{ '/assets/plots/small_increasing_vs_decreasing/P3b.png' | relative_url }})
 

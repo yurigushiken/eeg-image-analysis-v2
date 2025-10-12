@@ -1,8 +1,11 @@
-# erp_from1_to_any
+---
+layout: analysis
+title: erp_from1_to_any
+---
 
-![figure](docs/assets/plots/erp_from1_to_any/P1.png)
+![P1]({{ '/assets/plots/erp_from1_to_any/P1.png' | relative_url }})
 
-![figure](docs/assets/plots/erp_from1_to_any/N1.png)
+![N1]({{ '/assets/plots/erp_from1_to_any/N1.png' | relative_url }})
 
-![figure](docs/assets/plots/erp_from1_to_any/P3b.png)
+![P3b]({{ '/assets/plots/erp_from1_to_any/P3b.png' | relative_url }})
 

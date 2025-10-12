@@ -1,0 +1,47 @@
+# GitHub Pages Jekyll Configuration
+# This file tells GitHub Pages how to process your docs/ folder
+
+# Site settings
+title: "EEG ERP Analysis Pipeline"
+description: "YAML-driven ERP analysis with automated figure generation"
+baseurl: "/eeg-image-analysis-v2" # Must match your repository name
+url: "https://yurigushiken.github.io"
+
+# Build settings
+markdown: kramdown
+theme: null # Use custom layout below
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# Include these files (needed for assets)
+include:
+  - assets
+
+# Kramdown settings (for markdown processing)
+kramdown:
+  input: GFM  # GitHub Flavored Markdown
+  syntax_highlighter_opts:
+    disable: true  # Disable rouge syntax highlighting (we don't need it)
+
+# Collections (for organizing analysis pages)
+collections:
+  analyses:
+    output: true
+    permalink: /analysis/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "analysis"
+    values:
+      layout: "analysis"

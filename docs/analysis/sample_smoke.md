@@ -1,7 +1,9 @@
-# sample_smoke
+---
+layout: analysis
+title: sample_smoke
+---
 
-![figure](docs/assets/plots/sample_smoke/P1_overlay.png)
-
+![P1 Overlay]({{ '/assets/plots/sample_smoke/P1_overlay.png' | relative_url }})
 
 ## Notes
 
