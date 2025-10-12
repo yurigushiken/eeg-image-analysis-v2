@@ -29,6 +29,6 @@ plots:
     Increasing: "--"
 outputs:
   page: "single"
-  plots_dir: "docs/assets/plots/32_23"
-  tables_dir: "docs/assets/tables/32_23"
-  page: "docs/analysis/32_23.md"
+  plots_dir: "docs/assets/plots/32_23_22_33"
+  tables_dir: "docs/assets/tables/32_23_22_33"
+  page: "docs/analysis/32_23_22_33.md"
