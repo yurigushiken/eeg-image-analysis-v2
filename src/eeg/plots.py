@@ -53,7 +53,7 @@ def make_erp_figure(
         ax.plot(times_ms, y, label=label, **kw)
     ax.axvline(0, color="#999", linewidth=1, alpha=0.6)
     ax.set_xlabel("Time (ms)")
-    ax.set_ylabel("Amplitude (a.u.)")
+    ax.set_ylabel("Amplitude (µV)")
     # Use figure-level title to keep consistent placement across figures
     if title:
         try:
@@ -172,7 +172,7 @@ def make_component_figure(
         except Exception:
             pass
     ax_overlay.set_xlabel("Time (ms)")
-    ax_overlay.set_ylabel("Amplitude (a.u.)")
+    ax_overlay.set_ylabel("Amplitude (µV)")
 
     # Set x-axis limits if requested (e.g., start from baseline onset)
     if xlim_ms is not None:
@@ -218,20 +218,18 @@ def make_component_figure(
 
 def make_collapsed_localizer_figure(
     localizer_results: Dict[str, Dict],
-    title: str = "Collapsed Localizer (GFP-based)",
+    title: str = "Collapsed Localizer",
     subtitle: Optional[str] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
 ):
     """
-    Create collapsed localizer figure using Global Field Power (GFP) approach.
+    Create collapsed localizer figure (GFP or ROI-based).
 
     This plot provides scientific justification for time window selection by showing:
-    - GFP trace (standard deviation across ALL channels)
+    - Localizer trace (GFP across channels or ROI mean), labeled accordingly
     - Detected peak within a priori search range (red dashed line)
     - FWHM window (shaded region) - data-driven window width
     - Search range boundaries (dotted lines)
-
-    This approach is unbiased, transparent, and prevents circular analysis.
 
     Args:
         localizer_results: Dict mapping component name to GFP analysis results dict:
@@ -270,8 +268,15 @@ def make_collapsed_localizer_figure(
     axes = axes.flatten()
 
     for idx, (comp, result) in enumerate(sorted(localizer_results.items())):
-        # Extract GFP results
-        gfp = result['gfp']
+        # Extract trace (supports GFP or ROI)
+        if 'gfp' in result:
+            trace = result['gfp']
+            trace_label = "GFP (all channels)"
+            y_label = "GFP (µV)"
+        else:
+            trace = result.get('trace')
+            trace_label = result.get('trace_label', 'Localizer')
+            y_label = result.get('trace_units', 'µV')
         times_ms = result['times_ms']
         peak_lat = result['peak_latency_ms']
         window_start = result['window_start_ms']
@@ -281,8 +286,8 @@ def make_collapsed_localizer_figure(
 
         ax = axes[idx]
 
-        # Plot GFP trace
-        ax.plot(times_ms, gfp, label="GFP (all channels)", color="#2c7bb6", linewidth=2.0, zorder=3)
+        # Plot localizer trace
+        ax.plot(times_ms, trace, label=trace_label, color="#2c7bb6", linewidth=2.0, zorder=3)
 
         # Shade FWHM window
         ax.axvspan(window_start, window_end, alpha=0.2, color="#d7191c",
@@ -304,7 +309,7 @@ def make_collapsed_localizer_figure(
 
         # Styling
         ax.set_xlabel("Time (ms)", fontsize=10)
-        ax.set_ylabel("GFP (µV)", fontsize=10)
+        ax.set_ylabel(y_label, fontsize=10)
         ax.set_title(f"{comp} Component", fontsize=11, loc="left", fontweight="bold")
 
         if xlim_ms is not None:

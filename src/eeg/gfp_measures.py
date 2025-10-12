@@ -297,8 +297,8 @@ def gfp_peak_and_window(
             f"but times_ms has {len(times_ms)} points"
         )
 
-    # Step 1: Compute GFP
-    gfp = compute_gfp(data)
+    # Step 1: Compute GFP and convert to microvolts for reporting/plotting
+    gfp = compute_gfp(data) * 1e6
 
     # Step 2: Find peak in search range
     peak_latency_ms, peak_amplitude = find_gfp_peak(gfp, times_ms, search_range_ms)

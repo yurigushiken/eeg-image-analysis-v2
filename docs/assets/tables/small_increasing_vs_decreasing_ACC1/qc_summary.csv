@@ -1,97 +1,49 @@
 subject,set,included,epoch_count,exclusion_reason
 02,Small_Increasing,True,20,
 02,Small_Decreasing,True,19,
-02,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-02,increasing 2 to 3,False,6,insufficient_epochs(<8)
 03,Small_Increasing,True,21,
 03,Small_Decreasing,True,20,
-03,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-03,increasing 2 to 3,True,8,
 04,Small_Increasing,True,13,
 04,Small_Decreasing,True,15,
-04,decreasing 3 to 2,False,4,insufficient_epochs(<8)
-04,increasing 2 to 3,False,3,insufficient_epochs(<8)
 05,Small_Increasing,True,14,
 05,Small_Decreasing,True,14,
-05,decreasing 3 to 2,False,3,insufficient_epochs(<8)
-05,increasing 2 to 3,False,3,insufficient_epochs(<8)
 08,Small_Increasing,True,15,
 08,Small_Decreasing,True,19,
-08,decreasing 3 to 2,False,6,insufficient_epochs(<8)
-08,increasing 2 to 3,False,6,insufficient_epochs(<8)
 09,Small_Increasing,True,14,
 09,Small_Decreasing,True,12,
-09,decreasing 3 to 2,False,3,insufficient_epochs(<8)
-09,increasing 2 to 3,False,5,insufficient_epochs(<8)
 10,Small_Increasing,True,17,
 10,Small_Decreasing,True,16,
-10,decreasing 3 to 2,False,5,insufficient_epochs(<8)
-10,increasing 2 to 3,False,5,insufficient_epochs(<8)
 11,Small_Increasing,True,14,
 11,Small_Decreasing,True,15,
-11,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-11,increasing 2 to 3,False,5,insufficient_epochs(<8)
 12,Small_Increasing,True,15,
 12,Small_Decreasing,True,15,
-12,decreasing 3 to 2,False,4,insufficient_epochs(<8)
-12,increasing 2 to 3,False,7,insufficient_epochs(<8)
 13,Small_Increasing,True,20,
 13,Small_Decreasing,True,13,
-13,decreasing 3 to 2,False,5,insufficient_epochs(<8)
-13,increasing 2 to 3,True,8,
 14,Small_Increasing,True,20,
 14,Small_Decreasing,True,21,
-14,decreasing 3 to 2,False,6,insufficient_epochs(<8)
-14,increasing 2 to 3,True,8,
 15,Small_Increasing,True,15,
 15,Small_Decreasing,True,12,
-15,decreasing 3 to 2,False,4,insufficient_epochs(<8)
-15,increasing 2 to 3,False,5,insufficient_epochs(<8)
 17,Small_Increasing,True,15,
 17,Small_Decreasing,True,17,
-17,decreasing 3 to 2,False,5,insufficient_epochs(<8)
-17,increasing 2 to 3,False,5,insufficient_epochs(<8)
 21,Small_Increasing,True,14,
 21,Small_Decreasing,True,18,
-21,decreasing 3 to 2,False,6,insufficient_epochs(<8)
-21,increasing 2 to 3,False,3,insufficient_epochs(<8)
 22,Small_Increasing,True,17,
 22,Small_Decreasing,True,16,
-22,decreasing 3 to 2,False,5,insufficient_epochs(<8)
-22,increasing 2 to 3,True,8,
 23,Small_Increasing,True,15,
 23,Small_Decreasing,True,19,
-23,decreasing 3 to 2,False,4,insufficient_epochs(<8)
-23,increasing 2 to 3,False,6,insufficient_epochs(<8)
 25,Small_Increasing,True,18,
 25,Small_Decreasing,True,16,
-25,decreasing 3 to 2,False,4,insufficient_epochs(<8)
-25,increasing 2 to 3,False,6,insufficient_epochs(<8)
 26,Small_Increasing,True,18,
 26,Small_Decreasing,True,21,
-26,decreasing 3 to 2,True,9,
-26,increasing 2 to 3,False,5,insufficient_epochs(<8)
 27,Small_Increasing,True,20,
 27,Small_Decreasing,True,21,
-27,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-27,increasing 2 to 3,False,6,insufficient_epochs(<8)
 28,Small_Increasing,True,16,
 28,Small_Decreasing,True,14,
-28,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-28,increasing 2 to 3,False,4,insufficient_epochs(<8)
 29,Small_Increasing,True,17,
 29,Small_Decreasing,True,22,
-29,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-29,increasing 2 to 3,False,4,insufficient_epochs(<8)
 31,Small_Increasing,True,19,
 31,Small_Decreasing,True,20,
-31,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-31,increasing 2 to 3,False,6,insufficient_epochs(<8)
 32,Small_Increasing,True,15,
 32,Small_Decreasing,True,19,
-32,decreasing 3 to 2,False,6,insufficient_epochs(<8)
-32,increasing 2 to 3,False,4,insufficient_epochs(<8)
 33,Small_Increasing,True,18,
 33,Small_Decreasing,True,14,
-33,decreasing 3 to 2,False,7,insufficient_epochs(<8)
-33,increasing 2 to 3,True,8,

@@ -28,7 +28,7 @@ from eeg.config import load_config, load_components_config, load_electrodes_conf
 from eeg.plots import make_collapsed_localizer_figure, make_component_figure, make_erp_figure
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
-from eeg.collapsed_localizer import compute_collapsed_localizer
+from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collapsed_localizer_roi
 from eeg.measures import mean_amplitude
 import matplotlib.pyplot as plt
 import mne
@@ -194,8 +194,8 @@ def main() -> int:
         )
         return 1
 
-    # === GFP-based Collapsed Localizer ===
-    print("Computing GFP-based collapsed localizer...")
+    # === Collapsed Localizer (ROI default) ===
+    print("Computing collapsed localizer...")
     print("(Averaging ALL conditions to find unbiased component peaks)\n")
 
     # Compute collapsed localizer per component so failures don't abort the run
@@ -209,11 +209,34 @@ def main() -> int:
             failed_components.append(comp)
             continue
         try:
-            res = compute_collapsed_localizer(
-                evokeds_by_set=set_name_to_evokeds,
-                component_name=comp,
-                search_range_ms=tuple(sr),
-            )
+            # Determine localizer method (default ROI)
+            loc_cfg = comp_cfg.get("localizer", {}) if isinstance(comp_cfg, dict) else {}
+            method = str(loc_cfg.get("method", "roi")).lower()
+            if method not in ("roi", "gfp"):
+                method = "roi"
+
+            if method == "roi":
+                roi_names = loc_cfg.get("roi_names") or comp_cfg.get("rois") or []
+                roi_channels = []
+                for rn in roi_names:
+                    if rn in electrodes_cfg:
+                        roi_channels.extend(electrodes_cfg[rn])
+                if not roi_channels:
+                    raise ValueError(f"No ROI channels found for ROI localizer ({comp})")
+                polarity = str(loc_cfg.get("polarity", ("negative" if comp.upper().startswith("N") else "positive")))
+                res = compute_collapsed_localizer_roi(
+                    evokeds_by_set=set_name_to_evokeds,
+                    roi_channels=roi_channels,
+                    component_name=comp,
+                    search_range_ms=tuple(sr),
+                    polarity=polarity,
+                )
+            else:
+                res = compute_collapsed_localizer(
+                    evokeds_by_set=set_name_to_evokeds,
+                    component_name=comp,
+                    search_range_ms=tuple(sr),
+                )
             collapsed_results[comp] = res
             print(
                 f"  {comp}: peak at {res['peak_latency_ms']} ms, FWHM window "
@@ -237,7 +260,7 @@ def main() -> int:
 
     cl_fig = make_collapsed_localizer_figure(
         localizer_results=collapsed_results,
-        title=f"{analysis_id}: Collapsed Localizer (GFP-based)",
+        title=f"{analysis_id}: Collapsed Localizer",
         subtitle=f"baseline {baseline} ms; collapsed across all conditions; FWHM windows",
         xlim_ms=xlim_ms,
     )
@@ -310,10 +333,10 @@ def main() -> int:
                 times_ms = (gav.times * 1000.0).astype(float)
                 gav_info = gav.info
 
-            # Extract ROI channels and average
+            # Extract ROI channels and average in microvolts
             try:
                 roi_data = gav.copy().pick_channels(roi_channels, ordered=False)
-                roi_curve = roi_data.data.mean(axis=0)
+                roi_curve = roi_data.data.mean(axis=0) * 1e6
                 curves_by_label[set_name] = roi_curve
             except Exception as e:
                 print(f"    Warning: Could not extract ROI channels for {set_name}: {e}")
@@ -325,7 +348,8 @@ def main() -> int:
                 tmax = window_end / 1000.0
                 try:
                     evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
-                    mean_vec = evk_win.data.mean(axis=1)
+                    # Topomap vector in microvolts
+                    mean_vec = evk_win.data.mean(axis=1) * 1e6
                     half_win = fwhm / 2.0
                     topomap_by_label[set_name] = (mean_vec, int(peak_lat), int(half_win), False)
 

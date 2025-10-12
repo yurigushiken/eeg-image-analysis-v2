@@ -10,10 +10,6 @@ selection:
       conditions: ["12", "13", "23"]
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
-    - name: "decreasing 3 to 2"
-      conditions: ["32"]
-    - name: "increasing 2 to 3"
-      conditions: ["23"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

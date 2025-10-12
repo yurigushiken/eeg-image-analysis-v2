@@ -1,5 +1,5 @@
 dataset:
-  root: "data/lab-data-original"
+  root: "data/hpf_1.5_lpf_35_baseline-on"
   pattern: "sub-*_preprocessed-epo.fif"
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 selection:

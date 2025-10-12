@@ -1,6 +1,6 @@
 {
   "analysis_id": "cardinality_within_small",
-  "date_analyzed": "2025-10-12T05:11:22.515405",
+  "date_analyzed": "2025-10-12T06:16:23.111604",
   "baseline_ms": [
     -100,
     0
@@ -16,10 +16,10 @@
   "components": {
     "P1": {
       "peak_latency_ms": 116.0,
-      "peak_gfp_amplitude": 6.154552797631605e-07,
-      "fwhm_ms": 7.628998823692541,
-      "window_start_ms": 113.00673838606957,
-      "window_end_ms": 120.63573720976211,
+      "peak_gfp_amplitude": 0.8348312501771898,
+      "fwhm_ms": 42.84006219373521,
+      "window_start_ms": 95.79311829648009,
+      "window_end_ms": 138.6331804902153,
       "search_range_ms": [
         60.0,
         120.0
@@ -29,11 +29,11 @@
       "n_conditions": 3
     },
     "N1": {
-      "peak_latency_ms": 176.0,
-      "peak_gfp_amplitude": 1.7514398386747771e-06,
-      "fwhm_ms": 36.55044278863028,
-      "window_start_ms": 157.0011929533547,
-      "window_end_ms": 193.55163574198497,
+      "peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -2.7127608784440653,
+      "fwhm_ms": 55.76582572712792,
+      "window_start_ms": 145.1751074970298,
+      "window_end_ms": 200.94093322415773,
       "search_range_ms": [
         125.0,
         200.0

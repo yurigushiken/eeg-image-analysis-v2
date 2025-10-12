@@ -1,6 +1,6 @@
 {
   "analysis_id": "from1_to_any",
-  "date_analyzed": "2025-10-12T05:11:29.024637",
+  "date_analyzed": "2025-10-12T06:16:28.624122",
   "baseline_ms": [
     -100,
     0
@@ -15,11 +15,11 @@
   ],
   "components": {
     "P1": {
-      "peak_latency_ms": 92.0,
-      "peak_gfp_amplitude": 6.718917840666709e-07,
-      "fwhm_ms": 31.074362719648633,
-      "window_start_ms": 73.82319115167991,
-      "window_end_ms": 104.89755387132854,
+      "peak_latency_ms": 80.0,
+      "peak_gfp_amplitude": 0.7043277924065054,
+      "fwhm_ms": 52.47412445437138,
+      "window_start_ms": 57.62818441966789,
+      "window_end_ms": 110.10230887403927,
       "search_range_ms": [
         60.0,
         120.0
@@ -29,11 +29,11 @@
       "n_conditions": 3
     },
     "N1": {
-      "peak_latency_ms": 168.0,
-      "peak_gfp_amplitude": 3.105204487561995e-06,
-      "fwhm_ms": 58.399793667362076,
-      "window_start_ms": 143.99576589516903,
-      "window_end_ms": 202.3955595625311,
+      "peak_latency_ms": 164.0,
+      "peak_gfp_amplitude": -4.796457417809835,
+      "fwhm_ms": 74.2030894634274,
+      "window_start_ms": 136.32972598154484,
+      "window_end_ms": 210.53281544497224,
       "search_range_ms": [
         125.0,
         200.0
@@ -43,11 +43,11 @@
       "n_conditions": 3
     },
     "P3b": {
-      "peak_latency_ms": 568.0,
-      "peak_gfp_amplitude": 5.543828588095544e-06,
-      "fwhm_ms": 22.80070304883577,
-      "window_start_ms": 556.8672638958443,
-      "window_end_ms": 579.6679669446801,
+      "peak_latency_ms": 512.0,
+      "peak_gfp_amplitude": 1.9688008925321752,
+      "fwhm_ms": 236.131238916531,
+      "window_start_ms": 311.8355045937762,
+      "window_end_ms": 547.9667435103072,
       "search_range_ms": [
         320.0,
         590.0

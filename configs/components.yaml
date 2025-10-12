@@ -3,10 +3,22 @@ components:
   P1:
     window_ms: [60, 120]
     rois: [P1]
+    localizer:
+      method: roi
+      roi_names: [P1]
+      polarity: positive
   N1:
     window_ms: [125, 200]
     rois: [N1_L, N1_R]
+    localizer:
+      method: roi
+      roi_names: [N1_L, N1_R]
+      polarity: negative
   P3b:
     window_ms: [320, 590]
     rois: [P3B]
+    localizer:
+      method: roi
+      roi_names: [P3B]
+      polarity: positive
 
