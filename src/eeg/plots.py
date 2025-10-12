@@ -17,7 +17,26 @@ def make_erp_figure(
     annotate_fallback: bool = False,
     colors: Optional[Mapping[str, str]] = None,
     linestyles: Optional[Mapping[str, str]] = None,
+    xlim_ms: Optional[Tuple[float, float]] = None,
 ):
+    """
+    Create an ERP overlay figure.
+
+    Args:
+        curves_by_label: Dict mapping condition name to ERP curve array
+        times_ms: Time points array in milliseconds
+        title: Figure title
+        subtitle: Optional subtitle
+        annotate_fallback: Add fallback annotation text
+        colors: Optional color mapping per condition
+        linestyles: Optional linestyle mapping per condition
+        xlim_ms: Optional (min, max) tuple to limit x-axis display range.
+                 If None, shows full epoch range. If provided (e.g., from baseline_ms),
+                 only shows time range from xlim_ms[0] to end of epoch.
+
+    Returns:
+        matplotlib Figure object
+    """
     fig, ax = plt.subplots(figsize=(6, 3.5), constrained_layout=True)
     for label, y in curves_by_label.items():
         kw = {}
@@ -30,6 +49,11 @@ def make_erp_figure(
     ax.set_xlabel("Time (ms)")
     ax.set_ylabel("Amplitude (a.u.)")
     ax.set_title(title)
+
+    # Set x-axis limits if requested (e.g., start from baseline onset)
+    if xlim_ms is not None:
+        ax.set_xlim(xlim_ms)
+
     # Avoid overlapping text at the top; use figure-level subtitle instead
     if subtitle:
         fig.suptitle(f"\n{subtitle}", fontsize=9, y=0.98)
@@ -48,6 +72,7 @@ def make_component_figure(
     subtitle: Optional[str] = None,
     colors: Optional[Mapping[str, str]] = None,
     linestyles: Optional[Mapping[str, str]] = None,
+    xlim_ms: Optional[Tuple[float, float]] = None,
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -63,6 +88,9 @@ def make_component_figure(
         subtitle: Optional subtitle
         colors: Optional color mapping per condition
         linestyles: Optional linestyle mapping per condition
+        xlim_ms: Optional (min, max) tuple to limit x-axis display range.
+                 If None, shows full epoch range. If provided (e.g., from baseline_ms),
+                 only shows time range from xlim_ms[0] to end of epoch.
 
     Returns:
         matplotlib Figure object
@@ -107,6 +135,10 @@ def make_component_figure(
     ax_overlay.set_title(title)
     ax_overlay.set_xlabel("Time (ms)")
     ax_overlay.set_ylabel("Amplitude (a.u.)")
+
+    # Set x-axis limits if requested (e.g., start from baseline onset)
+    if xlim_ms is not None:
+        ax_overlay.set_xlim(xlim_ms)
 
     # Add asterisk note to legend if any fallback used
     legend_title = "* = fallback window used" if any_fallback else None

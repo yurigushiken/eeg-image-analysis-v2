@@ -223,6 +223,11 @@ def main() -> int:
                 colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
                 styles_cfg = cfg.plots.get("linestyles") or {}
                 linestyles = {k: v for k, v in styles_cfg.items()}
+
+                # Set x-axis limits to start from baseline onset (user-configurable)
+                # This makes the plot match the YAML configuration more clearly
+                xlim_ms = (baseline[0], times_ms[-1])  # From baseline start to end of epoch
+
                 fig = make_component_figure(
                     curves_by_label=curves_by_label,
                     times_ms=times_ms,
@@ -232,6 +237,7 @@ def main() -> int:
                     subtitle=f"baseline {baseline} ms; ±{topomap_half_win} ms topomap; roi.min={roi_min}",
                     colors=colors,
                     linestyles=linestyles,
+                    xlim_ms=xlim_ms,
                 )
                 out_path = os.path.join(plots_dir, f"{comp}.png")
                 fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 150)))
