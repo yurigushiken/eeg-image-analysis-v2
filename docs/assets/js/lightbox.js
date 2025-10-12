@@ -20,6 +20,17 @@
         img.className = 'lightbox-image';
         img.alt = 'Full-size ERP plot';
 
+        // Navigation buttons
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'lightbox-nav prev';
+        prevBtn.setAttribute('aria-label', 'Previous image');
+        prevBtn.innerHTML = '&#8249;'; // ‹
+
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'lightbox-nav next';
+        nextBtn.setAttribute('aria-label', 'Next image');
+        nextBtn.innerHTML = '&#8250;'; // ›
+
         const closeBtn = document.createElement('button');
         closeBtn.className = 'lightbox-close';
         closeBtn.innerHTML = '&times;';
@@ -27,7 +38,9 @@
         closeBtn.onclick = closeLightbox;
 
         content.appendChild(closeBtn);
+        content.appendChild(prevBtn);
         content.appendChild(img);
+        content.appendChild(nextBtn);
         overlay.appendChild(content);
         document.body.appendChild(overlay);
 
@@ -38,12 +51,16 @@
             }
         });
 
-        // Close on Escape key
+        // Close on Escape key and navigate with arrows
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                closeLightbox();
-            }
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') return closeLightbox();
+            if (e.key === 'ArrowLeft') return navigateRelative(-1);
+            if (e.key === 'ArrowRight') return navigateRelative(1);
         });
+
+        prevBtn.addEventListener('click', function(){ navigateRelative(-1); });
+        nextBtn.addEventListener('click', function(){ navigateRelative(1); });
 
         return overlay;
     }
@@ -74,6 +91,28 @@
 
         // Restore body scroll
         document.body.style.overflow = '';
+    }
+
+    // Navigate to previous/next thumbnail target relative to current
+    function navigateRelative(delta) {
+        const overlay = document.querySelector('.lightbox-overlay');
+        if (!overlay.classList.contains('active')) return;
+        const anchors = Array.from(document.querySelectorAll('a[data-lightbox]'));
+        if (anchors.length === 0) return;
+
+        // Determine current index by matching current image src
+        const img = overlay.querySelector('.lightbox-image');
+        const currentSrc = img.getAttribute('src');
+        let idx = anchors.findIndex(a => a.getAttribute('href') === currentSrc);
+        if (idx === -1) {
+            idx = 0;
+        }
+
+        const nextIdx = (idx + delta + anchors.length) % anchors.length;
+        const nextA = anchors[nextIdx];
+        const href = nextA.getAttribute('href');
+        const ariaLabel = nextA.getAttribute('aria-label');
+        openLightbox(href, ariaLabel);
     }
 
     // Initialize on DOM ready

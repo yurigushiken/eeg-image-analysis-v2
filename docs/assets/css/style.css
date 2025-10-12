@@ -225,8 +225,8 @@ pre code {
 }
 
 .lightbox-content {
-    max-width: min(1200px, 88vw);
-    max-height: 85vh;
+    max-width: min(1000px, 80vw);
+    max-height: 75vh;
     position: relative;
     transform: scale(0.98);
     transition: transform 180ms ease;
@@ -241,7 +241,7 @@ pre code {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 82vh;
+    max-height: 72vh;
     border-radius: 6px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     opacity: 0;
@@ -251,6 +251,34 @@ pre code {
 .lightbox-image.loaded {
     opacity: 1;
 }
+
+/* Lightbox navigation arrows */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 9999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 150ms ease, background 150ms ease;
+}
+
+.lightbox-nav:hover { background: rgba(0, 0, 0, 0.6); }
+
+.lightbox-overlay.active:hover .lightbox-nav { opacity: 0.95; }
+
+.lightbox-nav.prev { left: 8px; }
+.lightbox-nav.next { right: 8px; }
 
 .lightbox-close {
     position: absolute;
