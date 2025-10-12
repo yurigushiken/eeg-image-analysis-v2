@@ -18,7 +18,7 @@ preprocessing:
 roi:
   min_channels: 4
 plots:
-  topomap_peak_window_ms: 50
+  topomap_peak_window_ms: 20
   peak_level: "cohort"
   smoothing:
     method: "moving_average"

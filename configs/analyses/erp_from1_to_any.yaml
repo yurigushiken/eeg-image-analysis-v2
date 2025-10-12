@@ -6,15 +6,19 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "From1_to_any"
-      conditions: ["12", "13", "14"]
+    - name: "1 to 2"
+      conditions: ["12"]
+    - name: "1 to 3"
+      conditions: ["13"]
+    - name: "1 to 4"
+      conditions: ["14"]
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
 roi:
   min_channels: 4
 plots:
-  topomap_peak_window_ms: 50
+  topomap_peak_window_ms: 20
   peak_level: "cohort"
   smoothing:
     method: "moving_average"

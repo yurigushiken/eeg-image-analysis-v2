@@ -56,6 +56,7 @@ def main() -> int:
     )
 
     saved_figs = []
+    saved_figs_map = {}  # component -> absolute path
     analysis_id = os.path.splitext(os.path.basename(page_path))[0]
     if len(fif_files) == 0:
         # Placeholder: simple synthetic curves for each component
@@ -72,9 +73,10 @@ def main() -> int:
                 subtitle=f"baseline {tuple(cfg.preprocessing.get('baseline_ms', [-100,0]))} ms; synthetic",
                 annotate_fallback=False,
             )
-            out_path = os.path.join(plots_dir, f"{comp}_overlay.png")
+            out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 150)))
             saved_figs.append(out_path)
+            saved_figs_map[comp] = out_path
     else:
         # Real pipeline (simplified): compute per-set grand average ROI curves and topomaps
         baseline = tuple(cfg.preprocessing.get("baseline_ms", [-100, 0]))
@@ -239,9 +241,10 @@ def main() -> int:
                     linestyles=linestyles,
                     xlim_ms=xlim_ms,
                 )
-                out_path = os.path.join(plots_dir, f"{comp}.png")
+                out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
                 fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 150)))
                 saved_figs.append(out_path)
+                saved_figs_map[comp] = out_path
     # Write a minimal analysis page and ensure index template exists
     notes = []
     if len(fif_files) == 0:
@@ -254,8 +257,7 @@ def main() -> int:
     ensure_index_template(index_path)
     # Map component to relative path from docs/
     comp_to_img = {}
-    for p in saved_figs:
-        comp = os.path.splitext(os.path.basename(p))[0].split("_")[0]
+    for comp, p in saved_figs_map.items():
         rel = os.path.relpath(p, os.path.join(repo_root, "docs")).replace("\\", "/")
         comp_to_img[comp] = rel
     update_index_grid(index_path, analysis_id, comp_to_img)
