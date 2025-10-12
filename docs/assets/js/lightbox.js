@@ -53,6 +53,12 @@
         const overlay = document.querySelector('.lightbox-overlay');
         const img = overlay.querySelector('.lightbox-image');
 
+        // Reset loading state for fade-in after the new image loads
+        img.classList.remove('loaded');
+        img.onload = function() {
+            img.classList.add('loaded');
+        };
+
         img.src = imageSrc;
         img.alt = altText || 'ERP plot';
         overlay.classList.add('active');
@@ -80,6 +86,12 @@
 
         thumbnailLinks.forEach(function(link) {
             link.addEventListener('click', function(e) {
+                // Preserve Ctrl/Meta/middle-click to open in new tab
+                const isNewTab = e.ctrlKey || e.metaKey || e.button === 1;
+                if (isNewTab) {
+                    return; // let browser handle default
+                }
+
                 e.preventDefault();
                 const href = link.getAttribute('href');
                 const ariaLabel = link.getAttribute('aria-label');
