@@ -1,0 +1,12 @@
+{
+  "analysis_id": "small_increasing_vs_decreasing_ACC1",
+  "duration_seconds": 3.817,
+  "num_figures": 3,
+  "largest_png_bytes": 554730,
+  "total_png_bytes": 1567989,
+  "figures": {
+    "P1.png": 554730,
+    "N1.png": 500523,
+    "P3b.png": 512736
+  }
+}

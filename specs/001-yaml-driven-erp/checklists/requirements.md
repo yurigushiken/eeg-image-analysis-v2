@@ -1,12 +1,12 @@
-# Specification Quality Checklist: YAML-Driven ERP Analysis v1 (Inc vs Dec)
+# Specification Quality Checklist: YAML‑Driven ERP Analysis v1 (Inc vs Dec)
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: 2025-10-11
+**Created**: 2025-10-12
 **Feature**: specs/001-yaml-driven-erp/spec.md
 
 ## Content Quality
 
-- [x] No implementation details (languages, frameworks, APIs)
+- [ ] No implementation details (languages, frameworks, APIs)
 - [x] Focused on user value and business needs
 - [x] Written for non-technical stakeholders
 - [x] All mandatory sections completed
@@ -31,4 +31,6 @@
 
 ## Notes
 
-- Spec aligns with constitution and planned YAML-driven workflow.
+- FR‑016A codifies the example layout (overlay on top; labeled topomaps below).
+- SC‑003 set to ≥8 epochs median; constitution clarifies baseline default and optional variant.
+- TDD added to tasks (T006–T009, T108) to ensure tests precede implementation.

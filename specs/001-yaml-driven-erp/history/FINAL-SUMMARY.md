@@ -1,7 +1,7 @@
 # FINAL SUMMARY: Specification Updates Complete
 
-**Date**: 2025-10-11
-**Status**: ✅ **ALL CLARIFICATIONS RESOLVED - READY FOR IMPLEMENTATION**
+**Date**: 2025-10-12
+**Status**: ✅ Implementation In Progress – US1 complete; US2 docs done; US3 partial
 
 ---
 
@@ -49,13 +49,17 @@
 
 ---
 
-## 📁 **New Files Created**
+## 📁 **New Files Created/Updated (since 2025-10-11)**
 
 1. ✅ `environment.yml` - Conda environment (eeg-image, Python 3.12, mne 1.10)
 2. ✅ `specs/001-yaml-driven-erp/contracts/peak-detection-algorithm.md` - LOPO algorithm
 3. ✅ `specs/001-yaml-driven-erp/CLARIFICATIONS-2025-10-11.md` - Original clarifications
 4. ✅ `specs/001-yaml-driven-erp/CRITICAL-UPDATE-CONDITIONS.md` - **Condition correction**
 5. ✅ `specs/001-yaml-driven-erp/FINAL-SUMMARY.md` - Archived copy exists under `specs/001-yaml-driven-erp/history/FINAL-SUMMARY.md`
+6. ✅ `src/eeg/*` core modules implemented; `scripts/run_analysis.py` orchestrates full run
+7. ✅ `docs/index.md` auto‑generated grid with CSS thumbnails + lightbox
+8. ✅ `docs/assets/plots/<analysis_id>/{P1,N1,P3b}.png` composite figures (overlay + topomaps)
+9. ✅ `docs/assets/tables/<analysis_id>/run_metrics.json` per-run metrics
 6. ✅ `manuscript/works-cited.txt` - Full citations with quotes
 
 ---
@@ -171,7 +175,7 @@ include_groups:
 ## 🎯 **Implementation Readiness**
 
 ### **Phase 1: Setup** (T001-T005)
-✅ **READY TO START**
+✅ **COMPLETED**
 - T001: Create directories
 - T002: Create environment.yml (✅ already created, just copy to correct format)
 - T003: Update .gitignore
@@ -179,13 +183,15 @@ include_groups:
 - T005: Create configs/components.yaml
 
 ### **Phase 2: Foundational** (T010-T018)
-✅ **READY** (after Phase 1 complete)
+✅ **COMPLETED for MVP** (io, select, measures, plots, report, CLI)
 - All core modules specified
 - LOPO algorithm fully documented
 - No blocking ambiguities
 
 ### **Phase 3-6: User Stories & Polish**
-✅ **READY** (sequential after Phase 2)
+✅ US1: Completed
+✅ US2: Docs completed (quickstart, deterministic)
+🟡 US3: Index/lightbox complete; accessibility/perf validation pending
 
 ---
 

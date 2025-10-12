@@ -6,10 +6,36 @@
 # leave the line above and remove the catch‑all /data/ ignore.
 # (Currently we do not include a blanket /data/ ignore.)
 
-# Generated outputs and local scripts under data
+# Ignore all dataset contents
+/data/**
+
+# Generated outputs and local scripts under data (explicit for clarity)
 /data/outputs/
 /data/scripts/
 /data/hpf_1.5_lpf_35_baseline-on/
+
+# Build/artifacts and virtual envs
+dist/
+build/
+*.log
+.env*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.mypy_cache/
+
+# Editors/OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Docs site outputs are kept under version control (do not ignore)
 
 # Local tooling directories
 /.codex/

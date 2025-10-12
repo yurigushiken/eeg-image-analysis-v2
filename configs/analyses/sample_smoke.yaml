@@ -1,0 +1,23 @@
+dataset:
+  root: "data"
+  pattern: "**/sub-*_epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "A"
+      conditions: ["11"]
+components: ["P1"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 50
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/sample_smoke"
+  tables_dir: "docs/assets/tables/sample_smoke"
+  page: "docs/analysis/sample_smoke.md"

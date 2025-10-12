@@ -2,7 +2,7 @@
 
 **Feature Branch**: 001-yaml-driven-erp  
 **Created**: 2025-10-11  
-**Status**: Draft  
+**Status**: In Progress (US1 complete; US2 docs done; US3 partial)  
 **Input**: User description: "YAML-driven ERP analysis pipeline that selects trials via metadata (direction, change_set, size), computes N1/P1/P3b ERPs over predefined ROIs, saves plots+tables to docs for GitHub Pages, and is configured via reusable YAML files."
 
 ## Clarifications
@@ -237,10 +237,9 @@ and tables link to CSVs.
    an analysis YAML (analysis_id, sorted alphabetically) and columns correspond
    to components P1/N1/P3b if generated. Thumbnails link to full‑size PNGs via
    a lightweight overlay (no external deps) suitable for GitHub Pages.
- - **FR-026**: Plots MUST be saved at high DPI (configurable). Provide
-   `plots.dpi` (default 300) and thumbnail width `plots.thumb_width_px`
-   (default 320). The runner generates both full PNGs and thumbnail copies for
-   the index grid.
+- **FR-026**: Plots MUST be saved at high DPI (configurable). Provide
+  `plots.dpi` (default 300). Thumbnails on the index grid are CSS‑scaled
+  from the full‑size PNGs (no separate thumbnail files).
  - **FR-027**: The reporting step MUST update `docs/index.md` to include a
    sorted table/grid of thumbnails sorted by analysis with consistent styling
    and alt text. Existing entries must be updated idempotently (no duplicates).

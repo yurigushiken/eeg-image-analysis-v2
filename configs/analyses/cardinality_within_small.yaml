@@ -1,0 +1,34 @@
+dataset:
+  root: "data"
+  pattern: "**/sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "Cardinality1"
+      conditions: ["11"]
+    - name: "Cardinality2"
+      conditions: ["22"]
+    - name: "Cardinality3"
+      conditions: ["33"]
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  topomap_peak_window_ms: 50
+  peak_level: "cohort"
+  smoothing:
+    method: "moving_average"
+    window_ms: 10
+  formats: ["png"]
+  dpi: 300
+  thumb_width_px: 320
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/cardinality_within_small"
+  tables_dir: "docs/assets/tables/cardinality_within_small"
+  page: "docs/analysis/cardinality_within_small.md"
+

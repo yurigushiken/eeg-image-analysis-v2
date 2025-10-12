@@ -1,0 +1,37 @@
+# ROI electrode mappings for ERP components
+N1_L:
+  - E66
+  - E65
+  - E59
+  - E60
+  - E67
+  - E71
+  - E70
+N1_R:
+  - E84
+  - E76
+  - E77
+  - E85
+  - E91
+  - E90
+  - E83
+P1:
+  - E71
+  - E75
+  - E76
+  - E70
+  - E83
+  - E74
+  - E81
+  - E82
+P3B:
+  - E62
+  - E78
+  - E77
+  - E72
+  - E67
+  - E61
+  - E54
+  - E55
+  - E79
+

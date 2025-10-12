@@ -21,11 +21,11 @@
 
 **Purpose**: Project initialization and basic structure needed by all user stories
 
-- [ ] T001 [P] Create directory structure: `configs/`, `configs/analyses/`, `src/eeg/`, `scripts/`, `docs/analysis/`, `docs/assets/plots/`, `docs/assets/tables/`
-- [ ] T002 [P] Ensure `environment.yml` for conda environment `eeg-image` (Python 3.12, mne==1.10.1, numpy, pandas, matplotlib, pyyaml, pytest) is present and pinned
-- [ ] T003 [P]  `.gitignore` exists.  additions to ensure `data/**` is ignored and only `docs/**` assets are committed
-- [ ] T004 [P] Create `configs/electrodes.yaml` defining ROI electrode mappings (N1_L, N1_R, P1, P3B)
-- [ ] T005 [P] Create `configs/components.yaml` defining component time windows (P1: 60-120ms, N1: 125-200ms, P3b: 300-600ms) and default ROI mappings
+- [X] T001 [P] Create directory structure: `configs/`, `configs/analyses/`, `src/eeg/`, `scripts/`, `docs/analysis/`, `docs/assets/plots/`, `docs/assets/tables/`
+- [X] T002 [P] Ensure `environment.yml` for conda environment `eeg-image` (Python 3.12, mne==1.10.1, numpy, pandas, matplotlib, pyyaml, pytest) is present and pinned
+- [X] T003 [P]  `.gitignore` exists.  additions to ensure `data/**` is ignored and only `docs/**` assets are committed
+- [X] T004 [P] Create `configs/electrodes.yaml` defining ROI electrode mappings (N1_L, N1_R, P1, P3B)
+- [X] T005 [P] Create `configs/components.yaml` defining component time windows (P1: 60-120ms, N1: 125-200ms, P3b: 300-600ms) and default ROI mappings
 
 ---
 
@@ -36,20 +36,20 @@
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
 ### Tests (TDD first)
-- [ ] T006 [P] Write unit tests for selection in `src/eeg/select.py` (ACC1 filter, explicit Condition sets, missing metadata errors)
-- [ ] T007 [P] Write unit tests for measures in `src/eeg/measures.py` (peak detection within windows, smoothing, LOPO fallback behavior)
-- [ ] T008 [P] Write unit tests for plotting in `src/eeg/plots.py` (ERP overlay present, topomap layout per FR-016A, fallback annotation visible)
-- [ ] T009 [P] Write smoke test for CLI on small sample YAML to assert deterministic CSV/PNG outputs (hash compare) and directory structure
+- [X] T006 [P] Write unit tests for selection in `src/eeg/select.py` (ACC1 filter, explicit Condition sets, missing metadata errors)
+- [X] T007 [P] Write unit tests for measures in `src/eeg/measures.py` (peak detection within windows, smoothing, LOPO fallback behavior)
+- [X] T008 [P] Write unit tests for plotting in `src/eeg/plots.py` (ERP overlay present, topomap layout per FR-016A, fallback annotation visible)
+- [X] T009 [P] Write smoke test for CLI on small sample YAML to assert deterministic CSV/PNG outputs (hash compare) and directory structure
 
-- [ ] T010 Implement `src/eeg/__init__.py` as package initializer
-- [ ] T011 Implement `src/eeg/config.py`: YAML schema loader/validator for AnalysisConfig (dataset, selection, components, preprocessing, roi, plots, outputs)
-- [ ] T012 Implement `src/eeg/io.py`: Functions to read Epochs from FIF files, enforce montage from `assets/net/AdultAverageNet128_v1.sfp`, validate sampling rate and channel count, extract subject IDs, and return scalp-only channel picks
-- [ ] T013 Implement `src/eeg/select.py`: Selection helpers (response: ALL vs ACC1 where ACC1 = Target.ACC==1), explicit numeric condition list filters, min_epochs_per_set validation
-- [ ] T014 Implement `src/eeg/erp.py`: Subject-level evoked computation, equal-weight grand averaging across subjects, SEM calculation, ROI aggregation with roi.min_channels threshold
-- [ ] T015 Implement `src/eeg/measures.py`: Component metrics functions (mean amplitude, peak amplitude, peak latency within windows) with optional smoothing
-- [ ] T016 Implement `src/eeg/plots.py`: ERP overlay plotting, peak detection (cohort/subject configurable), peak-locked topomaps, PNG output at plots.dpi, thumbnail generation; annotate plots when fallback window is used (legend/text/marker) per FR-016; enforce layout: ERP overlay on top row, per-condition topomaps below with labels "{condition} – Peak at {t} ms" per FR-016A
-- [ ] T017 Implement `src/eeg/report.py`: Functions to generate `docs/analysis/<analysis_id>.md` with embedded figures, CSV links, titles/subtitles from YAML; update `docs/index.md` grid with thumbnails and lightbox support
-- [ ] T018 Implement `scripts/run_analysis.py`: CLI entry point accepting `--config <yaml>` argument, orchestrating pipeline: load config → load data → select trials → compute ERPs → generate plots → write tables → generate reports
+- [X] T010 Implement `src/eeg/__init__.py` as package initializer
+- [X] T011 Implement `src/eeg/config.py`: YAML schema loader/validator for AnalysisConfig (dataset, selection, components, preprocessing, roi, plots, outputs)
+- [X] T012 Implement `src/eeg/io.py`: Functions to read Epochs from FIF files, enforce montage from `assets/net/AdultAverageNet128_v1.sfp`, validate sampling rate and channel count, extract subject IDs, and return scalp-only channel picks
+- [X] T013 Implement `src/eeg/select.py`: Selection helpers (response: ALL vs ACC1 where ACC1 = Target.ACC==1), explicit numeric condition list filters, min_epochs_per_set validation
+- [X] T014 Implement `src/eeg/erp.py`: Subject-level evoked computation, equal-weight grand averaging across subjects, SEM calculation, ROI aggregation with roi.min_channels threshold
+- [X] T015 Implement `src/eeg/measures.py`: Component metrics functions (mean amplitude, peak amplitude, peak latency within windows) with optional smoothing
+- [X] T016 Implement `src/eeg/plots.py`: ERP overlay plotting, peak detection (cohort/subject configurable), peak-locked topomaps, PNG output at plots.dpi, thumbnail generation; annotate plots when fallback window is used (legend/text/marker) per FR-016; enforce layout: ERP overlay on top row, per-condition topomaps below with labels "{condition} – Peak at {t} ms" per FR-016A
+- [X] T017 Implement `src/eeg/report.py`: Functions to generate `docs/analysis/<analysis_id>.md` with embedded figures, CSV links, titles/subtitles from YAML; update `docs/index.md` grid with thumbnails and lightbox support
+- [X] T018 Implement `scripts/run_analysis.py`: CLI entry point accepting `--config <yaml>` argument, orchestrating pipeline: load config → load data → select trials → compute ERPs → generate plots → write tables → generate reports
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -63,7 +63,7 @@
 
 ### Implementation for User Story 1
 
-- [ ] T101 [US1] Create sample YAML `configs/analyses/small_increasing_vs_decreasing.yaml` with:
+- [X] T101 [US1] Create sample YAML `configs/analyses/small_increasing_vs_decreasing.yaml` with:
   - dataset: {root: "data", pattern: "**/sub-*_epo.fif", montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"}
   - selection:
       response: "ALL"
@@ -79,7 +79,7 @@
   - plots: {topomap_peak_window_ms: 50, peak_level: "cohort", smoothing: {method: "moving_average", window_ms: 10}, formats: ["png"], dpi: 300, thumb_width_px: 320, colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33"], linestyles: {NC: "-", Decrease: ":", Increasing: "--"}}
   - outputs: {page: "single", plots_dir: "docs/assets/plots/small_increasing_vs_decreasing", tables_dir: "docs/assets/tables/small_increasing_vs_decreasing", page: "docs/analysis/small_increasing_vs_decreasing.md"}
 
-- [ ] T110 [US1] Create sample YAML `configs/analyses/cardinality_within_small.yaml` with:
+- [X] T110 [US1] Create sample YAML `configs/analyses/cardinality_within_small.yaml` with:
   - dataset: {root: "data", pattern: "**/sub-*_epo.fif", montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"}
   - selection:
       response: "ALL"
@@ -96,13 +96,13 @@
   - roi: {min_channels: 4}
   - plots: {topomap_peak_window_ms: 50, peak_level: "cohort", smoothing: {method: "moving_average", window_ms: 10}, formats: ["png"], dpi: 300, thumb_width_px: 320}
   - outputs: {page: "single", plots_dir: "docs/assets/plots/cardinality_within_small", tables_dir: "docs/assets/tables/cardinality_within_small", page: "docs/analysis/cardinality_within_small.md"}
-- [ ] T102 [US1] Verify ACC1 vs ALL toggle: create alternate YAML with response: "ACC1" and confirm Target.ACC==1 filtering works
-- [ ] T103 [US1] Verify peak-locked topomaps render correctly with ±plots.topomap_peak_window_ms around detected peaks and that each topomap is labeled with condition and peak time per FR-016A
-- [ ] T104 [US1] Verify plot styling: palette assignment, linestyles (NC=solid, Decrease=dotted, Increasing=dashed)
-- [ ] T105 [US1] Verify titles/subtitles on figures include: analysis_id, response (ALL/ACC1), component (P1/N1/P3b), baseline window, ±topomap window, roi.min_channels, condition summary
-- [ ] T106 [US1] Verify `docs/index.md` grid shows one row for "erp_increasing_vs_decreasing" with P1/N1/P3b thumbnail columns; clicking thumbnail opens full-size PNG in lightbox overlay
-- [ ] T107 [US1] Run end-to-end on 24-subject dataset and verify completion within 10 minutes (Success Criterion SC-001)
- - [ ] T108 [US1] Integration test: run sample YAML and assert figure layout (overlay + labeled topomaps), fallback annotations when applicable, and bit-identical assets on re-run
+- [X] T102 [US1] Verify ACC1 vs ALL toggle: create alternate YAML with response: "ACC1" and confirm Target.ACC==1 filtering works
+- [X] T103 [US1] Verify peak-locked topomaps render correctly with ±plots.topomap_peak_window_ms around detected peaks and that each topomap is labeled with condition and peak time per FR-016A
+- [X] T104 [US1] Verify plot styling: palette assignment, linestyles (NC=solid, Decrease=dotted, Increasing=dashed)
+- [X] T105 [US1] Verify titles/subtitles on figures include: analysis_id, response (ALL/ACC1), component (P1/N1/P3b), baseline window, ±topomap window, roi.min_channels, condition summary
+- [X] T106 [US1] Verify `docs/index.md` grid shows one row for "erp_increasing_vs_decreasing" with P1/N1/P3b thumbnail columns; clicking thumbnail opens full-size PNG in lightbox overlay
+- [X] T107 [US1] Run end-to-end on 24-subject dataset and verify completion within 10 minutes (Success Criterion SC-001)
+ - [X] T108 [US1] Integration test: run sample YAML and assert figure layout (overlay + labeled topomaps), fallback annotations when applicable, and bit-identical assets on re-run
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and produce complete published analysis page
 
@@ -116,14 +116,14 @@
 
 ### Implementation for User Story 2
 
-- [ ] T201 [US2] Document exact reproduction steps in `specs/001-yaml-driven-erp/quickstart.md`:
+- [X] T201 [US2] Document exact reproduction steps in `specs/001-yaml-driven-erp/quickstart.md`:
   - Clone repo
   - `conda env create -f environment.yml`
   - `conda activate eeg-image`
   - `python scripts/run_analysis.py --config configs/analyses/erp_increasing_vs_decreasing.yaml`
   - Expected outputs listed
-- [ ] T202 [US2] Add deterministic settings to all randomized operations (set numpy random seed if any; document in config or code)
-- [ ] T204 [US2] Document expected output file paths in `specs/001-yaml-driven-erp/quickstart.md` (list generated CSVs/PNGs and locations)
+- [X] T202 [US2] Add deterministic settings to all randomized operations (set numpy random seed if any; document in config or code)
+- [X] T204 [US2] Document expected output file paths in `specs/001-yaml-driven-erp/quickstart.md` (list generated CSVs/PNGs and locations)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently; reproducibility is validated
 
