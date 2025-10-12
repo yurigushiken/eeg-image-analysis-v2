@@ -4,7 +4,10 @@
       "Bash(test:*)",
       "Bash(conda activate:*)",
       "Bash(conda list:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(python -m pytest tests/test_measures.py -v)",
+      "Bash(python -m pytest tests/ -v --tb=short)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []

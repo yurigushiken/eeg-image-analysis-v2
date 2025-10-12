@@ -205,7 +205,7 @@ def main() -> int:
                 times_ms = (gav.times * 1000.0).astype(float)
                 # Detect peak
                 polarity = "pos" if comp in ("P1", "P3b") else "neg"
-                amp, lat = peak_amplitude_and_latency(roi_curve, times_ms, window_ms=window, polarity=polarity)
+                amp, lat, used_fallback = peak_amplitude_and_latency(roi_curve, times_ms, window_ms=window, polarity=polarity)
                 # Build overlay curves
                 curves_by_label[name] = roi_curve
 
@@ -214,7 +214,8 @@ def main() -> int:
                 tmax = (lat + topomap_half_win) / 1000.0
                 evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
                 mean_vec = evk_win.data.mean(axis=1)
-                topomap_by_label[name] = (mean_vec, int(lat), int(topomap_half_win))
+                # Store topomap with fallback flag for annotation
+                topomap_by_label[name] = (mean_vec, int(lat), int(topomap_half_win), used_fallback)
 
             if curves_by_label and times_ms is not None:
                 # Prepare styles if specified

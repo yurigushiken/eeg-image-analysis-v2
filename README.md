@@ -1,83 +1,357 @@
-EEG Image Analysis – Data Overview and Usage
+# EEG Image Analysis v2 – YAML-Driven ERP Pipeline
 
+A reproducible, configuration-driven pipeline for EEG event-related potential (ERP) analysis with automated figure generation and GitHub Pages publishing.
+
+## Overview
+
+This project implements a **declarative, YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures and interactive web pages. Instead of writing custom analysis scripts for each research question, you define your analysis in a simple YAML configuration file.
+
+**Key Features:**
+- 🎯 **YAML-driven**: Define entire analyses in configuration files—no code changes needed
+- 📊 **Multi-component support**: Analyze P1, N1, and P3b components in a single run
+- 🔄 **Reproducible**: Deterministic outputs with pinned dependencies and seeded randomness
+- 📈 **Publication-ready**: High-DPI figures (PNG) and CSV tables automatically generated
+- 🌐 **Web publishing**: Automatic GitHub Pages integration with interactive lightbox gallery
+- ✅ **Quality control**: Built-in QC reporting for subject inclusion and data quality
+- 🎨 **Customizable styling**: Configure colors, line styles, and figure layout via YAML
+
+## Project Philosophy
+
+This project follows **Spec-Driven Development** principles with a strong constitution (see [.specify/memory/constitution.md](.specify/memory/constitution.md)) that enforces:
+
+1. **Reproducible Environment**: All analyses run in a declared Python environment with pinned dependencies
+2. **Data Governance**: Raw data never committed to Git; only published outputs in `docs/`
+3. **Declarative Configuration**: Analyses defined via YAML, not imperative scripts
+4. **ERP Standards**: Consistent component definitions, ROIs, and montage enforcement
+5. **Documentation as Artifact**: Every analysis generates a Markdown page with figures and tables
+
+## Quick Start
+
+### 1. Environment Setup
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd eeg-image-analysis-v2
+
+# Create and activate the conda environment
+conda env create -f environment.yml
+conda activate eeg-image
+
+# Verify installation
+python -c "import mne; print(f'MNE version: {mne.__version__}')"
+```
+
+**Environment details:**
 - Python: `3.12`
-- Recommended env: `conda activate eeg-image`
+- Key dependencies: `mne==1.10.1`, `numpy`, `pandas`, `matplotlib`, `pyyaml`, `pytest`
+- See [environment.yml](environment.yml) for complete pinned dependencies
 
-If `conda` is not available on your PATH, you can still run the scripts with any Python 3.12 environment that has `mne`, `pandas`, `numpy`, and `matplotlib` installed.
+### 2. Run Your First Analysis
 
-Project structure
-- Data: `data/hpf_1.5_lpf_35_baseline-on/` contains 24 preprocessed epoch FIF files (e.g., `sub-02_preprocessed-epo.fif`).
-- Scripts: helper utilities to summarize and plot the data.
-- Outputs: generated summaries and figures.
+```bash
+# Run the sample "Small Increasing vs Decreasing" analysis
+python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing.yaml
+```
 
-Quick start
-1) Activate the environment
-   - `conda activate eeg-image`
+**What happens:**
+1. Loads 24 subject epoch files from `data/`
+2. Selects trials by condition codes (e.g., "12", "13" for increasing)
+3. Computes P1, N1, P3b component ERPs with ROI aggregation
+4. Generates overlay plots and peak-locked topomaps
+5. Writes figures to `docs/assets/plots/small_increasing_vs_decreasing/`
+6. Creates analysis page at `docs/analysis/small_increasing_vs_decreasing.md`
+7. Updates `docs/index.md` with thumbnails and lightbox
 
-2) Summarize the dataset
-   - `python scripts/summarize_epochs.py`
-   - Writes `outputs/data_summary.csv`, `outputs/data_summary.json`, and `outputs/aggregates.json`.
+**Expected outputs:**
+- Figures: `docs/assets/plots/small_increasing_vs_decreasing/{P1,N1,P3b}.png`
+- Analysis page: `docs/analysis/small_increasing_vs_decreasing.md`
+- QC report: `docs/assets/tables/small_increasing_vs_decreasing/qc_summary.csv`
+- Runtime metrics: `docs/assets/tables/small_increasing_vs_decreasing/run_metrics.json`
 
-3) Generate example plots (first few subjects)
-   - `python scripts/plot_evoked.py`
-   - Saves evoked overlays and sensor layout PNGs to `outputs/plots/`.
+### 3. View the Website
 
-What’s in the data
-This repository contains MNE-Python Epochs files (`*-epo.fif`). Each file represents one subject’s epoched EEG:
-- Typical shape: `n_epochs x n_channels x n_times`
-- Example (all 24 files are consistent):
-  - `n_epochs ≈ 270`
-  - `n_channels ≈ 129`
-  - Sampling frequency `sfreq = 250 Hz`
-  - Epoch duration `~0.696 s`
+```bash
+# Serve locally with Python's built-in server
+cd docs
+python -m http.server 8000
 
-Epoch metadata columns
-Each epochs file includes a `metadata` table with the following columns (present in all 24 files):
-- `SubjectID` – participant identifier
-- `Block` – experimental block index
-- `Trial` – trial index within the block
-- `Procedure` – task phase label (values observed: `BlockProc`, `BlockProc2`, `BlockProc3`, `BlockProc4`, `BlockProc5`)
-- `Condition` – condition code for the trial (observed string codes: `11,12,13,14,21,22,23,24,25,31,32,33,34,35,36,41,42,43,44,45,46,52,53,54,55,56,63,64,65,66`)
-- `Target.ACC` – target response accuracy (if present in the task design)
-- `Target.RT` – target response time (ms)
-- `Trial_Continuous` – continuous trial index across blocks
-- `direction` – condition feature (values: `D`, `I`, `NC`)
-- `change_group` – combined change category (values: `NC`, `dLL`, `dLS`, `dSS`, `iLL`, `iSL`, `iSS`)
-- `size` – size-related feature (values: `LL`, `SS`, `cross`, `NC`)
+# Open http://localhost:8000 in your browser
+# Or publish to GitHub Pages (see documentation)
+```
 
-Events and conditions
-- The `event_id` mapping embedded in each epochs file contains 30 event labels named as numeric strings: `"0"` through `"29"`.
-- These are valid for averaging/plotting in MNE, e.g. `epochs['0'].average()`.
-- The metadata’s `Condition`, `direction`, `change_group`, and `size` provide human-readable descriptors of trials. If desired, we can remap the numeric event names to descriptive labels derived from these columns for clearer figures and group analyses.
+## Project Structure
 
-Generated outputs
-- Summary CSV/JSON: `outputs/data_summary.csv`, `outputs/data_summary.json` (one row per file), and `outputs/aggregates.json` (dataset-wide presence of metadata columns and event labels).
-- Example figures: under `outputs/plots/`, for the first few subjects we save evoked overlays per event and a sensor layout PNG.
+```
+eeg-image-analysis-v2/
+├── configs/                          # Configuration files
+│   ├── electrodes.yaml               # ROI electrode mappings (N1_L, N1_R, P1, P3B)
+│   ├── components.yaml               # Component time windows (P1, N1, P3b)
+│   └── analyses/                     # Analysis YAML configurations
+│       ├── small_increasing_vs_decreasing.yaml
+│       ├── cardinality_within_small.yaml
+│       └── erp_from1_to_any.yaml
+├── src/eeg/                          # Core analysis library
+│   ├── config.py                     # YAML schema loading/validation
+│   ├── io.py                         # Epochs I/O, montage enforcement
+│   ├── select.py                     # Trial selection (ACC1 filter, condition sets)
+│   ├── erp.py                        # Subject/grand average computation
+│   ├── measures.py                   # Component metrics (peak amplitude/latency)
+│   ├── plots.py                      # ERP overlays and topomaps
+│   └── report.py                     # Markdown page generation
+├── scripts/
+│   └── run_analysis.py               # CLI entry point
+├── docs/                             # Published website (GitHub Pages)
+│   ├── index.md                      # Auto-generated analysis gallery
+│   ├── analysis/                     # Per-analysis pages
+│   └── assets/                       # Figures and tables
+│       ├── plots/<analysis_id>/      # PNG figures
+│       └── tables/<analysis_id>/     # CSV tables and QC reports
+├── tests/                            # Unit and smoke tests
+├── data/                             # Raw epoch files (gitignored)
+├── assets/net/                       # Montage file
+│   └── AdultAverageNet128_v1.sfp
+├── environment.yml                   # Conda environment specification
+├── .specify/memory/constitution.md   # Project governance principles
+└── specs/001-yaml-driven-erp/        # Feature specification and planning
+    ├── spec.md                       # User stories and requirements
+    ├── plan.md                       # Technical implementation plan
+    ├── tasks.md                      # Task breakdown
+    ├── quickstart.md                 # Step-by-step reproduction guide
+    └── data-model.md                 # Data entities and validation
+```
 
-Scripts
-- `scripts/summarize_epochs.py` – iterates all `*-epo.fif` under `data/`, extracts file-level stats, metadata columns, and event keys, and writes artifacts to `outputs/`.
-- `scripts/plot_evoked.py` – produces evoked response plots per event for a few subjects and a channel layout plot; uses a non-interactive backend for headless runs.
+## Understanding the YAML Configuration
 
-Mentor notes (understanding the objects)
-- MNE Epochs: an `Epochs` object holds many trials with aligned time windows relative to an event of interest. It includes:
-  - `data`: the signal array per trial
-  - `info`: measurement metadata (channel names/types, sampling rate, etc.)
-  - `events`/`event_id`: numeric-coded events and a mapping of labels to event codes
-  - `metadata`: a Pandas DataFrame of trial-wise descriptors (the “columns” described above)
-- Typical analysis patterns:
-  - Select trials by label: `epochs['22']` or by metadata query: `epochs[epochs.metadata['direction'] == 'I']`
-  - Average to get ERPs/ERFs: `epochs['22'].average()`; compare conditions by overlaying evokeds
-  - Time-frequency or decoding can build on these same selections
+Each analysis is defined by a YAML file with these key sections:
 
-Next steps (optional)
-- Map numeric event labels ("0"–"29") to descriptive names using combinations of `Condition`, `direction`, `change_group`, and `size` for clearer figures.
-- Add group-level plots (e.g., grand averages across subjects) and basic QC (channel type counts, bad channels, etc.).
+```yaml
+# Dataset configuration
+dataset:
+  root: "data"
+  pattern: "**/sub-*_epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 
-Website
-- GitHub Pages serves from /docs
-- Homepage (docs/index.md) shows a grid of analysis thumbnails:
-  - Rows are analysis_id (alphabetical)
-  - Columns per row are P1, N1, P3b thumbnails when present
-  - Clicking a thumbnail opens a full-size overlay (lightbox)
-- Figures are PNG at high DPI (configurable); thumbnails are smaller copies
-- Each figure has a title (analysis id, response, component) and a subtitle (baseline, �peak window, ROI rule, condition summary)
+# Trial selection
+selection:
+  response: "ALL"  # or "ACC1" for Target.ACC == 1
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "Small_Increasing"
+      conditions: ["12", "13", "23"]  # Explicit numeric condition codes
+    - name: "Small_Decreasing"
+      conditions: ["32", "31", "21"]
+
+# Components to analyze
+components: ["P1", "N1", "P3b"]
+
+# Preprocessing
+preprocessing:
+  baseline_ms: [-100, 0]
+
+# ROI configuration
+roi:
+  min_channels: 4  # Minimum channels required for ROI inclusion
+
+# Plotting options
+plots:
+  topomap_peak_window_ms: 50
+  peak_level: "cohort"  # or "subject"
+  dpi: 300
+  colors: ["#e41a1c", "#377eb8", "#4daf4a"]
+  linestyles:
+    NC: "-"
+    Decrease: ":"
+    Increasing: "--"
+
+# Output paths
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/small_increasing_vs_decreasing"
+  tables_dir: "docs/assets/tables/small_increasing_vs_decreasing"
+  page: "docs/analysis/small_increasing_vs_decreasing.md"
+```
+
+See [configs/analyses/](configs/analyses/) for complete examples.
+
+## The Data
+
+This repository analyzes preprocessed EEG epochs in MNE-Python FIF format:
+
+**Dataset characteristics:**
+- 24 subjects (files like `sub-02_preprocessed-epo.fif`)
+- ~270 epochs per subject
+- 129 channels (128-channel EGI net + 1 reference)
+- 250 Hz sampling rate
+- Epoch duration: ~0.696s (approximately -200 to 496 ms)
+
+**Metadata columns** (in each epochs file):
+- `Condition`: Two-digit code (e.g., "12", "23", "33")
+- `Target.ACC`: Response accuracy (0 or 1)
+- `direction`: Trial direction ("I"=increasing, "D"=decreasing, "NC"=no change)
+- `change_group`: Combined category ("iSS", "dLL", "NC", etc.)
+- `size`: Size feature ("SS", "LL", "cross", "NC")
+- Plus: `SubjectID`, `Block`, `Trial`, `Procedure`, `Target.RT`, `Trial_Continuous`
+
+**Why explicit numeric conditions?**
+This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rather than metadata-based filters. This provides maximum clarity and reproducibility—you see exactly which trials are included in each analysis.
+
+## How It Works: The Pipeline Flow
+
+```
+1. YAML Config → Load analysis configuration
+                ↓
+2. Discovery   → Find all subject epoch files matching pattern
+                ↓
+3. Subject Loop → For each subject:
+                  ├─ Load epochs from FIF
+                  ├─ Apply montage (enforce E-code mapping)
+                  ├─ Filter by response (ALL or ACC1)
+                  ├─ Apply baseline correction
+                  ├─ Select trials by condition codes
+                  └─ Compute subject-level evoked per condition set
+                ↓
+4. Grand Average → Equal-weight averaging across subjects
+                   Compute SEM for uncertainty bands
+                ↓
+5. Metrics      → For each component (P1, N1, P3b):
+                  ├─ Detect peak within time window
+                  ├─ Aggregate ROI channels
+                  ├─ Compute mean/peak amplitude and latency
+                  └─ Extract topomap around peak (±50ms)
+                ↓
+6. Plotting     → Generate composite figures:
+                  ├─ Top panel: ERP overlay with SEM
+                  └─ Bottom panels: Per-condition topomaps with peak labels
+                ↓
+7. Reporting    → Write analysis page (Markdown)
+                  Update index.md with thumbnails
+                  Save QC summary CSV
+                  Record runtime metrics JSON
+```
+
+**Key architectural decisions (the "why"):**
+
+- **Subject-first averaging**: We compute evoked responses per subject, then average subjects with equal weight. This prevents subjects with more trials from dominating the grand average.
+
+- **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
+
+- **Peak-locked topomaps**: Topomaps are centered on the detected peak latency (±50ms configurable window), ensuring we capture the true component maximum rather than an arbitrary time point.
+
+- **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
+
+## Common Use Cases
+
+### Run analysis with accurate responses only (ACC1 filter)
+```bash
+python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing_ACC1.yaml
+```
+
+### Analyze cardinality effects (same-number pairs)
+```bash
+python scripts/run_analysis.py --config configs/analyses/cardinality_within_small.yaml
+```
+
+### Create a new analysis
+1. Copy an existing YAML from `configs/analyses/`
+2. Edit the `condition_sets` to define your trial groups
+3. Adjust `components`, `baseline_ms`, `plots` as needed
+4. Run: `python scripts/run_analysis.py --config configs/analyses/your_analysis.yaml`
+
+## Testing
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run specific test modules
+pytest tests/test_select.py      # Trial selection logic
+pytest tests/test_measures.py    # Peak detection and metrics
+pytest tests/test_plots.py       # Figure generation
+pytest tests/test_cli_smoke.py   # End-to-end smoke test
+```
+
+## Documentation and Learning Resources
+
+- **Constitution**: [.specify/memory/constitution.md](.specify/memory/constitution.md) - Project governance and design principles
+- **Complete Specification**: [specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md) - User stories, requirements, edge cases
+- **Implementation Plan**: [specs/001-yaml-driven-erp/plan.md](specs/001-yaml-driven-erp/plan.md) - Technical decisions and architecture
+- **Task Breakdown**: [specs/001-yaml-driven-erp/tasks.md](specs/001-yaml-driven-erp/tasks.md) - Development roadmap
+- **Quickstart Guide**: [specs/001-yaml-driven-erp/quickstart.md](specs/001-yaml-driven-erp/quickstart.md) - Step-by-step reproduction
+- **Data Model**: [specs/001-yaml-driven-erp/data-model.md](specs/001-yaml-driven-erp/data-model.md) - Entities and validation rules
+
+## Website Publishing (GitHub Pages)
+
+The `docs/` directory is ready for GitHub Pages deployment:
+
+1. **Enable GitHub Pages** in your repository settings
+2. **Set source to**: `main` branch, `/docs` folder
+3. **Access your site at**: `https://<username>.github.io/<repository>/`
+
+The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
+- Each row = one analysis (sorted alphabetically)
+- Each column = component thumbnail (P1, N1, P3b)
+- Click thumbnail → full-size overlay with accessibility features
+
+## Performance and Success Criteria
+
+**From our specification ([specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md)):**
+
+- ✅ **SC-001**: End-to-end run completes in <10 minutes on 24 subjects (typical laptop: 16GB RAM, 4-core CPU)
+- ✅ **SC-002**: Bit-identical outputs on re-runs (deterministic, reproducible)
+- ✅ **SC-003**: Condition sets have ≥8 epochs per subject (median); empty sets reported clearly
+
+**Asset size constraints:**
+- Individual PNG ≤ 2 MB
+- Total analysis assets ≤ 20 MB
+- Verified via `run_metrics.json` in each analysis
+
+## Troubleshooting
+
+### Common Issues
+
+**1. "Montage cannot be applied"**
+- Ensure `assets/net/AdultAverageNet128_v1.sfp` exists
+- Check that your epochs use standard EGI 128-channel naming
+
+**2. "Required metadata columns missing: ['Target.ACC']"**
+- You're using `response: "ACC1"` but epochs don't have `Target.ACC` column
+- Solution: Use `response: "ALL"` or verify your epochs metadata
+
+**3. "No subjects met inclusion criteria"**
+- Your `min_epochs_per_set` threshold is too high
+- Lower the threshold in your YAML or check your condition codes
+
+**4. Empty plots directory**
+- Check that `data/` contains `.fif` files matching your `pattern`
+- Verify file paths are correct in the YAML
+
+### Get Help
+
+- Check the [Quickstart Guide](specs/001-yaml-driven-erp/quickstart.md) for step-by-step instructions
+- Review [specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md) for edge cases and requirements
+- Open an issue with your YAML configuration and error messages
+
+## Contributing
+
+This project follows [Spec-Driven Development](https://github.com/github/spec-kit) methodology. Before contributing:
+
+1. Review the [constitution](.specify/memory/constitution.md) for project principles
+2. Check [tasks.md](specs/001-yaml-driven-erp/tasks.md) for planned work
+3. Propose changes via YAML configuration first (avoid code changes when possible)
+
+## License
+
+[Add your license here]
+
+## Citation
+
+If you use this pipeline in your research, please cite:
+
+```
+[Add citation information when published]
+```
+
+---
+
+**Built with**: [Spec-Driven Development](https://github.com/github/spec-kit) | **Powered by**: [MNE-Python](https://mne.tools) | **Hosted on**: GitHub Pages

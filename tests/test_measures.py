@@ -28,7 +28,7 @@ def test_peak_amplitude_and_latency_within_window():
     signal = np.sin((times_ms - 100) / 10.0)
     signal += 3.0 * (times_ms == 100)
 
-    amp, lat = peak_amplitude_and_latency(
+    amp, lat, used_fallback = peak_amplitude_and_latency(
         signal,
         times_ms,
         window_ms=(60, 120),
@@ -37,5 +37,25 @@ def test_peak_amplitude_and_latency_within_window():
     )
     assert 60 <= lat <= 120
     assert amp == signal[times_ms == lat][0]
+    assert used_fallback is False  # Should not use fallback for clear peak
+
+
+def test_peak_fallback_for_flat_signal():
+    """Test that fallback is triggered for flat signals"""
+    times_ms = np.arange(-100, 501, 4)
+    signal = np.zeros_like(times_ms, dtype=float)  # Completely flat signal
+
+    amp, lat, used_fallback = peak_amplitude_and_latency(
+        signal,
+        times_ms,
+        window_ms=(60, 120),
+        polarity="pos",
+        smoothing=None,
+        fallback_to_center=True,
+    )
+    # Should use fallback and return window center
+    expected_center = (60 + 120) // 2  # 90 ms
+    assert used_fallback is True
+    assert abs(lat - expected_center) <= 4  # Within one sample (4ms resolution)
 
 
