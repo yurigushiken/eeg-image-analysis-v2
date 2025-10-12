@@ -3,7 +3,7 @@
 
 # Site settings
 title: "EEG ERP Analysis Pipeline"
-description: "YAML-driven ERP analysis with automated figure generation"
+description: "YAML-driven ERP analysis"
 baseurl: "/eeg-image-analysis-v2" # Must match your repository name
 url: "https://yurigushiken.github.io"
 
