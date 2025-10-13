@@ -305,9 +305,11 @@ def plot_violin(
         data=plot_data,
         x=groupby,
         y=dv,
+        hue=groupby,  # Explicitly assign hue to satisfy seaborn v0.14+
         inner=inner,
         ax=ax,
-        palette="muted"
+        palette="muted",
+        legend=False  # Don't show redundant legend since x already labels groups
     )
 
     # Labels

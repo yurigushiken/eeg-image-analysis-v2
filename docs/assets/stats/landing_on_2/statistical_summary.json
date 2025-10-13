@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-10-13 02:52:38",
+  "timestamp": "2025-10-13 15:57:30",
   "analysis_id": "tables",
-  "config_file": "configs\\statistics\\default.yaml",
-  "input_csv": "docs/assets/tables/landing_on_2/subject_measurements.csv",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_landing_on_2_i2vapecj.yaml",
+  "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\landing_on_2\\subject_measurements.csv",
   "components_tested": [
     "N1",
     "P1",
@@ -13,16 +13,16 @@
     "mean_amplitude_roi"
   ],
   "library_versions": {
-    "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
+    "fal_fraction": 0.5,
     "filters": {
       "min_snr": 2.0,
       "dropna": true
@@ -45,94 +45,42 @@
   "results": {
     "anova": {
       "N1_latency_frac_area_ms": {
-        "component": "N1",
-        "dv": "latency_frac_area_ms",
-        "test": "ANOVA",
-        "F": 2.4947060568679085,
-        "p_unc": 0.0697541559233493,
-        "output_file": "anova_N1_latency_frac_area_ms.csv",
-        "epsilon": 0.5411663003978767,
-        "effect_size_ng2": 0.06403072515017977
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
       "N1_mean_amplitude_roi": {
-        "component": "N1",
-        "dv": "mean_amplitude_roi",
-        "test": "ANOVA",
-        "F": 3.0369421388277678,
-        "p_unc": 0.036928214172798304,
-        "output_file": "anova_N1_mean_amplitude_roi.csv",
-        "epsilon": 0.5910981781221459,
-        "effect_size_ng2": 0.128735991494459
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
       "P1_latency_frac_area_ms": {
-        "error": "Eigenvalues did not converge"
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
       "P1_mean_amplitude_roi": {
-        "error": "Eigenvalues did not converge"
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
       "P3b_latency_frac_area_ms": {
-        "component": "P3b",
-        "dv": "latency_frac_area_ms",
-        "test": "ANOVA",
-        "F": 0.99232450396582,
-        "p_unc": 0.5028893855063405,
-        "output_file": "anova_P3b_latency_frac_area_ms.csv",
-        "epsilon": 0.24999999999999997,
-        "effect_size_ng2": 0.48547018287314175
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
       "P3b_mean_amplitude_roi": {
-        "component": "P3b",
-        "dv": "mean_amplitude_roi",
-        "test": "ANOVA",
-        "F": 1.194458450879401,
-        "p_unc": 0.43371389657013876,
-        "output_file": "anova_P3b_mean_amplitude_roi.csv",
-        "epsilon": 0.24999999999999933,
-        "effect_size_ng2": 0.25157905064721564
+        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       }
     },
     "pairwise": {
       "N1_latency_frac_area_ms": {
-        "component": "N1",
-        "dv": "latency_frac_area_ms",
-        "test": "Pairwise",
-        "n_comparisons": 10,
-        "n_significant": 0,
-        "correction": "fdr_bh",
-        "output_file": "pairwise_N1_latency_frac_area_ms.csv"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
       "N1_mean_amplitude_roi": {
-        "component": "N1",
-        "dv": "mean_amplitude_roi",
-        "test": "Pairwise",
-        "n_comparisons": 10,
-        "n_significant": 0,
-        "correction": "fdr_bh",
-        "output_file": "pairwise_N1_mean_amplitude_roi.csv"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
       "P1_latency_frac_area_ms": {
-        "error": "'p-unc'"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
       "P1_mean_amplitude_roi": {
-        "error": "'p-unc'"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
       "P3b_latency_frac_area_ms": {
-        "component": "P3b",
-        "dv": "latency_frac_area_ms",
-        "test": "Pairwise",
-        "n_comparisons": 10,
-        "n_significant": 0,
-        "correction": "fdr_bh",
-        "output_file": "pairwise_P3b_latency_frac_area_ms.csv"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
       "P3b_mean_amplitude_roi": {
-        "component": "P3b",
-        "dv": "mean_amplitude_roi",
-        "test": "Pairwise",
-        "n_comparisons": 10,
-        "n_significant": 0,
-        "correction": "fdr_bh",
-        "output_file": "pairwise_P3b_mean_amplitude_roi.csv"
+        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       }
     },
     "lmm": {

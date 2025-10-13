@@ -140,6 +140,12 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                 if pairwise_csv.exists():
                     try:
                         pairwise_data = pd.read_csv(pairwise_csv)
+
+                        # Check if effect size column exists (skip if pairwise test failed)
+                        if 'cohen' not in pairwise_data.columns and 'hedges' not in pairwise_data.columns:
+                            print(f"    [SKIPPED] {component}-{dv}: No effect size data (insufficient paired samples)")
+                            continue
+
                         effect_plot_path = plots_dir / f"effect_sizes_{component}_{dv}.png"
 
                         plot_effect_sizes(

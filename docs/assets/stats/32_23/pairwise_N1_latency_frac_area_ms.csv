@@ -1,0 +1,2 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,BF10,cohen,ci_lower,ci_upper
+condition,Decreasing 3 to 2,Increasing 2 to 3,True,True,1.0873356489601362,13.0,two-sided,0.2966379130005757,0.445,0.29218752811800686,-0.29884408328983614,0.880049435123312
