@@ -14,5 +14,7 @@ dependencies:
   - jupyter
   - ipython
   - pip
+  - pingouin==0.5.*
+  - statsmodels==0.14.*
   - pip:
     - mne-qt-browser

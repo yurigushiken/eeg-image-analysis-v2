@@ -1,11 +1,12 @@
 {
   "analysis_id": "from1_to_any",
-  "date_analyzed": "2025-10-12T16:54:23.715817",
+  "date_analyzed": "2025-10-13T15:24:04.448370",
   "baseline_ms": [
     -100,
     0
   ],
   "response_filter": "ALL",
+  "fal_fraction": 0.5,
   "n_subjects_total": 24,
   "n_evokeds_included": 72,
   "conditions": [

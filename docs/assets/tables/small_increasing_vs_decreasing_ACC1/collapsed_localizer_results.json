@@ -1,11 +1,12 @@
 {
   "analysis_id": "small_increasing_vs_decreasing_ACC1",
-  "date_analyzed": "2025-10-12T16:55:24.604001",
+  "date_analyzed": "2025-10-13T15:24:48.877789",
   "baseline_ms": [
     -100,
     0
   ],
   "response_filter": "ACC1",
+  "fal_fraction": 0.5,
   "n_subjects_total": 24,
   "n_evokeds_included": 48,
   "conditions": [

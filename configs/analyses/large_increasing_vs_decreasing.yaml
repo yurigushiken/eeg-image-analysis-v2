@@ -8,8 +8,12 @@ selection:
   condition_sets:
     - name: "Large_Increasing"
       conditions: ["46", "45", "56"]
+      color: "#2ca02c"  # Green (increasing)
+      linestyle: "--"   # Dashed
     - name: "Large_Decreasing"
       conditions: ["54", "65", "64"]
+      color: "#d62728"  # Red (decreasing)
+      linestyle: "--"    # Dashed
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

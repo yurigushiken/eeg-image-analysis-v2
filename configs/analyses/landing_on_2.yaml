@@ -6,16 +6,27 @@ selection:
   response: "ALL"
   min_epochs_per_set: 8
   condition_sets:
-    - name: "1 to 2"
+    - name: "increasing 1 to 2"
       conditions: ["12"]
+      color: "#2ca02c"  # Green (increasing)
+      linestyle: "--"   # Dashed
     - name: "Cardinality2"
       conditions: ["22"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
     - name: "3 to 2"
       conditions: ["32"]
+      color: "#f472b6"  # Pink
+      linestyle: "-"    # Solid
     - name: "4 to 2"
       conditions: ["42"]
+      color: "#ff7f00"  # Orange
+      linestyle: "-"    # Solid
     - name: "5 to 2"
       conditions: ["52"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
+
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

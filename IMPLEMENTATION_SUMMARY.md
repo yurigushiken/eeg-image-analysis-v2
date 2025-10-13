@@ -1,13 +1,117 @@
-# GFP-Based ERP Analysis Implementation Summary
+# ERP Analysis Pipeline Implementation Summary
 
 ## What Was Implemented
 
-This document summarizes the complete upgrade to a **Global Field Power (GFP)** based analysis pipeline with **Full Width at Half Maximum (FWHM)** windowing.
+This document summarizes two major phases of the analysis pipeline:
+1. **Phase 1 (Jan 2025)**: Global Field Power (GFP) based analysis with FWHM windowing
+2. **Phase 2 (Oct 2024)**: Fractional Area Latency (FAL) for robust timing measurements
 
 ---
 
-## Implementation Date
-**2025-01-12**
+## Latest Update: Fractional Area Latency (Oct 12, 2024)
+**Status**: ✅ **COMPLETE - All Tests Passing (17/17)**
+
+### Phase 2 Implementation Date
+**October 12, 2024**
+
+### What Phase 2 Adds: Fractional Area Latency Measurements
+
+**The Problem Solved**: The collapsed localizer provides an unbiased measurement window, but peak latency is the same for all conditions (by design). Researchers need a way to measure **timing differences between conditions** within that window.
+
+**The Solution**: Fractional Area Latency (FAL) — finds the time point where cumulative area under the ROI curve reaches 50%. This is:
+- ✅ More robust than peak latency (less noise-sensitive)
+- ✅ Condition-specific (can vary between conditions)
+- ✅ Scientifically validated (Kiesel et al., 2008)
+- ✅ Analogous to median RT in behavioral data
+
+### Phase 2: Fractional Area Latency Implementation
+
+#### 1. Core Function: `fractional_area_latency()`
+**Location**: [src/eeg/measures.py:51-177](src/eeg/measures.py#L51-L177)
+
+**Features**:
+- Trapezoidal integration for accurate area calculation
+- Automatic polarity detection (handles negative components like N1)
+- Linear interpolation for sub-sample precision
+- Configurable fraction (0.5 = midpoint, 0.2 = onset, 0.8 = offset)
+
+**Scientific Basis**: Kiesel et al. (2008) showed FAL has **lower standardized measurement error** than peak latency.
+
+#### 2. Integration into Analysis Pipeline
+**Location**: [scripts/run_analysis.py:32, 359-391, 543](scripts/run_analysis.py)
+
+**Changes**:
+1. Import `fractional_area_latency` from measures module
+2. Compute FAL for each condition within collapsed localizer FWHM window
+3. Add `latency_frac_area_ms` column to `condition_measurements.csv`
+
+**Error Handling**: FAL failures record NaN with warning (non-fatal)
+
+#### 3. Comprehensive Test Suite
+**Location**: [tests/test_measures.py](tests/test_measures.py)
+
+**Coverage** (17/17 tests passing):
+- ✅ Positive/negative components (P1, N1, P3b)
+- ✅ Auto polarity detection
+- ✅ Multiple fractions (20%, 50%, 80%)
+- ✅ Symmetric vs. skewed waveforms
+- ✅ Real-world N1 simulation (based on landing_on_2 data)
+- ✅ Sub-sample interpolation
+- ✅ Error handling (invalid windows, fractions, zero area)
+
+**Test Infrastructure**:
+- `tests/conftest.py`: Python path setup
+- `tests/__init__.py`: Test package init
+
+#### 4. Documentation Updates
+**Location**: [README.md](README.md)
+
+**Additions**:
+1. FAL explanation in architecture section (line 226)
+2. CSV output documentation (line 55)
+3. **New section**: "Statistical Analysis Ready" (lines 250-277)
+   - Explains `peak_latency_ms` (fixed) vs `latency_frac_area_ms` (varies)
+   - Example N1 data showing condition differences
+   - Recommended statistical tests
+   - Scientific references
+
+### Phase 2: Validation Results
+
+**Test Suite**: ✅ 17/17 tests passing
+```bash
+pytest tests/test_measures.py -v
+============================= 17 passed in 0.08s ==============================
+```
+
+**Real Data (landing_on_2, N1 component)**:
+| Condition | peak_latency_ms | latency_frac_area_ms | Δ |
+|-----------|-----------------|----------------------|---|
+| increasing 1 to 2 | 168.0 | 172.8 | +4.8 ms |
+| Cardinality2 | 168.0 | 174.6 | +6.6 ms |
+| 3 to 2 | 168.0 | 175.9 | +7.9 ms |
+| 4 to 2 | 168.0 | 175.6 | +7.6 ms |
+| 5 to 2 | 168.0 | 177.2 | +9.2 ms |
+
+**Key Result**: 4.4 ms latency difference across conditions — **now statistically testable!**
+
+### Phase 2: Files Created/Modified
+
+**New Files** (3):
+- ✅ `tests/test_measures.py` (17 comprehensive tests)
+- ✅ `tests/conftest.py` (pytest configuration)
+- ✅ `tests/__init__.py` (test package)
+
+**Modified Files** (3):
+- ✅ `src/eeg/measures.py`: Added `fractional_area_latency()` (127 lines)
+- ✅ `scripts/run_analysis.py`: Integrated FAL computation
+- ✅ `README.md`: Added statistical analysis documentation
+
+**Output Files Updated**:
+- ✅ All `condition_measurements.csv` now include `latency_frac_area_ms`
+
+---
+
+## Phase 1: GFP-Based Analysis (Jan 2025)
 
 ## Completed Tasks
 

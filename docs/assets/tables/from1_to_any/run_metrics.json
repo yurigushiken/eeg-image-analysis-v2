@@ -1,15 +1,15 @@
 {
   "analysis_id": "from1_to_any",
-  "duration_seconds": 3.756,
+  "duration_seconds": 4.996,
   "num_figures": 4,
-  "largest_png_bytes": 582181,
-  "total_png_bytes": 2117930,
+  "largest_png_bytes": 613508,
+  "total_png_bytes": 2228583,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
     "from1_to_any-collapsed_localizer.png": 454757,
-    "from1_to_any-P1.png": 535775,
-    "from1_to_any-N1.png": 545217,
-    "from1_to_any-P3b.png": 582181
+    "from1_to_any-P1.png": 584104,
+    "from1_to_any-N1.png": 576214,
+    "from1_to_any-P3b.png": 613508
   }
 }

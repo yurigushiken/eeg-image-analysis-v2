@@ -62,9 +62,13 @@ def fractional_area_latency(
     a specified fraction of the total area. This provides a robust measure
     of component timing that is less sensitive to noise than peak latency.
 
-    The 50% fractional area latency represents the temporal midpoint of a
-    component and is more reliable than peak latency, especially for noisy
+    The 50% fractional area latency (default) represents the temporal midpoint
+    of a component and is more reliable than peak latency, especially for noisy
     data or components with variable morphology across conditions.
+
+    NOTE: This pipeline uses fraction=0.5 throughout. This parameter is
+    documented in the output JSON files (collapsed_localizer_results.json
+    and statistical_summary.json) for scientific transparency.
 
     Args:
         signal: 1D array of EEG data (e.g., ROI-averaged, in microvolts)

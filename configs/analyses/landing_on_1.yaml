@@ -8,12 +8,20 @@ selection:
   condition_sets:
     - name: "Cardinality1"
       conditions: ["11"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
     - name: "2 to 1"
       conditions: ["21"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
     - name: "3 to 1"
       conditions: ["31"]
+      color: "#4daf4a"  # Green
+      linestyle: "-"    # Solid
     - name: "4 to 1"
       conditions: ["41"]
+      color: "#984ea3"  # Purple
+      linestyle: "-"    # Solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

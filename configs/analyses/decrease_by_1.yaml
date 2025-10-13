@@ -8,14 +8,24 @@ selection:
   condition_sets:
     - name: "2 to 1"
       conditions: ["21"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
     - name: "3 to 2"
       conditions: ["32"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
     - name: "4 to 3"
       conditions: ["34"]
+      color: "#4daf4a"  # Green
+      linestyle: "-"    # Solid
     - name: "5 to 4"
       conditions: ["54"]
+      color: "#984ea3"  # Purple
+      linestyle: "-"    # Solid
     - name: "6 to 5"
       conditions: ["65"]
+      color: "#ff7f00"  # Orange
+      linestyle: "-"    # Solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

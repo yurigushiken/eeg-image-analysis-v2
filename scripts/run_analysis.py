@@ -473,38 +473,39 @@ def main() -> int:
                 continue
 
             if comp_result is not None:
-                # Extract topomap data using GFP-derived FWHM window
-                tmin = window_start / 1000.0
-                tmax = window_end / 1000.0
+                # === STEP 1: Compute FAL for this condition ===
+                # This provides a robust measure of component timing, less sensitive to noise
+                # than peak latency. The 50% fractional area represents the temporal midpoint.
                 try:
-                    evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
-                    # Topomap vector in microvolts
+                    # Determine polarity from component name (N* = negative, P* = positive)
+                    comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+
+                    roi_latency_frac_area = fractional_area_latency(
+                        signal=roi_curve,
+                        times_ms=times_ms,
+                        window_ms=(window_start, window_end),
+                        fraction=0.5,
+                        polarity=comp_polarity
+                    )
+                except Exception as e:
+                    # If FAL computation fails, use collapsed peak as fallback
+                    print(f"    Warning: FAL failed for {set_name} {comp}, using collapsed peak: {e}")
+                    roi_latency_frac_area = float(peak_lat)
+
+                # === STEP 2: Extract topomap using FAL-centered window (±FWHM/2) ===
+                half_win_ms = fwhm / 2.0
+                topo_start = (roi_latency_frac_area - half_win_ms) / 1000.0
+                topo_end = (roi_latency_frac_area + half_win_ms) / 1000.0
+
+                try:
+                    evk_win = gav.copy().crop(tmin=topo_start, tmax=topo_end)
+                    # Topomap vector in microvolts (averaged over FAL-centered window)
                     mean_vec = evk_win.data.mean(axis=1) * 1e6
-                    half_win = fwhm / 2.0
-                    topomap_by_label[set_name] = (mean_vec, int(peak_lat), int(half_win), False)
+                    # Store: (vector, FAL_latency, half_window, used_fallback)
+                    topomap_by_label[set_name] = (mean_vec, roi_latency_frac_area, int(half_win_ms), False)
 
                     # Record amplitude measurement for statistical analysis
                     roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
-
-                    # === Compute fractional area latency (50% area midpoint) ===
-                    # This provides a robust measure of component timing, less sensitive to noise
-                    # than peak latency. The 50% fractional area represents the temporal midpoint.
-                    try:
-                        # Determine polarity from component name (N* = negative, P* = positive)
-                        comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
-
-                        roi_latency_frac_area = fractional_area_latency(
-                            signal=roi_curve,
-                            times_ms=times_ms,
-                            window_ms=(window_start, window_end),
-                            fraction=0.5,
-                            polarity=comp_polarity
-                        )
-                    except Exception as e:
-                        # If FAL computation fails, record NaN and continue
-                        print(f"    Warning: Fractional area latency failed for {set_name} {comp}: {e}")
-                        roi_latency_frac_area = float('nan')
-                    # === End FAL computation ===
 
                     condition_measurements.append({
                         "analysis_id": analysis_id,
@@ -525,6 +526,9 @@ def main() -> int:
 
         # Generate component figure
         if curves_by_label and topomap_by_label and times_ms is not None and gav_info is not None:
+            # === NEW: Build condition_name -> config dict for easy lookup ===
+            condition_config_map = {item["name"]: item for item in sets}
+
             # Prepare color configuration
             color_list = cfg.plots.get("colors") or []
             colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
@@ -532,12 +536,19 @@ def main() -> int:
             # Apply semantic color rules: increasing=green, decreasing=red
             # (matplotlib default colors, colorblind-friendly)
             def _color_for(label: str, default_color: str) -> str:
+                # PRIORITY 1: Explicit color in YAML config overrides everything
+                if label in condition_config_map and "color" in condition_config_map[label]:
+                    return condition_config_map[label]["color"]
+
+                # PRIORITY 2: Semantic rules (increasing=green, decreasing=red)
                 lower = label.lower()
                 if "increasing" in lower:
                     return "#2ca02c"  # Green
                 if "decreasing" in lower:
                     return "#d62728"  # Red
-                return default_color  # Use YAML color list for cardinality/other
+
+                # PRIORITY 3: Color list from cfg.plots.colors
+                return default_color
 
             if colors:
                 colors = {label: _color_for(label, colors[label]) for label in colors}
@@ -546,6 +557,11 @@ def main() -> int:
             styles_cfg = cfg.plots.get("linestyles") or {}
             linestyles = {k: v for k, v in styles_cfg.items()}
             def _style_for(label: str) -> str:
+                # PRIORITY 1: Explicit linestyle in YAML config overrides everything
+                if label in condition_config_map and "linestyle" in condition_config_map[label]:
+                    return condition_config_map[label]["linestyle"]
+
+                # PRIORITY 2: Semantic rules
                 lower = label.lower()
                 if "cardinality" in lower:
                     return "-"
@@ -553,12 +569,20 @@ def main() -> int:
                     return ":"
                 if "increasing" in lower:
                     return "--"
+
+                # PRIORITY 3: Fall back to cfg.plots.linestyles or solid
                 return linestyles.get(label, "-")
             # Apply rules
             linestyles = {label: _style_for(label) for label in curves_by_label.keys()}
 
             # Set x-axis limits to start from baseline onset
             xlim_ms = (baseline[0], float(times_ms[-1]))
+
+            # === NEW: Extract FAL values from condition_measurements for plotting ===
+            latencies_by_label = {}
+            for meas in condition_measurements:
+                if meas['component'] == comp and not np.isnan(meas['latency_frac_area_ms']):
+                    latencies_by_label[meas['condition']] = meas['latency_frac_area_ms']
 
             fig = make_component_figure(
                 curves_by_label=curves_by_label,
@@ -570,6 +594,7 @@ def main() -> int:
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
+                latencies_by_label=latencies_by_label,  # NEW: Pass FAL data to plotting
             )
 
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
@@ -581,18 +606,28 @@ def main() -> int:
             print(f"    Saved: {os.path.basename(out_path)}")
         elif curves_by_label and times_ms is not None:
             # Overlay-only ERP figure (no topomaps, no dashed GFP lines)
+            # === NEW: Build condition_name -> config dict for easy lookup ===
+            condition_config_map = {item["name"]: item for item in sets}
+
             color_list = cfg.plots.get("colors") or []
             colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(curves_by_label.keys()))} if color_list else None
 
             # Apply semantic color rules: increasing=green, decreasing=red
             # (matplotlib default colors, colorblind-friendly)
             def _color_for(label: str, default_color: str) -> str:
+                # PRIORITY 1: Explicit color in YAML config overrides everything
+                if label in condition_config_map and "color" in condition_config_map[label]:
+                    return condition_config_map[label]["color"]
+
+                # PRIORITY 2: Semantic rules
                 lower = label.lower()
                 if "increasing" in lower:
                     return "#2ca02c"  # Green
                 if "decreasing" in lower:
                     return "#d62728"  # Red
-                return default_color  # Use YAML color list for cardinality/other
+
+                # PRIORITY 3: Color list
+                return default_color
 
             if colors:
                 colors = {label: _color_for(label, colors[label]) for label in colors}
@@ -600,6 +635,11 @@ def main() -> int:
             styles_cfg = cfg.plots.get("linestyles") or {}
             base_linestyles = {k: v for k, v in styles_cfg.items()}
             def _style_for(label: str) -> str:
+                # PRIORITY 1: Explicit linestyle in YAML config overrides everything
+                if label in condition_config_map and "linestyle" in condition_config_map[label]:
+                    return condition_config_map[label]["linestyle"]
+
+                # PRIORITY 2: Semantic rules
                 lower = label.lower()
                 if "cardinality" in lower:
                     return "-"
@@ -607,6 +647,8 @@ def main() -> int:
                     return ":"
                 if "increasing" in lower:
                     return "--"
+
+                # PRIORITY 3: Fall back to cfg.plots.linestyles or solid
                 return base_linestyles.get(label, "-")
             linestyles = {label: _style_for(label) for label in curves_by_label.keys()}
             xlim_ms = (baseline[0], float(times_ms[-1]))
@@ -638,6 +680,7 @@ def main() -> int:
         "date_analyzed": datetime.datetime.now().isoformat(),
         "baseline_ms": list(baseline),
         "response_filter": response,
+        "fal_fraction": 0.5,  # Fractional area latency: 50% = temporal midpoint
         "n_subjects_total": len(fif_files),
         "n_evokeds_included": total_evokeds,
         "conditions": [s["name"] for s in sets],

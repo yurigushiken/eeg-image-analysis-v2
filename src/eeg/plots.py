@@ -99,6 +99,7 @@ def make_component_figure(
     colors: Optional[Mapping[str, str]] = None,
     linestyles: Optional[Mapping[str, str]] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
+    latencies_by_label: Optional[Dict[str, float]] = None,
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -117,6 +118,9 @@ def make_component_figure(
         xlim_ms: Optional (min, max) tuple to limit x-axis display range.
                  If None, shows full epoch range. If provided (e.g., from baseline_ms),
                  only shows time range from xlim_ms[0] to end of epoch.
+        latencies_by_label: Optional dict mapping condition names to fractional area latencies (ms).
+                           If provided, thin colored vertical lines will be drawn at each condition's
+                           FAL to show the temporal midpoint of each waveform.
 
     Returns:
         matplotlib Figure object
@@ -165,6 +169,26 @@ def make_component_figure(
         vkw = {"color": (colors.get(label) if colors and label in colors else "#666"), "alpha": 0.25, "linestyle": "--"}
         ax_overlay.axvline(peak_ms, **vkw)
 
+    # === NEW: Mark per-condition fractional area latencies (FAL) ===
+    # These show the measured temporal midpoint (50% area) for each condition
+    # Thin solid lines matching each waveform color
+    if latencies_by_label:
+        for label, fal_ms in latencies_by_label.items():
+            if colors and label in colors:
+                color = colors[label]
+            else:
+                color = "#444"  # Default dark gray
+
+            # Very thin solid line matching the condition waveform color
+            ax_overlay.axvline(
+                fal_ms,
+                color=color,
+                alpha=0.7,
+                linestyle="-",  # Solid line (distinct from dashed collapsed peak)
+                linewidth=0.8,  # Made thinner per user request
+                zorder=5  # Above the dashed peak lines
+            )
+
     # Figure-level main title
     if title:
         try:
@@ -196,8 +220,12 @@ def make_component_figure(
     # Figure-level subtitle to avoid occlusion
     if subtitle:
         try:
+            # Enhance subtitle to explain both line types
+            enhanced_subtitle = subtitle
+            if latencies_by_label:
+                enhanced_subtitle += " | Gray dash = Collapsed peak; Colored lines = 50% Area Latency (FAL)"
             # Subtitle slightly below the figure title, anchored by its top edge
-            fig.text(0.5, 0.945, subtitle, ha="center", va="top", fontsize=9)
+            fig.text(0.5, 0.945, enhanced_subtitle, ha="center", va="top", fontsize=9)
         except Exception:
             pass
 
@@ -209,6 +237,9 @@ def make_component_figure(
         vec, peak_ms, half_win = tup[0], tup[1], tup[2]
         used_fallback = tup[3] if len(tup) > 3 else False
 
+        # NEW: Use FAL for display if available, otherwise use peak_ms
+        display_latency = latencies_by_label.get(label, peak_ms) if latencies_by_label else peak_ms
+
         ax = fig.add_subplot(gs[1, idx])
         # Fixed symmetric color scaling ensures amplitude differences are visually comparable
         mne.viz.plot_topomap(
@@ -219,9 +250,9 @@ def make_component_figure(
             cmap='RdBu_r'  # Diverging colormap (red=positive, blue=negative)
         )
 
-        # Add asterisk to title if fallback was used and break long text into lines
+        # NEW: Show FAL in title instead of collapsed peak
         title_suffix = "*" if used_fallback else ""
-        ax.set_title(f"{label}{title_suffix}\nPeak {peak_ms} ms\n(±{half_win} ms)", fontsize=8)
+        ax.set_title(f"{label}{title_suffix}\nFAL {display_latency:.1f} ms\n(±{half_win:.0f} ms)", fontsize=8)
 
     return fig
 

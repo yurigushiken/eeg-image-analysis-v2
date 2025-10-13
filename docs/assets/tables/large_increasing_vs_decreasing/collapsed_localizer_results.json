@@ -1,11 +1,12 @@
 {
   "analysis_id": "large_increasing_vs_decreasing",
-  "date_analyzed": "2025-10-12T16:54:49.459344",
+  "date_analyzed": "2025-10-13T15:24:32.182833",
   "baseline_ms": [
     -100,
     0
   ],
   "response_filter": "ALL",
+  "fal_fraction": 0.5,
   "n_subjects_total": 24,
   "n_evokeds_included": 48,
   "conditions": [

@@ -470,6 +470,7 @@ def create_summary_report(all_results: dict, cfg: dict, output_dir: Path, stats:
         print("  Documenting measurement window methodology...")
         summary['analysis_settings'] = {
             'measurement_window_method': 'collapsed_localizer_fwhm',
+            'fal_fraction': 0.5,  # Fractional area latency: 50% = temporal midpoint
             'filters': cfg.get('filters', {}),
             'baseline_period_ms': '[-100, 0]',  # Standard baseline
         }

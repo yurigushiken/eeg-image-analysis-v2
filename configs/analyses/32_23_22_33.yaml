@@ -8,12 +8,22 @@ selection:
   condition_sets:
     - name: "Increasing 2 to 3"
       conditions: ["23"]
+      color: "#2ca02c"  # Green (increasing)
+      linestyle: "--"   # Dashed
     - name: "Decreasing 3 to 2"
       conditions: ["32"]
+      color: "#d62728"  # Red (decreasing)
+      linestyle: "--"   # Dashed
     - name: "Cardinality3"
       conditions: ["33"]
+      color: "#084594"  # Dark blue
+      linestyle: "-"    # Solid
+
     - name: "Cardinality2"
       conditions: ["22"]
+      color: "#9ecae1"  # Light blue
+      linestyle: "-"    # Solid
+
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
