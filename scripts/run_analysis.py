@@ -29,7 +29,7 @@ from eeg.plots import make_collapsed_localizer_figure, make_component_figure, ma
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
 from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collapsed_localizer_roi
-from eeg.measures import mean_amplitude
+from eeg.measures import mean_amplitude, fractional_area_latency
 import matplotlib.pyplot as plt
 import mne
 
@@ -104,6 +104,9 @@ def main() -> int:
     set_name_to_evokeds = {s["name"]: [] for s in sets}
     qc_rows = []
 
+    # === Phase 2A: Subject-level measurements collection ===
+    subject_measurements = []  # NEW: For statistical analysis
+
     print("Loading and preprocessing subjects...")
     for fif_idx, fif in enumerate(fif_files, 1):
         epochs = read_epochs(fif)
@@ -174,6 +177,16 @@ def main() -> int:
                 "included": True,
                 "epoch_count": epoch_count,
                 "exclusion_reason": "",
+            })
+
+            # === Phase 2A: Store evoked and metadata for later subject-level measurements ===
+            # We'll process these after collapsed localizer is computed
+            # Store: (subject_id, condition_name, evoked, epoch_count)
+            subject_measurements.append({
+                'subject_id': subj_id,
+                'condition': name,
+                'evoked': evk,
+                'n_epochs': epoch_count,
             })
 
         if fif_idx % 5 == 0:
@@ -271,6 +284,123 @@ def main() -> int:
 
     print(f"Saved collapsed localizer plot: {os.path.basename(cl_out_path)}\n")
 
+    # === Phase 2A: Process Subject-Level Measurements ===
+    print("Computing subject-level measurements (Phase 2A)...")
+    subject_measurements_output = []  # Final output records
+
+    for subj_data in subject_measurements:
+        subj_id = subj_data['subject_id']
+        condition = subj_data['condition']
+        evoked = subj_data['evoked']
+        n_epochs = subj_data['n_epochs']
+
+        times_ms_subj = evoked.times * 1000.0
+
+        # Extract baseline data for QC metrics
+        baseline_mask = (times_ms_subj >= baseline[0]) & (times_ms_subj <= baseline[1])
+
+        for comp in cfg.components:
+            comp_result = collapsed_results.get(comp)
+            if comp_result is None:
+                continue  # Skip components that failed localizer
+
+            # Get measurement window from collapsed localizer
+            peak_lat = comp_result['peak_latency_ms']
+            window_start = comp_result['window_start_ms']
+            window_end = comp_result['window_end_ms']
+            fwhm = comp_result['fwhm_ms']
+
+            # Get ROI channels
+            comp_cfg = components_cfg.get(comp, {})
+            roi_names = comp_cfg.get('rois', [])
+            roi_channels = []
+            for roi_name in roi_names:
+                if roi_name in electrodes_cfg:
+                    roi_channels.extend(electrodes_cfg[roi_name])
+
+            if not roi_channels:
+                continue
+
+            try:
+                # Extract subject ROI curve
+                roi_data = evoked.copy().pick_channels(roi_channels, ordered=False)
+                roi_curve = roi_data.data.mean(axis=0) * 1e6  # Convert to µV
+
+                # === QC Metric 1: Baseline Noise ===
+                baseline_roi = roi_curve[baseline_mask]
+                baseline_noise_uv = float(np.std(baseline_roi))
+
+                # === Measurement 1: Mean Amplitude ===
+                window_mask = (times_ms_subj >= window_start) & (times_ms_subj <= window_end)
+                subj_mean_amp = float(np.mean(roi_curve[window_mask]))
+
+                # === QC Metric 2: Signal-to-Noise Ratio ===
+                snr = abs(subj_mean_amp) / baseline_noise_uv if baseline_noise_uv > 0 else float('nan')
+
+                # === Measurement 2: Fractional Area Latency ===
+                comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+                try:
+                    subj_fal = fractional_area_latency(
+                        signal=roi_curve,
+                        times_ms=times_ms_subj,
+                        window_ms=(window_start, window_end),
+                        fraction=0.5,
+                        polarity=comp_polarity
+                    )
+                except Exception as e:
+                    subj_fal = float('nan')
+
+                # Record subject measurement with QC metrics
+                subject_measurements_output.append({
+                    "subject_id": subj_id,
+                    "component": comp,
+                    "condition": condition,
+                    "latency_frac_area_ms": subj_fal,
+                    "mean_amplitude_roi": subj_mean_amp,
+                    "n_epochs": n_epochs,
+                    "baseline_noise_uv": baseline_noise_uv,
+                    "snr": snr,
+                    "peak_latency_ms": float(peak_lat),
+                    "window_start_ms": float(window_start),
+                    "window_end_ms": float(window_end),
+                    "fwhm_ms": float(fwhm),
+                })
+
+            except Exception as e:
+                # Record NaN for failed measurement
+                subject_measurements_output.append({
+                    "subject_id": subj_id,
+                    "component": comp,
+                    "condition": condition,
+                    "latency_frac_area_ms": float('nan'),
+                    "mean_amplitude_roi": float('nan'),
+                    "n_epochs": n_epochs,
+                    "baseline_noise_uv": float('nan'),
+                    "snr": float('nan'),
+                    "peak_latency_ms": float(peak_lat),
+                    "window_start_ms": float(window_start),
+                    "window_end_ms": float(window_end),
+                    "fwhm_ms": float(fwhm),
+                })
+
+    # Save subject-level measurements
+    if subject_measurements_output:
+        import csv
+        subj_csv_path = os.path.join(tables_dir, "subject_measurements.csv")
+        fieldnames = [
+            "subject_id", "component", "condition",
+            "latency_frac_area_ms", "mean_amplitude_roi",
+            "n_epochs", "baseline_noise_uv", "snr",
+            "peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms"
+        ]
+        with open(subj_csv_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(subject_measurements_output)
+
+        print(f"Saved subject-level measurements: {os.path.basename(subj_csv_path)}")
+        print(f"  Recorded {len(subject_measurements_output)} subject-component-condition measurements\n")
+
     # === Per-Condition Analysis (using GFP-derived windows) ===
     print("Generating per-condition analyses...")
     print("(Using FWHM windows from collapsed localizer)\n")
@@ -355,6 +485,27 @@ def main() -> int:
 
                     # Record amplitude measurement for statistical analysis
                     roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
+
+                    # === Compute fractional area latency (50% area midpoint) ===
+                    # This provides a robust measure of component timing, less sensitive to noise
+                    # than peak latency. The 50% fractional area represents the temporal midpoint.
+                    try:
+                        # Determine polarity from component name (N* = negative, P* = positive)
+                        comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+
+                        roi_latency_frac_area = fractional_area_latency(
+                            signal=roi_curve,
+                            times_ms=times_ms,
+                            window_ms=(window_start, window_end),
+                            fraction=0.5,
+                            polarity=comp_polarity
+                        )
+                    except Exception as e:
+                        # If FAL computation fails, record NaN and continue
+                        print(f"    Warning: Fractional area latency failed for {set_name} {comp}: {e}")
+                        roi_latency_frac_area = float('nan')
+                    # === End FAL computation ===
+
                     condition_measurements.append({
                         "analysis_id": analysis_id,
                         "component": comp,
@@ -365,6 +516,7 @@ def main() -> int:
                         "window_end_ms": float(window_end),
                         "fwhm_ms": float(fwhm),
                         "mean_amplitude_roi": roi_mean_amplitude,
+                        "latency_frac_area_ms": roi_latency_frac_area,
                         "roi_channels": ";".join(roi_channels),
                     })
                 except Exception as e:
@@ -518,7 +670,7 @@ def main() -> int:
         fieldnames = [
             "analysis_id", "component", "condition", "n_subjects",
             "peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms",
-            "mean_amplitude_roi", "roi_channels"
+            "mean_amplitude_roi", "latency_frac_area_ms", "roi_channels"
         ]
         with open(measurements_csv_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)

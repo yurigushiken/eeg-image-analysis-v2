@@ -52,6 +52,7 @@ python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_dec
 - Runtime metrics: `docs/assets/tables/small_increasing_vs_decreasing/run_metrics.json`
 - Collapsed localizer JSON: `docs/assets/tables/small_increasing_vs_decreasing/collapsed_localizer_results.json`
 - Condition measurements CSV: `docs/assets/tables/small_increasing_vs_decreasing/condition_measurements.csv`
+  - Includes `mean_amplitude_roi` (amplitude in µV) and `latency_frac_area_ms` (50% area latency) for each condition
 
 ### 3. View the Website
 
@@ -223,6 +224,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
 - **GFP-derived FWHM windows**: Component windows come from the GFP-based collapsed localizer (no manual ±20ms). All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
+- **Fractional Area Latency (FAL)**: Component timing is measured using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This provides a robust, noise-resistant measure of component timing that can vary by condition (unlike peak latency, which is fixed by the collapsed localizer).
 - **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
 
 - **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
@@ -245,6 +247,101 @@ python scripts/run_analysis.py --config configs/analyses/cardinality_within_smal
 3. Adjust `components`, `baseline_ms`, `plots` as needed
 4. Run: `python scripts/run_analysis.py --config configs/analyses/your_analysis.yaml`
 
+## Statistical Analysis Ready
+
+The pipeline now generates **condition-level measurements** ready for statistical testing:
+
+### Latency Measurements
+
+Each `condition_measurements.csv` contains:
+
+- **`peak_latency_ms`**: The collapsed localizer peak (same for all conditions) - documents the unbiased measurement window
+- **`latency_frac_area_ms`**: The 50% fractional area latency (differs by condition) - your dependent variable for latency tests
+
+**Example from N1 component**:
+```csv
+component,condition,peak_latency_ms,latency_frac_area_ms,mean_amplitude_roi
+N1,Cardinality1,168.0,172.8,-2.72
+N1,Cardinality2,168.0,174.6,-2.45
+N1,Cardinality3,168.0,175.9,-3.19
+```
+
+**Key insight**: `peak_latency_ms` is the same (unbiased window), but `latency_frac_area_ms` varies—allowing you to test if latencies differ significantly between conditions!
+
+### Phase 2B: Statistical Testing Module
+
+The pipeline includes a complete statistical analysis module that automatically generates:
+- **Repeated-measures ANOVA** (within-subjects designs)
+- **Pairwise t-tests** with multiple comparison correction (FDR, Bonferroni, Holm)
+- **Linear Mixed-Effects Models (LMM)** for complex designs and missing data
+- **Descriptive statistics** by condition
+
+#### Run Statistical Analysis
+
+```bash
+# Run statistics using default configuration
+python scripts/run_statistics.py --config configs/statistics/default.yaml
+
+# Results are saved to: docs/assets/stats/<analysis_id>/
+```
+
+**What it generates:**
+- `anova_<component>_<measure>.csv` - ANOVA F-tests with effect sizes
+- `pairwise_<component>_<measure>.csv` - All pairwise comparisons with corrections
+- `lmm_<component>_<measure>.json` - Mixed model summaries with AIC/BIC
+- `descriptives_<component>_<measure>.csv` - Means, SDs, SEMs by condition
+- `statistical_summary.json` - Combined results summary
+
+#### Configure Statistical Tests
+
+Edit `configs/statistics/default.yaml` to control:
+
+```yaml
+# Input data
+input_csv: "docs/assets/tables/landing_on_2/subject_measurements.csv"
+
+# Quality control filters
+filters:
+  min_snr: 2.0  # Minimum signal-to-noise ratio
+
+# Which tests to run
+tests:
+  anova:
+    enabled: true
+  pairwise:
+    enabled: true
+    correction: fdr_bh  # or 'bonf', 'holm', 'none'
+  lmm:
+    enabled: true
+    fixed: condition  # Can add covariates: 'condition + snr'
+
+# Components and dependent variables
+components: ["N1", "P1", "P3b"]
+dependent_variables:
+  - latency_frac_area_ms
+  - mean_amplitude_roi
+```
+
+#### Example Results
+
+**ANOVA on N1 Latency** (from landing_on_2 analysis):
+- F(4,24) = 2.49, p = .070, η²_G = 0.064
+- Suggests trend toward latency differences between conditions
+
+**Pairwise Comparisons** (FDR-corrected):
+- 3→2 vs 4→2: t(6) = -1.14, p = .546 (n.s.)
+- 3→2 vs increasing 1→2: t(6) = 1.02, p = .546 (n.s.)
+
+**Descriptive Statistics:**
+```
+Condition           Mean (ms)   SD      SEM     N
+3 to 2              174.0       7.3     1.8     17
+4 to 2              175.7       7.1     1.8     16
+increasing 1 to 2   173.1       9.1     2.2     17
+```
+
+**Scientific Reference**: Kiesel et al. (2008) found fractional area latency has lower measurement error than peak latency, making it ideal for detecting subtle timing differences.
+
 ## Testing
 
 ```bash
@@ -252,11 +349,15 @@ python scripts/run_analysis.py --config configs/analyses/cardinality_within_smal
 pytest tests/
 
 # Run specific test modules
-pytest tests/test_select.py      # Trial selection logic
-pytest tests/test_measures.py    # Peak detection and metrics
-pytest tests/test_plots.py       # Figure generation
-pytest tests/test_cli_smoke.py   # End-to-end smoke test
+pytest tests/test_measures.py            # Phase 1: Fractional area latency functions (17 tests)
+pytest tests/test_subject_measurements.py # Phase 2A: Subject-level data collection (19 tests)
+pytest tests/test_statistics.py          # Phase 2B: Statistical analysis functions (23 tests)
 ```
+
+**Test Coverage:**
+- **Phase 1**: Fractional area latency computation, polarity handling, edge cases
+- **Phase 2A**: Subject measurement collection, QC metrics (SNR, baseline noise), CSV structure
+- **Phase 2B**: ANOVA, pairwise t-tests, LMM, data filtering, output formatting
 
 ## Documentation and Links
 
