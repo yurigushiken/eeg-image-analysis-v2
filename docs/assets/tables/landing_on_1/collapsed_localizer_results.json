@@ -1,6 +1,6 @@
 {
   "analysis_id": "landing_on_1",
-  "date_analyzed": "2025-10-13T15:24:19.072134",
+  "date_analyzed": "2025-10-13T19:57:17.732663",
   "baseline_ms": [
     -100,
     0
@@ -8,7 +8,7 @@
   "response_filter": "ALL",
   "fal_fraction": 0.5,
   "n_subjects_total": 24,
-  "n_evokeds_included": 96,
+  "n_evokeds_included": 20,
   "conditions": [
     "Cardinality1",
     "2 to 1",
@@ -16,46 +16,32 @@
     "4 to 1"
   ],
   "components": {
-    "P1": {
-      "peak_latency_ms": 120.0,
-      "peak_gfp_amplitude": 2.8029761866236624,
-      "fwhm_ms": 51.69474443418011,
-      "window_start_ms": 95.49940368629461,
-      "window_end_ms": 147.19414812047472,
-      "search_range_ms": [
-        60.0,
-        120.0
-      ],
-      "method": "GFP_collapsed_localizer",
-      "n_subjects": 96,
-      "n_conditions": 4
-    },
     "N1": {
       "peak_latency_ms": 180.0,
-      "peak_gfp_amplitude": -2.0728371420290888,
-      "fwhm_ms": 52.64842393248364,
-      "window_start_ms": 154.50103118845942,
-      "window_end_ms": 207.14945512094306,
+      "peak_gfp_amplitude": -2.7589414646971675,
+      "fwhm_ms": 60.01898460260344,
+      "window_start_ms": 151.79241428351912,
+      "window_end_ms": 211.81139888612256,
       "search_range_ms": [
         125.0,
         200.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 96,
+      "n_subjects": 20,
       "n_conditions": 4
     },
     "P3b": {
-      "peak_latency_ms": 476.0,
-      "peak_gfp_amplitude": 2.1959128863893502,
-      "fwhm_ms": 34.57252354189859,
-      "window_start_ms": 455.54745521337736,
-      "window_end_ms": 490.11997875527595,
+      "peak_latency_ms": 480.0,
+      "peak_gfp_amplitude": 3.5649146708554555,
+      "fwhm_ms": 116.80386930551174,
+      "window_start_ms": 437.49261990453954,
+      "window_end_ms": 554.2964892100513,
       "search_range_ms": [
         320.0,
         590.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 96,
+      "n_subjects": 20,
       "n_conditions": 4
     }
   }

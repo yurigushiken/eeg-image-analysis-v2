@@ -1,0 +1,35 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "1 to 2"
+      conditions: ["12"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
+    - name: "1 to 3"
+      conditions: ["13"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
+    - name: "1 to 4"
+      conditions: ["14"]
+      color: "#4daf4a"  # Green
+      linestyle: "-"    # Solid
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/from1_to_any_ACC1"
+  tables_dir: "docs/assets/tables/from1_to_any_ACC1"
+  page: "docs/analysis/from1_to_any_ACC1.md"
+

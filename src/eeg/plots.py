@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from typing import Dict, Iterable, Optional, Mapping, Tuple
+from typing import Dict, Iterable, Optional, Mapping, Tuple, List
 
 import matplotlib
 
 # Use non-interactive backend suitable for CI and headless runs
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def make_erp_figure(
@@ -18,6 +19,7 @@ def make_erp_figure(
     colors: Optional[Mapping[str, str]] = None,
     linestyles: Optional[Mapping[str, str]] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
+    ylimit_uv: Optional[float] = None,
 ):
     """
     Create an ERP overlay figure.
@@ -65,6 +67,13 @@ def make_erp_figure(
     if xlim_ms is not None:
         ax.set_xlim(xlim_ms)
 
+    # Set fixed y-axis limits if requested (e.g., ±6 µV)
+    if ylimit_uv is not None:
+        try:
+            ax.set_ylim((-float(ylimit_uv), float(ylimit_uv)))
+        except Exception:
+            pass
+
     # Light gridlines to aid visual alignment
     try:
         from matplotlib.ticker import MultipleLocator, AutoMinorLocator
@@ -100,6 +109,10 @@ def make_component_figure(
     linestyles: Optional[Mapping[str, str]] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
     latencies_by_label: Optional[Dict[str, float]] = None,
+    ylimit_uv: Optional[float] = None,
+    exclude_non_scalp: bool = True,
+    non_scalp_labels: Optional[List[str]] = None,
+    highlight_channels: Optional[List[str]] = None,
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -202,6 +215,13 @@ def make_component_figure(
     if xlim_ms is not None:
         ax_overlay.set_xlim(xlim_ms)
 
+    # Set fixed y-axis limits if requested (e.g., ±6 µV)
+    if ylimit_uv is not None:
+        try:
+            ax_overlay.set_ylim((-float(ylimit_uv), float(ylimit_uv)))
+        except Exception:
+            pass
+
     # Light gridlines for overlay
     try:
         from matplotlib.ticker import MultipleLocator, AutoMinorLocator
@@ -233,6 +253,25 @@ def make_component_figure(
     # Use fixed ±5µV color scale across all topomaps for direct visual comparison
     vlim_range = 5.0  # microvolts
 
+    # Determine channel picks for scalp-only plotting if requested
+    picks = None
+    if exclude_non_scalp:
+        try:
+            # Build a name -> index map from info
+            ch_names = [ch.get('ch_name') for ch in info.get('chs', [])]
+            # Default HydroCel 128 non-scalp set if not provided
+            default_non_scalp = {
+                "E1", "E8", "E14", "E17", "E21", "E25", "E32", "E38", "E43", "E44",
+                "E48", "E49", "E113", "E114", "E119", "E120", "E121", "E125", "E126", "E127", "E128"
+            }
+            exclude_set = set((non_scalp_labels or [])) or default_non_scalp
+            picks = [idx for idx, nm in enumerate(ch_names) if nm not in exclude_set]
+            # Safety: fall back to None if picks would exclude all channels
+            if not picks:
+                picks = None
+        except Exception:
+            picks = None
+
     for idx, (label, tup) in enumerate(sorted(topomap_by_label.items())):
         vec, peak_ms, half_win = tup[0], tup[1], tup[2]
         used_fallback = tup[3] if len(tup) > 3 else False
@@ -242,17 +281,64 @@ def make_component_figure(
 
         ax = fig.add_subplot(gs[1, idx])
         # Fixed symmetric color scaling ensures amplitude differences are visually comparable
+        # Subset data and info for scalp-only plotting if picks are defined
+        if picks is not None:
+            try:
+                sub_vec = vec[picks]
+                sub_info = mne.pick_info(info, picks, copy=True)
+            except Exception:
+                sub_vec = vec
+                sub_info = info
+        else:
+            sub_vec = vec
+            sub_info = info
+
+        # Prepare optional mask to highlight ROI channels used for ERP overlay
+        mask = None
+        mask_params = None
+        try:
+            if highlight_channels:
+                highlight_set = set(highlight_channels)
+                sub_ch_names = [ch.get('ch_name') for ch in sub_info.get('chs', [])]
+                mask = np.array([nm in highlight_set for nm in sub_ch_names], dtype=bool)
+                if mask.any():
+                    # Smaller, subtler highlight markers (slight transparency)
+                    mask_params = dict(
+                        marker='o',
+                        markerfacecolor=(1.0, 1.0, 0.0, 0.7),  # semi-transparent yellow
+                        markeredgecolor='k',
+                        linewidth=0,
+                        markersize=4,
+                    )
+                else:
+                    mask = None  # do not pass empty mask
+        except Exception:
+            mask = None
+            mask_params = None
+
         mne.viz.plot_topomap(
-            vec, info, axes=ax,
+            sub_vec, sub_info, axes=ax,
             contours=6,  # Add contour lines for better spatial reading
             vlim=(-vlim_range, vlim_range),  # Fixed ±5µV across all conditions
             show=False,
-            cmap='RdBu_r'  # Diverging colormap (red=positive, blue=negative)
+            cmap='RdBu_r',  # Diverging colormap (red=positive, blue=negative)
+            mask=mask,
+            mask_params=mask_params,
         )
 
         # NEW: Show FAL in title instead of collapsed peak
         title_suffix = "*" if used_fallback else ""
-        ax.set_title(f"{label}{title_suffix}\nFAL {display_latency:.1f} ms\n(±{half_win:.0f} ms)", fontsize=8)
+        title_color = None
+        try:
+            if colors and label in colors:
+                title_color = colors[label]
+        except Exception:
+            title_color = None
+        ax.set_title(
+            f"{label}{title_suffix}\nFAL {display_latency:.1f} ms\n(±{half_win:.0f} ms)",
+            fontsize=8,
+            color=title_color
+        )
 
     return fig
 

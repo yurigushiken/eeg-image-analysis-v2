@@ -1,0 +1,38 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 8
+  condition_sets:
+    - name: "Cardinality1"
+      conditions: ["11"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
+    - name: "2 to 1"
+      conditions: ["21"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
+    - name: "3 to 1"
+      conditions: ["31"]
+      color: "#4daf4a"  # Green
+      linestyle: "-"    # Solid
+    - name: "4 to 1"
+      conditions: ["41"]
+      color: "#984ea3"  # Purple
+      linestyle: "-"    # Solid
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/landing_on_1_ACC1"
+  tables_dir: "docs/assets/tables/landing_on_1_ACC1"
+  page: "docs/analysis/landing_on_1_ACC1.md"

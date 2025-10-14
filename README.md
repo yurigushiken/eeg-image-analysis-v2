@@ -4,7 +4,7 @@ Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZp
 
 ## Overview
 
-This project implements a **declarative, YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures and interactive web pages. Instead of writing custom analysis scripts for each research question, you define your analysis in a simple YAML configuration file.
+This project implements a **declarative, YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures, subject- and condition-level measurements, and an analysis website. You define each analysis in a simple YAML configuration file (Phase 1/2A), then run inferential statistics and plots from subject-level measurements (Phases 2B–2C).
 
 ## Quick Start
 
@@ -33,10 +33,14 @@ python -c "import mne; print(f'MNE version: {mne.__version__}')"
 ```bash
 # Run the sample "Small Increasing vs Decreasing" analysis (default dataset)
 python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing.yaml
+
+# (Optional) Run statistics for that analysis using the default stats config
+# Update input_csv in configs/statistics/default.yaml if needed
+python scripts/run_statistics.py --config configs/statistics/default.yaml
 ```
 
 **What happens:**
-1. Loads 24 subject epoch files from `data/`
+1. Loads subject epoch files from `data/`
 2. Selects trials by condition codes (e.g., "12", "13" for increasing)
 3. Computes P1, N1, P3b component ERPs with ROI aggregation
 4. Generates overlay plots and peak-locked topomaps
@@ -51,8 +55,10 @@ python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_dec
 - QC report: `docs/assets/tables/small_increasing_vs_decreasing/qc_summary.csv`
 - Runtime metrics: `docs/assets/tables/small_increasing_vs_decreasing/run_metrics.json`
 - Collapsed localizer JSON: `docs/assets/tables/small_increasing_vs_decreasing/collapsed_localizer_results.json`
-- Condition measurements CSV: `docs/assets/tables/small_increasing_vs_decreasing/condition_measurements.csv`
-  - Includes `mean_amplitude_roi` (amplitude in µV) and `latency_frac_area_ms` (50% area latency) for each condition
+- Subject-level measurements (Phase 2A): `docs/assets/tables/small_increasing_vs_decreasing/subject_measurements.csv`
+  - Per subject × component × condition: `latency_frac_area_ms`, `mean_amplitude_roi`, `snr`, window metadata
+- Condition-level summary (descriptive): `docs/assets/tables/small_increasing_vs_decreasing/condition_measurements.csv`
+  - Per component × condition: `mean_amplitude_roi`, `latency_frac_area_ms`, window metadata
 
 ### 3. View the Website
 
@@ -76,16 +82,22 @@ eeg-image-analysis-v2/
 │       ├── small_increasing_vs_decreasing.yaml
 │       ├── cardinality_within_small.yaml
 │       └── from1_to_any.yaml
-├── src/eeg/                          # Core analysis library
+├── src/eeg/                          # Core analysis & statistics library
 │   ├── config.py                     # YAML schema loading/validation
 │   ├── io.py                         # Epochs I/O, montage enforcement
 │   ├── select.py                     # Trial selection (ACC1 filter, condition sets)
 │   ├── erp.py                        # Subject/grand average computation
 │   ├── measures.py                   # Component metrics (peak amplitude/latency)
 │   ├── plots.py                      # ERP overlays and topomaps
-│   └── report.py                     # Markdown page generation
+│   ├── report.py                     # Markdown page generation and index grid
+│   ├── statistics.py                 # Phase 2B: ANOVA, pairwise tests, LMM, descriptives
+│   └── stats_plots.py                # Phase 2C: Boxplot, violin, and effect size plots
 ├── scripts/
-│   └── run_analysis.py               # CLI entry point
+│   ├── run_analysis.py               # Run a single analysis from YAML (Phase 1/2A)
+│   ├── run_all_analyses.py           # Batch all YAMLs in configs/analyses/
+│   ├── run_statistics.py             # Run inferential stats + plots (Phases 2B–2C)
+│   ├── run_all_statistics.py         # Batch stats for all completed analyses
+│   └── create_stat_configs.py        # Generate per-analysis stats YAMLs
 ├── docs/                             # Published website (GitHub Pages)
 │   ├── index.md                      # Auto-generated analysis gallery
 │   ├── analysis/                     # Per-analysis pages
@@ -97,8 +109,9 @@ eeg-image-analysis-v2/
 ├── assets/net/                       # Montage file
 │   └── AdultAverageNet128_v1.sfp
 ├── environment.yml                   # Conda environment specification
-├── .specify/                         # (local tooling; ignored in Git)
-└── specs/                            # (design docs; ignored in Git)
+├── STATISTICS_WORKFLOW.md            # Stats workflow overview
+├── PHASE2_ENHANCED_SPEC.md           # Phase 2C enhancements and rationale
+└── PHASE2_IMPLEMENTATION_PLAN.md     # Implementation notes
 ```
 
 ## Understanding the YAML Configuration
@@ -106,10 +119,8 @@ eeg-image-analysis-v2/
 Each analysis is defined by a YAML file with these key sections:
 
 ```yaml
-# Dataset configuration
 dataset:
-  # Default dataset (FIFs converted from HAPPE-derived EEGLAB .set)
-  root: "data/lab-data-original"
+  root: "data/hpf_1.5_lpf_35_baseline-on"   # or your own dataset root
   pattern: "sub-*_preprocessed-epo.fif"
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 
@@ -145,7 +156,6 @@ plots:
 
 # Output paths
 outputs:
-  page: "single"
   plots_dir: "docs/assets/plots/small_increasing_vs_decreasing"
   tables_dir: "docs/assets/tables/small_increasing_vs_decreasing"
   page: "docs/analysis/small_increasing_vs_decreasing.md"
@@ -180,7 +190,7 @@ Both directories include a small README placeholder and are kept empty in versio
 - Plus: `SubjectID`, `Block`, `Trial`, `Procedure`, `Target.RT`, `Trial_Continuous`
 
 **Why explicit numeric conditions?**
-This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rather than metadata-based filters. This provides maximum clarity and reproducibility—you see exactly which trials are included in each analysis.
+This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rather than metadata-only filters. This provides maximum clarity and reproducibility—you see exactly which trials are included in each analysis.
 
 ## How It Works: The Pipeline Flow
 
@@ -201,7 +211,9 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
                    Compute SEM for uncertainty bands
                 ↓
 5. Metrics      → For each component (P1, N1, P3b):
-                  ├─ Detect cohort peak via GFP within configured search range
+                 ├─ Detect cohort peak via collapsed localizer within the configured search range
+                 │    - Default: ROI-based (per `configs/components.yaml`)
+                 │    - Optional: Global GFP if `localizer.method: gfp`
                   ├─ Compute FWHM window around that peak
                   ├─ Aggregate ROI channels
                   ├─ Compute mean amplitude within FWHM window
@@ -223,7 +235,7 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
-- **GFP-derived FWHM windows**: Component windows come from the GFP-based collapsed localizer (no manual ±20ms). All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
+- **Collapsed localizer FWHM windows**: Component windows come from a collapsed localizer (no manual ±20 ms). By default we use ROI-based localizer peaks specified in `configs/components.yaml`; you can switch to global GFP by setting `localizer.method: gfp`. All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
 - **Fractional Area Latency (FAL)**: Component timing is measured using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This provides a robust, noise-resistant measure of component timing that can vary by condition (unlike peak latency, which is fixed by the collapsed localizer).
 - **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
 
@@ -249,24 +261,30 @@ python scripts/run_analysis.py --config configs/analyses/cardinality_within_smal
 
 ## Statistical Analysis Ready
 
-The pipeline now generates **condition-level measurements** ready for statistical testing:
+The pipeline now generates both:
+- **Subject-level measurements (Phase 2A)** for inferential statistics: `docs/assets/tables/<analysis_id>/subject_measurements.csv`
+- **Condition-level summaries** for descriptive stats/figures: `docs/assets/tables/<analysis_id>/condition_measurements.csv`
 
-### Latency Measurements
+### Subject-level measurements (Phase 2A)
 
-Each `condition_measurements.csv` contains:
+Each `subject_measurements.csv` row (subject × component × condition) contains at least:
+- `latency_frac_area_ms`: 50% fractional area latency (DV for timing)
+- `mean_amplitude_roi`: Mean amplitude within the FWHM window (µV)
+- `snr`, `baseline_noise_uv`: QC metrics
+- `peak_latency_ms`, `window_start_ms`, `window_end_ms`, `fwhm_ms`: Measurement window metadata
 
-- **`peak_latency_ms`**: The collapsed localizer peak (same for all conditions) - documents the unbiased measurement window
-- **`latency_frac_area_ms`**: The 50% fractional area latency (differs by condition) - your dependent variable for latency tests
-
-**Example from N1 component**:
+**Example (N1)**:
 ```csv
-component,condition,peak_latency_ms,latency_frac_area_ms,mean_amplitude_roi
-N1,Cardinality1,168.0,172.8,-2.72
-N1,Cardinality2,168.0,174.6,-2.45
-N1,Cardinality3,168.0,175.9,-3.19
+subject_id,component,condition,latency_frac_area_ms,mean_amplitude_roi,peak_latency_ms,window_start_ms,window_end_ms,fwhm_ms,snr
+02,N1,Cardinality1,172.8,-2.72,168.0,140.2,212.6,72.4,3.1
+03,N1,Cardinality2,174.6,-2.45,168.0,140.2,212.6,72.4,2.7
+04,N1,Cardinality3,175.9,-3.19,168.0,140.2,212.6,72.4,3.4
 ```
 
-**Key insight**: `peak_latency_ms` is the same (unbiased window), but `latency_frac_area_ms` varies—allowing you to test if latencies differ significantly between conditions!
+**Key insight**: `peak_latency_ms` is constant per component (unbiased window), while `latency_frac_area_ms` varies by condition—this enables within-subject latency comparisons.
+
+### Condition-level summaries (descriptive)
+`condition_measurements.csv` summarizes per-component × condition means to support descriptive tables/figures. Use `subject_measurements.csv` for inferential tests.
 
 ### Phase 2B: Statistical Testing Module
 
@@ -283,6 +301,12 @@ The pipeline includes a complete statistical analysis module that automatically 
 python scripts/run_statistics.py --config configs/statistics/default.yaml
 
 # Results are saved to: docs/assets/stats/<analysis_id>/
+ 
+# Batch all analyses that have subject_measurements.csv:
+python scripts/run_all_statistics.py
+
+# Generate per-analysis stats configs (optional):
+python scripts/create_stat_configs.py
 ```
 
 **What it generates:**
@@ -361,8 +385,9 @@ pytest tests/test_statistics.py          # Phase 2B: Statistical analysis functi
 
 ## Documentation and Links
 
-- Website: docs/ (served via GitHub Pages)
+- Website: `docs/` (served via GitHub Pages)
 - Analyses: `docs/analysis/` pages and thumbnails on `docs/index.md`
+- Guides: `docs/GFP_ANALYSIS_GUIDE.md`, `docs/DATA_OUTPUTS_GUIDE.md`, `STATISTICS_WORKFLOW.md`
 
 ## Website Publishing (GitHub Pages)
 
@@ -379,7 +404,7 @@ The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
 
 ## Performance and Success Criteria
 
-**From our specification ([specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md)):**
+**From our specification (see `PHASE2_ENHANCED_SPEC.md`):**
 
 - ✅ **SC-001**: End-to-end run completes in <10 minutes on 24 subjects (typical laptop: 16GB RAM, 4-core CPU)
 - ✅ **SC-002**: Bit-identical outputs on re-runs (deterministic, reproducible)
@@ -412,8 +437,9 @@ The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
 
 ### Get Help
 
-- Check the [Quickstart Guide](specs/001-yaml-driven-erp/quickstart.md) for step-by-step instructions
-- Review [specs/001-yaml-driven-erp/spec.md](specs/001-yaml-driven-erp/spec.md) for edge cases and requirements
+- See `docs/GFP_ANALYSIS_GUIDE.md` for the analysis method and decisions
+- See `docs/DATA_OUTPUTS_GUIDE.md` for a map of generated files
+- See `STATISTICS_WORKFLOW.md` for Phases 2B–2C usage and examples
 - Open an issue with your YAML configuration and error messages
 
 ## Contributing

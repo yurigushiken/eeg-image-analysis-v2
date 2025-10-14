@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-13 15:57:09",
+  "timestamp": "2025-10-13 19:59:52",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_from1_to_any_1can6ks9.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_from1_to_any_521rr0fn.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\from1_to_any\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -32,8 +32,8 @@
   "correction_family": "component",
   "missing_data_policy": "ANOVA and pairwise tests were run on complete cases after applying an SNR filter >= 2.0. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.",
   "data_summary": {
-    "n_total_measurements": 216,
-    "n_subjects": 24,
+    "n_total_measurements": 42,
+    "n_subjects": 12,
     "n_conditions": 3
   },
   "tests_run": {
@@ -88,8 +88,8 @@
         "component": "N1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 426.9028194028672,
-        "bic": 437.2050344555993,
+        "aic": 75.79848398399567,
+        "bic": 78.22301723293566,
         "converged": true,
         "output_file": "lmm_N1_latency_frac_area_ms.json"
       },
@@ -97,8 +97,8 @@
         "component": "N1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 197.84632763192838,
-        "bic": 208.14854268466047,
+        "aic": 37.25440372583937,
+        "bic": 39.67893697477937,
         "converged": true,
         "output_file": "lmm_N1_mean_amplitude_roi.json"
       },
@@ -106,26 +106,26 @@
         "component": "P1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 36.06543333011054,
-        "bic": 36.462641038509716,
-        "converged": true,
+        "aic": -Infinity,
+        "bic": -Infinity,
+        "converged": false,
         "output_file": "lmm_P1_latency_frac_area_ms.json"
       },
       "P1_mean_amplitude_roi": {
         "component": "P1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": -7.575028450512807,
-        "bic": -7.177820742113628,
-        "converged": true,
+        "aic": -Infinity,
+        "bic": -Infinity,
+        "converged": false,
         "output_file": "lmm_P1_mean_amplitude_roi.json"
       },
       "P3b_latency_frac_area_ms": {
         "component": "P3b",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 204.74153302465578,
-        "bic": 213.18593029522546,
+        "aic": 91.30761002272854,
+        "bic": 92.29373290940964,
         "converged": true,
         "output_file": "lmm_P3b_latency_frac_area_ms.json"
       },
@@ -133,8 +133,8 @@
         "component": "P3b",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 171.15589656131908,
-        "bic": 179.60029383188876,
+        "aic": 21.64651392341526,
+        "bic": 22.632636810096358,
         "converged": true,
         "output_file": "lmm_P3b_mean_amplitude_roi.json"
       }

@@ -11,8 +11,8 @@
 
 ## Notes
 
-- GFP-based collapsed localizer analysis with 120 subject-condition combinations.
+- GFP-based collapsed localizer analysis with 27 subject-condition combinations.
 - Components analyzed: P1, N1, P3b
-- P1: Peak at 112 ms, FWHM window [90.8, 125.2] ms (width: 34.5 ms)
-- N1: Peak at 172 ms, FWHM window [142.7, 204.0] ms (width: 61.2 ms)
-- P3b: Peak at 472 ms, FWHM window [463.4, 484.3] ms (width: 20.9 ms)
+- P1: Peak at 120 ms, FWHM window [93.0, 135.7] ms (width: 42.7 ms)
+- N1: Peak at 180 ms, FWHM window [149.8, 205.7] ms (width: 55.9 ms)
+- P3b: Peak at 516 ms, FWHM window [462.7, 545.5] ms (width: 82.9 ms)

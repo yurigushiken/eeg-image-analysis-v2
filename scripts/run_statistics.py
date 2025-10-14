@@ -30,6 +30,7 @@ sys.path.insert(0, str(repo_root / "src"))
 
 from eeg.statistics import ERPStatistics, get_library_versions, format_missing_data_policy, compute_cohens_d_ci
 from eeg.stats_plots import plot_boxplot, plot_violin, plot_effect_sizes
+from eeg.summary_report import StatisticalReportGenerator
 import pandas as pd
 
 
@@ -594,6 +595,18 @@ def main():
     # Create enhanced summary report (Phase 2C)
     if cfg['output']['create_summary']:
         create_summary_report(all_results, cfg, output_dir, stats)
+
+    # Generate narrative statistical report
+    print_header("Generating Narrative Report", level=1)
+    try:
+        analysis_id = Path(cfg['input_csv']).parent.parent.name
+        report_gen = StatisticalReportGenerator(output_dir, analysis_id)
+        report_path = output_dir / "STATISTICAL_REPORT.md"
+        report_gen.generate_report(report_path)
+        print(f"  Narrative report saved to: {report_path}")
+        print(f"  This report synthesizes all statistical outputs into a publication-ready format.\n")
+    except Exception as e:
+        print(f"  WARNING: Could not generate narrative report: {e}\n")
 
     print_header("Analysis Complete!", level=1)
     print(f"  Results saved to: {output_dir}\n")

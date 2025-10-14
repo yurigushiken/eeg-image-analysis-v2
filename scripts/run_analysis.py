@@ -411,6 +411,12 @@ def main() -> int:
     # Data recording for statistical analysis
     condition_measurements = []  # List of dicts for CSV export
 
+    # Determine fixed y-axis limit for ERP overlays (optional, default = 6 µV)
+    try:
+        ylimit_uv = float(cfg.plots.get("ylimit_uv", 6))
+    except Exception:
+        ylimit_uv = 6.0
+
     for comp in cfg.components:
         if comp not in collapsed_results:
             print(f"  {comp}: No GFP window detected; generating ERP overlay only (no topomaps).")
@@ -584,6 +590,10 @@ def main() -> int:
                 if meas['component'] == comp and not np.isnan(meas['latency_frac_area_ms']):
                     latencies_by_label[meas['condition']] = meas['latency_frac_area_ms']
 
+            # Read plotting options for non-scalp exclusion (default ON)
+            exclude_non_scalp = bool(cfg.plots.get("exclude_non_scalp", True))
+            non_scalp_labels = cfg.plots.get("non_scalp_labels") or None
+
             fig = make_component_figure(
                 curves_by_label=curves_by_label,
                 times_ms=times_ms,
@@ -595,6 +605,10 @@ def main() -> int:
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
                 latencies_by_label=latencies_by_label,  # NEW: Pass FAL data to plotting
+                ylimit_uv=ylimit_uv,
+                exclude_non_scalp=exclude_non_scalp,
+                non_scalp_labels=non_scalp_labels,
+                highlight_channels=roi_channels,
             )
 
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
@@ -660,6 +674,7 @@ def main() -> int:
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
+                ylimit_uv=ylimit_uv,
             )
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
