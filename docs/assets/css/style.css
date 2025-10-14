@@ -339,6 +339,93 @@ pre code {
     }
 }
 
+/* Expandable Statistics Section */
+.stats-toggle {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.stats-toggle:hover {
+    background-color: var(--primary-hover);
+}
+
+.stats-toggle::before {
+    content: '▸ ';
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.stats-toggle.expanded::before {
+    transform: rotate(90deg);
+}
+
+.stats-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.stats-content.show {
+    display: block;
+}
+
+.stats-section {
+    margin-bottom: 1.5rem;
+}
+
+.stats-section:last-child {
+    margin-bottom: 0;
+}
+
+.stats-section h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.stats-report-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.stats-report-link:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.stats-plots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.stats-plots .thumb {
+    max-width: 150px;
+    max-height: 120px;
+}
+
 /* Print Styles */
 @media print {
     .site-header,
@@ -354,5 +441,13 @@ pre code {
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    .stats-toggle {
+        display: none;
+    }
+
+    .stats-content {
+        display: block;
     }
 }
