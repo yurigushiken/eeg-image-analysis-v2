@@ -214,14 +214,14 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
                  ├─ Detect cohort peak via collapsed localizer within the configured search range
                  │    - Default: ROI-based (per `configs/components.yaml`)
                  │    - Optional: Global GFP if `localizer.method: gfp`
-                  ├─ Compute FWHM window around that peak
-                  ├─ Aggregate ROI channels
-                  ├─ Compute mean amplitude within FWHM window
-                  └─ Extract topomap averaged over FWHM window
+                 ├─ Compute FWHM window around that peak
+                 ├─ Aggregate ROI channels
+                 ├─ Compute amplitude/latency metrics within the FWHM window
+                 └─ Extract topomap averaged over ±FWHM/2 centered on the selected latency
                 ↓
 6. Plotting     → Generate composite figures:
-                  ├─ Top panel: ERP overlay with SEM
-                  └─ Bottom panels: Per-condition topomaps with peak labels
+                  ├─ Top panel: ERP overlay with SEM; colored vertical lines mark the selected latency (Peak by default)
+                  └─ Bottom panels: Per-condition topomaps averaged over ±FWHM/2 centered on the selected latency; subtitle notes ROI- or GFP-derived window
                 ↓
 7. Reporting    → Write analysis page (Markdown)
                   Update index.md with thumbnails
@@ -235,11 +235,12 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
-- **Collapsed localizer FWHM windows**: Component windows come from a collapsed localizer (no manual ±20 ms). By default we use ROI-based localizer peaks specified in `configs/components.yaml`; you can switch to global GFP by setting `localizer.method: gfp`. All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
+- **Collapsed localizer FWHM windows**: Component windows come from a collapsed localizer (no manual ±20 ms). By default we use ROI-based localizer peaks specified in `configs/components.yaml`; you can switch to global GFP by setting `localizer.method: gfp`. All conditions share the same cohort window per component; amplitudes and latencies are measured within this unbiased window. ERP figure subtitles indicate whether the window is ROI-derived or GFP-derived.
 - **Peak-first defaults (new):** By default, subject-level latency and amplitude now use peak-based measurements within the unbiased FWHM window:
   - `peak_latency_ms`: time of signed extremum (P*=maximum, N*=minimum)
   - `peak_amplitude_roi`: signed amplitude at that extremum
   You can switch to the previous behavior (FAL + Mean) via YAML (see below).
+  Topomaps are averaged over ±FWHM/2 centered on the selected latency (Peak by default).
 
 - **Fractional Area Latency (FAL)**: You can alternatively measure component timing using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This is robust and noise-resistant and remains available.
 - **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
@@ -362,7 +363,7 @@ measurement:
   amplitude: peak    # options: peak | mean
 ```
 
-Plots respect this choice: colored verticals and topomap captions show “Peak” or “FAL” latency accordingly.
+Plots respect this choice: colored verticals and topomap captions show “Peak” or “FAL” latency, and topomap averaging is centered on that same latency.
 
 #### Example Results
 
