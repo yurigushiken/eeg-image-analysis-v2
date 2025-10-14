@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-13 23:12:33
+**Generated:** 2025-10-14 00:14:33
 
 ---
 
@@ -94,9 +94,23 @@ This section presents the results of repeated-measures statistical tests.
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 0.95, *p* = 0.399, η²_G = 0.018
+- Greenhouse-Geisser corrected: *p* = 0.372 (ε = 0.689)
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality1 vs Cardinality2 | 0.15 | 13 | = 0.882 | 0.04 [-0.45, 0.66] | negligible | n.s. |
+| Cardinality1 vs Cardinality3 | 1.91 | 13 | = 0.234 | 0.33 [-0.10, 1.13] | small | n.s. |
+| Cardinality2 vs Cardinality3 | 1.12 | 13 | = 0.425 | 0.25 [-0.16, 0.77] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -106,9 +120,23 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.39, *p* = 0.268, η²_G = 0.047
+- Greenhouse-Geisser corrected: *p* = 0.266 (ε = 0.664)
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality1 vs Cardinality2 | 1.23 | 13 | = 0.359 | 0.49 [-0.27, 0.86] | small | n.s. |
+| Cardinality1 vs Cardinality3 | 1.35 | 13 | = 0.359 | 0.41 [-0.24, 0.96] | small | n.s. |
+| Cardinality2 vs Cardinality3 | -0.58 | 13 | = 0.574 | -0.12 [-0.66, 0.26] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -121,9 +149,22 @@ _Pairwise test results not available._
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.86, *p* = 0.193, η²_G = 0.106
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality1 vs Cardinality2 | 0.83 | 7 | = 0.435 | 0.36 [-0.81, 0.73] | small | n.s. |
+| Cardinality1 vs Cardinality3 | 1.77 | 7 | = 0.358 | 0.79 [-0.14, 1.22] | medium | n.s. |
+| Cardinality2 vs Cardinality3 | 1.18 | 7 | = 0.416 | 0.42 [-0.47, 1.11] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -133,9 +174,22 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 4.65, *p* = 0.028, η²_G = 0.196
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality1 vs Cardinality2 | 4.96 | 7 | = 0.005 | 1.04 [0.07, 1.97] | large | ** |
+| Cardinality1 vs Cardinality3 | 1.92 | 7 | = 0.145 | 0.81 [0.07, 1.54] | large | n.s. |
+| Cardinality2 vs Cardinality3 | -0.40 | 7 | = 0.701 | -0.18 [-1.00, 0.55] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -169,7 +223,8 @@ _LMM results not available._
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**P1 amplitude:** Significant main effect of condition (*p* = 0.028). Post-hoc tests revealed:
+  - Cardinality1 showed greater amplitude than Cardinality2 (*d* = 1.04)
 
 ### Research Implications
 
@@ -221,6 +276,7 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 - Python 3.12.11
 - MNE-Python 1.10.1
 - Statsmodels 0.14.5
+- Pingouin 0.5.5
 
 ### References
 

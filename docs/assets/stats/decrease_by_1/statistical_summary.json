@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-13 23:12:38",
+  "timestamp": "2025-10-14 00:14:40",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_decrease_by_1_a0bd8us4.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_decrease_by_1__wby7ury.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\decrease_by_1\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -13,6 +13,7 @@
     "peak_amplitude_roi"
   ],
   "library_versions": {
+    "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
     "mne": "1.10.1",
     "scipy": "1.16.2",
@@ -47,42 +48,120 @@
   "results": {
     "anova": {
       "N1_peak_latency_ms": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "N1",
+        "dv": "peak_latency_ms",
+        "test": "ANOVA",
+        "F": 2.494726268206931,
+        "p_unc": 0.052238361431934104,
+        "output_file": "anova_N1_peak_latency_ms.csv",
+        "epsilon": 0.6713839868638753,
+        "effect_size_ng2": 0.0761582042180636
       },
       "N1_peak_amplitude_roi": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "N1",
+        "dv": "peak_amplitude_roi",
+        "test": "ANOVA",
+        "F": 2.6292876697336123,
+        "p_unc": 0.04305494284221883,
+        "output_file": "anova_N1_peak_amplitude_roi.csv",
+        "epsilon": 0.7429618637350415,
+        "effect_size_ng2": 0.06434565290739594
       },
       "P1_peak_latency_ms": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "P1",
+        "dv": "peak_latency_ms",
+        "test": "ANOVA",
+        "F": 0.507042253521126,
+        "p_unc": 0.7313082870047969,
+        "output_file": "anova_P1_peak_latency_ms.csv",
+        "epsilon": 0.3240966953838235,
+        "effect_size_ng2": 0.05142857142857138
       },
       "P1_peak_amplitude_roi": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "P1",
+        "dv": "peak_amplitude_roi",
+        "test": "ANOVA",
+        "F": 1.2360447259376943,
+        "p_unc": 0.33506420125873654,
+        "output_file": "anova_P1_peak_amplitude_roi.csv",
+        "epsilon": 0.5991586410714478,
+        "effect_size_ng2": 0.1406853509815416
       },
       "P3b_peak_latency_ms": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "P3b",
+        "dv": "peak_latency_ms",
+        "test": "ANOVA",
+        "F": 1.626000527750898,
+        "p_unc": 0.18657539208327822,
+        "output_file": "anova_P3b_peak_latency_ms.csv",
+        "epsilon": 0.7551070037063553,
+        "effect_size_ng2": 0.09028306862802536
       },
       "P3b_peak_amplitude_roi": {
-        "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
+        "component": "P3b",
+        "dv": "peak_amplitude_roi",
+        "test": "ANOVA",
+        "F": 2.3210674367089204,
+        "p_unc": 0.07333930317606373,
+        "output_file": "anova_P3b_peak_amplitude_roi.csv",
+        "epsilon": 0.7423346088924461,
+        "effect_size_ng2": 0.12982077813918635
       }
     },
     "pairwise": {
       "N1_peak_latency_ms": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "N1",
+        "dv": "peak_latency_ms",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 1,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_N1_peak_latency_ms.csv"
       },
       "N1_peak_amplitude_roi": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "N1",
+        "dv": "peak_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_N1_peak_amplitude_roi.csv"
       },
       "P1_peak_latency_ms": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "P1",
+        "dv": "peak_latency_ms",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_P1_peak_latency_ms.csv"
       },
       "P1_peak_amplitude_roi": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "P1",
+        "dv": "peak_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_P1_peak_amplitude_roi.csv"
       },
       "P3b_peak_latency_ms": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "P3b",
+        "dv": "peak_latency_ms",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_P3b_peak_latency_ms.csv"
       },
       "P3b_peak_amplitude_roi": {
-        "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
+        "component": "P3b",
+        "dv": "peak_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 10,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_P3b_peak_amplitude_roi.csv"
       }
     },
     "lmm": {

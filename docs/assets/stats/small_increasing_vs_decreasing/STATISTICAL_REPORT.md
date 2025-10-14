@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-13 23:14:15
+**Generated:** 2025-10-14 00:16:04
 
 ---
 
@@ -96,9 +96,20 @@ This section presents the results of repeated-measures statistical tests.
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 10.95, *p* = 0.004, η²_G = 0.114
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 3.31 | 19 | = 0.004 | 0.70 [0.21, 1.27] | medium | ** |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -108,9 +119,20 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 12.50, *p* = 0.002, η²_G = 0.098
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 3.54 | 19 | = 0.002 | 0.64 [0.25, 1.33] | medium | ** |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -123,9 +145,20 @@ _Pairwise test results not available._
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 6.08, *p* = 0.036, η²_G = 0.227
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 2.47 | 9 | = 0.036 | 1.03 [-0.04, 1.60] | large | * |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -135,9 +168,20 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 7.57, *p* = 0.022, η²_G = 0.151
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 2.75 | 9 | = 0.022 | 0.80 [0.03, 1.71] | medium | * |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -150,9 +194,20 @@ _Pairwise test results not available._
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.05, *p* = 0.320, η²_G = 0.028
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 1.03 | 16 | = 0.320 | 0.33 [-0.27, 0.77] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -162,9 +217,20 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.05, *p* = 0.320, η²_G = 0.007
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Small_Decreasing vs Small_Increasing | 1.03 | 16 | = 0.320 | 0.16 [-0.27, 0.77] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -179,7 +245,14 @@ _Pairwise test results not available._
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**N1 latency:** Significant main effect of condition (*p* = 0.004). Post-hoc tests revealed:
+  - Small_Decreasing showed greater latency than Small_Increasing (*d* = 0.70)
+**N1 amplitude:** Significant main effect of condition (*p* = 0.002). Post-hoc tests revealed:
+  - Small_Decreasing showed greater amplitude than Small_Increasing (*d* = 0.64)
+**P1 latency:** Significant main effect of condition (*p* = 0.036). Post-hoc tests revealed:
+  - Small_Decreasing showed greater latency than Small_Increasing (*d* = 1.03)
+**P1 amplitude:** Significant main effect of condition (*p* = 0.022). Post-hoc tests revealed:
+  - Small_Decreasing showed greater amplitude than Small_Increasing (*d* = 0.80)
 
 ### Research Implications
 
@@ -231,6 +304,7 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 - Python 3.12.11
 - MNE-Python 1.10.1
 - Statsmodels 0.14.5
+- Pingouin 0.5.5
 
 ### References
 

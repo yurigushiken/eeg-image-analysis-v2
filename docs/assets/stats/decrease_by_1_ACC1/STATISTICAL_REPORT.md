@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-13 23:12:46
+**Generated:** 2025-10-14 00:14:48
 
 ---
 
@@ -114,9 +114,30 @@ This section presents the results of repeated-measures statistical tests.
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.86, *p* = 0.139, η²_G = 0.088
+- Greenhouse-Geisser corrected: *p* = 0.187 (ε = 0.471)
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | 1.43 | 9 | = 0.466 | 0.46 [-0.06, 1.12] | small | n.s. |
+| 2 to 1 vs 4 to 3 | 2.99 | 9 | = 0.152 | 0.86 [0.10, 1.28] | large | n.s. |
+| 2 to 1 vs 5 to 4 | 0.45 | 9 | = 0.664 | 0.15 [-0.42, 0.70] | negligible | n.s. |
+| 2 to 1 vs 6 to 5 | -0.48 | 9 | = 0.664 | -0.14 [-0.67, 0.67] | negligible | n.s. |
+| 3 to 2 vs 4 to 3 | 0.82 | 9 | = 0.621 | 0.29 [-0.15, 0.75] | small | n.s. |
+| 3 to 2 vs 5 to 4 | -0.48 | 9 | = 0.664 | -0.23 [-0.58, 0.33] | small | n.s. |
+| 3 to 2 vs 6 to 5 | -1.13 | 9 | = 0.478 | -0.47 [-0.58, 0.58] | small | n.s. |
+| 4 to 3 vs 5 to 4 | -1.85 | 9 | = 0.324 | -0.52 [-1.03, -0.05] | medium | n.s. |
+| 4 to 3 vs 6 to 5 | -2.37 | 9 | = 0.211 | -0.79 [-0.90, 0.24] | medium | n.s. |
+| 5 to 4 vs 6 to 5 | -1.23 | 9 | = 0.478 | -0.23 [-0.67, 0.49] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -126,9 +147,29 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 3.06, *p* = 0.029, η²_G = 0.119
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | 2.82 | 9 | = 0.067 | 0.71 [0.17, 1.45] | medium | n.s. |
+| 2 to 1 vs 4 to 3 | 3.28 | 9 | = 0.048 | 0.86 [0.00, 1.16] | large | * |
+| 2 to 1 vs 5 to 4 | 1.72 | 9 | = 0.293 | 0.71 [-0.12, 1.04] | medium | n.s. |
+| 2 to 1 vs 6 to 5 | 3.89 | 9 | = 0.037 | 1.37 [0.24, 1.93] | large | * |
+| 3 to 2 vs 4 to 3 | 0.38 | 9 | = 0.795 | 0.10 [-0.55, 0.34] | negligible | n.s. |
+| 3 to 2 vs 5 to 4 | 0.39 | 9 | = 0.795 | 0.11 [-0.33, 0.58] | negligible | n.s. |
+| 3 to 2 vs 6 to 5 | 1.59 | 9 | = 0.293 | 0.45 [0.12, 1.44] | small | n.s. |
+| 4 to 3 vs 5 to 4 | 0.09 | 9 | = 0.933 | 0.02 [-0.26, 0.66] | negligible | n.s. |
+| 4 to 3 vs 6 to 5 | 0.93 | 9 | = 0.627 | 0.35 [-0.05, 1.13] | small | n.s. |
+| 5 to 4 vs 6 to 5 | 0.74 | 9 | = 0.680 | 0.26 [-0.21, 0.99] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -141,9 +182,29 @@ _Pairwise test results not available._
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 0.43, *p* = 0.784, η²_G = 0.167
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | 0.50 | 1 | = 0.906 | 0.63 [-0.23, 1.92] | medium | n.s. |
+| 2 to 1 vs 4 to 3 | 0.50 | 1 | = 0.906 | 0.63 [-0.19, 1.51] | medium | n.s. |
+| 2 to 1 vs 5 to 4 | 1.00 | 1 | = 0.900 | 1.34 [-0.08, 1.30] | large | n.s. |
+| 2 to 1 vs 6 to 5 | 1.00 | 1 | = 0.900 | 1.41 [-2.11, 3.26] | large | n.s. |
+| 3 to 2 vs 4 to 3 | nan | 1 | n/a | 0.00 [-1.28, 0.62] | negligible | n.s. |
+| 3 to 2 vs 5 to 4 | 1.00 | 1 | = 0.900 | 0.28 [-0.92, 0.92] | small | n.s. |
+| 3 to 2 vs 6 to 5 | 0.00 | 1 | = 1.000 | 0.00 [-2.48, 2.48] | negligible | n.s. |
+| 4 to 3 vs 5 to 4 | 1.00 | 1 | = 0.900 | 0.28 [-0.92, 0.53] | small | n.s. |
+| 4 to 3 vs 6 to 5 | 0.00 | 1 | = 1.000 | 0.00 [-2.48, 2.48] | negligible | n.s. |
+| 5 to 4 vs 6 to 5 | -1.00 | 1 | = 0.900 | -0.45 [-2.19, 1.19] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -153,9 +214,29 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 3.10, *p* = 0.149, η²_G = 0.659
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | 2.64 | 1 | = 0.461 | 3.70 [0.11, 2.73] | large | n.s. |
+| 2 to 1 vs 4 to 3 | 4.39 | 1 | = 0.356 | 1.91 [-0.33, 1.30] | large | n.s. |
+| 2 to 1 vs 5 to 4 | 5.05 | 1 | = 0.356 | 2.34 [0.09, 1.55] | large | n.s. |
+| 2 to 1 vs 6 to 5 | 4.74 | 1 | = 0.356 | 4.78 [-3.94, 13.41] | large | n.s. |
+| 3 to 2 vs 4 to 3 | -0.16 | 1 | = 0.900 | -0.20 [-1.12, 0.74] | small | n.s. |
+| 3 to 2 vs 5 to 4 | 0.26 | 1 | = 0.900 | 0.33 [-1.02, 0.84] | small | n.s. |
+| 3 to 2 vs 6 to 5 | 0.20 | 1 | = 0.900 | 0.20 [-2.45, 2.52] | negligible | n.s. |
+| 4 to 3 vs 5 to 4 | 11.10 | 1 | = 0.356 | 0.41 [-0.36, 1.12] | small | n.s. |
+| 4 to 3 vs 6 to 5 | 0.29 | 1 | = 0.900 | 0.29 [-2.77, 2.27] | small | n.s. |
+| 5 to 4 vs 6 to 5 | -0.28 | 1 | = 0.900 | -0.28 [-1.66, 1.53] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -168,9 +249,30 @@ _Pairwise test results not available._
 
 #### Latency (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 2.88, *p* = 0.041, η²_G = 0.241
+- Greenhouse-Geisser corrected: *p* = 0.095 (ε = 0.465)
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | 0.04 | 7 | = 0.968 | 0.01 [-0.27, 0.78] | negligible | n.s. |
+| 2 to 1 vs 4 to 3 | -0.34 | 7 | = 0.828 | -0.22 [-0.64, 0.43] | small | n.s. |
+| 2 to 1 vs 5 to 4 | -0.87 | 7 | = 0.691 | -0.48 [-0.44, 0.53] | small | n.s. |
+| 2 to 1 vs 6 to 5 | -3.18 | 7 | = 0.065 | -1.92 [-1.24, 0.19] | large | n.s. |
+| 3 to 2 vs 4 to 3 | -0.46 | 7 | = 0.826 | -0.22 [-0.82, 0.40] | small | n.s. |
+| 3 to 2 vs 5 to 4 | -0.96 | 7 | = 0.691 | -0.46 [-0.81, 0.28] | small | n.s. |
+| 3 to 2 vs 6 to 5 | -3.15 | 7 | = 0.065 | -1.71 [-1.49, 0.20] | large | n.s. |
+| 4 to 3 vs 5 to 4 | -0.64 | 7 | = 0.779 | -0.18 [-0.51, 0.56] | negligible | n.s. |
+| 4 to 3 vs 6 to 5 | -2.82 | 7 | = 0.065 | -1.22 [-1.72, -0.03] | large | n.s. |
+| 5 to 4 vs 6 to 5 | -2.94 | 7 | = 0.065 | -1.41 [-1.48, 0.03] | large | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -180,9 +282,29 @@ _Pairwise test results not available._
 
 #### Amplitude (Peak)
 
-_ANOVA results not available (may require pingouin library)._
+**Repeated-Measures ANOVA:**
 
-_Pairwise test results not available._
+- *F* = 1.08, *p* = 0.387, η²_G = 0.100
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 2 to 1 vs 3 to 2 | -0.20 | 7 | = 0.845 | -0.12 [-0.66, 0.37] | negligible | n.s. |
+| 2 to 1 vs 4 to 3 | 0.64 | 7 | = 0.676 | 0.28 [-0.44, 0.63] | small | n.s. |
+| 2 to 1 vs 5 to 4 | 1.03 | 7 | = 0.637 | 0.56 [-0.52, 0.45] | medium | n.s. |
+| 2 to 1 vs 6 to 5 | 1.84 | 7 | = 0.637 | 1.08 [-0.25, 1.16] | large | n.s. |
+| 3 to 2 vs 4 to 3 | 0.72 | 7 | = 0.676 | 0.31 [-0.27, 0.97] | small | n.s. |
+| 3 to 2 vs 5 to 4 | 1.72 | 7 | = 0.637 | 0.53 [-0.19, 0.91] | medium | n.s. |
+| 3 to 2 vs 6 to 5 | 1.42 | 7 | = 0.637 | 0.80 [-0.35, 1.26] | medium | n.s. |
+| 4 to 3 vs 5 to 4 | 0.93 | 7 | = 0.637 | 0.29 [-0.45, 0.61] | small | n.s. |
+| 4 to 3 vs 6 to 5 | 0.98 | 7 | = 0.637 | 0.55 [-0.39, 1.08] | medium | n.s. |
+| 5 to 4 vs 6 to 5 | 0.26 | 7 | = 0.845 | 0.14 [-0.54, 0.81] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
@@ -197,7 +319,10 @@ _Pairwise test results not available._
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**N1 amplitude:** Significant main effect of condition (*p* = 0.029). Post-hoc tests revealed:
+  - 2 to 1 showed greater amplitude than 4 to 3 (*d* = 0.86)
+  - 2 to 1 showed greater amplitude than 6 to 5 (*d* = 1.37)
+**P3b latency:** Significant main effect of condition (*p* = 0.041) (no significant pairwise comparisons)
 
 ### Research Implications
 
@@ -249,6 +374,7 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 - Python 3.12.11
 - MNE-Python 1.10.1
 - Statsmodels 0.14.5
+- Pingouin 0.5.5
 
 ### References
 

@@ -105,15 +105,26 @@ def get_stats_info(analysis_id: str, docs_root: str = "docs") -> Optional[Dict[s
     # Gather plot files
     boxplots = {}
     violin_plots = {}
+    effect_sizes = {}
+
+    # Support both peak-based and window/mean-based outputs
+    measure_candidates = [
+        'mean_amplitude_roi',
+        'latency_frac_area_ms',
+        'peak_latency_ms',
+        'peak_amplitude_roi',
+    ]
 
     for component in ['N1', 'P1', 'P3b']:
-        # Look for amplitude and latency plots
-        for measure_type in ['mean_amplitude_roi', 'latency_frac_area_ms']:
+        for measure_type in measure_candidates:
+            # Box/violin file names are standardized on dv name
             boxplot_name = f"boxplot_{component}_{measure_type}.png"
             violin_name = f"violin_{component}_{measure_type}.png"
+            effect_name = f"effect_sizes_{component}_{measure_type}.png"
 
             boxplot_path = plots_dir / boxplot_name
             violin_path = plots_dir / violin_name
+            effect_path = plots_dir / effect_name
 
             if boxplot_path.exists():
                 rel_path = f"assets/stats/{analysis_id}/plots/{boxplot_name}"
@@ -127,10 +138,17 @@ def get_stats_info(analysis_id: str, docs_root: str = "docs") -> Optional[Dict[s
                     violin_plots[component] = []
                 violin_plots[component].append(rel_path)
 
+            if effect_path.exists():
+                rel_path = f"assets/stats/{analysis_id}/plots/{effect_name}"
+                if component not in effect_sizes:
+                    effect_sizes[component] = []
+                effect_sizes[component].append(rel_path)
+
     return {
         'report': f"assets/stats/{analysis_id}/STATISTICAL_REPORT.md",
         'boxplots': boxplots,
-        'violin_plots': violin_plots
+        'violin_plots': violin_plots,
+        'effect_sizes': effect_sizes,
     }
 
 
@@ -192,6 +210,24 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
             if component in stats_info['violin_plots']:
                 for plot_path in stats_info['violin_plots'][component]:
                     alt = f"Violin plot for {component} in {analysis_id}"
+                    html_parts.append(
+                        f'<a href="{plot_path}" data-lightbox aria-label="{alt}">'
+                        f'<img class="thumb" src="{plot_path}" alt="{alt}" /></a>'
+                    )
+
+        html_parts.append('</div>')
+        html_parts.append('</div>')
+
+    # Effect Size Plots (if available)
+    if stats_info.get('effect_sizes'):
+        html_parts.append('<div class="stats-section">')
+        html_parts.append('<h4>Effect Sizes</h4>')
+        html_parts.append('<div class="stats-plots">')
+
+        for component in ['P1', 'N1', 'P3b']:
+            if component in stats_info['effect_sizes']:
+                for plot_path in stats_info['effect_sizes'][component]:
+                    alt = f"Effect sizes for {component} in {analysis_id}"
                     html_parts.append(
                         f'<a href="{plot_path}" data-lightbox aria-label="{alt}">'
                         f'<img class="thumb" src="{plot_path}" alt="{alt}" /></a>'

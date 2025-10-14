@@ -1,0 +1,15 @@
+{
+  "analysis_id": "14_41_ACC1",
+  "duration_seconds": 4.881,
+  "num_figures": 4,
+  "largest_png_bytes": 487854,
+  "total_png_bytes": 1864097,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "14_41_ACC1-collapsed_localizer.png": 487854,
+    "14_41_ACC1-P1.png": 436623,
+    "14_41_ACC1-N1.png": 454714,
+    "14_41_ACC1-P3b.png": 484906
+  }
+}

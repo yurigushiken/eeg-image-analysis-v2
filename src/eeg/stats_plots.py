@@ -401,7 +401,10 @@ def plot_effect_sizes(
 
     effect_sizes = pairwise_results[effect_size_col].values
 
-    fig, ax = plt.subplots(figsize=figsize)
+    # Dynamically scale height by number of comparisons to avoid large empty space
+    base_width, base_height = figsize
+    dynamic_height = max(2.5, min(10.0, 0.6 * max(1, len(labels)) + 1.6))
+    fig, ax = plt.subplots(figsize=(base_width, dynamic_height), constrained_layout=True)
 
     # Plot effect sizes
     y_positions = np.arange(len(labels))
@@ -437,7 +440,7 @@ def plot_effect_sizes(
     ax.set_title(title, fontsize=14, fontweight='bold')
     ax.grid(axis='x', alpha=0.3)
 
-    plt.tight_layout()
+    # Use constrained_layout and bbox_inches tight to reduce whitespace
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 
