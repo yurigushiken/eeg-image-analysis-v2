@@ -1,6 +1,6 @@
 {
   "analysis_id": "12_13",
-  "date_analyzed": "2025-10-14T02:05:25.123779",
+  "date_analyzed": "2025-10-14T03:00:24.845321",
   "baseline_ms": [
     -100,
     0
@@ -11,7 +11,7 @@
   "n_evokeds_included": 48,
   "conditions": [
     "Increasing 1 to 2",
-    "Decreasing 1 to 3"
+    "Increasing 1 to 3"
   ],
   "components": {
     "P1": {

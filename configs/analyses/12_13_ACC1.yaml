@@ -12,7 +12,7 @@ selection:
       linestyle: "-"   # Solid
     - name: "Increasing 1 to 3"
       conditions: ["13"]
-      color: "#2ca02c"  # Red (decreasing)
+      color: "#2ca02c"  # Green (decreasing)
       linestyle: "--"    # dashed
 components: ["P1", "N1", "P3b"]
 preprocessing:
