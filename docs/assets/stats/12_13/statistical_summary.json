@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-14 02:09:15",
+  "timestamp": "2025-10-14 11:30:26",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_1xni3ss6.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_n3u6pil0.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_13\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -61,21 +61,21 @@
         "component": "N1",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 7.380788142068782,
-        "p_unc": 0.013281356394625844,
+        "F": 7.380788142068766,
+        "p_unc": 0.013281356394625934,
         "output_file": "anova_N1_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.037306295520156886
+        "effect_size_ng2": 0.03730629552015688
       },
       "P1_peak_latency_ms": {
         "component": "P1",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 7.681818181818153,
-        "p_unc": 0.03235359609323149,
+        "F": 7.681818181818148,
+        "p_unc": 0.03235359609323153,
         "output_file": "anova_P1_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.25413533834586405
+        "effect_size_ng2": 0.25413533834586394
       },
       "P1_peak_amplitude_roi": {
         "component": "P1",
@@ -91,7 +91,7 @@
         "component": "P3b",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 1.9682335714072188,
+        "F": 1.9682335714072183,
         "p_unc": 0.18242249872362026,
         "output_file": "anova_P3b_peak_latency_ms.csv",
         "epsilon": 1.0,
@@ -178,8 +178,8 @@
         "component": "N1",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 193.0302428705463,
-        "bic": 200.25689282962756,
+        "aic": 193.03024287054635,
+        "bic": 200.25689282962762,
         "converged": true,
         "output_file": "lmm_N1_peak_amplitude_roi.json"
       },
@@ -196,8 +196,8 @@
         "component": "P1",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 87.74185883487974,
-        "bic": 92.106028648313,
+        "aic": 87.74185883488721,
+        "bic": 92.10602864832047,
         "converged": true,
         "output_file": "lmm_P1_peak_amplitude_roi.json"
       },

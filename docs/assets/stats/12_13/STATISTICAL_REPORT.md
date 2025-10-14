@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-14 02:09:15
+**Generated:** 2025-10-14 11:30:26
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 24 | 168.50 ms | 22.91 | 4.68 | [136.00, 216.00] |
 | Increasing 1 to 2 | 21 | 168.00 ms | 15.18 | 3.31 | [144.00, 196.00] |
+| Increasing 1 to 3 | 24 | 168.50 ms | 22.91 | 4.68 | [136.00, 216.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 24 | -6.66 µV | 2.55 | 0.52 | [-12.65, -2.71] |
 | Increasing 1 to 2 | 21 | -5.63 µV | 2.29 | 0.50 | [-9.95, -2.19] |
+| Increasing 1 to 3 | 24 | -6.66 µV | 2.55 | 0.52 | [-12.65, -2.71] |
 
 
 ### 2.2 P1 Component
@@ -58,15 +58,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 10 | 80.00 ms | 9.43 | 2.98 | [68.00, 92.00] |
 | Increasing 1 to 2 | 12 | 82.67 ms | 8.06 | 2.33 | [68.00, 92.00] |
+| Increasing 1 to 3 | 10 | 80.00 ms | 9.43 | 2.98 | [68.00, 92.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 10 | 2.44 µV | 1.63 | 0.52 | [0.93, 6.35] |
 | Increasing 1 to 2 | 12 | 2.41 µV | 1.51 | 0.43 | [0.28, 4.45] |
+| Increasing 1 to 3 | 10 | 2.44 µV | 1.63 | 0.52 | [0.93, 6.35] |
 
 
 ### 2.3 P3b Component
@@ -75,15 +75,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 20 | 474.20 ms | 39.50 | 8.83 | [404.00, 536.00] |
 | Increasing 1 to 2 | 16 | 446.50 ms | 55.25 | 13.81 | [388.00, 536.00] |
+| Increasing 1 to 3 | 20 | 474.20 ms | 39.50 | 8.83 | [404.00, 536.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 20 | 5.98 µV | 3.60 | 0.81 | [1.71, 15.57] |
 | Increasing 1 to 2 | 16 | 5.91 µV | 3.04 | 0.76 | [1.69, 11.99] |
+| Increasing 1 to 3 | 20 | 5.98 µV | 3.60 | 0.81 | [1.71, 15.57] |
 
 
 ---
@@ -107,7 +107,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | -0.12 | 20 | = 0.908 | -0.03 [-0.48, 0.43] | negligible | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 0.12 | 20 | = 0.908 | 0.03 [-0.43, 0.48] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -115,7 +115,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 399.71, BIC = 406.93
-- Condition effect: *β* = -0.14, *SE* = 4.772, *z* = -0.030, *p* = 0.976
+- Condition effect: *β* = 0.14, *SE* = 4.772, *z* = 0.030, *p* = 0.976
 
 #### Amplitude (Peak)
 
@@ -130,7 +130,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | -2.72 | 20 | = 0.013 | -0.38 [-1.09, -0.10] | small | * |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 2.72 | 20 | = 0.013 | 0.38 [0.10, 1.09] | small | * |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -138,7 +138,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 193.03, BIC = 200.26
-- Condition effect: *β* = 0.98, *SE* = 0.342, *z* = 2.863, *p* = 0.004
+- Condition effect: *β* = -0.98, *SE* = 0.342, *z* = -2.863, *p* = 0.004
 
 
 ### 3.2 P1 Component
@@ -156,7 +156,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | -2.77 | 6 | = 0.032 | -1.08 [-2.20, 0.10] | large | * |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 2.77 | 6 | = 0.032 | 1.08 [-0.10, 2.20] | large | * |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -164,7 +164,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 162.15, BIC = 166.51
-- Condition effect: *β* = 5.30, *SE* = 2.917, *z* = 1.817, *p* = 0.069
+- Condition effect: *β* = -5.30, *SE* = 2.917, *z* = -1.817, *p* = 0.069
 
 #### Amplitude (Peak)
 
@@ -179,7 +179,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | 0.03 | 6 | = 0.980 | 0.01 [-0.91, 0.93] | negligible | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -0.03 | 6 | = 0.980 | -0.01 [-0.93, 0.91] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -187,7 +187,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 87.74, BIC = 92.11
-- Condition effect: *β* = -0.03, *SE* = 0.604, *z* = -0.045, *p* = 0.964
+- Condition effect: *β* = 0.03, *SE* = 0.604, *z* = 0.045, *p* = 0.964
 
 
 ### 3.3 P3b Component
@@ -205,7 +205,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | 1.40 | 14 | = 0.182 | 0.54 [-0.21, 0.93] | medium | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -1.40 | 14 | = 0.182 | -0.54 [-0.93, 0.21] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -213,7 +213,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 385.47, BIC = 391.81
-- Condition effect: *β* = -27.70, *SE* = 15.372, *z* = -1.802, *p* = 0.072
+- Condition effect: *β* = 27.70, *SE* = 15.372, *z* = 1.802, *p* = 0.072
 
 #### Amplitude (Peak)
 
@@ -228,7 +228,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 1 to 3 vs Increasing 1 to 2 | 1.16 | 14 | = 0.264 | 0.25 [-0.27, 0.87] | small | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -1.16 | 14 | = 0.264 | -0.25 [-0.87, 0.27] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -236,7 +236,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 186.89, BIC = 193.22
-- Condition effect: *β* = -0.57, *SE* = 0.686, *z* = -0.835, *p* = 0.403
+- Condition effect: *β* = 0.57, *SE* = 0.686, *z* = 0.835, *p* = 0.403
 
 
 ---
@@ -246,9 +246,9 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 ### Key Findings
 
 **N1 amplitude:** Significant main effect of condition (*p* = 0.013). Post-hoc tests revealed:
-  - Decreasing 1 to 3 showed smaller amplitude than Increasing 1 to 2 (*d* = -0.38)
+  - Increasing 1 to 2 showed greater amplitude than Increasing 1 to 3 (*d* = 0.38)
 **P1 latency:** Significant main effect of condition (*p* = 0.032). Post-hoc tests revealed:
-  - Decreasing 1 to 3 showed smaller latency than Increasing 1 to 2 (*d* = -1.08)
+  - Increasing 1 to 2 showed greater latency than Increasing 1 to 3 (*d* = 1.08)
 
 ### Research Implications
 

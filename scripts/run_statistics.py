@@ -88,6 +88,33 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                 peak_lat = comp_data['peak_latency_ms'].iloc[0] if 'peak_latency_ms' in comp_data.columns else None
                 fwhm = comp_data['fwhm_ms'].iloc[0] if 'fwhm_ms' in comp_data.columns else None
 
+                # === Compute significance stars for omnibus ANOVA (component + DV) ===
+                significance_stars = None
+                try:
+                    anova_path = output_dir / f"anova_{component}_{dv}.{cfg['tests']['anova'].get('output_format','csv')}"
+                    if anova_path.exists():
+                        anova_df = pd.read_csv(anova_path)
+                        row = anova_df[anova_df['Source'] == cfg['tests']['anova'].get('within','condition')]
+                        if len(row) > 0:
+                            p_unc = row['p-unc'].values[0]
+                            p_gg = row['p-GG-corr'].values[0] if 'p-GG-corr' in row.columns else None
+                            p_use = p_gg if (p_gg is not None and not pd.isna(p_gg)) else p_unc
+                            try:
+                                p_use = float(p_use)
+                            except Exception:
+                                p_use = None
+                            if p_use is not None:
+                                if p_use < 0.001:
+                                    significance_stars = '***'
+                                elif p_use < 0.01:
+                                    significance_stars = '**'
+                                elif p_use < 0.05:
+                                    significance_stars = '*'
+                                else:
+                                    significance_stars = None
+                except Exception:
+                    significance_stars = None
+
                 # Boxplot
                 if plots_cfg.get('boxplot', {}).get('enabled', True):
                     boxplot_path = plots_dir / f"boxplot_{component}_{dv}.png"
@@ -103,6 +130,7 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         peak_latency_ms=peak_lat,
                         fwhm_ms=fwhm,
                         include_window_context=plots_cfg.get('boxplot', {}).get('include_window_context', True),
+                        significance_stars=significance_stars,
                         show_points=plots_cfg.get('boxplot', {}).get('show_points', True),
                         show_mean=plots_cfg.get('boxplot', {}).get('show_mean', True),
                         dpi=dpi,

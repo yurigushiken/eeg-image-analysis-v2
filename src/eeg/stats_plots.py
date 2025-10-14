@@ -65,12 +65,26 @@ def format_window_caption(
     ...     fwhm_ms=72.4
     ... )
     """
-    measure_name = "Latency" if "latency" in dv.lower() else "Amplitude"
+    dv_lower = dv.lower()
+    if "latency_frac_area" in dv_lower:
+        measure_name = "Latency (FAL, 50%)"
+    elif "peak_latency" in dv_lower:
+        measure_name = "Latency (Peak)"
+    elif "mean_amplitude" in dv_lower:
+        measure_name = "Amplitude (Mean)"
+    elif "peak_amplitude" in dv_lower:
+        measure_name = "Amplitude (Peak)"
+    elif "latency" in dv_lower:
+        measure_name = "Latency"
+    elif "amplitude" in dv_lower:
+        measure_name = "Amplitude"
+    else:
+        measure_name = dv.replace('_', ' ').title()
 
     caption = (
-        f"{component} {measure_name} measured in collapsed localizer FWHM window: "
+        f"{component} {measure_name} measured within collapsed-localizer FWHM window: "
         f"[{window_start_ms:.1f}, {window_end_ms:.1f}] ms "
-        f"(peak @ {peak_latency_ms:.1f} ms"
+        f"(collapsed peak @ {peak_latency_ms:.1f} ms"
     )
 
     if fwhm_ms:
@@ -107,6 +121,8 @@ def plot_boxplot(
     peak_latency_ms: Optional[float] = None,
     fwhm_ms: Optional[float] = None,
     include_window_context: bool = False,
+    # Significance context (optional)
+    significance_stars: Optional[str] = None,
     # Styling options
     ylabel: Optional[str] = None,
     xlabel: Optional[str] = None,
@@ -209,11 +225,15 @@ def plot_boxplot(
         ax.legend()
 
     # Labels
-    ax.set_xlabel(xlabel if xlabel else groupby.replace('_', ' ').title())
+    base_xlabel = xlabel if xlabel else groupby.replace('_', ' ').title()
+    if significance_stars:
+        base_xlabel = f"{base_xlabel} {significance_stars}"
+    ax.set_xlabel(base_xlabel)
     ax.set_ylabel(_auto_label(dv, ylabel))
     ax.set_title(title, fontsize=14, fontweight='bold')
 
-    # Add caption if window context provided
+    # Add captions
+    bottom_used = False
     if include_window_context and all([component, window_start_ms, window_end_ms, peak_latency_ms]):
         caption = format_window_caption(
             component=component,
@@ -223,11 +243,12 @@ def plot_boxplot(
             peak_latency_ms=peak_latency_ms,
             fwhm_ms=fwhm_ms
         )
-        fig.text(0.5, 0.01, caption, ha='center', fontsize=8,
-                 style='italic', wrap=True)
-        plt.subplots_adjust(bottom=0.12)
+        # Place caption lower to avoid occlusion with x-label
+        fig.text(0.5, 0.012, caption, ha='center', fontsize=8, style='italic', wrap=True)
+        plt.subplots_adjust(bottom=0.16)
 
-    plt.tight_layout()
+    # Improve bottom spacing to avoid x-label/caption overlap
+    plt.tight_layout(rect=(0, 0.02, 1, 1))
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 

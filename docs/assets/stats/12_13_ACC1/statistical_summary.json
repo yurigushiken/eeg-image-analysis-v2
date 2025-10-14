@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-14 02:09:23",
+  "timestamp": "2025-10-14 11:30:34",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_ACC1_ippnrkge.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_ACC1_rfhtgidm.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_13_ACC1\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -61,21 +61,21 @@
         "component": "N1",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 2.506419582258605,
-        "p_unc": 0.12832812353243642,
+        "F": 2.506419582258597,
+        "p_unc": 0.12832812353243686,
         "output_file": "anova_N1_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.008632660510077403
+        "effect_size_ng2": 0.0086326605100774
       },
       "P1_peak_latency_ms": {
         "component": "P1",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 4.200000000000006,
-        "p_unc": 0.08631487173364598,
+        "F": 4.200000000000003,
+        "p_unc": 0.08631487173364603,
         "output_file": "anova_P1_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.11316397228637415
+        "effect_size_ng2": 0.11316397228637413
       },
       "P1_peak_amplitude_roi": {
         "component": "P1",
@@ -205,8 +205,8 @@
         "component": "P3b",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 394.79080915470684,
-        "bic": 401.23448080528374,
+        "aic": 394.79080915470433,
+        "bic": 401.23448080528124,
         "converged": true,
         "output_file": "lmm_P3b_peak_latency_ms.json"
       },
