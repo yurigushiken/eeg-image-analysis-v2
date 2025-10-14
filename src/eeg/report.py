@@ -202,7 +202,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
 
     html_parts.append('</div>')  # Close stats-content
 
-    return '\n'.join(html_parts)
+    return ''.join(html_parts)
 
 
 def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dict[str, str]) -> None:

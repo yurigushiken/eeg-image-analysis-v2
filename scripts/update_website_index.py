@@ -62,6 +62,8 @@ def main() -> int:
                     rel_path = f"assets/plots/{analysis_id}/{analysis_id}-{component}.png"
                     component_to_image[component] = rel_path
 
+            # Only include analyses that have at least one component plot
+            # (can be partial - P1/N1/P3b, but not completely empty)
             if not component_to_image:
                 print(f"  [WARN] No component plots found, skipping")
                 continue
