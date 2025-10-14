@@ -475,9 +475,24 @@ def create_summary_report(all_results: dict, cfg: dict, output_dir: Path, stats:
     # Phase 2C Enhancement: Analysis settings (IA #5)
     if reporting_cfg.get('document_measurement_windows', True):
         print("  Documenting measurement window methodology...")
+        # Infer measurement modes from selected dependent variables (stats perspective)
+        dvs = cfg.get('dependent_variables', [])
+        latency_measure = (
+            'peak' if 'peak_latency_ms' in dvs else
+            'fal_50' if 'latency_frac_area_ms' in dvs else
+            'unspecified'
+        )
+        amplitude_measure = (
+            'peak' if 'peak_amplitude_roi' in dvs else
+            'mean' if 'mean_amplitude_roi' in dvs else
+            'unspecified'
+        )
+
         summary['analysis_settings'] = {
             'measurement_window_method': 'collapsed_localizer_fwhm',
             'fal_fraction': 0.5,  # Fractional area latency: 50% = temporal midpoint
+            'latency_measure': latency_measure,
+            'amplitude_measure': amplitude_measure,
             'filters': cfg.get('filters', {}),
             'baseline_period_ms': '[-100, 0]',  # Standard baseline
         }

@@ -1,0 +1,18 @@
+# 12_21
+
+![figure](docs/assets/plots/12_21_ACC1/12_21-collapsed_localizer.png)
+
+![figure](docs/assets/plots/12_21_ACC1/12_21-P1.png)
+
+![figure](docs/assets/plots/12_21_ACC1/12_21-N1.png)
+
+![figure](docs/assets/plots/12_21_ACC1/12_21-P3b.png)
+
+
+## Notes
+
+- GFP-based collapsed localizer analysis with 48 subject-condition combinations.
+- Components analyzed: P1, N1, P3b
+- P1: Peak at 120 ms, FWHM window [84.8, 133.7] ms (width: 48.8 ms)
+- N1: Peak at 172 ms, FWHM window [146.2, 207.1] ms (width: 61.0 ms)
+- P3b: Peak at 472 ms, FWHM window [434.4, 544.4] ms (width: 110.0 ms)

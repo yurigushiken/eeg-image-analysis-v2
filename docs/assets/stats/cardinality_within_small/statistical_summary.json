@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-13 19:59:32",
+  "timestamp": "2025-10-13 23:12:33",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_within_small_60u0adza.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_within_small_bmowr5t1.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\cardinality_within_small\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -9,8 +9,8 @@
     "P3b"
   ],
   "dependent_variables": [
-    "latency_frac_area_ms",
-    "mean_amplitude_roi"
+    "peak_latency_ms",
+    "peak_amplitude_roi"
   ],
   "library_versions": {
     "statsmodels": "0.14.5",
@@ -23,17 +23,19 @@
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
     "fal_fraction": 0.5,
+    "latency_measure": "peak",
+    "amplitude_measure": "peak",
     "filters": {
-      "min_snr": 2.0,
+      "min_snr": null,
       "dropna": true
     },
     "baseline_period_ms": "[-100, 0]"
   },
   "correction_family": "component",
-  "missing_data_policy": "ANOVA and pairwise tests were run on complete cases after applying an SNR filter >= 2.0. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.",
+  "missing_data_policy": "ANOVA and pairwise tests were run on complete cases. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.",
   "data_summary": {
-    "n_total_measurements": 24,
-    "n_subjects": 8,
+    "n_total_measurements": 144,
+    "n_subjects": 24,
     "n_conditions": 3
   },
   "tests_run": {
@@ -44,86 +46,86 @@
   },
   "results": {
     "anova": {
-      "N1_latency_frac_area_ms": {
+      "N1_peak_latency_ms": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
-      "N1_mean_amplitude_roi": {
+      "N1_peak_amplitude_roi": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_latency_ms": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_amplitude_roi": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_latency_ms": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_amplitude_roi": {
         "error": "pingouin is required for ANOVA. Install with: pip install pingouin"
       }
     },
     "pairwise": {
-      "N1_latency_frac_area_ms": {
+      "N1_peak_latency_ms": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
-      "N1_mean_amplitude_roi": {
+      "N1_peak_amplitude_roi": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_latency_ms": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_amplitude_roi": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_latency_ms": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_amplitude_roi": {
         "error": "pingouin is required for pairwise tests. Install with: pip install pingouin"
       }
     },
     "lmm": {
-      "N1_latency_frac_area_ms": {
+      "N1_peak_latency_ms": {
         "component": "N1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 12.233863758829632,
-        "bic": 9.779041203309195,
+        "aic": 510.6732854143678,
+        "bic": 521.1450082254783,
         "converged": true,
-        "output_file": "lmm_N1_latency_frac_area_ms.json"
+        "output_file": "lmm_N1_peak_latency_ms.json"
       },
-      "N1_mean_amplitude_roi": {
+      "N1_peak_amplitude_roi": {
         "component": "N1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": -4.8869268132979435,
-        "bic": -7.341749368818381,
+        "aic": 264.3482661225005,
+        "bic": 274.81998893361094,
         "converged": true,
-        "output_file": "lmm_N1_mean_amplitude_roi.json"
+        "output_file": "lmm_N1_peak_amplitude_roi.json"
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_latency_ms": {
         "component": "P1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": -Infinity,
-        "bic": -Infinity,
-        "converged": false,
-        "output_file": "lmm_P1_latency_frac_area_ms.json"
+        "aic": 325.2531290273257,
+        "bic": 334.17407719691704,
+        "converged": true,
+        "output_file": "lmm_P1_peak_latency_ms.json"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_amplitude_roi": {
         "component": "P1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": -Infinity,
-        "bic": -Infinity,
-        "converged": false,
-        "output_file": "lmm_P1_mean_amplitude_roi.json"
+        "aic": 206.52034796188877,
+        "bic": 215.44129613148007,
+        "converged": true,
+        "output_file": "lmm_P1_peak_amplitude_roi.json"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_latency_ms": {
         "error": "No data available for component 'P3b' after filtering"
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_amplitude_roi": {
         "error": "No data available for component 'P3b' after filtering"
       }
     }

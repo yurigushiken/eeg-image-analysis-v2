@@ -1,6 +1,6 @@
 {
   "analysis_id": "32_23_ACC1",
-  "date_analyzed": "2025-10-13T19:56:02.228885",
+  "date_analyzed": "2025-10-13T23:00:20.586249",
   "baseline_ms": [
     -100,
     0
@@ -8,52 +8,52 @@
   "response_filter": "ACC1",
   "fal_fraction": 0.5,
   "n_subjects_total": 24,
-  "n_evokeds_included": 6,
+  "n_evokeds_included": 48,
   "conditions": [
     "Increasing 2 to 3",
     "Decreasing 3 to 2"
   ],
   "components": {
     "P1": {
-      "peak_latency_ms": 108.0,
-      "peak_gfp_amplitude": 1.3028177552819689,
-      "fwhm_ms": 26.387147560774338,
-      "window_start_ms": 91.9589554793514,
-      "window_end_ms": 118.34610304012574,
+      "collapsed_peak_latency_ms": 112.0,
+      "peak_gfp_amplitude": 0.0905219433463212,
+      "fwhm_ms": 55.913832805040016,
+      "window_start_ms": 65.67929244010168,
+      "window_end_ms": 121.59312524514169,
       "search_range_ms": [
         60.0,
         120.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 6,
+      "n_subjects": 48,
       "n_conditions": 2
     },
     "N1": {
-      "peak_latency_ms": 164.0,
-      "peak_gfp_amplitude": -3.923746059044815,
-      "fwhm_ms": 50.281392730588294,
-      "window_start_ms": 139.7855286751964,
-      "window_end_ms": 190.06692140578468,
+      "collapsed_peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -3.8066718572952176,
+      "fwhm_ms": 89.19465765977233,
+      "window_start_ms": 134.63802061677129,
+      "window_end_ms": 223.83267827654362,
       "search_range_ms": [
         125.0,
         200.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 6,
+      "n_subjects": 48,
       "n_conditions": 2
     },
     "P3b": {
-      "peak_latency_ms": 508.0,
-      "peak_gfp_amplitude": 1.495546300923887,
-      "fwhm_ms": 98.73488192223954,
-      "window_start_ms": 440.07300705842897,
-      "window_end_ms": 538.8078889806685,
+      "collapsed_peak_latency_ms": 472.0,
+      "peak_gfp_amplitude": 3.0715732749539377,
+      "fwhm_ms": 111.97476793940916,
+      "window_start_ms": 421.14159933930523,
+      "window_end_ms": 533.1163672787144,
       "search_range_ms": [
         320.0,
         590.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 6,
+      "n_subjects": 48,
       "n_conditions": 2
     }
   }

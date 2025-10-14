@@ -229,14 +229,19 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
                   Record runtime metrics JSON
 ```
 
-**Key architectural decisions (the "why"):**
+**Measurement defaults (peak-first) and architectural decisions (the "why"):**
 
 - **Subject-first averaging**: We compute evoked responses per subject, then average subjects with equal weight. This prevents subjects with more trials from dominating the grand average.
 
 - **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
 
 - **Collapsed localizer FWHM windows**: Component windows come from a collapsed localizer (no manual ±20 ms). By default we use ROI-based localizer peaks specified in `configs/components.yaml`; you can switch to global GFP by setting `localizer.method: gfp`. All conditions share the same peak latency per component; amplitudes are measured within the component's FWHM window.
-- **Fractional Area Latency (FAL)**: Component timing is measured using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This provides a robust, noise-resistant measure of component timing that can vary by condition (unlike peak latency, which is fixed by the collapsed localizer).
+- **Peak-first defaults (new):** By default, subject-level latency and amplitude now use peak-based measurements within the unbiased FWHM window:
+  - `peak_latency_ms`: time of signed extremum (P*=maximum, N*=minimum)
+  - `peak_amplitude_roi`: signed amplitude at that extremum
+  You can switch to the previous behavior (FAL + Mean) via YAML (see below).
+
+- **Fractional Area Latency (FAL)**: You can alternatively measure component timing using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This is robust and noise-resistant and remains available.
 - **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
 
 - **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
@@ -268,10 +273,11 @@ The pipeline now generates both:
 ### Subject-level measurements (Phase 2A)
 
 Each `subject_measurements.csv` row (subject × component × condition) contains at least:
-- `latency_frac_area_ms`: 50% fractional area latency (DV for timing)
-- `mean_amplitude_roi`: Mean amplitude within the FWHM window (µV)
+- `peak_latency_ms`: Peak latency within FWHM window (default DV for timing)
+- `peak_amplitude_roi`: Peak amplitude within FWHM window (default DV for amplitude)
+- `latency_frac_area_ms`, `mean_amplitude_roi`: Alternative DVs (enabled for backward compatibility)
 - `snr`, `baseline_noise_uv`: QC metrics
-- `peak_latency_ms`, `window_start_ms`, `window_end_ms`, `fwhm_ms`: Measurement window metadata
+- `collapsed_peak_latency_ms`, `window_start_ms`, `window_end_ms`, `fwhm_ms`: Window metadata (collapsed localizer)
 
 **Example (N1)**:
 ```csv
@@ -281,7 +287,7 @@ subject_id,component,condition,latency_frac_area_ms,mean_amplitude_roi,peak_late
 04,N1,Cardinality3,175.9,-3.19,168.0,140.2,212.6,72.4,3.4
 ```
 
-**Key insight**: `peak_latency_ms` is constant per component (unbiased window), while `latency_frac_area_ms` varies by condition—this enables within-subject latency comparisons.
+**Key insight**: `collapsed_peak_latency_ms` is constant per component (from collapsed localizer), while subject-level `peak_latency_ms` and/or `latency_frac_area_ms` are computed within that component’s FWHM window.
 
 ### Condition-level summaries (descriptive)
 `condition_measurements.csv` summarizes per-component × condition means to support descriptive tables/figures. Use `subject_measurements.csv` for inferential tests.
@@ -342,9 +348,21 @@ tests:
 # Components and dependent variables
 components: ["N1", "P1", "P3b"]
 dependent_variables:
-  - latency_frac_area_ms
-  - mean_amplitude_roi
+  - peak_latency_ms
+  - peak_amplitude_roi
 ```
+
+## Configuring measurement methods (per analysis)
+
+Each analysis YAML can optionally set measurement modes (defaults shown):
+
+```yaml
+measurement:
+  latency: peak      # options: peak | fal
+  amplitude: peak    # options: peak | mean
+```
+
+Plots respect this choice: colored verticals and topomap captions show “Peak” or “FAL” latency accordingly.
 
 #### Example Results
 

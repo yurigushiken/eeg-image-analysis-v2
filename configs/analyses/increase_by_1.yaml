@@ -4,7 +4,7 @@ dataset:
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 selection:
   response: "ALL"
-  min_epochs_per_set: 8
+  min_epochs_per_set: 1
   condition_sets:
     - name: "1 to 2"
       conditions: ["12"]

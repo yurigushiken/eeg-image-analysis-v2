@@ -4,23 +4,24 @@ dataset:
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 selection:
   response: "ALL"
-  min_epochs_per_set: 8
+  min_epochs_per_set: 1
   condition_sets:
     - name: "Cardinality1"
       conditions: ["11"]
-      color: "#e41a1c"  # Red
+      color: "#377eb8"  # Blue
+      
       linestyle: "-"    # Solid
     - name: "2 to 1"
       conditions: ["21"]
-      color: "#377eb8"  # Blue
+      color: "#f472b6"  # Pink
       linestyle: "-"    # Solid
     - name: "3 to 1"
       conditions: ["31"]
-      color: "#4daf4a"  # Green
+      color: "#ff7f00"  # Orange
       linestyle: "-"    # Solid
     - name: "4 to 1"
       conditions: ["41"]
-      color: "#984ea3"  # Purple
+      color: "#e41a1c"  # Red
       linestyle: "-"    # Solid
 components: ["P1", "N1", "P3b"]
 preprocessing:

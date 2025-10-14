@@ -1,6 +1,6 @@
 {
   "analysis_id": "landing_on_1",
-  "date_analyzed": "2025-10-13T19:57:17.732663",
+  "date_analyzed": "2025-10-13T23:02:01.591106",
   "baseline_ms": [
     -100,
     0
@@ -8,7 +8,7 @@
   "response_filter": "ALL",
   "fal_fraction": 0.5,
   "n_subjects_total": 24,
-  "n_evokeds_included": 20,
+  "n_evokeds_included": 96,
   "conditions": [
     "Cardinality1",
     "2 to 1",
@@ -16,32 +16,46 @@
     "4 to 1"
   ],
   "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 120.0,
+      "peak_gfp_amplitude": 2.544370795523916,
+      "fwhm_ms": 48.23612011521931,
+      "window_start_ms": 97.39200613021089,
+      "window_end_ms": 145.6281262454302,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 96,
+      "n_conditions": 4
+    },
     "N1": {
-      "peak_latency_ms": 180.0,
-      "peak_gfp_amplitude": -2.7589414646971675,
-      "fwhm_ms": 60.01898460260344,
-      "window_start_ms": 151.79241428351912,
-      "window_end_ms": 211.81139888612256,
+      "collapsed_peak_latency_ms": 180.0,
+      "peak_gfp_amplitude": -2.3892631922999987,
+      "fwhm_ms": 46.03128384684419,
+      "window_start_ms": 158.17790800353265,
+      "window_end_ms": 204.20919185037684,
       "search_range_ms": [
         125.0,
         200.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 20,
+      "n_subjects": 96,
       "n_conditions": 4
     },
     "P3b": {
-      "peak_latency_ms": 480.0,
-      "peak_gfp_amplitude": 3.5649146708554555,
-      "fwhm_ms": 116.80386930551174,
-      "window_start_ms": 437.49261990453954,
-      "window_end_ms": 554.2964892100513,
+      "collapsed_peak_latency_ms": 476.0,
+      "peak_gfp_amplitude": 2.566103486692801,
+      "fwhm_ms": 106.83873787000766,
+      "window_start_ms": 428.21852297715475,
+      "window_end_ms": 535.0572608471624,
       "search_range_ms": [
         320.0,
         590.0
       ],
       "method": "GFP_collapsed_localizer",
-      "n_subjects": 20,
+      "n_subjects": 96,
       "n_conditions": 4
     }
   }

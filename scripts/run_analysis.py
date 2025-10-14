@@ -29,7 +29,7 @@ from eeg.plots import make_collapsed_localizer_figure, make_component_figure, ma
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
 from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collapsed_localizer_roi
-from eeg.measures import mean_amplitude, fractional_area_latency
+from eeg.measures import mean_amplitude, fractional_area_latency, peak_latency, peak_amplitude
 import matplotlib.pyplot as plt
 import mne
 
@@ -103,6 +103,14 @@ def main() -> int:
     # Collect subject-level evoked responses per condition set
     set_name_to_evokeds = {s["name"]: [] for s in sets}
     qc_rows = []
+
+    # Measurement method toggles (project-wide default = peak if absent)
+    try:
+        meas_cfg = getattr(cfg, "measurement", {}) or {}
+    except Exception:
+        meas_cfg = {}
+    latency_mode = str(meas_cfg.get("latency", "peak")).lower()  # 'peak' | 'fal'
+    amplitude_mode = str(meas_cfg.get("amplitude", "peak")).lower()  # 'peak' | 'mean'
 
     # === Phase 2A: Subject-level measurements collection ===
     subject_measurements = []  # NEW: For statistical analysis
@@ -330,15 +338,26 @@ def main() -> int:
                 baseline_roi = roi_curve[baseline_mask]
                 baseline_noise_uv = float(np.std(baseline_roi))
 
-                # === Measurement 1: Mean Amplitude ===
+                # === Measurement 1: Mean/Peak Amplitude ===
                 window_mask = (times_ms_subj >= window_start) & (times_ms_subj <= window_end)
                 subj_mean_amp = float(np.mean(roi_curve[window_mask]))
+
+                # Peak amplitude within window (signed by polarity)
+                comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+                try:
+                    subj_peak_amp = peak_amplitude(
+                        signal=roi_curve,
+                        times_ms=times_ms_subj,
+                        window_ms=(window_start, window_end),
+                        polarity=comp_polarity
+                    )
+                except Exception:
+                    subj_peak_amp = float('nan')
 
                 # === QC Metric 2: Signal-to-Noise Ratio ===
                 snr = abs(subj_mean_amp) / baseline_noise_uv if baseline_noise_uv > 0 else float('nan')
 
                 # === Measurement 2: Fractional Area Latency ===
-                comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
                 try:
                     subj_fal = fractional_area_latency(
                         signal=roi_curve,
@@ -350,6 +369,17 @@ def main() -> int:
                 except Exception as e:
                     subj_fal = float('nan')
 
+                # === Measurement 3: Peak Latency ===
+                try:
+                    subj_peak_lat = peak_latency(
+                        signal=roi_curve,
+                        times_ms=times_ms_subj,
+                        window_ms=(window_start, window_end),
+                        polarity=comp_polarity
+                    )
+                except Exception:
+                    subj_peak_lat = float('nan')
+
                 # Record subject measurement with QC metrics
                 subject_measurements_output.append({
                     "subject_id": subj_id,
@@ -357,10 +387,13 @@ def main() -> int:
                     "condition": condition,
                     "latency_frac_area_ms": subj_fal,
                     "mean_amplitude_roi": subj_mean_amp,
+                    "peak_latency_ms": float(subj_peak_lat),
+                    "peak_amplitude_roi": float(subj_peak_amp),
                     "n_epochs": n_epochs,
                     "baseline_noise_uv": baseline_noise_uv,
                     "snr": snr,
-                    "peak_latency_ms": float(peak_lat),
+                    # Collapsed-localizer metadata
+                    "collapsed_peak_latency_ms": float(peak_lat),
                     "window_start_ms": float(window_start),
                     "window_end_ms": float(window_end),
                     "fwhm_ms": float(fwhm),
@@ -374,10 +407,12 @@ def main() -> int:
                     "condition": condition,
                     "latency_frac_area_ms": float('nan'),
                     "mean_amplitude_roi": float('nan'),
+                    "peak_latency_ms": float('nan'),
+                    "peak_amplitude_roi": float('nan'),
                     "n_epochs": n_epochs,
                     "baseline_noise_uv": float('nan'),
                     "snr": float('nan'),
-                    "peak_latency_ms": float(peak_lat),
+                    "collapsed_peak_latency_ms": float(peak_lat),
                     "window_start_ms": float(window_start),
                     "window_end_ms": float(window_end),
                     "fwhm_ms": float(fwhm),
@@ -390,8 +425,9 @@ def main() -> int:
         fieldnames = [
             "subject_id", "component", "condition",
             "latency_frac_area_ms", "mean_amplitude_roi",
+            "peak_latency_ms", "peak_amplitude_roi",
             "n_epochs", "baseline_noise_uv", "snr",
-            "peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms"
+            "collapsed_peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms"
         ]
         with open(subj_csv_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -498,6 +534,17 @@ def main() -> int:
                     print(f"    Warning: FAL failed for {set_name} {comp}, using collapsed peak: {e}")
                     roi_latency_frac_area = float(peak_lat)
 
+                # Additionally compute Peak latency for this condition (for annotations if selected)
+                try:
+                    roi_latency_peak = peak_latency(
+                        signal=roi_curve,
+                        times_ms=times_ms,
+                        window_ms=(window_start, window_end),
+                        polarity=comp_polarity
+                    )
+                except Exception:
+                    roi_latency_peak = float(peak_lat)
+
                 # === STEP 2: Extract topomap using FAL-centered window (±FWHM/2) ===
                 half_win_ms = fwhm / 2.0
                 topo_start = (roi_latency_frac_area - half_win_ms) / 1000.0
@@ -512,18 +559,29 @@ def main() -> int:
 
                     # Record amplitude measurement for statistical analysis
                     roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
+                    try:
+                        roi_peak_amplitude = peak_amplitude(
+                            signal=roi_curve,
+                            times_ms=times_ms,
+                            window_ms=(window_start, window_end),
+                            polarity=comp_polarity
+                        )
+                    except Exception:
+                        roi_peak_amplitude = float('nan')
 
                     condition_measurements.append({
                         "analysis_id": analysis_id,
                         "component": comp,
                         "condition": set_name,
                         "n_subjects": len(evoked_list),
-                        "peak_latency_ms": float(peak_lat),
+                        "collapsed_peak_latency_ms": float(peak_lat),
                         "window_start_ms": float(window_start),
                         "window_end_ms": float(window_end),
                         "fwhm_ms": float(fwhm),
                         "mean_amplitude_roi": roi_mean_amplitude,
                         "latency_frac_area_ms": roi_latency_frac_area,
+                        "latency_peak_ms": roi_latency_peak,
+                        "peak_amplitude_roi": roi_peak_amplitude,
                         "roi_channels": ";".join(roi_channels),
                     })
                 except Exception as e:
@@ -584,11 +642,17 @@ def main() -> int:
             # Set x-axis limits to start from baseline onset
             xlim_ms = (baseline[0], float(times_ms[-1]))
 
-            # === NEW: Extract FAL values from condition_measurements for plotting ===
+            # === NEW: Choose latency annotations (Peak vs FAL) for plotting ===
             latencies_by_label = {}
             for meas in condition_measurements:
-                if meas['component'] == comp and not np.isnan(meas['latency_frac_area_ms']):
-                    latencies_by_label[meas['condition']] = meas['latency_frac_area_ms']
+                if meas['component'] != comp:
+                    continue
+                if latency_mode == 'peak':
+                    val = meas.get('latency_peak_ms')
+                else:
+                    val = meas.get('latency_frac_area_ms')
+                if val is not None and not np.isnan(val):
+                    latencies_by_label[meas['condition']] = val
 
             # Read plotting options for non-scalp exclusion (default ON)
             exclude_non_scalp = bool(cfg.plots.get("exclude_non_scalp", True))
@@ -604,7 +668,8 @@ def main() -> int:
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
-                latencies_by_label=latencies_by_label,  # NEW: Pass FAL data to plotting
+                latencies_by_label=latencies_by_label,
+                latency_annotation_label=("Peak" if latency_mode == "peak" else "FAL"),
                 ylimit_uv=ylimit_uv,
                 exclude_non_scalp=exclude_non_scalp,
                 non_scalp_labels=non_scalp_labels,
@@ -704,7 +769,7 @@ def main() -> int:
 
     for comp, result in collapsed_results.items():
         collapsed_localizer_data["components"][comp] = {
-            "peak_latency_ms": float(result['peak_latency_ms']),
+            "collapsed_peak_latency_ms": float(result['peak_latency_ms']),
             "peak_gfp_amplitude": float(result['peak_amplitude']),
             "fwhm_ms": float(result['fwhm_ms']),
             "window_start_ms": float(result['window_start_ms']),
@@ -727,8 +792,8 @@ def main() -> int:
         measurements_csv_path = os.path.join(tables_dir, "condition_measurements.csv")
         fieldnames = [
             "analysis_id", "component", "condition", "n_subjects",
-            "peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms",
-            "mean_amplitude_roi", "latency_frac_area_ms", "roi_channels"
+            "collapsed_peak_latency_ms", "window_start_ms", "window_end_ms", "fwhm_ms",
+            "mean_amplitude_roi", "peak_amplitude_roi", "latency_frac_area_ms", "latency_peak_ms", "roi_channels"
         ]
         with open(measurements_csv_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)

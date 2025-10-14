@@ -1,32 +1,33 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-13 19:58:48
+**Generated:** 2025-10-13 23:11:44
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 9
-**Number of Subjects:** 3
+**Total Measurements:** 144
+**Number of Subjects:** 24
 **Number of Conditions:** 2
 
 **Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Latency (50% Fractional Area), Mean Amplitude (ROI)
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
 
-- **Minimum SNR:** ≥ 2.0
+- **Minimum SNR:** ≥ None
 - **Missing Data:** Excluded listwise for ANOVA/pairwise
 
 ### 1.3 Missing Data Policy
 
-ANOVA and pairwise tests were run on complete cases after applying an SNR filter >= 2.0. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.
+ANOVA and pairwise tests were run on complete cases. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.
 
 ---
 
@@ -36,45 +37,53 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 ### 2.1 N1 Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 2 | 171.38 ms | 0.48 | 0.34 | [171.05, 171.72] |
-| Increasing 1 to 2 | 1 | 169.64 ms | n/a | n/a | [169.64, 169.64] |
+| Decreasing 1 to 3 | 24 | 170.00 ms | 24.57 | 5.02 | [136.00, 216.00] |
+| Increasing 1 to 2 | 22 | 171.64 ms | 17.84 | 3.80 | [144.00, 208.00] |
 
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 2 | -3.17 µV | 1.28 | 0.90 | [-4.07, -2.26] |
-| Increasing 1 to 2 | 1 | -4.24 µV | n/a | n/a | [-4.24, -4.24] |
+| Decreasing 1 to 3 | 24 | -6.37 µV | 2.63 | 0.54 | [-12.53, -2.34] |
+| Increasing 1 to 2 | 22 | -5.81 µV | 2.14 | 0.46 | [-10.03, -2.38] |
 
 
 ### 2.2 P1 Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
-_No descriptive statistics available._
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 1 to 3 | 10 | 78.40 ms | 6.02 | 1.90 | [72.00, 88.00] |
+| Increasing 1 to 2 | 14 | 82.57 ms | 6.00 | 1.60 | [72.00, 88.00] |
 
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
-_No descriptive statistics available._
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 1 to 3 | 10 | 2.57 µV | 1.60 | 0.51 | [0.50, 5.23] |
+| Increasing 1 to 2 | 14 | 2.21 µV | 1.50 | 0.40 | [0.35, 4.29] |
 
 
 ### 2.3 P3b Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 2 | 482.54 ms | 2.82 | 1.99 | [480.55, 484.53] |
+| Decreasing 1 to 3 | 20 | 454.60 ms | 39.24 | 8.77 | [388.00, 516.00] |
+| Increasing 1 to 2 | 17 | 455.29 ms | 53.54 | 12.99 | [388.00, 536.00] |
 
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 1 to 3 | 2 | 4.80 µV | 1.96 | 1.38 | [3.41, 6.18] |
+| Decreasing 1 to 3 | 20 | 6.44 µV | 3.61 | 0.81 | [1.71, 14.25] |
+| Increasing 1 to 2 | 17 | 5.97 µV | 2.82 | 0.68 | [2.09, 11.99] |
 
 
 ---
@@ -85,7 +94,7 @@ This section presents the results of repeated-measures statistical tests.
 
 ### 3.1 N1 Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
@@ -94,10 +103,10 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 8.81, BIC = 5.21
-- Condition effect: *β* = -1.74, *SE* = 0.334, *z* = -5.220, *p* < .001
+- AIC = 409.37, BIC = 416.69
+- Condition effect: *β* = 1.20, *SE* = 3.996, *z* = 0.300, *p* = 0.764
 
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
@@ -106,32 +115,40 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 14.69, BIC = 11.09
-- Condition effect: *β* = -1.07, *SE* = 0.738, *z* = -1.455, *p* = 0.146
+- AIC = 188.61, BIC = 195.93
+- Condition effect: *β* = 0.46, *SE* = 0.274, *z* = 1.690, *p* = 0.091
 
 
 ### 3.2 P1 Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
 _Pairwise test results not available._
 
-_LMM results not available._
+**Linear Mixed-Effects Model:**
 
-#### Mean Amplitude (ROI)
+- Model converged successfully
+- AIC = 156.45, BIC = 161.16
+- Condition effect: *β* = 4.07, *SE* = 1.644, *z* = 2.475, *p* = 0.013
+
+#### Amplitude (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
 _Pairwise test results not available._
 
-_LMM results not available._
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 94.86, BIC = 99.58
+- Condition effect: *β* = -0.36, *SE* = 0.614, *z* = -0.586, *p* = 0.558
 
 
 ### 3.3 P3b Component
 
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
@@ -140,9 +157,10 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 14.43, BIC = 10.51
+- AIC = 394.79, BIC = 401.23
+- Condition effect: *β* = 0.69, *SE* = 15.433, *z* = 0.045, *p* = 0.964
 
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 _ANOVA results not available (may require pingouin library)._
 
@@ -151,7 +169,8 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 12.97, BIC = 9.05
+- AIC = 192.48, BIC = 198.93
+- Condition effect: *β* = -0.89, *SE* = 0.734, *z* = -1.218, *p* = 0.223
 
 
 ---
@@ -176,23 +195,7 @@ The following plots are available in the `plots/` subdirectory:
 
 #### Latency
 
-**Boxplot:**
-
-![N1 Latency Boxplot](plots/boxplot_N1_latency_frac_area_ms.png)
-
-**Violin Plot:**
-
-![N1 Latency Violin](plots/violin_N1_latency_frac_area_ms.png)
-
 #### Amplitude
-
-**Boxplot:**
-
-![N1 Amplitude Boxplot](plots/boxplot_N1_mean_amplitude_roi.png)
-
-**Violin Plot:**
-
-![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
 ### 5.2 P1 Component
 
@@ -204,23 +207,7 @@ The following plots are available in the `plots/` subdirectory:
 
 #### Latency
 
-**Boxplot:**
-
-![P3b Latency Boxplot](plots/boxplot_P3b_latency_frac_area_ms.png)
-
-**Violin Plot:**
-
-![P3b Latency Violin](plots/violin_P3b_latency_frac_area_ms.png)
-
 #### Amplitude
-
-**Boxplot:**
-
-![P3b Amplitude Boxplot](plots/boxplot_P3b_mean_amplitude_roi.png)
-
-**Violin Plot:**
-
-![P3b Amplitude Violin](plots/violin_P3b_mean_amplitude_roi.png)
 
 ---
 
@@ -229,8 +216,6 @@ The following plots are available in the `plots/` subdirectory:
 ### ERP Measurement
 
 ERP components were measured using a collapsed localizer approach, where component peaks were identified from the grand average of all conditions combined to avoid circular analysis (Luck & Gaspelin, 2017). Measurement windows were defined as the full-width at half-maximum (FWHM) around each peak. Component latency was quantified using the 50% fractional area latency (FAL), which represents the time point at which the cumulative area under the curve reaches 50% of its total value within the measurement window. This metric provides a robust estimate of component timing with lower measurement error than peak latency (Kiesel et al., 2008). Mean amplitude was computed as the average voltage within the FWHM window across predefined regions of interest (ROI).
-
-Quality control filtering excluded subject-component measurements with signal-to-noise ratio (SNR) below 2.0.
 
 ### Statistical Analysis
 

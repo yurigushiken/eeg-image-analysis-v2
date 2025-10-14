@@ -156,18 +156,37 @@ class StatisticalReportGenerator:
                 f"**Number of Conditions:** {data_summary.get('n_conditions', 'N/A')}",
                 "",
                 f"**Components Analyzed:** {', '.join(self.components)}",
-                f"**Dependent Variables:** Latency (50% Fractional Area), Mean Amplitude (ROI)",
+                # Dynamic DV names based on summary metadata
+                self._format_dependent_variables_line(),
                 ""
             ])
 
             # Analysis settings
             settings = self.summary_data.get('analysis_settings', {})
             if settings:
+                # Determine human-readable latency and amplitude methods
+                latency_method = settings.get('latency_measure')
+                if latency_method == 'peak':
+                    latency_line = "Peak latency within FWHM window"
+                elif latency_method == 'fal_50':
+                    latency_line = f"{settings.get('fal_fraction', 0.5)*100:.0f}% Fractional Area Latency (temporal midpoint)"
+                else:
+                    latency_line = f"{settings.get('fal_fraction', 0.5)*100:.0f}% Fractional Area Latency (temporal midpoint)"
+
+                amplitude_method = settings.get('amplitude_measure')
+                if amplitude_method == 'peak':
+                    amplitude_line = "Peak amplitude within FWHM window"
+                elif amplitude_method == 'mean':
+                    amplitude_line = "Mean amplitude in ROI within FWHM window"
+                else:
+                    amplitude_line = "Mean amplitude in ROI within FWHM window"
+
                 lines.extend([
                     "### 1.1 Measurement Methodology",
                     "",
                     f"- **Component Detection:** {settings.get('measurement_window_method', 'N/A')}",
-                    f"- **Latency Measure:** {settings.get('fal_fraction', 0.5)*100:.0f}% Fractional Area Latency (temporal midpoint)",
+                    f"- **Latency Measure:** {latency_line}",
+                    f"- **Amplitude Measure:** {amplitude_line}",
                     f"- **Baseline Period:** {settings.get('baseline_period_ms', 'N/A')} ms",
                     ""
                 ])
@@ -207,10 +226,7 @@ class StatisticalReportGenerator:
             ""
         ]
 
-        measures = [
-            ('latency_frac_area_ms', 'Latency (50% Fractional Area)', 'ms'),
-            ('mean_amplitude_roi', 'Mean Amplitude (ROI)', 'µV')
-        ]
+        measures = self._get_declared_measures()
 
         for component in self.components:
             lines.extend([
@@ -271,10 +287,7 @@ class StatisticalReportGenerator:
             ""
         ]
 
-        measures = [
-            ('latency_frac_area_ms', 'Latency (50% Fractional Area)', 'ms'),
-            ('mean_amplitude_roi', 'Mean Amplitude (ROI)', 'µV')
-        ]
+        measures = self._get_declared_measures()
 
         for component in self.components:
             lines.extend([
@@ -463,10 +476,11 @@ class StatisticalReportGenerator:
         # Analyze results to extract key findings
         findings = []
 
-        measures = [
-            ('latency_frac_area_ms', 'latency', 'ms'),
-            ('mean_amplitude_roi', 'amplitude', 'µV')
-        ]
+        # Map DV to short names for summary section
+        measures = []
+        for key, name, unit in self._get_declared_measures():
+            short = 'latency' if 'latency' in key else 'amplitude'
+            measures.append((key, short, unit))
 
         for component in self.components:
             for measure_key, measure_name, unit in measures:
@@ -697,6 +711,26 @@ class StatisticalReportGenerator:
             print(f"Report saved to: {output_path}")
 
         return report
+
+    # ------------------- Helpers for dynamic DV naming -------------------
+    def _get_declared_measures(self):
+        default_map = {
+            'latency_frac_area_ms': ('Latency (50% Fractional Area)', 'ms'),
+            'peak_latency_ms': ('Latency (Peak)', 'ms'),
+            'mean_amplitude_roi': ('Mean Amplitude (ROI)', 'µV'),
+            'peak_amplitude_roi': ('Amplitude (Peak)', 'µV'),
+        }
+        declared = self.summary_data.get('dependent_variables', []) if self.summary_data else []
+        selected = declared or ['peak_latency_ms', 'peak_amplitude_roi']
+        return [(k, default_map.get(k, (k, ''))[0], default_map.get(k, ('', ''))[1]) for k in selected]
+
+    def _format_dependent_variables_line(self) -> str:
+        human = [name for _, name, _ in self._get_declared_measures()]
+        if not human:
+            return "**Dependent Variables:** (not specified)"
+        if len(human) == 1:
+            return f"**Dependent Variable:** {human[0]}"
+        return f"**Dependent Variables:** {', '.join(human)}"
 
 
 def generate_report_for_analysis(stats_dir: Path, output_filename: str = "STATISTICAL_REPORT.md") -> Path:

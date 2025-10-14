@@ -113,6 +113,7 @@ def make_component_figure(
     exclude_non_scalp: bool = True,
     non_scalp_labels: Optional[List[str]] = None,
     highlight_channels: Optional[List[str]] = None,
+    latency_annotation_label: Optional[str] = "FAL",
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -176,11 +177,7 @@ def make_component_figure(
 
     ax_overlay.axvline(0, color="#999", linewidth=1, alpha=0.6)
 
-    # Mark peaks with light vertical lines using topomap peak times
-    for label, tup in topomap_by_label.items():
-        peak_ms = tup[1]  # Second element is always peak_ms
-        vkw = {"color": (colors.get(label) if colors and label in colors else "#666"), "alpha": 0.25, "linestyle": "--"}
-        ax_overlay.axvline(peak_ms, **vkw)
+    # Removed dashed peak lines to simplify: only show selected latency annotations (colored solid lines)
 
     # === NEW: Mark per-condition fractional area latencies (FAL) ===
     # These show the measured temporal midpoint (50% area) for each condition
@@ -240,10 +237,11 @@ def make_component_figure(
     # Figure-level subtitle to avoid occlusion
     if subtitle:
         try:
-            # Enhance subtitle to explain both line types
+            # Enhance subtitle to explain colored latency lines
             enhanced_subtitle = subtitle
             if latencies_by_label:
-                enhanced_subtitle += " | Gray dash = Collapsed peak; Colored lines = 50% Area Latency (FAL)"
+                label = latency_annotation_label or "FAL"
+                enhanced_subtitle += f" | Colored lines = {label} Latency"
             # Subtitle slightly below the figure title, anchored by its top edge
             fig.text(0.5, 0.945, enhanced_subtitle, ha="center", va="top", fontsize=9)
         except Exception:
@@ -335,10 +333,23 @@ def make_component_figure(
         except Exception:
             title_color = None
         ax.set_title(
-            f"{label}{title_suffix}\nFAL {display_latency:.1f} ms\n(±{half_win:.0f} ms)",
+            f"{label}{title_suffix}\n{(latency_annotation_label or 'FAL')} {display_latency:.1f} ms\n(±{half_win:.0f} ms)",
             fontsize=8,
             color=title_color
         )
+
+    # Add small caption listing highlighted electrodes (if provided)
+    try:
+        if highlight_channels:
+            roi_text = ", ".join(highlight_channels)
+            caption = f"Yellow sensors = ERP ROI electrodes: {roi_text}"
+            fig.text(0.5, 0.01, caption, ha="center", va="bottom", fontsize=7, color="#444")
+            try:
+                fig.set_constrained_layout_pads(h_pad=0.70, hspace=0.04, w_pad=0.14, wspace=0.22)
+            except Exception:
+                pass
+    except Exception:
+        pass
 
     return fig
 

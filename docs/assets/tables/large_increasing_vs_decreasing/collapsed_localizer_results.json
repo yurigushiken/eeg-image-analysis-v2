@@ -1,6 +1,6 @@
 {
   "analysis_id": "large_increasing_vs_decreasing",
-  "date_analyzed": "2025-10-13T19:57:53.609858",
+  "date_analyzed": "2025-10-13T23:02:34.872528",
   "baseline_ms": [
     -100,
     0
@@ -15,7 +15,7 @@
   ],
   "components": {
     "P1": {
-      "peak_latency_ms": 100.0,
+      "collapsed_peak_latency_ms": 100.0,
       "peak_gfp_amplitude": 0.3688830072740545,
       "fwhm_ms": 31.9338286316883,
       "window_start_ms": 81.93569654794729,
@@ -29,7 +29,7 @@
       "n_conditions": 2
     },
     "N1": {
-      "peak_latency_ms": 176.0,
+      "collapsed_peak_latency_ms": 176.0,
       "peak_gfp_amplitude": -4.1108222002162265,
       "fwhm_ms": 69.19034420709801,
       "window_start_ms": 137.40187623765763,
@@ -43,7 +43,7 @@
       "n_conditions": 2
     },
     "P3b": {
-      "peak_latency_ms": 464.0,
+      "collapsed_peak_latency_ms": 464.0,
       "peak_gfp_amplitude": 1.5127407902235743,
       "fwhm_ms": 97.26233922977974,
       "window_start_ms": 442.48667813798113,

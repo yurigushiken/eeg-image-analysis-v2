@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
 import os
@@ -16,6 +16,11 @@ class AnalysisConfig:
     roi: Dict[str, Any]
     plots: Dict[str, Any]
     outputs: Dict[str, Any]
+    # Optional measurement configuration; defaults will be applied in code paths
+    # Expected keys (all optional):
+    #   latency: "peak" | "fal"
+    #   amplitude: "peak" | "mean"
+    measurement: Dict[str, Any] = field(default_factory=dict)
 
 
 def load_config(path: str) -> AnalysisConfig:
@@ -33,7 +38,11 @@ def load_config(path: str) -> AnalysisConfig:
     for key in required:
         if key not in data:
             raise ValueError(f"Missing required key in config: {key}")
-    return AnalysisConfig(**{k: data[k] for k in required})
+    # Pass through optional measurement config if present; otherwise rely on default
+    payload = {k: data[k] for k in required}
+    if "measurement" in data and isinstance(data["measurement"], dict):
+        payload["measurement"] = data["measurement"]
+    return AnalysisConfig(**payload)
 
 
 def load_electrodes_config(repo_root: str) -> Dict[str, List[str]]:

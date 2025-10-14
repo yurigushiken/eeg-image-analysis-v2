@@ -4,7 +4,7 @@ dataset:
   montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
 selection:
   response: "ALL"
-  min_epochs_per_set: 8
+  min_epochs_per_set: 1
   condition_sets:
     - name: "Increasing 2 to 3"
       conditions: ["23"]
@@ -18,7 +18,6 @@ selection:
       conditions: ["33"]
       color: "#084594"  # Dark blue
       linestyle: "-"    # Solid
-
     - name: "Cardinality2"
       conditions: ["22"]
       color: "#9ecae1"  # Light blue

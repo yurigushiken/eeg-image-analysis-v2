@@ -179,3 +179,68 @@ def fractional_area_latency(
         latency_ms = time_before + frac_between * (time_after - time_before)
 
         return float(latency_ms)
+
+
+def peak_latency(
+    signal: np.ndarray,
+    times_ms: np.ndarray,
+    window_ms: Tuple[float, float],
+    polarity: str = "auto"
+) -> float:
+    """
+    Find the time of the signed peak within a window.
+
+    - For positive components (e.g., P1, P3b), returns the time of the maximum.
+    - For negative components (e.g., N1), returns the time of the minimum.
+
+    Args:
+        signal: 1D array (e.g., ROI-averaged, in microvolts)
+        times_ms: 1D array of time points in milliseconds
+        window_ms: (start, end) window in ms
+        polarity: 'positive' | 'negative' | 'auto'
+
+    Returns:
+        Peak latency (ms) within the window.
+    """
+    mask = _window_mask(times_ms, window_ms)
+    if not np.any(mask):
+        raise ValueError(
+            f"Window [{window_ms[0]}, {window_ms[1]}] ms has no samples "
+            f"within provided times [{times_ms[0]:.1f}, {times_ms[-1]:.1f}] ms"
+        )
+
+    sig = signal[mask]
+    tms = times_ms[mask]
+
+    if polarity == "auto":
+        polarity = "negative" if np.mean(sig) < 0 else "positive"
+
+    idx = int(np.argmin(sig) if polarity == "negative" else np.argmax(sig))
+    return float(tms[idx])
+
+
+def peak_amplitude(
+    signal: np.ndarray,
+    times_ms: np.ndarray,
+    window_ms: Tuple[float, float],
+    polarity: str = "auto"
+) -> float:
+    """
+    Measure the signed amplitude at the peak within a window.
+
+    - For positive components: maximum value
+    - For negative components: minimum value (more negative)
+    """
+    mask = _window_mask(times_ms, window_ms)
+    if not np.any(mask):
+        raise ValueError(
+            f"Window [{window_ms[0]}, {window_ms[1]}] ms has no samples "
+            f"within provided times [{times_ms[0]:.1f}, {times_ms[-1]:.1f}] ms"
+        )
+
+    sig = signal[mask]
+
+    if polarity == "auto":
+        polarity = "negative" if np.mean(sig) < 0 else "positive"
+
+    return float(np.min(sig) if polarity == "negative" else np.max(sig))
