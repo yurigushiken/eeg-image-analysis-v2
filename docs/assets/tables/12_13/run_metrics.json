@@ -1,15 +1,15 @@
 {
   "analysis_id": "12_13",
-  "duration_seconds": 4.391,
+  "duration_seconds": 5.189,
   "num_figures": 4,
   "largest_png_bytes": 475555,
-  "total_png_bytes": 1812091,
+  "total_png_bytes": 1822219,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
     "12_13-collapsed_localizer.png": 475555,
-    "12_13-P1.png": 434895,
-    "12_13-N1.png": 437887,
-    "12_13-P3b.png": 463754
+    "12_13-P1.png": 436826,
+    "12_13-N1.png": 441438,
+    "12_13-P3b.png": 468400
   }
 }

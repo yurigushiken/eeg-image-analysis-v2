@@ -545,17 +545,19 @@ def main() -> int:
                 except Exception:
                     roi_latency_peak = float(peak_lat)
 
-                # === STEP 2: Extract topomap using FAL-centered window (±FWHM/2) ===
+                # === STEP 2: Extract topomap using selected latency center (±FWHM/2) ===
+                # Center on Peak if latency_mode == 'peak', otherwise on FAL
+                center_latency_ms = roi_latency_peak if latency_mode == 'peak' else roi_latency_frac_area
                 half_win_ms = fwhm / 2.0
-                topo_start = (roi_latency_frac_area - half_win_ms) / 1000.0
-                topo_end = (roi_latency_frac_area + half_win_ms) / 1000.0
+                topo_start = (center_latency_ms - half_win_ms) / 1000.0
+                topo_end = (center_latency_ms + half_win_ms) / 1000.0
 
                 try:
                     evk_win = gav.copy().crop(tmin=topo_start, tmax=topo_end)
-                    # Topomap vector in microvolts (averaged over FAL-centered window)
+                    # Topomap vector in microvolts (averaged over center-latency window)
                     mean_vec = evk_win.data.mean(axis=1) * 1e6
-                    # Store: (vector, FAL_latency, half_window, used_fallback)
-                    topomap_by_label[set_name] = (mean_vec, roi_latency_frac_area, int(half_win_ms), False)
+                    # Store: (vector, center_latency_ms, half_window, used_fallback)
+                    topomap_by_label[set_name] = (mean_vec, center_latency_ms, int(half_win_ms), False)
 
                     # Record amplitude measurement for statistical analysis
                     roi_mean_amplitude = float(np.mean(roi_curve[(times_ms >= window_start) & (times_ms <= window_end)]))
@@ -658,13 +660,22 @@ def main() -> int:
             exclude_non_scalp = bool(cfg.plots.get("exclude_non_scalp", True))
             non_scalp_labels = cfg.plots.get("non_scalp_labels") or None
 
+            # Determine subtitle method label based on configured localizer method
+            try:
+                _comp_cfg = components_cfg.get(comp, {}) if isinstance(components_cfg, dict) else {}
+                _loc_cfg = _comp_cfg.get("localizer", {}) if isinstance(_comp_cfg, dict) else {}
+                _method = str(_loc_cfg.get("method", "roi")).lower()
+                method_label = "ROI-derived" if _method == "roi" else "GFP-derived"
+            except Exception:
+                method_label = "Collapsed-localizer"
+
             fig = make_component_figure(
                 curves_by_label=curves_by_label,
                 times_ms=times_ms,
                 topomap_by_label=topomap_by_label,
                 info=gav_info,
                 title=f"{analysis_id}: {comp} ({response})",
-                subtitle=f"baseline {baseline} ms; GFP-derived FWHM window: [{window_start:.1f}, {window_end:.1f}] ms",
+                subtitle=f"baseline {baseline} ms; {method_label} FWHM window: [{window_start:.1f}, {window_end:.1f}] ms",
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
@@ -735,7 +746,7 @@ def main() -> int:
                 curves_by_label=curves_by_label,
                 times_ms=times_ms,
                 title=f"{analysis_id}: {comp} ({response})",
-                subtitle=f"baseline {baseline} ms; GFP window unavailable",
+                subtitle=f"baseline {baseline} ms; Component window unavailable",
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
