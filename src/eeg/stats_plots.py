@@ -129,7 +129,8 @@ def plot_boxplot(
     show_points: bool = True,
     show_mean: bool = True,
     dpi: int = 300,
-    figsize: Tuple[float, float] = (8, 6)
+    figsize: Tuple[float, float] = (8, 6),
+    build_stamp: Optional[str] = None,
 ):
     """
     Create publication-ready boxplot.
@@ -247,6 +248,12 @@ def plot_boxplot(
         fig.text(0.5, 0.012, caption, ha='center', fontsize=8, style='italic', wrap=True)
         plt.subplots_adjust(bottom=0.16)
 
+    # Add build stamp (bottom-right) if provided
+    if build_stamp:
+        try:
+            fig.text(0.995, 0.002, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
+        except Exception:
+            pass
     # Improve bottom spacing to avoid x-label/caption overlap
     plt.tight_layout(rect=(0, 0.02, 1, 1))
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
@@ -273,7 +280,8 @@ def plot_violin(
     xlabel: Optional[str] = None,
     inner: str = "box",
     dpi: int = 300,
-    figsize: Tuple[float, float] = (8, 6)
+    figsize: Tuple[float, float] = (8, 6),
+    build_stamp: Optional[str] = None,
 ):
     """
     Create publication-ready violin plot.
@@ -352,7 +360,12 @@ def plot_violin(
                  style='italic', wrap=True)
         plt.subplots_adjust(bottom=0.12)
 
-    plt.tight_layout()
+    if build_stamp:
+        try:
+            fig.text(0.995, 0.002, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
+        except Exception:
+            pass
+    plt.tight_layout(rect=(0, 0.02, 1, 1))
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 

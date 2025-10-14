@@ -17,6 +17,8 @@ import sys
 import numpy as np
 import json
 import time
+import hashlib
+import datetime as dt
 
 # Ensure src/ is on the import path when run from repo root
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -69,6 +71,13 @@ def main() -> int:
     )
 
     analysis_id = os.path.splitext(os.path.basename(page_path))[0]
+    # Build stamp for figure footers: analysis_id · cfg:<hash> · YYYY-MM-DD
+    try:
+        with open(args.config, 'rb') as _f:
+            _cfg_hash = hashlib.sha1(_f.read()).hexdigest()[:7]
+    except Exception:
+        _cfg_hash = "unknown"
+    build_stamp = f"{analysis_id} · cfg:{_cfg_hash} · {dt.datetime.now().date().isoformat()}"
     saved_figs = []
 
     # Handle no-data case with synthetic placeholder
@@ -285,6 +294,10 @@ def main() -> int:
         subtitle=f"baseline {baseline} ms; collapsed across all conditions; FWHM windows",
         xlim_ms=xlim_ms,
     )
+    try:
+        cl_fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
+    except Exception:
+        pass
     cl_out_path = os.path.join(plots_dir, f"{analysis_id}-collapsed_localizer.png")
     cl_fig.savefig(cl_out_path, dpi=int(cfg.plots.get("dpi", 300)))
     plt.close(cl_fig)
@@ -686,6 +699,10 @@ def main() -> int:
                 non_scalp_labels=non_scalp_labels,
                 highlight_channels=roi_channels,
             )
+            try:
+                fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
+            except Exception:
+                pass
 
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
@@ -752,6 +769,10 @@ def main() -> int:
                 xlim_ms=xlim_ms,
                 ylimit_uv=ylimit_uv,
             )
+            try:
+                fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
+            except Exception:
+                pass
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
@@ -765,10 +786,9 @@ def main() -> int:
 
     # === Save Scientific Measurements ===
     # Save collapsed localizer results (component-level GFP measurements)
-    import datetime
     collapsed_localizer_data = {
         "analysis_id": analysis_id,
-        "date_analyzed": datetime.datetime.now().isoformat(),
+        "date_analyzed": dt.datetime.now().isoformat(),
         "baseline_ms": list(baseline),
         "response_filter": response,
         "fal_fraction": 0.5,  # Fractional area latency: 50% = temporal midpoint

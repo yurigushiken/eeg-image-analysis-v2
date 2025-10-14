@@ -23,6 +23,8 @@ from pathlib import Path
 import yaml
 import json
 import time
+import hashlib
+from datetime import datetime
 
 # Add src to path
 repo_root = Path(__file__).parent.parent
@@ -65,6 +67,24 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
     plots_cfg = cfg['plots']
     plots_dir = output_dir / plots_cfg.get('plots_subdir', 'plots')
     plots_dir.mkdir(parents=True, exist_ok=True)
+
+    # Build a run-level build stamp for stats plots (analysis_id inferred from input_csv)
+    try:
+        analysis_id = Path(cfg['input_csv']).parent.parent.name
+    except Exception:
+        analysis_id = 'unknown'
+    try:
+        with open(cfg.get('_config_path', ''), 'rb') as f:
+            cfg_hash = hashlib.sha1(f.read()).hexdigest()[:7]
+    except Exception:
+        # Hash the core options if file is not available
+        key = json.dumps({
+            'input_csv': cfg.get('input_csv'),
+            'components': cfg.get('components'),
+            'dependent_variables': cfg.get('dependent_variables')
+        }, sort_keys=True).encode('utf-8')
+        cfg_hash = hashlib.sha1(key).hexdigest()[:7]
+    build_stamp = f"{analysis_id} · cfg:{cfg_hash} · {datetime.now().date().isoformat()}"
 
     # Get plot styling
     dpi = plots_cfg.get('dpi', 300)
@@ -134,8 +154,10 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         show_points=plots_cfg.get('boxplot', {}).get('show_points', True),
                         show_mean=plots_cfg.get('boxplot', {}).get('show_mean', True),
                         dpi=dpi,
-                        figsize=figsize
+                        figsize=figsize,
+                        build_stamp=build_stamp
                     )
+                    # Stamp is added inside plotting util below via fig.text if available
 
                 # Violin plot
                 if plots_cfg.get('violin', {}).get('enabled', True):
@@ -154,7 +176,8 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         include_window_context=plots_cfg.get('violin', {}).get('include_window_context', True),
                         inner=plots_cfg.get('violin', {}).get('inner', 'box'),
                         dpi=dpi,
-                        figsize=figsize
+                        figsize=figsize,
+                        build_stamp=build_stamp
                     )
 
             except Exception as e:
