@@ -69,7 +69,7 @@ def ensure_index_template(index_path: str) -> None:
             <!-- AUTO-GENERATED START -->
             <table class="grid-table">
             <thead>
-              <tr><th>Analysis</th><th>P1</th><th>N1</th><th>P3b</th></tr>
+              <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>
             </thead>
             <tbody>
             </tbody>
@@ -306,19 +306,32 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
           f"<td><a href='{img}' data-lightbox aria-label='{alt}'><img class='thumb' src='{img}' alt='{alt}' /></a></td>"
         )
 
-    # Build main row with ERP plots
-    erp_row = f"<tr><td>{analysis_id}</td>{make_cell('P1')}{make_cell('N1')}{make_cell('P3b')}</tr>"
-
-    # Check if statistics exist for this analysis
-    # Get docs root directory from index path
+    # Determine docs root directory for localizer existence check
     index_dir = os.path.dirname(index_path)
     if not index_dir or index_dir == '.':
         docs_root = 'docs'
     elif os.path.basename(index_dir) == 'docs':
         docs_root = index_dir
     else:
-        # index_path is something like "docs/index.md", so dirname gives us "docs"
         docs_root = index_dir
+
+    # Collapsed localizer cell
+    collapsed_rel = f"assets/plots/{analysis_id}/{analysis_id}-collapsed_localizer.png"
+    collapsed_abs = os.path.join(docs_root, f"assets/plots/{analysis_id}/{analysis_id}-collapsed_localizer.png")
+    if os.path.exists(collapsed_abs):
+        alt_c = f"Collapsed localizer for {analysis_id}"
+        collapsed_cell = (
+            f"<td><a href='{collapsed_rel}' data-lightbox aria-label='{alt_c}'>"
+            f"<img class='thumb' src='{collapsed_rel}' alt='{alt_c}' /></a></td>"
+        )
+    else:
+        collapsed_cell = "<td></td>"
+
+    # Build main row with Collapsed Localizer and ERP plots
+    erp_row = f"<tr><td>{analysis_id}</td>{collapsed_cell}{make_cell('P1')}{make_cell('N1')}{make_cell('P3b')}</tr>"
+
+    # Check if statistics exist for this analysis
+    # docs_root already determined above
 
     stats_info = get_stats_info(analysis_id, docs_root)
 
@@ -326,9 +339,9 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     new_rows_for_analysis = [erp_row]
 
     if stats_info:
-        # Add statistics row below ERP row
+        # Add statistics row below ERP row. There are 5 content columns now.
         stats_html = generate_stats_html(analysis_id, stats_info)
-        new_rows_for_analysis.append(f"<tr><td colspan='4'>{stats_html}</td></tr>")
+        new_rows_for_analysis.append(f"<tr><td colspan='5'>{stats_html}</td></tr>")
 
     # Update or insert this analysis entry
     analysis_entries[analysis_id] = new_rows_for_analysis
@@ -339,7 +352,7 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     for aid in sorted_ids:
         all_rows.extend(analysis_entries[aid])
 
-    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
+    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
     new_content = pre + start_marker + new_block + end_marker + post
 
     with open(index_path, "w", encoding="utf-8") as f:

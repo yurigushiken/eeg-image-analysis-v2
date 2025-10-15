@@ -53,8 +53,21 @@ def main() -> int:
     for analysis_id in sorted(analysis_data.keys(), key=lambda s: s.lower()):
         component_to_image = analysis_data[analysis_id]
 
-        # Build ERP row
+        # Build ERP row (with leading Collapsed Localizer column)
         cells = [f"<td>{analysis_id}</td>"]
+
+        # Collapsed localizer cell
+        collapsed_rel = f"assets/plots/{analysis_id}/{analysis_id}-collapsed_localizer.png"
+        collapsed_abs = plots_dir / analysis_id / f"{analysis_id}-collapsed_localizer.png"
+        if collapsed_abs.exists():
+            alt_c = f"Collapsed localizer for {analysis_id}"
+            cells.append(
+                f"<td><a href='{collapsed_rel}' data-lightbox aria-label='{alt_c}'>"
+                f"<img class='thumb' src='{collapsed_rel}' alt='{alt_c}' /></a></td>"
+            )
+        else:
+            cells.append("<td></td>")
+
         for component in ['P1', 'N1', 'P3b']:
             img = component_to_image.get(component)
             if img:
@@ -73,7 +86,8 @@ def main() -> int:
         stats_info = get_stats_info(analysis_id, str(docs_dir))
         if stats_info:
             stats_html = generate_stats_html(analysis_id, stats_info)
-            stats_row = f"<tr><td colspan='4'>{stats_html}</td></tr>"
+            # Include Collapsed Localizer column in colspan (5 content cols)
+            stats_row = f"<tr><td colspan='5'>{stats_html}</td></tr>"
             all_rows.append(stats_row)
             print(f"[OK] {analysis_id} (with statistics)")
         else:
@@ -99,7 +113,7 @@ def main() -> int:
         f"{start_marker}\n"
         '<table class="grid-table">\n'
         '<thead>\n'
-        '  <tr><th>Analysis</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n'
+        '  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n'
         '</thead>\n'
         '<tbody>\n'
         f"{''.join(all_rows)}\n"

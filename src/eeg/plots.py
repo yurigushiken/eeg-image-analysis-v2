@@ -150,11 +150,29 @@ def make_component_figure(
     # Increase waveform panel height ratio for better vertical visibility
     # Reserve space for colorbar: add one extra column with narrow width
     width_ratios = [1.0] * n_cols + [0.15]  # Colorbar gets 15% width
-    # Add modest spacing between ERP and topomap rows to prevent occlusion
-    # hspace=0.15 provides breathing room without excessive white space
-    gs = fig.add_gridspec(2, n_cols + 1, height_ratios=[2.5, 1.9],
-                          width_ratios=width_ratios, hspace=0.15,
-                          left=0.08, right=0.95, top=0.92, bottom=0.08)
+
+    # Dynamic vertical spacing: when there are few topomaps (1–2),
+    # their titles can crowd the overlay. Increase inter-row spacing
+    # and slightly favor the overlay height in those cases.
+    is_sparse = n_cols <= 2
+    if is_sparse:
+        height_ratios = [2.9, 1.6]
+        hspace = 0.40
+    else:
+        height_ratios = [2.5, 1.9]
+        hspace = 0.18
+
+    gs = fig.add_gridspec(
+        2,
+        n_cols + 1,
+        height_ratios=height_ratios,
+        width_ratios=width_ratios,
+        hspace=hspace,
+        left=0.08,
+        right=0.95,
+        top=0.92,
+        bottom=0.08,
+    )
 
     # Check if any condition used fallback (for overlay annotation)
     any_fallback = False
@@ -345,10 +363,26 @@ def make_component_figure(
                 title_color = colors[label]
         except Exception:
             title_color = None
+        # Compact title to reduce vertical footprint for small condition sets
+        if is_sparse:
+            title_text = (
+                f"{label}{title_suffix}\n"
+                f"{(latency_annotation_label or 'FAL')} {display_latency:.1f} ms (±{half_win:.0f} ms)"
+            )
+            title_size = 7
+            title_pad = 0.5
+        else:
+            title_text = (
+                f"{label}{title_suffix}\n{(latency_annotation_label or 'FAL')} {display_latency:.1f} ms\n(±{half_win:.0f} ms)"
+            )
+            title_size = 8
+            title_pad = 1.0
+
         ax.set_title(
-            f"{label}{title_suffix}\n{(latency_annotation_label or 'FAL')} {display_latency:.1f} ms\n(±{half_win:.0f} ms)",
-            fontsize=8,
-            color=title_color
+            title_text,
+            fontsize=title_size,
+            color=title_color,
+            pad=title_pad,
         )
 
     # Add colorbar to rightmost column of topomap row
