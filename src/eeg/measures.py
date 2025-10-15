@@ -151,7 +151,7 @@ def fractional_area_latency(
         raise ValueError(
             f"Total area is non-positive ({total_area:.6f}). "
             f"Check that the window contains the component of interest and "
-            f"polarity is correct. Mean signal: {np.mean(signal_windowed):.3f} μV"
+            f"polarity is correct. Mean signal: {np.mean(signal_windowed):.3f} uV"
         )
 
     # Target area

@@ -29,3 +29,6 @@ outputs:
   tables_dir: "docs/assets/tables/large_increasing_vs_decreasing_ACC1"
   page: "docs/analysis/large_increasing_vs_decreasing_ACC1.md"
 
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

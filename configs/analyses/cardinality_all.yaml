@@ -46,3 +46,6 @@ outputs:
   tables_dir: "docs/assets/tables/cardinality_all"
   page: "docs/analysis/cardinality_all.md"
 
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

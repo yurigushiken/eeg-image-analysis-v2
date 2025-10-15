@@ -40,7 +40,8 @@ def make_erp_figure(
         matplotlib Figure object
     """
     # Widen the ERP overlay by ~15% for better latency granularity
-    fig, ax = plt.subplots(figsize=(6.9, 4.2), constrained_layout=True)
+    # Increased height for better vertical visibility
+    fig, ax = plt.subplots(figsize=(6.9, 5.5), constrained_layout=True)
     # Increase padding between suptitle and axes to avoid overlap
     try:
         fig.set_constrained_layout_pads(h_pad=0.35, hspace=0.35, w_pad=0.14, wspace=0.22)
@@ -79,7 +80,7 @@ def make_erp_figure(
         from matplotlib.ticker import MultipleLocator, AutoMinorLocator
         ax.xaxis.set_major_locator(MultipleLocator(100))  # 100 ms major ticks
         ax.xaxis.set_minor_locator(MultipleLocator(50))   # 50 ms minor ticks
-        ax.yaxis.set_minor_locator(AutoMinorLocator(2))   # 2 minor intervals per major
+        ax.yaxis.set_major_locator(MultipleLocator(1))    # 1 µV major ticks (all integers labeled)
     except Exception:
         pass
     ax.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
@@ -142,15 +143,18 @@ def make_component_figure(
     import mne  # local import for plotting
 
     n_cols = max(1, len(topomap_by_label) or 1)
-    # Make the composite figure wider while keeping height the same
-    fig = plt.figure(figsize=(7.475, 6.4), constrained_layout=True)
-    # Increase global padding to separate suptitle from axes titles
-    try:
-        # Reserve ample top margin for title/subtitle, minimize gap between overlay and topomaps
-        fig.set_constrained_layout_pads(h_pad=0.70, hspace=0.04, w_pad=0.14, wspace=0.22)
-    except Exception:
-        pass
-    gs = fig.add_gridspec(2, n_cols, height_ratios=[2.0, 1.9])
+    # Make the composite figure wider and taller for better vertical visibility
+    # Turn OFF constrained_layout to allow manual control of spacing
+    fig = plt.figure(figsize=(7.475, 7.0))
+
+    # Increase waveform panel height ratio for better vertical visibility
+    # Reserve space for colorbar: add one extra column with narrow width
+    width_ratios = [1.0] * n_cols + [0.15]  # Colorbar gets 15% width
+    # Add modest spacing between ERP and topomap rows to prevent occlusion
+    # hspace=0.15 provides breathing room without excessive white space
+    gs = fig.add_gridspec(2, n_cols + 1, height_ratios=[2.5, 1.9],
+                          width_ratios=width_ratios, hspace=0.15,
+                          left=0.08, right=0.95, top=0.92, bottom=0.08)
 
     # Check if any condition used fallback (for overlay annotation)
     any_fallback = False
@@ -202,7 +206,8 @@ def make_component_figure(
     # Figure-level main title
     if title:
         try:
-            t = fig.suptitle(title, fontsize=11, fontweight="bold", y=0.985, va="bottom")
+            # Adjusted for manual layout (was y=0.985 for constrained_layout)
+            t = fig.suptitle(title, fontsize=11, fontweight="bold", y=0.97, va="bottom")
         except Exception:
             pass
     ax_overlay.set_xlabel("Time (ms)")
@@ -224,7 +229,7 @@ def make_component_figure(
         from matplotlib.ticker import MultipleLocator, AutoMinorLocator
         ax_overlay.xaxis.set_major_locator(MultipleLocator(100))
         ax_overlay.xaxis.set_minor_locator(MultipleLocator(50))
-        ax_overlay.yaxis.set_minor_locator(AutoMinorLocator(2))
+        ax_overlay.yaxis.set_major_locator(MultipleLocator(1))  # 1 µV major ticks (all integers labeled)
     except Exception:
         pass
     ax_overlay.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
@@ -243,13 +248,17 @@ def make_component_figure(
                 label = latency_annotation_label or "FAL"
                 enhanced_subtitle += f" | Colored lines = {label} Latency"
             # Subtitle slightly below the figure title, anchored by its top edge
-            fig.text(0.5, 0.945, enhanced_subtitle, ha="center", va="top", fontsize=9)
+            # Adjusted for manual layout (was y=0.955 for constrained_layout)
+            fig.text(0.5, 0.94, enhanced_subtitle, ha="center", va="top", fontsize=9)
         except Exception:
             pass
 
     # Bottom row: topomaps per condition set
     # Use fixed ±5µV color scale across all topomaps for direct visual comparison
     vlim_range = 5.0  # microvolts
+
+    # Store the first topomap image for colorbar reference
+    first_topomap_im = None
 
     # Determine channel picks for scalp-only plotting if requested
     picks = None
@@ -314,7 +323,7 @@ def make_component_figure(
             mask = None
             mask_params = None
 
-        mne.viz.plot_topomap(
+        im, cn = mne.viz.plot_topomap(
             sub_vec, sub_info, axes=ax,
             contours=6,  # Add contour lines for better spatial reading
             vlim=(-vlim_range, vlim_range),  # Fixed ±5µV across all conditions
@@ -323,6 +332,10 @@ def make_component_figure(
             mask=mask,
             mask_params=mask_params,
         )
+
+        # Store first topomap image for colorbar reference
+        if first_topomap_im is None:
+            first_topomap_im = im
 
         # NEW: Show FAL in title instead of collapsed peak
         title_suffix = "*" if used_fallback else ""
@@ -337,6 +350,19 @@ def make_component_figure(
             fontsize=8,
             color=title_color
         )
+
+    # Add colorbar to rightmost column of topomap row
+    if first_topomap_im is not None:
+        try:
+            # Use the extra column reserved for colorbar (n_cols position, 0-indexed)
+            cbar_ax = fig.add_subplot(gs[1, n_cols])  # Colorbar column, bottom row
+            cbar = fig.colorbar(first_topomap_im, cax=cbar_ax, label="Amplitude (µV)")
+            # Set ticks at key values for clarity
+            cbar.set_ticks([-5, -2.5, 0, 2.5, 5])
+        except Exception as e:
+            # Print error for debugging (won't show in normal runs due to Agg backend)
+            import sys
+            print(f"Colorbar creation failed: {e}", file=sys.stderr)
 
     # Add small caption listing highlighted electrodes (if provided)
     try:

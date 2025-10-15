@@ -37,3 +37,6 @@ outputs:
   plots_dir: "docs/assets/plots/landing_on_1"
   tables_dir: "docs/assets/tables/landing_on_1"
   page: "docs/analysis/landing_on_1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

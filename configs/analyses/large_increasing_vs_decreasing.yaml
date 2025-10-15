@@ -33,3 +33,6 @@ outputs:
   tables_dir: "docs/assets/tables/large_increasing_vs_decreasing"
   page: "docs/analysis/large_increasing_vs_decreasing.md"
 
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

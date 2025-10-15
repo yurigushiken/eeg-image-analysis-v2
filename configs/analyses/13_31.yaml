@@ -32,3 +32,6 @@ outputs:
   plots_dir: "docs/assets/plots/13_31"
   tables_dir: "docs/assets/tables/13_31"
   page: "docs/analysis/13_31.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

@@ -544,7 +544,9 @@ def main() -> int:
                     )
                 except Exception as e:
                     # If FAL computation fails, use collapsed peak as fallback
-                    print(f"    Warning: FAL failed for {set_name} {comp}, using collapsed peak: {e}")
+                    # Convert error message to ASCII to avoid encoding issues on Windows
+                    error_msg = str(e).replace('µ', 'u')
+                    print(f"    Warning: FAL failed for {set_name} {comp}, using collapsed peak: {error_msg}")
                     roi_latency_frac_area = float(peak_lat)
 
                 # Additionally compute Peak latency for this condition (for annotations if selected)

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-14 18:35:18
+**Generated:** 2025-10-15 16:22:03
 
 ---
 
@@ -11,13 +11,13 @@
 **Number of Conditions:** 2
 
 **Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Latency (Peak), Amplitude (Peak)
+**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** Peak latency within FWHM window
-- **Amplitude Measure:** Peak amplitude within FWHM window
+- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
+- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -37,53 +37,53 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 ### 2.1 N1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 24 | 175.17 ms | 18.27 | 3.73 | [140.00, 204.00] |
-| Large_Increasing | 22 | 167.82 ms | 18.49 | 3.94 | [140.00, 200.00] |
+| Large_Decreasing | 24 | -3.58 µV | 1.77 | 0.36 | [-7.03, -0.25] |
+| Large_Increasing | 22 | -4.13 µV | 1.79 | 0.38 | [-8.48, -1.30] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 24 | -5.41 µV | 2.11 | 0.43 | [-10.35, -1.44] |
-| Large_Increasing | 22 | -5.82 µV | 2.24 | 0.48 | [-10.36, -1.88] |
+| Large_Decreasing | 24 | 174.18 ms | 10.03 | 2.05 | [157.74, 201.59] |
+| Large_Increasing | 22 | 171.31 ms | 7.24 | 1.54 | [152.31, 185.45] |
 
 
 ### 2.2 P1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 12 | 103.00 ms | 11.58 | 3.34 | [84.00, 112.00] |
-| Large_Increasing | 14 | 102.29 ms | 8.70 | 2.32 | [84.00, 112.00] |
+| Large_Decreasing | 12 | 1.57 µV | 1.54 | 0.45 | [0.14, 5.83] |
+| Large_Increasing | 14 | 1.19 µV | 0.96 | 0.26 | [0.10, 2.50] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 12 | 2.90 µV | 1.90 | 0.55 | [1.31, 7.08] |
-| Large_Increasing | 14 | 2.18 µV | 1.27 | 0.34 | [0.61, 4.42] |
+| Large_Decreasing | 12 | 100.37 ms | 6.77 | 1.95 | [85.87, 107.60] |
+| Large_Increasing | 14 | 99.62 ms | 6.61 | 1.77 | [88.99, 110.81] |
 
 
 ### 2.3 P3b Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 18 | 492.67 ms | 32.59 | 7.68 | [444.00, 536.00] |
-| Large_Increasing | 16 | 502.00 ms | 32.53 | 8.13 | [444.00, 536.00] |
+| Large_Decreasing | 18 | 2.87 µV | 2.21 | 0.52 | [0.17, 6.42] |
+| Large_Increasing | 16 | 2.89 µV | 2.27 | 0.57 | [0.18, 7.89] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large_Decreasing | 18 | 4.16 µV | 2.48 | 0.58 | [0.95, 8.30] |
-| Large_Increasing | 16 | 4.37 µV | 2.65 | 0.66 | [0.88, 10.38] |
+| Large_Decreasing | 18 | 487.50 ms | 17.23 | 4.06 | [452.17, 524.60] |
+| Large_Increasing | 16 | 490.68 ms | 17.50 | 4.38 | [453.43, 517.52] |
 
 
 ---
@@ -94,11 +94,11 @@ This section presents the results of repeated-measures statistical tests.
 
 ### 3.1 N1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 2.72, *p* = 0.114, η²_G = 0.031
+- *F* = 1.66, *p* = 0.212, η²_G = 0.012
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -107,22 +107,22 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | 1.65 | 21 | = 0.114 | 0.35 [-0.11, 0.81] | small | n.s. |
+| Large_Decreasing vs Large_Increasing | 1.29 | 21 | = 0.212 | 0.21 [-0.18, 0.73] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 397.76, BIC = 405.08
-- Condition effect: *β* = -6.84, *SE* = 3.748, *z* = -1.825, *p* = 0.068
+- AIC = 174.88, BIC = 182.19
+- Condition effect: *β* = -0.42, *SE* = 0.282, *z* = -1.493, *p* = 0.136
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 1.28, *p* = 0.271, η²_G = 0.007
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 4.09, *p* = 0.056, η²_G = 0.016
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons:**
 
@@ -130,24 +130,24 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | 1.13 | 21 | = 0.271 | 0.16 [-0.21, 0.69] | negligible | n.s. |
+| Large_Decreasing vs Large_Increasing | 2.02 | 21 | = 0.056 | 0.25 [-0.03, 0.89] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 186.97, BIC = 194.28
-- Condition effect: *β* = -0.36, *SE* = 0.300, *z* = -1.212, *p* = 0.225
+- AIC = 309.91, BIC = 317.23
+- Condition effect: *β* = -2.06, *SE* = 0.954, *z* = -2.164, *p* = 0.030
 
 
 ### 3.2 P1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.36, *p* = 0.563, η²_G = 0.004
+- *F* = 1.37, *p* = 0.275, η²_G = 0.045
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -156,21 +156,21 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | -0.60 | 8 | = 0.563 | -0.12 [-0.98, 0.58] | negligible | n.s. |
+| Large_Decreasing vs Large_Increasing | 1.17 | 8 | = 0.275 | 0.41 [-0.41, 1.19] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 189.85, BIC = 194.88
-- Condition effect: *β* = 0.72, *SE* = 1.989, *z* = 0.363, *p* = 0.716
+- AIC = 89.74, BIC = 94.77
+- Condition effect: *β* = -0.44, *SE* = 0.390, *z* = -1.129, *p* = 0.259
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 2.77, *p* = 0.135, η²_G = 0.088
+- *F* = 0.01, *p* = 0.930, η²_G = 0.000
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -179,24 +179,24 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | 1.66 | 8 | = 0.135 | 0.59 [-0.27, 1.38] | medium | n.s. |
+| Large_Decreasing vs Large_Increasing | -0.09 | 8 | = 0.930 | -0.02 [-0.80, 0.74] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 101.86, BIC = 106.90
-- Condition effect: *β* = -0.81, *SE* = 0.493, *z* = -1.645, *p* = 0.100
+- AIC = 167.44, BIC = 172.47
+- Condition effect: *β* = -0.09, *SE* = 1.176, *z* = -0.079, *p* = 0.937
 
 
 ### 3.3 P3b Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 1.05, *p* = 0.322, η²_G = 0.039
+- *F* = 0.28, *p* = 0.603, η²_G = 0.003
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -205,21 +205,21 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | -1.02 | 15 | = 0.322 | -0.39 [-0.80, 0.29] | small | n.s. |
+| Large_Decreasing vs Large_Increasing | 0.53 | 15 | = 0.603 | 0.11 [-0.40, 0.67] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 339.28, BIC = 345.38
-- Condition effect: *β* = 9.33, *SE* = 10.905, *z* = 0.856, *p* = 0.392
+- AIC = 147.48, BIC = 153.59
+- Condition effect: *β* = -0.15, *SE* = 0.435, *z* = -0.358, *p* = 0.721
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.00, *p* = 0.986, η²_G = 0.000
+- *F* = 1.14, *p* = 0.302, η²_G = 0.041
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -228,15 +228,15 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large_Decreasing vs Large_Increasing | -0.02 | 15 | = 0.986 | -0.00 [-0.54, 0.53] | negligible | n.s. |
+| Large_Decreasing vs Large_Increasing | -1.07 | 15 | = 0.302 | -0.40 [-0.81, 0.27] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 154.66, BIC = 160.77
-- Condition effect: *β* = 0.07, *SE* = 0.466, *z* = 0.141, *p* = 0.888
+- AIC = 296.50, BIC = 302.60
+- Condition effect: *β* = 3.18, *SE* = 5.904, *z* = 0.538, *p* = 0.590
 
 
 ---
@@ -245,7 +245,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**N1 latency:** Marginal trend toward condition differences (*p* = 0.056)
 
 ### Research Implications
 
@@ -261,19 +261,67 @@ The following plots are available in the `plots/` subdirectory:
 
 #### Latency
 
+**Boxplot:**
+
+![N1 Latency Boxplot](plots/boxplot_N1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![N1 Latency Violin](plots/violin_N1_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![N1 Amplitude Boxplot](plots/boxplot_N1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
 ### 5.2 P1 Component
 
 #### Latency
 
+**Boxplot:**
+
+![P1 Latency Boxplot](plots/boxplot_P1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P1 Latency Violin](plots/violin_P1_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![P1 Amplitude Boxplot](plots/boxplot_P1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
 ### 5.3 P3b Component
 
 #### Latency
 
+**Boxplot:**
+
+![P3b Latency Boxplot](plots/boxplot_P3b_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P3b Latency Violin](plots/violin_P3b_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![P3b Amplitude Boxplot](plots/boxplot_P3b_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P3b Amplitude Violin](plots/violin_P3b_mean_amplitude_roi.png)
 
 ---
 

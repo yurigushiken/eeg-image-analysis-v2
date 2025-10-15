@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-14 18:32:39
+**Generated:** 2025-10-15 16:18:45
 
 ---
 
@@ -11,13 +11,13 @@
 **Number of Conditions:** 4
 
 **Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Latency (Peak), Amplitude (Peak)
+**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** Peak latency within FWHM window
-- **Amplitude Measure:** Peak amplitude within FWHM window
+- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
+- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -37,65 +37,65 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 ### 2.1 N1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 22 | 174.36 ms | 21.86 | 4.66 | [140.00, 208.00] |
-| Cardinality3 | 22 | 167.82 ms | 16.54 | 3.53 | [140.00, 200.00] |
-| Decreasing 3 to 2 | 24 | 175.33 ms | 22.28 | 4.55 | [140.00, 208.00] |
-| Increasing 2 to 3 | 22 | 171.45 ms | 19.33 | 4.12 | [140.00, 208.00] |
+| Cardinality2 | 22 | -3.11 µV | 1.83 | 0.39 | [-7.37, -0.14] |
+| Cardinality3 | 22 | -3.22 µV | 1.65 | 0.35 | [-7.54, -0.94] |
+| Decreasing 3 to 2 | 24 | -3.66 µV | 2.11 | 0.43 | [-7.98, -0.23] |
+| Increasing 2 to 3 | 22 | -3.28 µV | 1.41 | 0.30 | [-5.74, -0.32] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 22 | -5.75 µV | 2.52 | 0.54 | [-10.78, -1.57] |
-| Cardinality3 | 22 | -5.19 µV | 2.03 | 0.43 | [-10.83, -1.55] |
-| Decreasing 3 to 2 | 24 | -5.77 µV | 2.55 | 0.52 | [-10.33, -1.35] |
-| Increasing 2 to 3 | 22 | -5.27 µV | 1.96 | 0.42 | [-10.61, -0.91] |
+| Cardinality2 | 22 | 173.03 ms | 13.87 | 2.96 | [147.33, 195.55] |
+| Cardinality3 | 22 | 172.31 ms | 10.44 | 2.23 | [151.69, 197.41] |
+| Decreasing 3 to 2 | 24 | 174.19 ms | 11.00 | 2.25 | [158.22, 206.45] |
+| Increasing 2 to 3 | 22 | 171.96 ms | 7.69 | 1.64 | [154.28, 186.90] |
 
 
 ### 2.2 P1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 13 | 111.69 ms | 8.40 | 2.33 | [100.00, 120.00] |
-| Cardinality3 | 15 | 111.47 ms | 7.98 | 2.06 | [100.00, 120.00] |
-| Decreasing 3 to 2 | 11 | 108.36 ms | 6.80 | 2.05 | [100.00, 120.00] |
-| Increasing 2 to 3 | 14 | 111.14 ms | 8.76 | 2.34 | [100.00, 120.00] |
+| Cardinality2 | 13 | 2.01 µV | 1.83 | 0.51 | [0.25, 6.70] |
+| Cardinality3 | 15 | 2.14 µV | 2.15 | 0.55 | [0.03, 7.32] |
+| Decreasing 3 to 2 | 11 | 1.80 µV | 1.41 | 0.43 | [0.01, 4.07] |
+| Increasing 2 to 3 | 14 | 1.80 µV | 1.36 | 0.36 | [-0.04, 4.27] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 13 | 3.04 µV | 1.79 | 0.50 | [1.11, 7.57] |
-| Cardinality3 | 15 | 3.02 µV | 2.39 | 0.62 | [0.79, 8.96] |
-| Decreasing 3 to 2 | 11 | 2.54 µV | 1.70 | 0.51 | [0.54, 5.61] |
-| Increasing 2 to 3 | 14 | 2.77 µV | 1.86 | 0.50 | [0.49, 6.63] |
+| Cardinality2 | 13 | 111.24 ms | 4.00 | 1.11 | [104.71, 119.13] |
+| Cardinality3 | 15 | 110.45 ms | 4.65 | 1.20 | [101.43, 119.90] |
+| Decreasing 3 to 2 | 11 | 108.71 ms | 3.20 | 0.97 | [102.34, 112.90] |
+| Increasing 2 to 3 | 14 | 110.33 ms | 4.46 | 1.19 | [100.35, 117.09] |
 
 
 ### 2.3 P3b Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 12 | 461.33 ms | 24.97 | 7.21 | [420.00, 496.00] |
-| Cardinality3 | 16 | 467.00 ms | 31.45 | 7.86 | [420.00, 528.00] |
-| Decreasing 3 to 2 | 19 | 481.68 ms | 33.02 | 7.58 | [432.00, 528.00] |
-| Increasing 2 to 3 | 18 | 478.44 ms | 44.55 | 10.50 | [420.00, 528.00] |
+| Cardinality2 | 12 | 2.48 µV | 1.83 | 0.53 | [0.30, 7.32] |
+| Cardinality3 | 16 | 2.36 µV | 2.03 | 0.51 | [0.06, 6.61] |
+| Decreasing 3 to 2 | 19 | 3.98 µV | 3.28 | 0.75 | [0.04, 11.98] |
+| Increasing 2 to 3 | 18 | 3.93 µV | 2.94 | 0.69 | [0.09, 9.80] |
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 12 | 4.50 µV | 2.29 | 0.66 | [1.28, 10.57] |
-| Cardinality3 | 16 | 4.51 µV | 2.20 | 0.55 | [1.80, 9.60] |
-| Decreasing 3 to 2 | 19 | 6.30 µV | 4.09 | 0.94 | [1.68, 17.81] |
-| Increasing 2 to 3 | 18 | 5.85 µV | 3.54 | 0.83 | [1.42, 13.70] |
+| Cardinality2 | 12 | 464.74 ms | 13.25 | 3.83 | [441.62, 480.57] |
+| Cardinality3 | 16 | 465.80 ms | 24.91 | 6.23 | [423.68, 525.48] |
+| Decreasing 3 to 2 | 19 | 480.47 ms | 23.59 | 5.41 | [426.83, 524.17] |
+| Increasing 2 to 3 | 18 | 472.30 ms | 20.80 | 4.90 | [428.70, 520.61] |
 
 
 ---
@@ -106,12 +106,11 @@ This section presents the results of repeated-measures statistical tests.
 
 ### 3.1 N1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.67, *p* = 0.577, η²_G = 0.018
-- Greenhouse-Geisser corrected: *p* = 0.535 (ε = 0.744)
+- *F* = 1.94, *p* = 0.134, η²_G = 0.041
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -120,26 +119,26 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | 1.36 | 19 | = 0.565 | 0.31 [-0.17, 0.78] | small | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -0.09 | 19 | = 0.928 | -0.03 [-0.50, 0.39] | negligible | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.57 | 19 | = 0.694 | 0.13 [-0.34, 0.60] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.52 | 19 | = 0.565 | -0.35 [-0.69, 0.21] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -0.65 | 19 | = 0.694 | -0.19 [-0.62, 0.27] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.59 | 19 | = 0.694 | 0.16 [-0.41, 0.48] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | 0.72 | 19 | = 0.573 | 0.16 [-0.31, 0.63] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 2.26 | 19 | = 0.213 | 0.48 [-0.10, 0.82] | small | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.87 | 19 | = 0.573 | 0.24 [-0.28, 0.67] | small | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 1.80 | 19 | = 0.262 | 0.37 [-0.06, 0.86] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 0.29 | 19 | = 0.775 | 0.08 [-0.41, 0.48] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | -1.32 | 19 | = 0.404 | -0.33 [-0.77, 0.14] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 790.52, BIC = 805.52
-- Condition effect: *β* = -5.61, *SE* = 4.737, *z* = -1.184, *p* = 0.236
+- AIC = 343.98, BIC = 358.97
+- Condition effect: *β* = -0.18, *SE* = 0.384, *z* = -0.478, *p* = 0.633
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.90, *p* = 0.445, η²_G = 0.015
+- *F* = 0.09, *p* = 0.966, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -148,29 +147,29 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -0.78 | 19 | = 0.621 | -0.16 [-0.65, 0.30] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 0.79 | 19 | = 0.621 | 0.15 [-0.36, 0.53] | negligible | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -0.18 | 19 | = 0.856 | -0.04 [-0.51, 0.43] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | 1.67 | 19 | = 0.621 | 0.31 [-0.14, 0.77] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | 0.66 | 19 | = 0.621 | 0.14 [-0.41, 0.48] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.97 | 19 | = 0.621 | -0.21 [-0.70, 0.20] | small | n.s. |
+| Cardinality2 vs Cardinality3 | 0.11 | 19 | = 0.969 | 0.02 [-0.44, 0.49] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -0.30 | 19 | = 0.969 | -0.08 [-0.48, 0.40] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.04 | 19 | = 0.969 | 0.01 [-0.46, 0.48] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -0.50 | 19 | = 0.969 | -0.15 [-0.55, 0.34] | negligible | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -0.10 | 19 | = 0.969 | -0.02 [-0.41, 0.48] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.49 | 19 | = 0.969 | 0.14 [-0.31, 0.58] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 380.92, BIC = 395.92
-- Condition effect: *β* = 0.39, *SE* = 0.458, *z* = 0.843, *p* = 0.399
+- AIC = 681.09, BIC = 696.09
+- Condition effect: *β* = -0.50, *SE* = 2.576, *z* = -0.195, *p* = 0.845
 
 
 ### 3.2 P1 Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.04, *p* = 0.987, η²_G = 0.007
+- *F* = 0.26, *p* = 0.850, η²_G = 0.032
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -179,26 +178,26 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | 0.00 | 5 | = 1.000 | 0.00 [-0.56, 0.88] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 0.00 | 5 | = 1.000 | 0.00 [-0.88, 0.97] | negligible | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -0.29 | 5 | = 1.000 | -0.18 [-0.68, 0.86] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | 0.00 | 5 | = 1.000 | 0.00 [-0.34, 1.28] | negligible | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -0.32 | 5 | = 1.000 | -0.16 [-0.72, 0.81] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.34 | 5 | = 1.000 | -0.17 [-0.99, 0.86] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | -0.08 | 5 | = 0.941 | -0.04 [-0.90, 0.54] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 0.52 | 5 | = 0.939 | 0.32 [-0.85, 1.01] | small | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.63 | 5 | = 0.939 | 0.37 [-0.58, 0.97] | small | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 0.65 | 5 | = 0.939 | 0.30 [-0.59, 0.96] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 0.69 | 5 | = 0.939 | 0.34 [-0.54, 1.01] | small | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.08 | 5 | = 0.941 | 0.04 [-1.19, 0.69] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 379.72, BIC = 391.54
-- Condition effect: *β* = -0.23, *SE* = 2.962, *z* = -0.076, *p* = 0.939
+- AIC = 212.47, BIC = 224.29
+- Condition effect: *β* = 0.24, *SE* = 0.551, *z* = 0.431, *p* = 0.666
 
-#### Amplitude (Peak)
+#### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.22, *p* = 0.884, η²_G = 0.025
+- *F* = 0.77, *p* = 0.530, η²_G = 0.096
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -207,29 +206,57 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -0.24 | 5 | = 0.822 | -0.13 [-0.96, 0.49] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 0.40 | 5 | = 0.822 | 0.26 [-0.92, 0.93] | small | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.28 | 5 | = 0.822 | 0.17 [-0.56, 1.00] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | 0.81 | 5 | = 0.822 | 0.33 [-0.58, 0.97] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | 0.59 | 5 | = 0.822 | 0.27 [-0.53, 1.03] | small | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.29 | 5 | = 0.822 | -0.11 [-1.34, 0.57] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | 1.04 | 5 | = 0.838 | 0.65 [-0.29, 1.22] | medium | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 0.28 | 5 | = 0.967 | 0.18 [-0.79, 1.06] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.24 | 5 | = 0.967 | 0.16 [-0.65, 0.89] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.23 | 5 | = 0.838 | -0.55 [-0.70, 0.84] | medium | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -0.88 | 5 | = 0.838 | -0.50 [-0.84, 0.70] | small | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.04 | 5 | = 0.967 | 0.02 [-1.20, 0.68] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 227.39, BIC = 239.21
-- Condition effect: *β* = 0.15, *SE* = 0.649, *z* = 0.227, *p* = 0.820
+- AIC = 309.71, BIC = 321.53
+- Condition effect: *β* = -0.87, *SE* = 1.480, *z* = -0.588, *p* = 0.556
 
 
 ### 3.3 P3b Component
 
-#### Latency (Peak)
+#### Mean Amplitude (ROI)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 1.07, *p* = 0.381, η²_G = 0.071
+- *F* = 2.99, *p* = 0.051, η²_G = 0.159
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality2 vs Cardinality3 | -1.56 | 8 | = 0.278 | -0.48 [-0.92, 0.44] | small | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -2.01 | 8 | = 0.236 | -0.87 [-1.21, 0.15] | large | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -2.42 | 8 | = 0.236 | -1.08 [-1.75, -0.05] | large | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.29 | 8 | = 0.282 | -0.55 [-0.99, 0.16] | medium | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -1.45 | 8 | = 0.278 | -0.68 [-0.92, 0.32] | medium | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.15 | 8 | = 0.886 | 0.03 [-0.29, 0.79] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 310.15, BIC = 323.20
+- Condition effect: *β* = 0.49, *SE* = 0.793, *z* = 0.621, *p* = 0.535
+
+#### Latency (50% Fractional Area)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 1.22, *p* = 0.324, η²_G = 0.097
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
@@ -238,48 +265,20 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -0.16 | 8 | = 0.879 | -0.07 [-0.75, 0.60] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -1.79 | 8 | = 0.482 | -0.80 [-1.21, 0.15] | large | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -0.42 | 8 | = 0.879 | -0.15 [-0.84, 0.60] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.55 | 8 | = 0.482 | -0.63 [-1.04, 0.13] | medium | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -0.18 | 8 | = 0.879 | -0.08 [-0.95, 0.29] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.20 | 8 | = 0.530 | 0.45 [-0.57, 0.49] | small | n.s. |
+| Cardinality2 vs Cardinality3 | -0.70 | 8 | = 0.605 | -0.37 [-0.73, 0.62] | small | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -1.61 | 8 | = 0.605 | -0.72 [-1.09, 0.24] | medium | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -0.70 | 8 | = 0.605 | -0.39 [-0.96, 0.49] | small | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.28 | 8 | = 0.605 | -0.45 [-1.29, -0.06] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 0.08 | 8 | = 0.941 | 0.03 [-0.87, 0.36] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.03 | 8 | = 0.605 | 0.50 [-0.29, 0.79] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 650.14, BIC = 663.18
-- Condition effect: *β* = 2.44, *SE* = 11.230, *z* = 0.217, *p* = 0.828
-
-#### Amplitude (Peak)
-
-**Repeated-Measures ANOVA:**
-
-- *F* = 3.70, *p* = 0.025, η²_G = 0.172
-- **Interpretation:** The main effect of condition was **significant**.
-
-**Pairwise Comparisons:**
-
-_Post-hoc tests with FDR correction for multiple comparisons:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -1.46 | 8 | = 0.256 | -0.41 [-0.99, 0.38] | small | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -2.53 | 8 | = 0.109 | -0.95 [-1.32, 0.07] | large | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -2.51 | 8 | = 0.109 | -0.97 [-1.80, -0.08] | large | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.59 | 8 | = 0.256 | -0.70 [-0.95, 0.20] | medium | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -1.35 | 8 | = 0.256 | -0.64 [-0.84, 0.38] | medium | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.11 | 8 | = 0.300 | 0.22 [-0.18, 0.92] | small | n.s. |
-
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 333.98, BIC = 347.02
-- Condition effect: *β* = 0.77, *SE* = 0.947, *z* = 0.815, *p* = 0.415
+- AIC = 592.12, BIC = 605.17
+- Condition effect: *β* = 1.07, *SE* = 8.056, *z* = 0.132, *p* = 0.895
 
 
 ---
@@ -288,7 +287,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P3b amplitude:** Significant main effect of condition (*p* = 0.025) (no significant pairwise comparisons)
+**P3b amplitude:** Marginal trend toward condition differences (*p* = 0.051)
 
 ### Research Implications
 
@@ -304,19 +303,67 @@ The following plots are available in the `plots/` subdirectory:
 
 #### Latency
 
+**Boxplot:**
+
+![N1 Latency Boxplot](plots/boxplot_N1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![N1 Latency Violin](plots/violin_N1_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![N1 Amplitude Boxplot](plots/boxplot_N1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
 ### 5.2 P1 Component
 
 #### Latency
 
+**Boxplot:**
+
+![P1 Latency Boxplot](plots/boxplot_P1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P1 Latency Violin](plots/violin_P1_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![P1 Amplitude Boxplot](plots/boxplot_P1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
 ### 5.3 P3b Component
 
 #### Latency
 
+**Boxplot:**
+
+![P3b Latency Boxplot](plots/boxplot_P3b_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P3b Latency Violin](plots/violin_P3b_latency_frac_area_ms.png)
+
 #### Amplitude
+
+**Boxplot:**
+
+![P3b Amplitude Boxplot](plots/boxplot_P3b_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P3b Amplitude Violin](plots/violin_P3b_mean_amplitude_roi.png)
 
 ---
 
