@@ -8,19 +8,19 @@ selection:
   condition_sets:
     - name: "Increasing 2 to 3"
       conditions: ["23"]
-      color: "#2ca02c"  # Green (increasing)
+      color: "#02d502"  # Green (increasing)
       linestyle: "--"   # Dashed
     - name: "Decreasing 3 to 2"
       conditions: ["32"]
-      color: "#d62728"  # Red (decreasing)
+      color: "#ef0000"  # Red (decreasing)
       linestyle: "--"   # Dashed
     - name: "Cardinality3"
       conditions: ["33"]
-      color: "#084594"  # Dark blue
+      color: "#9900ff"  # purple
       linestyle: "-"    # Solid
     - name: "Cardinality2"
       conditions: ["22"]
-      color: "#9ecae1"  # Light blue
+      color: "#2c6dde"  # Light blue
       linestyle: "-"    # Solid
 
 components: ["P1", "N1", "P3b"]
@@ -31,7 +31,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
   linestyles:
     NC: "-"
     Decrease: ":"

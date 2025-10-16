@@ -1,0 +1,15 @@
+{
+  "analysis_id": "landing_on_3_any_preceding",
+  "duration_seconds": 33.068,
+  "num_figures": 4,
+  "largest_png_bytes": 864408,
+  "total_png_bytes": 3011309,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "landing_on_3_any_preceding-collapsed_localizer.png": 490142,
+    "landing_on_3_any_preceding-P1.png": 824298,
+    "landing_on_3_any_preceding-N1.png": 832461,
+    "landing_on_3_any_preceding-P3b.png": 864408
+  }
+}

@@ -8,11 +8,11 @@ selection:
   condition_sets:
     - name: "Small_Increasing"
       conditions: ["12", "13", "23"]
-      color: "#2ca02c"  # Green (increasing)
+      color: "#02d502"  # Green (increasing)
       linestyle: "-"   # solid
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
-      color: "#d62728"  # Red (decreasing)
+      color: "#ef0000"  # Red (decreasing)
       linestyle: "-"    # solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
@@ -22,7 +22,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
   linestyles:
     NC: "-"
     Decrease: ":"

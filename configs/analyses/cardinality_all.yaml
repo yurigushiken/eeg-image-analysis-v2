@@ -8,19 +8,19 @@ selection:
   condition_sets:
     - name: "Cardinality1"
       conditions: ["11"]
-      color: "#e41a1c"  # Red
+      color: "#ef0000"  # Red
       linestyle: "-"    # Solid
     - name: "Cardinality2"
       conditions: ["22"]
-      color: "#377eb8"  # Blue
+      color: "#2c6dde"  # Blue
       linestyle: "-"    # Solid
     - name: "Cardinality3"
       conditions: ["33"]
-      color: "#4daf4a"  # Green
+      color: "#02d502"  # Green
       linestyle: "-"    # Solid
     - name: "Cardinality4"
       conditions: ["44"]
-      color: "#984ea3"  # Purple
+      color: "#9900ff"  # Purple
       linestyle: "-"    # Solid
     - name: "Cardinality5"
       conditions: ["55"]
@@ -39,7 +39,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
 outputs:
   page: "single"
   plots_dir: "docs/assets/plots/cardinality_all"

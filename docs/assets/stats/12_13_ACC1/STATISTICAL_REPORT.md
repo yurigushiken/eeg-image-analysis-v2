@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-15 16:17:30
+**Generated:** 2025-10-15 22:33:54
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 22 | -3.10 µV | 1.59 | 0.34 | [-5.90, -0.56] |
-| Increasing 1 to 3 | 24 | -3.72 µV | 1.79 | 0.36 | [-7.87, -0.73] |
+| 1 to 2 | 22 | -3.10 µV | 1.59 | 0.34 | [-5.90, -0.56] |
+| 1 to 3 | 24 | -3.72 µV | 1.79 | 0.36 | [-7.87, -0.73] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 22 | 174.41 ms | 15.38 | 3.28 | [150.32, 209.78] |
-| Increasing 1 to 3 | 24 | 175.70 ms | 13.30 | 2.71 | [150.40, 206.73] |
+| 1 to 2 | 22 | 174.41 ms | 15.38 | 3.28 | [150.32, 209.78] |
+| 1 to 3 | 24 | 175.70 ms | 13.30 | 2.71 | [150.40, 206.73] |
 
 
 ### 2.2 P1 Component
@@ -58,15 +58,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 14 | 1.59 µV | 1.51 | 0.40 | [-0.01, 3.95] |
-| Increasing 1 to 3 | 10 | 1.70 µV | 1.09 | 0.34 | [0.06, 3.85] |
+| 1 to 2 | 14 | 1.59 µV | 1.51 | 0.40 | [-0.01, 3.95] |
+| 1 to 3 | 10 | 1.70 µV | 1.09 | 0.34 | [0.06, 3.85] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 14 | 81.19 ms | 3.58 | 0.96 | [73.67, 87.98] |
-| Increasing 1 to 3 | 10 | 79.47 ms | 3.11 | 0.98 | [73.92, 84.81] |
+| 1 to 2 | 14 | 81.19 ms | 3.58 | 0.96 | [73.67, 87.98] |
+| 1 to 3 | 10 | 79.47 ms | 3.11 | 0.98 | [73.92, 84.81] |
 
 
 ### 2.3 P3b Component
@@ -75,15 +75,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 17 | 3.39 µV | 2.81 | 0.68 | [0.04, 10.55] |
-| Increasing 1 to 3 | 20 | 4.24 µV | 3.46 | 0.77 | [0.56, 12.22] |
+| 1 to 2 | 17 | 3.39 µV | 2.81 | 0.68 | [0.04, 10.55] |
+| 1 to 3 | 20 | 4.24 µV | 3.46 | 0.77 | [0.56, 12.22] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increasing 1 to 2 | 17 | 465.65 ms | 34.48 | 8.36 | [397.38, 534.24] |
-| Increasing 1 to 3 | 20 | 461.35 ms | 20.62 | 4.61 | [404.70, 487.79] |
+| 1 to 2 | 17 | 465.65 ms | 34.48 | 8.36 | [397.38, 534.24] |
+| 1 to 3 | 20 | 461.35 ms | 20.62 | 4.61 | [404.70, 487.79] |
 
 
 ---
@@ -107,7 +107,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | 1.70 | 21 | = 0.103 | 0.31 [-0.09, 0.82] | small | n.s. |
+| 1 to 2 vs 1 to 3 | 1.70 | 21 | = 0.103 | 0.31 [-0.09, 0.82] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -130,7 +130,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | -0.50 | 21 | = 0.620 | -0.09 [-0.55, 0.34] | negligible | n.s. |
+| 1 to 2 vs 1 to 3 | -0.50 | 21 | = 0.620 | -0.09 [-0.55, 0.34] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -156,7 +156,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | -0.15 | 6 | = 0.887 | -0.10 [-0.98, 0.87] | negligible | n.s. |
+| 1 to 2 vs 1 to 3 | -0.15 | 6 | = 0.887 | -0.10 [-0.98, 0.87] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -179,7 +179,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | 1.86 | 6 | = 0.113 | 0.70 [-0.33, 1.73] | medium | n.s. |
+| 1 to 2 vs 1 to 3 | 1.86 | 6 | = 0.113 | 0.70 [-0.33, 1.73] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -205,7 +205,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | -2.25 | 14 | = 0.041 | -0.50 [-1.18, 0.02] | small | * |
+| 1 to 2 vs 1 to 3 | -2.25 | 14 | = 0.041 | -0.50 [-1.18, 0.02] | small | * |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -228,7 +228,7 @@ _Post-hoc tests with uncorrected correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increasing 1 to 2 vs Increasing 1 to 3 | -0.18 | 14 | = 0.858 | -0.07 [-0.60, 0.51] | negligible | n.s. |
+| 1 to 2 vs 1 to 3 | -0.18 | 14 | = 0.858 | -0.07 [-0.60, 0.51] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -246,7 +246,7 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 ### Key Findings
 
 **P3b amplitude:** Significant main effect of condition (*p* = 0.041). Post-hoc tests revealed:
-  - Increasing 1 to 2 showed smaller amplitude than Increasing 1 to 3 (*d* = -0.50)
+  - 1 to 2 showed smaller amplitude than 1 to 3 (*d* = -0.50)
 
 ### Research Implications
 

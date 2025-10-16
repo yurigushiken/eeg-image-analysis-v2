@@ -8,11 +8,11 @@ selection:
   condition_sets:
     - name: "Increasing 1 to 2"
       conditions: ["12"]
-      color: "#2ca02c"  # Green (increasing)
+      color: "#02d502"  # Green (increasing)
       linestyle: "-"   # solid
     - name: "Decreasing 2 to 1"
       conditions: ["21"]
-      color: "#d62728"  # Red (decreasing)
+      color: "#ef0000"  # Red (decreasing)
       linestyle: "-"    # solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
@@ -22,7 +22,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
   linestyles:
     NC: "-"
     Decrease: ":"
@@ -31,7 +31,7 @@ outputs:
   page: "single"
   plots_dir: "docs/assets/plots/12_21_ACC1"
   tables_dir: "docs/assets/tables/12_21_ACC1"
-  page: "docs/analysis/12_21.md_ACC1"
+  page: "docs/analysis/12_21_ACC1.md"
 measurement:
   latency: fal     # options: peak | fal
   amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

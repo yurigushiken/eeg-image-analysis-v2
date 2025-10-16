@@ -8,11 +8,11 @@ selection:
   condition_sets:
     - name: "Large_Increasing"
       conditions: ["46", "45", "56"]
-      color: "#2ca02c"  # Green (increasing)
+      color: "#02d502"  # Green (increasing)
       linestyle: "-"   # solid
     - name: "Large_Decreasing"
       conditions: ["54", "65", "64"]
-      color: "#d62728"  # Red (decreasing)
+      color: "#ef0000"  # Red (decreasing)
       linestyle: "-"    # solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
@@ -22,7 +22,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
 outputs:
   page: "single"
   plots_dir: "docs/assets/plots/large_increasing_vs_decreasing_ACC1"

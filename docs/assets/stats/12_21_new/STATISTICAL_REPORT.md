@@ -1,14 +1,14 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-15 16:17:56
+**Generated:** 2025-10-15 22:34:50
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 144
+**Total Measurements:** 288
 **Number of Subjects:** 24
-**Number of Conditions:** 2
+**Number of Conditions:** 4
 
 **Components Analyzed:** N1, P1, P3b
 **Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
@@ -41,15 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 16 | -2.63 µV | 2.26 | 0.56 | [-8.75, -0.13] |
-| Increasing 1 to 2 | 20 | -3.82 µV | 1.70 | 0.38 | [-8.09, -0.93] |
+| Decreasing 2 to 1 | 16 | -2.47 µV | 2.16 | 0.54 | [-8.27, -0.09] |
+| Decreasing 3 to 1 | 20 | -2.47 µV | 2.11 | 0.47 | [-7.74, 0.11] |
+| Increasing 1 to 2 | 22 | -3.26 µV | 1.89 | 0.40 | [-7.76, -0.22] |
+| Increasing 1 to 3 | 24 | -4.26 µV | 1.80 | 0.37 | [-8.92, -1.26] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 16 | 180.41 ms | 9.80 | 2.45 | [162.74, 202.98] |
-| Increasing 1 to 2 | 20 | 172.70 ms | 6.92 | 1.55 | [159.13, 188.38] |
+| Decreasing 2 to 1 | 16 | 181.46 ms | 11.08 | 2.77 | [160.92, 206.99] |
+| Decreasing 3 to 1 | 20 | 183.12 ms | 12.54 | 2.80 | [161.45, 205.19] |
+| Increasing 1 to 2 | 22 | 177.48 ms | 13.20 | 2.81 | [157.81, 210.54] |
+| Increasing 1 to 3 | 24 | 177.42 ms | 9.18 | 1.87 | [158.09, 199.77] |
 
 
 ### 2.2 P1 Component
@@ -58,15 +62,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 19 | 2.85 µV | 2.19 | 0.50 | [0.19, 8.27] |
-| Increasing 1 to 2 | 10 | 1.19 µV | 1.14 | 0.36 | [0.27, 4.10] |
+| Decreasing 2 to 1 | 19 | 3.12 µV | 2.31 | 0.53 | [0.06, 8.71] |
+| Decreasing 3 to 1 | 21 | 2.17 µV | 1.55 | 0.34 | [0.33, 6.79] |
+| Increasing 1 to 2 | 12 | 1.05 µV | 1.18 | 0.34 | [-0.02, 4.35] |
+| Increasing 1 to 3 | 11 | 1.85 µV | 1.31 | 0.39 | [0.73, 4.50] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 19 | 114.69 ms | 7.72 | 1.77 | [98.91, 130.61] |
-| Increasing 1 to 2 | 10 | 109.12 ms | 11.04 | 3.49 | [93.36, 127.82] |
+| Decreasing 2 to 1 | 19 | 114.49 ms | 5.56 | 1.27 | [104.92, 127.97] |
+| Decreasing 3 to 1 | 21 | 114.97 ms | 6.12 | 1.34 | [104.42, 125.67] |
+| Increasing 1 to 2 | 12 | 112.55 ms | 8.31 | 2.40 | [99.41, 124.39] |
+| Increasing 1 to 3 | 11 | 110.55 ms | 4.43 | 1.34 | [105.26, 116.98] |
 
 
 ### 2.3 P3b Component
@@ -75,15 +83,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 19 | 4.07 µV | 2.62 | 0.60 | [0.37, 9.93] |
-| Increasing 1 to 2 | 17 | 3.48 µV | 2.85 | 0.69 | [0.10, 10.27] |
+| Decreasing 2 to 1 | 20 | 3.59 µV | 2.60 | 0.58 | [-0.05, 9.68] |
+| Decreasing 3 to 1 | 20 | 3.89 µV | 2.33 | 0.52 | [0.32, 9.09] |
+| Increasing 1 to 2 | 17 | 3.43 µV | 2.83 | 0.69 | [0.14, 10.35] |
+| Increasing 1 to 3 | 20 | 4.11 µV | 3.41 | 0.76 | [-0.00, 13.08] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 19 | 494.61 ms | 13.74 | 3.15 | [462.46, 525.42] |
-| Increasing 1 to 2 | 17 | 491.58 ms | 18.06 | 4.38 | [459.38, 527.55] |
+| Decreasing 2 to 1 | 20 | 483.86 ms | 16.69 | 3.73 | [448.34, 521.68] |
+| Decreasing 3 to 1 | 20 | 479.27 ms | 13.67 | 3.06 | [458.78, 511.87] |
+| Increasing 1 to 2 | 17 | 484.35 ms | 21.56 | 5.23 | [450.09, 533.53] |
+| Increasing 1 to 3 | 20 | 476.54 ms | 16.49 | 3.69 | [420.55, 497.20] |
 
 
 ---
@@ -98,47 +110,57 @@ This section presents the results of repeated-measures statistical tests.
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 8.68, *p* = 0.011, η²_G = 0.132
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 9.54, *p* < .001, η²_G = 0.159
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 2.95 | 13 | = 0.011 | 0.75 [0.13, 1.45] | medium | * |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | 0.33 | 14 | = 0.744 | 0.08 [-0.47, 0.64] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 2.76 | 14 | = 0.028 | 0.64 [0.09, 1.33] | medium | * |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | 5.49 | 14 | < .001 | 1.05 [0.67, 2.18] | large | *** |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | 1.94 | 14 | = 0.087 | 0.54 [-0.00, 0.99] | medium | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | 4.40 | 14 | = 0.002 | 0.93 [0.48, 1.65] | large | ** |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 2.66 | 14 | = 0.028 | 0.45 [0.08, 1.03] | small | * |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 151.15, BIC = 157.48
-- Condition effect: *β* = -1.34, *SE* = 0.446, *z* = -3.004, *p* = 0.003
+- AIC = 321.98, BIC = 336.42
+- Condition effect: *β* = -0.25, *SE* = 0.431, *z* = -0.577, *p* = 0.564
 
 #### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 13.44, *p* = 0.003, η²_G = 0.177
+- *F* = 3.38, *p* = 0.027, η²_G = 0.046
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.67 | 13 | = 0.003 | 0.89 [0.28, 1.68] | large | ** |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | -0.09 | 14 | = 0.929 | -0.02 [-0.58, 0.53] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.09 | 14 | = 0.048 | 0.44 [0.16, 1.43] | small | * |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | 1.86 | 14 | = 0.127 | 0.40 [-0.15, 0.96] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | 2.05 | 14 | = 0.120 | 0.44 [0.04, 1.04] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | 2.19 | 14 | = 0.120 | 0.40 [0.11, 1.13] | small | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -0.41 | 14 | = 0.827 | -0.08 [-0.44, 0.45] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 254.49, BIC = 260.82
-- Condition effect: *β* = -7.00, *SE* = 1.725, *z* = -4.057, *p* < .001
+- AIC = 601.64, BIC = 616.09
+- Condition effect: *β* = 1.26, *SE* = 2.274, *z* = 0.553, *p* = 0.580
 
 
 ### 3.2 P1 Component
@@ -147,47 +169,57 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 11.37, *p* = 0.008, η²_G = 0.341
+- *F* = 4.00, *p* = 0.024, η²_G = 0.257
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.37 | 9 | = 0.008 | 1.36 [0.17, 1.96] | large | ** |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | 1.22 | 6 | = 0.348 | 0.48 [-0.07, 1.01] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 2.61 | 6 | = 0.106 | 1.29 [0.21, 2.03] | large | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | 2.80 | 6 | = 0.106 | 0.95 [0.01, 1.68] | large | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | 2.41 | 6 | = 0.106 | 1.02 [-0.00, 1.52] | large | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | 1.16 | 6 | = 0.348 | 0.57 [-0.27, 1.14] | medium | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -0.86 | 6 | = 0.421 | -0.53 [-1.20, 0.52] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 125.32, BIC = 130.78
-- Condition effect: *β* = -1.83, *SE* = 0.724, *z* = -2.531, *p* = 0.011
+- AIC = 250.52, BIC = 263.38
+- Condition effect: *β* = -0.98, *SE* = 0.458, *z* = -2.133, *p* = 0.033
 
 #### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 2.44, *p* = 0.153, η²_G = 0.102
+- *F* = 1.67, *p* = 0.210, η²_G = 0.177
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.56 | 9 | = 0.153 | 0.64 [-0.26, 1.25] | medium | n.s. |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | -0.69 | 6 | = 0.622 | -0.48 [-0.72, 0.32] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.51 | 6 | = 0.626 | 0.31 [-0.39, 1.09] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | 2.12 | 6 | = 0.235 | 0.97 [-0.32, 1.18] | large | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | 1.27 | 6 | = 0.500 | 0.63 [-0.30, 1.10] | medium | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | 2.27 | 6 | = 0.235 | 1.46 [-0.01, 1.51] | large | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 0.84 | 6 | = 0.622 | 0.36 [-0.40, 1.37] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 215.15, BIC = 220.61
-- Condition effect: *β* = -5.56, *SE* = 3.144, *z* = -1.769, *p* = 0.077
+- AIC = 416.06, BIC = 428.92
+- Condition effect: *β* = 0.52, *SE* = 1.828, *z* = 0.286, *p* = 0.775
 
 
 ### 3.3 P3b Component
@@ -196,47 +228,57 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.55, *p* = 0.470, η²_G = 0.015
+- *F* = 0.65, *p* = 0.587, η²_G = 0.024
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.74 | 15 | = 0.470 | 0.24 [-0.35, 0.72] | small | n.s. |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | -0.09 | 14 | = 0.928 | -0.03 [-0.58, 0.42] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.60 | 14 | = 0.672 | 0.20 [-0.41, 0.62] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | -0.66 | 14 | = 0.672 | -0.22 [-0.70, 0.34] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | 0.65 | 14 | = 0.672 | 0.23 [-0.35, 0.73] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | -0.66 | 14 | = 0.672 | -0.20 [-0.64, 0.36] | small | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | -1.73 | 14 | = 0.636 | -0.38 [-0.99, 0.12] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 180.03, BIC = 186.36
-- Condition effect: *β* = -0.61, *SE* = 0.819, *z* = -0.748, *p* = 0.454
+- AIC = 374.08, BIC = 388.14
+- Condition effect: *β* = 0.29, *SE* = 0.693, *z* = 0.422, *p* = 0.673
 
 #### Latency (50% Fractional Area)
 
 **Repeated-Measures ANOVA:**
 
-- *F* = 0.03, *p* = 0.863, η²_G = 0.001
+- *F* = 0.52, *p* = 0.670, η²_G = 0.020
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons:**
 
-_Post-hoc tests with uncorrected correction for multiple comparisons:_
+_Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.18 | 15 | = 0.863 | 0.06 [-0.49, 0.58] | negligible | n.s. |
+| Decreasing 2 to 1 vs Decreasing 3 to 1 | 0.92 | 14 | = 0.742 | 0.22 [-0.06, 0.98] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | -0.22 | 14 | = 0.832 | -0.08 [-0.63, 0.40] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 3 | 1.10 | 14 | = 0.742 | 0.31 [-0.29, 0.75] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 2 | -0.61 | 14 | = 0.804 | -0.22 [-0.73, 0.34] | small | n.s. |
+| Decreasing 3 to 1 vs Increasing 1 to 3 | 0.44 | 14 | = 0.804 | 0.11 [-0.35, 0.65] | negligible | n.s. |
+| Increasing 1 to 2 vs Increasing 1 to 3 | 0.98 | 14 | = 0.742 | 0.30 [-0.21, 0.89] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model:**
 
 - Model converged successfully
-- AIC = 307.27, BIC = 313.60
-- Condition effect: *β* = -2.88, *SE* = 5.005, *z* = -0.574, *p* = 0.566
+- AIC = 659.10, BIC = 673.17
+- Condition effect: *β* = -4.89, *SE* = 4.654, *z* = -1.050, *p* = 0.294
 
 
 ---
@@ -245,12 +287,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**N1 amplitude:** Significant main effect of condition (*p* = 0.011). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 0.75)
-**N1 latency:** Significant main effect of condition (*p* = 0.003). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 0.89)
-**P1 amplitude:** Significant main effect of condition (*p* = 0.008). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 1.36)
+**N1 amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 0.64)
+  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 3 (*d* = 1.05)
+  - Decreasing 3 to 1 showed greater amplitude than Increasing 1 to 3 (*d* = 0.93)
+  - Increasing 1 to 2 showed greater amplitude than Increasing 1 to 3 (*d* = 0.45)
+**N1 latency:** Significant main effect of condition (*p* = 0.027). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 0.44)
+**P1 amplitude:** Significant main effect of condition (*p* = 0.024) (no significant pairwise comparisons)
 
 ### Research Implications
 

@@ -6,14 +6,14 @@ selection:
   response: "ALL"
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Increasing 1 to 2"
+    - name: "1 to 2"
       conditions: ["12"]
-      color: "#2ca02c"  # Green (increasing)
-      linestyle: ":"   # dotted
-    - name: "Increasing 1 to 3"
+      color: "#02d502"  # Green (increasing)
+      linestyle: "--"   # dashed
+    - name: "1 to 3"
       conditions: ["13"]
-      color: "#2ca02c"  # Green (decreasing)
-      linestyle: "--"    # dashed
+      color: "#02d502"  # Green (decreasing)
+      linestyle: "-"    # solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]
@@ -22,7 +22,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
+  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
   linestyles:
     NC: "-"
     Decrease: ":"
