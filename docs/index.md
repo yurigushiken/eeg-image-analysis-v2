@@ -22,6 +22,36 @@ Click any thumbnail to view the full-size ERP plot with topographic maps.
 </table>
 <!-- AUTO-GENERATED END -->
 
+### Additional Plots
+
+<div class="carousel">
+  <h3>Condition Totals</h3>
+  <div class="carousel-viewport">
+    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+    <div class="carousel-track">
+      <div class="carousel-item"><a href="assets/plots/data_plots/0.6condition_totals_bar_ALL.png" data-lightbox aria-label="Condition totals ALL"><img class="thumb" src="assets/plots/data_plots/0.6condition_totals_bar_ALL.png" alt="Condition totals ALL"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/0.7condition_totals_bar_ACC1.png" data-lightbox aria-label="Condition totals ACC1"><img class="thumb" src="assets/plots/data_plots/0.7condition_totals_bar_ACC1.png" alt="Condition totals ACC1"/></a></div>
+    </div>
+    <button class="carousel-next" aria-label="Next">&#8250;</button>
+  </div>
+  <p class="site-description" style="margin-top:0.5rem">Scroll to view; click to open in lightbox.</p>
+</div>
+
+<div class="carousel">
+  <h3>Condition Count Heatmaps</h3>
+  <div class="carousel-viewport">
+    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+    <div class="carousel-track">
+      <div class="carousel-item"><a href="assets/plots/data_plots/1condition_counts_heatmap_pre_ALL.png" data-lightbox aria-label="Heatmap pre ALL"><img class="thumb" src="assets/plots/data_plots/1condition_counts_heatmap_pre_ALL.png" alt="Heatmap pre ALL"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/2condition_counts_heatmap_pre_ACC1.png" data-lightbox aria-label="Heatmap pre ACC1"><img class="thumb" src="assets/plots/data_plots/2condition_counts_heatmap_pre_ACC1.png" alt="Heatmap pre ACC1"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/3condition_counts_heatmap_ALL.png" data-lightbox aria-label="Heatmap ALL"><img class="thumb" src="assets/plots/data_plots/3condition_counts_heatmap_ALL.png" alt="Heatmap ALL"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/4condition_counts_heatmap_ACC1.png" data-lightbox aria-label="Heatmap ACC1"><img class="thumb" src="assets/plots/data_plots/4condition_counts_heatmap_ACC1.png" alt="Heatmap ACC1"/></a></div>
+    </div>
+    <button class="carousel-next" aria-label="Next">&#8250;</button>
+  </div>
+  <p class="site-description" style="margin-top:0.5rem">Scroll to view; click to open in lightbox.</p>
+</div>
+
 ### Documentation
 
 - [GitHub Repository](https://github.com/yurigushiken/eeg-image-analysis-v2)
