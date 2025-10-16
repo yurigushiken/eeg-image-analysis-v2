@@ -52,6 +52,23 @@ Click any thumbnail to view the full-size ERP plot with topographic maps.
   <p class="site-description" style="margin-top:0.5rem">Scroll to view; click to open in lightbox.</p>
 </div>
 
+<div class="carousel">
+  <h3>Behavior Condition Count</h3>
+  <div class="carousel-viewport">
+    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+    <div class="carousel-track">
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_35_45_65_grouped.png" data-lightbox aria-label="Behavior counts 35 45 65 grouped"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_35_45_65_grouped.png" alt="Behavior counts 35 45 65 grouped"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_56_46_45_35_stacked.png" data-lightbox aria-label="Behavior counts 56 46 45 35 stacked"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_56_46_45_35_stacked.png" alt="Behavior counts 56 46 45 35 stacked"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_65_64_54_53_stacked.png" data-lightbox aria-label="Behavior counts 65 64 54 53 stacked"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_65_64_54_53_stacked.png" alt="Behavior counts 65 64 54 53 stacked"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_36_46_56_grouped.png" data-lightbox aria-label="Behavior counts 36 46 56 grouped"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_36_46_56_grouped.png" alt="Behavior counts 36 46 56 grouped"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_65_64_63_grouped.png" data-lightbox aria-label="Behavior counts 65 64 63 grouped"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_65_64_63_grouped.png" alt="Behavior counts 65 64 63 grouped"/></a></div>
+      <div class="carousel-item"><a href="assets/plots/data_plots/preproc_accuracy_counts_53_54_56_grouped.png" data-lightbox aria-label="Behavior counts 53 54 56 grouped"><img class="thumb" src="assets/plots/data_plots/preproc_accuracy_counts_53_54_56_grouped.png" alt="Behavior counts 53 54 56 grouped"/></a></div>
+    </div>
+    <button class="carousel-next" aria-label="Next">&#8250;</button>
+  </div>
+  <p class="site-description" style="margin-top:0.5rem">Scroll to view; click to open in lightbox.</p>
+</div>
+
 ### Documentation
 
 - [GitHub Repository](https://github.com/yurigushiken/eeg-image-analysis-v2)
