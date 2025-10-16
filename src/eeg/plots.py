@@ -20,6 +20,7 @@ def make_erp_figure(
     linestyles: Optional[Mapping[str, str]] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
     ylimit_uv: Optional[float] = None,
+    epochs_by_label: Optional[Mapping[str, int]] = None,
 ):
     """
     Create an ERP overlay figure.
@@ -53,7 +54,13 @@ def make_erp_figure(
             kw["color"] = colors[label]
         if linestyles and label in linestyles:
             kw["linestyle"] = linestyles[label]
-        ax.plot(times_ms, y, label=label, **kw)
+        legend_label = label
+        try:
+            if epochs_by_label and label in epochs_by_label:
+                legend_label = f"{legend_label} [{int(epochs_by_label[label])} epochs]"
+        except Exception:
+            pass
+        ax.plot(times_ms, y, label=legend_label, **kw)
     ax.axvline(0, color="#999", linewidth=1, alpha=0.6)
     ax.set_xlabel("Time (ms)")
     ax.set_ylabel("Amplitude (µV)")
@@ -117,6 +124,7 @@ def make_component_figure(
     non_scalp_labels: Optional[List[str]] = None,
     highlight_channels: Optional[List[str]] = None,
     latency_annotation_label: Optional[str] = "FAL",
+    epochs_by_label: Optional[Mapping[str, int]] = None,
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -210,6 +218,12 @@ def make_component_figure(
                 display_label = f"{display_label} ({float(peak_ms_val):.0f}ms, {float(peak_amp_val):.1f} µV)"
         except Exception:
             # If any formatting fails, keep the base label
+            pass
+        # Append total epochs if provided
+        try:
+            if epochs_by_label and label in epochs_by_label:
+                display_label = f"{display_label} [{int(epochs_by_label[label])} epochs]"
+        except Exception:
             pass
         ax_overlay.plot(times_ms, y, label=display_label, **kw)
 

@@ -29,7 +29,14 @@ if SRC_DIR not in sys.path:
 from eeg.config import load_config, load_components_config, load_electrodes_config
 from eeg.plots import make_collapsed_localizer_figure, make_component_figure, make_erp_figure
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
-from eeg.io import discover_epoch_files, read_epochs, apply_montage, validate_baseline_window, extract_subject_id
+from eeg.io import (
+    discover_epoch_files,
+    read_epochs,
+    apply_montage,
+    validate_baseline_window,
+    extract_subject_id,
+    filter_by_response,
+)
 from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collapsed_localizer_roi
 from eeg.measures import mean_amplitude, fractional_area_latency, peak_latency, peak_amplitude
 import matplotlib.pyplot as plt
@@ -102,15 +109,25 @@ def main() -> int:
     response = str(cfg.selection.get("response", "ALL")).upper()
     sets = cfg.selection.get("condition_sets", [])
 
+    # Determine a label for response to use in titles/JSON; allow per-set overrides
+    try:
+        _unique_responses = set(
+            [str((s.get("response") or response)).upper() for s in sets] or [response]
+        )
+    except Exception:
+        _unique_responses = {response}
+    response_label = list(_unique_responses)[0] if len(_unique_responses) == 1 else "MIXED"
+
     print(f"Configuration:")
     print(f"  Baseline: {baseline} ms")
-    print(f"  Response filter: {response}")
+    print(f"  Response filter: {response_label}")
     print(f"  Condition sets: {[s['name'] for s in sets]}")
     print(f"  Components: {cfg.components}")
     print(f"  Subjects found: {len(fif_files)}\n")
 
     # Collect subject-level evoked responses per condition set
     set_name_to_evokeds = {s["name"]: [] for s in sets}
+    set_name_to_total_epochs = {s["name"]: 0 for s in sets}
     qc_rows = []
 
     # Measurement method toggles (project-wide default = peak if absent)
@@ -133,30 +150,39 @@ def main() -> int:
         bl = (baseline[0] / 1000.0, baseline[1] / 1000.0)
         validate_baseline_window(epochs, baseline)
 
-        # Response filtering (ACC1 or ALL)
-        if response == "ACC1":
-            if getattr(epochs, "metadata", None) is None or "Target.ACC" not in epochs.metadata.columns:
-                continue
-            epochs = epochs[epochs.metadata["Target.ACC"] == 1]
-
+        # Apply baseline (independent of response filtering)
         epochs.apply_baseline(bl)
         subj_id = extract_subject_id(epochs, fif)
 
-        # Process each condition set
+        # Process each condition set (with optional per-set response override)
         for item in sets:
             name = item["name"]
             codes = [str(c) for c in item.get("conditions", [])]
+            set_response = str(item.get("response") or response).upper()
+
+            # Apply per-set response filtering on a view of epochs
+            try:
+                epochs_for_set = filter_by_response(epochs, set_response)
+            except Exception as e:
+                qc_rows.append({
+                    "subject": subj_id,
+                    "set": name,
+                    "included": False,
+                    "epoch_count": 0,
+                    "exclusion_reason": f"response_filter_error:{str(e)}",
+                })
+                continue
 
             # Select epochs by condition codes
-            if getattr(epochs, "metadata", None) is not None and "Condition" in epochs.metadata.columns:
-                mask = epochs.metadata["Condition"].astype(str).isin(codes)
-                sub = epochs[mask]
+            if getattr(epochs_for_set, "metadata", None) is not None and "Condition" in epochs_for_set.metadata.columns:
+                mask = epochs_for_set.metadata["Condition"].astype(str).isin(codes)
+                sub = epochs_for_set[mask]
             else:
                 # Fallback using event labels
                 sub = None
                 for code in codes:
                     try:
-                        part = epochs[str(code)]
+                        part = epochs_for_set[str(code)]
                     except Exception:
                         continue
                     sub = part if sub is None else sub + part
@@ -187,6 +213,11 @@ def main() -> int:
             # Compute subject-level evoked and store
             evk = sub.average()
             set_name_to_evokeds[name].append(evk)
+            # Accumulate total epochs for this condition across subjects
+            try:
+                set_name_to_total_epochs[name] += epoch_count
+            except Exception:
+                pass
 
             qc_rows.append({
                 "subject": subj_id,
@@ -702,7 +733,7 @@ def main() -> int:
                 times_ms=times_ms,
                 topomap_by_label=topomap_by_label,
                 info=gav_info,
-                title=f"{analysis_id}: {comp} ({response})",
+                title=f"{analysis_id}: {comp} ({response_label})",
                 subtitle=f"baseline {baseline} ms; {method_label} FWHM window: [{window_start:.1f}, {window_end:.1f}] ms",
                 colors=colors,
                 linestyles=linestyles,
@@ -715,6 +746,7 @@ def main() -> int:
                 exclude_non_scalp=exclude_non_scalp,
                 non_scalp_labels=non_scalp_labels,
                 highlight_channels=roi_channels,
+                epochs_by_label=set_name_to_total_epochs,
             )
             try:
                 fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
@@ -779,12 +811,13 @@ def main() -> int:
             fig = make_erp_figure(
                 curves_by_label=curves_by_label,
                 times_ms=times_ms,
-                title=f"{analysis_id}: {comp} ({response})",
+                title=f"{analysis_id}: {comp} ({response_label})",
                 subtitle=f"baseline {baseline} ms; Component window unavailable",
                 colors=colors,
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
                 ylimit_uv=ylimit_uv,
+                epochs_by_label=set_name_to_total_epochs,
             )
             try:
                 fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
@@ -807,7 +840,7 @@ def main() -> int:
         "analysis_id": analysis_id,
         "date_analyzed": dt.datetime.now().isoformat(),
         "baseline_ms": list(baseline),
-        "response_filter": response,
+        "response_filter": response_label,
         "fal_fraction": 0.5,  # Fractional area latency: 50% = temporal midpoint
         "n_subjects_total": len(fif_files),
         "n_evokeds_included": total_evokeds,

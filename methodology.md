@@ -6,7 +6,9 @@ We use a **collapsed localizer** approach (Luck & Gaspelin, 2017) where data is 
 
 Within FWHM-derived measurement windows, we quantify **mean amplitude** and **50% fractional area latency** (FAL) as our primary dependent variables. Mean amplitude has advantages over peak amplitude measures: it is insensitive to high-frequency noise (functioning as a low-pass filter), completely unaffected by trial-to-trial latency variability, represents a linear measure that can be meaningfully averaged, and provides an unbiased estimate equally likely to over- or under-estimate the true value (Luck, 2014). For quantifying latency, we use fractional area latency at the 50% criterion, which identifies the time point at which the cumulative area under the curve reaches half of the total area within the measurement window. FAL represents the temporal midpoint of the component and is less influencd by high-frequency noise than peak latency measures (Kiesel et al., 2008). 
 
-We still record 'peak' amplitude and 'peak' latency as secondary metrics for comparison purposes. All preprocessing and analysis are conducted using MNE-Python (Gramfort et al., 2013), with baseline correction applied to a -100 to 0 ms prestimulus .
+We still record 'peak' amplitude and 'peak' latency as secondary metrics, for use if we want them. 
+
+We use MNE-Python (Gramfort et al., 2013).
 
 ## Statistical Analysis
 
