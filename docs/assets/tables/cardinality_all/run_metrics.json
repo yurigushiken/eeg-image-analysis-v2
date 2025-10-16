@@ -1,15 +1,15 @@
 {
   "analysis_id": "cardinality_all",
-  "duration_seconds": 9.703,
+  "duration_seconds": 10.943,
   "num_figures": 4,
-  "largest_png_bytes": 836665,
-  "total_png_bytes": 2981790,
+  "largest_png_bytes": 860708,
+  "total_png_bytes": 3059636,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
     "cardinality_all-collapsed_localizer.png": 496164,
-    "cardinality_all-P1.png": 836665,
-    "cardinality_all-N1.png": 829252,
-    "cardinality_all-P3b.png": 819709
+    "cardinality_all-P1.png": 860708,
+    "cardinality_all-N1.png": 854422,
+    "cardinality_all-P3b.png": 848342
   }
 }

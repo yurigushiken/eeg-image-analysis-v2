@@ -9,11 +9,11 @@ selection:
     - name: "Increasing 1 to 4"
       conditions: ["14"]
       color: "#2ca02c"  # Green (increasing)
-      linestyle: "--"   # Dashed
+      linestyle: "-"   # solid
     - name: "Decreasing 4 to 1"
       conditions: ["41"]
       color: "#d62728"  # Red (decreasing)
-      linestyle: "--"    # dashed
+      linestyle: "-"    # solid
 components: ["P1", "N1", "P3b"]
 preprocessing:
   baseline_ms: [-100, 0]

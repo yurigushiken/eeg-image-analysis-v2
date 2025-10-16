@@ -671,6 +671,19 @@ def main() -> int:
                 if val is not None and not np.isnan(val):
                     latencies_by_label[meas['condition']] = val
 
+            # === NEW: Collect per-condition peak amplitudes for horizontal lines ===
+            peak_amplitudes_by_label = {}
+            for meas in condition_measurements:
+                if meas['component'] != comp:
+                    continue
+                amp_val = meas.get('peak_amplitude_roi')
+                if amp_val is not None and not np.isnan(amp_val):
+                    peak_amplitudes_by_label[meas['condition']] = float(amp_val)
+
+            # === NEW: Legend latency should match selected latency metric ===
+            # Use the same values used for vertical lines (Peak or FAL depending on latency_mode)
+            legend_peak_latencies_by_label = dict(latencies_by_label)
+
             # Read plotting options for non-scalp exclusion (default ON)
             exclude_non_scalp = bool(cfg.plots.get("exclude_non_scalp", True))
             non_scalp_labels = cfg.plots.get("non_scalp_labels") or None
@@ -695,6 +708,8 @@ def main() -> int:
                 linestyles=linestyles,
                 xlim_ms=xlim_ms,
                 latencies_by_label=latencies_by_label,
+                peak_amplitudes_by_label=peak_amplitudes_by_label,
+                legend_peak_latencies_by_label=legend_peak_latencies_by_label,
                 latency_annotation_label=("Peak" if latency_mode == "peak" else "FAL"),
                 ylimit_uv=ylimit_uv,
                 exclude_non_scalp=exclude_non_scalp,

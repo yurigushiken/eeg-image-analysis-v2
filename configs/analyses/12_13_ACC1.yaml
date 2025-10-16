@@ -9,7 +9,7 @@ selection:
     - name: "Increasing 1 to 2"
       conditions: ["12"]
       color: "#2ca02c"  # Green (increasing)
-      linestyle: "-"   # Solid
+      linestyle: ":"   # dotted
     - name: "Increasing 1 to 3"
       conditions: ["13"]
       color: "#2ca02c"  # Green (decreasing)

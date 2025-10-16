@@ -9,22 +9,22 @@ selection:
     - name: "increasing 1 to 2"
       conditions: ["12"]
       color: "#2ca02c"  # Green (increasing)
-      linestyle: "--"   # Dashed
+      linestyle: ":"   # dotted
     - name: "Cardinality2"
       conditions: ["22"]
       color: "#377eb8"  # Blue
       linestyle: "-"    # Solid
     - name: "3 to 2"
       conditions: ["32"]
-      color: "#f472b6"  # Pink
-      linestyle: "-"    # Solid
+      color: "#e41a1c"  # red
+      linestyle: ":"    # dotted
     - name: "4 to 2"
       conditions: ["42"]
-      color: "#ff7f00"  # Orange
-      linestyle: "-"    # Solid
+      color: "#e41a1c"  # red
+      linestyle: "--"    # dashed
     - name: "5 to 2"
       conditions: ["52"]
-      color: "#e41a1c"  # Red
+      color: "#e41a1c"  # red
       linestyle: "-"    # Solid
 
 components: ["P1", "N1", "P3b"]

@@ -9,19 +9,18 @@ selection:
     - name: "Cardinality1"
       conditions: ["11"]
       color: "#377eb8"  # Blue
-      
       linestyle: "-"    # Solid
     - name: "2 to 1"
       conditions: ["21"]
-      color: "#f472b6"  # Pink
-      linestyle: "-"    # Solid
+      color: "#e41a1c"  # red
+      linestyle: ":"    # dotted
     - name: "3 to 1"
       conditions: ["31"]
-      color: "#ff7f00"  # Orange
-      linestyle: "-"    # Solid
+      color: "#e41a1c"  # red
+      linestyle: "--"    # dashed
     - name: "4 to 1"
       conditions: ["41"]
-      color: "#e41a1c"  # Red
+      color: "#e41a1c"  # red
       linestyle: "-"    # Solid
 components: ["P1", "N1", "P3b"]
 preprocessing:

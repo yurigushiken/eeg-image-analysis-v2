@@ -110,6 +110,8 @@ def make_component_figure(
     linestyles: Optional[Mapping[str, str]] = None,
     xlim_ms: Optional[Tuple[float, float]] = None,
     latencies_by_label: Optional[Dict[str, float]] = None,
+    peak_amplitudes_by_label: Optional[Dict[str, float]] = None,
+    legend_peak_latencies_by_label: Optional[Dict[str, float]] = None,
     ylimit_uv: Optional[float] = None,
     exclude_non_scalp: bool = True,
     non_scalp_labels: Optional[List[str]] = None,
@@ -195,6 +197,20 @@ def make_component_figure(
             tup = topomap_by_label[label]
             if len(tup) > 3 and tup[3]:  # used_fallback=True
                 display_label = f"{label}*"
+
+        # Append peak legend info if available: (123ms, 4.5 µV)
+        try:
+            peak_ms_val = None
+            if legend_peak_latencies_by_label and label in legend_peak_latencies_by_label:
+                peak_ms_val = legend_peak_latencies_by_label[label]
+            peak_amp_val = None
+            if peak_amplitudes_by_label and label in peak_amplitudes_by_label:
+                peak_amp_val = peak_amplitudes_by_label[label]
+            if peak_ms_val is not None and not np.isnan(peak_ms_val) and peak_amp_val is not None and not np.isnan(peak_amp_val):
+                display_label = f"{display_label} ({float(peak_ms_val):.0f}ms, {float(peak_amp_val):.1f} µV)"
+        except Exception:
+            # If any formatting fails, keep the base label
+            pass
         ax_overlay.plot(times_ms, y, label=display_label, **kw)
 
     ax_overlay.axvline(0, color="#999", linewidth=1, alpha=0.6)
@@ -211,14 +227,42 @@ def make_component_figure(
             else:
                 color = "#444"  # Default dark gray
 
-            # Very thin solid line matching the condition waveform color
+            # Match the condition's linestyle from config for the latency line
+            ls = linestyles.get(label, "-") if linestyles else "-"
+
             ax_overlay.axvline(
                 fal_ms,
                 color=color,
                 alpha=0.7,
-                linestyle="-",  # Solid line (distinct from dashed collapsed peak)
-                linewidth=0.8,  # Made thinner per user request
-                zorder=5  # Above the dashed peak lines
+                linestyle=ls,
+                linewidth=0.8,
+                zorder=5
+            )
+
+    # === NEW: Draw per-condition horizontal lines at peak amplitude ===
+    # These provide a quick visual reference for the peak amplitude level per condition.
+    # Light, dotted lines color-matched to the condition.
+    if peak_amplitudes_by_label:
+        for label, peak_amp in peak_amplitudes_by_label.items():
+            try:
+                amp_val = float(peak_amp)
+            except Exception:
+                continue
+            if colors and label in colors:
+                color = colors[label]
+            else:
+                color = "#666"
+
+            # Match the condition's linestyle from config for the amplitude line
+            ls = linestyles.get(label, "-") if linestyles else "-"
+
+            ax_overlay.axhline(
+                y=amp_val,
+                color=color,
+                linestyle=ls,
+                linewidth=0.8,
+                alpha=0.6,
+                zorder=3
             )
 
     # Figure-level main title
