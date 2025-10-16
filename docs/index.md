@@ -9,6 +9,8 @@ title: EEG ERP Analyses
 
 Click any thumbnail to view the full-size ERP plot with topographic maps.
 
+<p><a href="https://github.com/yurigushiken/eeg-image-analysis-v2/blob/main/methodology.md" target="_blank">Link to methodology document explaining 'peak' amplitude and latency.</a></p>
+
 <!-- AUTO-GENERATED START -->
 <table class="grid-table">
 <thead>

@@ -263,6 +263,16 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     pre, rest = content.split(start_marker, 1)
     block, post = rest.split(end_marker, 1)
 
+    # Ensure a methodology link appears just above the gallery table
+    # This is idempotent; we insert it once and keep it on subsequent updates.
+    methodology_link_html = (
+        "<p><a href=\"https://github.com/yurigushiken/eeg-image-analysis-v2/blob/main/methodology.md\" target=\"_blank\">"
+        "Link to methodology document explaining 'peak' amplitude and latency.</a></p>\n\n"
+    )
+    if "methodology document explaining 'peak' amplitude and latency" not in pre:
+        # Insert before the auto-generated table block
+        pre = pre.rstrip() + "\n\n" + methodology_link_html
+
     # Parse existing entries - group rows by analysis ID
     # Each analysis may have multiple <tr> rows (ERP row + stats row)
     import re
