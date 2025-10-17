@@ -1,0 +1,15 @@
+{
+  "analysis_id": "from3_to_any",
+  "duration_seconds": 10.923,
+  "num_figures": 4,
+  "largest_png_bytes": 875827,
+  "total_png_bytes": 3074813,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "from3_to_any-collapsed_localizer.png": 492291,
+    "from3_to_any-P1.png": 854840,
+    "from3_to_any-N1.png": 851855,
+    "from3_to_any-P3b.png": 875827
+  }
+}

@@ -14,7 +14,7 @@ selection:
     - name: "2 to 4"
       conditions: ["24"]
       color: "#02d502"  # green
-      linestyle: "-"    # dashed
+      linestyle: "--"    # dashed
     - name: "3 to 4"
       conditions: ["34"]
       color: "#02d502"  # green
