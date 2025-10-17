@@ -119,9 +119,9 @@ tests:
     # Fixed effects formula
     # Examples:
     #   'condition' - single factor
-    #   'condition + snr' - condition with SNR covariate
+    #   'condition + snr' - condition with SNR covariate (RECOMMENDED)
     #   'condition * snr' - with interaction
-    fixed: condition
+    fixed: condition + snr
 
     # Random effects grouping variable (typically 'subject_id')
     random: subject_id

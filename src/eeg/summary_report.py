@@ -279,7 +279,7 @@ class StatisticalReportGenerator:
         return "\n".join(lines)
 
     def _generate_inferential_section(self) -> str:
-        """Generate inferential statistics section."""
+        """Generate inferential statistics section (LMM-first approach)."""
         lines = [
             "## 3. Inferential Statistics",
             "",
@@ -306,11 +306,69 @@ class StatisticalReportGenerator:
                 pairwise_df = self._load_pairwise_results(component, measure_key)
                 lmm_result = self._load_lmm_results(component, measure_key)
 
-                # ANOVA Results
+                # ===================================================================
+                # SECTION 1: LMM Results (PRIMARY ANALYSIS)
+                # ===================================================================
+                if lmm_result is not None:
+                    lines.extend([
+                        "**Linear Mixed-Effects Model (Primary Analysis):**",
+                        ""
+                    ])
+
+                    converged = lmm_result.get('converged', False)
+                    aic = lmm_result.get('aic')
+                    bic = lmm_result.get('bic')
+
+                    if converged and aic != float('-inf') and aic != float('inf'):
+                        lines.append(f"- Model converged successfully")
+                        lines.append(f"- AIC = {aic:.2f}, BIC = {bic:.2f}")
+
+                        # Parse summary if available
+                        summary = lmm_result.get('summary', [])
+                        if summary and len(summary) > 1:
+                            # Show all fixed effects (condition + covariates like SNR)
+                            try:
+                                # Row 0 is intercept, rows 1+ are fixed effects
+                                for i, effect in enumerate(summary[1:], start=1):
+                                    effect_name = effect.get('name', f'effect_{i}')
+                                    coef = float(effect.get('Coef.', 0))
+                                    se = effect.get('Std.Err.', '')
+                                    z = effect.get('z', '')
+                                    p = effect.get('P>|z|', '')
+
+                                    if se and z and p:
+                                        # Capitalize effect name nicely
+                                        display_name = effect_name.replace('_', ' ').title() if effect_name != 'condition' else 'Condition'
+                                        lines.append(f"- {display_name} effect: *β* = {coef:.2f}, *SE* = {se}, *z* = {z}, *p* {self._format_p_value(float(p))}")
+                            except (ValueError, TypeError, KeyError):
+                                # Fallback: just show condition effect (row 1)
+                                try:
+                                    cond_effect = summary[1]
+                                    coef = float(cond_effect.get('Coef.', 0))
+                                    se = cond_effect.get('Std.Err.', '')
+                                    z = cond_effect.get('z', '')
+                                    p = cond_effect.get('P>|z|', '')
+
+                                    if se and z and p:
+                                        lines.append(f"- Condition effect: *β* = {coef:.2f}, *SE* = {se}, *z* = {z}, *p* {self._format_p_value(float(p))}")
+                                except (ValueError, TypeError, KeyError):
+                                    lines.append("- _Coefficient estimates available in JSON output_")
+
+                        lines.append("")
+                        lines.append("_Note: LMM uses all available subject data via maximum likelihood estimation._")
+                        lines.append("")
+                    else:
+                        lines.append("_LMM did not converge or had numerical issues._\n")
+                else:
+                    lines.append("_LMM results not available._\n")
+
+                # ===================================================================
+                # SECTION 2: ANOVA Results (SUPPLEMENTARY ANALYSIS)
+                # ===================================================================
                 if anova_df is not None and len(anova_df) > 0:
                     try:
                         lines.extend([
-                            "**Repeated-Measures ANOVA:**",
+                            "**Repeated-Measures ANOVA (Supplementary Analysis):**",
                             ""
                         ])
 
@@ -359,18 +417,26 @@ class StatisticalReportGenerator:
                                 interp = "**not significant**"
 
                             lines.append(f"- **Interpretation:** The main effect of condition was {interp}.")
+
+                            # Add effective N warning for listwise deletion
+                            if dfd is not None:
+                                n_complete = int(dfd) + 1  # df_denominator = n - 1
+                                lines.append(f"- _Note: ANOVA restricted to n={n_complete} subjects with complete data across all conditions (listwise deletion)._")
+
                             lines.append("")
                         else:
                             lines.append("_ANOVA results not available (condition row not found)._\n")
                     except Exception as e:
                         lines.append(f"_ANOVA results could not be parsed (error: {str(e)[:50]})._\n")
                 else:
-                    lines.append("_ANOVA results not available (may require pingouin library)._\n")
+                    lines.append("_ANOVA results not available._\n")
 
-                # Pairwise Comparisons
+                # ===================================================================
+                # SECTION 3: Pairwise Comparisons (SUPPLEMENTARY ANALYSIS)
+                # ===================================================================
                 if pairwise_df is not None and len(pairwise_df) > 0:
                     lines.extend([
-                        "**Pairwise Comparisons:**",
+                        "**Pairwise Comparisons (Supplementary Analysis):**",
                         ""
                     ])
 
@@ -421,43 +487,6 @@ class StatisticalReportGenerator:
                         lines.append("_Pairwise tests could not be computed (insufficient paired samples)._\n")
                 else:
                     lines.append("_Pairwise test results not available._\n")
-
-                # LMM Results
-                if lmm_result is not None:
-                    lines.extend([
-                        "**Linear Mixed-Effects Model:**",
-                        ""
-                    ])
-
-                    converged = lmm_result.get('converged', False)
-                    aic = lmm_result.get('aic')
-                    bic = lmm_result.get('bic')
-
-                    if converged and aic != float('-inf') and aic != float('inf'):
-                        lines.append(f"- Model converged successfully")
-                        lines.append(f"- AIC = {aic:.2f}, BIC = {bic:.2f}")
-
-                        # Parse summary if available
-                        summary = lmm_result.get('summary', [])
-                        if summary and len(summary) > 1:
-                            # Fixed effect for condition (usually row 1)
-                            try:
-                                cond_effect = summary[1]
-                                coef = float(cond_effect.get('Coef.', 0))
-                                se = cond_effect.get('Std.Err.', '')
-                                z = cond_effect.get('z', '')
-                                p = cond_effect.get('P>|z|', '')
-
-                                if se and z and p:
-                                    lines.append(f"- Condition effect: *β* = {coef:.2f}, *SE* = {se}, *z* = {z}, *p* {self._format_p_value(float(p))}")
-                            except (ValueError, TypeError, KeyError):
-                                lines.append("- _Coefficient estimates available in JSON output_")
-
-                        lines.append("")
-                    else:
-                        lines.append("_LMM did not converge or had numerical issues._\n")
-                else:
-                    lines.append("_LMM results not available._\n")
 
             lines.append("")
 
@@ -622,24 +651,39 @@ class StatisticalReportGenerator:
 
         lines.extend([
             "### Statistical Analysis",
-            "",
-            "Within-subjects repeated-measures analyses were conducted using:"
+            ""
         ])
 
         if self.summary_data and self.summary_data.get('tests_run'):
             tests = self.summary_data['tests_run']
 
-            if tests.get('anova'):
-                lines.append("- Repeated-measures ANOVA with Greenhouse-Geisser correction for sphericity violations (ε < 0.75)")
-
-            if tests.get('pairwise'):
-                lines.append("- Post-hoc pairwise t-tests with false discovery rate (FDR) correction for multiple comparisons")
-
+            # LMM-first approach
             if tests.get('lmm'):
-                lines.append("- Linear mixed-effects models (LMM) with random intercepts for subjects to handle missing data")
+                lines.extend([
+                    "Linear mixed-effects models (LMM) with random intercepts for subjects were used as the primary analysis, "
+                    "as they optimally handle missing data via maximum likelihood estimation (Baayen et al., 2008). "
+                ])
+
+                # Mention SNR covariate if it appears to be used
+                settings = self.summary_data.get('analysis_settings', {})
+                if settings:
+                    # Note: We can't directly detect SNR from tests_run, but we mention it in general
+                    pass
+
+            if tests.get('anova') or tests.get('pairwise'):
+                lines.extend([
+                    "For comparison with traditional approaches, repeated-measures ANOVA and pairwise t-tests were also performed on complete cases; "
+                    "however, power was substantially reduced by listwise deletion. Therefore, LMM results are emphasized in interpretation.",
+                    ""
+                ])
+        else:
+            # Fallback if no tests_run metadata
+            lines.extend([
+                "Within-subjects repeated-measures analyses were conducted using linear mixed-effects models (LMM) as the primary test.",
+                ""
+            ])
 
         lines.extend([
-            "",
             "Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalized eta-squared (η²_G) for ANOVA.",
             ""
         ])
@@ -663,6 +707,7 @@ class StatisticalReportGenerator:
         lines.extend([
             "### References",
             "",
+            "- Baayen, R. H., Davidson, D. J., & Bates, D. M. (2008). Mixed-effects modeling with crossed random effects for subjects and items. *Journal of Memory and Language, 59*(4), 390-412.",
             "- Kiesel, A., Miller, J., Jolicœur, P., & Brisson, B. (2008). Measurement of ERP latency differences: A comparison of single-participant and jackknife-based scoring methods. *Psychophysiology, 45*(2), 250-274.",
             "- Luck, S. J., & Gaspelin, N. (2017). How to get statistically significant effects in any ERP experiment (and why you shouldn't). *Psychophysiology, 54*(1), 146-157.",
             ""

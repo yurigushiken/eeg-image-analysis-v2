@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 00:45:03
+**Generated:** 2025-10-17 03:06:51
 
 ---
 
@@ -108,12 +108,23 @@ This section presents the results of repeated-measures statistical tests.
 
 #### Mean Amplitude (ROI)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 271.50, BIC = 288.35
+- Effect 1 effect: *β* = -0.22, *SE* = 0.325, *z* = -0.680, *p* = 0.497
+- Effect 2 effect: *β* = -0.49, *SE* = 0.333, *z* = -1.487, *p* = 0.137
+- Effect 3 effect: *β* = -0.90, *SE* = 0.353, *z* = -2.561, *p* = 0.010
+- Effect 4 effect: *β* = -0.39, *SE* = 0.048, *z* = -8.162, *p* < .001
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 9.54, *p* < .001, η²_G = 0.159
 - **Interpretation:** The main effect of condition was **highly significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -128,20 +139,25 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 321.98, BIC = 336.42
-- Condition effect: *β* = -0.25, *SE* = 0.431, *z* = -0.577, *p* = 0.564
-
 #### Latency (50% Fractional Area)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 600.72, BIC = 617.57
+- Effect 1 effect: *β* = 1.28, *SE* = 2.221, *z* = 0.575, *p* = 0.565
+- Effect 2 effect: *β* = -3.36, *SE* = 2.263, *z* = -1.487, *p* = 0.137
+- Effect 3 effect: *β* = -2.38, *SE* = 2.392, *z* = -0.995, *p* = 0.320
+- Effect 4 effect: *β* = -0.56, *SE* = 0.321, *z* = -1.729, *p* = 0.084
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 3.38, *p* = 0.027, η²_G = 0.046
 - **Interpretation:** The main effect of condition was **significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -156,23 +172,28 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 601.64, BIC = 616.09
-- Condition effect: *β* = 1.26, *SE* = 2.274, *z* = 0.553, *p* = 0.580
-
 
 ### 3.2 P1 Component
 
 #### Mean Amplitude (ROI)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 209.73, BIC = 224.73
+- Effect 1 effect: *β* = -0.51, *SE* = 0.352, *z* = -1.446, *p* = 0.148
+- Effect 2 effect: *β* = -1.11, *SE* = 0.432, *z* = -2.566, *p* = 0.010
+- Effect 3 effect: *β* = -0.66, *SE* = 0.434, *z* = -1.524, *p* = 0.127
+- Effect 4 effect: *β* = 0.48, *SE* = 0.064, *z* = 7.484, *p* < .001
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 4.00, *p* = 0.024, η²_G = 0.257
 - **Interpretation:** The main effect of condition was **significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -187,20 +208,25 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 250.52, BIC = 263.38
-- Condition effect: *β* = -0.98, *SE* = 0.458, *z* = -2.133, *p* = 0.033
-
 #### Latency (50% Fractional Area)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 417.71, BIC = 432.71
+- Effect 1 effect: *β* = 0.33, *SE* = 1.871, *z* = 0.176, *p* = 0.860
+- Effect 2 effect: *β* = -2.37, *SE* = 2.255, *z* = -1.050, *p* = 0.294
+- Effect 3 effect: *β* = -4.30, *SE* = 2.260, *z* = -1.904, *p* = 0.057
+- Effect 4 effect: *β* = -0.19, *SE* = 0.321, *z* = -0.591, *p* = 0.554
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 1.67, *p* = 0.210, η²_G = 0.177
 - **Interpretation:** The main effect of condition was **not significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -215,23 +241,28 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 416.06, BIC = 428.92
-- Condition effect: *β* = 0.52, *SE* = 1.828, *z* = 0.286, *p* = 0.775
-
 
 ### 3.3 P3b Component
 
 #### Mean Amplitude (ROI)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 350.34, BIC = 366.75
+- Effect 1 effect: *β* = -0.54, *SE* = 0.613, *z* = -0.883, *p* = 0.377
+- Effect 2 effect: *β* = -0.28, *SE* = 0.617, *z* = -0.449, *p* = 0.653
+- Effect 3 effect: *β* = 0.32, *SE* = 0.601, *z* = 0.538, *p* = 0.590
+- Effect 4 effect: *β* = 0.28, *SE* = 0.051, *z* = 5.407, *p* < .001
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 0.65, *p* = 0.587, η²_G = 0.024
 - **Interpretation:** The main effect of condition was **not significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -246,20 +277,25 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 374.08, BIC = 388.14
-- Condition effect: *β* = 0.29, *SE* = 0.693, *z* = 0.422, *p* = 0.673
-
 #### Latency (50% Fractional Area)
 
-**Repeated-Measures ANOVA:**
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 660.89, BIC = 677.30
+- Effect 1 effect: *β* = -4.35, *SE* = 4.787, *z* = -0.908, *p* = 0.364
+- Effect 2 effect: *β* = 1.11, *SE* = 4.839, *z* = 0.229, *p* = 0.819
+- Effect 3 effect: *β* = -6.70, *SE* = 4.686, *z* = -1.430, *p* = 0.153
+- Effect 4 effect: *β* = -0.18, *SE* = 0.386, *z* = -0.463, *p* = 0.643
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 0.52, *p* = 0.670, η²_G = 0.020
 - **Interpretation:** The main effect of condition was **not significant**.
 
-**Pairwise Comparisons:**
+**Pairwise Comparisons (Supplementary Analysis):**
 
 _Post-hoc tests with FDR correction for multiple comparisons:_
 
@@ -273,12 +309,6 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | Increasing 1 to 2 vs Increasing 1 to 3 | 0.98 | 14 | = 0.742 | 0.30 [-0.21, 0.89] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-**Linear Mixed-Effects Model:**
-
-- Model converged successfully
-- AIC = 659.10, BIC = 673.17
-- Condition effect: *β* = -4.89, *SE* = 4.654, *z* = -1.050, *p* = 0.294
 
 
 ---
@@ -382,10 +412,8 @@ ERP components were measured using a collapsed localizer approach, where compone
 
 ### Statistical Analysis
 
-Within-subjects repeated-measures analyses were conducted using:
-- Repeated-measures ANOVA with Greenhouse-Geisser correction for sphericity violations (ε < 0.75)
-- Post-hoc pairwise t-tests with false discovery rate (FDR) correction for multiple comparisons
-- Linear mixed-effects models (LMM) with random intercepts for subjects to handle missing data
+Linear mixed-effects models (LMM) with random intercepts for subjects were used as the primary analysis, as they optimally handle missing data via maximum likelihood estimation (Baayen et al., 2008). 
+For comparison with traditional approaches, repeated-measures ANOVA and pairwise t-tests were also performed on complete cases; however, power was substantially reduced by listwise deletion. Therefore, LMM results are emphasized in interpretation.
 
 Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalized eta-squared (η²_G) for ANOVA.
 
@@ -398,6 +426,7 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### References
 
+- Baayen, R. H., Davidson, D. J., & Bates, D. M. (2008). Mixed-effects modeling with crossed random effects for subjects and items. *Journal of Memory and Language, 59*(4), 390-412.
 - Kiesel, A., Miller, J., Jolicœur, P., & Brisson, B. (2008). Measurement of ERP latency differences: A comparison of single-participant and jackknife-based scoring methods. *Psychophysiology, 45*(2), 250-274.
 - Luck, S. J., & Gaspelin, N. (2017). How to get statistically significant effects in any ERP experiment (and why you shouldn't). *Psychophysiology, 54*(1), 146-157.
 

@@ -389,13 +389,26 @@ subject_id,component,condition,latency_frac_area_ms,mean_amplitude_roi,peak_late
 ### Condition-level summaries (descriptive)
 `condition_measurements.csv` summarizes per-component × condition means to support descriptive tables/figures. Use `subject_measurements.csv` for inferential tests.
 
-### Phase 2B: Statistical Testing Module
+### Phase 2B: Statistical Testing Module (LMM-First Approach)
 
-The pipeline includes a complete statistical analysis module that automatically generates:
-- **Repeated-measures ANOVA** (within-subjects designs)
+The pipeline implements a modern **LMM-first** statistical approach that prioritizes robustness and statistical power:
+
+**Primary Analysis:**
+- **Linear Mixed-Effects Models (LMM)** - handles missing data optimally via maximum likelihood estimation
+
+**Supplementary Analyses:**
+- **Repeated-measures ANOVA** - traditional approach (complete cases only, reported with effective N)
 - **Pairwise t-tests** with multiple comparison correction (FDR, Bonferroni, Holm)
-- **Linear Mixed-Effects Models (LMM)** for complex designs and missing data
 - **Descriptive statistics** by condition
+
+**Why LMM-First?**
+- Uses **all available subject data** (not just complete cases)
+- **Higher statistical power** when data has missingness
+- Handles unbalanced designs naturally
+- Can include covariates like SNR for quality control
+- Recommended by Baayen et al. (2008) for within-subjects designs with missing data
+
+**Significance stars on plots** use LMM p-values (with ANOVA fallback if LMM unavailable).
 
 #### Run Statistical Analysis
 
@@ -429,7 +442,8 @@ input_csv: "docs/assets/tables/landing_on_2/subject_measurements.csv"
 
 # Quality control filters
 filters:
-  min_snr: 2.0  # Minimum signal-to-noise ratio
+  min_snr: null  # Optional: minimum SNR threshold (e.g., 2.0) to exclude low-quality data
+                 # Recommended: keep null and use SNR as covariate in LMM instead
 
 # Which tests to run
 tests:
@@ -440,7 +454,8 @@ tests:
     correction: fdr_bh  # or 'bonf', 'holm', 'none'
   lmm:
     enabled: true
-    fixed: condition  # Can add covariates: 'condition + snr'
+    fixed: condition + snr  # RECOMMENDED: Include SNR as covariate to statistically control for data quality
+                            # Alternatives: 'condition' (no covariate), 'condition * snr' (interaction)
 
 # Components and dependent variables
 components: ["N1", "P1", "P3b"]

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-17 00:54:53",
+  "timestamp": "2025-10-17 03:15:58",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_landing_on_4_any_preceding_pkl0rmlc.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_landing_on_4_any_preceding_0gf0vzjf.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\landing_on_4_any_preceding\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -169,8 +169,8 @@
         "component": "N1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 575.6927447911404,
-        "bic": 598.9349430186478,
+        "aic": 502.4252452797265,
+        "bic": 528.5727182856724,
         "converged": true,
         "output_file": "lmm_N1_mean_amplitude_roi.json"
       },
@@ -178,8 +178,8 @@
         "component": "N1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 928.2268007391602,
-        "bic": 951.4689989666676,
+        "aic": 930.2153309455622,
+        "bic": 956.3628039515081,
         "converged": true,
         "output_file": "lmm_N1_latency_frac_area_ms.json"
       },
@@ -187,8 +187,8 @@
         "component": "P1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 318.79998758973795,
-        "bic": 338.434765959766,
+        "aic": 228.96037108070095,
+        "bic": 251.04949674698253,
         "converged": true,
         "output_file": "lmm_P1_mean_amplitude_roi.json"
       },
@@ -196,8 +196,8 @@
         "component": "P1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 565.1331820399923,
-        "bic": 584.7679604100204,
+        "aic": 565.5907889376127,
+        "bic": 587.6799146038943,
         "converged": true,
         "output_file": "lmm_P1_latency_frac_area_ms.json"
       },
@@ -205,8 +205,8 @@
         "component": "P3b",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 472.7703546736469,
-        "bic": 493.84818657948404,
+        "aic": 405.58245057444685,
+        "bic": 429.29501146851356,
         "converged": true,
         "output_file": "lmm_P3b_mean_amplitude_roi.json"
       },
@@ -214,8 +214,8 @@
         "component": "P3b",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 886.377441462414,
-        "bic": 907.4552733682511,
+        "aic": 888.212481686468,
+        "bic": 911.9250425805348,
         "converged": true,
         "output_file": "lmm_P3b_latency_frac_area_ms.json"
       }
