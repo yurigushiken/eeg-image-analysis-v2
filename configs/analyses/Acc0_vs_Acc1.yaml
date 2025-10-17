@@ -6,7 +6,7 @@ selection:
   response: "ALL"   # default (not actually used since both sets override)
   min_epochs_per_set: 1
   condition_sets:
-    - name: "All Numerosity Comparisons (Incorrect)"
+    - name: "Acc1 (incorrect)"
       # All valid numerosity pairs (gap ≤ 3, excluding cardinality 11/22/33/44/55/66)
       # Includes BOTH "from X" pairs (XY) and "to X" pairs (YX)
       # Numerosities 1-6 only (no 7 in this study)
@@ -50,7 +50,7 @@ selection:
       response: "ACC0"     # Incorrect responses only (Target.ACC == 0)
       color: "#ef0000"     # Red for errors
       linestyle: "-"
-    - name: "All Numerosity Comparisons (Correct)"
+    - name: "Acc1 (correct)"
       # Same conditions as above (both "from" and "to" pairs for numerosities 1-6)
       conditions: [
         # === Numerosity 1 ===
@@ -90,9 +90,9 @@ plots:
   dpi: 300
   colors: ["#ef0000", "#02d502"]
 outputs:
-  plots_dir: "docs/assets/plots/ALL_CONDITIONS_ACC0_ACC1"
-  tables_dir: "docs/assets/tables/ALL_CONDITIONS_ACC0_ACC1"
-  page: "docs/analysis/ALL_CONDITIONS_ACC0_ACC1.md"
+  plots_dir: "docs/assets/plots/AAcc0_vs_Acc1"
+  tables_dir: "docs/assets/tables/Acc0_vs_Acc1"
+  page: "docs/analysis/Acc0_vs_Acc1.md"
 measurement:
   latency: fal
   amplitude: mean

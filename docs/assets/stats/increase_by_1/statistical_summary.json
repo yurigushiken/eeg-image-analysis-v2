@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-17 03:13:08",
+  "timestamp": "2025-10-17 04:48:45",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_increase_by_1_w0f1s1tq.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_increase_by_1_pwq5ks6w.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\increase_by_1\\subject_measurements.csv",
   "components_tested": [
     "N1",

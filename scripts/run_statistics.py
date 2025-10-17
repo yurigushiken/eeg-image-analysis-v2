@@ -108,8 +108,8 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                 peak_lat = comp_data['peak_latency_ms'].iloc[0] if 'peak_latency_ms' in comp_data.columns else None
                 fwhm = comp_data['fwhm_ms'].iloc[0] if 'fwhm_ms' in comp_data.columns else None
 
-                # === Compute significance stars using LMM p-value (primary test) ===
-                significance_stars = None
+                # === Extract LMM statistics for plot annotation ===
+                lmm_stats = None
                 try:
                     # Try LMM first (primary analysis)
                     lmm_path = output_dir / f"lmm_{component}_{dv}.json"
@@ -118,24 +118,24 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         with open(lmm_path, 'r') as f:
                             lmm_data = json_module.load(f)
 
-                        # Extract p-value from condition effect
+                        # Extract full statistics from condition effect
                         summary = lmm_data.get('summary', [])
                         if summary and len(summary) > 1:
                             # Row 1 is condition effect (row 0 is intercept)
                             cond_effect = summary[1]
-                            p_use = float(cond_effect.get('P>|z|', 1.0))
+                            p_val = float(cond_effect.get('P>|z|', 1.0))
+                            beta = float(cond_effect.get('Coef.', 0))
+                            z_val = float(cond_effect.get('z', 0))
 
-                            if p_use < 0.001:
-                                significance_stars = '***'
-                            elif p_use < 0.01:
-                                significance_stars = '**'
-                            elif p_use < 0.05:
-                                significance_stars = '*'
-                            else:
-                                significance_stars = None
+                            lmm_stats = {
+                                'p_value': p_val,
+                                'beta': beta,
+                                'z': z_val,
+                                'test': 'LMM'
+                            }
 
                     # Fallback to ANOVA if LMM not available
-                    if significance_stars is None:
+                    if lmm_stats is None:
                         anova_path = output_dir / f"anova_{component}_{dv}.{cfg['tests']['anova'].get('output_format','csv')}"
                         if anova_path.exists():
                             anova_df = pd.read_csv(anova_path)
@@ -144,21 +144,19 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                                 p_unc = row['p-unc'].values[0]
                                 p_gg = row['p-GG-corr'].values[0] if 'p-GG-corr' in row.columns else None
                                 p_use = p_gg if (p_gg is not None and not pd.isna(p_gg)) else p_unc
+                                F_val = row['F'].values[0] if 'F' in row.columns else None
                                 try:
                                     p_use = float(p_use)
+                                    if F_val is not None:
+                                        lmm_stats = {
+                                            'p_value': p_use,
+                                            'F': float(F_val),
+                                            'test': 'ANOVA'
+                                        }
                                 except Exception:
-                                    p_use = None
-                                if p_use is not None:
-                                    if p_use < 0.001:
-                                        significance_stars = '***'
-                                    elif p_use < 0.01:
-                                        significance_stars = '**'
-                                    elif p_use < 0.05:
-                                        significance_stars = '*'
-                                    else:
-                                        significance_stars = None
+                                    pass
                 except Exception:
-                    significance_stars = None
+                    lmm_stats = None
 
                 # Boxplot
                 if plots_cfg.get('boxplot', {}).get('enabled', True):
@@ -175,7 +173,7 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         peak_latency_ms=peak_lat,
                         fwhm_ms=fwhm,
                         include_window_context=plots_cfg.get('boxplot', {}).get('include_window_context', True),
-                        significance_stars=significance_stars,
+                        lmm_stats=lmm_stats,  # Pass full LMM statistics dict
                         show_points=plots_cfg.get('boxplot', {}).get('show_points', True),
                         show_mean=plots_cfg.get('boxplot', {}).get('show_mean', True),
                         dpi=dpi,

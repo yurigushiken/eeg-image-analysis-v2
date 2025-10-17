@@ -181,8 +181,8 @@ def plot_boxplot(
     peak_latency_ms: Optional[float] = None,
     fwhm_ms: Optional[float] = None,
     include_window_context: bool = False,
-    # Significance context (optional)
-    significance_stars: Optional[str] = None,
+    # Significance context (optional) - NEW: Pass full LMM stats instead of just stars
+    lmm_stats: Optional[dict] = None,  # Dict with 'p_value', 'beta', 'z', etc.
     # Styling options
     ylabel: Optional[str] = None,
     xlabel: Optional[str] = None,
@@ -267,7 +267,7 @@ def plot_boxplot(
 
     # Style boxes
     for patch in box_parts['boxes']:
-        patch.set_facecolor('#3498db')
+        patch.set_facecolor('#2c6dde')
         patch.set_alpha(0.7)
 
     # Add individual points if requested
@@ -282,15 +282,47 @@ def plot_boxplot(
         means = [plot_data[plot_data[groupby] == grp][dv].mean()
                  for grp in sorted_groups]
         ax.scatter(range(1, len(means) + 1), means,
-                   color='red', marker='D', s=60, zorder=3,
+                   color='#ef0000', marker='D', s=60, zorder=3,
                    label='Mean')
         ax.legend()
 
-    # Labels
-    base_xlabel = xlabel if xlabel else groupby.replace('_', ' ').title()
-    if significance_stars:
-        base_xlabel = f"{base_xlabel} {significance_stars}"
-    ax.set_xlabel(base_xlabel)
+    # Labels - Replace "Condition" with LMM statistics
+    if lmm_stats:
+        # Format LMM statistics for x-axis label
+        p_val = lmm_stats.get('p_value', None)
+        beta = lmm_stats.get('beta', None)
+        z = lmm_stats.get('z', None)
+
+        if p_val is not None:
+            # Determine significance stars
+            if p_val < 0.001:
+                sig_text = "***"
+            elif p_val < 0.01:
+                sig_text = "**"
+            elif p_val < 0.05:
+                sig_text = "*"
+            else:
+                sig_text = "n.s."
+
+            # Format p-value
+            if p_val < 0.001:
+                p_str = "p < .001"
+            else:
+                p_str = f"p = {p_val:.3f}"
+
+            # Build informative x-label with LMM stats
+            if beta is not None and z is not None:
+                base_xlabel = f"LMM: β = {beta:.2f}, z = {z:.2f}, {p_str} {sig_text}"
+            else:
+                base_xlabel = f"LMM: {p_str} {sig_text}"
+        else:
+            # Fallback if p_value not available
+            base_xlabel = "LMM: Results available in report"
+    else:
+        # No LMM stats provided - use default
+        base_xlabel = xlabel if xlabel else groupby.replace('_', ' ').title()
+
+    ax.set_xlabel(base_xlabel, fontsize=11, fontweight='bold')
     ax.set_ylabel(_auto_label(dv, ylabel))
 
     # Format title with anatomical region if component is provided
@@ -311,18 +343,25 @@ def plot_boxplot(
             peak_latency_ms=peak_latency_ms,
             fwhm_ms=fwhm_ms
         )
-        # Place caption lower to avoid occlusion with x-label
-        fig.text(0.5, 0.012, caption, ha='center', fontsize=8, style='italic', wrap=True)
-        plt.subplots_adjust(bottom=0.16)
+        # Place caption higher to make room for build stamp below
+        fig.text(0.5, 0.025, caption, ha='center', fontsize=8, style='italic', wrap=True)
+        plt.subplots_adjust(bottom=0.20)  # Increase bottom margin to accommodate both texts
+        bottom_used = True
 
     # Add build stamp (bottom-right) if provided
+    # Place it significantly lower to avoid overlapping with caption
     if build_stamp:
         try:
-            fig.text(0.995, 0.002, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
+            # If caption exists, place stamp much lower; otherwise use default position
+            stamp_y = -0.015 if bottom_used else 0.002
+            fig.text(0.995, stamp_y, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
         except Exception:
             pass
+
     # Improve bottom spacing to avoid x-label/caption overlap
-    plt.tight_layout(rect=(0, 0.02, 1, 1))
+    # Expand rect to give more room at bottom if caption is present
+    bottom_rect = 0.03 if bottom_used else 0.02
+    plt.tight_layout(rect=(0, bottom_rect, 1, 1))
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 
@@ -423,6 +462,7 @@ def plot_violin(
     ax.set_title(formatted_title, fontsize=14, fontweight='bold')
 
     # Add caption if window context provided
+    bottom_used = False
     if include_window_context and all([component, window_start_ms, window_end_ms, peak_latency_ms]):
         caption = format_window_caption(
             component=component,
@@ -432,16 +472,22 @@ def plot_violin(
             peak_latency_ms=peak_latency_ms,
             fwhm_ms=fwhm_ms
         )
-        fig.text(0.5, 0.01, caption, ha='center', fontsize=8,
+        # Place caption higher to make room for build stamp below
+        fig.text(0.5, 0.025, caption, ha='center', fontsize=8,
                  style='italic', wrap=True)
-        plt.subplots_adjust(bottom=0.12)
+        plt.subplots_adjust(bottom=0.20)  # Increase bottom margin
+        bottom_used = True
 
+    # Add build stamp - place lower to avoid overlapping
     if build_stamp:
         try:
-            fig.text(0.995, 0.002, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
+            stamp_y = -0.015 if bottom_used else 0.002
+            fig.text(0.995, stamp_y, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
         except Exception:
             pass
-    plt.tight_layout(rect=(0, 0.02, 1, 1))
+
+    bottom_rect = 0.03 if bottom_used else 0.02
+    plt.tight_layout(rect=(0, bottom_rect, 1, 1))
     fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 
