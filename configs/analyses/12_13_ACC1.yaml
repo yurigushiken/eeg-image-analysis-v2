@@ -8,7 +8,7 @@ selection:
   condition_sets:
     - name: "1 to 2"
       conditions: ["12"]
-      color: "#02d502"  # Green (increasing)
+      color: "#b6e800"  # Lime Green (increasing)
       linestyle: "--"   # dashed
     - name: "1 to 3"
       conditions: ["13"]

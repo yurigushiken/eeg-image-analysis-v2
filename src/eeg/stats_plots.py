@@ -17,6 +17,13 @@ import seaborn as sns
 from pathlib import Path
 from typing import Union, Optional, List, Tuple
 
+try:
+    from eeg.config import get_anatomical_region
+except ImportError:
+    # Fallback if import fails
+    def get_anatomical_region(component: str, repo_root: Optional[str] = None) -> str:
+        return ''
+
 
 # Set publication-ready defaults
 sns.set_style("whitegrid")
@@ -108,6 +115,59 @@ def _auto_label(dv: str, ylabel: Optional[str] = None) -> str:
         return dv.replace('_', ' ').title()
 
 
+def _format_title_with_region(component: str, dv: str, base_title: Optional[str] = None) -> str:
+    """
+    Format plot title with component, measure, and anatomical region.
+
+    Parameters
+    ----------
+    component : str
+        Component name (e.g., 'P1', 'N1', 'P3b').
+    dv : str
+        Dependent variable name (e.g., 'mean_amplitude_roi').
+    base_title : str, optional
+        Override automatic title generation.
+
+    Returns
+    -------
+    str
+        Formatted title with anatomical region.
+
+    Examples
+    --------
+    >>> _format_title_with_region('P3b', 'mean_amplitude_roi')
+    'P3b Mean Amplitude (Parietal-Midline (Pz))'
+    >>> _format_title_with_region('N1', 'latency_frac_area_ms')
+    'N1 Latency Frac Area Ms (POT-L/POT-R)'
+    """
+    if base_title:
+        # User provided custom title - use as-is
+        return base_title
+
+    # Auto-generate title parts
+    dv_lower = dv.lower()
+    if 'latency_frac_area' in dv_lower:
+        measure = 'Latency (FAL)'
+    elif 'peak_latency' in dv_lower:
+        measure = 'Peak Latency'
+    elif 'mean_amplitude' in dv_lower:
+        measure = 'Mean Amplitude'
+    elif 'peak_amplitude' in dv_lower:
+        measure = 'Peak Amplitude'
+    else:
+        measure = dv.replace('_', ' ').title()
+
+    # Get anatomical region from config
+    region = get_anatomical_region(component)
+
+    # Format title
+    if region:
+        return f'{component} {measure} ({region})'
+    else:
+        # Fallback if region not found
+        return f'{component} {measure}'
+
+
 def plot_boxplot(
     data: pd.DataFrame,
     dv: str,
@@ -195,11 +255,12 @@ def plot_boxplot(
 
     fig, ax = plt.subplots(figsize=figsize)
 
-    # Create boxplot
+    # Create boxplot with sorted groups for alphabetical ordering
+    sorted_groups = sorted(plot_data[groupby].unique())
     box_parts = ax.boxplot(
         [plot_data[plot_data[groupby] == grp][dv].values
-         for grp in plot_data[groupby].unique()],
-        labels=plot_data[groupby].unique(),
+         for grp in sorted_groups],
+        labels=sorted_groups,
         patch_artist=True,
         showmeans=False
     )
@@ -211,7 +272,7 @@ def plot_boxplot(
 
     # Add individual points if requested
     if show_points:
-        for i, grp in enumerate(plot_data[groupby].unique(), 1):
+        for i, grp in enumerate(sorted_groups, 1):
             grp_data = plot_data[plot_data[groupby] == grp][dv].values
             x = np.random.normal(i, 0.04, size=len(grp_data))
             ax.scatter(x, grp_data, alpha=0.4, s=20, color='black')
@@ -219,7 +280,7 @@ def plot_boxplot(
     # Add mean markers if requested
     if show_mean:
         means = [plot_data[plot_data[groupby] == grp][dv].mean()
-                 for grp in plot_data[groupby].unique()]
+                 for grp in sorted_groups]
         ax.scatter(range(1, len(means) + 1), means,
                    color='red', marker='D', s=60, zorder=3,
                    label='Mean')
@@ -231,7 +292,13 @@ def plot_boxplot(
         base_xlabel = f"{base_xlabel} {significance_stars}"
     ax.set_xlabel(base_xlabel)
     ax.set_ylabel(_auto_label(dv, ylabel))
-    ax.set_title(title, fontsize=14, fontweight='bold')
+
+    # Format title with anatomical region if component is provided
+    if component:
+        formatted_title = _format_title_with_region(component, dv, title if title != f'{component} {dv.replace("_", " ").title()}' else None)
+    else:
+        formatted_title = title
+    ax.set_title(formatted_title, fontsize=14, fontweight='bold')
 
     # Add captions
     bottom_used = False
@@ -329,12 +396,15 @@ def plot_violin(
 
     fig, ax = plt.subplots(figsize=figsize)
 
-    # Create violin plot
+    # Create violin plot with sorted groups for alphabetical ordering
+    sorted_groups = sorted(plot_data[groupby].unique())
     sns.violinplot(
         data=plot_data,
         x=groupby,
         y=dv,
         hue=groupby,  # Explicitly assign hue to satisfy seaborn v0.14+
+        order=sorted_groups,  # Explicit alphabetical ordering
+        hue_order=sorted_groups,  # Explicit hue ordering
         inner=inner,
         ax=ax,
         palette="muted",
@@ -344,7 +414,13 @@ def plot_violin(
     # Labels
     ax.set_xlabel(xlabel if xlabel else groupby.replace('_', ' ').title())
     ax.set_ylabel(_auto_label(dv, ylabel))
-    ax.set_title(title, fontsize=14, fontweight='bold')
+
+    # Format title with anatomical region if component is provided
+    if component:
+        formatted_title = _format_title_with_region(component, dv, title if title != f'{component} {dv.replace("_", " ").title()}' else None)
+    else:
+        formatted_title = title
+    ax.set_title(formatted_title, fontsize=14, fontweight='bold')
 
     # Add caption if window context provided
     if include_window_context and all([component, window_start_ms, window_end_ms, peak_latency_ms]):

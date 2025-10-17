@@ -1,0 +1,148 @@
+{
+  "timestamp": "2025-10-16 21:42:22",
+  "analysis_id": "tables",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ACC0_ACC1_mp9z15np.yaml",
+  "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\65_ACC0_ACC1\\subject_measurements.csv",
+  "components_tested": [
+    "N1",
+    "P1",
+    "P3b"
+  ],
+  "dependent_variables": [
+    "mean_amplitude_roi",
+    "latency_frac_area_ms"
+  ],
+  "library_versions": {
+    "pingouin": "0.5.5",
+    "statsmodels": "0.14.5",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
+    "pandas": "2.3.1",
+    "numpy": "2.3.3",
+    "python": "3.12.11"
+  },
+  "analysis_settings": {
+    "measurement_window_method": "collapsed_localizer_fwhm",
+    "fal_fraction": 0.5,
+    "latency_measure": "fal_50",
+    "amplitude_measure": "mean",
+    "filters": {
+      "min_snr": null,
+      "dropna": true
+    },
+    "baseline_period_ms": "[-100, 0]"
+  },
+  "correction_family": "component",
+  "missing_data_policy": "ANOVA and pairwise tests were run on complete cases. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.",
+  "data_summary": {
+    "n_total_measurements": 40,
+    "n_subjects": 24,
+    "n_conditions": 2
+  },
+  "tests_run": {
+    "anova": true,
+    "pairwise": true,
+    "lmm": true,
+    "descriptives": true
+  },
+  "results": {
+    "anova": {
+      "N1_mean_amplitude_roi": {
+        "component": "N1",
+        "dv": "mean_amplitude_roi",
+        "test": "ANOVA",
+        "F": 1.797594927756012,
+        "p_unc": 0.20135396349521897,
+        "output_file": "anova_N1_mean_amplitude_roi.csv",
+        "epsilon": 1.0,
+        "effect_size_ng2": 0.03850277835769147
+      },
+      "N1_latency_frac_area_ms": {
+        "component": "N1",
+        "dv": "latency_frac_area_ms",
+        "test": "ANOVA",
+        "F": 0.01905326393239537,
+        "p_unc": 0.8921795773732438,
+        "output_file": "anova_N1_latency_frac_area_ms.csv",
+        "epsilon": 1.0,
+        "effect_size_ng2": 0.0003558001763053896
+      },
+      "P1_mean_amplitude_roi": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P1_latency_frac_area_ms": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P3b_mean_amplitude_roi": {
+        "error": "No data available for component 'P3b' after filtering"
+      },
+      "P3b_latency_frac_area_ms": {
+        "error": "No data available for component 'P3b' after filtering"
+      }
+    },
+    "pairwise": {
+      "N1_mean_amplitude_roi": {
+        "component": "N1",
+        "dv": "mean_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_N1_mean_amplitude_roi.csv"
+      },
+      "N1_latency_frac_area_ms": {
+        "component": "N1",
+        "dv": "latency_frac_area_ms",
+        "test": "Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_N1_latency_frac_area_ms.csv"
+      },
+      "P1_mean_amplitude_roi": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P1_latency_frac_area_ms": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P3b_mean_amplitude_roi": {
+        "error": "No data available for component 'P3b' after filtering"
+      },
+      "P3b_latency_frac_area_ms": {
+        "error": "No data available for component 'P3b' after filtering"
+      }
+    },
+    "lmm": {
+      "N1_mean_amplitude_roi": {
+        "component": "N1",
+        "dv": "mean_amplitude_roi",
+        "test": "LMM",
+        "aic": 172.65406608611733,
+        "bic": 179.3083126706359,
+        "converged": true,
+        "output_file": "lmm_N1_mean_amplitude_roi.json"
+      },
+      "N1_latency_frac_area_ms": {
+        "component": "N1",
+        "dv": "latency_frac_area_ms",
+        "test": "LMM",
+        "aic": 307.1421665283968,
+        "bic": 313.7964131129154,
+        "converged": true,
+        "output_file": "lmm_N1_latency_frac_area_ms.json"
+      },
+      "P1_mean_amplitude_roi": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P1_latency_frac_area_ms": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P3b_mean_amplitude_roi": {
+        "error": "No data available for component 'P3b' after filtering"
+      },
+      "P3b_latency_frac_area_ms": {
+        "error": "No data available for component 'P3b' after filtering"
+      }
+    }
+  }
+}

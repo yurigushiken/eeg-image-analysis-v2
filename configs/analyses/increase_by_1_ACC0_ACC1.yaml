@@ -1,0 +1,37 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"  # default (overridden by each set)
+  min_epochs_per_set: 1
+  condition_sets:
+    # === Incorrect responses (ACC0) ===
+    - name: "Increase by 1 (Incorrect)"
+      conditions: ["12", "23", "34", "45", "56"]
+      response: "ACC0"     # Incorrect responses only (Target.ACC == 0)
+      color: "#ef0000"     # Red for errors
+      linestyle: "-"       # Solid
+    # === Correct responses (ACC1) ===
+    - name: "Increase by 1 (Correct)"
+      conditions: ["12", "23", "34", "45", "56"]
+      response: "ACC1"     # Correct responses only (Target.ACC == 1)
+      color: "#02d502"     # Green for correct
+      linestyle: "-"       # Solid
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#ef0000", "#02d502"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/increase_by_1_ACC0_ACC1"
+  tables_dir: "docs/assets/tables/increase_by_1_ACC0_ACC1"
+  page: "docs/analysis/increase_by_1_ACC0_ACC1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

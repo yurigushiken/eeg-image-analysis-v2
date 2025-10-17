@@ -67,3 +67,40 @@ def load_components_config(repo_root: str) -> Dict[str, Dict[str, Any]]:
     return comps
 
 
+def get_anatomical_region(component: str, repo_root: Optional[str] = None) -> str:
+    """
+    Get the anatomical region label for a given ERP component.
+
+    Parameters
+    ----------
+    component : str
+        Component name (e.g., 'P1', 'N1', 'P3b').
+    repo_root : str, optional
+        Path to repository root. If None, attempts to infer from file location.
+
+    Returns
+    -------
+    str
+        Anatomical region label (e.g., 'Parietal-Midline (Pz)').
+        Returns empty string if not found.
+
+    Examples
+    --------
+    >>> get_anatomical_region('P3b')
+    'Parietal-Midline (Pz)'
+    >>> get_anatomical_region('N1')
+    'POT-L/POT-R'
+    """
+    if repo_root is None:
+        # Infer repo root from this file's location
+        repo_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    try:
+        components = load_components_config(repo_root)
+        component_config = components.get(component, {})
+        return component_config.get('anatomical_region', '')
+    except Exception:
+        # Fallback: return empty string if config can't be loaded
+        return ''
+
+

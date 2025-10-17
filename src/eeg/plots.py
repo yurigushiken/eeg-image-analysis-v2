@@ -10,6 +10,66 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+def _generate_acronym_footnote(
+    subtitle: str = "",
+    caption: str = "",
+    latency_annotation_label: str = "FAL"
+) -> str:
+    """
+    Generate acronym definitions footnote based on what appears in the plot.
+
+    Only includes acronyms that actually appear in the subtitle or caption text.
+    This ensures plots are self-documenting without unnecessary clutter.
+
+    Parameters
+    ----------
+    subtitle : str
+        The subtitle text containing potential acronyms
+    caption : str
+        The caption text containing potential acronyms
+    latency_annotation_label : str
+        The latency measure being used ("FAL" or "Peak")
+
+    Returns
+    -------
+    str
+        Footnote string with relevant acronym definitions, or empty string
+
+    Examples
+    --------
+    >>> _generate_acronym_footnote("ROI-derived FWHM window", "ERP ROI electrodes", "FAL")
+    'ROI = Region of Interest; FWHM = Full Width at Half Maximum; FAL = 50% Fractional Area Latency; ERP = Event-Related Potential'
+
+    >>> _generate_acronym_footnote("GFP-derived FWHM window", "", "Peak")
+    'GFP = Global Field Power; FWHM = Full Width at Half Maximum'
+    """
+    combined_text = f"{subtitle} {caption}".upper()
+
+    acronyms = []
+
+    # Check which acronyms appear in this plot
+    if "ROI" in combined_text:
+        acronyms.append("ROI = Region of Interest")
+
+    if "FWHM" in combined_text:
+        acronyms.append("FWHM = Full Width at Half Maximum")
+
+    if "FAL" in combined_text and latency_annotation_label == "FAL":
+        acronyms.append("FAL = 50% Fractional Area Latency")
+
+    if "GFP" in combined_text:
+        acronyms.append("GFP = Global Field Power")
+
+    if "ERP" in combined_text:
+        acronyms.append("ERP = Event-Related Potential")
+
+    # Return formatted footnote or empty string
+    if acronyms:
+        return "; ".join(acronyms)
+    else:
+        return ""
+
+
 def make_erp_figure(
     curves_by_label: Dict[str, Iterable[float]],
     times_ms,
@@ -102,7 +162,7 @@ def make_erp_figure(
             pass
     if annotate_fallback:
         ax.text(0.99, 0.02, "Fallback window used", transform=ax.transAxes, fontsize=8, va="bottom", ha="right")
-    ax.legend(loc="lower right", fontsize=7, frameon=True, framealpha=0.9)
+    ax.legend(loc="upper left", fontsize=7, frameon=True, framealpha=0.9)
     return fig
 
 
@@ -313,16 +373,16 @@ def make_component_figure(
 
     # Add asterisk note to legend if any fallback used
     legend_title = "* = fallback window used" if any_fallback else None
-    ax_overlay.legend(loc="lower right", fontsize=7, title=legend_title, title_fontsize=7, frameon=True, framealpha=0.9)
+    ax_overlay.legend(loc="upper left", fontsize=7, title=legend_title, title_fontsize=7, frameon=True, framealpha=0.9)
 
     # Figure-level subtitle to avoid occlusion
     if subtitle:
         try:
-            # Enhance subtitle to explain colored latency lines
+            # Enhance subtitle to explain vertical latency lines
             enhanced_subtitle = subtitle
             if latencies_by_label:
                 label = latency_annotation_label or "FAL"
-                enhanced_subtitle += f" | Colored lines = {label} Latency"
+                enhanced_subtitle += f" | Vertical lines = {label} Latency"
             # Subtitle slightly below the figure title, anchored by its top edge
             # Adjusted for manual layout (was y=0.955 for constrained_layout)
             fig.text(0.5, 0.94, enhanced_subtitle, ha="center", va="top", fontsize=9)
@@ -457,15 +517,32 @@ def make_component_figure(
             print(f"Colorbar creation failed: {e}", file=sys.stderr)
 
     # Add small caption listing highlighted electrodes (if provided)
+    electrode_caption = ""
     try:
         if highlight_channels:
             roi_text = ", ".join(highlight_channels)
-            caption = f"Yellow sensors = ERP ROI electrodes: {roi_text}"
-            fig.text(0.5, 0.01, caption, ha="center", va="bottom", fontsize=7, color="#444")
+            electrode_caption = f"Yellow sensors = ERP ROI electrodes: {roi_text}"
+            fig.text(0.5, 0.01, electrode_caption, ha="center", va="bottom", fontsize=7, color="#444")
             try:
                 fig.set_constrained_layout_pads(h_pad=0.70, hspace=0.04, w_pad=0.14, wspace=0.22)
             except Exception:
                 pass
+    except Exception:
+        pass
+
+    # Add acronym definitions footnote
+    try:
+        acronym_footnote = _generate_acronym_footnote(
+            subtitle=subtitle or "",
+            caption=electrode_caption,
+            latency_annotation_label=latency_annotation_label or "FAL"
+        )
+        if acronym_footnote:
+            # Position below electrode caption if it exists, otherwise at bottom
+            # Increased from 0.005 to 0.025 to avoid overlap with yellow sensor caption
+            y_pos = 0.025 if highlight_channels else 0.01
+            fig.text(0.5, y_pos, acronym_footnote, ha="center", va="bottom",
+                     fontsize=6, color="#666", style="italic")
     except Exception:
         pass
 
@@ -592,7 +669,21 @@ def make_collapsed_localizer_figure(
 
     # Subtitle at bottom
     if subtitle:
-        fig.text(0.5, 0.01, subtitle, ha="center", fontsize=9, style="italic")
+        fig.text(0.5, 0.02, subtitle, ha="center", fontsize=9, style="italic")
+
+    # Add acronym definitions footnote
+    try:
+        # For collapsed localizer, subtitle typically contains GFP and FWHM
+        acronym_footnote = _generate_acronym_footnote(
+            subtitle=subtitle or "",
+            caption=title or "",  # Title might have relevant acronyms too
+            latency_annotation_label=""  # No FAL in collapsed localizer
+        )
+        if acronym_footnote:
+            fig.text(0.5, 0.005, acronym_footnote, ha="center", va="bottom",
+                     fontsize=6, color="#666", style="italic")
+    except Exception:
+        pass
 
     return fig
 

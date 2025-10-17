@@ -1,0 +1,34 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"   # default if a set doesn't specify response
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "56 Incorrect"
+      conditions: ["56"]
+      response: "ACC0"     # Incorrect responses only (Target.ACC == 0)
+      color: "#ef0000"     # Red for errors
+      linestyle: "-"
+    - name: "56 Correct"
+      conditions: ["56"]
+      response: "ACC1"     # Correct responses only (Target.ACC == 1)
+      color: "#02d502"     # Green for correct
+      linestyle: "-"
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#ef0000", "#02d502"]
+outputs:
+  plots_dir: "docs/assets/plots/56_ACC0_ACC1"
+  tables_dir: "docs/assets/tables/56_ACC0_ACC1"
+  page: "docs/analysis/56_ACC0_ACC1.md"
+measurement:
+  latency: fal
+  amplitude: mean

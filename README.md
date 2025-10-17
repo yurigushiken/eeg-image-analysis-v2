@@ -126,13 +126,16 @@ dataset:
 
 # Trial selection
 selection:
-  response: "ALL"  # or "ACC1" for Target.ACC == 1
+  response: "ALL"  # Default: "ALL", "ACC1" (correct), or "ACC0" (incorrect)
   min_epochs_per_set: 8
   condition_sets:
     - name: "Small_Increasing"
       conditions: ["12", "13", "23"]  # Explicit numeric condition codes
+      # response: "ALL"   # Optional: override default per-set
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
+      # response: "ACC1"  # Optional: override default per-set (correct only)
+      # response: "ACC0"  # Optional: override default per-set (incorrect only)
 
 # Components to analyze
 components: ["P1", "N1", "P3b"]
@@ -249,15 +252,108 @@ This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rathe
 
 ## Common Use Cases
 
-### Run analysis with accurate responses only (ACC1 filter)
+### Run analysis with response filtering
+
+Filter trials by accuracy using the `response` parameter:
+
 ```bash
+# Accurate responses only (ACC1 filter)
 python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing_ACC1.yaml
+
+# Compare error (ACC0) vs correct (ACC1) trials across all conditions
+python scripts/run_analysis.py --config configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml
 ```
 
 ### Analyze cardinality effects (same-number pairs)
 ```bash
 python scripts/run_analysis.py --config configs/analyses/cardinality_within_small.yaml
 ```
+
+### Compare response accuracy effects (ACC0 vs ACC1)
+
+**Advanced feature:** You can compare the same experimental condition(s) with different response filters in a single analysis by using **per-set response overrides**. This allows direct visualization of how response accuracy affects ERP morphology.
+
+#### Example 1: Compare ALL vs ACC1 for a single condition
+
+Configuration: [56_ALL_ACC1.yaml](configs/analyses/56_ALL_ACC1.yaml)
+```yaml
+selection:
+  response: "ALL"   # Default response filter for all sets
+  condition_sets:
+    - name: "56 ALL"
+      conditions: ["56"]
+      response: "ALL"      # Override: use ALL responses
+      color: "#9900ff"
+      linestyle: "-"
+    - name: "56 ACC1"
+      conditions: ["56"]
+      response: "ACC1"     # Override: use only correct responses
+      color: "#d76e00"
+      linestyle: "--"
+```
+
+#### Example 2: Compare incorrect (ACC0) vs correct (ACC1) across all numerosity conditions
+
+**New capability!** Configuration: [ALL_CONDITIONS_ACC0_ACC1.yaml](configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml)
+```yaml
+selection:
+  response: "ALL"   # Default (not used since both sets override)
+  condition_sets:
+    - name: "All Numerosity Comparisons (Incorrect)"
+      # All valid numerosity pairs: gap ≤ 3, excluding cardinality (11/22/33/44/55/66)
+      # Total: 32 conditions
+      conditions: [
+        "12", "13", "14",                    # From 1
+        "21", "23", "24", "25",              # From 2
+        "31", "32", "34", "35", "36",        # From 3 (all except 33)
+        "41", "42", "43", "45", "46",        # From 4 (all except 44)
+        "51", "52", "53", "54", "56",        # From 5 (all except 55)
+        "61", "62", "63", "64", "65",        # From 6 (all except 66)
+        "74", "75", "76"                     # From 7
+      ]
+      response: "ACC0"     # Only incorrect responses (Target.ACC == 0)
+      color: "#ef0000"     # Red for errors
+      linestyle: "-"
+    - name: "All Numerosity Comparisons (Correct)"
+      conditions: [
+        "12", "13", "14",                    # From 1
+        "21", "23", "24", "25",              # From 2
+        "31", "32", "34", "35", "36",        # From 3 (all except 33)
+        "41", "42", "43", "45", "46",        # From 4 (all except 44)
+        "51", "52", "53", "54", "56",        # From 5 (all except 55)
+        "61", "62", "63", "64", "65",        # From 6 (all except 66)
+        "74", "75", "76"                     # From 7
+      ]
+      response: "ACC1"     # Only correct responses (Target.ACC == 1)
+      color: "#02d502"     # Green for correct
+      linestyle: "-"
+```
+
+**How it works:**
+1. Set a **default** `response` filter at the top level (`ALL`, `ACC1`, or `ACC0`)
+2. **Override** for specific condition sets by adding `response:` to individual sets
+3. Each set filters trials independently before computing ERPs
+4. The analysis title will show **"MIXED"** when multiple response filters are used
+
+**Response filter options:**
+- `ALL`: All trials regardless of accuracy
+- `ACC1`: Only correct responses (Target.ACC == 1)
+- `ACC0`: Only incorrect responses (Target.ACC == 0) - **newly added!**
+
+**Use cases:**
+- **Error monitoring research:** Compare error-related ERPs (ACC0) vs correct-trial ERPs (ACC1)
+- **Performance effects:** Assess how accuracy affects ERP morphology for the same condition
+- **Error-related negativity (ERN):** Isolate error trials across all experimental conditions
+- **Validation:** Confirm that ACC1 filtering doesn't introduce selection bias
+
+**Scientific applications:**
+This is particularly powerful for:
+- **Error processing studies:** The Error-Related Negativity (ERN) and Positivity (Pe) components
+- **Conflict monitoring:** Comparing error vs correct trials in conflict tasks
+- **Feedback processing:** Examining neural responses to performance feedback
+- **Individual differences:** Relating error-trial ERPs to behavioral or clinical measures
+
+See working examples: [56_ALL_ACC1.yaml](configs/analyses/56_ALL_ACC1.yaml), [65_ALL_ACC1.yaml](configs/analyses/65_ALL_ACC1.yaml), and [ALL_CONDITIONS_ACC0_ACC1.yaml](configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml)
 
 ### Create a new analysis
 1. Copy an existing YAML from `configs/analyses/`

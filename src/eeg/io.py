@@ -64,7 +64,15 @@ def extract_subject_id(epochs, file_path: str) -> str:
 
 
 def filter_by_response(epochs, response: str):
-    """Return epochs filtered by response (ALL or ACC1 using metadata['Target.ACC'])."""
+    """Return epochs filtered by response (ALL, ACC1, or ACC0 using metadata['Target.ACC']).
+
+    Args:
+        epochs: MNE Epochs object
+        response: Response filter - "ALL" (all trials), "ACC1" (correct only), or "ACC0" (incorrect only)
+
+    Returns:
+        Filtered epochs
+    """
     if response.upper() == "ALL":
         return epochs
     if response.upper() == "ACC1":
@@ -72,7 +80,12 @@ def filter_by_response(epochs, response: str):
             raise ValueError("Required metadata column missing: 'Target.ACC'")
         mask = epochs.metadata["Target.ACC"] == 1
         return epochs[mask]
-    raise ValueError(f"Unknown response mode: {response}")
+    if response.upper() == "ACC0":
+        if getattr(epochs, "metadata", None) is None or "Target.ACC" not in epochs.metadata.columns:
+            raise ValueError("Required metadata column missing: 'Target.ACC'")
+        mask = epochs.metadata["Target.ACC"] == 0
+        return epochs[mask]
+    raise ValueError(f"Unknown response mode: {response}. Valid options: ALL, ACC1, ACC0")
 
 
 def select_conditions(epochs, condition_codes: Sequence[str]):

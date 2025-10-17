@@ -1,0 +1,360 @@
+# Statistical Analysis Report: tables
+
+**Generated:** 2025-10-16 21:42:16
+
+---
+
+## 1. Analysis Overview
+
+**Total Measurements:** 117
+**Number of Subjects:** 24
+**Number of Conditions:** 2
+
+**Components Analyzed:** N1, P1, P3b
+**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+
+### 1.1 Measurement Methodology
+
+- **Component Detection:** collapsed_localizer_fwhm
+- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
+- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Baseline Period:** [-100, 0] ms
+
+### 1.2 Quality Control Filters
+
+- **Minimum SNR:** ≥ None
+- **Missing Data:** Excluded listwise for ANOVA/pairwise
+
+### 1.3 Missing Data Policy
+
+ANOVA and pairwise tests were run on complete cases. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.
+
+---
+
+## 2. Descriptive Statistics
+
+This section presents means, standard deviations, and sample sizes for each condition.
+
+### 2.1 N1 Component
+
+#### Mean Amplitude (ROI)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 23 | -3.66 µV | 2.18 | 0.45 | [-9.61, -0.61] |
+| 64 Incorrect | 9 | -3.25 µV | 2.42 | 0.81 | [-7.51, -0.22] |
+
+#### Latency (50% Fractional Area)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 23 | 175.79 ms | 11.47 | 2.39 | [158.65, 201.46] |
+| 64 Incorrect | 9 | 177.34 ms | 16.19 | 5.40 | [162.16, 203.16] |
+
+
+### 2.2 P1 Component
+
+#### Mean Amplitude (ROI)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 15 | 2.89 µV | 1.30 | 0.34 | [1.24, 5.12] |
+| 64 Incorrect | 7 | 3.87 µV | 2.89 | 1.09 | [0.41, 8.84] |
+
+#### Latency (50% Fractional Area)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 15 | 115.16 ms | 3.59 | 0.93 | [109.17, 123.37] |
+| 64 Incorrect | 7 | 114.08 ms | 4.98 | 1.88 | [103.90, 119.34] |
+
+
+### 2.3 P3b Component
+
+#### Mean Amplitude (ROI)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 19 | 3.39 µV | 2.38 | 0.55 | [0.08, 8.38] |
+| 64 Incorrect | 9 | 5.55 µV | 4.47 | 1.49 | [0.52, 14.03] |
+
+#### Latency (50% Fractional Area)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 64 Correct | 19 | 463.36 ms | 16.15 | 3.70 | [421.60, 492.93] |
+| 64 Incorrect | 9 | 463.00 ms | 9.83 | 3.28 | [450.68, 477.80] |
+
+
+---
+
+## 3. Inferential Statistics
+
+This section presents the results of repeated-measures statistical tests.
+
+### 3.1 N1 Component
+
+#### Mean Amplitude (ROI)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 0.73, *p* = 0.422, η²_G = 0.032
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | -0.85 | 7 | = 0.422 | -0.34 [-1.16, 0.55] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 147.18, BIC = 153.04
+- Condition effect: *β* = 0.49, *SE* = 0.682, *z* = 0.712, *p* = 0.476
+
+#### Latency (50% Fractional Area)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 0.25, *p* = 0.631, η²_G = 0.018
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | -0.50 | 7 | = 0.631 | -0.26 [-1.02, 0.67] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 260.42, BIC = 266.28
+- Condition effect: *β* = 1.56, *SE* = 4.921, *z* = 0.316, *p* = 0.752
+
+
+### 3.2 P1 Component
+
+#### Mean Amplitude (ROI)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 0.22, *p* = 0.654, η²_G = 0.014
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | -0.47 | 6 | = 0.654 | -0.22 [-1.11, 0.75] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 96.77, BIC = 101.13
+- Condition effect: *β* = 0.90, *SE* = 0.797, *z* = 1.128, *p* = 0.259
+
+#### Latency (50% Fractional Area)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 3.73, *p* = 0.102, η²_G = 0.040
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | 1.93 | 6 | = 0.102 | 0.38 [-0.31, 1.77] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 120.25, BIC = 124.61
+- Condition effect: *β* = -1.50, *SE* = 0.738, *z* = -2.034, *p* = 0.042
+
+
+### 3.3 P3b Component
+
+#### Mean Amplitude (ROI)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 1.10, *p* = 0.325, η²_G = 0.048
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | -1.05 | 8 | = 0.325 | -0.42 [-1.14, 0.44] | small | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 149.36, BIC = 154.69
+- Condition effect: *β* = 2.02, *SE* = 1.140, *z* = 1.772, *p* = 0.076
+
+#### Latency (50% Fractional Area)
+
+**Repeated-Measures ANOVA:**
+
+- *F* = 0.04, *p* = 0.842, η²_G = 0.002
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons:**
+
+_Post-hoc tests with uncorrected correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 64 Correct vs 64 Incorrect | 0.21 | 8 | = 0.842 | 0.09 [-0.70, 0.84] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+**Linear Mixed-Effects Model:**
+
+- Model converged successfully
+- AIC = 235.09, BIC = 240.42
+- Condition effect: *β* = -0.44, *SE* = 5.480, *z* = -0.080, *p* = 0.936
+
+
+---
+
+## 4. Overall Interpretation
+
+### Key Findings
+
+No significant main effects or interactions were detected at the α = .05 level.
+
+### Research Implications
+
+_[Researchers should interpret these findings in the context of their theoretical framework and study design.]_
+
+---
+
+## 5. Visualizations
+
+The following plots are available in the `plots/` subdirectory:
+
+### 5.1 N1 Component
+
+#### Latency
+
+**Boxplot:**
+
+![N1 Latency Boxplot](plots/boxplot_N1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![N1 Latency Violin](plots/violin_N1_latency_frac_area_ms.png)
+
+#### Amplitude
+
+**Boxplot:**
+
+![N1 Amplitude Boxplot](plots/boxplot_N1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
+
+### 5.2 P1 Component
+
+#### Latency
+
+**Boxplot:**
+
+![P1 Latency Boxplot](plots/boxplot_P1_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P1 Latency Violin](plots/violin_P1_latency_frac_area_ms.png)
+
+#### Amplitude
+
+**Boxplot:**
+
+![P1 Amplitude Boxplot](plots/boxplot_P1_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
+
+### 5.3 P3b Component
+
+#### Latency
+
+**Boxplot:**
+
+![P3b Latency Boxplot](plots/boxplot_P3b_latency_frac_area_ms.png)
+
+**Violin Plot:**
+
+![P3b Latency Violin](plots/violin_P3b_latency_frac_area_ms.png)
+
+#### Amplitude
+
+**Boxplot:**
+
+![P3b Amplitude Boxplot](plots/boxplot_P3b_mean_amplitude_roi.png)
+
+**Violin Plot:**
+
+![P3b Amplitude Violin](plots/violin_P3b_mean_amplitude_roi.png)
+
+---
+
+## 6. Methods Summary (for Publication)
+
+### ERP Measurement
+
+ERP components were measured using a collapsed localizer approach, where component peaks were identified from the grand average of all conditions combined to avoid circular analysis (Luck & Gaspelin, 2017). Measurement windows were defined as the full-width at half-maximum (FWHM) around each peak. Component latency was quantified using the 50% fractional area latency (FAL), which represents the time point at which the cumulative area under the curve reaches 50% of its total value within the measurement window. This metric provides a robust estimate of component timing with lower measurement error than peak latency (Kiesel et al., 2008). Mean amplitude was computed as the average voltage within the FWHM window across predefined regions of interest (ROI).
+
+### Statistical Analysis
+
+Within-subjects repeated-measures analyses were conducted using:
+- Repeated-measures ANOVA with Greenhouse-Geisser correction for sphericity violations (ε < 0.75)
+- Post-hoc pairwise t-tests with false discovery rate (FDR) correction for multiple comparisons
+- Linear mixed-effects models (LMM) with random intercepts for subjects to handle missing data
+
+Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalized eta-squared (η²_G) for ANOVA.
+
+### Software
+
+- Python 3.12.11
+- MNE-Python 1.10.1
+- Statsmodels 0.14.5
+- Pingouin 0.5.5
+
+### References
+
+- Kiesel, A., Miller, J., Jolicœur, P., & Brisson, B. (2008). Measurement of ERP latency differences: A comparison of single-participant and jackknife-based scoring methods. *Psychophysiology, 45*(2), 250-274.
+- Luck, S. J., & Gaspelin, N. (2017). How to get statistically significant effects in any ERP experiment (and why you shouldn't). *Psychophysiology, 54*(1), 146-157.
+
+---
+
+---
+
+*Report generated automatically by EEG Image Analysis Pipeline v2*
+*For questions about this analysis, please refer to the YAML configuration and statistical output files.*

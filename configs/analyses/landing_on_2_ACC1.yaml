@@ -10,21 +10,17 @@ selection:
       conditions: ["12"]
       color: "#02d502"  # Green (increasing)
       linestyle: "-"   # solid
-    - name: "Cardinality2"
-      conditions: ["22"]
-      color: "#2c6dde"  # Blue
-      linestyle: "-"    # Solid
     - name: "3 to 2"
       conditions: ["32"]
-      color: "#ef0000"  # red
+      color: "#ff00ff"  # pink
       linestyle: "-"    # solid
     - name: "4 to 2"
       conditions: ["42"]
       color: "#ef0000"  # red
-      linestyle: "-"    # solid
+      linestyle: "solid"    # solid
     - name: "5 to 2"
       conditions: ["52"]
-      color: "#ef0000"  # red
+      color: "#9900ff"  # purple
       linestyle: "-"    # Solid
 
 components: ["P1", "N1", "P3b"]

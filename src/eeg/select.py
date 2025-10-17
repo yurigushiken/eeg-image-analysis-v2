@@ -9,8 +9,17 @@ import pandas as pd
 def apply_response_filter(metadata: pd.DataFrame, response: str) -> pd.DataFrame:
     """Filter rows by response.
 
-    - "ALL": return metadata unchanged
-    - "ACC1": keep rows where Target.ACC == 1
+    Args:
+        metadata: DataFrame with trial metadata
+        response: Response filter - "ALL", "ACC1", or "ACC0"
+
+    Returns:
+        Filtered metadata DataFrame
+
+    Response modes:
+        - "ALL": return metadata unchanged (all trials)
+        - "ACC1": keep rows where Target.ACC == 1 (correct responses only)
+        - "ACC0": keep rows where Target.ACC == 0 (incorrect responses only)
     """
     if response.upper() == "ALL":
         return metadata
@@ -18,7 +27,11 @@ def apply_response_filter(metadata: pd.DataFrame, response: str) -> pd.DataFrame
         if "Target.ACC" not in metadata.columns:
             raise ValueError("Required metadata column missing: 'Target.ACC'")
         return metadata.loc[metadata["Target.ACC"] == 1]
-    raise ValueError(f"Unknown response mode: {response}")
+    if response.upper() == "ACC0":
+        if "Target.ACC" not in metadata.columns:
+            raise ValueError("Required metadata column missing: 'Target.ACC'")
+        return metadata.loc[metadata["Target.ACC"] == 0]
+    raise ValueError(f"Unknown response mode: {response}. Valid options: ALL, ACC1, ACC0")
 
 
 def validate_required_columns(

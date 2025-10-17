@@ -1,6 +1,6 @@
 {
   "analysis_id": "landing_on_2_ACC1",
-  "date_analyzed": "2025-10-16T03:17:25.120295",
+  "date_analyzed": "2025-10-16T21:31:38.944377",
   "baseline_ms": [
     -100,
     0
@@ -11,7 +11,6 @@
   "n_evokeds_included": 96,
   "conditions": [
     "increasing 1 to 2",
-    "Cardinality2",
     "3 to 2",
     "4 to 2",
     "5 to 2"
@@ -29,7 +28,7 @@
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 96,
-      "n_conditions": 5
+      "n_conditions": 4
     },
     "N1": {
       "collapsed_peak_latency_ms": 172.0,
@@ -43,7 +42,7 @@
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 96,
-      "n_conditions": 5
+      "n_conditions": 4
     },
     "P3b": {
       "collapsed_peak_latency_ms": 468.0,
@@ -57,7 +56,7 @@
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 96,
-      "n_conditions": 5
+      "n_conditions": 4
     }
   }
 }

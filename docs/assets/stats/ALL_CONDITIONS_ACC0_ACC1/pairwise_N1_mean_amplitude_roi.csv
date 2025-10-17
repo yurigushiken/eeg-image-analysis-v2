@@ -1,0 +1,2 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,BF10,cohen,ci_lower,ci_upper
+condition,All Numerosity Comparisons (Correct),All Numerosity Comparisons (Incorrect),True,True,-0.6618129374124756,22.0,two-sided,0.5149640248020247,0.267,-0.06373510484713876,-0.5724838242803636,0.296488750560456
