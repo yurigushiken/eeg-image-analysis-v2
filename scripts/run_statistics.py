@@ -487,6 +487,65 @@ def run_lmm_tests(stats: ERPStatistics, cfg: dict, output_dir: Path):
     return results
 
 
+def run_lmm_pairwise_tests(stats: ERPStatistics, cfg: dict, output_dir: Path):
+    """Run LMM pairwise comparisons for all components and DVs."""
+    print_header("Running LMM Pairwise Comparisons", level=1)
+
+    lmm_pairwise_cfg = cfg['tests'].get('lmm_pairwise', {})
+    if not lmm_pairwise_cfg.get('enabled', False):
+        print("  [SKIPPED] LMM pairwise tests disabled in config")
+        return {}
+
+    results = {}
+
+    for component in cfg['components']:
+        for dv in cfg['dependent_variables']:
+            print(f"  Testing: {component} - {dv}")
+
+            try:
+                # LMM handles dropna internally
+                lmm_filters = {k: v for k, v in cfg.get('filters', {}).items() if k != 'dropna'}
+                result = stats.run_lmm_pairwise(
+                    dv=dv,
+                    component=component,
+                    fixed=lmm_pairwise_cfg.get('fixed', 'condition'),
+                    random=lmm_pairwise_cfg.get('random', 'subject_id'),
+                    correction=lmm_pairwise_cfg.get('correction', 'hs'),
+                    **lmm_filters
+                )
+
+                # Save result
+                output_filename = f"lmm_pairwise_{component}_{dv}.csv"
+                output_path = output_dir / output_filename
+                stats.save_results(result, output_path, format='csv')
+
+                # Store summary
+                key = f"{component}_{dv}"
+                alpha = cfg['advanced']['alpha']
+                sig_comparisons = result[result['P>|z| (adj)'] < alpha]
+
+                results[key] = {
+                    'component': component,
+                    'dv': dv,
+                    'test': 'LMM_Pairwise',
+                    'n_comparisons': len(result),
+                    'n_significant': len(sig_comparisons),
+                    'correction': lmm_pairwise_cfg.get('correction', 'hs'),
+                    'output_file': str(output_filename)
+                }
+
+                # Print to console if enabled
+                if cfg['output']['print_to_console']:
+                    print(result.to_string(index=False))
+                    print(f"\n  Significant comparisons (alpha={alpha}): {len(sig_comparisons)}/{len(result)}\n")
+
+            except Exception as e:
+                print(f"    ERROR: {e}")
+                results[f"{component}_{dv}"] = {'error': str(e)}
+
+    return results
+
+
 def run_descriptive_stats(stats: ERPStatistics, cfg: dict, output_dir: Path):
     """Compute descriptive statistics for all components and DVs."""
     print_header("Computing Descriptive Statistics", level=1)
@@ -673,6 +732,10 @@ def main():
     if cfg['tests']['lmm']['enabled']:
         lmm_results = run_lmm_tests(stats, cfg, output_dir)
         all_results['lmm'] = lmm_results
+
+    if cfg['tests'].get('lmm_pairwise', {}).get('enabled', False):
+        lmm_pairwise_results = run_lmm_pairwise_tests(stats, cfg, output_dir)
+        all_results['lmm_pairwise'] = lmm_pairwise_results
 
     if cfg['descriptives']['enabled']:
         run_descriptive_stats(stats, cfg, output_dir)

@@ -81,6 +81,13 @@ class StatisticalReportGenerator:
             return pd.read_csv(pairwise_path)
         return None
 
+    def _load_lmm_pairwise_results(self, component: str, measure: str) -> Optional[pd.DataFrame]:
+        """Load LMM pairwise comparison results CSV."""
+        lmm_pairwise_path = self.stats_dir / f"lmm_pairwise_{component}_{measure}.csv"
+        if lmm_pairwise_path.exists():
+            return pd.read_csv(lmm_pairwise_path)
+        return None
+
     def _format_p_value(self, p: float) -> str:
         """Format p-value in APA style."""
         if pd.isna(p):
@@ -354,6 +361,7 @@ class StatisticalReportGenerator:
                 anova_df = self._load_anova_results(component, measure_key)
                 pairwise_df = self._load_pairwise_results(component, measure_key)
                 lmm_result = self._load_lmm_results(component, measure_key)
+                lmm_pairwise_df = self._load_lmm_pairwise_results(component, measure_key)
 
                 # ===================================================================
                 # SECTION 1: LMM Results (PRIMARY ANALYSIS)
@@ -417,6 +425,62 @@ class StatisticalReportGenerator:
                         lines.append("_LMM did not converge or had numerical issues._\n")
                 else:
                     lines.append("_LMM results not available._\n")
+
+                # ===================================================================
+                # SECTION 1.5: LMM Pairwise Comparisons
+                # ===================================================================
+                if lmm_pairwise_df is not None and len(lmm_pairwise_df) > 0:
+                    lines.extend([
+                        "**LMM Pairwise Comparisons:**",
+                        ""
+                    ])
+
+                    # Determine correction method from summary if available
+                    correction_method = "multiple comparison correction"
+                    if self.summary_data and 'lmm_pairwise' in self.summary_data.get('results', {}):
+                        first_key = list(self.summary_data['results']['lmm_pairwise'].keys())[0]
+                        correction_method = self.summary_data['results']['lmm_pairwise'][first_key].get('correction', 'hs')
+                        if correction_method == 'hs':
+                            correction_method = "Holm-Sidak"
+                        elif correction_method == 'bonferroni':
+                            correction_method = "Bonferroni"
+                        elif correction_method == 'fdr_bh':
+                            correction_method = "FDR (Benjamini-Hochberg)"
+
+                    lines.append(f"All pairwise comparisons between conditions ({correction_method} correction):")
+                    lines.append("")
+
+                    # Create table
+                    lines.append("| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |")
+                    lines.append("|------------|---|----|----|-----------|---------|-----|")
+
+                    for _, row in lmm_pairwise_df.iterrows():
+                        contrast = row['Contrast']
+                        coef = row['Coef']
+                        se = row['Std.Err.']
+                        z = row['z']
+                        p_unadj = row['P>|z|']
+                        p_adj = row['P>|z| (adj)']
+
+                        # Significance stars based on adjusted p-value
+                        if p_adj < 0.001:
+                            sig = "***"
+                        elif p_adj < 0.01:
+                            sig = "**"
+                        elif p_adj < 0.05:
+                            sig = "*"
+                        else:
+                            sig = "n.s."
+
+                        # Format p-values
+                        p_unadj_str = f"{p_unadj:.3f}" if p_unadj >= 0.001 else "< .001"
+                        p_adj_str = f"{p_adj:.3f}" if p_adj >= 0.001 else "< .001"
+
+                        lines.append(f"| {contrast} | {coef:.2f} | {se:.2f} | {z:.2f} | {p_unadj_str} | {p_adj_str} | {sig} |")
+
+                    lines.append("")
+                    lines.append(f"_Note: p-values adjusted using {correction_method} method for {len(lmm_pairwise_df)} comparisons._")
+                    lines.append("")
 
                 # ===================================================================
                 # SECTION 2: ANOVA Results (SUPPLEMENTARY ANALYSIS)

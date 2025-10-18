@@ -396,6 +396,243 @@ class ERPStatistics:
 
         return result
 
+    def run_lmm_pairwise(
+        self,
+        dv: str,
+        component: str,
+        fixed: str,
+        random: str = 'subject_id',
+        correction: str = 'hs',
+        **filter_kwargs
+    ) -> pd.DataFrame:
+        """
+        Run pairwise comparisons for Linear Mixed-Effects Model.
+
+        This method provides ALL pairwise comparisons between conditions,
+        answering the question: "Do the conditions differ from each other?"
+        (e.g., is 1 to 3 different from 1 to 4?).
+
+        Uses statsmodels' native t_test_pairwise() method with proper
+        multiple comparison corrections.
+
+        Parameters
+        ----------
+        dv : str
+            Dependent variable column name.
+        component : str
+            Component to analyze.
+        fixed : str
+            Fixed effects formula (e.g., 'condition' or 'condition + snr').
+            For pairwise comparisons, the first categorical term is used.
+        random : str, default='subject_id'
+            Random effects grouping variable.
+        correction : str, default='hs'
+            Multiple comparison correction method:
+            - 'hs': Holm-Sidak (recommended - less conservative than Bonferroni)
+            - 'bonferroni': Bonferroni correction (more conservative)
+            - 'fdr_bh': Benjamini-Hochberg FDR
+            - 'sidak': Sidak correction
+            - None: No correction (not recommended)
+        **filter_kwargs
+            Additional filtering arguments.
+
+        Returns
+        -------
+        pd.DataFrame
+            Pairwise comparison results with columns:
+            - Contrast: Comparison being made (e.g., "1 to 1 - 1 to 2")
+            - Coef: Estimated difference (coefficient)
+            - Std.Err.: Standard error of the difference
+            - z: z-statistic
+            - P>|z|: Unadjusted p-value
+            - P>|z| (adj): Multiple-comparison adjusted p-value
+
+        Raises
+        ------
+        ImportError
+            If statsmodels is not installed.
+        ValueError
+            If insufficient data or invalid parameters.
+
+        Notes
+        -----
+        - Uses maximum likelihood estimation (same as run_lmm)
+        - Handles missing data optimally via LMM framework
+        - For k conditions, returns C(k,2) = k*(k-1)/2 comparisons
+        - Adjusted p-values control family-wise error rate
+
+        Examples
+        --------
+        >>> stats = ERPStatistics('subject_measurements.csv')
+        >>> # Get all pairwise comparisons for N1 amplitude
+        >>> pairwise = stats.run_lmm_pairwise(
+        ...     dv='mean_amplitude_roi',
+        ...     component='N1',
+        ...     fixed='condition',
+        ...     correction='hs'
+        ... )
+        >>> # Show significant comparisons (after correction)
+        >>> sig = pairwise[pairwise['P>|z| (adj)'] < 0.05]
+        >>> print(sig[['Contrast', 'Coef', 'P>|z| (adj)']])
+
+        References
+        ----------
+        Holm, S. (1979). A simple sequentially rejective multiple test procedure.
+            Scandinavian Journal of Statistics, 6(2), 65-70.
+        """
+        if mixedlm is None:
+            raise ImportError("statsmodels is required for LMM. Install with: pip install statsmodels")
+
+        # Filter data - must drop NaN for LMM to work properly
+        filtered = self.filter_data(component=component, dropna=True, **filter_kwargs)
+
+        if len(filtered) == 0:
+            raise ValueError(f"No data available for component '{component}' after filtering")
+
+        # Check we have the DV column
+        if dv not in filtered.columns:
+            raise ValueError(f"Dependent variable '{dv}' not found in data")
+
+        # Sort by group variable and reset index (important for statsmodels)
+        filtered = filtered.sort_values(by=[random]).reset_index(drop=True)
+
+        # Build formula
+        formula = f"{dv} ~ {fixed}"
+
+        # Fit the mixed-effects model
+        try:
+            model = mixedlm(formula, filtered, groups=filtered[random])
+            fitted_model = model.fit(method='lbfgs', reml=False)
+        except Exception as e:
+            # If LBFGS fails, try a more robust method
+            try:
+                model = mixedlm(formula, filtered, groups=filtered[random])
+                fitted_model = model.fit(method='powell', reml=False)
+            except Exception as e2:
+                raise RuntimeError(f"LMM fitting failed: {e2}") from e
+
+        # Extract the categorical term name for pairwise comparisons
+        # Handle cases like "condition" or "condition + snr"
+        # We want the first term (typically the categorical factor)
+        categorical_term = fixed.split('+')[0].strip()
+
+        # statsmodels t_test_pairwise requires the exact term name as it appears in the model
+        # For categorical variables, statsmodels creates dummy variables
+        # We need to manually construct pairwise contrasts
+
+        # Get unique conditions (sorted alphabetically - statsmodels default)
+        conditions = sorted(filtered[categorical_term].unique())
+        n_conditions = len(conditions)
+
+        if n_conditions < 2:
+            raise ValueError(f"Need at least 2 conditions for pairwise comparisons, found {n_conditions}")
+
+        # Manual pairwise comparisons using t_test
+        # This is more reliable than t_test_pairwise which can be finicky
+        pairwise_results = []
+
+        # Get model parameters
+        params = fitted_model.params
+        cov_params = fitted_model.cov_params()
+
+        # For each pair of conditions, construct a contrast
+        from itertools import combinations
+
+        for cond_a, cond_b in combinations(conditions, 2):
+            # Construct contrast vector
+            # For treatment coding, first condition is reference (intercept)
+            # Other conditions have dummy variables
+
+            # Find parameter names for these conditions
+            param_names = list(params.index)
+
+            # Initialize contrast vector (zeros)
+            contrast = np.zeros(len(params))
+
+            # Reference condition (first alphabetically) is coded as intercept
+            ref_condition = conditions[0]
+
+            if cond_a == ref_condition:
+                # Comparing reference to another condition
+                # Contrast is just the coefficient for cond_b
+                param_name = f"{categorical_term}[T.{cond_b}]"
+                if param_name in param_names:
+                    idx = param_names.index(param_name)
+                    contrast[idx] = -1  # Negative because we want cond_a - cond_b
+            elif cond_b == ref_condition:
+                # Comparing another condition to reference
+                param_name = f"{categorical_term}[T.{cond_a}]"
+                if param_name in param_names:
+                    idx = param_names.index(param_name)
+                    contrast[idx] = 1
+            else:
+                # Comparing two non-reference conditions
+                # Contrast is difference of their coefficients
+                param_a = f"{categorical_term}[T.{cond_a}]"
+                param_b = f"{categorical_term}[T.{cond_b}]"
+                if param_a in param_names and param_b in param_names:
+                    idx_a = param_names.index(param_a)
+                    idx_b = param_names.index(param_b)
+                    contrast[idx_a] = 1
+                    contrast[idx_b] = -1
+
+            # Compute test statistic
+            # Estimate = contrast' * params
+            estimate = np.dot(contrast, params)
+
+            # Standard error = sqrt(contrast' * cov * contrast)
+            se = np.sqrt(np.dot(contrast, np.dot(cov_params, contrast)))
+
+            # z-statistic
+            z_stat = estimate / se if se > 0 else 0
+
+            # p-value (two-tailed)
+            from scipy import stats as sp_stats
+            p_value = 2 * (1 - sp_stats.norm.cdf(abs(z_stat)))
+
+            pairwise_results.append({
+                'Contrast': f"{cond_a} - {cond_b}",
+                'Coef': estimate,
+                'Std.Err.': se,
+                'z': z_stat,
+                'P>|z|': p_value
+            })
+
+        # Convert to DataFrame
+        result_df = pd.DataFrame(pairwise_results)
+
+        # Apply multiple comparison correction
+        if correction == 'bonferroni':
+            result_df['P>|z| (adj)'] = result_df['P>|z|'] * len(result_df)
+            result_df['P>|z| (adj)'] = result_df['P>|z| (adj)'].clip(upper=1.0)
+        elif correction == 'hs':
+            # Holm-Sidak correction
+            sorted_idx = result_df['P>|z|'].argsort()
+            n = len(result_df)
+            adjusted_p = []
+            for rank, idx in enumerate(sorted_idx):
+                p = result_df.loc[idx, 'P>|z|']
+                # Holm-Sidak: 1 - (1-p)^(n-rank)
+                adj = 1 - (1 - p) ** (n - rank)
+                adjusted_p.append((idx, adj))
+            for idx, adj_p in adjusted_p:
+                result_df.loc[idx, 'P>|z| (adj)'] = min(adj_p, 1.0)
+        elif correction == 'fdr_bh':
+            # Benjamini-Hochberg FDR
+            from scipy.stats import false_discovery_control
+            result_df['P>|z| (adj)'] = false_discovery_control(result_df['P>|z|'].values)
+        else:
+            # No correction
+            result_df['P>|z| (adj)'] = result_df['P>|z|']
+
+        # Reorder columns for readability
+        desired_order = ['Contrast', 'Coef', 'Std.Err.', 'z', 'P>|z|', 'P>|z| (adj)']
+        existing_cols = [col for col in desired_order if col in result_df.columns]
+        other_cols = [col for col in result_df.columns if col not in existing_cols]
+        result_df = result_df[existing_cols + other_cols]
+
+        return result_df
+
     def get_descriptives(
         self,
         dv: str,
