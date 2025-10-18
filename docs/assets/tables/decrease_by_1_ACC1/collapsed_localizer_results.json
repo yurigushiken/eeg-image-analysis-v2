@@ -1,6 +1,6 @@
 {
   "analysis_id": "decrease_by_1_ACC1",
-  "date_analyzed": "2025-10-17T16:43:34.929174",
+  "date_analyzed": "2025-10-18T13:37:09.126692",
   "baseline_ms": [
     -100,
     0
@@ -19,10 +19,10 @@
   "components": {
     "P1": {
       "collapsed_peak_latency_ms": 112.0,
-      "peak_gfp_amplitude": 0.6260716994186002,
-      "fwhm_ms": 26.727618517054367,
-      "window_start_ms": 96.31852644268517,
-      "window_end_ms": 123.04614495973954,
+      "peak_gfp_amplitude": 0.45240487609811764,
+      "fwhm_ms": 25.02664516842148,
+      "window_start_ms": 98.83410839913753,
+      "window_end_ms": 123.86075356755902,
       "search_range_ms": [
         60.0,
         120.0
@@ -33,10 +33,10 @@
     },
     "N1": {
       "collapsed_peak_latency_ms": 172.0,
-      "peak_gfp_amplitude": -3.87297071989748,
-      "fwhm_ms": 65.05744903214074,
-      "window_start_ms": 142.22566960477897,
-      "window_end_ms": 207.2831186369197,
+      "peak_gfp_amplitude": -4.004837947102507,
+      "fwhm_ms": 69.88995190176794,
+      "window_start_ms": 142.46488939506057,
+      "window_end_ms": 212.3548412968285,
       "search_range_ms": [
         125.0,
         200.0
@@ -47,10 +47,10 @@
     },
     "P3b": {
       "collapsed_peak_latency_ms": 480.0,
-      "peak_gfp_amplitude": 2.7713959172908704,
-      "fwhm_ms": 106.35589142047286,
-      "window_start_ms": 447.62755700823993,
-      "window_end_ms": 553.9834484287128,
+      "peak_gfp_amplitude": 2.9632082411553915,
+      "fwhm_ms": 119.38709628754964,
+      "window_start_ms": 438.8108846369437,
+      "window_end_ms": 558.1979809244933,
       "search_range_ms": [
         320.0,
         590.0
