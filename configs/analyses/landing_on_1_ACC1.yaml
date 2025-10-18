@@ -6,17 +6,24 @@ selection:
   response: "ACC1"
   min_epochs_per_set: 1
   condition_sets:
-
+    - name: "1 to 1"
+      conditions: ["11"]
+      response: "ALL"
+      color: "#2c6dde"  # Blue
+      linestyle: "-"    # solid
     - name: "2 to 1"
       conditions: ["21"]
+      response: "ACC1"
       color: "#ff00ff"  # pink
       linestyle: ":"    # dotted
     - name: "3 to 1"
       conditions: ["31"]
+      response: "ACC1"
       color: "#ef0000"  # red
       linestyle: "--"    # dashed
     - name: "4 to 1"
       conditions: ["41"]
+      response: "ACC1"
       color: "#9900ff"  # purple
       linestyle: "-"    # Solid
 components: ["P1", "N1", "P3b"]

@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-17 04:45:30",
+  "timestamp": "2025-10-17 17:21:54",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_within_small_22xjm052.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_within_small_7496w7t5.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\cardinality_within_small\\subject_measurements.csv",
   "components_tested": [
     "N1",

@@ -1,6 +1,6 @@
 {
   "analysis_id": "cardinality_within_small",
-  "duration_seconds": 15.401,
+  "duration_seconds": 70.368,
   "num_figures": 4,
   "largest_png_bytes": 811521,
   "total_png_bytes": 2251279,

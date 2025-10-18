@@ -7,27 +7,31 @@ selection:
   min_epochs_per_set: 1
   condition_sets:
 
-    - name: "1 to 4"
-      conditions: ["14"]
+    - name: "2 to 5"
+      conditions: ["25"]
+      response: "ACC1"
       color: "#02d502"  # green
       linestyle: "-"    # solid
-    - name: "2 to 4"
-      conditions: ["24"]
+    - name: "3 to 5"
+      conditions: ["35"]
+      response: "ACC1"
       color: "#02d502"  # green
       linestyle: "--"    # dashed
-    - name: "3 to 4"
-      conditions: ["34"]
+    - name: "4 to 5"
+      conditions: ["45"]
+      response: "ACC1"
       color: "#02d502"  # green
       linestyle: ":"    # dotted
-
-    - name: "5 to 4"
-      conditions: ["54"]
+    - name: "5 to 5"
+      conditions: ["55"]
+      response: "ALL"
+      color: "#2c6dde"  # Blue
+      linestyle: "-"    # solid
+    - name: "6 to 5"
+      conditions: ["65"]
+      response: "ACC1"
       color: "#ef0000"  # red
-      linestyle: ":"   # dotted
-    - name: "6 to 4"
-      conditions: ["64"]
-      color: "#ef0000"  # red
-      linestyle: "-"   # dashed
+      linestyle: ":"    # dotted
 
 components: ["P1", "N1", "P3b"]
 preprocessing:
@@ -41,9 +45,9 @@ plots:
 
 outputs:
   page: "single"
-  plots_dir: "docs/assets/plots/landing_on_4_any_preceding_ACC1"
-  tables_dir: "docs/assets/tables/landing_on_4_any_preceding_ACC1"
-  page: "docs/analysis/landing_on_4_any_preceding_ACC1.md"
+  plots_dir: "docs/assets/plots/landing_on_5_any_preceding_ACC1"
+  tables_dir: "docs/assets/tables/landing_on_5_any_preceding_ACC1"
+  page: "docs/analysis/landing_on_5_any_preceding_ACC1.md"
 measurement:
   latency: fal     # options: peak | fal
   amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
