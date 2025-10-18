@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-18 16:09:13",
+  "timestamp": "2025-10-18 16:59:06",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ACC0_ACC1_qjm8rcih.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ACC0_ACC1_dztovb18.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\65_ACC0_ACC1\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.10.1",
-    "scipy": "1.16.2",
+    "mne": "1.9.0",
+    "scipy": "1.13.1",
     "pandas": "2.3.1",
-    "numpy": "2.3.3",
-    "python": "3.12.11"
+    "numpy": "1.26.4",
+    "python": "3.12.4"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -52,7 +52,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 1.797594927756012,
-        "p_unc": 0.20135396349521897,
+        "p_unc": 0.201353963495219,
         "output_file": "anova_N1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.03850277835769147
@@ -130,6 +130,38 @@
         "bic": 313.3436292996226,
         "converged": true,
         "output_file": "lmm_N1_latency_frac_area_ms.json"
+      },
+      "P1_mean_amplitude_roi": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P1_latency_frac_area_ms": {
+        "error": "No data available for component 'P1' after filtering"
+      },
+      "P3b_mean_amplitude_roi": {
+        "error": "No data available for component 'P3b' after filtering"
+      },
+      "P3b_latency_frac_area_ms": {
+        "error": "No data available for component 'P3b' after filtering"
+      }
+    },
+    "lmm_pairwise": {
+      "N1_mean_amplitude_roi": {
+        "component": "N1",
+        "dv": "mean_amplitude_roi",
+        "test": "LMM_Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 1,
+        "correction": "hs",
+        "output_file": "lmm_pairwise_N1_mean_amplitude_roi.csv"
+      },
+      "N1_latency_frac_area_ms": {
+        "component": "N1",
+        "dv": "latency_frac_area_ms",
+        "test": "LMM_Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "hs",
+        "output_file": "lmm_pairwise_N1_latency_frac_area_ms.csv"
       },
       "P1_mean_amplitude_roi": {
         "error": "No data available for component 'P1' after filtering"

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-18 16:19:18
+**Generated:** 2025-10-18 17:13:28
 
 ---
 
@@ -122,17 +122,33 @@ This section presents the results of repeated-measures statistical tests.
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-- Model converged successfully
-- AIC = 511.34, BIC = 537.36
-- **2 to 4 vs 1 to 4**: *β* = 0.35, *SE* = 0.408, *z* = 0.865, *p* = 0.387
-- **3 to 4 vs 1 to 4**: *β* = 0.71, *SE* = 0.399, *z* = 1.777, *p* = 0.076
-- **4 to 4 vs 1 to 4**: *β* = 0.69, *SE* = 0.404, *z* = 1.712, *p* = 0.087
-- **5 to 4 vs 1 to 4**: *β* = 0.46, *SE* = 0.403, *z* = 1.136, *p* = 0.256
-- **6 to 4 vs 1 to 4**: *β* = 0.85, *SE* = 0.399, *z* = 2.141, *p* = 0.032
-- **SNR**: *β* = -0.37, *SE* = 0.042, *z* = -8.899, *p* < .001
+_LMM did not converge or had numerical issues._
 
-_Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | -0.37 | 0.37 | -1.00 | 0.320 | 0.979 | n.s. |
+| 1 to 4 - 3 to 4 | -0.72 | 0.36 | -2.00 | 0.046 | 0.482 | n.s. |
+| 1 to 4 - 4 to 4 | -0.68 | 0.37 | -1.86 | 0.062 | 0.568 | n.s. |
+| 1 to 4 - 5 to 4 | -0.45 | 0.36 | -1.25 | 0.213 | 0.944 | n.s. |
+| 1 to 4 - 6 to 4 | -0.81 | 0.36 | -2.25 | 0.024 | 0.308 | n.s. |
+| 2 to 4 - 3 to 4 | -0.35 | 0.37 | -0.97 | 0.334 | 0.979 | n.s. |
+| 2 to 4 - 4 to 4 | -0.31 | 0.37 | -0.85 | 0.394 | 0.979 | n.s. |
+| 2 to 4 - 5 to 4 | -0.09 | 0.37 | -0.23 | 0.815 | 0.993 | n.s. |
+| 2 to 4 - 6 to 4 | -0.45 | 0.37 | -1.22 | 0.224 | 0.944 | n.s. |
+| 3 to 4 - 4 to 4 | 0.04 | 0.36 | 0.11 | 0.915 | 0.993 | n.s. |
+| 3 to 4 - 5 to 4 | 0.27 | 0.36 | 0.74 | 0.461 | 0.979 | n.s. |
+| 3 to 4 - 6 to 4 | -0.09 | 0.36 | -0.26 | 0.797 | 0.993 | n.s. |
+| 4 to 4 - 5 to 4 | 0.23 | 0.37 | 0.62 | 0.533 | 0.979 | n.s. |
+| 4 to 4 - 6 to 4 | -0.13 | 0.36 | -0.36 | 0.715 | 0.993 | n.s. |
+| 5 to 4 - 6 to 4 | -0.36 | 0.36 | -1.00 | 0.319 | 0.979 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
@@ -141,7 +157,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -161,7 +177,8 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -0.18 | 17 | = 0.969 | -0.04 [-0.51, 0.40] | negligible | n.s. |
 | 5 to 4 vs 6 to 4 | -0.21 | 17 | = 0.969 | -0.06 [-0.52, 0.39] | negligible | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 #### Latency (50% Fractional Area)
 
@@ -179,6 +196,32 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 _Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | 0.99 | 1.69 | 0.58 | 0.560 | 0.979 | n.s. |
+| 1 to 4 - 3 to 4 | 3.71 | 1.66 | 2.24 | 0.025 | 0.249 | n.s. |
+| 1 to 4 - 4 to 4 | -0.06 | 1.68 | -0.03 | 0.974 | 0.990 | n.s. |
+| 1 to 4 - 5 to 4 | -3.19 | 1.67 | -1.91 | 0.056 | 0.438 | n.s. |
+| 1 to 4 - 6 to 4 | -0.46 | 1.66 | -0.28 | 0.783 | 0.990 | n.s. |
+| 2 to 4 - 3 to 4 | 2.73 | 1.68 | 1.62 | 0.105 | 0.563 | n.s. |
+| 2 to 4 - 4 to 4 | -1.04 | 1.69 | -0.61 | 0.539 | 0.979 | n.s. |
+| 2 to 4 - 5 to 4 | -4.18 | 1.70 | -2.47 | 0.014 | 0.164 | n.s. |
+| 2 to 4 - 6 to 4 | -1.44 | 1.68 | -0.86 | 0.391 | 0.949 | n.s. |
+| 3 to 4 - 4 to 4 | -3.77 | 1.66 | -2.26 | 0.024 | 0.249 | n.s. |
+| 3 to 4 - 5 to 4 | -6.91 | 1.66 | -4.16 | < .001 | < .001 | *** |
+| 3 to 4 - 6 to 4 | -4.17 | 1.65 | -2.53 | 0.011 | 0.147 | n.s. |
+| 4 to 4 - 5 to 4 | -3.14 | 1.68 | -1.87 | 0.061 | 0.438 | n.s. |
+| 4 to 4 - 6 to 4 | -0.40 | 1.65 | -0.24 | 0.808 | 0.990 | n.s. |
+| 5 to 4 - 6 to 4 | 2.74 | 1.66 | 1.65 | 0.098 | 0.563 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
 - *F* = 2.40, *p* = 0.044, η²_G = 0.056
@@ -186,7 +229,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -206,7 +249,8 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -0.04 | 17 | = 0.991 | -0.01 [-0.41, 0.50] | negligible | n.s. |
 | 5 to 4 vs 6 to 4 | 1.52 | 17 | = 0.276 | 0.40 [-0.10, 0.84] | small | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
 ### 3.2 P1 Component
@@ -215,17 +259,33 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-- Model converged successfully
-- AIC = 243.95, BIC = 266.04
-- **2 to 4 vs 1 to 4**: *β* = 0.02, *SE* = 0.328, *z* = 0.057, *p* = 0.954
-- **3 to 4 vs 1 to 4**: *β* = 0.32, *SE* = 0.345, *z* = 0.914, *p* = 0.361
-- **4 to 4 vs 1 to 4**: *β* = -0.04, *SE* = 0.353, *z* = -0.105, *p* = 0.917
-- **5 to 4 vs 1 to 4**: *β* = 0.36, *SE* = 0.342, *z* = 1.050, *p* = 0.294
-- **6 to 4 vs 1 to 4**: *β* = 0.10, *SE* = 0.329, *z* = 0.294, *p* = 0.769
-- **SNR**: *β* = 0.77, *SE* = 0.063, *z* = 12.329, *p* < .001
+_LMM did not converge or had numerical issues._
 
-_Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | 0.09 | 0.30 | 0.31 | 0.758 | 0.999 | n.s. |
+| 1 to 4 - 3 to 4 | -0.20 | 0.31 | -0.64 | 0.522 | 0.999 | n.s. |
+| 1 to 4 - 4 to 4 | -0.00 | 0.31 | -0.00 | 0.997 | 0.999 | n.s. |
+| 1 to 4 - 5 to 4 | -0.32 | 0.31 | -1.04 | 0.299 | 0.993 | n.s. |
+| 1 to 4 - 6 to 4 | -0.13 | 0.29 | -0.45 | 0.651 | 0.999 | n.s. |
+| 2 to 4 - 3 to 4 | -0.29 | 0.30 | -0.97 | 0.330 | 0.993 | n.s. |
+| 2 to 4 - 4 to 4 | -0.09 | 0.31 | -0.30 | 0.767 | 0.999 | n.s. |
+| 2 to 4 - 5 to 4 | -0.41 | 0.29 | -1.40 | 0.160 | 0.927 | n.s. |
+| 2 to 4 - 6 to 4 | -0.22 | 0.29 | -0.77 | 0.439 | 0.998 | n.s. |
+| 3 to 4 - 4 to 4 | 0.20 | 0.33 | 0.60 | 0.547 | 0.999 | n.s. |
+| 3 to 4 - 5 to 4 | -0.12 | 0.32 | -0.39 | 0.698 | 0.999 | n.s. |
+| 3 to 4 - 6 to 4 | 0.07 | 0.30 | 0.23 | 0.822 | 0.999 | n.s. |
+| 4 to 4 - 5 to 4 | -0.32 | 0.32 | -0.99 | 0.320 | 0.993 | n.s. |
+| 4 to 4 - 6 to 4 | -0.13 | 0.30 | -0.44 | 0.660 | 0.999 | n.s. |
+| 5 to 4 - 6 to 4 | 0.19 | 0.30 | 0.63 | 0.527 | 0.999 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
@@ -234,7 +294,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -254,23 +314,40 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -1.51 | 2 | = 0.580 | -0.56 [-0.72, 0.62] | medium | n.s. |
 | 5 to 4 vs 6 to 4 | -0.62 | 2 | = 0.795 | -0.52 [-0.98, 0.47] | medium | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 #### Latency (50% Fractional Area)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-- Model converged successfully
-- AIC = 556.83, BIC = 578.92
-- **2 to 4 vs 1 to 4**: *β* = 2.54, *SE* = 1.856, *z* = 1.367, *p* = 0.171
-- **3 to 4 vs 1 to 4**: *β* = 2.71, *SE* = 1.964, *z* = 1.381, *p* = 0.167
-- **4 to 4 vs 1 to 4**: *β* = 1.84, *SE* = 2.006, *z* = 0.915, *p* = 0.360
-- **5 to 4 vs 1 to 4**: *β* = 3.82, *SE* = 1.949, *z* = 1.958, *p* = 0.050
-- **6 to 4 vs 1 to 4**: *β* = 4.24, *SE* = 1.862, *z* = 2.278, *p* = 0.023
-- **SNR**: *β* = 0.63, *SE* = 0.406, *z* = 1.547, *p* = 0.122
+_LMM did not converge or had numerical issues._
 
-_Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | -2.82 | 1.60 | -1.77 | 0.077 | 0.588 | n.s. |
+| 1 to 4 - 3 to 4 | -3.47 | 1.69 | -2.05 | 0.040 | 0.415 | n.s. |
+| 1 to 4 - 4 to 4 | -1.32 | 1.69 | -0.78 | 0.436 | 0.968 | n.s. |
+| 1 to 4 - 5 to 4 | -3.86 | 1.68 | -2.30 | 0.021 | 0.262 | n.s. |
+| 1 to 4 - 6 to 4 | -4.39 | 1.58 | -2.77 | 0.006 | 0.080 | n.s. |
+| 2 to 4 - 3 to 4 | -0.65 | 1.62 | -0.40 | 0.689 | 0.973 | n.s. |
+| 2 to 4 - 4 to 4 | 1.50 | 1.69 | 0.89 | 0.373 | 0.962 | n.s. |
+| 2 to 4 - 5 to 4 | -1.04 | 1.59 | -0.65 | 0.515 | 0.973 | n.s. |
+| 2 to 4 - 6 to 4 | -1.57 | 1.56 | -1.00 | 0.315 | 0.952 | n.s. |
+| 3 to 4 - 4 to 4 | 2.15 | 1.78 | 1.20 | 0.229 | 0.903 | n.s. |
+| 3 to 4 - 5 to 4 | -0.39 | 1.70 | -0.23 | 0.818 | 0.973 | n.s. |
+| 3 to 4 - 6 to 4 | -0.92 | 1.63 | -0.56 | 0.573 | 0.973 | n.s. |
+| 4 to 4 - 5 to 4 | -2.54 | 1.75 | -1.45 | 0.146 | 0.793 | n.s. |
+| 4 to 4 - 6 to 4 | -3.07 | 1.60 | -1.91 | 0.056 | 0.499 | n.s. |
+| 5 to 4 - 6 to 4 | -0.53 | 1.63 | -0.33 | 0.745 | 0.973 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
@@ -279,7 +356,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -299,7 +376,8 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -1.60 | 2 | = 0.556 | -0.94 [-1.28, 0.17] | large | n.s. |
 | 5 to 4 vs 6 to 4 | -1.42 | 2 | = 0.556 | -0.63 [-0.76, 0.67] | medium | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
 ### 3.3 P3b Component
@@ -308,17 +386,33 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-- Model converged successfully
-- AIC = 428.86, BIC = 452.83
-- **2 to 4 vs 1 to 4**: *β* = 0.24, *SE* = 0.471, *z* = 0.517, *p* = 0.605
-- **3 to 4 vs 1 to 4**: *β* = 0.04, *SE* = 0.497, *z* = 0.073, *p* = 0.942
-- **4 to 4 vs 1 to 4**: *β* = -0.44, *SE* = 0.555, *z* = -0.795, *p* = 0.427
-- **5 to 4 vs 1 to 4**: *β* = -0.14, *SE* = 0.454, *z* = -0.299, *p* = 0.765
-- **6 to 4 vs 1 to 4**: *β* = 0.30, *SE* = 0.479, *z* = 0.619, *p* = 0.536
-- **SNR**: *β* = 0.54, *SE* = 0.060, *z* = 9.031, *p* < .001
+_LMM did not converge or had numerical issues._
 
-_Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | -0.29 | 0.42 | -0.69 | 0.491 | 0.995 | n.s. |
+| 1 to 4 - 3 to 4 | -0.04 | 0.45 | -0.09 | 0.927 | 0.997 | n.s. |
+| 1 to 4 - 4 to 4 | 0.57 | 0.50 | 1.13 | 0.258 | 0.979 | n.s. |
+| 1 to 4 - 5 to 4 | 0.11 | 0.41 | 0.26 | 0.792 | 0.997 | n.s. |
+| 1 to 4 - 6 to 4 | -0.25 | 0.43 | -0.58 | 0.563 | 0.997 | n.s. |
+| 2 to 4 - 3 to 4 | 0.25 | 0.46 | 0.55 | 0.584 | 0.997 | n.s. |
+| 2 to 4 - 4 to 4 | 0.86 | 0.52 | 1.65 | 0.100 | 0.793 | n.s. |
+| 2 to 4 - 5 to 4 | 0.40 | 0.41 | 0.96 | 0.337 | 0.989 | n.s. |
+| 2 to 4 - 6 to 4 | 0.04 | 0.44 | 0.10 | 0.923 | 0.997 | n.s. |
+| 3 to 4 - 4 to 4 | 0.61 | 0.53 | 1.13 | 0.257 | 0.979 | n.s. |
+| 3 to 4 - 5 to 4 | 0.15 | 0.45 | 0.33 | 0.740 | 0.997 | n.s. |
+| 3 to 4 - 6 to 4 | -0.21 | 0.47 | -0.44 | 0.657 | 0.997 | n.s. |
+| 4 to 4 - 5 to 4 | -0.46 | 0.50 | -0.92 | 0.358 | 0.989 | n.s. |
+| 4 to 4 - 6 to 4 | -0.81 | 0.50 | -1.61 | 0.107 | 0.794 | n.s. |
+| 5 to 4 - 6 to 4 | -0.36 | 0.42 | -0.84 | 0.401 | 0.990 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
@@ -327,7 +421,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -347,23 +441,40 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -1.20 | 7 | = 0.451 | -0.56 [-1.21, 0.29] | medium | n.s. |
 | 5 to 4 vs 6 to 4 | 0.58 | 7 | = 0.725 | 0.25 [-0.48, 0.52] | small | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 #### Latency (50% Fractional Area)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-- Model converged successfully
-- AIC = 909.93, BIC = 933.90
-- **2 to 4 vs 1 to 4**: *β* = 6.66, *SE* = 5.188, *z* = 1.284, *p* = 0.199
-- **3 to 4 vs 1 to 4**: *β* = 6.99, *SE* = 5.420, *z* = 1.289, *p* = 0.197
-- **4 to 4 vs 1 to 4**: *β* = 1.94, *SE* = 6.001, *z* = 0.323, *p* = 0.747
-- **5 to 4 vs 1 to 4**: *β* = 7.34, *SE* = 5.037, *z* = 1.457, *p* = 0.145
-- **6 to 4 vs 1 to 4**: *β* = 7.89, *SE* = 5.267, *z* = 1.499, *p* = 0.134
-- **SNR**: *β* = -0.27, *SE* = 0.542, *z* = -0.504, *p* = 0.614
+_LMM did not converge or had numerical issues._
 
-_Reference condition: **1 to 4** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 1 to 4 - 2 to 4 | -6.48 | 4.74 | -1.37 | 0.172 | 0.914 | n.s. |
+| 1 to 4 - 3 to 4 | -6.57 | 5.06 | -1.30 | 0.194 | 0.924 | n.s. |
+| 1 to 4 - 4 to 4 | -2.93 | 5.60 | -0.52 | 0.601 | 0.999 | n.s. |
+| 1 to 4 - 5 to 4 | -7.09 | 4.55 | -1.56 | 0.119 | 0.850 | n.s. |
+| 1 to 4 - 6 to 4 | -6.94 | 4.82 | -1.44 | 0.150 | 0.897 | n.s. |
+| 2 to 4 - 3 to 4 | -0.10 | 5.12 | -0.02 | 0.985 | 1.000 | n.s. |
+| 2 to 4 - 4 to 4 | 3.55 | 5.84 | 0.61 | 0.543 | 0.999 | n.s. |
+| 2 to 4 - 5 to 4 | -0.61 | 4.66 | -0.13 | 0.895 | 1.000 | n.s. |
+| 2 to 4 - 6 to 4 | -0.46 | 4.95 | -0.09 | 0.926 | 1.000 | n.s. |
+| 3 to 4 - 4 to 4 | 3.65 | 6.00 | 0.61 | 0.543 | 0.999 | n.s. |
+| 3 to 4 - 5 to 4 | -0.52 | 5.02 | -0.10 | 0.918 | 1.000 | n.s. |
+| 3 to 4 - 6 to 4 | -0.37 | 5.24 | -0.07 | 0.944 | 1.000 | n.s. |
+| 4 to 4 - 5 to 4 | -4.16 | 5.59 | -0.75 | 0.456 | 0.999 | n.s. |
+| 4 to 4 - 6 to 4 | -4.01 | 5.66 | -0.71 | 0.478 | 0.999 | n.s. |
+| 5 to 4 - 6 to 4 | 0.15 | 4.75 | 0.03 | 0.975 | 1.000 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
@@ -372,7 +483,7 @@ _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc tests with FDR correction for multiple comparisons:_
+_Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
@@ -392,7 +503,8 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 | 4 to 4 vs 6 to 4 | -1.57 | 7 | = 0.494 | -0.75 [-1.02, 0.44] | medium | n.s. |
 | 5 to 4 vs 6 to 4 | -0.48 | 7 | = 0.809 | -0.23 [-0.55, 0.44] | small | n.s. |
 
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
 ---
@@ -498,8 +610,8 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### Software
 
-- Python 3.12.11
-- MNE-Python 1.10.1
+- Python 3.12.4
+- MNE-Python 1.9.0
 - Statsmodels 0.14.5
 - Pingouin 0.5.5
 

@@ -480,6 +480,7 @@ class StatisticalReportGenerator:
 
                     lines.append("")
                     lines.append(f"_Note: p-values adjusted using {correction_method} method for {len(lmm_pairwise_df)} comparisons._")
+                    lines.append("_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._\n")
                     lines.append("")
 
                 # ===================================================================
@@ -565,7 +566,7 @@ class StatisticalReportGenerator:
                         # Determine correction method
                         correction = "FDR" if 'p-corr' in pairwise_df.columns else "uncorrected"
 
-                        lines.append(f"_Post-hoc tests with {correction} correction for multiple comparisons:_")
+                        lines.append(f"_Post-hoc paired t-tests on complete cases with {correction} correction:_")
                         lines.append("")
                         lines.append("| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |")
                         lines.append("|------------|-----|------|----------------|-------------|-------------|------|")
@@ -601,7 +602,8 @@ class StatisticalReportGenerator:
                             lines.append(f"| {comp_a} vs {comp_b} | {t_val:.2f} | {df:.0f} | {self._format_p_value(p_corr)} | {d_str} | {d_interp} | {sig} |")
 
                         lines.append("")
-                        lines.append("_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_")
+                        lines.append("_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._")
+                        lines.append("_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_")
                         lines.append("")
                     else:
                         lines.append("_Pairwise tests could not be computed (insufficient paired samples)._\n")

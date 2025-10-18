@@ -135,6 +135,18 @@ tests:
     # Whether to include model diagnostics
     include_diagnostics: true
 
+  # ---------------------------------------------------------------------------
+  # LMM Pairwise Comparisons (all condition pairs via MixedLM)
+  # ---------------------------------------------------------------------------
+  lmm_pairwise:
+    enabled: true
+    # Use the same fixed/random structure as LMM by default
+    fixed: condition + snr
+    random: subject_id
+    # Multiple comparison correction for pairwise p-values
+    # Options: 'hs' (Holm-Sidak), 'bonferroni', 'sidak', 'fdr_bh', 'none'
+    correction: hs
+
 # ============================================================================
 # Descriptive Statistics
 # ============================================================================

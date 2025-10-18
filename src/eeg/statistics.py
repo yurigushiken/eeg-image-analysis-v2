@@ -412,8 +412,9 @@ class ERPStatistics:
         answering the question: "Do the conditions differ from each other?"
         (e.g., is 1 to 3 different from 1 to 4?).
 
-        Uses statsmodels' native t_test_pairwise() method with proper
-        multiple comparison corrections.
+        Implements pairwise comparisons via manual contrast vectors on the
+        fitted MixedLM parameters (Wald z-tests), followed by multiple
+        comparison correction.
 
         Parameters
         ----------
@@ -515,12 +516,19 @@ class ERPStatistics:
         # Handle cases like "condition" or "condition + snr"
         # We want the first term (typically the categorical factor)
         categorical_term = fixed.split('+')[0].strip()
+        # If the first term includes an interaction, take the left-most factor
+        if '*' in categorical_term:
+            categorical_term = categorical_term.split('*')[0].strip()
 
-        # statsmodels t_test_pairwise requires the exact term name as it appears in the model
-        # For categorical variables, statsmodels creates dummy variables
-        # We need to manually construct pairwise contrasts
+        # For categorical variables, statsmodels (via patsy) creates dummy variables
+        # using treatment coding. We manually construct pairwise contrasts on the
+        # parameter vector to compare any two condition means.
 
         # Get unique conditions (sorted alphabetically - statsmodels default)
+        if categorical_term not in filtered.columns:
+            raise ValueError(
+                f"Categorical term '{categorical_term}' not found in data columns; fixed='{fixed}'"
+            )
         conditions = sorted(filtered[categorical_term].unique())
         n_conditions = len(conditions)
 
@@ -601,29 +609,34 @@ class ERPStatistics:
         # Convert to DataFrame
         result_df = pd.DataFrame(pairwise_results)
 
-        # Apply multiple comparison correction
-        if correction == 'bonferroni':
-            result_df['P>|z| (adj)'] = result_df['P>|z|'] * len(result_df)
-            result_df['P>|z| (adj)'] = result_df['P>|z| (adj)'].clip(upper=1.0)
-        elif correction == 'hs':
-            # Holm-Sidak correction
-            sorted_idx = result_df['P>|z|'].argsort()
-            n = len(result_df)
-            adjusted_p = []
-            for rank, idx in enumerate(sorted_idx):
-                p = result_df.loc[idx, 'P>|z|']
-                # Holm-Sidak: 1 - (1-p)^(n-rank)
-                adj = 1 - (1 - p) ** (n - rank)
-                adjusted_p.append((idx, adj))
-            for idx, adj_p in adjusted_p:
-                result_df.loc[idx, 'P>|z| (adj)'] = min(adj_p, 1.0)
-        elif correction == 'fdr_bh':
-            # Benjamini-Hochberg FDR
-            from scipy.stats import false_discovery_control
-            result_df['P>|z| (adj)'] = false_discovery_control(result_df['P>|z|'].values)
-        else:
-            # No correction
+        # Apply multiple comparison correction (use statsmodels' multipletests)
+        # Map shorthand to statsmodels method names
+        method_map = {
+            'hs': 'holm-sidak',
+            'holm-sidak': 'holm-sidak',
+            'bonferroni': 'bonferroni',
+            'sidak': 'sidak',
+            'fdr_bh': 'fdr_bh',
+            'none': None,
+            None: None,
+        }
+
+        method = method_map.get(correction, correction)
+
+        if method is None:
+            # No correction requested
             result_df['P>|z| (adj)'] = result_df['P>|z|']
+        else:
+            try:
+                from statsmodels.stats.multitest import multipletests
+            except Exception as e:
+                raise ImportError(
+                    "statsmodels.stats.multitest.multipletests is required for p-value corrections"
+                ) from e
+
+            pvals = result_df['P>|z|'].values
+            _rej, pvals_corr, _alphasidak, _alphabonf = multipletests(pvals, method=method)  # type: ignore
+            result_df['P>|z| (adj)'] = pvals_corr
 
         # Reorder columns for readability
         desired_order = ['Contrast', 'Coef', 'Std.Err.', 'z', 'P>|z|', 'P>|z| (adj)']
