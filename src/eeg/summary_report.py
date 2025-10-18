@@ -128,6 +128,55 @@ class StatisticalReportGenerator:
         else:
             return f"{stat_name} = {value:.2f}"
 
+    def _parse_effect_name(self, effect_name: str, reference_condition: Optional[str] = None) -> str:
+        """
+        Parse statsmodels effect name into human-readable format.
+
+        Examples:
+        - "Intercept" → "Intercept"
+        - "condition[T.2 to 1]" → "2 to 1 vs 1 to 1" (if reference is "1 to 1")
+        - "snr" → "SNR"
+        - "Group Var" → "Subject variance"
+
+        Parameters
+        ----------
+        effect_name : str
+            Raw effect name from statsmodels (e.g., "condition[T.2 to 1]")
+        reference_condition : str, optional
+            Reference condition name (e.g., "1 to 1")
+
+        Returns
+        -------
+        str
+            Human-readable effect label
+        """
+        import re
+
+        # Handle intercept
+        if 'intercept' in effect_name.lower():
+            return "Intercept"
+
+        # Handle random effect variance
+        if 'group var' in effect_name.lower() or 'group re' in effect_name.lower():
+            return "Subject variance"
+
+        # Handle SNR covariate
+        if effect_name.lower() == 'snr':
+            return "SNR"
+
+        # Handle categorical condition effects: "condition[T.2 to 1]"
+        match = re.match(r'condition\[T\.(.+)\]', effect_name, re.IGNORECASE)
+        if match:
+            condition_level = match.group(1)
+            if reference_condition:
+                return f"{condition_level} vs {reference_condition}"
+            else:
+                return f"{condition_level} vs reference"
+
+        # Fallback: Clean up the name by removing brackets and title-casing
+        cleaned = effect_name.replace('[T.', ' vs ').replace(']', '').replace('_', ' ')
+        return cleaned.title()
+
     def _generate_header(self) -> str:
         """Generate report header."""
         lines = [
@@ -325,6 +374,8 @@ class StatisticalReportGenerator:
 
                         # Parse summary if available
                         summary = lmm_result.get('summary', [])
+                        reference_condition = lmm_result.get('reference_condition', None)
+
                         if summary and len(summary) > 1:
                             # Show all fixed effects (condition + covariates like SNR)
                             try:
@@ -337,9 +388,9 @@ class StatisticalReportGenerator:
                                     p = effect.get('P>|z|', '')
 
                                     if se and z and p:
-                                        # Capitalize effect name nicely
-                                        display_name = effect_name.replace('_', ' ').title() if effect_name != 'condition' else 'Condition'
-                                        lines.append(f"- {display_name} effect: *β* = {coef:.2f}, *SE* = {se}, *z* = {z}, *p* {self._format_p_value(float(p))}")
+                                        # Parse effect name into human-readable format
+                                        display_name = self._parse_effect_name(effect_name, reference_condition)
+                                        lines.append(f"- **{display_name}**: *β* = {coef:.2f}, *SE* = {se}, *z* = {z}, *p* {self._format_p_value(float(p))}")
                             except (ValueError, TypeError, KeyError):
                                 # Fallback: just show condition effect (row 1)
                                 try:
@@ -355,6 +406,11 @@ class StatisticalReportGenerator:
                                     lines.append("- _Coefficient estimates available in JSON output_")
 
                         lines.append("")
+
+                        # Document reference condition if available
+                        if reference_condition:
+                            lines.append(f"_Reference condition: **{reference_condition}** (all condition effects are contrasts vs. this baseline)._")
+
                         lines.append("_Note: LMM uses all available subject data via maximum likelihood estimation._")
                         lines.append("")
                     else:

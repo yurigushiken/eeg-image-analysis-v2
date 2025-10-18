@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:21:46
+**Generated:** 2025-10-18 13:25:56
 
 ---
 
@@ -124,13 +124,14 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 468.71, BIC = 494.38
-- Effect 1 effect: *β* = -0.94, *SE* = 0.415, *z* = -2.263, *p* = 0.024
-- Effect 2 effect: *β* = -0.94, *SE* = 0.419, *z* = -2.249, *p* = 0.025
-- Effect 3 effect: *β* = -1.07, *SE* = 0.420, *z* = -2.543, *p* = 0.011
-- Effect 4 effect: *β* = -1.06, *SE* = 0.412, *z* = -2.581, *p* = 0.010
-- Effect 5 effect: *β* = -1.08, *SE* = 0.412, *z* = -2.633, *p* = 0.008
-- Effect 6 effect: *β* = -0.44, *SE* = 0.046, *z* = -9.570, *p* < .001
+- **Cardinality2 vs Cardinality1**: *β* = -0.94, *SE* = 0.415, *z* = -2.263, *p* = 0.024
+- **Cardinality3 vs Cardinality1**: *β* = -0.94, *SE* = 0.419, *z* = -2.249, *p* = 0.025
+- **Cardinality4 vs Cardinality1**: *β* = -1.07, *SE* = 0.420, *z* = -2.543, *p* = 0.011
+- **Cardinality5 vs Cardinality1**: *β* = -1.06, *SE* = 0.412, *z* = -2.581, *p* = 0.010
+- **Cardinality6 vs Cardinality1**: *β* = -1.08, *SE* = 0.412, *z* = -2.633, *p* = 0.008
+- **SNR**: *β* = -0.44, *SE* = 0.046, *z* = -9.570, *p* < .001
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -169,13 +170,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 938.67, BIC = 964.34
-- Effect 1 effect: *β* = -4.93, *SE* = 2.459, *z* = -2.005, *p* = 0.045
-- Effect 2 effect: *β* = -3.72, *SE* = 2.489, *z* = -1.496, *p* = 0.135
-- Effect 3 effect: *β* = -3.05, *SE* = 2.495, *z* = -1.224, *p* = 0.221
-- Effect 4 effect: *β* = -2.56, *SE* = 2.449, *z* = -1.045, *p* = 0.296
-- Effect 5 effect: *β* = -2.50, *SE* = 2.444, *z* = -1.023, *p* = 0.306
-- Effect 6 effect: *β* = -0.27, *SE* = 0.283, *z* = -0.956, *p* = 0.339
+- **Cardinality2 vs Cardinality1**: *β* = -4.93, *SE* = 2.459, *z* = -2.005, *p* = 0.045
+- **Cardinality3 vs Cardinality1**: *β* = -3.72, *SE* = 2.489, *z* = -1.496, *p* = 0.135
+- **Cardinality4 vs Cardinality1**: *β* = -3.05, *SE* = 2.495, *z* = -1.224, *p* = 0.221
+- **Cardinality5 vs Cardinality1**: *β* = -2.56, *SE* = 2.449, *z* = -1.045, *p* = 0.296
+- **Cardinality6 vs Cardinality1**: *β* = -2.50, *SE* = 2.444, *z* = -1.023, *p* = 0.306
+- **SNR**: *β* = -0.27, *SE* = 0.283, *z* = -0.956, *p* = 0.339
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -216,13 +218,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 272.06, BIC = 293.83
-- Effect 1 effect: *β* = -0.27, *SE* = 0.365, *z* = -0.735, *p* = 0.462
-- Effect 2 effect: *β* = -0.24, *SE* = 0.351, *z* = -0.694, *p* = 0.488
-- Effect 3 effect: *β* = -0.50, *SE* = 0.362, *z* = -1.378, *p* = 0.168
-- Effect 4 effect: *β* = -0.73, *SE* = 0.347, *z* = -2.112, *p* = 0.035
-- Effect 5 effect: *β* = -0.46, *SE* = 0.371, *z* = -1.225, *p* = 0.221
-- Effect 6 effect: *β* = 0.77, *SE* = 0.069, *z* = 11.175, *p* < .001
+- **Cardinality2 vs Cardinality1**: *β* = -0.27, *SE* = 0.365, *z* = -0.735, *p* = 0.462
+- **Cardinality3 vs Cardinality1**: *β* = -0.24, *SE* = 0.351, *z* = -0.694, *p* = 0.488
+- **Cardinality4 vs Cardinality1**: *β* = -0.50, *SE* = 0.362, *z* = -1.378, *p* = 0.168
+- **Cardinality5 vs Cardinality1**: *β* = -0.73, *SE* = 0.347, *z* = -2.112, *p* = 0.035
+- **Cardinality6 vs Cardinality1**: *β* = -0.46, *SE* = 0.371, *z* = -1.225, *p* = 0.221
+- **SNR**: *β* = 0.77, *SE* = 0.069, *z* = 11.175, *p* < .001
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -260,13 +263,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 505.55, BIC = 527.32
-- Effect 1 effect: *β* = -0.81, *SE* = 1.617, *z* = -0.502, *p* = 0.615
-- Effect 2 effect: *β* = -1.56, *SE* = 1.546, *z* = -1.011, *p* = 0.312
-- Effect 3 effect: *β* = -2.77, *SE* = 1.607, *z* = -1.727, *p* = 0.084
-- Effect 4 effect: *β* = -3.30, *SE* = 1.534, *z* = -2.151, *p* = 0.031
-- Effect 5 effect: *β* = -1.63, *SE* = 1.625, *z* = -1.005, *p* = 0.315
-- Effect 6 effect: *β* = 0.28, *SE* = 0.290, *z* = 0.963, *p* = 0.336
+- **Cardinality2 vs Cardinality1**: *β* = -0.81, *SE* = 1.617, *z* = -0.502, *p* = 0.615
+- **Cardinality3 vs Cardinality1**: *β* = -1.56, *SE* = 1.546, *z* = -1.011, *p* = 0.312
+- **Cardinality4 vs Cardinality1**: *β* = -2.77, *SE* = 1.607, *z* = -1.727, *p* = 0.084
+- **Cardinality5 vs Cardinality1**: *β* = -3.30, *SE* = 1.534, *z* = -2.151, *p* = 0.031
+- **Cardinality6 vs Cardinality1**: *β* = -1.63, *SE* = 1.625, *z* = -1.005, *p* = 0.315
+- **SNR**: *β* = 0.28, *SE* = 0.290, *z* = 0.963, *p* = 0.336
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -307,13 +311,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 275.55, BIC = 297.21
-- Effect 1 effect: *β* = 0.21, *SE* = 0.397, *z* = 0.520, *p* = 0.603
-- Effect 2 effect: *β* = 0.19, *SE* = 0.395, *z* = 0.480, *p* = 0.631
-- Effect 3 effect: *β* = 0.85, *SE* = 0.427, *z* = 1.999, *p* = 0.046
-- Effect 4 effect: *β* = -0.32, *SE* = 0.395, *z* = -0.811, *p* = 0.417
-- Effect 5 effect: *β* = 0.40, *SE* = 0.405, *z* = 0.995, *p* = 0.320
-- Effect 6 effect: *β* = 0.74, *SE* = 0.070, *z* = 10.480, *p* < .001
+- **Cardinality2 vs Cardinality1**: *β* = 0.21, *SE* = 0.397, *z* = 0.520, *p* = 0.603
+- **Cardinality3 vs Cardinality1**: *β* = 0.19, *SE* = 0.395, *z* = 0.480, *p* = 0.631
+- **Cardinality4 vs Cardinality1**: *β* = 0.85, *SE* = 0.427, *z* = 1.999, *p* = 0.046
+- **Cardinality5 vs Cardinality1**: *β* = -0.32, *SE* = 0.395, *z* = -0.811, *p* = 0.417
+- **Cardinality6 vs Cardinality1**: *β* = 0.40, *SE* = 0.405, *z* = 0.995, *p* = 0.320
+- **SNR**: *β* = 0.74, *SE* = 0.070, *z* = 10.480, *p* < .001
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -351,13 +356,14 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 563.83, BIC = 585.49
-- Effect 1 effect: *β* = -0.08, *SE* = 2.605, *z* = -0.031, *p* = 0.975
-- Effect 2 effect: *β* = 0.51, *SE* = 2.565, *z* = 0.200, *p* = 0.841
-- Effect 3 effect: *β* = -0.54, *SE* = 2.780, *z* = -0.196, *p* = 0.845
-- Effect 4 effect: *β* = -1.07, *SE* = 2.554, *z* = -0.419, *p* = 0.675
-- Effect 5 effect: *β* = 4.67, *SE* = 2.656, *z* = 1.758, *p* = 0.079
-- Effect 6 effect: *β* = 0.53, *SE* = 0.405, *z* = 1.301, *p* = 0.193
+- **Cardinality2 vs Cardinality1**: *β* = -0.08, *SE* = 2.605, *z* = -0.031, *p* = 0.975
+- **Cardinality3 vs Cardinality1**: *β* = 0.51, *SE* = 2.565, *z* = 0.200, *p* = 0.841
+- **Cardinality4 vs Cardinality1**: *β* = -0.54, *SE* = 2.780, *z* = -0.196, *p* = 0.845
+- **Cardinality5 vs Cardinality1**: *β* = -1.07, *SE* = 2.554, *z* = -0.419, *p* = 0.675
+- **Cardinality6 vs Cardinality1**: *β* = 4.67, *SE* = 2.656, *z* = 1.758, *p* = 0.079
+- **SNR**: *β* = 0.53, *SE* = 0.405, *z* = 1.301, *p* = 0.193
 
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

@@ -1,6 +1,7 @@
 {
   "summary": [
     {
+      "name": "Intercept",
       "Coef.": "181.003",
       "Std.Err.": "3.945",
       "z": "45.885",
@@ -9,6 +10,7 @@
       "0.975]": "188.734"
     },
     {
+      "name": "condition[T.Increasing 2 to 3]",
       "Coef.": "-2.882",
       "Std.Err.": "3.382",
       "z": "-0.852",
@@ -17,6 +19,7 @@
       "0.975]": "3.747"
     },
     {
+      "name": "snr",
       "Coef.": "-1.208",
       "Std.Err.": "0.784",
       "z": "-1.541",
@@ -25,6 +28,7 @@
       "0.975]": "0.328"
     },
     {
+      "name": "Group Var",
       "Coef.": "43.601",
       "Std.Err.": "5.473",
       "z": "",
@@ -35,5 +39,6 @@
   ],
   "aic": 356.96707532547055,
   "bic": 365.8880234950619,
-  "converged": true
+  "converged": true,
+  "reference_condition": "Decreasing 3 to 2"
 }

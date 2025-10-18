@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:20:45
+**Generated:** 2025-10-18 13:25:03
 
 ---
 
@@ -100,9 +100,10 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 143.32, BIC = 150.95
-- Effect 1 effect: *β* = 1.00, *SE* = 0.608, *z* = 1.641, *p* = 0.101
-- Effect 2 effect: *β* = -0.54, *SE* = 0.114, *z* = -4.727, *p* < .001
+- **56 ALL vs 56 ACC1**: *β* = 1.00, *SE* = 0.608, *z* = 1.641, *p* = 0.101
+- **SNR**: *β* = -0.54, *SE* = 0.114, *z* = -4.727, *p* < .001
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -126,9 +127,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 280.15, BIC = 287.78
-- Effect 1 effect: *β* = 2.69, *SE* = 4.120, *z* = 0.654, *p* = 0.513
-- Effect 2 effect: *β* = -0.40, *SE* = 0.858, *z* = -0.462, *p* = 0.644
+- **56 ALL vs 56 ACC1**: *β* = 2.69, *SE* = 4.120, *z* = 0.654, *p* = 0.513
+- **SNR**: *β* = -0.40, *SE* = 0.858, *z* = -0.462, *p* = 0.644
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -155,9 +157,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 91.60, BIC = 97.70
-- Effect 1 effect: *β* = -1.20, *SE* = 0.509, *z* = -2.356, *p* = 0.018
-- Effect 2 effect: *β* = 1.03, *SE* = 0.176, *z* = 5.868, *p* < .001
+- **56 ALL vs 56 ACC1**: *β* = -1.20, *SE* = 0.509, *z* = -2.356, *p* = 0.018
+- **SNR**: *β* = 1.03, *SE* = 0.176, *z* = 5.868, *p* < .001
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -181,9 +184,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 166.11, BIC = 172.21
-- Effect 1 effect: *β* = -0.28, *SE* = 1.160, *z* = -0.241, *p* = 0.809
-- Effect 2 effect: *β* = -0.16, *SE* = 0.473, *z* = -0.329, *p* = 0.742
+- **56 ALL vs 56 ACC1**: *β* = -0.28, *SE* = 1.160, *z* = -0.241, *p* = 0.809
+- **SNR**: *β* = -0.16, *SE* = 0.473, *z* = -0.329, *p* = 0.742
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -210,9 +214,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 93.01, BIC = 98.46
-- Effect 1 effect: *β* = -1.92, *SE* = 0.708, *z* = -2.706, *p* = 0.007
-- Effect 2 effect: *β* = 1.30, *SE* = 0.155, *z* = 8.376, *p* < .001
+- **56 ALL vs 56 ACC1**: *β* = -1.92, *SE* = 0.708, *z* = -2.706, *p* = 0.007
+- **SNR**: *β* = 1.30, *SE* = 0.155, *z* = 8.376, *p* < .001
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -236,9 +241,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 169.62, BIC = 175.07
-- Effect 1 effect: *β* = -9.09, *SE* = 3.607, *z* = -2.519, *p* = 0.012
-- Effect 2 effect: *β* = -0.36, *SE* = 0.931, *z* = -0.387, *p* = 0.699
+- **56 ALL vs 56 ACC1**: *β* = -9.09, *SE* = 3.607, *z* = -2.519, *p* = 0.012
+- **SNR**: *β* = -0.36, *SE* = 0.931, *z* = -0.387, *p* = 0.699
 
+_Reference condition: **56 ACC1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

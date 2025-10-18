@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:19:43
+**Generated:** 2025-10-18 13:24:35
 
 ---
 
@@ -100,9 +100,10 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 157.22, BIC = 165.41
-- Effect 1 effect: *β* = -0.21, *SE* = 0.589, *z* = -0.352, *p* = 0.725
-- Effect 2 effect: *β* = -0.65, *SE* = 0.115, *z* = -5.604, *p* < .001
+- **46 Incorrect vs 46 Correct**: *β* = -0.21, *SE* = 0.589, *z* = -0.352, *p* = 0.725
+- **SNR**: *β* = -0.65, *SE* = 0.115, *z* = -5.604, *p* < .001
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -126,9 +127,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 309.20, BIC = 317.39
-- Effect 1 effect: *β* = -2.83, *SE* = 4.321, *z* = -0.654, *p* = 0.513
-- Effect 2 effect: *β* = -0.35, *SE* = 0.809, *z* = -0.428, *p* = 0.669
+- **46 Incorrect vs 46 Correct**: *β* = -2.83, *SE* = 4.321, *z* = -0.654, *p* = 0.513
+- **SNR**: *β* = -0.35, *SE* = 0.809, *z* = -0.428, *p* = 0.669
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -155,9 +157,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 64.36, BIC = 70.03
-- Effect 1 effect: *β* = 0.27, *SE* = 0.398, *z* = 0.689, *p* = 0.491
-- Effect 2 effect: *β* = 1.49, *SE* = 0.232, *z* = 6.408, *p* < .001
+- **46 Incorrect vs 46 Correct**: *β* = 0.27, *SE* = 0.398, *z* = 0.689, *p* = 0.491
+- **SNR**: *β* = 1.49, *SE* = 0.232, *z* = 6.408, *p* < .001
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -181,9 +184,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 140.94, BIC = 146.62
-- Effect 1 effect: *β* = -0.41, *SE* = 2.723, *z* = -0.151, *p* = 0.880
-- Effect 2 effect: *β* = -0.24, *SE* = 1.377, *z* = -0.172, *p* = 0.863
+- **46 Incorrect vs 46 Correct**: *β* = -0.41, *SE* = 2.723, *z* = -0.151, *p* = 0.880
+- **SNR**: *β* = -0.24, *SE* = 1.377, *z* = -0.172, *p* = 0.863
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -210,9 +214,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 124.18, BIC = 131.02
-- Effect 1 effect: *β* = 0.49, *SE* = 0.657, *z* = 0.743, *p* = 0.457
-- Effect 2 effect: *β* = 0.70, *SE* = 0.102, *z* = 6.844, *p* < .001
+- **46 Incorrect vs 46 Correct**: *β* = 0.49, *SE* = 0.657, *z* = 0.743, *p* = 0.457
+- **SNR**: *β* = 0.70, *SE* = 0.102, *z* = 6.844, *p* < .001
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -236,9 +241,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 240.32, BIC = 247.16
-- Effect 1 effect: *β* = 1.95, *SE* = 5.073, *z* = 0.384, *p* = 0.701
-- Effect 2 effect: *β* = 0.29, *SE* = 0.809, *z* = 0.360, *p* = 0.719
+- **46 Incorrect vs 46 Correct**: *β* = 1.95, *SE* = 5.073, *z* = 0.384, *p* = 0.701
+- **SNR**: *β* = 0.29, *SE* = 0.809, *z* = 0.360, *p* = 0.719
 
+_Reference condition: **46 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

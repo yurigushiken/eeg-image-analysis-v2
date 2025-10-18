@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:31:43
+**Generated:** 2025-10-18 13:30:07
 
 ---
 
@@ -118,12 +118,13 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 346.82, BIC = 368.78
-- Effect 1 effect: *β* = 0.19, *SE* = 0.242, *z* = 0.780, *p* = 0.435
-- Effect 2 effect: *β* = -0.17, *SE* = 0.235, *z* = -0.713, *p* = 0.476
-- Effect 3 effect: *β* = -0.09, *SE* = 0.239, *z* = -0.375, *p* = 0.708
-- Effect 4 effect: *β* = -0.15, *SE* = 0.235, *z* = -0.650, *p* = 0.515
-- Effect 5 effect: *β* = -0.19, *SE* = 0.026, *z* = -7.136, *p* < .001
+- **from 3 vs from 2**: *β* = 0.19, *SE* = 0.242, *z* = 0.780, *p* = 0.435
+- **from 4 vs from 2**: *β* = -0.17, *SE* = 0.235, *z* = -0.713, *p* = 0.476
+- **from 5 vs from 2**: *β* = -0.09, *SE* = 0.239, *z* = -0.375, *p* = 0.708
+- **from 6 vs from 2**: *β* = -0.15, *SE* = 0.235, *z* = -0.650, *p* = 0.515
+- **SNR**: *β* = -0.19, *SE* = 0.026, *z* = -7.136, *p* < .001
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -156,12 +157,13 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 700.53, BIC = 722.49
-- Effect 1 effect: *β* = -2.42, *SE* = 0.993, *z* = -2.434, *p* = 0.015
-- Effect 2 effect: *β* = -0.78, *SE* = 0.963, *z* = -0.814, *p* = 0.415
-- Effect 3 effect: *β* = 0.49, *SE* = 0.981, *z* = 0.498, *p* = 0.618
-- Effect 4 effect: *β* = 0.23, *SE* = 0.962, *z* = 0.245, *p* = 0.807
-- Effect 5 effect: *β* = 0.23, *SE* = 0.107, *z* = 2.126, *p* = 0.034
+- **from 3 vs from 2**: *β* = -2.42, *SE* = 0.993, *z* = -2.434, *p* = 0.015
+- **from 4 vs from 2**: *β* = -0.78, *SE* = 0.963, *z* = -0.814, *p* = 0.415
+- **from 5 vs from 2**: *β* = 0.49, *SE* = 0.981, *z* = 0.498, *p* = 0.618
+- **from 6 vs from 2**: *β* = 0.23, *SE* = 0.962, *z* = 0.245, *p* = 0.807
+- **SNR**: *β* = 0.23, *SE* = 0.107, *z* = 2.126, *p* = 0.034
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -197,12 +199,13 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 138.23, BIC = 156.22
-- Effect 1 effect: *β* = -0.47, *SE* = 0.195, *z* = -2.442, *p* = 0.015
-- Effect 2 effect: *β* = 0.03, *SE* = 0.187, *z* = 0.177, *p* = 0.860
-- Effect 3 effect: *β* = -0.08, *SE* = 0.178, *z* = -0.436, *p* = 0.663
-- Effect 4 effect: *β* = 0.17, *SE* = 0.174, *z* = 0.977, *p* = 0.329
-- Effect 5 effect: *β* = 0.47, *SE* = 0.043, *z* = 10.860, *p* < .001
+- **from 3 vs from 2**: *β* = -0.47, *SE* = 0.195, *z* = -2.442, *p* = 0.015
+- **from 4 vs from 2**: *β* = 0.03, *SE* = 0.187, *z* = 0.177, *p* = 0.860
+- **from 5 vs from 2**: *β* = -0.08, *SE* = 0.178, *z* = -0.436, *p* = 0.663
+- **from 6 vs from 2**: *β* = 0.17, *SE* = 0.174, *z* = 0.977, *p* = 0.329
+- **SNR**: *β* = 0.47, *SE* = 0.043, *z* = 10.860, *p* < .001
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -235,12 +238,13 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 366.92, BIC = 384.91
-- Effect 1 effect: *β* = 0.24, *SE* = 0.975, *z* = 0.245, *p* = 0.806
-- Effect 2 effect: *β* = 1.46, *SE* = 0.934, *z* = 1.559, *p* = 0.119
-- Effect 3 effect: *β* = 1.18, *SE* = 0.891, *z* = 1.326, *p* = 0.185
-- Effect 4 effect: *β* = 1.50, *SE* = 0.871, *z* = 1.718, *p* = 0.086
-- Effect 5 effect: *β* = 0.14, *SE* = 0.208, *z* = 0.699, *p* = 0.485
+- **from 3 vs from 2**: *β* = 0.24, *SE* = 0.975, *z* = 0.245, *p* = 0.806
+- **from 4 vs from 2**: *β* = 1.46, *SE* = 0.934, *z* = 1.559, *p* = 0.119
+- **from 5 vs from 2**: *β* = 1.18, *SE* = 0.891, *z* = 1.326, *p* = 0.185
+- **from 6 vs from 2**: *β* = 1.50, *SE* = 0.871, *z* = 1.718, *p* = 0.086
+- **SNR**: *β* = 0.14, *SE* = 0.208, *z* = 0.699, *p* = 0.485
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -276,12 +280,13 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 298.20, BIC = 318.37
-- Effect 1 effect: *β* = -0.57, *SE* = 0.280, *z* = -2.050, *p* = 0.040
-- Effect 2 effect: *β* = -0.51, *SE* = 0.285, *z* = -1.799, *p* = 0.072
-- Effect 3 effect: *β* = -0.55, *SE* = 0.282, *z* = -1.953, *p* = 0.051
-- Effect 4 effect: *β* = -0.56, *SE* = 0.278, *z* = -2.036, *p* = 0.042
-- Effect 5 effect: *β* = 0.18, *SE* = 0.025, *z* = 7.160, *p* < .001
+- **from 3 vs from 2**: *β* = -0.57, *SE* = 0.280, *z* = -2.050, *p* = 0.040
+- **from 4 vs from 2**: *β* = -0.51, *SE* = 0.285, *z* = -1.799, *p* = 0.072
+- **from 5 vs from 2**: *β* = -0.55, *SE* = 0.282, *z* = -1.953, *p* = 0.051
+- **from 6 vs from 2**: *β* = -0.56, *SE* = 0.278, *z* = -2.036, *p* = 0.042
+- **SNR**: *β* = 0.18, *SE* = 0.025, *z* = 7.160, *p* < .001
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -315,12 +320,13 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 711.47, BIC = 731.65
-- Effect 1 effect: *β* = 5.24, *SE* = 2.899, *z* = 1.806, *p* = 0.071
-- Effect 2 effect: *β* = 8.19, *SE* = 2.932, *z* = 2.794, *p* = 0.005
-- Effect 3 effect: *β* = 1.96, *SE* = 2.914, *z* = 0.673, *p* = 0.501
-- Effect 4 effect: *β* = 4.48, *SE* = 2.868, *z* = 1.562, *p* = 0.118
-- Effect 5 effect: *β* = 0.03, *SE* = 0.246, *z* = 0.115, *p* = 0.909
+- **from 3 vs from 2**: *β* = 5.24, *SE* = 2.899, *z* = 1.806, *p* = 0.071
+- **from 4 vs from 2**: *β* = 8.19, *SE* = 2.932, *z* = 2.794, *p* = 0.005
+- **from 5 vs from 2**: *β* = 1.96, *SE* = 2.914, *z* = 0.673, *p* = 0.501
+- **from 6 vs from 2**: *β* = 4.48, *SE* = 2.868, *z* = 1.562, *p* = 0.118
+- **SNR**: *β* = 0.03, *SE* = 0.246, *z* = 0.115, *p* = 0.909
 
+_Reference condition: **from 2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

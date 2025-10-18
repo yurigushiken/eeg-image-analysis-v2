@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:27:14
+**Generated:** 2025-10-18 13:29:11
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 21 | -3.33 µV | 1.73 | 0.38 | [-7.40, -0.32] |
-| 1 to 2 | 22 | -3.27 µV | 1.65 | 0.35 | [-6.11, -0.53] |
-| 1 to 3 | 24 | -3.85 µV | 1.86 | 0.38 | [-8.34, -0.75] |
-| 1 to 4 | 21 | -4.58 µV | 2.59 | 0.56 | [-10.30, -0.72] |
+| 1 to 1 | 14 | -2.53 µV | 2.33 | 0.62 | [-8.11, -0.19] |
+| 1 to 2 | 22 | -3.43 µV | 1.73 | 0.37 | [-6.54, -0.48] |
+| 1 to 3 | 24 | -3.97 µV | 1.94 | 0.40 | [-8.85, -0.77] |
+| 1 to 4 | 22 | -4.57 µV | 2.79 | 0.59 | [-10.64, -0.11] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 21 | 173.42 ms | 11.61 | 2.53 | [153.33, 203.86] |
-| 1 to 2 | 22 | 174.46 ms | 14.03 | 2.99 | [152.58, 207.03] |
-| 1 to 3 | 24 | 175.63 ms | 11.71 | 2.39 | [152.76, 204.19] |
-| 1 to 4 | 21 | 174.68 ms | 11.27 | 2.46 | [155.48, 202.67] |
+| 1 to 1 | 14 | 179.65 ms | 15.68 | 4.19 | [155.91, 205.68] |
+| 1 to 2 | 22 | 174.61 ms | 12.58 | 2.68 | [155.23, 204.22] |
+| 1 to 3 | 24 | 175.58 ms | 10.13 | 2.07 | [155.17, 201.36] |
+| 1 to 4 | 22 | 174.18 ms | 10.02 | 2.14 | [158.11, 198.25] |
 
 
 ### 2.2 P1 Component
@@ -62,19 +62,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 13 | 1.33 µV | 1.29 | 0.36 | [-0.05, 3.53] |
-| 1 to 2 | 13 | 1.41 µV | 1.22 | 0.34 | [0.14, 3.53] |
-| 1 to 3 | 10 | 1.48 µV | 0.93 | 0.29 | [0.25, 3.06] |
-| 1 to 4 | 14 | 1.65 µV | 1.07 | 0.28 | [0.07, 3.86] |
+| 1 to 1 | 17 | 2.08 µV | 2.18 | 0.53 | [0.00, 8.50] |
+| 1 to 2 | 13 | 1.11 µV | 0.84 | 0.23 | [0.00, 2.53] |
+| 1 to 3 | 12 | 1.65 µV | 1.36 | 0.39 | [0.19, 4.96] |
+| 1 to 4 | 12 | 2.06 µV | 1.35 | 0.39 | [0.16, 4.44] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 13 | 79.51 ms | 9.35 | 2.59 | [65.02, 92.73] |
-| 1 to 2 | 13 | 80.28 ms | 8.91 | 2.47 | [65.02, 92.73] |
-| 1 to 3 | 10 | 78.62 ms | 8.42 | 2.66 | [64.79, 91.72] |
-| 1 to 4 | 14 | 80.89 ms | 5.99 | 1.60 | [64.45, 92.95] |
+| 1 to 1 | 17 | 109.57 ms | 10.32 | 2.50 | [92.30, 123.78] |
+| 1 to 2 | 13 | 97.87 ms | 9.01 | 2.50 | [82.03, 110.25] |
+| 1 to 3 | 12 | 100.66 ms | 10.84 | 3.13 | [81.30, 113.41] |
+| 1 to 4 | 12 | 99.88 ms | 10.69 | 3.09 | [81.41, 117.45] |
 
 
 ### 2.3 P3b Component
@@ -83,19 +83,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 15 | 3.76 µV | 2.70 | 0.70 | [0.21, 10.49] |
-| 1 to 2 | 16 | 3.52 µV | 2.75 | 0.69 | [0.21, 10.49] |
-| 1 to 3 | 20 | 4.16 µV | 3.37 | 0.75 | [0.48, 12.29] |
-| 1 to 4 | 20 | 3.79 µV | 2.86 | 0.64 | [0.48, 10.75] |
+| 1 to 1 | 11 | 1.56 µV | 1.32 | 0.40 | [0.17, 3.65] |
+| 1 to 2 | 15 | 3.58 µV | 2.66 | 0.69 | [0.30, 10.14] |
+| 1 to 3 | 20 | 3.99 µV | 3.20 | 0.72 | [0.36, 12.18] |
+| 1 to 4 | 20 | 3.76 µV | 2.77 | 0.62 | [0.38, 10.25] |
 
 #### Latency (50% Fractional Area)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 1 | 15 | 449.94 ms | 26.97 | 6.96 | [394.01, 488.80] |
-| 1 to 2 | 16 | 458.21 ms | 33.39 | 8.35 | [394.01, 528.22] |
-| 1 to 3 | 20 | 457.14 ms | 22.24 | 4.97 | [401.27, 486.38] |
-| 1 to 4 | 20 | 457.72 ms | 27.01 | 6.04 | [402.36, 509.19] |
+| 1 to 1 | 11 | 437.39 ms | 47.60 | 14.35 | [366.48, 526.82] |
+| 1 to 2 | 15 | 448.52 ms | 34.08 | 8.80 | [383.98, 498.06] |
+| 1 to 3 | 20 | 451.69 ms | 25.65 | 5.74 | [393.40, 485.95] |
+| 1 to 4 | 20 | 448.95 ms | 31.57 | 7.06 | [389.96, 508.75] |
 
 
 ---
@@ -111,52 +111,19 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 315.67, BIC = 333.01
-- Effect 1 effect: *β* = -0.12, *SE* = 0.339, *z* = -0.352, *p* = 0.725
-- Effect 2 effect: *β* = -0.40, *SE* = 0.335, *z* = -1.180, *p* = 0.238
-- Effect 3 effect: *β* = -1.01, *SE* = 0.346, *z* = -2.910, *p* = 0.004
-- Effect 4 effect: *β* = -0.36, *SE* = 0.066, *z* = -5.465, *p* < .001
+- AIC = 313.22, BIC = 330.07
+- **1 to 2 vs 1 to 1**: *β* = -0.69, *SE* = 0.467, *z* = -1.472, *p* = 0.141
+- **1 to 3 vs 1 to 1**: *β* = -0.89, *SE* = 0.462, *z* = -1.915, *p* = 0.056
+- **1 to 4 vs 1 to 1**: *β* = -1.50, *SE* = 0.469, *z* = -3.203, *p* = 0.001
+- **SNR**: *β* = -0.46, *SE* = 0.056, *z* = -8.190, *p* < .001
 
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.35, *p* = 0.083, η²_G = 0.038
-- Greenhouse-Geisser corrected: *p* = 0.118 (ε = 0.587)
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc tests with FDR correction for multiple comparisons:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | -0.22 | 18 | = 0.831 | -0.02 [-0.38, 0.53] | negligible | n.s. |
-| 1 to 1 vs 1 to 3 | 1.54 | 18 | = 0.243 | 0.27 [-0.08, 0.86] | small | n.s. |
-| 1 to 1 vs 1 to 4 | 1.84 | 18 | = 0.243 | 0.41 [-0.08, 0.93] | small | n.s. |
-| 1 to 2 vs 1 to 3 | 1.46 | 18 | = 0.243 | 0.29 [-0.13, 0.78] | small | n.s. |
-| 1 to 2 vs 1 to 4 | 1.77 | 18 | = 0.243 | 0.42 [-0.10, 0.91] | small | n.s. |
-| 1 to 3 vs 1 to 4 | 0.88 | 18 | = 0.467 | 0.19 [-0.25, 0.68] | negligible | n.s. |
-
-_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-#### Latency (50% Fractional Area)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 638.98, BIC = 656.32
-- Effect 1 effect: *β* = -0.15, *SE* = 1.819, *z* = -0.081, *p* = 0.936
-- Effect 2 effect: *β* = 0.98, *SE* = 1.801, *z* = 0.543, *p* = 0.587
-- Effect 3 effect: *β* = 1.46, *SE* = 1.861, *z* = 0.785, *p* = 0.432
-- Effect 4 effect: *β* = 0.31, *SE* = 0.380, *z* = 0.808, *p* = 0.419
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 0.32, *p* = 0.808, η²_G = 0.004
-- Greenhouse-Geisser corrected: *p* = 0.680 (ε = 0.540)
+- *F* = 1.49, *p* = 0.236, η²_G = 0.060
+- Greenhouse-Geisser corrected: *p* = 0.250 (ε = 0.553)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -165,12 +132,46 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | 1.06 | 18 | = 0.777 | 0.03 [-0.16, 0.78] | negligible | n.s. |
-| 1 to 1 vs 1 to 3 | 0.23 | 18 | = 0.965 | 0.05 [-0.54, 0.37] | negligible | n.s. |
-| 1 to 1 vs 1 to 4 | -0.66 | 18 | = 0.777 | -0.10 [-0.64, 0.33] | negligible | n.s. |
-| 1 to 2 vs 1 to 3 | 0.04 | 18 | = 0.965 | 0.01 [-0.55, 0.34] | negligible | n.s. |
-| 1 to 2 vs 1 to 4 | -0.82 | 18 | = 0.777 | -0.13 [-0.67, 0.30] | negligible | n.s. |
-| 1 to 3 vs 1 to 4 | -0.92 | 18 | = 0.777 | -0.16 [-0.63, 0.29] | negligible | n.s. |
+| 1 to 1 vs 1 to 2 | 0.97 | 11 | = 0.525 | 0.36 [-0.34, 0.89] | small | n.s. |
+| 1 to 1 vs 1 to 3 | 1.42 | 11 | = 0.432 | 0.61 [-0.13, 1.09] | medium | n.s. |
+| 1 to 1 vs 1 to 4 | 1.31 | 11 | = 0.432 | 0.51 [-0.17, 1.11] | medium | n.s. |
+| 1 to 2 vs 1 to 3 | 1.47 | 11 | = 0.432 | 0.31 [-0.17, 0.73] | small | n.s. |
+| 1 to 2 vs 1 to 4 | 0.81 | 11 | = 0.525 | 0.20 [-0.13, 0.84] | small | n.s. |
+| 1 to 3 vs 1 to 4 | -0.45 | 11 | = 0.662 | -0.08 [-0.30, 0.59] | negligible | n.s. |
+
+_Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Latency (50% Fractional Area)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 601.67, BIC = 618.52
+- **1 to 2 vs 1 to 1**: *β* = -4.51, *SE* = 2.257, *z* = -2.000, *p* = 0.045
+- **1 to 3 vs 1 to 1**: *β* = -3.31, *SE* = 2.237, *z* = -1.480, *p* = 0.139
+- **1 to 4 vs 1 to 1**: *β* = -3.16, *SE* = 2.265, *z* = -1.395, *p* = 0.163
+- **SNR**: *β* = 0.24, *SE* = 0.306, *z* = 0.790, *p* = 0.430
+
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.79, *p* = 0.168, η²_G = 0.034
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc tests with FDR correction for multiple comparisons:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 1 to 1 vs 1 to 2 | 1.90 | 11 | = 0.282 | 0.38 [-0.12, 1.17] | small | n.s. |
+| 1 to 1 vs 1 to 3 | 1.83 | 11 | = 0.282 | 0.48 [-0.22, 0.97] | small | n.s. |
+| 1 to 1 vs 1 to 4 | 1.16 | 11 | = 0.427 | 0.26 [-0.45, 0.77] | small | n.s. |
+| 1 to 2 vs 1 to 3 | 0.13 | 11 | = 0.902 | 0.03 [-0.55, 0.34] | negligible | n.s. |
+| 1 to 2 vs 1 to 4 | -0.91 | 11 | = 0.461 | -0.15 [-0.66, 0.28] | negligible | n.s. |
+| 1 to 3 vs 1 to 4 | -1.13 | 11 | = 0.427 | -0.21 [-0.51, 0.38] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -182,18 +183,19 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 122.12, BIC = 135.50
-- Effect 1 effect: *β* = 0.00, *SE* = 0.262, *z* = 0.008, *p* = 0.994
-- Effect 2 effect: *β* = 0.36, *SE* = 0.290, *z* = 1.254, *p* = 0.210
-- Effect 3 effect: *β* = 0.39, *SE* = 0.266, *z* = 1.462, *p* = 0.144
-- Effect 4 effect: *β* = 0.49, *SE* = 0.062, *z* = 7.894, *p* < .001
+- AIC = 157.48, BIC = 171.40
+- **1 to 2 vs 1 to 1**: *β* = -0.78, *SE* = 0.332, *z* = -2.335, *p* = 0.020
+- **1 to 3 vs 1 to 1**: *β* = -0.26, *SE* = 0.338, *z* = -0.776, *p* = 0.438
+- **1 to 4 vs 1 to 1**: *β* = -0.31, *SE* = 0.338, *z* = -0.922, *p* = 0.357
+- **SNR**: *β* = 0.78, *SE* = 0.083, *z* = 9.424, *p* < .001
 
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.21, *p* = 0.383, η²_G = 0.343
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 7.48, *p* = 0.008, η²_G = 0.449
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -201,12 +203,12 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | 1.42 | 2 | = 0.470 | 0.84 [-0.71, 0.56] | large | n.s. |
-| 1 to 1 vs 1 to 3 | 1.70 | 2 | = 0.470 | 1.77 [-0.75, 1.40] | large | n.s. |
-| 1 to 1 vs 1 to 4 | 1.40 | 2 | = 0.470 | 1.52 [-0.78, 0.89] | large | n.s. |
-| 1 to 2 vs 1 to 3 | 0.65 | 2 | = 0.699 | 0.56 [-1.03, 0.82] | medium | n.s. |
-| 1 to 2 vs 1 to 4 | -0.14 | 2 | = 0.904 | -0.14 [-0.73, 0.95] | negligible | n.s. |
-| 1 to 3 vs 1 to 4 | -1.34 | 2 | = 0.470 | -0.99 [-1.81, 0.50] | large | n.s. |
+| 1 to 1 vs 1 to 2 | 2.99 | 3 | = 0.158 | 1.76 [-0.23, 1.44] | large | n.s. |
+| 1 to 1 vs 1 to 3 | 3.52 | 3 | = 0.158 | 1.65 [-0.43, 1.04] | large | n.s. |
+| 1 to 1 vs 1 to 4 | 2.32 | 3 | = 0.158 | 0.95 [-0.19, 1.35] | large | n.s. |
+| 1 to 2 vs 1 to 3 | -0.52 | 3 | = 0.639 | -0.23 [-1.12, 0.58] | small | n.s. |
+| 1 to 2 vs 1 to 4 | -2.29 | 3 | = 0.158 | -0.84 [-2.70, -0.27] | large | n.s. |
+| 1 to 3 vs 1 to 4 | -1.53 | 3 | = 0.269 | -0.70 [-1.24, 0.88] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -215,17 +217,18 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 354.52, BIC = 367.90
-- Effect 1 effect: *β* = 1.16, *SE* = 2.365, *z* = 0.492, *p* = 0.623
-- Effect 2 effect: *β* = -1.34, *SE* = 2.723, *z* = -0.492, *p* = 0.623
-- Effect 3 effect: *β* = 3.25, *SE* = 2.509, *z* = 1.295, *p* = 0.195
-- Effect 4 effect: *β* = 0.38, *SE* = 0.625, *z* = 0.612, *p* = 0.541
+- AIC = 411.29, BIC = 425.22
+- **1 to 2 vs 1 to 1**: *β* = -11.32, *SE* = 3.547, *z* = -3.192, *p* = 0.001
+- **1 to 3 vs 1 to 1**: *β* = -8.58, *SE* = 3.620, *z* = -2.370, *p* = 0.018
+- **1 to 4 vs 1 to 1**: *β* = -10.21, *SE* = 3.626, *z* = -2.817, *p* = 0.005
+- **SNR**: *β* = 1.45, *SE* = 0.964, *z* = 1.498, *p* = 0.134
 
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.85, *p* = 0.239, η²_G = 0.410
+- *F* = 1.21, *p* = 0.362, η²_G = 0.197
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -234,12 +237,12 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | -1.03 | 2 | = 0.615 | -0.60 [-1.08, 0.24] | medium | n.s. |
-| 1 to 1 vs 1 to 3 | 1.28 | 2 | = 0.615 | 1.13 [-0.46, 1.89] | large | n.s. |
-| 1 to 1 vs 1 to 4 | -0.02 | 2 | = 0.986 | -0.02 [-1.49, 0.32] | negligible | n.s. |
-| 1 to 2 vs 1 to 3 | 2.15 | 2 | = 0.615 | 1.34 [-0.38, 1.65] | large | n.s. |
-| 1 to 2 vs 1 to 4 | 0.60 | 2 | = 0.731 | 0.61 [-1.19, 0.53] | medium | n.s. |
-| 1 to 3 vs 1 to 4 | -1.20 | 2 | = 0.615 | -1.14 [-1.45, 0.72] | large | n.s. |
+| 1 to 1 vs 1 to 2 | 2.89 | 3 | = 0.378 | 1.03 [-0.15, 1.57] | large | n.s. |
+| 1 to 1 vs 1 to 3 | 0.38 | 3 | = 0.731 | 0.28 [-0.18, 1.38] | small | n.s. |
+| 1 to 1 vs 1 to 4 | 1.91 | 3 | = 0.456 | 0.99 [-0.07, 1.54] | large | n.s. |
+| 1 to 2 vs 1 to 3 | -0.76 | 3 | = 0.731 | -0.62 [-1.12, 0.58] | medium | n.s. |
+| 1 to 2 vs 1 to 4 | 0.56 | 3 | = 0.731 | 0.25 [-1.22, 0.50] | small | n.s. |
+| 1 to 3 vs 1 to 4 | 0.91 | 3 | = 0.731 | 0.72 [-0.57, 1.68] | medium | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -251,19 +254,19 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 276.75, BIC = 292.58
-- Effect 1 effect: *β* = 0.07, *SE* = 0.426, *z* = 0.176, *p* = 0.860
-- Effect 2 effect: *β* = 0.48, *SE* = 0.420, *z* = 1.136, *p* = 0.256
-- Effect 3 effect: *β* = 0.28, *SE* = 0.410, *z* = 0.673, *p* = 0.501
-- Effect 4 effect: *β* = 0.54, *SE* = 0.074, *z* = 7.300, *p* < .001
+- AIC = 262.37, BIC = 277.69
+- **1 to 2 vs 1 to 1**: *β* = 0.60, *SE* = 0.579, *z* = 1.032, *p* = 0.302
+- **1 to 3 vs 1 to 1**: *β* = 0.81, *SE* = 0.588, *z* = 1.375, *p* = 0.169
+- **1 to 4 vs 1 to 1**: *β* = 0.65, *SE* = 0.581, *z* = 1.121, *p* = 0.262
+- **SNR**: *β* = 0.67, *SE* = 0.079, *z* = 8.386, *p* < .001
 
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.72, *p* = 0.179, η²_G = 0.029
-- Greenhouse-Geisser corrected: *p* = 0.205 (ε = 0.566)
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 5.87, *p* = 0.004, η²_G = 0.243
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -271,12 +274,12 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | 1.30 | 12 | = 0.393 | 0.04 [-0.42, 0.75] | negligible | n.s. |
-| 1 to 1 vs 1 to 3 | -1.50 | 12 | = 0.393 | -0.37 [-1.04, 0.17] | small | n.s. |
-| 1 to 1 vs 1 to 4 | -0.89 | 12 | = 0.393 | -0.20 [-0.89, 0.25] | negligible | n.s. |
-| 1 to 2 vs 1 to 3 | -1.69 | 12 | = 0.393 | -0.40 [-1.11, 0.11] | small | n.s. |
-| 1 to 2 vs 1 to 4 | -1.01 | 12 | = 0.393 | -0.23 [-0.89, 0.25] | small | n.s. |
-| 1 to 3 vs 1 to 4 | 1.00 | 12 | = 0.393 | 0.18 [-0.28, 0.70] | negligible | n.s. |
+| 1 to 1 vs 1 to 2 | -2.23 | 8 | = 0.112 | -1.02 [-1.61, 0.12] | large | n.s. |
+| 1 to 1 vs 1 to 3 | -2.72 | 8 | = 0.079 | -1.42 [-1.64, -0.07] | large | n.s. |
+| 1 to 1 vs 1 to 4 | -3.00 | 8 | = 0.079 | -1.48 [-1.89, -0.21] | large | n.s. |
+| 1 to 2 vs 1 to 3 | -1.65 | 8 | = 0.164 | -0.51 [-1.09, 0.13] | medium | n.s. |
+| 1 to 2 vs 1 to 4 | -1.71 | 8 | = 0.164 | -0.44 [-0.92, 0.22] | small | n.s. |
+| 1 to 3 vs 1 to 4 | 0.62 | 8 | = 0.555 | 0.10 [-0.32, 0.65] | negligible | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -285,18 +288,19 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 680.08, BIC = 695.91
-- Effect 1 effect: *β* = 7.68, *SE* = 9.158, *z* = 0.838, *p* = 0.402
-- Effect 2 effect: *β* = 6.42, *SE* = 8.685, *z* = 0.739, *p* = 0.460
-- Effect 3 effect: *β* = 7.23, *SE* = 8.643, *z* = 0.836, *p* = 0.403
-- Effect 4 effect: *β* = 0.91, *SE* = 1.130, *z* = 0.808, *p* = 0.419
+- AIC = 660.30, BIC = 675.63
+- **1 to 2 vs 1 to 1**: *β* = 10.42, *SE* = 12.828, *z* = 0.812, *p* = 0.417
+- **1 to 3 vs 1 to 1**: *β* = 12.99, *SE* = 12.578, *z* = 1.033, *p* = 0.302
+- **1 to 4 vs 1 to 1**: *β* = 10.58, *SE* = 12.495, *z* = 0.847, *p* = 0.397
+- **SNR**: *β* = 0.32, *SE* = 1.582, *z* = 0.205, *p* = 0.838
 
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.46, *p* = 0.711, η²_G = 0.026
-- Greenhouse-Geisser corrected: *p* = 0.575 (ε = 0.478)
+- *F* = 0.54, *p* = 0.658, η²_G = 0.050
+- Greenhouse-Geisser corrected: *p* = 0.599 (ε = 0.699)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -305,12 +309,12 @@ _Post-hoc tests with FDR correction for multiple comparisons:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 1 vs 1 to 2 | 0.67 | 12 | = 0.665 | 0.05 [-0.38, 0.78] | negligible | n.s. |
-| 1 to 1 vs 1 to 3 | -0.73 | 12 | = 0.665 | -0.30 [-0.85, 0.32] | small | n.s. |
-| 1 to 1 vs 1 to 4 | -0.61 | 12 | = 0.665 | -0.29 [-0.68, 0.43] | small | n.s. |
-| 1 to 2 vs 1 to 3 | -0.85 | 12 | = 0.665 | -0.33 [-0.80, 0.37] | small | n.s. |
-| 1 to 2 vs 1 to 4 | -0.67 | 12 | = 0.665 | -0.32 [-0.58, 0.52] | small | n.s. |
-| 1 to 3 vs 1 to 4 | 0.08 | 12 | = 0.935 | 0.03 [-0.63, 0.34] | negligible | n.s. |
+| 1 to 1 vs 1 to 2 | -0.38 | 8 | = 0.735 | -0.18 [-0.90, 0.65] | negligible | n.s. |
+| 1 to 1 vs 1 to 3 | -1.29 | 8 | = 0.735 | -0.56 [-0.97, 0.40] | medium | n.s. |
+| 1 to 1 vs 1 to 4 | -0.78 | 8 | = 0.735 | -0.37 [-0.99, 0.39] | small | n.s. |
+| 1 to 2 vs 1 to 3 | -0.72 | 8 | = 0.735 | -0.41 [-0.76, 0.40] | small | n.s. |
+| 1 to 2 vs 1 to 4 | -0.35 | 8 | = 0.735 | -0.20 [-0.49, 0.62] | small | n.s. |
+| 1 to 3 vs 1 to 4 | 1.11 | 8 | = 0.735 | 0.24 [-0.51, 0.45] | small | n.s. |
 
 _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
@@ -321,7 +325,8 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**N1 amplitude:** Marginal trend toward condition differences (*p* = 0.083)
+**P1 amplitude:** Significant main effect of condition (*p* = 0.008) (no significant pairwise comparisons)
+**P3b amplitude:** Significant main effect of condition (*p* = 0.004) (no significant pairwise comparisons)
 
 ### Research Implications
 

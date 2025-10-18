@@ -1,6 +1,7 @@
 {
   "summary": [
     {
+      "name": "Intercept",
       "Coef.": "475.910",
       "Std.Err.": "5.384",
       "z": "88.392",
@@ -9,6 +10,7 @@
       "0.975]": "486.463"
     },
     {
+      "name": "condition[T.All Numerosity Comparisons (Incorrect)]",
       "Coef.": "-5.523",
       "Std.Err.": "5.679",
       "z": "-0.973",
@@ -17,6 +19,7 @@
       "0.975]": "5.607"
     },
     {
+      "name": "snr",
       "Coef.": "0.223",
       "Std.Err.": "0.306",
       "z": "0.728",
@@ -25,6 +28,7 @@
       "0.975]": "0.823"
     },
     {
+      "name": "Group Var",
       "Coef.": "0.000",
       "Std.Err.": "",
       "z": "",
@@ -35,5 +39,6 @@
   ],
   "aic": 254.92722153467588,
   "bic": 262.0971575571016,
-  "converged": true
+  "converged": true,
+  "reference_condition": "All Numerosity Comparisons (Correct)"
 }

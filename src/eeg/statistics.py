@@ -366,6 +366,15 @@ class ERPStatistics:
         # Build formula
         formula = f"{dv} ~ {fixed}"
 
+        # Detect reference condition for categorical variables (for documentation)
+        # Statsmodels uses the first category (alphabetically) as reference by default
+        reference_condition = None
+        if 'condition' in fixed and 'condition' in filtered.columns:
+            # Get sorted unique conditions (statsmodels sorts them alphabetically)
+            unique_conditions = sorted(filtered['condition'].unique())
+            if len(unique_conditions) > 0:
+                reference_condition = unique_conditions[0]
+
         # Fit model - statsmodels needs properly sorted and indexed data
         try:
             model = mixedlm(formula, filtered, groups=filtered[random])
@@ -381,7 +390,8 @@ class ERPStatistics:
             'summary': fitted_model.summary().tables[1],  # Coefficient table
             'aic': fitted_model.aic,
             'bic': fitted_model.bic,
-            'converged': fitted_model.converged
+            'converged': fitted_model.converged,
+            'reference_condition': reference_condition  # NEW: Save reference for report
         }
 
         return result
@@ -483,7 +493,13 @@ class ERPStatistics:
                 serializable = {}
                 for key, value in results.items():
                     if isinstance(value, pd.DataFrame):
-                        serializable[key] = value.to_dict(orient='records')
+                        # CRITICAL FIX: Preserve row index (effect names) when converting to dict
+                        # Reset index to make row names a regular column called 'name'
+                        value_with_names = value.reset_index()
+                        # Rename the index column to 'name' if it's not already named
+                        if value_with_names.columns[0] == 'index':
+                            value_with_names = value_with_names.rename(columns={'index': 'name'})
+                        serializable[key] = value_with_names.to_dict(orient='records')
                     elif isinstance(value, (np.integer, np.floating)):
                         serializable[key] = float(value)
                     elif key != 'model':  # Skip model object

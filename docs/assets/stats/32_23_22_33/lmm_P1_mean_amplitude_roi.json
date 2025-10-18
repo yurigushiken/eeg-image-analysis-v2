@@ -1,6 +1,7 @@
 {
   "summary": [
     {
+      "name": "Intercept",
       "Coef.": "0.682",
       "Std.Err.": "0.354",
       "z": "1.928",
@@ -9,6 +10,7 @@
       "0.975]": "1.376"
     },
     {
+      "name": "condition[T.Cardinality3]",
       "Coef.": "0.056",
       "Std.Err.": "0.390",
       "z": "0.143",
@@ -17,6 +19,7 @@
       "0.975]": "0.821"
     },
     {
+      "name": "condition[T.Decreasing 3 to 2]",
       "Coef.": "-0.240",
       "Std.Err.": "0.427",
       "z": "-0.562",
@@ -25,6 +28,7 @@
       "0.975]": "0.597"
     },
     {
+      "name": "condition[T.Increasing 2 to 3]",
       "Coef.": "-0.229",
       "Std.Err.": "0.398",
       "z": "-0.576",
@@ -33,6 +37,7 @@
       "0.975]": "0.550"
     },
     {
+      "name": "snr",
       "Coef.": "0.802",
       "Std.Err.": "0.113",
       "z": "7.114",
@@ -41,6 +46,7 @@
       "0.975]": "1.023"
     },
     {
+      "name": "Group Var",
       "Coef.": "0.432",
       "Std.Err.": "0.271",
       "z": "",
@@ -51,5 +57,6 @@
   ],
   "aic": 178.40653809272197,
   "bic": 192.19858148758684,
-  "converged": true
+  "converged": true,
+  "reference_condition": "Cardinality2"
 }

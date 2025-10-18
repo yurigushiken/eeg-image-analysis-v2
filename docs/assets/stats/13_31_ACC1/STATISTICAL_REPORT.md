@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:18:25
+**Generated:** 2025-10-18 13:23:33
 
 ---
 
@@ -100,9 +100,10 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 147.64, BIC = 156.33
-- Effect 1 effect: *β* = 0.06, *SE* = 0.353, *z* = 0.175, *p* = 0.861
-- Effect 2 effect: *β* = -0.52, *SE* = 0.078, *z* = -6.666, *p* < .001
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = 0.06, *SE* = 0.353, *z* = 0.175, *p* = 0.861
+- **SNR**: *β* = -0.52, *SE* = 0.078, *z* = -6.666, *p* < .001
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -126,9 +127,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 336.02, BIC = 344.71
-- Effect 1 effect: *β* = -5.78, *SE* = 3.183, *z* = -1.816, *p* = 0.069
-- Effect 2 effect: *β* = 0.32, *SE* = 0.731, *z* = 0.433, *p* = 0.665
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = -5.78, *SE* = 3.183, *z* = -1.816, *p* = 0.069
+- **SNR**: *β* = 0.32, *SE* = 0.731, *z* = 0.433, *p* = 0.665
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -155,9 +157,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 110.46, BIC = 117.94
-- Effect 1 effect: *β* = 0.10, *SE* = 0.459, *z* = 0.221, *p* = 0.825
-- Effect 2 effect: *β* = 0.43, *SE* = 0.071, *z* = 6.006, *p* < .001
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = 0.10, *SE* = 0.459, *z* = 0.221, *p* = 0.825
+- **SNR**: *β* = 0.43, *SE* = 0.071, *z* = 6.006, *p* < .001
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -181,9 +184,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 204.77, BIC = 212.26
-- Effect 1 effect: *β* = -2.94, *SE* = 1.558, *z* = -1.884, *p* = 0.060
-- Effect 2 effect: *β* = -0.08, *SE* = 0.261, *z* = -0.301, *p* = 0.764
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = -2.94, *SE* = 1.558, *z* = -1.884, *p* = 0.060
+- **SNR**: *β* = -0.08, *SE* = 0.261, *z* = -0.301, *p* = 0.764
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -210,9 +214,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 194.27, BIC = 202.71
-- Effect 1 effect: *β* = 0.85, *SE* = 0.701, *z* = 1.213, *p* = 0.225
-- Effect 2 effect: *β* = 0.28, *SE* = 0.075, *z* = 3.723, *p* < .001
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = 0.85, *SE* = 0.701, *z* = 1.213, *p* = 0.225
+- **SNR**: *β* = 0.28, *SE* = 0.075, *z* = 3.723, *p* < .001
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -236,9 +241,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 347.54, BIC = 355.99
-- Effect 1 effect: *β* = -4.17, *SE* = 5.043, *z* = -0.826, *p* = 0.409
-- Effect 2 effect: *β* = 0.40, *SE* = 0.501, *z* = 0.804, *p* = 0.421
+- **Increasing 1 to 3 vs Decreasing 3 to 1**: *β* = -4.17, *SE* = 5.043, *z* = -0.826, *p* = 0.409
+- **SNR**: *β* = 0.40, *SE* = 0.501, *z* = 0.804, *p* = 0.421
 
+_Reference condition: **Decreasing 3 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

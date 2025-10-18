@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:21:04
+**Generated:** 2025-10-18 13:25:18
 
 ---
 
@@ -88,9 +88,10 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 131.12, BIC = 139.44
-- Effect 1 effect: *β* = 0.98, *SE* = 0.376, *z* = 2.616, *p* = 0.009
-- Effect 2 effect: *β* = -0.77, *SE* = 0.083, *z* = -9.213, *p* < .001
+- **65 Incorrect vs 65 Correct**: *β* = 0.98, *SE* = 0.376, *z* = 2.616, *p* = 0.009
+- **SNR**: *β* = -0.77, *SE* = 0.083, *z* = -9.213, *p* < .001
 
+_Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -114,9 +115,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 305.03, BIC = 313.34
-- Effect 1 effect: *β* = 1.18, *SE* = 2.833, *z* = 0.417, *p* = 0.676
-- Effect 2 effect: *β* = -1.65, *SE* = 0.794, *z* = -2.080, *p* = 0.038
+- **65 Incorrect vs 65 Correct**: *β* = 1.18, *SE* = 2.833, *z* = 0.417, *p* = 0.676
+- **SNR**: *β* = -1.65, *SE* = 0.794, *z* = -2.080, *p* = 0.038
 
+_Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**

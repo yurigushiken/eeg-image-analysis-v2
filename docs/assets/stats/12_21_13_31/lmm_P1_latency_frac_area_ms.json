@@ -1,6 +1,7 @@
 {
   "summary": [
     {
+      "name": "Intercept",
       "Coef.": "115.080",
       "Std.Err.": "1.726",
       "z": "66.686",
@@ -9,6 +10,7 @@
       "0.975]": "118.463"
     },
     {
+      "name": "condition[T.Decreasing 3 to 1]",
       "Coef.": "0.329",
       "Std.Err.": "1.871",
       "z": "0.176",
@@ -17,6 +19,7 @@
       "0.975]": "3.996"
     },
     {
+      "name": "condition[T.Increasing 1 to 2]",
       "Coef.": "-2.367",
       "Std.Err.": "2.255",
       "z": "-1.050",
@@ -25,6 +28,7 @@
       "0.975]": "2.052"
     },
     {
+      "name": "condition[T.Increasing 1 to 3]",
       "Coef.": "-4.303",
       "Std.Err.": "2.260",
       "z": "-1.904",
@@ -33,6 +37,7 @@
       "0.975]": "0.127"
     },
     {
+      "name": "snr",
       "Coef.": "-0.190",
       "Std.Err.": "0.321",
       "z": "-0.591",
@@ -41,6 +46,7 @@
       "0.975]": "0.440"
     },
     {
+      "name": "Group Var",
       "Coef.": "2.204",
       "Std.Err.": "1.213",
       "z": "",
@@ -51,5 +57,6 @@
   ],
   "aic": 417.7129061981224,
   "bic": 432.71484928286316,
-  "converged": true
+  "converged": true,
+  "reference_condition": "Decreasing 2 to 1"
 }
