@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-17 17:45:45
+**Generated:** 2025-10-18 13:34:01
 
 ---
 
@@ -100,9 +100,10 @@ This section presents the results of repeated-measures statistical tests.
 
 - Model converged successfully
 - AIC = 157.86, BIC = 167.00
-- Effect 1 effect: *β* = -0.27, *SE* = 0.233, *z* = -1.163, *p* = 0.245
-- Effect 2 effect: *β* = -0.20, *SE* = 0.042, *z* = -4.725, *p* < .001
+- **Large_Increasing vs Large_Decreasing**: *β* = -0.27, *SE* = 0.233, *z* = -1.163, *p* = 0.245
+- **SNR**: *β* = -0.20, *SE* = 0.042, *z* = -4.725, *p* < .001
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -126,9 +127,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 311.23, BIC = 320.37
-- Effect 1 effect: *β* = -2.17, *SE* = 0.929, *z* = -2.335, *p* = 0.020
-- Effect 2 effect: *β* = 0.16, *SE* = 0.186, *z* = 0.846, *p* = 0.397
+- **Large_Increasing vs Large_Decreasing**: *β* = -2.17, *SE* = 0.929, *z* = -2.335, *p* = 0.020
+- **SNR**: *β* = 0.16, *SE* = 0.186, *z* = 0.846, *p* = 0.397
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -155,9 +157,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 83.44, BIC = 89.73
-- Effect 1 effect: *β* = 0.13, *SE* = 0.399, *z* = 0.324, *p* = 0.746
-- Effect 2 effect: *β* = 0.33, *SE* = 0.105, *z* = 3.127, *p* = 0.002
+- **Large_Increasing vs Large_Decreasing**: *β* = 0.13, *SE* = 0.399, *z* = 0.324, *p* = 0.746
+- **SNR**: *β* = 0.33, *SE* = 0.105, *z* = 3.127, *p* = 0.002
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -181,9 +184,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 168.22, BIC = 174.51
-- Effect 1 effect: *β* = 0.93, *SE* = 1.411, *z* = 0.661, *p* = 0.508
-- Effect 2 effect: *β* = 0.48, *SE* = 0.420, *z* = 1.145, *p* = 0.252
+- **Large_Increasing vs Large_Decreasing**: *β* = 0.93, *SE* = 1.411, *z* = 0.661, *p* = 0.508
+- **SNR**: *β* = 0.48, *SE* = 0.420, *z* = 1.145, *p* = 0.252
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -210,9 +214,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 127.62, BIC = 135.25
-- Effect 1 effect: *β* = -0.13, *SE* = 0.328, *z* = -0.386, *p* = 0.700
-- Effect 2 effect: *β* = 0.38, *SE* = 0.080, *z* = 4.781, *p* < .001
+- **Large_Increasing vs Large_Decreasing**: *β* = -0.13, *SE* = 0.328, *z* = -0.386, *p* = 0.700
+- **SNR**: *β* = 0.38, *SE* = 0.080, *z* = 4.781, *p* < .001
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
@@ -236,9 +241,10 @@ _Note: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 296.46, BIC = 304.09
-- Effect 1 effect: *β* = 3.01, *SE* = 5.796, *z* = 0.520, *p* = 0.603
-- Effect 2 effect: *β* = 1.32, *SE* = 0.913, *z* = 1.443, *p* = 0.149
+- **Large_Increasing vs Large_Decreasing**: *β* = 3.01, *SE* = 5.796, *z* = 0.520, *p* = 0.603
+- **SNR**: *β* = 1.32, *SE* = 0.913, *z* = 1.443, *p* = 0.149
 
+_Reference condition: **Large_Decreasing** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
