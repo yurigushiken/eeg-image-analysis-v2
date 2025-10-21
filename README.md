@@ -527,6 +527,34 @@ The `docs/` directory is ready for GitHub Pages deployment:
 2. **Set source to**: `main` branch, `/docs` folder
 3. **Access your site at**: `https://<username>.github.io/<repository>/`
 
+### Rebuilding the Website Index
+
+**IMPORTANT**: Before creating a pull request or pushing changes to the repository, rebuild the website index to ensure all analyses are properly listed:
+
+```bash
+python scripts/rebuild_website_index.py
+```
+
+This script:
+- Scans `docs/assets/plots/` for all analyses
+- Updates `docs/index.md` with thumbnails and links
+- Verifies that each analysis has corresponding statistics
+- Reports the total number of analyses found
+
+**Example output:**
+```
+Found 78 analyses with plots
+
+[OK] increasing_large_vs_small_vs_crossover_ACC1 (with statistics)
+[OK] decreasing_large_vs_small_vs_crossover_without_1_ACC1 (with statistics)
+...
+
+[OK] Index rebuilt with 78 analyses
+  Index file: D:\eeg-image-analysis-v2\docs\index.md
+```
+
+The index page serves as the main navigation for your GitHub Pages site, providing clickable thumbnails for all ERP analyses
+
 The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
 - Each row = one analysis (sorted alphabetically)
 - Each column = component thumbnail (P1, N1, P3b)
