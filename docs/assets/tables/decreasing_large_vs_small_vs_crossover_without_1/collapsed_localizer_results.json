@@ -1,0 +1,61 @@
+{
+  "analysis_id": "decreasing_large_vs_small_vs_crossover_without_1",
+  "date_analyzed": "2025-10-20T21:39:05.944874",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "fal_fraction": 0.5,
+  "n_subjects_total": 24,
+  "n_evokeds_included": 72,
+  "conditions": [
+    "Decreasing Small (no 1)",
+    "Decreasing Crossover (no 1)",
+    "Decreasing Large (no 1)"
+  ],
+  "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 112.0,
+      "peak_gfp_amplitude": 0.29208247387882064,
+      "fwhm_ms": 22.3582549065448,
+      "window_start_ms": 98.18563344767881,
+      "window_end_ms": 120.54388835422361,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    },
+    "N1": {
+      "collapsed_peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -4.44664690647936,
+      "fwhm_ms": 72.2683343920803,
+      "window_start_ms": 140.28442991084444,
+      "window_end_ms": 212.55276430292474,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    },
+    "P3b": {
+      "collapsed_peak_latency_ms": 472.0,
+      "peak_gfp_amplitude": 2.665462458625118,
+      "fwhm_ms": 113.9643714484564,
+      "window_start_ms": 427.25616317387494,
+      "window_end_ms": 541.2205346223313,
+      "search_range_ms": [
+        320.0,
+        590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    }
+  }
+}

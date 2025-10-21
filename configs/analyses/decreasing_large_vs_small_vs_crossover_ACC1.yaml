@@ -1,0 +1,37 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "Decreasing Small"
+      conditions: ["21", "31", "32"]
+      color: "#e41a1c"  # Red
+      linestyle: "-"    # Solid
+    - name: "Decreasing Crossover"
+      conditions: ["41", "42", "52", "43", "53", "63"]
+      color: "#377eb8"  # Blue
+      linestyle: "-"    # Solid
+    - name: "Decreasing Large"
+      conditions: ["54", "64", "65"]
+      color: "#4daf4a"  # Green
+      linestyle: "-"    # Solid
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#e41a1c", "#377eb8", "#4daf4a"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/decreasing_large_vs_small_vs_crossover_ACC1"
+  tables_dir: "docs/assets/tables/decreasing_large_vs_small_vs_crossover_ACC1"
+  page: "docs/analysis/decreasing_large_vs_small_vs_crossover_ACC1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean

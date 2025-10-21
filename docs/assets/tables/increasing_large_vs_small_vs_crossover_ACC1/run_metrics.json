@@ -1,0 +1,15 @@
+{
+  "analysis_id": "increasing_large_vs_small_vs_crossover_ACC1",
+  "duration_seconds": 6.496,
+  "num_figures": 4,
+  "largest_png_bytes": 869220,
+  "total_png_bytes": 2953949,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "increasing_large_vs_small_vs_crossover_ACC1-collapsed_localizer.png": 509502,
+    "increasing_large_vs_small_vs_crossover_ACC1-P1.png": 778596,
+    "increasing_large_vs_small_vs_crossover_ACC1-N1.png": 796631,
+    "increasing_large_vs_small_vs_crossover_ACC1-P3b.png": 869220
+  }
+}
