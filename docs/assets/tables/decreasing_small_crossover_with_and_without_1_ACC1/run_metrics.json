@@ -1,0 +1,15 @@
+{
+  "analysis_id": "decreasing_small_crossover_with_and_without_1_ACC1",
+  "duration_seconds": 15.591,
+  "num_figures": 4,
+  "largest_png_bytes": 843921,
+  "total_png_bytes": 2951124,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "decreasing_small_crossover_with_and_without_1_ACC1-collapsed_localizer.png": 509560,
+    "decreasing_small_crossover_with_and_without_1_ACC1-P1.png": 793463,
+    "decreasing_small_crossover_with_and_without_1_ACC1-N1.png": 804180,
+    "decreasing_small_crossover_with_and_without_1_ACC1-P3b.png": 843921
+  }
+}

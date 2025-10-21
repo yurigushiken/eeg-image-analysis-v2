@@ -1,15 +1,15 @@
 {
   "analysis_id": "Acc0_vs_Acc1",
-  "duration_seconds": 36.933,
+  "duration_seconds": 6.542,
   "num_figures": 4,
-  "largest_png_bytes": 639810,
-  "total_png_bytes": 2314494,
+  "largest_png_bytes": 640228,
+  "total_png_bytes": 2316141,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
-    "Acc0_vs_Acc1-collapsed_localizer.png": 488333,
-    "Acc0_vs_Acc1-P1.png": 585872,
-    "Acc0_vs_Acc1-N1.png": 600479,
-    "Acc0_vs_Acc1-P3b.png": 639810
+    "Acc0_vs_Acc1-collapsed_localizer.png": 488739,
+    "Acc0_vs_Acc1-P1.png": 586282,
+    "Acc0_vs_Acc1-N1.png": 600892,
+    "Acc0_vs_Acc1-P3b.png": 640228
   }
 }

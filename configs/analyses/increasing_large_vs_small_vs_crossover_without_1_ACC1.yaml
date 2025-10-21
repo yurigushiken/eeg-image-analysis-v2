@@ -8,11 +8,11 @@ selection:
   condition_sets:
     - name: "Increasing Small (no 1)"
       conditions: ["23"]
-      color: "#e41a1c"  # Red
+      color: "#984ea3"  # Purple
       linestyle: "-"    # Solid
     - name: "Increasing Crossover (no 1)"
       conditions: ["24", "25", "34", "35", "36"]
-      color: "#377eb8"  # Blue
+      color: "#ff7f00"  # Orange
       linestyle: "-"    # Solid
     - name: "Increasing Large (no 1)"
       conditions: ["45", "46", "56"]
@@ -26,7 +26,7 @@ roi:
 plots:
   formats: ["png"]
   dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a"]
+  colors: ["#984ea3", "#ff7f00", "#4daf4a"]
 outputs:
   page: "single"
   plots_dir: "docs/assets/plots/increasing_large_vs_small_vs_crossover_without_1_ACC1"
