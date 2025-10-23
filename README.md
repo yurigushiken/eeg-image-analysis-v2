@@ -4,9 +4,61 @@ Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZp
 
 ## Overview
 
-This project implements a **declarative, YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures, subject- and condition-level measurements, and an analysis website. You define each analysis in a simple YAML configuration file (Phase 1/2A), then run inferential statistics and plots from subject-level measurements (Phases 2B–2C).
+This project is a **YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures, subject- and condition-level measurements, and an analysis website. You define each analysis in a simple YAML configuration file (Phase 1/2A), then run inferential statistics and plots from subject-level measurements (Phases 2B–2C).
 
 ## Quick Start
+
+### 0. YAML Config Files
+
+Analyses are defined in YAML files under `configs/analyses/`. Just edit a copy of an existing YAML and run it.
+(jackie, tell them the command how, with configs\analyses\12_13_ACC1.yaml as example)
+
+What to edit for a new analysis:
+- Duplicate a similar file in `configs/analyses/` and rename it.
+- In `selection.condition_sets`, list the condition codes you want to compare (i.e. 23, 43, 66) and give each set a name.
+- Set per-set `response` (ALL, ACC1, ACC0), `color`, and `linestyle`.
+- Update `outputs.*` to a new folder/name so results don’t overwrite others.
+
+Fields (what they mean):
+- `dataset.root` — Folder with your preprocessed epoch files (`*.fif`).
+- `dataset.pattern` — Filename pattern to find subject files (e.g., `sub-*_preprocessed-epo.fif`).
+- `dataset.montage_sfp` — Electrode layout file used to map channels to positions.
+- `selection.response` — Which trials to include by accuracy: `ALL`, `ACC1` (correct), or `ACC0` (incorrect). Defaults for all sets unless overridden per set.
+- `selection.min_epochs_per_set` — Minimum number of trials per subject per set to keep that subject in the grand average.
+- `selection.condition_sets[]` — The comparisons you want on a single plot:
+  - `name` — Label shown in legends and page text.
+  - `conditions` — List of numeric codes to include in that set (e.g., `["12", "13"]`).
+  - `response` — Optional per-set override (`ALL`, `ACC1`, or `ACC0`).
+  - `color` — Optional color for this set’s ERP line (hex like `#2c6dde`).
+  - `linestyle` — Optional line style: `"-"` (solid), `"--"` (dashed), `":"` (dotted).
+- `components` — Which ERP components to analyze (e.g., `P1`, `N1`, `P3b`).
+- `preprocessing.baseline_ms` — Time window (ms) for baseline correction, typically `[-100, 0]`.
+- `roi.min_channels` — Minimum number of ROI channels required for a subject to be included.
+- `plots.formats` — Image formats to write (e.g., `png`).
+- `plots.dpi` — Image resolution.
+- `plots.colors` — Fallback color palette used if a set does not specify `color`.
+- `plots.linestyles` — Optional shorthand mapping for style presets (used by some templates).
+- `outputs.plots_dir` — Where to save figures.
+- `outputs.tables_dir` — Where to save CSV/JSON results.
+- `outputs.page` — Path for the generated analysis page (Markdown) under `docs/`.
+- `measurement.latency` — How the latency is selected: `peak` or `fal` (fractional area latency).
+- `measurement.amplitude` — Reported amplitude metric: `peak` or `mean` within the window.
+
+Color and line-style rules (house style):
+- Directional meaning (when comparing increasing vs decreasing):
+  - Red `#ef0000` ≈ decreasing or “error/ACC0” emphasis.
+  - Green `#02d502` ≈ increasing or “correct/ACC1” emphasis.
+  - Blue `#2c6dde` ≈ “no change/same” (cardinality like 11, 22, 33) or a neutral baseline.
+- Group palettes (when grouping by source level instead of direction):
+  - Colors may map to groups (e.g., all “from 2” trials = blue) rather than direction.
+- Multi-class category comparisons:
+  - Qualitative colors distinguish categories (e.g., purple for small, orange for crossover, green for large). In these cases, category palette overrides the direction colors above.
+- Line styles (used to differentiate within a color):
+  - Preference order: solid > dashed > dotted.
+  - Style helps separate multiple lines of the same color (e.g., solid for larger step, dashed for medium, dotted for small), but exact mapping can vary by file.
+- Overrides: If a `condition_set` defines `color` or `linestyle`, that explicit choice wins. Otherwise, the pipeline falls back to `plots.colors` and a default solid style.
+
+Tip: Browse `configs/analyses/` for examples that match your needs (e.g., “increasing vs decreasing”, “landing on N”, “from N to any”). Start from the closest example and only change the condition lists, outputs, and (optionally) the look (color/style).
 
 ### 1. Environment Setup
 
