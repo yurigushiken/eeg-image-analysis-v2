@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-20 22:47:22
+**Generated:** 2025-10-23 18:52:55
 
 ---
 
@@ -378,7 +378,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 - Model converged successfully
 - AIC = 688.22, BIC = 704.35
-- **2 to 3 vs 2 to 1**: *β* = -11.58, *SE* = 7.842, *z* = -1.476, *p* = 0.140
+- **2 to 3 vs 2 to 1**: *β* = -11.58, *SE* = 7.841, *z* = -1.476, *p* = 0.140
 - **2 to 4 vs 2 to 1**: *β* = -10.11, *SE* = 7.621, *z* = -1.326, *p* = 0.185
 - **2 to 5 vs 2 to 1**: *β* = -17.62, *SE* = 7.154, *z* = -2.464, *p* = 0.014
 - **SNR**: *β* = -0.38, *SE* = 0.814, *z* = -0.465, *p* = 0.642
@@ -396,7 +396,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 | 2 to 1 - 2 to 4 | 10.11 | 7.62 | 1.33 | 0.185 | 0.558 | n.s. |
 | 2 to 1 - 2 to 5 | 17.62 | 7.15 | 2.46 | 0.014 | 0.080 | n.s. |
 | 2 to 3 - 2 to 4 | -1.47 | 7.74 | -0.19 | 0.849 | 0.849 | n.s. |
-| 2 to 3 - 2 to 5 | 6.05 | 7.59 | 0.80 | 0.426 | 0.670 | n.s. |
+| 2 to 3 - 2 to 5 | 6.05 | 7.59 | 0.80 | 0.425 | 0.670 | n.s. |
 | 2 to 4 - 2 to 5 | 7.52 | 7.36 | 1.02 | 0.307 | 0.667 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
@@ -529,8 +529,8 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### Software
 
-- Python 3.12.4
-- MNE-Python 1.9.0
+- Python 3.12.11
+- MNE-Python 1.10.1
 - Statsmodels 0.14.5
 - Pingouin 0.5.5
 

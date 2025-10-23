@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-20 22:49:43
+**Generated:** 2025-10-23 18:54:57
 
 ---
 
@@ -270,7 +270,15 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 411.29, BIC = 425.22
+- **1 to 2 vs 1 to 1**: *β* = -11.32, *SE* = 3.547, *z* = -3.192, *p* = 0.001
+- **1 to 3 vs 1 to 1**: *β* = -8.58, *SE* = 3.620, *z* = -2.370, *p* = 0.018
+- **1 to 4 vs 1 to 1**: *β* = -10.21, *SE* = 3.626, *z* = -2.817, *p* = 0.005
+- **SNR**: *β* = 1.45, *SE* = 0.964, *z* = 1.498, *p* = 0.134
+
+_Reference condition: **1 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -278,12 +286,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 1 to 1 - 1 to 2 | 11.33 | 3.54 | 3.20 | 0.001 | 0.008 | ** |
-| 1 to 1 - 1 to 3 | 8.57 | 3.61 | 2.38 | 0.017 | 0.068 | n.s. |
-| 1 to 1 - 1 to 4 | 10.21 | 3.61 | 2.83 | 0.005 | 0.023 | * |
-| 1 to 2 - 1 to 3 | -2.76 | 3.85 | -0.72 | 0.472 | 0.853 | n.s. |
-| 1 to 2 - 1 to 4 | -1.12 | 3.87 | -0.29 | 0.772 | 0.896 | n.s. |
-| 1 to 3 - 1 to 4 | 1.64 | 3.93 | 0.42 | 0.677 | 0.896 | n.s. |
+| 1 to 1 - 1 to 2 | 11.32 | 3.55 | 3.19 | 0.001 | 0.008 | ** |
+| 1 to 1 - 1 to 3 | 8.58 | 3.62 | 2.37 | 0.018 | 0.069 | n.s. |
+| 1 to 1 - 1 to 4 | 10.21 | 3.63 | 2.82 | 0.005 | 0.024 | * |
+| 1 to 2 - 1 to 3 | -2.74 | 3.86 | -0.71 | 0.477 | 0.857 | n.s. |
+| 1 to 2 - 1 to 4 | -1.11 | 3.89 | -0.28 | 0.776 | 0.897 | n.s. |
+| 1 to 3 - 1 to 4 | 1.63 | 3.94 | 0.41 | 0.679 | 0.897 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -521,8 +529,8 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### Software
 
-- Python 3.12.4
-- MNE-Python 1.9.0
+- Python 3.12.11
+- MNE-Python 1.10.1
 - Statsmodels 0.14.5
 - Pingouin 0.5.5
 

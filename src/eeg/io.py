@@ -1,11 +1,14 @@
 from __future__ import annotations
 
-from typing import List, Optional, Sequence, Tuple
+from typing import Iterable, List, Mapping, Optional, Sequence, Tuple
 
 import os
 import re
 import glob
 
+import pandas as pd
+
+from .select import _build_metadata_filter_mask
 
 def validate_montage_path(montage_sfp: str) -> None:
     if not os.path.isfile(montage_sfp):
@@ -88,11 +91,32 @@ def filter_by_response(epochs, response: str):
     raise ValueError(f"Unknown response mode: {response}. Valid options: ALL, ACC1, ACC0")
 
 
-def select_conditions(epochs, condition_codes: Sequence[str]):
-    """Subset epochs using metadata['Condition'] membership if available; else event labels."""
+def _build_metadata_filter_mask_for_epochs(
+    metadata: pd.DataFrame, filters: Mapping[str, Iterable[str]], set_name: str
+) -> pd.Series:
+    return _build_metadata_filter_mask(metadata, filters, set_name)
+
+
+def select_conditions(
+    epochs,
+    condition_codes: Sequence[str],
+    metadata_filters: Optional[Mapping[str, Iterable[str]]] = None,
+    set_name: str = "condition_set",
+):
+    """Subset epochs using metadata['Condition'] membership combined with optional filters."""
+
+    metadata_filters = metadata_filters or {}
+
     if getattr(epochs, "metadata", None) is not None and "Condition" in epochs.metadata.columns:
-        mask = epochs.metadata["Condition"].astype(str).isin([str(c) for c in condition_codes])
-        return epochs[mask]
+        metadata = epochs.metadata
+        condition_mask = (
+            metadata["Condition"].astype(str).isin([str(c) for c in condition_codes])
+            if condition_codes
+            else pd.Series(True, index=metadata.index)
+        )
+        metadata_mask = _build_metadata_filter_mask_for_epochs(metadata, metadata_filters, set_name)
+        combined = condition_mask & metadata_mask
+        return epochs[combined]
     # Fallback: try event label selection (if labels match codes)
     sel = None
     for code in condition_codes:

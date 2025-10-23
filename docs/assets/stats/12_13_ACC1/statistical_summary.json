@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-20 22:38:12",
+  "timestamp": "2025-10-23 18:45:32",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_ACC1_loi0r7sw.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_ACC1_5j7de4xm.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_13_ACC1\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -82,7 +82,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 3.449637852784174,
-        "p_unc": 0.11264142500593269,
+        "p_unc": 0.11264142500593263,
         "output_file": "anova_P1_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.12654928876155236
@@ -178,8 +178,8 @@
         "component": "N1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 372.5341875097796,
-        "bic": 381.67739449222506,
+        "aic": 372.53418750977966,
+        "bic": 381.6773944922251,
         "converged": true,
         "output_file": "lmm_N1_latency_frac_area_ms.json"
       },

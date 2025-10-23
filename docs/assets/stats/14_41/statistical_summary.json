@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-20 22:40:17",
+  "timestamp": "2025-10-23 18:47:01",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_14_41_60kx8ytz.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_14_41_78aj_wcp.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\14_41\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -52,7 +52,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 14.397853876842223,
-        "p_unc": 0.0012251932180249046,
+        "p_unc": 0.0012251932180249044,
         "output_file": "anova_N1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.21036507976792015
@@ -82,7 +82,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 10.386657739629237,
-        "p_unc": 0.010441856777855115,
+        "p_unc": 0.010441856777855113,
         "output_file": "anova_P1_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.3777227120788332
@@ -102,7 +102,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 5.926223765361116,
-        "p_unc": 0.02623295814342809,
+        "p_unc": 0.026232958143428086,
         "output_file": "anova_P3b_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.04067308767100896
@@ -187,8 +187,8 @@
         "component": "P1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 115.46964471194704,
-        "bic": 122.30612386187941,
+        "aic": 115.46964471194707,
+        "bic": 122.30612386187944,
         "converged": true,
         "output_file": "lmm_P1_mean_amplitude_roi.json"
       },
@@ -196,8 +196,8 @@
         "component": "P1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 203.13740779983164,
-        "bic": 209.973886949764,
+        "aic": 203.1374077993895,
+        "bic": 209.97388694932187,
         "converged": true,
         "output_file": "lmm_P1_latency_frac_area_ms.json"
       },
@@ -214,8 +214,8 @@
         "component": "P3b",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 386.2253286553434,
-        "bic": 394.7931889888649,
+        "aic": 386.2253286553433,
+        "bic": 394.7931889888648,
         "converged": true,
         "output_file": "lmm_P3b_latency_frac_area_ms.json"
       }

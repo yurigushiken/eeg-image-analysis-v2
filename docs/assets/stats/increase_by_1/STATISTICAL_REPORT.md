@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-20 22:50:46
+**Generated:** 2025-10-23 18:55:56
 
 ---
 
@@ -325,7 +325,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 | 1 to 2 - 5 to 6 | 0.63 | 1.97 | 0.32 | 0.749 | 0.996 | n.s. |
 | 2 to 3 - 3 to 4 | 1.55 | 1.93 | 0.81 | 0.420 | 0.985 | n.s. |
 | 2 to 3 - 4 to 5 | -0.11 | 1.92 | -0.06 | 0.954 | 0.996 | n.s. |
-| 2 to 3 - 5 to 6 | 1.82 | 2.03 | 0.89 | 0.372 | 0.985 | n.s. |
+| 2 to 3 - 5 to 6 | 1.81 | 2.03 | 0.89 | 0.372 | 0.985 | n.s. |
 | 3 to 4 - 4 to 5 | -1.67 | 1.87 | -0.89 | 0.372 | 0.985 | n.s. |
 | 3 to 4 - 5 to 6 | 0.26 | 1.82 | 0.14 | 0.886 | 0.996 | n.s. |
 | 4 to 5 - 5 to 6 | 1.93 | 1.95 | 0.99 | 0.322 | 0.980 | n.s. |
@@ -586,8 +586,8 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### Software
 
-- Python 3.12.4
-- MNE-Python 1.9.0
+- Python 3.12.11
+- MNE-Python 1.10.1
 - Statsmodels 0.14.5
 - Pingouin 0.5.5
 

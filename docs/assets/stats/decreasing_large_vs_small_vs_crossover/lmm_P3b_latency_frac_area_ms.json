@@ -11,7 +11,7 @@
     },
     {
       "name": "condition[T.Decreasing Large]",
-      "Coef.": "2.113",
+      "Coef.": "2.112",
       "Std.Err.": "5.187",
       "z": "0.407",
       "P>|z|": "0.684",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Group Var",
-      "Coef.": "68.820",
+      "Coef.": "68.822",
       "Std.Err.": "3.859",
       "z": "",
       "P>|z|": "",
@@ -46,8 +46,8 @@
       "0.975]": ""
     }
   ],
-  "aic": 499.54413574490115,
-  "bic": 511.90679380817966,
+  "aic": 499.54413574694354,
+  "bic": 511.90679381022204,
   "converged": true,
   "reference_condition": "Decreasing Crossover"
 }

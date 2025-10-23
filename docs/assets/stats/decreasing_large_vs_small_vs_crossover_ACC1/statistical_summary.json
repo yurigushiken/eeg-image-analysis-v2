@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-20 22:45:56",
+  "timestamp": "2025-10-23 18:51:49",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_decreasing_large_vs_small_vs_crossover_ACC1_ryvsyk0l.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_decreasing_large_vs_small_vs_crossover_ACC1_dbkb0v9f.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\decreasing_large_vs_small_vs_crossover_ACC1\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -52,10 +52,10 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 5.773630889353448,
-        "p_unc": 0.006267405892088107,
+        "p_unc": 0.006267405892088101,
         "output_file": "anova_N1_mean_amplitude_roi.csv",
-        "p_gg_corrected": 0.01710929201327501,
-        "epsilon": 0.6472807767370243,
+        "p_gg_corrected": 0.01710929201327506,
+        "epsilon": 0.6472807767370238,
         "effect_size_ng2": 0.08130879015142513
       },
       "N1_latency_frac_area_ms": {
@@ -65,7 +65,7 @@
         "F": 0.19325431839733606,
         "p_unc": 0.8250373598971703,
         "output_file": "anova_N1_latency_frac_area_ms.csv",
-        "p_gg_corrected": 0.7505943883744295,
+        "p_gg_corrected": 0.7505943883744294,
         "epsilon": 0.7147397506883123,
         "effect_size_ng2": 0.001261191190159403
       },
@@ -74,10 +74,10 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 1.267263636327067,
-        "p_unc": 0.30326021429869604,
+        "p_unc": 0.3032602142986959,
         "output_file": "anova_P1_mean_amplitude_roi.csv",
-        "p_gg_corrected": 0.2941701808050276,
-        "epsilon": 0.6264537339184623,
+        "p_gg_corrected": 0.2941701808050272,
+        "epsilon": 0.6264537339184609,
         "effect_size_ng2": 0.027296728401907968
       },
       "P1_latency_frac_area_ms": {
@@ -85,7 +85,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 2.1312828234348644,
-        "p_unc": 0.1448547436927945,
+        "p_unc": 0.14485474369279447,
         "output_file": "anova_P1_latency_frac_area_ms.csv",
         "epsilon": 0.9361181716483414,
         "effect_size_ng2": 0.060307437275449856
@@ -95,9 +95,9 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 1.9481086854513556,
-        "p_unc": 0.15812914465893607,
+        "p_unc": 0.15812914465893604,
         "output_file": "anova_P3b_mean_amplitude_roi.csv",
-        "epsilon": 0.8251244124098167,
+        "epsilon": 0.8251244124098154,
         "effect_size_ng2": 0.027516382809795254
       },
       "P3b_latency_frac_area_ms": {
@@ -105,7 +105,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 2.114843639629883,
-        "p_unc": 0.1362476174371702,
+        "p_unc": 0.13624761743717018,
         "output_file": "anova_P3b_latency_frac_area_ms.csv",
         "p_gg_corrected": 0.1541939416977721,
         "epsilon": 0.6914232027871026,
@@ -173,8 +173,8 @@
         "component": "N1",
         "dv": "mean_amplitude_roi",
         "test": "LMM",
-        "aic": 251.1284460967555,
-        "bic": 264.5330851243391,
+        "aic": 251.12844609675562,
+        "bic": 264.5330851243392,
         "converged": true,
         "output_file": "lmm_N1_mean_amplitude_roi.json"
       },
@@ -182,8 +182,8 @@
         "component": "N1",
         "dv": "latency_frac_area_ms",
         "test": "LMM",
-        "aic": 450.0962398343072,
-        "bic": 463.5008788618908,
+        "aic": 450.0962398343071,
+        "bic": 463.50087886189067,
         "converged": true,
         "output_file": "lmm_N1_latency_frac_area_ms.json"
       },

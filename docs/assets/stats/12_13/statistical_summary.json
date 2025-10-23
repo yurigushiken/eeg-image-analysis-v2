@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-20 22:37:54",
+  "timestamp": "2025-10-23 18:45:10",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_snu30t3y.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_13_fgew83yk.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_13\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -52,7 +52,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 7.463310251753131,
-        "p_unc": 0.012847260362690469,
+        "p_unc": 0.012847260362690464,
         "output_file": "anova_N1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.07510520332339882
@@ -72,7 +72,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 0.550267070552275,
-        "p_unc": 0.4862198850147784,
+        "p_unc": 0.4862198850147783,
         "output_file": "anova_P1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.04247678181126398
@@ -82,7 +82,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 4.083161698143527,
-        "p_unc": 0.08981534373174466,
+        "p_unc": 0.08981534373174463,
         "output_file": "anova_P1_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.10495304708191379
@@ -92,7 +92,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 2.5727487565930405,
-        "p_unc": 0.13103317750233537,
+        "p_unc": 0.13103317750233534,
         "output_file": "anova_P3b_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.03373163381137049

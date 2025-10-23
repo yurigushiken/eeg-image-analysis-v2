@@ -1,0 +1,62 @@
+dataset:
+  root: "data/lab_data_original_with_primes"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+
+selection:
+  response: "ALL"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "5a"
+      conditions: ["55"]
+      color: "#02d502"  # Green
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["5a.jpg"]
+    - name: "5b"
+      conditions: ["55"]
+      color: "#9900ff"  # Purple
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["5b.jpg"]
+    - name: "5c"
+      conditions: ["55"]
+      color: "#ff7f00"  # Orange
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["5c.jpg"]
+    - name: "5d"
+      conditions: ["55"]
+      color: "#40e0d0"  # Turquoise
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["5d.jpg"]
+    - name: "5e"
+      conditions: ["55"]
+      color: "#ef0000"  # Red
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["5e.jpg"]
+
+components: ["P1", "N1", "P3b"]
+
+preprocessing:
+  baseline_ms: [-100, 0]
+
+roi:
+  min_channels: 4
+
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#02d502", "#9900ff", "#ff7f00", "#40e0d0", "#ef0000"]
+
+outputs:
+  page: "docs/analysis/prime_55.md"
+  plots_dir: "docs/assets/plots/prime_55"
+  tables_dir: "docs/assets/tables/prime_55"
+
+measurement:
+  latency: fal
+  amplitude: mean
+

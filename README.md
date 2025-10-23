@@ -183,6 +183,8 @@ selection:
   condition_sets:
     - name: "Small_Increasing"
       conditions: ["12", "13", "23"]  # Explicit numeric condition codes
+      # metadata_filters:
+      #   Prime5: ["5a.jpg", "5b.jpg"]  # Optional metadata filters (AND across listed columns)
       # response: "ALL"   # Optional: override default per-set
     - name: "Small_Decreasing"
       conditions: ["32", "31", "21"]
@@ -412,6 +414,7 @@ See working examples: [56_ALL_ACC1.yaml](configs/analyses/56_ALL_ACC1.yaml), [65
 2. Edit the `condition_sets` to define your trial groups
 3. Adjust `components`, `baseline_ms`, `plots` as needed
 4. Run: `python scripts/run_analysis.py --config configs/analyses/your_analysis.yaml`
+5. (Optional) Run statistics: `python scripts/run_all_statistics.py`
 
 ## Statistical Analysis Ready
 

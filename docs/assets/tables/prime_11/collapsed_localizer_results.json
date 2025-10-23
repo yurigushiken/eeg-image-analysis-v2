@@ -1,0 +1,49 @@
+{
+  "analysis_id": "prime_11",
+  "date_analyzed": "2025-10-23T18:24:57.418431",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "fal_fraction": 0.5,
+  "n_subjects_total": 24,
+  "n_evokeds_included": 85,
+  "conditions": [
+    "1a",
+    "1b",
+    "1c",
+    "1d",
+    "1e"
+  ],
+  "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 120.0,
+      "peak_gfp_amplitude": 2.392390443743104,
+      "fwhm_ms": 49.70136867841828,
+      "window_start_ms": 97.05290192831717,
+      "window_end_ms": 146.75427060673545,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 85,
+      "n_conditions": 5
+    },
+    "N1": {
+      "collapsed_peak_latency_ms": 180.0,
+      "peak_gfp_amplitude": -1.8065888704821458,
+      "fwhm_ms": 48.12898570925981,
+      "window_start_ms": 155.91772902392924,
+      "window_end_ms": 204.04671473318905,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 85,
+      "n_conditions": 5
+    }
+  }
+}

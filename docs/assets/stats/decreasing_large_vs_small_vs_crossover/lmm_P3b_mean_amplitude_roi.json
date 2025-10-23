@@ -46,8 +46,8 @@
       "0.975]": ""
     }
   ],
-  "aic": 222.7930904629477,
-  "bic": 235.1557485262262,
+  "aic": 222.79309046294776,
+  "bic": 235.15574852622626,
   "converged": true,
   "reference_condition": "Decreasing Crossover"
 }

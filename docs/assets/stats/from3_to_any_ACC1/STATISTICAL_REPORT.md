@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-20 22:48:21
+**Generated:** 2025-10-23 18:53:35
 
 ---
 
@@ -269,7 +269,17 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 234.57, BIC = 255.55
+- **3 to 2 vs 3 to 1**: *β* = -0.20, *SE* = 0.344, *z* = -0.567, *p* = 0.571
+- **3 to 3 vs 3 to 1**: *β* = 0.21, *SE* = 0.316, *z* = 0.675, *p* = 0.500
+- **3 to 4 vs 3 to 1**: *β* = 0.27, *SE* = 0.311, *z* = 0.883, *p* = 0.377
+- **3 to 5 vs 3 to 1**: *β* = -0.03, *SE* = 0.336, *z* = -0.083, *p* = 0.934
+- **3 to 6 vs 3 to 1**: *β* = -0.08, *SE* = 0.349, *z* = -0.241, *p* = 0.809
+- **SNR**: *β* = 0.60, *SE* = 0.057, *z* = 10.565, *p* < .001
+
+_Reference condition: **3 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -277,21 +287,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3 to 1 - 3 to 2 | 0.32 | 0.30 | 1.07 | 0.285 | 0.956 | n.s. |
-| 3 to 1 - 3 to 3 | -0.12 | 0.27 | -0.44 | 0.660 | 0.990 | n.s. |
-| 3 to 1 - 3 to 4 | -0.30 | 0.27 | -1.11 | 0.266 | 0.956 | n.s. |
-| 3 to 1 - 3 to 5 | 0.12 | 0.29 | 0.41 | 0.685 | 0.990 | n.s. |
-| 3 to 1 - 3 to 6 | 0.23 | 0.30 | 0.76 | 0.446 | 0.989 | n.s. |
-| 3 to 2 - 3 to 3 | -0.44 | 0.30 | -1.44 | 0.149 | 0.878 | n.s. |
-| 3 to 2 - 3 to 4 | -0.62 | 0.31 | -1.99 | 0.046 | 0.509 | n.s. |
-| 3 to 2 - 3 to 5 | -0.20 | 0.32 | -0.61 | 0.541 | 0.990 | n.s. |
-| 3 to 2 - 3 to 6 | -0.09 | 0.33 | -0.26 | 0.793 | 0.990 | n.s. |
-| 3 to 3 - 3 to 4 | -0.18 | 0.29 | -0.62 | 0.533 | 0.990 | n.s. |
-| 3 to 3 - 3 to 5 | 0.24 | 0.30 | 0.78 | 0.433 | 0.989 | n.s. |
-| 3 to 3 - 3 to 6 | 0.35 | 0.30 | 1.16 | 0.247 | 0.956 | n.s. |
-| 3 to 4 - 3 to 5 | 0.42 | 0.30 | 1.39 | 0.165 | 0.885 | n.s. |
-| 3 to 4 - 3 to 6 | 0.53 | 0.32 | 1.67 | 0.095 | 0.755 | n.s. |
-| 3 to 5 - 3 to 6 | 0.11 | 0.32 | 0.35 | 0.730 | 0.990 | n.s. |
+| 3 to 1 - 3 to 2 | 0.19 | 0.34 | 0.57 | 0.571 | 0.998 | n.s. |
+| 3 to 1 - 3 to 3 | -0.21 | 0.32 | -0.67 | 0.500 | 0.998 | n.s. |
+| 3 to 1 - 3 to 4 | -0.27 | 0.31 | -0.88 | 0.377 | 0.997 | n.s. |
+| 3 to 1 - 3 to 5 | 0.03 | 0.34 | 0.08 | 0.934 | 0.999 | n.s. |
+| 3 to 1 - 3 to 6 | 0.08 | 0.35 | 0.24 | 0.809 | 0.999 | n.s. |
+| 3 to 2 - 3 to 3 | -0.41 | 0.36 | -1.14 | 0.252 | 0.983 | n.s. |
+| 3 to 2 - 3 to 4 | -0.47 | 0.36 | -1.30 | 0.193 | 0.960 | n.s. |
+| 3 to 2 - 3 to 5 | -0.17 | 0.38 | -0.44 | 0.658 | 0.998 | n.s. |
+| 3 to 2 - 3 to 6 | -0.11 | 0.38 | -0.29 | 0.773 | 0.999 | n.s. |
+| 3 to 3 - 3 to 4 | -0.06 | 0.34 | -0.18 | 0.855 | 0.999 | n.s. |
+| 3 to 3 - 3 to 5 | 0.24 | 0.35 | 0.68 | 0.496 | 0.998 | n.s. |
+| 3 to 3 - 3 to 6 | 0.30 | 0.36 | 0.83 | 0.405 | 0.997 | n.s. |
+| 3 to 4 - 3 to 5 | 0.30 | 0.35 | 0.86 | 0.389 | 0.997 | n.s. |
+| 3 to 4 - 3 to 6 | 0.36 | 0.37 | 0.97 | 0.332 | 0.995 | n.s. |
+| 3 to 5 - 3 to 6 | 0.06 | 0.38 | 0.15 | 0.882 | 0.999 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -331,7 +341,17 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 479.06, BIC = 500.03
+- **3 to 2 vs 3 to 1**: *β* = -2.15, *SE* = 1.985, *z* = -1.082, *p* = 0.279
+- **3 to 3 vs 3 to 1**: *β* = -1.18, *SE* = 1.830, *z* = -0.645, *p* = 0.519
+- **3 to 4 vs 3 to 1**: *β* = -3.18, *SE* = 1.800, *z* = -1.769, *p* = 0.077
+- **3 to 5 vs 3 to 1**: *β* = -1.77, *SE* = 1.939, *z* = -0.914, *p* = 0.360
+- **3 to 6 vs 3 to 1**: *β* = -2.27, *SE* = 1.979, *z* = -1.146, *p* = 0.252
+- **SNR**: *β* = 0.06, *SE* = 0.304, *z* = 0.208, *p* = 0.835
+
+_Reference condition: **3 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -339,21 +359,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3 to 1 - 3 to 2 | 1.57 | 1.81 | 0.86 | 0.388 | 0.997 | n.s. |
-| 3 to 1 - 3 to 3 | 1.06 | 1.68 | 0.63 | 0.530 | 1.000 | n.s. |
-| 3 to 1 - 3 to 4 | 2.00 | 1.67 | 1.20 | 0.230 | 0.980 | n.s. |
-| 3 to 1 - 3 to 5 | 1.97 | 1.78 | 1.10 | 0.270 | 0.988 | n.s. |
-| 3 to 1 - 3 to 6 | 1.79 | 1.85 | 0.97 | 0.334 | 0.995 | n.s. |
-| 3 to 2 - 3 to 3 | -0.51 | 1.86 | -0.27 | 0.784 | 1.000 | n.s. |
-| 3 to 2 - 3 to 4 | 0.44 | 1.90 | 0.23 | 0.819 | 1.000 | n.s. |
-| 3 to 2 - 3 to 5 | 0.40 | 1.99 | 0.20 | 0.840 | 1.000 | n.s. |
-| 3 to 2 - 3 to 6 | 0.22 | 2.00 | 0.11 | 0.911 | 1.000 | n.s. |
-| 3 to 3 - 3 to 4 | 0.95 | 1.78 | 0.53 | 0.596 | 1.000 | n.s. |
-| 3 to 3 - 3 to 5 | 0.91 | 1.87 | 0.49 | 0.626 | 1.000 | n.s. |
-| 3 to 3 - 3 to 6 | 0.73 | 1.86 | 0.39 | 0.693 | 1.000 | n.s. |
-| 3 to 4 - 3 to 5 | -0.04 | 1.86 | -0.02 | 0.985 | 1.000 | n.s. |
-| 3 to 4 - 3 to 6 | -0.21 | 1.96 | -0.11 | 0.914 | 1.000 | n.s. |
-| 3 to 5 - 3 to 6 | -0.18 | 1.99 | -0.09 | 0.929 | 1.000 | n.s. |
+| 3 to 1 - 3 to 2 | 2.15 | 1.99 | 1.08 | 0.279 | 0.986 | n.s. |
+| 3 to 1 - 3 to 3 | 1.18 | 1.83 | 0.65 | 0.519 | 0.999 | n.s. |
+| 3 to 1 - 3 to 4 | 3.18 | 1.80 | 1.77 | 0.077 | 0.699 | n.s. |
+| 3 to 1 - 3 to 5 | 1.77 | 1.94 | 0.91 | 0.360 | 0.993 | n.s. |
+| 3 to 1 - 3 to 6 | 2.27 | 1.98 | 1.15 | 0.252 | 0.983 | n.s. |
+| 3 to 2 - 3 to 3 | -0.97 | 2.11 | -0.46 | 0.647 | 0.999 | n.s. |
+| 3 to 2 - 3 to 4 | 1.04 | 2.08 | 0.50 | 0.619 | 0.999 | n.s. |
+| 3 to 2 - 3 to 5 | -0.38 | 2.21 | -0.17 | 0.865 | 0.999 | n.s. |
+| 3 to 2 - 3 to 6 | 0.12 | 2.25 | 0.05 | 0.957 | 0.999 | n.s. |
+| 3 to 3 - 3 to 4 | 2.00 | 1.94 | 1.03 | 0.302 | 0.987 | n.s. |
+| 3 to 3 - 3 to 5 | 0.59 | 2.07 | 0.29 | 0.774 | 0.999 | n.s. |
+| 3 to 3 - 3 to 6 | 1.09 | 2.11 | 0.51 | 0.607 | 0.999 | n.s. |
+| 3 to 4 - 3 to 5 | -1.41 | 2.06 | -0.68 | 0.494 | 0.999 | n.s. |
+| 3 to 4 - 3 to 6 | -0.92 | 2.09 | -0.44 | 0.661 | 0.999 | n.s. |
+| 3 to 5 - 3 to 6 | 0.50 | 2.21 | 0.22 | 0.823 | 0.999 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -396,7 +416,17 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 438.25, BIC = 462.05
+- **3 to 2 vs 3 to 1**: *β* = 0.99, *SE* = 0.536, *z* = 1.850, *p* = 0.064
+- **3 to 3 vs 3 to 1**: *β* = -0.79, *SE* = 0.573, *z* = -1.386, *p* = 0.166
+- **3 to 4 vs 3 to 1**: *β* = 0.52, *SE* = 0.550, *z* = 0.951, *p* = 0.342
+- **3 to 5 vs 3 to 1**: *β* = 0.37, *SE* = 0.561, *z* = 0.654, *p* = 0.513
+- **3 to 6 vs 3 to 1**: *β* = -0.19, *SE* = 0.542, *z* = -0.357, *p* = 0.721
+- **SNR**: *β* = 0.23, *SE* = 0.044, *z* = 5.292, *p* < .001
+
+_Reference condition: **3 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -404,21 +434,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3 to 1 - 3 to 2 | -0.96 | 0.48 | -1.99 | 0.047 | 0.411 | n.s. |
-| 3 to 1 - 3 to 3 | 0.89 | 0.52 | 1.72 | 0.085 | 0.587 | n.s. |
-| 3 to 1 - 3 to 4 | -0.46 | 0.50 | -0.92 | 0.358 | 0.876 | n.s. |
-| 3 to 1 - 3 to 5 | -0.23 | 0.51 | -0.46 | 0.648 | 0.922 | n.s. |
-| 3 to 1 - 3 to 6 | 0.28 | 0.49 | 0.56 | 0.573 | 0.922 | n.s. |
-| 3 to 2 - 3 to 3 | 1.85 | 0.50 | 3.68 | < .001 | 0.003 | ** |
-| 3 to 2 - 3 to 4 | 0.50 | 0.49 | 1.02 | 0.305 | 0.876 | n.s. |
-| 3 to 2 - 3 to 5 | 0.73 | 0.49 | 1.49 | 0.137 | 0.719 | n.s. |
-| 3 to 2 - 3 to 6 | 1.24 | 0.47 | 2.64 | 0.008 | 0.111 | n.s. |
-| 3 to 3 - 3 to 4 | -1.35 | 0.53 | -2.54 | 0.011 | 0.135 | n.s. |
-| 3 to 3 - 3 to 5 | -1.12 | 0.52 | -2.16 | 0.031 | 0.311 | n.s. |
-| 3 to 3 - 3 to 6 | -0.61 | 0.49 | -1.24 | 0.215 | 0.816 | n.s. |
-| 3 to 4 - 3 to 5 | 0.23 | 0.51 | 0.45 | 0.654 | 0.922 | n.s. |
-| 3 to 4 - 3 to 6 | 0.73 | 0.49 | 1.51 | 0.131 | 0.719 | n.s. |
-| 3 to 5 - 3 to 6 | 0.51 | 0.48 | 1.05 | 0.294 | 0.876 | n.s. |
+| 3 to 1 - 3 to 2 | -0.99 | 0.54 | -1.85 | 0.064 | 0.519 | n.s. |
+| 3 to 1 - 3 to 3 | 0.79 | 0.57 | 1.39 | 0.166 | 0.837 | n.s. |
+| 3 to 1 - 3 to 4 | -0.52 | 0.55 | -0.95 | 0.342 | 0.906 | n.s. |
+| 3 to 1 - 3 to 5 | -0.37 | 0.56 | -0.65 | 0.513 | 0.906 | n.s. |
+| 3 to 1 - 3 to 6 | 0.19 | 0.54 | 0.36 | 0.721 | 0.922 | n.s. |
+| 3 to 2 - 3 to 3 | 1.78 | 0.56 | 3.18 | 0.001 | 0.022 | * |
+| 3 to 2 - 3 to 4 | 0.47 | 0.55 | 0.85 | 0.394 | 0.906 | n.s. |
+| 3 to 2 - 3 to 5 | 0.62 | 0.55 | 1.14 | 0.256 | 0.906 | n.s. |
+| 3 to 2 - 3 to 6 | 1.18 | 0.52 | 2.26 | 0.024 | 0.288 | n.s. |
+| 3 to 3 - 3 to 4 | -1.32 | 0.59 | -2.24 | 0.025 | 0.288 | n.s. |
+| 3 to 3 - 3 to 5 | -1.16 | 0.58 | -2.01 | 0.044 | 0.419 | n.s. |
+| 3 to 3 - 3 to 6 | -0.60 | 0.55 | -1.09 | 0.277 | 0.906 | n.s. |
+| 3 to 4 - 3 to 5 | 0.16 | 0.57 | 0.27 | 0.783 | 0.922 | n.s. |
+| 3 to 4 - 3 to 6 | 0.72 | 0.54 | 1.32 | 0.188 | 0.846 | n.s. |
+| 3 to 5 - 3 to 6 | 0.56 | 0.54 | 1.04 | 0.299 | 0.906 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -458,7 +488,17 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 907.41, BIC = 931.21
+- **3 to 2 vs 3 to 1**: *β* = 8.02, *SE* = 5.467, *z* = 1.467, *p* = 0.142
+- **3 to 3 vs 3 to 1**: *β* = -6.60, *SE* = 5.840, *z* = -1.130, *p* = 0.259
+- **3 to 4 vs 3 to 1**: *β* = 8.76, *SE* = 5.592, *z* = 1.566, *p* = 0.117
+- **3 to 5 vs 3 to 1**: *β* = 7.13, *SE* = 5.722, *z* = 1.247, *p* = 0.212
+- **3 to 6 vs 3 to 1**: *β* = 1.93, *SE* = 5.517, *z* = 0.350, *p* = 0.726
+- **SNR**: *β* = 0.39, *SE* = 0.425, *z* = 0.926, *p* = 0.354
+
+_Reference condition: **3 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -466,21 +506,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3 to 1 - 3 to 2 | -8.16 | 4.95 | -1.65 | 0.100 | 0.624 | n.s. |
-| 3 to 1 - 3 to 3 | 6.85 | 5.27 | 1.30 | 0.194 | 0.685 | n.s. |
-| 3 to 1 - 3 to 4 | -9.34 | 5.09 | -1.83 | 0.067 | 0.564 | n.s. |
-| 3 to 1 - 3 to 5 | -9.31 | 5.18 | -1.80 | 0.072 | 0.564 | n.s. |
-| 3 to 1 - 3 to 6 | -1.65 | 5.01 | -0.33 | 0.743 | 0.996 | n.s. |
-| 3 to 2 - 3 to 3 | 15.00 | 5.14 | 2.92 | 0.004 | 0.045 | * |
-| 3 to 2 - 3 to 4 | -1.18 | 5.03 | -0.23 | 0.814 | 0.996 | n.s. |
-| 3 to 2 - 3 to 5 | -1.15 | 5.03 | -0.23 | 0.819 | 0.996 | n.s. |
-| 3 to 2 - 3 to 6 | 6.51 | 4.80 | 1.36 | 0.175 | 0.685 | n.s. |
-| 3 to 3 - 3 to 4 | -16.18 | 5.42 | -2.98 | 0.003 | 0.039 | * |
-| 3 to 3 - 3 to 5 | -16.15 | 5.30 | -3.05 | 0.002 | 0.034 | * |
-| 3 to 3 - 3 to 6 | -8.49 | 5.06 | -1.68 | 0.093 | 0.624 | n.s. |
-| 3 to 4 - 3 to 5 | 0.03 | 5.19 | 0.01 | 0.995 | 0.996 | n.s. |
-| 3 to 4 - 3 to 6 | 7.69 | 4.98 | 1.55 | 0.122 | 0.643 | n.s. |
-| 3 to 5 - 3 to 6 | 7.66 | 4.94 | 1.55 | 0.121 | 0.643 | n.s. |
+| 3 to 1 - 3 to 2 | -8.02 | 5.47 | -1.47 | 0.142 | 0.786 | n.s. |
+| 3 to 1 - 3 to 3 | 6.60 | 5.84 | 1.13 | 0.259 | 0.883 | n.s. |
+| 3 to 1 - 3 to 4 | -8.76 | 5.59 | -1.57 | 0.117 | 0.777 | n.s. |
+| 3 to 1 - 3 to 5 | -7.14 | 5.72 | -1.25 | 0.212 | 0.883 | n.s. |
+| 3 to 1 - 3 to 6 | -1.93 | 5.52 | -0.35 | 0.726 | 0.994 | n.s. |
+| 3 to 2 - 3 to 3 | 14.61 | 5.74 | 2.55 | 0.011 | 0.145 | n.s. |
+| 3 to 2 - 3 to 4 | -0.74 | 5.63 | -0.13 | 0.896 | 0.994 | n.s. |
+| 3 to 2 - 3 to 5 | 0.88 | 5.65 | 0.16 | 0.876 | 0.994 | n.s. |
+| 3 to 2 - 3 to 6 | 6.08 | 5.38 | 1.13 | 0.258 | 0.883 | n.s. |
+| 3 to 3 - 3 to 4 | -15.35 | 5.99 | -2.56 | 0.010 | 0.145 | n.s. |
+| 3 to 3 - 3 to 5 | -13.73 | 5.94 | -2.31 | 0.021 | 0.240 | n.s. |
+| 3 to 3 - 3 to 6 | -8.53 | 5.64 | -1.51 | 0.131 | 0.786 | n.s. |
+| 3 to 4 - 3 to 5 | 1.62 | 5.82 | 0.28 | 0.781 | 0.994 | n.s. |
+| 3 to 4 - 3 to 6 | 6.82 | 5.59 | 1.22 | 0.222 | 0.883 | n.s. |
+| 3 to 5 - 3 to 6 | 5.20 | 5.59 | 0.93 | 0.352 | 0.886 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -629,8 +669,8 @@ Effect sizes are reported as Cohen's *d* for pairwise comparisons and generalize
 
 ### Software
 
-- Python 3.12.4
-- MNE-Python 1.9.0
+- Python 3.12.11
+- MNE-Python 1.10.1
 - Statsmodels 0.14.5
 - Pingouin 0.5.5
 

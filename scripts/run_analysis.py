@@ -36,6 +36,7 @@ from eeg.io import (
     validate_baseline_window,
     extract_subject_id,
     filter_by_response,
+    select_conditions,
 )
 from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collapsed_localizer_roi
 from eeg.measures import mean_amplitude, fractional_area_latency, peak_latency, peak_amplitude
@@ -173,29 +174,24 @@ def main() -> int:
                 })
                 continue
 
-            # Select epochs by condition codes
-            if getattr(epochs_for_set, "metadata", None) is not None and "Condition" in epochs_for_set.metadata.columns:
-                mask = epochs_for_set.metadata["Condition"].astype(str).isin(codes)
-                sub = epochs_for_set[mask]
-            else:
-                # Fallback using event labels
-                sub = None
-                for code in codes:
-                    try:
-                        part = epochs_for_set[str(code)]
-                    except Exception:
-                        continue
-                    sub = part if sub is None else sub + part
+            metadata_filters = item.get("metadata_filters") or {}
 
-                if sub is None:
-                    qc_rows.append({
-                        "subject": subj_id,
-                        "set": name,
-                        "included": False,
-                        "epoch_count": 0,
-                        "exclusion_reason": "no_matching_conditions",
-                    })
-                    continue
+            try:
+                sub = select_conditions(
+                    epochs_for_set,
+                    condition_codes=codes,
+                    metadata_filters=metadata_filters,
+                    set_name=name,
+                )
+            except Exception as e:
+                qc_rows.append({
+                    "subject": subj_id,
+                    "set": name,
+                    "included": False,
+                    "epoch_count": 0,
+                    "exclusion_reason": f"condition_selection_error:{str(e)}",
+                })
+                continue
 
             # Check minimum epochs threshold
             epoch_count = int(len(sub))

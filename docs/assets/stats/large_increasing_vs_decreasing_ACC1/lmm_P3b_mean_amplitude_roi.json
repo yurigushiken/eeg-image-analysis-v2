@@ -37,8 +37,8 @@
       "0.975]": ""
     }
   ],
-  "aic": 140.81916532612564,
-  "bic": 148.30170313345803,
+  "aic": 140.81916532612559,
+  "bic": 148.30170313345798,
   "converged": true,
   "reference_condition": "Large_Decreasing"
 }

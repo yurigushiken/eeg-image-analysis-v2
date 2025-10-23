@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-20 22:39:44",
+  "timestamp": "2025-10-23 18:46:41",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_wct2om8k.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_ax87jkbv.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\13_31\\subject_measurements.csv",
   "components_tested": [
     "N1",
@@ -15,11 +15,11 @@
   "library_versions": {
     "pingouin": "0.5.5",
     "statsmodels": "0.14.5",
-    "mne": "1.9.0",
-    "scipy": "1.13.1",
+    "mne": "1.10.1",
+    "scipy": "1.16.2",
     "pandas": "2.3.1",
-    "numpy": "1.26.4",
-    "python": "3.12.4"
+    "numpy": "2.3.3",
+    "python": "3.12.11"
   },
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
@@ -52,7 +52,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 20.636954355473005,
-        "p_unc": 0.00025206736375146517,
+        "p_unc": 0.0002520673637514652,
         "output_file": "anova_N1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.20938674952724556
@@ -62,7 +62,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 5.856556304722996,
-        "p_unc": 0.02632061043439249,
+        "p_unc": 0.026320610434392495,
         "output_file": "anova_N1_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.07225204225145707
@@ -72,7 +72,7 @@
         "dv": "mean_amplitude_roi",
         "test": "ANOVA",
         "F": 3.052803086214579,
-        "p_unc": 0.11117839828453245,
+        "p_unc": 0.11117839828453248,
         "output_file": "anova_P1_mean_amplitude_roi.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.09849015499830616
@@ -82,7 +82,7 @@
         "dv": "latency_frac_area_ms",
         "test": "ANOVA",
         "F": 6.825422149174809,
-        "p_unc": 0.025927049240209707,
+        "p_unc": 0.02592704924020971,
         "output_file": "anova_P1_latency_frac_area_ms.csv",
         "epsilon": 1.0,
         "effect_size_ng2": 0.30222104723386933
