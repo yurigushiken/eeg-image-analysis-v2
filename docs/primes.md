@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Prime Analyses
+permalink: /primes/
 ---
 
 # Prime Analyses
