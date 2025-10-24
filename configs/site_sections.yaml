@@ -1,0 +1,30 @@
+sections:
+  - id: main
+    page: docs/index.md
+    include: all
+    include_stats: true
+    add_methodology_link: true
+    markers:
+      start: "<!-- AUTO-GENERATED START -->"
+      end: "<!-- AUTO-GENERATED END -->"
+
+  - id: primes
+    page: docs/primes.md
+    include:
+      - prime_11
+      - prime_22
+      - prime_33
+      - prime_44
+      - prime_55
+      - prime_66
+      - 53_ACC1_prime_5
+    include_stats: true
+    add_methodology_link: false
+    markers:
+      start: "<!-- AUTO-GENERATED START -->"
+      end: "<!-- AUTO-GENERATED END -->"
+
+assets:
+  - source: data_plots/prime/prime5_cardinality_counts.png
+    destination: docs/assets/plots/data_plots/prime/prime5_cardinality_counts.png
+

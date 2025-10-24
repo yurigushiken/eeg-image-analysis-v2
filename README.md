@@ -582,33 +582,32 @@ The `docs/` directory is ready for GitHub Pages deployment:
 2. **Set source to**: `main` branch, `/docs` folder
 3. **Access your site at**: `https://<username>.github.io/<repository>/`
 
-### Rebuilding the Website Index
+### Rebuilding the Website Pages
 
-**IMPORTANT**: Before creating a pull request or pushing changes to the repository, rebuild the website index to ensure all analyses are properly listed:
+**IMPORTANT**: Before creating a pull request or pushing changes to the repository, rebuild the published pages so the navigation, main gallery, and curated tabs stay in sync:
 
 ```bash
-python scripts/rebuild_website_index.py
+conda activate eeg-image
+python scripts/rebuild_site.py
 ```
 
-This script:
-- Scans `docs/assets/plots/` for all analyses
-- Updates `docs/index.md` with thumbnails and links
-- Verifies that each analysis has corresponding statistics
-- Reports the total number of analyses found
+What this script does:
+- Scans `docs/assets/plots/` for all analyses with ERP images
+- Rebuilds the main gallery in `docs/index.md`
+- Refreshes curated sections declared in `configs/site_sections.yaml` (currently the `Primes` page)
+- Copies any supporting assets listed in the same config (e.g., curated carousel images)
 
 **Example output:**
 ```
-Found 78 analyses with plots
-
-[OK] increasing_large_vs_small_vs_crossover_ACC1 (with statistics)
-[OK] decreasing_large_vs_small_vs_crossover_without_1_ACC1 (with statistics)
-...
-
-[OK] Index rebuilt with 78 analyses
-  Index file: D:\eeg-image-analysis-v2\docs\index.md
+[INFO] Loading configuration from configs/site_sections.yaml
+[INFO] Found 78 analyses with ERP plots
+[OK] Copied asset data_plots/prime/prime5_cardinality_counts.png -> docs/assets/plots/data_plots/prime/prime5_cardinality_counts.png
+[OK] Updated section 'main' -> docs/index.md
+[OK] Updated section 'primes' -> docs/primes.md
+[SUCCESS] Site rebuild complete
 ```
 
-The index page serves as the main navigation for your GitHub Pages site, providing clickable thumbnails for all ERP analyses
+To add another curated page later, edit `configs/site_sections.yaml` and rerun the same command—the script will update every section in one pass. The main index continues to list all analyses for comprehensive navigation.
 
 The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
 - Each row = one analysis (sorted alphabetically)
