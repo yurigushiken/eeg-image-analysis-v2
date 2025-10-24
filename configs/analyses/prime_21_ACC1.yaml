@@ -7,36 +7,36 @@ selection:
   response: "ACC1"
   min_epochs_per_set: 1
   condition_sets:
-    - name: "5a3"
-      conditions: ["53"]
-      color: "#02d502"  # Green
+    - name: "2a"
+      conditions: ["21"]
+      color: "#02d502"
       linestyle: "-"
       metadata_filters:
-        Prime5: ["5a.jpg"]
-    - name: "5b3"
-      conditions: ["53"]
-      color: "#9900ff"  # Purple
+        Prime5: ["2a.jpg"]
+    - name: "2b"
+      conditions: ["21"]
+      color: "#9900ff"
       linestyle: "-"
       metadata_filters:
-        Prime5: ["5b.jpg"]
-    - name: "5c3"
-      conditions: ["53"]
-      color: "#ff7f00"  # Orange
+        Prime5: ["2b.jpg"]
+    - name: "2c"
+      conditions: ["21"]
+      color: "#ff7f00"
       linestyle: "-"
       metadata_filters:
-        Prime5: ["5c.jpg"]
-    - name: "5d3"
-      conditions: ["53"]
-      color: "#40e0d0"  # Turquoise
+        Prime5: ["2c.jpg"]
+    - name: "2d"
+      conditions: ["21"]
+      color: "#40e0d0"
       linestyle: "-"
       metadata_filters:
-        Prime5: ["5d.jpg"]
-    - name: "5e3"
-      conditions: ["53"]
-      color: "#ef0000"  # Red
+        Prime5: ["2d.jpg"]
+    - name: "2e"
+      conditions: ["21"]
+      color: "#ef0000"
       linestyle: "-"
       metadata_filters:
-        Prime5: ["5e.jpg"]
+        Prime5: ["2e.jpg"]
 
 components: ["P1", "N1", "P3b"]
 
@@ -52,9 +52,9 @@ plots:
   colors: ["#02d502", "#9900ff", "#ff7f00", "#40e0d0", "#ef0000"]
 
 outputs:
-  page: "docs/analysis/53_ACC1_prime_5.md"
-  plots_dir: "docs/assets/plots/53_ACC1_prime_5"
-  tables_dir: "docs/assets/tables/53_ACC1_prime_5"
+  page: "docs/analysis/prime_21_ACC1.md"
+  plots_dir: "docs/assets/plots/prime_21_ACC1"
+  tables_dir: "docs/assets/tables/prime_21_ACC1"
 
 measurement:
   latency: fal

@@ -1,0 +1,15 @@
+{
+  "analysis_id": "prime_12_ACC1",
+  "duration_seconds": 23.234,
+  "num_figures": 4,
+  "largest_png_bytes": 853142,
+  "total_png_bytes": 2991979,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "prime_12_ACC1-collapsed_localizer.png": 465971,
+    "prime_12_ACC1-P1.png": 843559,
+    "prime_12_ACC1-N1.png": 829307,
+    "prime_12_ACC1-P3b.png": 853142
+  }
+}

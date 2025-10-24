@@ -1,0 +1,15 @@
+{
+  "analysis_id": "prime_abcde_ALL",
+  "duration_seconds": 29.235,
+  "num_figures": 4,
+  "largest_png_bytes": 756548,
+  "total_png_bytes": 2611350,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "prime_abcde_ALL-collapsed_localizer.png": 441620,
+    "prime_abcde_ALL-P1.png": 699921,
+    "prime_abcde_ALL-N1.png": 713261,
+    "prime_abcde_ALL-P3b.png": 756548
+  }
+}

@@ -1,0 +1,62 @@
+dataset:
+  root: "data/lab_data_original_with_primes"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "3a"
+      conditions: ["35"]
+      color: "#02d502"
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["3a.jpg"]
+    - name: "3b"
+      conditions: ["35"]
+      color: "#9900ff"
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["3b.jpg"]
+    - name: "3c"
+      conditions: ["35"]
+      color: "#ff7f00"
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["3c.jpg"]
+    - name: "3d"
+      conditions: ["35"]
+      color: "#40e0d0"
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["3d.jpg"]
+    - name: "3e"
+      conditions: ["35"]
+      color: "#ef0000"
+      linestyle: "-"
+      metadata_filters:
+        Prime5: ["3e.jpg"]
+
+components: ["P1", "N1", "P3b"]
+
+preprocessing:
+  baseline_ms: [-100, 0]
+
+roi:
+  min_channels: 4
+
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#02d502", "#9900ff", "#ff7f00", "#40e0d0", "#ef0000"]
+
+outputs:
+  page: "docs/analysis/prime_35_ACC1.md"
+  plots_dir: "docs/assets/plots/prime_35_ACC1"
+  tables_dir: "docs/assets/tables/prime_35_ACC1"
+
+measurement:
+  latency: fal
+  amplitude: mean
+
