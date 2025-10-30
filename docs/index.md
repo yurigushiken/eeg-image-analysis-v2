@@ -5,7 +5,7 @@ title: EEG ERP Analyses
 
 # EEG ERP Analyses
 
-<p class='nav-links'><a href='./index.html'>All Analyses</a> | <a href='./ratio.html'>Ratio</a> | <a href='./distance.html'>Distance</a></p>
+<p class='nav-links'><a href='./index.html'>All Analyses</a> || <a href='./distance.html'>Distance</a></p>
 
 ## Analysis Gallery
 
