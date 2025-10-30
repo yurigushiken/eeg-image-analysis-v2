@@ -5,10 +5,6 @@ title: EEG ERP Analyses
 
 # EEG ERP Analyses
 
-<p class='nav-links'><a href='./index.html'>All Analyses</a> | <a href='./ratio.html'>Ratio</a> | <a href='./distance.html'>Distance</a></p>
-
-<p class='nav-note'>Use the links above to explore curated collections.</p>
-
 ## Analysis Gallery
 
 Click any thumbnail to view the full-size ERP plot with topographic maps.
