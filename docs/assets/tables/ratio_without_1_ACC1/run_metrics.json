@@ -1,0 +1,15 @@
+{
+  "analysis_id": "ratio_without_1_ACC1",
+  "duration_seconds": 9.959,
+  "num_figures": 4,
+  "largest_png_bytes": 817159,
+  "total_png_bytes": 2803644,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "ratio_without_1_ACC1-collapsed_localizer.png": 437414,
+    "ratio_without_1_ACC1-P1.png": 771417,
+    "ratio_without_1_ACC1-N1.png": 777654,
+    "ratio_without_1_ACC1-P3b.png": 817159
+  }
+}

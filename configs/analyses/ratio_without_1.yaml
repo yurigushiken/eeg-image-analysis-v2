@@ -1,0 +1,50 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "Ratio 0.5 (1:2, no 1)"
+      conditions: ["24", "36", "42", "63"]  # Excludes "12", "21"
+      color: "#9900ff"     # Purple
+      linestyle: "-"       # Solid
+
+    - name: "Ratio 0.67 (2:3, no 1)"
+      conditions: ["23", "46", "32", "64"]  # No change (no "1" in these)
+      color: "#ff7f00"     # Orange
+      linestyle: "-"       # Solid
+
+    - name: "Ratio 0.75 (3:4, no 1)"
+      conditions: ["34", "43"]  # No change
+      color: "#ffff33"     # Yellow
+      linestyle: "-"       # Solid
+
+    - name: "Ratio 0.8 (4:5, no 1)"
+      conditions: ["45", "54"]  # No change
+      color: "#00d5ff"     # Cyan/Turquoise
+      linestyle: "-"       # Solid
+
+    - name: "Ratio 0.83 (5:6, no 1)"
+      conditions: ["56", "65"]  # No change
+      color: "#ff1493"     # Hot pink/Magenta
+      linestyle: "-"       # Solid
+
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#9900ff", "#ff7f00", "#ffff33", "#00d5ff", "#ff1493"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/ratio_without_1"
+  tables_dir: "docs/assets/tables/ratio_without_1"
+  page: "docs/analysis/ratio_without_1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
