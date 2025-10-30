@@ -1,0 +1,37 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "Decrease by 1 (no 1)"
+      conditions: ["32", "43", "54", "65"]  # Excludes "21"
+      color: "#ef0000"  # Red (decreasing)
+      linestyle: ":"    # Dotted (by 1)
+    - name: "Decrease by 2 (no 1)"
+      conditions: ["42", "53", "64"]  # Excludes "31"
+      color: "#ef0000"  # Red (decreasing)
+      linestyle: "--"   # Dashed (by 2)
+    - name: "Decrease by 3 (no 1)"
+      conditions: ["52", "63"]  # Excludes "41"
+      color: "#ef0000"  # Red (decreasing)
+      linestyle: "-"    # Solid (by 3)
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#ef0000", "#ef0000", "#ef0000"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/decrease_by_123_without_1_ACC1"
+  tables_dir: "docs/assets/tables/decrease_by_123_without_1_ACC1"
+  page: "docs/analysis/decrease_by_123_without_1_ACC1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

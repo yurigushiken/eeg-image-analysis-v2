@@ -1,0 +1,15 @@
+{
+  "analysis_id": "increase_by_123_without_1_ACC1",
+  "duration_seconds": 6.831,
+  "num_figures": 4,
+  "largest_png_bytes": 767857,
+  "total_png_bytes": 2631391,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "increase_by_123_without_1_ACC1-collapsed_localizer.png": 451185,
+    "increase_by_123_without_1_ACC1-P1.png": 705701,
+    "increase_by_123_without_1_ACC1-N1.png": 706648,
+    "increase_by_123_without_1_ACC1-P3b.png": 767857
+  }
+}
