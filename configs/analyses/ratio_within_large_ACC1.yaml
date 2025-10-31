@@ -1,0 +1,40 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ACC1"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "Large Ratio 0.67 (4:6)"
+      conditions: ["46", "64"]
+      color: "#9900ff"     # Purple
+      linestyle: "-"       # Solid
+
+    - name: "Large Ratio 0.8 (4:5)"
+      conditions: ["45", "54"]
+      color: "#ff7f00"     # Orange
+      linestyle: "-"       # Solid
+
+    - name: "Large Ratio 0.83 (5:6)"
+      conditions: ["56", "65"]
+      color: "#00d5ff"     # Cyan
+      linestyle: "-"       # Solid
+
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#9900ff", "#ff7f00", "#00d5ff"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/ratio_within_large_ACC1"
+  tables_dir: "docs/assets/tables/ratio_within_large_ACC1"
+  page: "docs/analysis/ratio_within_large_ACC1.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

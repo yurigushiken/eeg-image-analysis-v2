@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-10-30 18:15:00",
+  "timestamp": "2025-10-30 19:17:51",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_all_d2axm790.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_all_zabnp1c2.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\cardinality_all\\subject_measurements.csv",
   "components_tested": [
     "N1",

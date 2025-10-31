@@ -1,0 +1,35 @@
+dataset:
+  root: "data/lab_data_original"
+  pattern: "sub-*_preprocessed-epo.fif"
+  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+selection:
+  response: "ALL"
+  min_epochs_per_set: 1
+  condition_sets:
+    - name: "Small Ratio 0.67 (2:3)"
+      conditions: ["23", "32"]
+      color: "#ff7f00"     # Orange (small)
+      linestyle: "-"       # Solid
+
+    - name: "Large Ratio 0.67 (4:6)"
+      conditions: ["46", "64"]
+      color: "#9900ff"     # Purple (large)
+      linestyle: "-"       # Solid
+
+components: ["P1", "N1", "P3b"]
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: ["png"]
+  dpi: 300
+  colors: ["#ff7f00", "#9900ff"]
+outputs:
+  page: "single"
+  plots_dir: "docs/assets/plots/ratio_small_vs_large_matched"
+  tables_dir: "docs/assets/tables/ratio_small_vs_large_matched"
+  page: "docs/analysis/ratio_small_vs_large_matched.md"
+measurement:
+  latency: fal     # options: peak | fal
+  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)

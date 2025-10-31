@@ -1,0 +1,15 @@
+{
+  "analysis_id": "ratio_within_small",
+  "duration_seconds": 6.281,
+  "num_figures": 4,
+  "largest_png_bytes": 781312,
+  "total_png_bytes": 2653469,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "ratio_within_small-collapsed_localizer.png": 440168,
+    "ratio_within_small-P1.png": 715753,
+    "ratio_within_small-N1.png": 716236,
+    "ratio_within_small-P3b.png": 781312
+  }
+}

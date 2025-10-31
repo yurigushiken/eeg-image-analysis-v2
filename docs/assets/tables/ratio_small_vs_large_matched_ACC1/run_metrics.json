@@ -1,0 +1,15 @@
+{
+  "analysis_id": "ratio_small_vs_large_matched_ACC1",
+  "duration_seconds": 6.085,
+  "num_figures": 4,
+  "largest_png_bytes": 620362,
+  "total_png_bytes": 2214806,
+  "largest_png_ok": true,
+  "cumulative_png_ok": true,
+  "figures": {
+    "ratio_small_vs_large_matched_ACC1-collapsed_localizer.png": 457063,
+    "ratio_small_vs_large_matched_ACC1-P1.png": 568880,
+    "ratio_small_vs_large_matched_ACC1-N1.png": 568501,
+    "ratio_small_vs_large_matched_ACC1-P3b.png": 620362
+  }
+}
