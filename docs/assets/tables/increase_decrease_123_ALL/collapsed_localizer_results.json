@@ -1,0 +1,79 @@
+{
+  "analysis_id": "increase_decrease_123_ALL",
+  "date_analyzed": "2025-11-03T15:17:27.110198",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "ALL",
+  "fal_fraction": 0.5,
+  "n_subjects_total": 24,
+  "n_evokeds_included": 168,
+  "conditions": [
+    "Increase by 1",
+    "Increase by 2",
+    "Increase by 3",
+    "Decrease by 1",
+    "Decrease by 2",
+    "Decrease by 3",
+    "Cardinality (no change)"
+  ],
+  "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 108.0,
+      "peak_gfp_amplitude": 0.5590852432288974,
+      "fwhm_ms": 28.70681325310659,
+      "window_start_ms": 90.50251531743697,
+      "window_end_ms": 119.20932857054356,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "N1": {
+      "collapsed_peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -4.067298989581408,
+      "fwhm_ms": 67.5971807189409,
+      "window_start_ms": 141.09201525900951,
+      "window_end_ms": 208.68919597795042,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "P3b": {
+      "collapsed_peak_latency_ms": 468.0,
+      "peak_gfp_amplitude": 2.312419674586293,
+      "fwhm_ms": 121.25926883349223,
+      "window_start_ms": 412.84883751712175,
+      "window_end_ms": 534.108106350614,
+      "search_range_ms": [
+        320.0,
+        590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -0.7186808241759491,
+      "fwhm_ms": 27.217128136462065,
+      "window_start_ms": 89.23617816855614,
+      "window_end_ms": 116.4533063050182,
+      "search_range_ms": [
+        80.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    }
+  }
+}

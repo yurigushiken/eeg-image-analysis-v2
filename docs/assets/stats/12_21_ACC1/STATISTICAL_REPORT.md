@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:27:53
+**Generated:** 2025-11-03 15:30:33
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 7 | 99.43 ms | 17.19 | 6.50 | [84.00, 124.00] |
-| Increasing 1 to 2 | 14 | 111.14 ms | 14.98 | 4.00 | [84.00, 124.00] |
+| Decreasing 2 to 1 | 17 | 107.29 ms | 16.32 | 3.96 | [84.00, 124.00] |
+| Increasing 1 to 2 | 10 | 104.00 ms | 15.08 | 4.77 | [84.00, 124.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 7 | 4.50 µV | 1.88 | 0.71 | [1.15, 7.15] |
-| Increasing 1 to 2 | 14 | 3.22 µV | 1.83 | 0.49 | [0.68, 6.15] |
+| Decreasing 2 to 1 | 17 | -3.00 µV | 1.52 | 0.37 | [-6.40, -0.43] |
+| Increasing 1 to 2 | 10 | -2.12 µV | 0.81 | 0.26 | [-3.35, -0.73] |
 
 
 ### 2.2 N1 Component
@@ -116,9 +116,9 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 182.58, BIC = 187.80
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = 12.59, *SE* = 6.840, *z* = 1.841, *p* = 0.066
-- **SNR**: *β* = 1.91, *SE* = 2.368, *z* = 0.805, *p* = 0.421
+- AIC = 233.13, BIC = 239.61
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -5.50, *SE* = 6.262, *z* = -0.878, *p* = 0.380
+- **SNR**: *β* = -1.17, *SE* = 1.896, *z* = -0.619, *p* = 0.536
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 
@@ -130,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | -12.59 | 6.84 | -1.84 | 0.066 | 0.066 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 5.50 | 6.26 | 0.88 | 0.380 | 0.380 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -138,7 +138,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 4.45, *p* = 0.126, η²_G = 0.458
+- *F* = 3.05, *p* = 0.131, η²_G = 0.147
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -147,7 +147,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | -2.11 | 3 | = 0.126 | -1.59 [-3.04, 0.93] | large | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.75 | 6 | = 0.131 | 0.77 [-0.36, 1.68] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -157,9 +157,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 71.72, BIC = 76.94
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.58, *SE* = 0.295, *z* = -1.973, *p* = 0.048
-- **SNR**: *β* = 0.90, *SE* = 0.209, *z* = 4.292, *p* < .001
+- AIC = 70.12, BIC = 76.60
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = 0.59, *SE* = 0.289, *z* = 2.059, *p* = 0.039
+- **SNR**: *β* = -0.64, *SE* = 0.091, *z* = -6.999, *p* < .001
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 
@@ -171,7 +171,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 0.58 | 0.29 | 1.97 | 0.048 | 0.048 | * |
+| Decreasing 2 to 1 - Increasing 1 to 2 | -0.59 | 0.29 | -2.06 | 0.039 | 0.039 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -179,8 +179,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 13.61, *p* = 0.035, η²_G = 0.168
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 3.75, *p* = 0.101, η²_G = 0.161
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -188,7 +188,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.69 | 3 | = 0.035 | 0.78 [-0.77, 4.46] | medium | * |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | -1.94 | 6 | = 0.101 | -0.81 [-1.77, 0.31] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -455,8 +455,6 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**Fz amplitude:** Significant main effect of condition (*p* = 0.035). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 0.78)
 **N1 latency:** Significant main effect of condition (*p* = 0.039). Post-hoc tests revealed:
   - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 0.58)
 **N1 amplitude:** Marginal trend toward condition differences (*p* = 0.080)

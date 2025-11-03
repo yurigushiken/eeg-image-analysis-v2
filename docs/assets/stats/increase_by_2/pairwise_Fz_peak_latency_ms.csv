@@ -1,7 +1,7 @@
-Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
-condition,1 to 3,2 to 4,True,True,0.0,two-sided,fdr_bh,nan,-0.8408147970787255,1.283622239848773
-condition,1 to 3,3 to 5,True,True,0.0,two-sided,fdr_bh,nan,-0.9072798691443921,1.6632088151628466
-condition,1 to 3,4 to 6,True,True,0.0,two-sided,fdr_bh,nan,-0.7536692095684479,1.3991664339363505
-condition,2 to 4,3 to 5,True,True,0.0,two-sided,fdr_bh,nan,,
-condition,2 to 4,4 to 6,True,True,0.0,two-sided,fdr_bh,nan,-1.1877470224214317,2.1877470224214317
-condition,3 to 5,4 to 6,True,True,0.0,two-sided,fdr_bh,nan,-2.0784953894849663,0.6885042126431447
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
+condition,1 to 3,2 to 4,True,True,-1.0,1.0,two-sided,0.49999999999999956,0.9999999999999991,fdr_bh,0.73,-1.0,-1.6395216129999566,0.9223844473993206
+condition,1 to 3,3 to 5,True,True,-0.2,1.0,two-sided,0.8743340836219977,1.0,fdr_bh,0.534,-0.2,-0.8151288004330007,1.8203781803330696
+condition,1 to 3,4 to 6,True,True,-inf,1.0,two-sided,0.0,0.0,fdr_bh,nan,-inf,-4.3617085341044515,2.0523074573459485
+condition,2 to 4,3 to 5,True,True,0.0,1.0,two-sided,1.0,1.0,fdr_bh,0.523,0.0,-0.6906690200831451,0.5810247866575005
+condition,2 to 4,4 to 6,True,True,-1.0,1.0,two-sided,0.49999999999999956,0.9999999999999991,fdr_bh,0.73,-1.0,-0.7512124364460577,0.6799553382174961
+condition,3 to 5,4 to 6,True,True,-0.2,1.0,two-sided,0.8743340836219977,1.0,fdr_bh,0.534,-0.2,-0.5267539780169443,0.747862297373971

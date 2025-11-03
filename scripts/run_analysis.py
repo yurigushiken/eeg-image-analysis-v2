@@ -426,7 +426,12 @@ def main() -> int:
                 subj_mean_amp = float(np.mean(roi_curve[window_mask]))
 
                 # Peak amplitude within window (signed by polarity)
-                comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+                # Determine polarity from components.yaml localizer (fallback to N*=negative, else positive)
+                try:
+                    _loc_cfg = (comp_cfg.get('localizer') or {}) if isinstance(comp_cfg, dict) else {}
+                    comp_polarity = str(_loc_cfg.get('polarity')) if _loc_cfg.get('polarity') else ("negative" if comp.upper().startswith("N") else "positive")
+                except Exception:
+                    comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
                 try:
                     subj_peak_amp = peak_amplitude(
                         signal=roi_curve,
@@ -602,8 +607,9 @@ def main() -> int:
                 # This provides a robust measure of component timing, less sensitive to noise
                 # than peak latency. The 50% fractional area represents the temporal midpoint.
                 try:
-                    # Determine polarity from component name (N* = negative, P* = positive)
-                    comp_polarity = "negative" if comp.upper().startswith("N") else "positive"
+                    # Determine polarity from components.yaml if available
+                    _loc_cfg = (comp_cfg.get('localizer') or {}) if isinstance(comp_cfg, dict) else {}
+                    comp_polarity = str(_loc_cfg.get('polarity')) if _loc_cfg.get('polarity') else ("negative" if comp.upper().startswith("N") else "positive")
 
                     roi_latency_frac_area = fractional_area_latency(
                         signal=roi_curve,
@@ -973,9 +979,8 @@ def main() -> int:
                         if "decreasing" in lower:
                             return "#d62728"
                         return default_color
-                    colors_map = None
-                    if base_colors:
-                        colors_map = {label: _color_for(label, base_colors[label]) for label in base_colors}
+                    # Always build a colors map: prefer per-condition YAML color; fallback to cfg.plots.colors; else black
+                    colors_map = {label: _color_for(label, (base_colors[label] if base_colors and label in base_colors else "#000000")) for label in p2p_curves.keys()}
 
                     styles_cfg = cfg.plots.get("linestyles") or {}
                     base_linestyles = {k: v for k, v in styles_cfg.items()}

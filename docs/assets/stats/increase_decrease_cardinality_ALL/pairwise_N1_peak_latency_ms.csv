@@ -1,0 +1,4 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
+condition,Cardinality (no change),Decreasing (any step),True,True,-0.627617613438876,21.0,two-sided,0.5370199923777461,0.5370199923777461,fdr_bh,0.266,-0.0962310117545275,-0.5652316156543402,0.303332943212649
+condition,Cardinality (no change),Increasing (any step),True,True,1.4172846052130506,21.0,two-sided,0.17106631065032082,0.2565994659754813,fdr_bh,0.535,0.23241371450407702,-0.15121664602793866,0.7555488322503405
+condition,Decreasing (any step),Increasing (any step),True,True,1.4671808307012537,21.0,two-sided,0.15714434473237032,0.2565994659754813,fdr_bh,0.568,0.33996757331676497,-0.12672015722360896,0.7595259814680702

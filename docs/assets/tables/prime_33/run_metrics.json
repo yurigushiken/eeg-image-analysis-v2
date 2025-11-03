@@ -1,9 +1,9 @@
 {
   "analysis_id": "prime_33",
-  "duration_seconds": 8.901,
+  "duration_seconds": 8.836,
   "num_figures": 6,
   "largest_png_bytes": 870399,
-  "total_png_bytes": 4328483,
+  "total_png_bytes": 4338285,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -11,7 +11,7 @@
     "prime_33-P1.png": 870399,
     "prime_33-N1.png": 835902,
     "prime_33-P3b.png": 845255,
-    "prime_33-Fz.png": 827288,
+    "prime_33-Fz.png": 837090,
     "prime_33-P1_N1_peak_to_peak.png": 350308
   }
 }

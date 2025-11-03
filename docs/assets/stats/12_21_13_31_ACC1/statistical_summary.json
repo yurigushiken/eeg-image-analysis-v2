@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:27:43",
+  "timestamp": "2025-11-03 15:30:15",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_21_13_31_ACC1_w16t0agm.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_21_13_31_ACC1_uhaxa_r5.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_21_13_31_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -50,10 +50,10 @@
   "results": {
     "anova": {
       "Fz_peak_latency_ms": {
-        "error": "Eigenvalues did not converge"
+        "error": "cannot convert float NaN to integer"
       },
       "Fz_peak_amplitude_roi": {
-        "error": "Eigenvalues did not converge"
+        "error": "cannot convert float NaN to integer"
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -118,10 +118,10 @@
     },
     "pairwise": {
       "Fz_peak_latency_ms": {
-        "error": "'p-unc'"
+        "error": "Columns must have at least two unique values."
       },
       "Fz_peak_amplitude_roi": {
-        "error": "'p-unc'"
+        "error": "Columns must have at least two unique values."
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -183,8 +183,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 398.89688610187636,
-        "bic": 412.13962818865076,
+        "aic": 375.0184841597401,
+        "bic": 387.96951737171054,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 4,
@@ -195,8 +195,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 173.67708877080636,
-        "bic": 186.91983085758073,
+        "aic": 143.2728616156316,
+        "bic": 156.223894827602,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 4,

@@ -1,0 +1,4 @@
+analysis_id,condition,p1_amp,n1_amp,p2p_amp,p1_lat_ms,n1_lat_ms,roi_channels
+increase_decrease_cardinality_ALL,Cardinality (no change),1.1789103772542417,-3.669064300394209,4.847974677648451,104.0,172.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83
+increase_decrease_cardinality_ALL,Decreasing (any step),1.2831239485427592,-4.027259656710038,5.310383605252797,108.0,176.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83
+increase_decrease_cardinality_ALL,Increasing (any step),1.2675650080569385,-4.216636260773646,5.484201268830584,100.0,168.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83

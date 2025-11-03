@@ -1,4 +1,4 @@
 Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
-condition,Increasing Crossover (no 1),Increasing Large (no 1),True,True,1.0,1.0,two-sided,0.49999999999999956,0.49999999999999956,fdr_bh,0.73,0.10846522890932808,-1.9127104641264847,1.335360194936859
-condition,Increasing Crossover (no 1),Increasing Small (no 1),True,True,1.0,1.0,two-sided,0.49999999999999956,0.49999999999999956,fdr_bh,0.73,0.10846522890932808,-1.198817482503905,2.1637187638579203
-condition,Increasing Large (no 1),Increasing Small (no 1),True,True,,1.0,two-sided,,,fdr_bh,nan,0.0,-2.1058251256088125,3.260525663988064
+condition,Increasing Crossover (no 1),Increasing Large (no 1),True,True,-2.1213203435596424,6.0,two-sided,0.07814074941121574,0.2344222482336472,fdr_bh,1.432,-0.21365079225520345,-0.22525370488194368,1.031473647702056
+condition,Increasing Crossover (no 1),Increasing Small (no 1),True,True,0.7006490497453706,6.0,two-sided,0.5097660085502793,0.5097660085502793,fdr_bh,0.431,0.3115044789906992,-0.4750552334418406,1.099274685154537
+condition,Increasing Large (no 1),Increasing Small (no 1),True,True,1.099524999206747,6.0,two-sided,0.3136873486244212,0.47053102293663185,fdr_bh,0.562,0.48187402921164635,-0.3326055884711979,1.2905005326139976

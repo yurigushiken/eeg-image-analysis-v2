@@ -1,2 +1,2 @@
 Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,BF10,cohen,ci_lower,ci_upper
-condition,Decreasing 4 to 1,Increasing 1 to 4,True,True,-0.25,4.0,two-sided,0.8149020114591812,0.408,-0.05335705285122158,-1.357341553133254,1.1337347553832748
+condition,Decreasing 4 to 1,Increasing 1 to 4,True,True,1.332601110726389,7.0,two-sided,0.22440355090890532,0.658,0.8364283610093426,-0.41004940394525263,1.3523406859566076

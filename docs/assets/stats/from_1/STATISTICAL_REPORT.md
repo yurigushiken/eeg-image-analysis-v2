@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:36:22
+**Generated:** 2025-11-03 15:40:50
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 2 | 12 | 101.33 ms | 9.85 | 2.84 | [88.00, 112.00] |
-| 1 to 3 | 16 | 102.75 ms | 9.77 | 2.44 | [88.00, 112.00] |
-| 1 to 4 | 12 | 99.33 ms | 11.67 | 3.37 | [88.00, 112.00] |
-| Cardinality1 | 10 | 101.20 ms | 10.67 | 3.38 | [88.00, 112.00] |
+| 1 to 2 | 12 | 98.00 ms | 10.02 | 2.89 | [88.00, 112.00] |
+| 1 to 3 | 8 | 102.00 ms | 8.82 | 3.12 | [88.00, 112.00] |
+| 1 to 4 | 12 | 99.67 ms | 8.77 | 2.53 | [88.00, 112.00] |
+| Cardinality1 | 14 | 105.14 ms | 7.75 | 2.07 | [88.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 2 | 12 | 2.60 µV | 1.94 | 0.56 | [0.68, 5.82] |
-| 1 to 3 | 16 | 3.03 µV | 2.24 | 0.56 | [0.49, 8.95] |
-| 1 to 4 | 12 | 2.41 µV | 1.39 | 0.40 | [0.70, 5.41] |
-| Cardinality1 | 10 | 2.87 µV | 2.31 | 0.73 | [0.62, 8.77] |
+| 1 to 2 | 12 | -2.07 µV | 1.54 | 0.44 | [-6.14, -0.66] |
+| 1 to 3 | 8 | -2.71 µV | 1.94 | 0.69 | [-5.86, -0.51] |
+| 1 to 4 | 12 | -2.88 µV | 1.30 | 0.37 | [-4.46, -0.45] |
+| Cardinality1 | 14 | -2.83 µV | 1.41 | 0.38 | [-5.36, -1.08] |
 
 
 ### 2.2 N1 Component
@@ -132,11 +132,11 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 381.66, BIC = 395.05
-- **1 to 3 vs 1 to 2**: *β* = 1.11, *SE* = 3.244, *z* = 0.342, *p* = 0.732
-- **1 to 4 vs 1 to 2**: *β* = -1.36, *SE* = 3.564, *z* = -0.382, *p* = 0.703
-- **Cardinality1 vs 1 to 2**: *β* = 1.26, *SE* = 3.783, *z* = 0.333, *p* = 0.739
-- **SNR**: *β* = 1.41, *SE* = 0.801, *z* = 1.761, *p* = 0.078
+- AIC = 331.63, BIC = 344.43
+- **1 to 3 vs 1 to 2**: *β* = 2.02, *SE* = 3.658, *z* = 0.551, *p* = 0.581
+- **1 to 4 vs 1 to 2**: *β* = -0.03, *SE* = 3.195, *z* = -0.009, *p* = 0.993
+- **Cardinality1 vs 1 to 2**: *β* = 6.18, *SE* = 3.084, *z* = 2.003, *p* = 0.045
+- **SNR**: *β* = 2.65, *SE* = 0.904, *z* = 2.931, *p* = 0.003
 
 _Reference condition: **1 to 2** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -149,12 +149,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 1 to 2 - 1 to 3 | -1.11 | 3.24 | -0.34 | 0.732 | 0.992 | n.s. |
-| 1 to 2 - 1 to 4 | 1.36 | 3.56 | 0.38 | 0.703 | 0.992 | n.s. |
-| 1 to 2 - Cardinality1 | -1.26 | 3.78 | -0.33 | 0.739 | 0.992 | n.s. |
-| 1 to 3 - 1 to 4 | 2.47 | 3.38 | 0.73 | 0.465 | 0.976 | n.s. |
-| 1 to 3 - Cardinality1 | -0.15 | 3.58 | -0.04 | 0.966 | 0.992 | n.s. |
-| 1 to 4 - Cardinality1 | -2.62 | 3.65 | -0.72 | 0.473 | 0.976 | n.s. |
+| 1 to 2 - 1 to 3 | -2.02 | 3.66 | -0.55 | 0.581 | 0.927 | n.s. |
+| 1 to 2 - 1 to 4 | 0.03 | 3.19 | 0.01 | 0.993 | 0.993 | n.s. |
+| 1 to 2 - Cardinality1 | -6.18 | 3.08 | -2.00 | 0.045 | 0.242 | n.s. |
+| 1 to 3 - 1 to 4 | 2.05 | 3.74 | 0.55 | 0.584 | 0.927 | n.s. |
+| 1 to 3 - Cardinality1 | -4.16 | 3.41 | -1.22 | 0.223 | 0.636 | n.s. |
+| 1 to 4 - Cardinality1 | -6.21 | 3.19 | -1.94 | 0.052 | 0.242 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -162,7 +162,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.15, *p* = 0.927, η²_G = 0.046
+- *F* = 0.04, *p* = 0.990, η²_G = 0.014
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -171,12 +171,12 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 2 vs 1 to 3 | -0.61 | 2 | = 0.926 | -0.70 [-0.77, 0.66] | medium | n.s. |
-| 1 to 2 vs 1 to 4 | -0.10 | 2 | = 0.926 | -0.12 [-0.96, 1.14] | negligible | n.s. |
-| 1 to 2 vs Cardinality1 | -0.10 | 2 | = 0.926 | -0.12 [-1.36, 1.13] | negligible | n.s. |
-| 1 to 3 vs 1 to 4 | 1.00 | 2 | = 0.926 | 0.37 [-0.52, 1.20] | small | n.s. |
-| 1 to 3 vs Cardinality1 | 1.00 | 2 | = 0.926 | 0.37 [-0.66, 1.23] | small | n.s. |
-| 1 to 4 vs Cardinality1 | nan | 2 | n/a | 0.00 [-1.43, 0.51] | negligible | n.s. |
+| 1 to 2 vs 1 to 3 | 0.11 | 2 | = 1.000 | 0.13 [-1.14, 0.96] | negligible | n.s. |
+| 1 to 2 vs 1 to 4 | 2.00 | 2 | = 1.000 | 0.24 [-1.26, 0.86] | small | n.s. |
+| 1 to 2 vs Cardinality1 | 0.38 | 2 | = 1.000 | 0.17 [-1.86, 0.27] | negligible | n.s. |
+| 1 to 3 vs 1 to 4 | 0.10 | 2 | = 1.000 | 0.12 [-1.44, 1.77] | negligible | n.s. |
+| 1 to 3 vs Cardinality1 | 0.00 | 2 | = 1.000 | 0.00 [-1.17, 1.32] | negligible | n.s. |
+| 1 to 4 vs Cardinality1 | -0.28 | 2 | = 1.000 | -0.15 [-1.66, 0.10] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -186,11 +186,11 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 174.64, BIC = 188.02
-- **1 to 3 vs 1 to 2**: *β* = -0.19, *SE* = 0.399, *z* = -0.471, *p* = 0.638
-- **1 to 4 vs 1 to 2**: *β* = -0.09, *SE* = 0.450, *z* = -0.209, *p* = 0.834
-- **Cardinality1 vs 1 to 2**: *β* = 0.43, *SE* = 0.462, *z* = 0.937, *p* = 0.349
-- **SNR**: *β* = 0.93, *SE* = 0.096, *z* = 9.686, *p* < .001
+- AIC = 131.56, BIC = 144.36
+- **1 to 3 vs 1 to 2**: *β* = -0.08, *SE* = 0.357, *z* = -0.235, *p* = 0.814
+- **1 to 4 vs 1 to 2**: *β* = -0.31, *SE* = 0.328, *z* = -0.942, *p* = 0.346
+- **Cardinality1 vs 1 to 2**: *β* = -0.47, *SE* = 0.314, *z* = -1.503, *p* = 0.133
+- **SNR**: *β* = -0.84, *SE* = 0.095, *z* = -8.865, *p* < .001
 
 _Reference condition: **1 to 2** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -203,12 +203,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 1 to 2 - 1 to 3 | 0.19 | 0.40 | 0.47 | 0.638 | 0.953 | n.s. |
-| 1 to 2 - 1 to 4 | 0.09 | 0.45 | 0.21 | 0.834 | 0.969 | n.s. |
-| 1 to 2 - Cardinality1 | -0.43 | 0.46 | -0.94 | 0.349 | 0.820 | n.s. |
-| 1 to 3 - 1 to 4 | -0.09 | 0.42 | -0.22 | 0.824 | 0.969 | n.s. |
-| 1 to 3 - Cardinality1 | -0.62 | 0.44 | -1.42 | 0.155 | 0.635 | n.s. |
-| 1 to 4 - Cardinality1 | -0.53 | 0.45 | -1.18 | 0.239 | 0.745 | n.s. |
+| 1 to 2 - 1 to 3 | 0.08 | 0.36 | 0.23 | 0.814 | 0.899 | n.s. |
+| 1 to 2 - 1 to 4 | 0.31 | 0.33 | 0.94 | 0.346 | 0.818 | n.s. |
+| 1 to 2 - Cardinality1 | 0.47 | 0.31 | 1.50 | 0.133 | 0.575 | n.s. |
+| 1 to 3 - 1 to 4 | 0.22 | 0.36 | 0.62 | 0.534 | 0.899 | n.s. |
+| 1 to 3 - Cardinality1 | 0.39 | 0.35 | 1.11 | 0.266 | 0.786 | n.s. |
+| 1 to 4 - Cardinality1 | 0.16 | 0.30 | 0.54 | 0.588 | 0.899 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -216,7 +216,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.39, *p* = 0.764, η²_G = 0.074
+- *F* = 0.34, *p* = 0.801, η²_G = 0.080
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -225,12 +225,12 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 2 vs 1 to 3 | 1.15 | 2 | = 0.810 | 0.14 [-0.60, 0.84] | negligible | n.s. |
-| 1 to 2 vs 1 to 4 | 0.49 | 2 | = 0.810 | 0.37 [-0.79, 1.34] | small | n.s. |
-| 1 to 2 vs Cardinality1 | -0.27 | 2 | = 0.810 | -0.19 [-1.38, 1.11] | negligible | n.s. |
-| 1 to 3 vs 1 to 4 | 0.32 | 2 | = 0.810 | 0.24 [-0.60, 1.09] | small | n.s. |
-| 1 to 3 vs Cardinality1 | -0.71 | 2 | = 0.810 | -0.46 [-0.47, 1.49] | small | n.s. |
-| 1 to 4 vs Cardinality1 | -2.34 | 2 | = 0.810 | -1.62 [-1.42, 0.52] | large | n.s. |
+| 1 to 2 vs 1 to 3 | -0.40 | 2 | = 0.772 | -0.39 [-0.80, 1.33] | small | n.s. |
+| 1 to 2 vs 1 to 4 | -0.33 | 2 | = 0.772 | -0.11 [-0.54, 1.73] | negligible | n.s. |
+| 1 to 2 vs Cardinality1 | 0.51 | 2 | = 0.772 | 0.20 [-0.53, 1.40] | negligible | n.s. |
+| 1 to 3 vs 1 to 4 | 0.34 | 2 | = 0.772 | 0.36 [-1.32, 1.93] | small | n.s. |
+| 1 to 3 vs Cardinality1 | 1.08 | 2 | = 0.772 | 1.10 [-0.67, 2.13] | large | n.s. |
+| 1 to 4 vs Cardinality1 | 1.16 | 2 | = 0.772 | 0.43 [-0.35, 1.27] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_

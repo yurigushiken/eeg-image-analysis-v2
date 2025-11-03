@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:49:17
+**Generated:** 2025-11-03 15:54:36
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large Ratio 0.67 (4:6) | 7 | 108.00 ms | 11.31 | 4.28 | [92.00, 116.00] |
-| Small Ratio 0.67 (2:3) | 10 | 106.40 ms | 10.19 | 3.22 | [92.00, 116.00] |
+| Large Ratio 0.67 (4:6) | 17 | 106.59 ms | 7.87 | 1.91 | [92.00, 116.00] |
+| Small Ratio 0.67 (2:3) | 14 | 105.71 ms | 9.51 | 2.54 | [92.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Large Ratio 0.67 (4:6) | 7 | 3.41 µV | 1.35 | 0.51 | [0.91, 4.93] |
-| Small Ratio 0.67 (2:3) | 10 | 1.84 µV | 1.12 | 0.36 | [0.54, 3.31] |
+| Large Ratio 0.67 (4:6) | 17 | -2.31 µV | 1.29 | 0.31 | [-5.48, -0.14] |
+| Small Ratio 0.67 (2:3) | 14 | -2.04 µV | 1.23 | 0.33 | [-4.72, -0.68] |
 
 
 ### 2.2 N1 Component
@@ -116,9 +116,9 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 136.50, BIC = 140.66
-- **Small Ratio 0.67 (2:3) vs Large Ratio 0.67 (4:6)**: *β* = -1.37, *SE* = 6.192, *z* = -0.221, *p* = 0.825
-- **SNR**: *β* = 0.53, *SE* = 2.260, *z* = 0.234, *p* = 0.815
+- AIC = 221.53, BIC = 228.70
+- **Small Ratio 0.67 (2:3) vs Large Ratio 0.67 (4:6)**: *β* = 0.72, *SE* = 1.951, *z* = 0.371, *p* = 0.710
+- **SNR**: *β* = 0.73, *SE* = 0.729, *z* = 1.008, *p* = 0.314
 
 _Reference condition: **Large Ratio 0.67 (4:6)** (all condition effects are contrasts vs. this baseline)._
 
@@ -130,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Large Ratio 0.67 (4:6) - Small Ratio 0.67 (2:3) | 1.37 | 6.19 | 0.22 | 0.825 | 0.825 | n.s. |
+| Large Ratio 0.67 (4:6) - Small Ratio 0.67 (2:3) | -0.72 | 1.95 | -0.37 | 0.710 | 0.710 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -138,7 +138,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 3.00, *p* = 0.182, η²_G = 0.253
+- *F* = 0.12, *p* = 0.733, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -147,7 +147,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large Ratio 0.67 (4:6) vs Small Ratio 0.67 (2:3) | -1.73 | 3 | = 0.182 | -1.01 [-2.73, 1.00] | large | n.s. |
+| Large Ratio 0.67 (4:6) vs Small Ratio 0.67 (2:3) | -0.35 | 10 | = 0.733 | -0.08 [-0.78, 0.57] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -156,7 +156,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
+- Model converged successfully
+- AIC = 104.13, BIC = 111.30
+- **Small Ratio 0.67 (2:3) vs Large Ratio 0.67 (4:6)**: *β* = 0.03, *SE* = 0.458, *z* = 0.073, *p* = 0.941
+- **SNR**: *β* = -0.30, *SE* = 0.119, *z* = -2.543, *p* = 0.011
+
+_Reference condition: **Large Ratio 0.67 (4:6)** (all condition effects are contrasts vs. this baseline)._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
 
@@ -164,7 +171,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Large Ratio 0.67 (4:6) - Small Ratio 0.67 (2:3) | 1.21 | 0.28 | 4.27 | < .001 | < .001 | *** |
+| Large Ratio 0.67 (4:6) - Small Ratio 0.67 (2:3) | -0.03 | 0.46 | -0.07 | 0.941 | 0.941 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -172,8 +179,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.46, *p* = 0.313, η²_G = 0.190
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 4.39, *p* = 0.063, η²_G = 0.138
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -181,7 +188,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Large Ratio 0.67 (4:6) vs Small Ratio 0.67 (2:3) | 1.21 | 3 | = 0.313 | 0.84 [-1.13, 2.34] | large | n.s. |
+| Large Ratio 0.67 (4:6) vs Small Ratio 0.67 (2:3) | -2.09 | 10 | = 0.063 | -0.76 [-1.37, 0.10] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -448,6 +455,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
+**Fz amplitude:** Marginal trend toward condition differences (*p* = 0.063)
 **P1 amplitude:** Significant main effect of condition (*p* = 0.027). Post-hoc tests revealed:
   - Large Ratio 0.67 (4:6) showed greater amplitude than Small Ratio 0.67 (2:3) (*d* = 0.77)
 

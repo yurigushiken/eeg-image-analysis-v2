@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:35:11
+**Generated:** 2025-11-03 15:39:32
 
 ---
 
@@ -41,17 +41,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 2 | 12 | 92.33 ms | 10.85 | 3.13 | [76.00, 104.00] |
-| 1 to 3 | 15 | 94.13 ms | 11.80 | 3.05 | [76.00, 104.00] |
-| 1 to 4 | 11 | 85.82 ms | 11.91 | 3.59 | [76.00, 104.00] |
+| 1 to 2 | 12 | 92.33 ms | 9.41 | 2.72 | [76.00, 104.00] |
+| 1 to 3 | 9 | 95.56 ms | 10.85 | 3.62 | [76.00, 104.00] |
+| 1 to 4 | 13 | 95.38 ms | 10.56 | 2.93 | [76.00, 104.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 1 to 2 | 12 | 2.80 µV | 1.82 | 0.53 | [0.61, 5.82] |
-| 1 to 3 | 15 | 2.66 µV | 1.52 | 0.39 | [0.87, 6.24] |
-| 1 to 4 | 11 | 2.34 µV | 1.10 | 0.33 | [1.13, 4.34] |
+| 1 to 2 | 12 | -1.84 µV | 1.04 | 0.30 | [-3.40, -0.64] |
+| 1 to 3 | 9 | -2.55 µV | 1.99 | 0.66 | [-5.86, -0.27] |
+| 1 to 4 | 13 | -2.72 µV | 1.16 | 0.32 | [-4.33, -0.75] |
 
 
 ### 2.2 N1 Component
@@ -124,10 +124,10 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 297.83, BIC = 307.65
-- **1 to 3 vs 1 to 2**: *β* = -0.39, *SE* = 3.342, *z* = -0.117, *p* = 0.907
-- **1 to 4 vs 1 to 2**: *β* = -10.33, *SE* = 4.046, *z* = -2.554, *p* = 0.011
-- **SNR**: *β* = 1.73, *SE* = 1.092, *z* = 1.584, *p* = 0.113
+- AIC = 258.13, BIC = 267.28
+- **1 to 3 vs 1 to 2**: *β* = 2.26, *SE* = 4.957, *z* = 0.456, *p* = 0.648
+- **1 to 4 vs 1 to 2**: *β* = 1.96, *SE* = 4.957, *z* = 0.396, *p* = 0.692
+- **SNR**: *β* = 3.10, *SE* = 1.758, *z* = 1.763, *p* = 0.078
 
 _Reference condition: **1 to 2** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -140,9 +140,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 1 to 2 - 1 to 3 | 0.39 | 3.34 | 0.12 | 0.907 | 0.907 | n.s. |
-| 1 to 2 - 1 to 4 | 10.33 | 4.05 | 2.55 | 0.011 | 0.021 | * |
-| 1 to 3 - 1 to 4 | 9.94 | 3.56 | 2.79 | 0.005 | 0.016 | * |
+| 1 to 2 - 1 to 3 | -2.26 | 4.96 | -0.46 | 0.648 | 0.957 | n.s. |
+| 1 to 2 - 1 to 4 | -1.96 | 4.96 | -0.40 | 0.692 | 0.957 | n.s. |
+| 1 to 3 - 1 to 4 | 0.30 | 3.94 | 0.08 | 0.940 | 0.957 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -155,26 +155,17 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc paired t-tests on complete cases with FDR correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 2 vs 1 to 3 | 0.71 | 2 | = 0.596 | 0.60 [-0.67, 1.01] | medium | n.s. |
-| 1 to 2 vs 1 to 4 | 2.00 | 2 | = 0.551 | 1.20 [-0.82, 3.78] | large | n.s. |
-| 1 to 3 vs 1 to 4 | 0.62 | 2 | = 0.596 | 0.44 [-0.46, 1.89] | small | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Pairwise tests could not be computed (insufficient paired samples)._
 
 #### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 109.43, BIC = 119.26
-- **1 to 3 vs 1 to 2**: *β* = -0.28, *SE* = 0.338, *z* = -0.834, *p* = 0.404
-- **1 to 4 vs 1 to 2**: *β* = -0.39, *SE* = 0.364, *z* = -1.063, *p* = 0.288
-- **SNR**: *β* = 0.83, *SE* = 0.100, *z* = 8.249, *p* < .001
+- AIC = 84.75, BIC = 93.91
+- **1 to 3 vs 1 to 2**: *β* = -0.51, *SE* = 0.316, *z* = -1.598, *p* = 0.110
+- **1 to 4 vs 1 to 2**: *β* = -0.63, *SE* = 0.294, *z* = -2.144, *p* = 0.032
+- **SNR**: *β* = -0.92, *SE* = 0.101, *z* = -9.118, *p* < .001
 
 _Reference condition: **1 to 2** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -187,9 +178,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 1 to 2 - 1 to 3 | 0.28 | 0.34 | 0.83 | 0.404 | 0.645 | n.s. |
-| 1 to 2 - 1 to 4 | 0.39 | 0.36 | 1.06 | 0.288 | 0.639 | n.s. |
-| 1 to 3 - 1 to 4 | 0.11 | 0.35 | 0.30 | 0.762 | 0.762 | n.s. |
+| 1 to 2 - 1 to 3 | 0.50 | 0.32 | 1.60 | 0.110 | 0.208 | n.s. |
+| 1 to 2 - 1 to 4 | 0.63 | 0.29 | 2.14 | 0.032 | 0.093 | n.s. |
+| 1 to 3 - 1 to 4 | 0.13 | 0.29 | 0.43 | 0.665 | 0.665 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -202,16 +193,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Post-hoc paired t-tests on complete cases with FDR correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| 1 to 2 vs 1 to 3 | 2.23 | 2 | = 0.465 | 0.98 [-0.82, 0.86] | large | n.s. |
-| 1 to 2 vs 1 to 4 | 0.84 | 2 | = 0.732 | 0.89 [-1.26, 2.05] | large | n.s. |
-| 1 to 3 vs 1 to 4 | -0.13 | 2 | = 0.912 | -0.14 [-1.05, 1.05] | negligible | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+_Pairwise tests could not be computed (insufficient paired samples)._
 
 
 ### 3.2 N1 Component

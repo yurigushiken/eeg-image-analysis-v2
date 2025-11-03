@@ -1,0 +1,79 @@
+dataset:
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
+selection:
+  response: ALL
+  min_epochs_per_set: 1
+  condition_sets:
+  # Increasing (green: dotted, dashed, solid) — without 1
+  - name: Increase by 1 (no 1)
+    conditions: ['23','34','45','56']
+    response: ALL
+    color: '#02d502'
+    linestyle: ':'
+  - name: Increase by 2 (no 1)
+    conditions: ['24','35','46']
+    response: ALL
+    color: '#02d502'
+    linestyle: --
+  - name: Increase by 3 (no 1)
+    conditions: ['25','36']
+    response: ALL
+    color: '#02d502'
+    linestyle: '-'
+  # Decreasing (red: dotted, dashed, solid) — without 1
+  - name: Decrease by 1 (no 1)
+    conditions: ['32','43','54','65']
+    response: ALL
+    color: '#d62728'
+    linestyle: ':'
+  - name: Decrease by 2 (no 1)
+    conditions: ['42','53','64']
+    response: ALL
+    color: '#d62728'
+    linestyle: --
+  - name: Decrease by 3 (no 1)
+    conditions: ['52','63']
+    response: ALL
+    color: '#d62728'
+    linestyle: '-'
+  # Cardinality overall (no change) — without 1
+  - name: Cardinality (no change, no 1)
+    conditions: ['22','33','44','55','66']
+    response: ALL
+    color: '#1f77b4'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: [png]
+  dpi: 300
+  colors:
+  - '#02d502'
+  - '#02d502'
+  - '#02d502'
+  - '#d62728'
+  - '#d62728'
+  - '#d62728'
+  - '#1f77b4'
+outputs:
+  page: docs/analysis/increase_decrease_123_without_1_ALL.md
+  plots_dir: docs/assets/plots/increase_decrease_123_without_1_ALL
+  tables_dir: docs/assets/tables/increase_decrease_123_without_1_ALL
+measurement:
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi: [N1_L, N1_R]
+    hline_color: '#000000'
+    hline_style: ':'
+

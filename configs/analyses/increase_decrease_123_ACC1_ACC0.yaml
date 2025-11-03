@@ -1,0 +1,115 @@
+dataset:
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
+selection:
+  response: ALL
+  min_epochs_per_set: 1
+  condition_sets:
+  # Increasing (ACC1 green, ACC0 red) with linestyle by step (1: ':', 2: '--', 3: '-')
+  - name: Increase by 1 (Correct)
+    conditions: ['12','23','34','45','56']
+    response: ACC1
+    color: '#02d502'
+    linestyle: ':'
+  - name: Increase by 1 (Incorrect)
+    conditions: ['12','23','34','45','56']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: ':'
+  - name: Increase by 2 (Correct)
+    conditions: ['13','24','35','46']
+    response: ACC1
+    color: '#02d502'
+    linestyle: --
+  - name: Increase by 2 (Incorrect)
+    conditions: ['13','24','35','46']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: --
+  - name: Increase by 3 (Correct)
+    conditions: ['14','25','36']
+    response: ACC1
+    color: '#02d502'
+    linestyle: '-'
+  - name: Increase by 3 (Incorrect)
+    conditions: ['14','25','36']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: '-'
+  # Decreasing (ACC1 green, ACC0 red) with same linestyle mapping
+  - name: Decrease by 1 (Correct)
+    conditions: ['21','32','43','54','65']
+    response: ACC1
+    color: '#02d502'
+    linestyle: ':'
+  - name: Decrease by 1 (Incorrect)
+    conditions: ['21','32','43','54','65']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: ':'
+  - name: Decrease by 2 (Correct)
+    conditions: ['31','42','53','64']
+    response: ACC1
+    color: '#02d502'
+    linestyle: --
+  - name: Decrease by 2 (Incorrect)
+    conditions: ['31','42','53','64']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: --
+  - name: Decrease by 3 (Correct)
+    conditions: ['41','52','63']
+    response: ACC1
+    color: '#02d502'
+    linestyle: '-'
+  - name: Decrease by 3 (Incorrect)
+    conditions: ['41','52','63']
+    response: ACC0
+    color: '#ef0000'
+    linestyle: '-'
+  # Cardinality overall (no change) shown in blue
+  - name: Cardinality (no change)
+    conditions: ['11','22','33','44','55','66']
+    response: ALL
+    color: '#1f77b4'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: [png]
+  dpi: 300
+  colors:
+  - '#02d502'  # Inc 1 ACC1
+  - '#ef0000'  # Inc 1 ACC0
+  - '#02d502'  # Inc 2 ACC1
+  - '#ef0000'  # Inc 2 ACC0
+  - '#02d502'  # Inc 3 ACC1
+  - '#ef0000'  # Inc 3 ACC0
+  - '#02d502'  # Dec 1 ACC1
+  - '#ef0000'  # Dec 1 ACC0
+  - '#02d502'  # Dec 2 ACC1
+  - '#ef0000'  # Dec 2 ACC0
+  - '#02d502'  # Dec 3 ACC1
+  - '#ef0000'  # Dec 3 ACC0
+  - '#1f77b4'  # Cardinality
+outputs:
+  page: docs/analysis/increase_decrease_123_ACC1_ACC0.md
+  plots_dir: docs/assets/plots/increase_decrease_123_ACC1_ACC0
+  tables_dir: docs/assets/tables/increase_decrease_123_ACC1_ACC0
+measurement:
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi: [N1_L, N1_R]
+    hline_color: '#000000'
+    hline_style: ':'
+

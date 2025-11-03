@@ -6,7 +6,7 @@ selection:
   response: ALL
   min_epochs_per_set: 1
   condition_sets:
-  - name: increasing 1 to 2
+  - name: 1 to 2
     conditions:
     - '12'
     color: '#02d502'

@@ -1,0 +1,79 @@
+{
+  "analysis_id": "increase_decrease_123_ACC1",
+  "date_analyzed": "2025-11-03T15:16:44.582213",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "MIXED",
+  "fal_fraction": 0.5,
+  "n_subjects_total": 24,
+  "n_evokeds_included": 168,
+  "conditions": [
+    "Increase by 1",
+    "Increase by 2",
+    "Increase by 3",
+    "Decrease by 1",
+    "Decrease by 2",
+    "Decrease by 3",
+    "Cardinality (no change)"
+  ],
+  "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 108.0,
+      "peak_gfp_amplitude": 0.6047277282942718,
+      "fwhm_ms": 28.753108312865322,
+      "window_start_ms": 90.97902130739837,
+      "window_end_ms": 119.73212962026369,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "N1": {
+      "collapsed_peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -4.101646699005763,
+      "fwhm_ms": 67.85969918670565,
+      "window_start_ms": 141.14312027713316,
+      "window_end_ms": 209.00281946383882,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "P3b": {
+      "collapsed_peak_latency_ms": 472.0,
+      "peak_gfp_amplitude": 2.521358104424103,
+      "fwhm_ms": 118.11244435545211,
+      "window_start_ms": 417.8503064390327,
+      "window_end_ms": 535.9627507944848,
+      "search_range_ms": [
+        320.0,
+        590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -0.7633735778818694,
+      "fwhm_ms": 27.566284141717944,
+      "window_start_ms": 89.0022544417377,
+      "window_end_ms": 116.56853858345565,
+      "search_range_ms": [
+        80.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    }
+  }
+}

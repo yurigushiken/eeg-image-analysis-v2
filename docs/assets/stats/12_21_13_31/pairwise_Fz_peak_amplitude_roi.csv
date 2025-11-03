@@ -1,7 +1,7 @@
-Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
-condition,Decreasing 2 to 1,Decreasing 3 to 1,True,True,0.0,two-sided,fdr_bh,nan,-2.150109769119963,3.079514208494502
-condition,Decreasing 2 to 1,Increasing 1 to 2,True,True,0.0,two-sided,fdr_bh,nan,-1.375871961289246,1.85120113473896
-condition,Decreasing 2 to 1,Increasing 1 to 3,True,True,0.0,two-sided,fdr_bh,nan,-1.1127159078457936,2.3699718924246467
-condition,Decreasing 3 to 1,Increasing 1 to 2,True,True,0.0,two-sided,fdr_bh,nan,-1.9395960409754585,0.43705052472233363
-condition,Decreasing 3 to 1,Increasing 1 to 3,True,True,0.0,two-sided,fdr_bh,nan,-1.3259183610040794,0.8078679567881275
-condition,Increasing 1 to 2,Increasing 1 to 3,True,True,0.0,two-sided,fdr_bh,nan,-0.8131097179838623,0.5369000518097594
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
+condition,Decreasing 2 to 1,Decreasing 3 to 1,True,True,-1.7328319944025812,1.0,two-sided,0.33320904563088377,0.6664180912617675,fdr_bh,0.964,-0.38583470019626764,-0.6845417416811284,0.47343584513041925
+condition,Decreasing 2 to 1,Increasing 1 to 2,True,True,-0.9545626130501433,1.0,two-sided,0.5147967272518312,0.7721950908777468,fdr_bh,0.716,-0.8286694529726691,-1.208403478418157,0.6740124952662592
+condition,Decreasing 2 to 1,Increasing 1 to 3,True,True,0.22829730620445537,1.0,two-sided,0.8571102840440417,0.8571102840440417,fdr_bh,0.537,0.07869204203038184,-0.9694003145919707,1.5691403775026507
+condition,Decreasing 3 to 1,Increasing 1 to 2,True,True,-0.5977479305674667,1.0,two-sided,0.6570135081890888,0.7884162098269065,fdr_bh,0.61,-0.48738357569137025,-1.0650729924564024,0.6269127756930699
+condition,Decreasing 3 to 1,Increasing 1 to 3,True,True,4.486618233350581,1.0,two-sided,0.13961101247580435,0.6664180912617675,fdr_bh,1.585,0.6045432718239777,-1.0076478396959474,1.092160158287426
+condition,Increasing 1 to 2,Increasing 1 to 3,True,True,1.9586290786633935,1.0,two-sided,0.30052325368932703,0.6664180912617675,fdr_bh,1.031,1.5162561004330253,-2.1256782541452077,5.157369486806846

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:33:57
+**Generated:** 2025-11-03 15:38:32
 
 ---
 
@@ -41,17 +41,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing Crossover | 7 | 106.29 ms | 14.02 | 5.30 | [92.00, 120.00] |
-| Decreasing Large | 10 | 111.60 ms | 13.53 | 4.28 | [92.00, 120.00] |
-| Decreasing Small | 9 | 111.56 ms | 10.85 | 3.62 | [92.00, 120.00] |
+| Decreasing Crossover | 17 | 107.53 ms | 8.23 | 2.00 | [96.00, 120.00] |
+| Decreasing Large | 14 | 110.29 ms | 6.79 | 1.81 | [100.00, 120.00] |
+| Decreasing Small | 15 | 109.33 ms | 10.33 | 2.67 | [92.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing Crossover | 7 | 1.71 µV | 0.76 | 0.29 | [0.68, 3.03] |
-| Decreasing Large | 10 | 2.31 µV | 1.19 | 0.38 | [0.49, 4.52] |
-| Decreasing Small | 9 | 1.42 µV | 0.75 | 0.25 | [0.63, 2.68] |
+| Decreasing Crossover | 17 | -1.95 µV | 1.32 | 0.32 | [-5.88, -0.62] |
+| Decreasing Large | 14 | -2.63 µV | 1.76 | 0.47 | [-7.43, -0.59] |
+| Decreasing Small | 15 | -1.89 µV | 1.16 | 0.30 | [-4.34, -0.31] |
 
 
 ### 2.2 N1 Component
@@ -124,10 +124,10 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 207.48, BIC = 215.03
-- **Decreasing Large vs Decreasing Crossover**: *β* = 1.05, *SE* = 4.643, *z* = 0.225, *p* = 0.822
-- **Decreasing Small vs Decreasing Crossover**: *β* = 1.25, *SE* = 4.492, *z* = 0.277, *p* = 0.781
-- **SNR**: *β* = -1.86, *SE* = 1.785, *z* = -1.040, *p* = 0.298
+- AIC = 330.44, BIC = 341.41
+- **Decreasing Large vs Decreasing Crossover**: *β* = 1.50, *SE* = 2.361, *z* = 0.634, *p* = 0.526
+- **Decreasing Small vs Decreasing Crossover**: *β* = 0.85, *SE* = 2.345, *z* = 0.361, *p* = 0.718
+- **SNR**: *β* = -0.36, *SE* = 0.549, *z* = -0.649, *p* = 0.516
 
 _Reference condition: **Decreasing Crossover** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -140,50 +140,18 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing Crossover - Decreasing Large | -1.05 | 4.64 | -0.23 | 0.822 | 0.990 | n.s. |
-| Decreasing Crossover - Decreasing Small | -1.25 | 4.49 | -0.28 | 0.781 | 0.990 | n.s. |
-| Decreasing Large - Decreasing Small | -0.20 | 3.78 | -0.05 | 0.958 | 0.990 | n.s. |
+| Decreasing Crossover - Decreasing Large | -1.50 | 2.36 | -0.63 | 0.526 | 0.894 | n.s. |
+| Decreasing Crossover - Decreasing Small | -0.85 | 2.35 | -0.36 | 0.718 | 0.921 | n.s. |
+| Decreasing Large - Decreasing Small | 0.65 | 2.56 | 0.25 | 0.799 | 0.921 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 
-_ANOVA results not available._
+**Repeated-Measures ANOVA (Supplementary Analysis):**
 
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Pairwise tests could not be computed (insufficient paired samples)._
-
-#### Amplitude (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 69.09, BIC = 76.64
-- **Decreasing Large vs Decreasing Crossover**: *β* = 0.77, *SE* = 0.328, *z* = 2.348, *p* = 0.019
-- **Decreasing Small vs Decreasing Crossover**: *β* = 0.07, *SE* = 0.325, *z* = 0.230, *p* = 0.818
-- **SNR**: *β* = 0.31, *SE* = 0.125, *z* = 2.498, *p* = 0.012
-
-_Reference condition: **Decreasing Crossover** (all condition effects are contrasts vs. this baseline)._
-_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Decreasing Crossover - Decreasing Large | -0.77 | 0.33 | -2.35 | 0.019 | 0.037 | * |
-| Decreasing Crossover - Decreasing Small | -0.07 | 0.33 | -0.23 | 0.818 | 0.818 | n.s. |
-| Decreasing Large - Decreasing Small | 0.69 | 0.28 | 2.50 | 0.012 | 0.036 | * |
-
-_Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
+- *F* = 0.09, *p* = 0.914, η²_G = 0.004
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -191,9 +159,56 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing Crossover vs Decreasing Large | -0.85 | 1 | = 0.550 | -0.34 [-4.04, 2.04] | small | n.s. |
-| Decreasing Crossover vs Decreasing Small | 0.93 | 1 | = 0.550 | 0.29 [-0.57, 2.37] | small | n.s. |
-| Decreasing Large vs Decreasing Small | 0.88 | 1 | = 0.550 | 0.55 [-0.63, 1.58] | medium | n.s. |
+| Decreasing Crossover vs Decreasing Large | 0.16 | 9 | = 0.876 | 0.06 [-0.67, 0.77] | negligible | n.s. |
+| Decreasing Crossover vs Decreasing Small | -0.25 | 9 | = 0.876 | -0.09 [-0.70, 0.51] | negligible | n.s. |
+| Decreasing Large vs Decreasing Small | -0.42 | 9 | = 0.876 | -0.14 [-0.76, 0.59] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 133.36, BIC = 144.33
+- **Decreasing Large vs Decreasing Crossover**: *β* = -0.38, *SE* = 0.273, *z* = -1.382, *p* = 0.167
+- **Decreasing Small vs Decreasing Crossover**: *β* = -0.34, *SE* = 0.273, *z* = -1.234, *p* = 0.217
+- **SNR**: *β* = -0.33, *SE* = 0.067, *z* = -4.869, *p* < .001
+
+_Reference condition: **Decreasing Crossover** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Decreasing Crossover - Decreasing Large | 0.38 | 0.27 | 1.38 | 0.167 | 0.422 | n.s. |
+| Decreasing Crossover - Decreasing Small | 0.34 | 0.27 | 1.23 | 0.217 | 0.422 | n.s. |
+| Decreasing Large - Decreasing Small | -0.04 | 0.30 | -0.13 | 0.893 | 0.893 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 3.51, *p* = 0.052, η²_G = 0.059
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Decreasing Crossover vs Decreasing Large | 2.82 | 9 | = 0.060 | 0.41 [0.05, 1.74] | small | n.s. |
+| Decreasing Crossover vs Decreasing Small | -0.47 | 9 | = 0.652 | -0.11 [-0.94, 0.30] | negligible | n.s. |
+| Decreasing Large vs Decreasing Small | -2.01 | 9 | = 0.112 | -0.55 [-1.06, 0.33] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -497,6 +512,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
+**Fz amplitude:** Marginal trend toward condition differences (*p* = 0.052)
 **N1 latency:** Marginal trend toward condition differences (*p* = 0.079)
 **N1 amplitude:** Significant main effect of condition (*p* = 0.002). Post-hoc tests revealed:
   - Decreasing Crossover showed smaller amplitude than Decreasing Small (*d* = -0.59)

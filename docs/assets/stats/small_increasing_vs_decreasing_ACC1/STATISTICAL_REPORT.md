@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:50:52
+**Generated:** 2025-11-03 15:56:00
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Small_Decreasing | 9 | 98.67 ms | 15.36 | 5.12 | [84.00, 120.00] |
-| Small_Increasing | 14 | 106.57 ms | 15.18 | 4.06 | [84.00, 120.00] |
+| Small_Decreasing | 15 | 109.60 ms | 11.69 | 3.02 | [88.00, 120.00] |
+| Small_Increasing | 10 | 96.00 ms | 12.93 | 4.09 | [84.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Small_Decreasing | 9 | 1.68 µV | 1.08 | 0.36 | [0.84, 4.14] |
-| Small_Increasing | 14 | 2.18 µV | 1.23 | 0.33 | [0.78, 4.84] |
+| Small_Decreasing | 15 | -1.85 µV | 0.99 | 0.26 | [-4.34, -0.93] |
+| Small_Increasing | 10 | -1.88 µV | 1.00 | 0.32 | [-3.77, -0.75] |
 
 
 ### 2.2 N1 Component
@@ -116,9 +116,9 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 196.97, BIC = 202.64
-- **Small_Increasing vs Small_Decreasing**: *β* = 6.85, *SE* = 6.162, *z* = 1.112, *p* = 0.266
-- **SNR**: *β* = 3.35, *SE* = 2.900, *z* = 1.157, *p* = 0.247
+- AIC = 195.63, BIC = 201.72
+- **Small_Increasing vs Small_Decreasing**: *β* = -16.66, *SE* = 3.162, *z* = -5.269, *p* < .001
+- **SNR**: *β* = 3.51, *SE* = 1.764, *z* = 1.993, *p* = 0.046
 
 _Reference condition: **Small_Decreasing** (all condition effects are contrasts vs. this baseline)._
 
@@ -130,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Small_Decreasing - Small_Increasing | -6.85 | 6.16 | -1.11 | 0.266 | 0.266 | n.s. |
+| Small_Decreasing - Small_Increasing | 16.66 | 3.16 | 5.27 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -138,8 +138,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.17, *p* = 0.321, η²_G = 0.114
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 15.37, *p* = 0.006, η²_G = 0.302
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -147,7 +147,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Small_Decreasing vs Small_Increasing | -1.08 | 6 | = 0.321 | -0.66 [-1.37, 0.55] | medium | n.s. |
+| Small_Decreasing vs Small_Increasing | 3.92 | 7 | = 0.006 | 1.23 [0.22, 2.56] | large | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -157,9 +157,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 59.00, BIC = 64.68
-- **Small_Increasing vs Small_Decreasing**: *β* = 0.18, *SE* = 0.328, *z* = 0.546, *p* = 0.585
-- **SNR**: *β* = 0.83, *SE* = 0.156, *z* = 5.301, *p* < .001
+- AIC = 59.80, BIC = 65.90
+- **Small_Increasing vs Small_Decreasing**: *β* = 0.42, *SE* = 0.223, *z* = 1.869, *p* = 0.062
+- **SNR**: *β* = -0.60, *SE* = 0.119, *z* = -5.029, *p* < .001
 
 _Reference condition: **Small_Decreasing** (all condition effects are contrasts vs. this baseline)._
 
@@ -171,7 +171,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Small_Decreasing - Small_Increasing | -0.18 | 0.33 | -0.55 | 0.585 | 0.585 | n.s. |
+| Small_Decreasing - Small_Increasing | -0.42 | 0.22 | -1.87 | 0.062 | 0.062 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -179,7 +179,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.05, *p* = 0.825, η²_G = 0.008
+- *F* = 0.01, *p* = 0.911, η²_G = 0.001
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -188,7 +188,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Small_Decreasing vs Small_Increasing | 0.23 | 6 | = 0.825 | 0.16 [-0.84, 1.01] | negligible | n.s. |
+| Small_Decreasing vs Small_Increasing | -0.12 | 7 | = 0.911 | -0.04 [-0.88, 0.80] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -455,6 +455,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
+**Fz latency:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
+  - Small_Decreasing showed greater latency than Small_Increasing (*d* = 1.23)
 **N1 latency:** Significant main effect of condition (*p* = 0.004). Post-hoc tests revealed:
   - Small_Decreasing showed greater latency than Small_Increasing (*d* = 0.70)
 **N1 amplitude:** Significant main effect of condition (*p* = 0.010). Post-hoc tests revealed:

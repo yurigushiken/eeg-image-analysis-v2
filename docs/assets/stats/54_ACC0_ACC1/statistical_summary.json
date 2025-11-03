@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:29:47",
+  "timestamp": "2025-11-03 15:33:41",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_54_ACC0_ACC1_vxdhluod.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_54_ACC0_ACC1_jc53_2eu.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\54_ACC0_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -53,21 +53,21 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 4.000000000000028,
-        "p_unc": 0.18350341907227302,
+        "F": 0.4948453608247448,
+        "p_unc": 0.5081381688654871,
         "output_file": "anova_Fz_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.0263157894736843
+        "effect_size_ng2": 0.026666666666666807
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 0.8297941419248654,
-        "p_unc": 0.45848840454388284,
+        "F": 9.766372264442552,
+        "p_unc": 0.0204511989351185,
         "output_file": "anova_Fz_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.2307278041151128
+        "effect_size_ng2": 0.25744133806755887
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -145,7 +145,7 @@
         "dv": "peak_amplitude_roi",
         "test": "Pairwise",
         "n_comparisons": 1,
-        "n_significant": 0,
+        "n_significant": 1,
         "correction": "fdr_bh",
         "output_file": "pairwise_Fz_peak_amplitude_roi.csv"
       },
@@ -209,8 +209,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 101.51635319453574,
-        "bic": 104.71163984261203,
+        "aic": 196.180036649827,
+        "bic": 202.65922097984864,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 2,
@@ -221,8 +221,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 63.72762993089303,
-        "bic": 66.92291657896932,
+        "aic": 122.427170933979,
+        "bic": 128.90635526400064,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 2,
@@ -308,7 +308,7 @@
         "dv": "peak_latency_ms",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
-        "n_significant": 1,
+        "n_significant": 0,
         "correction": "hs",
         "output_file": "lmm_pairwise_Fz_peak_latency_ms.csv"
       },
@@ -317,7 +317,7 @@
         "dv": "peak_amplitude_roi",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
-        "n_significant": 0,
+        "n_significant": 1,
         "correction": "hs",
         "output_file": "lmm_pairwise_Fz_peak_amplitude_roi.csv"
       },

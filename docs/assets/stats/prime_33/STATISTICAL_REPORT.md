@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:46:52
+**Generated:** 2025-11-03 15:50:41
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 3a | 8 | 109.50 ms | 12.99 | 4.59 | [88.00, 120.00] |
-| 3b | 9 | 102.22 ms | 9.82 | 3.27 | [88.00, 120.00] |
-| 3c | 12 | 104.33 ms | 13.15 | 3.80 | [88.00, 120.00] |
-| 3d | 12 | 102.67 ms | 14.20 | 4.10 | [88.00, 120.00] |
+| 3a | 15 | 100.00 ms | 10.14 | 2.62 | [88.00, 120.00] |
+| 3b | 9 | 107.11 ms | 11.45 | 3.82 | [88.00, 120.00] |
+| 3c | 11 | 100.00 ms | 11.31 | 3.41 | [88.00, 116.00] |
+| 3d | 12 | 103.33 ms | 12.74 | 3.68 | [88.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 3a | 8 | 4.96 µV | 1.67 | 0.59 | [2.79, 7.39] |
-| 3b | 9 | 4.23 µV | 1.46 | 0.49 | [1.84, 6.27] |
-| 3c | 12 | 6.03 µV | 3.05 | 0.88 | [1.36, 10.49] |
-| 3d | 12 | 4.21 µV | 1.84 | 0.53 | [1.11, 8.31] |
+| 3a | 15 | -6.25 µV | 2.59 | 0.67 | [-11.25, -1.15] |
+| 3b | 9 | -7.22 µV | 5.72 | 1.91 | [-21.02, -2.13] |
+| 3c | 11 | -4.25 µV | 2.53 | 0.76 | [-9.41, -1.37] |
+| 3d | 12 | -3.86 µV | 1.68 | 0.48 | [-7.34, -1.67] |
 
 
 ### 2.2 N1 Component
@@ -132,11 +132,11 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 333.74, BIC = 345.74
-- **3b vs 3a**: *β* = -7.84, *SE* = 5.736, *z* = -1.366, *p* = 0.172
-- **3c vs 3a**: *β* = -4.21, *SE* = 5.484, *z* = -0.767, *p* = 0.443
-- **3d vs 3a**: *β* = -6.77, *SE* = 5.477, *z* = -1.236, *p* = 0.217
-- **SNR**: *β* = 2.22, *SE* = 1.792, *z* = 1.238, *p* = 0.216
+- AIC = 370.98, BIC = 383.93
+- **3b vs 3a**: *β* = 7.12, *SE* = 4.371, *z* = 1.629, *p* = 0.103
+- **3c vs 3a**: *β* = 0.27, *SE* = 4.185, *z* = 0.064, *p* = 0.949
+- **3d vs 3a**: *β* = 3.69, *SE* = 4.013, *z* = 0.919, *p* = 0.358
+- **SNR**: *β* = 0.27, *SE* = 1.692, *z* = 0.160, *p* = 0.873
 
 _Reference condition: **3a** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -149,12 +149,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3a - 3b | 7.84 | 5.74 | 1.37 | 0.172 | 0.677 | n.s. |
-| 3a - 3c | 4.21 | 5.48 | 0.77 | 0.443 | 0.904 | n.s. |
-| 3a - 3d | 6.77 | 5.48 | 1.24 | 0.217 | 0.705 | n.s. |
-| 3b - 3c | -3.63 | 5.42 | -0.67 | 0.503 | 0.904 | n.s. |
-| 3b - 3d | -1.07 | 5.34 | -0.20 | 0.841 | 0.904 | n.s. |
-| 3c - 3d | 2.56 | 4.91 | 0.52 | 0.602 | 0.904 | n.s. |
+| 3a - 3b | -7.12 | 4.37 | -1.63 | 0.103 | 0.480 | n.s. |
+| 3a - 3c | -0.27 | 4.18 | -0.06 | 0.949 | 0.949 | n.s. |
+| 3a - 3d | -3.69 | 4.01 | -0.92 | 0.358 | 0.830 | n.s. |
+| 3b - 3c | 6.85 | 4.87 | 1.41 | 0.159 | 0.581 | n.s. |
+| 3b - 3d | 3.43 | 4.60 | 0.75 | 0.455 | 0.830 | n.s. |
+| 3c - 3d | -3.42 | 4.42 | -0.77 | 0.439 | 0.830 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -171,11 +171,11 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 175.85, BIC = 187.85
-- **3b vs 3a**: *β* = -1.32, *SE* = 0.676, *z* = -1.951, *p* = 0.051
-- **3c vs 3a**: *β* = 0.96, *SE* = 0.673, *z* = 1.429, *p* = 0.153
-- **3d vs 3a**: *β* = -1.44, *SE* = 0.669, *z* = -2.148, *p* = 0.032
-- **SNR**: *β* = 1.10, *SE* = 0.253, *z* = 4.336, *p* < .001
+- AIC = 238.81, BIC = 251.76
+- **3b vs 3a**: *β* = -0.78, *SE* = 1.043, *z* = -0.749, *p* = 0.454
+- **3c vs 3a**: *β* = 0.84, *SE* = 1.115, *z* = 0.754, *p* = 0.451
+- **3d vs 3a**: *β* = 1.70, *SE* = 0.987, *z* = 1.721, *p* = 0.085
+- **SNR**: *β* = -1.74, *SE* = 0.401, *z* = -4.334, *p* < .001
 
 _Reference condition: **3a** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -188,12 +188,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 3a - 3b | 1.32 | 0.68 | 1.95 | 0.051 | 0.145 | n.s. |
-| 3a - 3c | -0.96 | 0.67 | -1.43 | 0.153 | 0.282 | n.s. |
-| 3a - 3d | 1.44 | 0.67 | 2.15 | 0.032 | 0.121 | n.s. |
-| 3b - 3c | -2.28 | 0.67 | -3.41 | < .001 | 0.003 | ** |
-| 3b - 3d | 0.12 | 0.62 | 0.19 | 0.850 | 0.850 | n.s. |
-| 3c - 3d | 2.40 | 0.64 | 3.77 | < .001 | < .001 | *** |
+| 3a - 3b | 0.78 | 1.04 | 0.75 | 0.454 | 0.814 | n.s. |
+| 3a - 3c | -0.84 | 1.12 | -0.75 | 0.451 | 0.814 | n.s. |
+| 3a - 3d | -1.70 | 0.99 | -1.72 | 0.085 | 0.359 | n.s. |
+| 3b - 3c | -1.62 | 1.25 | -1.30 | 0.194 | 0.578 | n.s. |
+| 3b - 3d | -2.48 | 1.11 | -2.23 | 0.026 | 0.144 | n.s. |
+| 3c - 3d | -0.86 | 1.09 | -0.79 | 0.429 | 0.814 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._

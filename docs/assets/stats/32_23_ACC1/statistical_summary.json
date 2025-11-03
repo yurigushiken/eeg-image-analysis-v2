@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:29:06",
+  "timestamp": "2025-11-03 15:32:33",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_32_23_ACC1_kziuh027.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_32_23_ACC1_kaf_jq81.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\32_23_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -53,21 +53,21 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.0,
-        "p_unc": 1.0,
+        "F": 0.05254378648874062,
+        "p_unc": 0.8252479789187581,
         "output_file": "anova_Fz_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.0
+        "effect_size_ng2": 0.003561535417491096
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 0.6493673940570447,
-        "p_unc": 0.4569360198398058,
+        "F": 0.5432214611510195,
+        "p_unc": 0.4850651835616524,
         "output_file": "anova_Fz_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.060414748339802385
+        "effect_size_ng2": 0.012378160779454144
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -209,8 +209,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 170.4632173233087,
-        "bic": 175.9184295901003,
+        "aic": 212.21888547706823,
+        "bic": 218.50936816717564,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 2,
@@ -221,8 +221,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 78.37630113500863,
-        "bic": 83.83151340180021,
+        "aic": 92.96745285595058,
+        "bic": 99.257935546058,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 2,

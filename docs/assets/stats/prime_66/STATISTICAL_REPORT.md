@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:48:06
+**Generated:** 2025-11-03 15:52:29
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 6a | 12 | 102.33 ms | 17.43 | 5.03 | [72.00, 120.00] |
-| 6b | 8 | 81.50 ms | 25.56 | 9.04 | [56.00, 120.00] |
-| 6c | 5 | 84.80 ms | 23.05 | 10.31 | [56.00, 120.00] |
-| 6d | 7 | 74.29 ms | 22.01 | 8.32 | [56.00, 120.00] |
+| 6a | 12 | 91.67 ms | 18.64 | 5.38 | [56.00, 112.00] |
+| 6b | 14 | 92.29 ms | 19.69 | 5.26 | [68.00, 120.00] |
+| 6c | 12 | 92.33 ms | 19.18 | 5.54 | [64.00, 116.00] |
+| 6d | 15 | 100.53 ms | 17.75 | 4.58 | [56.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 6a | 12 | 4.59 µV | 1.63 | 0.47 | [1.65, 8.04] |
-| 6b | 8 | 4.44 µV | 2.42 | 0.85 | [1.62, 9.22] |
-| 6c | 5 | 6.62 µV | 2.37 | 1.06 | [3.57, 9.70] |
-| 6d | 7 | 4.08 µV | 1.88 | 0.71 | [1.99, 7.59] |
+| 6a | 12 | -6.01 µV | 3.50 | 1.01 | [-13.64, -1.63] |
+| 6b | 14 | -5.43 µV | 2.35 | 0.63 | [-10.13, -2.18] |
+| 6c | 12 | -8.74 µV | 5.73 | 1.66 | [-24.65, -3.18] |
+| 6d | 15 | -4.58 µV | 2.12 | 0.55 | [-8.93, -2.02] |
 
 
 ### 2.2 N1 Component
@@ -131,41 +131,12 @@ This section presents the results of repeated-measures statistical tests.
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
-_LMM did not converge or had numerical issues._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| 6a - 6b | 22.77 | 8.38 | 2.72 | 0.007 | 0.032 | * |
-| 6a - 6c | 13.64 | 9.88 | 1.38 | 0.167 | 0.519 | n.s. |
-| 6a - 6d | 29.50 | 9.10 | 3.24 | 0.001 | 0.007 | ** |
-| 6b - 6c | -9.13 | 11.62 | -0.79 | 0.432 | 0.677 | n.s. |
-| 6b - 6d | 6.73 | 9.94 | 0.68 | 0.498 | 0.677 | n.s. |
-| 6c - 6d | 15.86 | 11.65 | 1.36 | 0.173 | 0.519 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Pairwise tests could not be computed (insufficient paired samples)._
-
-#### Amplitude (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
 - Model converged successfully
-- AIC = 139.71, BIC = 149.97
-- **6b vs 6a**: *β* = -0.31, *SE* = 0.753, *z* = -0.416, *p* = 0.677
-- **6c vs 6a**: *β* = 2.39, *SE* = 0.919, *z* = 2.606, *p* = 0.009
-- **6d vs 6a**: *β* = -1.02, *SE* = 0.801, *z* = -1.271, *p* = 0.204
-- **SNR**: *β* = 1.08, *SE* = 0.500, *z* = 2.154, *p* = 0.031
+- AIC = 469.65, BIC = 483.44
+- **6b vs 6a**: *β* = 1.23, *SE* = 7.015, *z* = 0.175, *p* = 0.861
+- **6c vs 6a**: *β* = 2.45, *SE* = 7.266, *z* = 0.337, *p* = 0.736
+- **6d vs 6a**: *β* = 10.62, *SE* = 7.106, *z* = 1.495, *p* = 0.135
+- **SNR**: *β* = 2.71, *SE* = 2.252, *z* = 1.204, *p* = 0.229
 
 _Reference condition: **6a** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -178,22 +149,91 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 6a - 6b | 0.31 | 0.75 | 0.42 | 0.677 | 0.684 | n.s. |
-| 6a - 6c | -2.39 | 0.92 | -2.61 | 0.009 | 0.036 | * |
-| 6a - 6d | 1.02 | 0.80 | 1.27 | 0.204 | 0.495 | n.s. |
-| 6b - 6c | -2.71 | 0.96 | -2.83 | 0.005 | 0.023 | * |
-| 6b - 6d | 0.71 | 0.91 | 0.78 | 0.438 | 0.684 | n.s. |
-| 6c - 6d | 3.41 | 1.03 | 3.31 | < .001 | 0.006 | ** |
+| 6a - 6b | -1.22 | 7.02 | -0.17 | 0.861 | 0.982 | n.s. |
+| 6a - 6c | -2.45 | 7.27 | -0.34 | 0.736 | 0.982 | n.s. |
+| 6a - 6d | -10.63 | 7.11 | -1.50 | 0.135 | 0.581 | n.s. |
+| 6b - 6c | -1.22 | 6.96 | -0.18 | 0.860 | 0.982 | n.s. |
+| 6b - 6d | -9.40 | 6.58 | -1.43 | 0.153 | 0.581 | n.s. |
+| 6c - 6d | -8.18 | 6.88 | -1.19 | 0.235 | 0.657 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 
-_ANOVA results not available._
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.64, *p* = 0.216, η²_G = 0.172
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
-_Pairwise tests could not be computed (insufficient paired samples)._
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 6a vs 6b | 0.05 | 6 | = 0.964 | 0.03 [-0.91, 0.94] | negligible | n.s. |
+| 6a vs 6c | 0.39 | 6 | = 0.868 | 0.18 [-0.79, 0.75] | negligible | n.s. |
+| 6a vs 6d | -1.52 | 6 | = 0.360 | -0.97 [-1.24, 0.37] | large | n.s. |
+| 6b vs 6c | 0.37 | 6 | = 0.868 | 0.16 [-0.60, 0.83] | negligible | n.s. |
+| 6b vs 6d | -2.37 | 6 | = 0.232 | -1.09 [-1.52, 0.09] | large | n.s. |
+| 6c vs 6d | -2.13 | 6 | = 0.232 | -1.20 [-1.44, 0.23] | large | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 291.85, BIC = 305.64
+- **6b vs 6a**: *β* = 0.49, *SE* = 1.336, *z* = 0.364, *p* = 0.716
+- **6c vs 6a**: *β* = -3.22, *SE* = 1.384, *z* = -2.325, *p* = 0.020
+- **6d vs 6a**: *β* = 1.03, *SE* = 1.309, *z* = 0.788, *p* = 0.431
+- **SNR**: *β* = -0.75, *SE* = 0.375, *z* = -1.996, *p* = 0.046
+
+_Reference condition: **6a** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 6a - 6b | -0.49 | 1.34 | -0.36 | 0.716 | 0.888 | n.s. |
+| 6a - 6c | 3.22 | 1.38 | 2.33 | 0.020 | 0.078 | n.s. |
+| 6a - 6d | -1.03 | 1.31 | -0.79 | 0.431 | 0.816 | n.s. |
+| 6b - 6c | 3.70 | 1.34 | 2.77 | 0.006 | 0.027 | * |
+| 6b - 6d | -0.54 | 1.26 | -0.43 | 0.665 | 0.888 | n.s. |
+| 6c - 6d | -4.25 | 1.29 | -3.29 | < .001 | 0.006 | ** |
+
+_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.39, *p* = 0.278, η²_G = 0.143
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 6a vs 6b | -0.91 | 6 | = 0.599 | -0.58 [-1.29, 0.61] | medium | n.s. |
+| 6a vs 6c | 0.45 | 6 | = 0.769 | 0.24 [-0.34, 1.28] | small | n.s. |
+| 6a vs 6d | -1.01 | 6 | = 0.599 | -0.43 [-1.21, 0.39] | small | n.s. |
+| 6b vs 6c | 2.77 | 6 | = 0.195 | 1.29 [-0.13, 1.44] | large | n.s. |
+| 6b vs 6d | 0.31 | 6 | = 0.769 | 0.16 [-0.84, 0.59] | negligible | n.s. |
+| 6c vs 6d | -1.76 | 6 | = 0.386 | -0.92 [-1.49, 0.20] | large | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
 ### 3.2 N1 Component

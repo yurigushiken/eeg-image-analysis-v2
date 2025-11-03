@@ -1,0 +1,79 @@
+{
+  "analysis_id": "increase_decrease_123_without_1_ACC1",
+  "date_analyzed": "2025-11-03T15:17:44.075223",
+  "baseline_ms": [
+    -100,
+    0
+  ],
+  "response_filter": "MIXED",
+  "fal_fraction": 0.5,
+  "n_subjects_total": 24,
+  "n_evokeds_included": 168,
+  "conditions": [
+    "Increase by 1 (no 1)",
+    "Increase by 2 (no 1)",
+    "Increase by 3 (no 1)",
+    "Decrease by 1 (no 1)",
+    "Decrease by 2 (no 1)",
+    "Decrease by 3 (no 1)",
+    "Cardinality (no change, no 1)"
+  ],
+  "components": {
+    "P1": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": 0.449434457622939,
+      "fwhm_ms": 26.24284243791527,
+      "window_start_ms": 89.87467286291849,
+      "window_end_ms": 116.11751530083376,
+      "search_range_ms": [
+        60.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "N1": {
+      "collapsed_peak_latency_ms": 172.0,
+      "peak_gfp_amplitude": -4.405039737923634,
+      "fwhm_ms": 70.16642459016626,
+      "window_start_ms": 138.9890588740645,
+      "window_end_ms": 209.15548346423077,
+      "search_range_ms": [
+        125.0,
+        200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "P3b": {
+      "collapsed_peak_latency_ms": 472.0,
+      "peak_gfp_amplitude": 2.363616532487892,
+      "fwhm_ms": 117.20097723546849,
+      "window_start_ms": 419.7022995839493,
+      "window_end_ms": 536.9032768194178,
+      "search_range_ms": [
+        320.0,
+        590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -0.8797523276066392,
+      "fwhm_ms": 25.3789806992948,
+      "window_start_ms": 89.41258278623371,
+      "window_end_ms": 114.79156348552851,
+      "search_range_ms": [
+        80.0,
+        120.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 168,
+      "n_conditions": 7
+    }
+  }
+}

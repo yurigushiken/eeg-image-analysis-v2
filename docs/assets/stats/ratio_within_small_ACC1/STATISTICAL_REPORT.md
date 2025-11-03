@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:49:54
+**Generated:** 2025-11-03 15:55:16
 
 ---
 
@@ -41,17 +41,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Small Ratio 0.33 (1:3) | 14 | 104.29 ms | 15.88 | 4.24 | [84.00, 120.00] |
-| Small Ratio 0.5 (1:2) | 13 | 100.62 ms | 15.90 | 4.41 | [84.00, 120.00] |
-| Small Ratio 0.67 (2:3) | 10 | 106.00 ms | 14.14 | 4.47 | [84.00, 120.00] |
+| Small Ratio 0.33 (1:3) | 10 | 110.40 ms | 8.04 | 2.54 | [100.00, 120.00] |
+| Small Ratio 0.5 (1:2) | 11 | 102.18 ms | 13.43 | 4.05 | [84.00, 120.00] |
+| Small Ratio 0.67 (2:3) | 14 | 104.86 ms | 12.95 | 3.46 | [84.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Small Ratio 0.33 (1:3) | 14 | 2.19 µV | 1.32 | 0.35 | [0.79, 4.70] |
-| Small Ratio 0.5 (1:2) | 13 | 2.07 µV | 1.07 | 0.30 | [0.66, 3.67] |
-| Small Ratio 0.67 (2:3) | 10 | 2.12 µV | 1.20 | 0.38 | [0.54, 3.86] |
+| Small Ratio 0.33 (1:3) | 10 | -2.52 µV | 1.60 | 0.51 | [-4.87, -0.41] |
+| Small Ratio 0.5 (1:2) | 11 | -2.16 µV | 1.08 | 0.33 | [-4.87, -1.06] |
+| Small Ratio 0.67 (2:3) | 14 | -2.11 µV | 1.22 | 0.33 | [-4.72, -0.69] |
 
 
 ### 2.2 N1 Component
@@ -124,10 +124,10 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 309.10, BIC = 318.76
-- **Small Ratio 0.5 (1:2) vs Small Ratio 0.33 (1:3)**: *β* = -0.42, *SE* = 4.609, *z* = -0.091, *p* = 0.928
-- **Small Ratio 0.67 (2:3) vs Small Ratio 0.33 (1:3)**: *β* = 5.68, *SE* = 5.024, *z* = 1.132, *p* = 0.258
-- **SNR**: *β* = 3.86, *SE* = 1.529, *z* = 2.526, *p* = 0.012
+- AIC = 280.56, BIC = 289.89
+- **Small Ratio 0.5 (1:2) vs Small Ratio 0.33 (1:3)**: *β* = -8.75, *SE* = 4.602, *z* = -1.901, *p* = 0.057
+- **Small Ratio 0.67 (2:3) vs Small Ratio 0.33 (1:3)**: *β* = -5.62, *SE* = 4.335, *z* = -1.296, *p* = 0.195
+- **SNR**: *β* = -0.79, *SE* = 1.322, *z* = -0.596, *p* = 0.551
 
 _Reference condition: **Small Ratio 0.33 (1:3)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -140,9 +140,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Small Ratio 0.33 (1:3) - Small Ratio 0.5 (1:2) | 0.42 | 4.61 | 0.09 | 0.928 | 0.928 | n.s. |
-| Small Ratio 0.33 (1:3) - Small Ratio 0.67 (2:3) | -5.68 | 5.02 | -1.13 | 0.258 | 0.527 | n.s. |
-| Small Ratio 0.5 (1:2) - Small Ratio 0.67 (2:3) | -6.10 | 4.98 | -1.22 | 0.221 | 0.527 | n.s. |
+| Small Ratio 0.33 (1:3) - Small Ratio 0.5 (1:2) | 8.75 | 4.60 | 1.90 | 0.057 | 0.162 | n.s. |
+| Small Ratio 0.33 (1:3) - Small Ratio 0.67 (2:3) | 5.62 | 4.34 | 1.30 | 0.195 | 0.352 | n.s. |
+| Small Ratio 0.5 (1:2) - Small Ratio 0.67 (2:3) | -3.13 | 4.27 | -0.73 | 0.465 | 0.465 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -150,7 +150,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.92, *p* = 0.430, η²_G = 0.073
+- *F* = 1.05, *p* = 0.393, η²_G = 0.118
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -159,9 +159,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Small Ratio 0.33 (1:3) vs Small Ratio 0.5 (1:2) | -1.19 | 5 | = 0.486 | -0.24 [-0.74, 0.80] | small | n.s. |
-| Small Ratio 0.33 (1:3) vs Small Ratio 0.67 (2:3) | -1.08 | 5 | = 0.486 | -0.59 [-1.43, 0.36] | medium | n.s. |
-| Small Ratio 0.5 (1:2) vs Small Ratio 0.67 (2:3) | -0.75 | 5 | = 0.486 | -0.40 [-1.01, 0.85] | small | n.s. |
+| Small Ratio 0.33 (1:3) vs Small Ratio 0.5 (1:2) | 1.03 | 4 | = 0.544 | 0.77 [-0.68, 1.51] | medium | n.s. |
+| Small Ratio 0.33 (1:3) vs Small Ratio 0.67 (2:3) | 1.45 | 4 | = 0.544 | 0.72 [-0.21, 1.66] | medium | n.s. |
+| Small Ratio 0.5 (1:2) vs Small Ratio 0.67 (2:3) | 0.00 | 4 | = 1.000 | 0.00 [-1.32, 0.43] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -171,10 +171,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 108.77, BIC = 118.44
-- **Small Ratio 0.5 (1:2) vs Small Ratio 0.33 (1:3)**: *β* = 0.13, *SE* = 0.300, *z* = 0.443, *p* = 0.658
-- **Small Ratio 0.67 (2:3) vs Small Ratio 0.33 (1:3)**: *β* = 0.26, *SE* = 0.327, *z* = 0.804, *p* = 0.422
-- **SNR**: *β* = 0.50, *SE* = 0.102, *z* = 4.953, *p* < .001
+- AIC = 105.52, BIC = 114.85
+- **Small Ratio 0.5 (1:2) vs Small Ratio 0.33 (1:3)**: *β* = 0.29, *SE* = 0.389, *z* = 0.760, *p* = 0.447
+- **Small Ratio 0.67 (2:3) vs Small Ratio 0.33 (1:3)**: *β* = 0.18, *SE* = 0.370, *z* = 0.477, *p* = 0.633
+- **SNR**: *β* = -0.58, *SE* = 0.109, *z* = -5.366, *p* < .001
 
 _Reference condition: **Small Ratio 0.33 (1:3)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -187,9 +187,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Small Ratio 0.33 (1:3) - Small Ratio 0.5 (1:2) | -0.13 | 0.30 | -0.44 | 0.658 | 0.883 | n.s. |
-| Small Ratio 0.33 (1:3) - Small Ratio 0.67 (2:3) | -0.26 | 0.33 | -0.80 | 0.422 | 0.806 | n.s. |
-| Small Ratio 0.5 (1:2) - Small Ratio 0.67 (2:3) | -0.13 | 0.34 | -0.39 | 0.699 | 0.883 | n.s. |
+| Small Ratio 0.33 (1:3) - Small Ratio 0.5 (1:2) | -0.30 | 0.39 | -0.76 | 0.447 | 0.831 | n.s. |
+| Small Ratio 0.33 (1:3) - Small Ratio 0.67 (2:3) | -0.18 | 0.37 | -0.48 | 0.633 | 0.866 | n.s. |
+| Small Ratio 0.5 (1:2) - Small Ratio 0.67 (2:3) | 0.12 | 0.36 | 0.33 | 0.742 | 0.866 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -197,7 +197,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.56, *p* = 0.589, η²_G = 0.089
+- *F* = 0.04, *p* = 0.965, η²_G = 0.005
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -206,9 +206,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Small Ratio 0.33 (1:3) vs Small Ratio 0.5 (1:2) | -0.15 | 5 | = 0.887 | -0.08 [-0.79, 0.75] | negligible | n.s. |
-| Small Ratio 0.33 (1:3) vs Small Ratio 0.67 (2:3) | -1.19 | 5 | = 0.832 | -0.72 [-1.11, 0.59] | medium | n.s. |
-| Small Ratio 0.5 (1:2) vs Small Ratio 0.67 (2:3) | -0.63 | 5 | = 0.832 | -0.48 [-0.99, 0.87] | small | n.s. |
+| Small Ratio 0.33 (1:3) vs Small Ratio 0.5 (1:2) | 0.01 | 4 | = 0.996 | 0.00 [-1.05, 1.05] | negligible | n.s. |
+| Small Ratio 0.33 (1:3) vs Small Ratio 0.67 (2:3) | -0.24 | 4 | = 0.996 | -0.13 [-1.28, 0.46] | negligible | n.s. |
+| Small Ratio 0.5 (1:2) vs Small Ratio 0.67 (2:3) | -0.19 | 4 | = 0.996 | -0.13 [-1.02, 0.66] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_

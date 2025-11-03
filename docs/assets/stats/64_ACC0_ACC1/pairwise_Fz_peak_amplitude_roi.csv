@@ -1,0 +1,2 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,BF10,cohen,ci_lower,ci_upper
+condition,64 Correct,64 Incorrect,True,True,1.8389432612854444,5.0,two-sided,0.125317794060577,1.085,0.7625415469464448,-0.43739431474045076,1.9388852001000978

@@ -1,6 +1,6 @@
 {
   "analysis_id": "landing_on_2_ACC1",
-  "date_analyzed": "2025-11-03T02:32:34.306976",
+  "date_analyzed": "2025-11-03T15:20:54.552153",
   "baseline_ms": [
     -100,
     0
@@ -10,7 +10,7 @@
   "n_subjects_total": 24,
   "n_evokeds_included": 120,
   "conditions": [
-    "increasing 1 to 2",
+    "1 to 2",
     "2 to 2",
     "3 to 2",
     "4 to 2",

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:42:22
+**Generated:** 2025-11-03 15:46:01
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Crossover (with 1) | 7 | 100.57 ms | 14.32 | 5.41 | [84.00, 112.00] |
-| Crossover (without 1) | 8 | 99.00 ms | 13.98 | 4.94 | [84.00, 112.00] |
-| Small (with 1) | 13 | 101.23 ms | 11.24 | 3.12 | [84.00, 112.00] |
-| Small (without 1) | 11 | 96.73 ms | 11.43 | 3.45 | [84.00, 112.00] |
+| Crossover (with 1) | 17 | 99.53 ms | 10.38 | 2.52 | [84.00, 112.00] |
+| Crossover (without 1) | 16 | 101.50 ms | 9.56 | 2.39 | [84.00, 112.00] |
+| Small (with 1) | 11 | 94.91 ms | 10.89 | 3.28 | [84.00, 112.00] |
+| Small (without 1) | 13 | 96.92 ms | 11.91 | 3.30 | [84.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Crossover (with 1) | 7 | 1.39 µV | 0.96 | 0.36 | [0.32, 2.79] |
-| Crossover (without 1) | 8 | 1.22 µV | 0.69 | 0.24 | [0.24, 2.21] |
-| Small (with 1) | 13 | 1.75 µV | 0.94 | 0.26 | [0.78, 3.99] |
-| Small (without 1) | 11 | 2.17 µV | 1.44 | 0.44 | [0.25, 5.40] |
+| Crossover (with 1) | 17 | -1.51 µV | 0.93 | 0.23 | [-4.07, -0.46] |
+| Crossover (without 1) | 16 | -1.77 µV | 1.07 | 0.27 | [-4.95, -0.67] |
+| Small (with 1) | 11 | -1.75 µV | 1.03 | 0.31 | [-3.77, -0.62] |
+| Small (without 1) | 13 | -3.11 µV | 1.37 | 0.38 | [-5.76, -0.82] |
 
 
 ### 2.2 N1 Component
@@ -132,11 +132,11 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 313.11, BIC = 324.75
-- **Crossover (without 1) vs Crossover (with 1)**: *β* = -1.80, *SE* = 5.160, *z* = -0.350, *p* = 0.727
-- **Small (with 1) vs Crossover (with 1)**: *β* = -0.71, *SE* = 5.161, *z* = -0.138, *p* = 0.891
-- **Small (without 1) vs Crossover (with 1)**: *β* = -6.31, *SE* = 5.164, *z* = -1.222, *p* = 0.222
-- **SNR**: *β* = 1.62, *SE* = 1.842, *z* = 0.881, *p* = 0.378
+- AIC = 429.07, BIC = 443.37
+- **Crossover (without 1) vs Crossover (with 1)**: *β* = 1.56, *SE* = 2.635, *z* = 0.593, *p* = 0.553
+- **Small (with 1) vs Crossover (with 1)**: *β* = -4.54, *SE* = 2.927, *z* = -1.553, *p* = 0.120
+- **Small (without 1) vs Crossover (with 1)**: *β* = -2.11, *SE* = 2.811, *z* = -0.749, *p* = 0.454
+- **SNR**: *β* = 1.99, *SE* = 0.970, *z* = 2.051, *p* = 0.040
 
 _Reference condition: **Crossover (with 1)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -149,12 +149,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Crossover (with 1) - Crossover (without 1) | 1.80 | 5.16 | 0.35 | 0.727 | 0.980 | n.s. |
-| Crossover (with 1) - Small (with 1) | 0.71 | 5.16 | 0.14 | 0.891 | 0.980 | n.s. |
-| Crossover (with 1) - Small (without 1) | 6.31 | 5.16 | 1.22 | 0.222 | 0.714 | n.s. |
-| Crossover (without 1) - Small (with 1) | -1.09 | 5.15 | -0.21 | 0.832 | 0.980 | n.s. |
-| Crossover (without 1) - Small (without 1) | 4.51 | 5.16 | 0.87 | 0.382 | 0.854 | n.s. |
-| Small (with 1) - Small (without 1) | 5.60 | 4.12 | 1.36 | 0.174 | 0.682 | n.s. |
+| Crossover (with 1) - Crossover (without 1) | -1.56 | 2.64 | -0.59 | 0.553 | 0.820 | n.s. |
+| Crossover (with 1) - Small (with 1) | 4.55 | 2.93 | 1.55 | 0.120 | 0.474 | n.s. |
+| Crossover (with 1) - Small (without 1) | 2.11 | 2.81 | 0.75 | 0.454 | 0.820 | n.s. |
+| Crossover (without 1) - Small (with 1) | 6.11 | 3.07 | 1.99 | 0.047 | 0.249 | n.s. |
+| Crossover (without 1) - Small (without 1) | 3.67 | 2.95 | 1.24 | 0.214 | 0.619 | n.s. |
+| Small (with 1) - Small (without 1) | -2.44 | 3.13 | -0.78 | 0.436 | 0.820 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -162,7 +162,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.05, *p* = 0.178, η²_G = 0.204
+- *F* = 0.81, *p* = 0.510, η²_G = 0.081
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -171,12 +171,12 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Crossover (with 1) vs Crossover (without 1) | 0.81 | 3 | = 0.572 | 0.41 [-0.92, 1.65] | small | n.s. |
-| Crossover (with 1) vs Small (with 1) | -0.30 | 3 | = 0.783 | -0.19 [-1.38, 0.55] | negligible | n.s. |
-| Crossover (with 1) vs Small (without 1) | 1.73 | 3 | = 0.363 | 0.89 [-0.64, 1.57] | large | n.s. |
-| Crossover (without 1) vs Small (with 1) | -1.73 | 3 | = 0.363 | -0.70 [-2.52, 0.52] | medium | n.s. |
-| Crossover (without 1) vs Small (without 1) | 0.96 | 3 | = 0.572 | 0.43 [-1.20, 2.16] | small | n.s. |
-| Small (with 1) vs Small (without 1) | 2.65 | 3 | = 0.363 | 1.40 [-0.32, 1.32] | large | n.s. |
+| Crossover (with 1) vs Crossover (without 1) | -0.98 | 5 | = 0.747 | -0.40 [-0.88, 0.30] | small | n.s. |
+| Crossover (with 1) vs Small (with 1) | 0.62 | 5 | = 0.806 | 0.25 [-0.23, 1.18] | small | n.s. |
+| Crossover (with 1) vs Small (without 1) | 0.45 | 5 | = 0.806 | 0.28 [-0.43, 0.86] | small | n.s. |
+| Crossover (without 1) vs Small (with 1) | 1.17 | 5 | = 0.747 | 0.65 [-0.35, 1.43] | medium | n.s. |
+| Crossover (without 1) vs Small (without 1) | 1.88 | 5 | = 0.714 | 0.73 [-0.48, 1.10] | medium | n.s. |
+| Small (with 1) vs Small (without 1) | 0.00 | 5 | = 1.000 | 0.00 [-0.70, 0.84] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -186,11 +186,11 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 107.71, BIC = 119.36
-- **Crossover (without 1) vs Crossover (with 1)**: *β* = -0.24, *SE* = 0.403, *z* = -0.591, *p* = 0.554
-- **Small (with 1) vs Crossover (with 1)**: *β* = -0.38, *SE* = 0.400, *z* = -0.945, *p* = 0.345
-- **Small (without 1) vs Crossover (with 1)**: *β* = 0.12, *SE* = 0.402, *z* = 0.308, *p* = 0.758
-- **SNR**: *β* = 0.58, *SE* = 0.129, *z* = 4.458, *p* < .001
+- AIC = 160.70, BIC = 175.00
+- **Crossover (without 1) vs Crossover (with 1)**: *β* = -0.18, *SE* = 0.278, *z* = -0.650, *p* = 0.516
+- **Small (with 1) vs Crossover (with 1)**: *β* = -0.19, *SE* = 0.310, *z* = -0.605, *p* = 0.545
+- **Small (without 1) vs Crossover (with 1)**: *β* = -1.77, *SE* = 0.296, *z* = -6.001, *p* < .001
+- **SNR**: *β* = -0.36, *SE* = 0.085, *z* = -4.190, *p* < .001
 
 _Reference condition: **Crossover (with 1)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -203,12 +203,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Crossover (with 1) - Crossover (without 1) | 0.24 | 0.40 | 0.59 | 0.554 | 0.911 | n.s. |
-| Crossover (with 1) - Small (with 1) | 0.38 | 0.40 | 0.95 | 0.345 | 0.879 | n.s. |
-| Crossover (with 1) - Small (without 1) | -0.12 | 0.40 | -0.31 | 0.758 | 0.919 | n.s. |
-| Crossover (without 1) - Small (with 1) | 0.14 | 0.38 | 0.36 | 0.716 | 0.919 | n.s. |
-| Crossover (without 1) - Small (without 1) | -0.36 | 0.39 | -0.94 | 0.350 | 0.879 | n.s. |
-| Small (with 1) - Small (without 1) | -0.50 | 0.32 | -1.57 | 0.115 | 0.521 | n.s. |
+| Crossover (with 1) - Crossover (without 1) | 0.18 | 0.28 | 0.65 | 0.516 | 0.886 | n.s. |
+| Crossover (with 1) - Small (with 1) | 0.19 | 0.31 | 0.60 | 0.545 | 0.886 | n.s. |
+| Crossover (with 1) - Small (without 1) | 1.78 | 0.30 | 6.00 | < .001 | < .001 | *** |
+| Crossover (without 1) - Small (with 1) | 0.01 | 0.32 | 0.02 | 0.982 | 0.982 | n.s. |
+| Crossover (without 1) - Small (without 1) | 1.59 | 0.31 | 5.21 | < .001 | < .001 | *** |
+| Small (with 1) - Small (without 1) | 1.59 | 0.33 | 4.80 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -216,8 +216,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.52, *p* = 0.124, η²_G = 0.257
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 4.07, *p* = 0.027, η²_G = 0.343
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -225,12 +225,12 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Crossover (with 1) vs Crossover (without 1) | 1.69 | 3 | = 0.324 | 0.22 [-0.91, 1.66] | small | n.s. |
-| Crossover (with 1) vs Small (with 1) | -1.16 | 3 | = 0.329 | -0.28 [-1.51, 0.46] | small | n.s. |
-| Crossover (with 1) vs Small (without 1) | -1.56 | 3 | = 0.324 | -0.90 [-1.43, 0.73] | large | n.s. |
-| Crossover (without 1) vs Small (with 1) | -3.03 | 3 | = 0.324 | -0.60 [-2.05, 0.70] | medium | n.s. |
-| Crossover (without 1) vs Small (without 1) | -1.90 | 3 | = 0.324 | -1.08 [-2.87, 0.97] | large | n.s. |
-| Small (with 1) vs Small (without 1) | -1.25 | 3 | = 0.329 | -0.80 [-0.93, 0.62] | medium | n.s. |
+| Crossover (with 1) vs Crossover (without 1) | 1.07 | 5 | = 0.417 | 0.34 [-0.22, 0.97] | small | n.s. |
+| Crossover (with 1) vs Small (with 1) | 1.04 | 5 | = 0.417 | 0.60 [-0.50, 0.86] | medium | n.s. |
+| Crossover (with 1) vs Small (without 1) | 2.24 | 5 | = 0.151 | 1.51 [0.21, 1.77] | large | n.s. |
+| Crossover (without 1) vs Small (with 1) | 0.78 | 5 | = 0.471 | 0.33 [-1.01, 0.68] | small | n.s. |
+| Crossover (without 1) vs Small (without 1) | 2.30 | 5 | = 0.151 | 1.32 [0.13, 2.09] | large | n.s. |
+| Small (with 1) vs Small (without 1) | 2.29 | 5 | = 0.151 | 1.00 [0.05, 1.92] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -580,6 +580,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
+**Fz amplitude:** Significant main effect of condition (*p* = 0.027) (no significant pairwise comparisons)
 **P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
   - Crossover (with 1) showed smaller amplitude than Small (without 1) (*d* = -0.62)
   - Crossover (without 1) showed smaller amplitude than Small (without 1) (*d* = -0.66)

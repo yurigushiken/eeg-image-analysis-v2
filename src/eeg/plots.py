@@ -475,12 +475,13 @@ def make_component_figure(
 
         # NEW: Show FAL in title instead of collapsed peak
         title_suffix = "*" if used_fallback else ""
-        title_color = None
+        # Choose a safe title color; default to black if not specified
+        title_color = "black"
         try:
-            if colors and label in colors:
+            if colors and label in colors and colors[label]:
                 title_color = colors[label]
         except Exception:
-            title_color = None
+            title_color = "black"
         # Compact title to reduce vertical footprint for small condition sets
         if is_sparse:
             title_text = (

@@ -1,9 +1,9 @@
 {
   "analysis_id": "prime_22",
-  "duration_seconds": 12.072,
+  "duration_seconds": 8.064,
   "num_figures": 6,
   "largest_png_bytes": 850922,
-  "total_png_bytes": 3675710,
+  "total_png_bytes": 3676618,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -11,7 +11,7 @@
     "prime_22-P1.png": 850922,
     "prime_22-N1.png": 844296,
     "prime_22-P3b.png": 317298,
-    "prime_22-Fz.png": 848217,
+    "prime_22-Fz.png": 849125,
     "prime_22-P1_N1_peak_to_peak.png": 353613
   }
 }

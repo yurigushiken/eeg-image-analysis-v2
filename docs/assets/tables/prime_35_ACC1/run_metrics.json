@@ -1,9 +1,9 @@
 {
   "analysis_id": "prime_35_ACC1",
-  "duration_seconds": 9.644,
+  "duration_seconds": 9.154,
   "num_figures": 6,
   "largest_png_bytes": 939648,
-  "total_png_bytes": 4669812,
+  "total_png_bytes": 4679848,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -11,7 +11,7 @@
     "prime_35_ACC1-P1.png": 894521,
     "prime_35_ACC1-N1.png": 939648,
     "prime_35_ACC1-P3b.png": 919399,
-    "prime_35_ACC1-Fz.png": 900606,
+    "prime_35_ACC1-Fz.png": 910642,
     "prime_35_ACC1-P1_N1_peak_to_peak.png": 418519
   }
 }

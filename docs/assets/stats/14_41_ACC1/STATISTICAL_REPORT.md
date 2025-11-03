@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:28:34
+**Generated:** 2025-11-03 15:31:41
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 4 to 1 | 8 | 111.00 ms | 14.62 | 5.17 | [88.00, 124.00] |
-| Increasing 1 to 4 | 13 | 109.54 ms | 15.79 | 4.38 | [88.00, 124.00] |
+| Decreasing 4 to 1 | 16 | 114.00 ms | 11.22 | 2.80 | [88.00, 124.00] |
+| Increasing 1 to 4 | 11 | 106.55 ms | 11.35 | 3.42 | [88.00, 124.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 4 to 1 | 8 | 2.92 µV | 1.19 | 0.42 | [1.26, 5.17] |
-| Increasing 1 to 4 | 13 | 2.78 µV | 1.50 | 0.42 | [0.85, 6.50] |
+| Decreasing 4 to 1 | 16 | -4.02 µV | 2.32 | 0.58 | [-8.54, -1.47] |
+| Increasing 1 to 4 | 11 | -3.30 µV | 1.13 | 0.34 | [-4.46, -1.07] |
 
 
 ### 2.2 N1 Component
@@ -116,9 +116,9 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 175.57, BIC = 180.79
-- **Increasing 1 to 4 vs Decreasing 4 to 1**: *β* = -9.66, *SE* = 1.731, *z* = -5.579, *p* < .001
-- **SNR**: *β* = 13.19, *SE* = 1.994, *z* = 6.616, *p* < .001
+- AIC = 215.06, BIC = 221.54
+- **Increasing 1 to 4 vs Decreasing 4 to 1**: *β* = -8.28, *SE* = 5.218, *z* = -1.587, *p* = 0.112
+- **SNR**: *β* = -0.79, *SE* = 1.736, *z* = -0.453, *p* = 0.650
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
 
@@ -130,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 4 to 1 - Increasing 1 to 4 | 9.66 | 1.73 | 5.58 | < .001 | < .001 | *** |
+| Decreasing 4 to 1 - Increasing 1 to 4 | 8.28 | 5.22 | 1.59 | 0.112 | 0.112 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -138,8 +138,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.23, *p* = 0.654, η²_G = 0.023
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 14.78, *p* = 0.006, η²_G = 0.439
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -147,7 +147,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 4 to 1 vs Increasing 1 to 4 | 0.48 | 4 | = 0.654 | 0.28 [-1.04, 1.47] | small | n.s. |
+| Decreasing 4 to 1 vs Increasing 1 to 4 | 3.85 | 7 | = 0.006 | 1.65 [0.20, 2.52] | large | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -157,9 +157,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 66.34, BIC = 71.56
-- **Increasing 1 to 4 vs Decreasing 4 to 1**: *β* = -0.68, *SE* = 0.304, *z* = -2.245, *p* = 0.025
-- **SNR**: *β* = 0.95, *SE* = 0.263, *z* = 3.633, *p* < .001
+- AIC = 110.18, BIC = 116.66
+- **Increasing 1 to 4 vs Decreasing 4 to 1**: *β* = 0.63, *SE* = 0.563, *z* = 1.121, *p* = 0.262
+- **SNR**: *β* = -0.78, *SE* = 0.274, *z* = -2.826, *p* = 0.005
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
 
@@ -171,7 +171,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 4 to 1 - Increasing 1 to 4 | 0.68 | 0.30 | 2.25 | 0.025 | 0.025 | * |
+| Decreasing 4 to 1 - Increasing 1 to 4 | -0.63 | 0.56 | -1.12 | 0.262 | 0.262 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -179,7 +179,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.16, *p* = 0.710, η²_G = 0.011
+- *F* = 1.22, *p* = 0.307, η²_G = 0.040
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -188,7 +188,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 4 to 1 vs Increasing 1 to 4 | 0.40 | 4 | = 0.710 | 0.19 [-1.07, 1.43] | negligible | n.s. |
+| Decreasing 4 to 1 vs Increasing 1 to 4 | -1.10 | 7 | = 0.307 | -0.38 [-1.26, 0.48] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -454,6 +454,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
+**Fz latency:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
+  - Decreasing 4 to 1 showed greater latency than Increasing 1 to 4 (*d* = 1.65)
 **N1 amplitude:** Significant main effect of condition (*p* = 0.002). Post-hoc tests revealed:
   - Decreasing 4 to 1 showed greater amplitude than Increasing 1 to 4 (*d* = 1.01)
 **P1 latency:** Significant main effect of condition (*p* = 0.009). Post-hoc tests revealed:

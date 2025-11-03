@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 13:27:43
+**Generated:** 2025-11-03 15:30:15
 
 ---
 
@@ -41,19 +41,19 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 7 | 100.57 ms | 14.50 | 5.48 | [88.00, 120.00] |
-| Decreasing 3 to 1 | 10 | 106.40 ms | 12.54 | 3.96 | [88.00, 120.00] |
-| Increasing 1 to 2 | 14 | 106.29 ms | 12.33 | 3.29 | [88.00, 120.00] |
-| Increasing 1 to 3 | 18 | 107.11 ms | 13.20 | 3.11 | [88.00, 120.00] |
+| Decreasing 2 to 1 | 17 | 108.71 ms | 12.82 | 3.11 | [88.00, 120.00] |
+| Decreasing 3 to 1 | 14 | 109.71 ms | 11.50 | 3.07 | [88.00, 120.00] |
+| Increasing 1 to 2 | 10 | 101.60 ms | 12.68 | 4.01 | [88.00, 120.00] |
+| Increasing 1 to 3 | 6 | 106.00 ms | 7.04 | 2.88 | [96.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 7 | 4.34 µV | 1.88 | 0.71 | [1.14, 7.15] |
-| Decreasing 3 to 1 | 10 | 2.61 µV | 1.28 | 0.40 | [1.23, 5.34] |
-| Increasing 1 to 2 | 14 | 2.77 µV | 1.90 | 0.51 | [0.61, 5.82] |
-| Increasing 1 to 3 | 18 | 2.91 µV | 2.26 | 0.53 | [0.53, 8.62] |
+| Decreasing 2 to 1 | 17 | -2.83 µV | 1.58 | 0.38 | [-6.40, -0.28] |
+| Decreasing 3 to 1 | 14 | -2.87 µV | 1.78 | 0.48 | [-6.48, -1.32] |
+| Increasing 1 to 2 | 10 | -1.97 µV | 0.85 | 0.27 | [-3.35, -0.73] |
+| Increasing 1 to 3 | 6 | -3.67 µV | 1.92 | 0.79 | [-5.86, -1.15] |
 
 
 ### 2.2 N1 Component
@@ -132,11 +132,11 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 398.90, BIC = 412.14
-- **Decreasing 3 to 1 vs Decreasing 2 to 1**: *β* = 5.92, *SE* = 5.979, *z* = 0.990, *p* = 0.322
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = 6.65, *SE* = 5.529, *z* = 1.203, *p* = 0.229
-- **Increasing 1 to 3 vs Decreasing 2 to 1**: *β* = 7.22, *SE* = 5.337, *z* = 1.353, *p* = 0.176
-- **SNR**: *β* = 1.11, *SE* = 1.157, *z* = 0.962, *p* = 0.336
+- AIC = 375.02, BIC = 387.97
+- **Decreasing 3 to 1 vs Decreasing 2 to 1**: *β* = 0.54, *SE* = 3.947, *z* = 0.137, *p* = 0.891
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -8.20, *SE* = 4.508, *z* = -1.818, *p* = 0.069
+- **Increasing 1 to 3 vs Decreasing 2 to 1**: *β* = -2.08, *SE* = 5.260, *z* = -0.396, *p* = 0.692
+- **SNR**: *β* = 0.14, *SE* = 1.051, *z* = 0.129, *p* = 0.898
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -149,12 +149,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Decreasing 3 to 1 | -5.92 | 5.98 | -0.99 | 0.322 | 0.789 | n.s. |
-| Decreasing 2 to 1 - Increasing 1 to 2 | -6.65 | 5.53 | -1.20 | 0.229 | 0.727 | n.s. |
-| Decreasing 2 to 1 - Increasing 1 to 3 | -7.22 | 5.34 | -1.35 | 0.176 | 0.687 | n.s. |
-| Decreasing 3 to 1 - Increasing 1 to 2 | -0.73 | 5.04 | -0.14 | 0.885 | 0.990 | n.s. |
-| Decreasing 3 to 1 - Increasing 1 to 3 | -1.30 | 4.79 | -0.27 | 0.786 | 0.990 | n.s. |
-| Increasing 1 to 2 - Increasing 1 to 3 | -0.57 | 4.17 | -0.14 | 0.891 | 0.990 | n.s. |
+| Decreasing 2 to 1 - Decreasing 3 to 1 | -0.54 | 3.95 | -0.14 | 0.891 | 0.953 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 8.20 | 4.51 | 1.82 | 0.069 | 0.301 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 3 | 2.08 | 5.26 | 0.40 | 0.692 | 0.953 | n.s. |
+| Decreasing 3 to 1 - Increasing 1 to 2 | 8.74 | 4.55 | 1.92 | 0.055 | 0.287 | n.s. |
+| Decreasing 3 to 1 - Increasing 1 to 3 | 2.62 | 5.58 | 0.47 | 0.638 | 0.953 | n.s. |
+| Increasing 1 to 2 - Increasing 1 to 3 | -6.11 | 6.12 | -1.00 | 0.318 | 0.783 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -171,11 +171,11 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 173.68, BIC = 186.92
-- **Decreasing 3 to 1 vs Decreasing 2 to 1**: *β* = -1.47, *SE* = 0.545, *z* = -2.693, *p* = 0.007
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.94, *SE* = 0.492, *z* = -1.900, *p* = 0.057
-- **Increasing 1 to 3 vs Decreasing 2 to 1**: *β* = -1.15, *SE* = 0.478, *z* = -2.395, *p* = 0.017
-- **SNR**: *β* = 0.87, *SE* = 0.106, *z* = 8.183, *p* < .001
+- AIC = 143.27, BIC = 156.22
+- **Decreasing 3 to 1 vs Decreasing 2 to 1**: *β* = -0.41, *SE* = 0.300, *z* = -1.365, *p* = 0.172
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = 0.73, *SE* = 0.334, *z* = 2.193, *p* = 0.028
+- **Increasing 1 to 3 vs Decreasing 2 to 1**: *β* = -0.12, *SE* = 0.399, *z* = -0.287, *p* = 0.774
+- **SNR**: *β* = -0.69, *SE* = 0.085, *z* = -8.174, *p* < .001
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -188,12 +188,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Decreasing 3 to 1 | 1.47 | 0.55 | 2.69 | 0.007 | 0.042 | * |
-| Decreasing 2 to 1 - Increasing 1 to 2 | 0.93 | 0.49 | 1.90 | 0.057 | 0.211 | n.s. |
-| Decreasing 2 to 1 - Increasing 1 to 3 | 1.15 | 0.48 | 2.40 | 0.017 | 0.080 | n.s. |
-| Decreasing 3 to 1 - Increasing 1 to 2 | -0.53 | 0.45 | -1.18 | 0.239 | 0.560 | n.s. |
-| Decreasing 3 to 1 - Increasing 1 to 3 | -0.32 | 0.42 | -0.77 | 0.439 | 0.685 | n.s. |
-| Increasing 1 to 2 - Increasing 1 to 3 | 0.21 | 0.37 | 0.58 | 0.565 | 0.685 | n.s. |
+| Decreasing 2 to 1 - Decreasing 3 to 1 | 0.41 | 0.30 | 1.37 | 0.172 | 0.433 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | -0.73 | 0.33 | -2.19 | 0.028 | 0.134 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 3 | 0.11 | 0.40 | 0.29 | 0.774 | 0.774 | n.s. |
+| Decreasing 3 to 1 - Increasing 1 to 2 | -1.14 | 0.35 | -3.26 | 0.001 | 0.007 | ** |
+| Decreasing 3 to 1 - Increasing 1 to 3 | -0.29 | 0.41 | -0.72 | 0.474 | 0.723 | n.s. |
+| Increasing 1 to 2 - Increasing 1 to 3 | 0.85 | 0.44 | 1.93 | 0.054 | 0.200 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._

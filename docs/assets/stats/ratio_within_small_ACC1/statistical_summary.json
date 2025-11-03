@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:49:54",
+  "timestamp": "2025-11-03 15:55:16",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_ratio_within_small_ACC1__wyzakrn.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_ratio_within_small_ACC1_ulk0qhm1.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\ratio_within_small_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -53,21 +53,21 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.9196102314250914,
-        "p_unc": 0.4299168440010658,
+        "F": 1.0526315789473681,
+        "p_unc": 0.39279815297067916,
         "output_file": "anova_Fz_peak_latency_ms.csv",
-        "epsilon": 0.582416414503187,
-        "effect_size_ng2": 0.07344357976653693
+        "epsilon": 0.8000000000000003,
+        "effect_size_ng2": 0.11764705882352942
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 0.559069958083568,
-        "p_unc": 0.5886258416551228,
+        "F": 0.036055530740442085,
+        "p_unc": 0.9647425502634954,
         "output_file": "anova_Fz_peak_amplitude_roi.csv",
-        "epsilon": 0.5850827316826716,
-        "effect_size_ng2": 0.08858635840975326
+        "epsilon": 0.7866934917837982,
+        "effect_size_ng2": 0.004805874192729074
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -211,8 +211,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 309.0981463577883,
-        "bic": 318.7636538336537,
+        "aic": 280.55938664706366,
+        "bic": 289.89147501600013,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 3,
@@ -223,8 +223,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 108.77362453911488,
-        "bic": 118.43913201498023,
+        "aic": 105.51949425101499,
+        "bic": 114.85158261995147,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 3,

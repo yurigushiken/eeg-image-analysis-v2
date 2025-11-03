@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:35:02",
+  "timestamp": "2025-11-03 15:39:22",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_from1_to_any_mjd1wmvf.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_from1_to_any_dnxkpuj6.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\from1_to_any\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -50,24 +50,10 @@
   "results": {
     "anova": {
       "Fz_peak_latency_ms": {
-        "component": "Fz",
-        "dv": "peak_latency_ms",
-        "test": "ANOVA",
-        "F": 0.620689655172413,
-        "p_unc": 0.5824099722991694,
-        "output_file": "anova_Fz_peak_latency_ms.csv",
-        "epsilon": 0.67767929089444,
-        "effect_size_ng2": 0.12
+        "error": "float division by zero"
       },
       "Fz_peak_amplitude_roi": {
-        "component": "Fz",
-        "dv": "peak_amplitude_roi",
-        "test": "ANOVA",
-        "F": 1.0457234561689583,
-        "p_unc": 0.43120030104544427,
-        "output_file": "anova_Fz_peak_amplitude_roi.csv",
-        "epsilon": 0.5222041877709535,
-        "effect_size_ng2": 0.2868531165373475
+        "error": "float division by zero"
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -209,8 +195,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 285.5529894917597,
-        "bic": 295.37850645011804,
+        "aic": 249.98334760502024,
+        "bic": 259.1415107527172,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 3,
@@ -221,8 +207,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 117.70303839856598,
-        "bic": 127.5285553569243,
+        "aic": 100.00072671819417,
+        "bic": 109.15888986589114,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 3,

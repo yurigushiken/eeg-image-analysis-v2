@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 13:28:14",
+  "timestamp": "2025-11-03 15:31:06",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_ACC1_nnb578io.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_ACC1__pzb4t5m.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\13_31_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -53,21 +53,21 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.5384615384615384,
-        "p_unc": 0.4869154338816687,
+        "F": 0.05084745762711864,
+        "p_unc": 0.8360832258079629,
         "output_file": "anova_Fz_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.03225806451612903
+        "effect_size_ng2": 0.003484320557491289
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 0.06082139998034249,
-        "p_unc": 0.8122784522812919,
+        "F": 0.5532699907169903,
+        "p_unc": 0.510943921043121,
         "output_file": "anova_Fz_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.004148944993387136
+        "effect_size_ng2": 0.026249522141764556
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -209,8 +209,8 @@
         "component": "Fz",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 229.2288884368329,
-        "bic": 235.88991098770893,
+        "aic": 156.7625889090663,
+        "bic": 161.74125027683624,
         "converged": true,
         "output_file": "lmm_Fz_peak_latency_ms.json",
         "n_conditions": 2,
@@ -221,8 +221,8 @@
         "component": "Fz",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 110.6135425901734,
-        "bic": 117.27456514104941,
+        "aic": 76.32002622249772,
+        "bic": 81.29868759026768,
         "converged": true,
         "output_file": "lmm_Fz_peak_amplitude_roi.json",
         "n_conditions": 2,

@@ -1,9 +1,9 @@
 {
   "analysis_id": "32_23",
-  "duration_seconds": 6.972,
+  "duration_seconds": 7.833,
   "num_figures": 6,
   "largest_png_bytes": 634526,
-  "total_png_bytes": 3209443,
+  "total_png_bytes": 3192230,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -11,7 +11,7 @@
     "32_23-P1.png": 591210,
     "32_23-N1.png": 576797,
     "32_23-P3b.png": 634526,
-    "32_23-Fz.png": 597003,
+    "32_23-Fz.png": 579790,
     "32_23-P1_N1_peak_to_peak.png": 234534
   }
 }

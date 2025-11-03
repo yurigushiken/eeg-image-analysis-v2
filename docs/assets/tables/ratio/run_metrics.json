@@ -1,9 +1,9 @@
 {
   "analysis_id": "ratio",
-  "duration_seconds": 17.915,
+  "duration_seconds": 10.938,
   "num_figures": 6,
   "largest_png_bytes": 786603,
-  "total_png_bytes": 3843444,
+  "total_png_bytes": 3857249,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -11,7 +11,7 @@
     "ratio-P1.png": 736066,
     "ratio-N1.png": 747717,
     "ratio-P3b.png": 786603,
-    "ratio-Fz.png": 714069,
+    "ratio-Fz.png": 727874,
     "ratio-P1_N1_peak_to_peak.png": 318864
   }
 }
