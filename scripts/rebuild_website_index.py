@@ -91,10 +91,16 @@ def main() -> int:
             else:
                 cells.append("<td></td>")
 
-        # Add P2P cell if present
-        p2p_rel = f"assets/plots/{analysis_id}/{analysis_id}-P1_N1_peak_to_peak.png"
-        if (analysis_dir / f"{analysis_id}-P1_N1_peak_to_peak.png").exists():
-            alt = f"P1↔N1 peak-to-peak for {analysis_id}"
+        # Add P2P cell if present (support multiple filename variants just in case)
+        p2p_variants = [
+            f"{analysis_id}-P1_N1_peak_to_peak.png",
+            f"{analysis_id}-P1<->N1_peak_to_peak.png",
+            f"{analysis_id}-P1↔N1_peak_to_peak.png",
+        ]
+        p2p_file = next((v for v in p2p_variants if (analysis_dir / v).exists()), None)
+        if p2p_file:
+            p2p_rel = f"assets/plots/{analysis_id}/{p2p_file}"
+            alt = f"P1↔N1 peak to peak for {analysis_id}"
             cells.append(
                 f"<td><a href='{p2p_rel}' data-lightbox aria-label='{alt}'>"
                 f"<img class='thumb' src='{p2p_rel}' alt='{alt}' /></a></td>"
@@ -136,7 +142,7 @@ def main() -> int:
         f"{start_marker}\n"
         '<table class="grid-table">\n'
         '<thead>\n'
-        '  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>\n'
+        '  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 peak to peak</th></tr>\n'
         '</thead>\n'
         '<tbody>\n'
         f"{''.join(all_rows)}\n"

@@ -69,7 +69,7 @@ def ensure_index_template(index_path: str) -> None:
             <!-- AUTO-GENERATED START -->
             <table class="grid-table">
             <thead>
-              <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>
+              <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 peak to peak</th></tr>
             </thead>
             <tbody>
             </tbody>
@@ -349,11 +349,21 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     else:
         fz_cell = "<td></td>"
 
-    # Peak-to-peak image relative path
-    p2p_rel = f"assets/plots/{analysis_id}/{analysis_id}-P1_N1_peak_to_peak.png"
-    p2p_abs = os.path.join(docs_root, p2p_rel)
-    if os.path.exists(p2p_abs):
-        alt_p2p = f"P1↔N1 peak-to-peak for {analysis_id}"
+    # Peak-to-peak image relative path (support multiple filename variants)
+    p2p_variants = [
+        f"{analysis_id}-P1_N1_peak_to_peak.png",
+        f"{analysis_id}-P1<->N1_peak_to_peak.png",
+        f"{analysis_id}-P1↔N1_peak_to_peak.png",
+    ]
+    p2p_file = None
+    for v in p2p_variants:
+        candidate_abs = os.path.join(docs_root, "assets/plots", analysis_id, v)
+        if os.path.exists(candidate_abs):
+            p2p_file = v
+            break
+    if p2p_file:
+        p2p_rel = f"assets/plots/{analysis_id}/{p2p_file}"
+        alt_p2p = f"P1↔N1 peak to peak for {analysis_id}"
         p2p_cell = (
             f"<td><a href='{p2p_rel}' data-lightbox aria-label='{alt_p2p}'><img class='thumb' src='{p2p_rel}' alt='{alt_p2p}' /></a></td>"
         )
@@ -388,7 +398,7 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     for aid in sorted_ids:
         all_rows.extend(analysis_entries[aid])
 
-    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
+    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 peak to peak</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
     new_content = pre + start_marker + new_block + end_marker + post
 
     with open(index_path, "w", encoding="utf-8") as f:
