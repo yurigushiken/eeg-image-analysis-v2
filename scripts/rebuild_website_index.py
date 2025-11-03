@@ -92,12 +92,13 @@ def main() -> int:
                 cells.append("<td></td>")
 
         # Add P2P cell if present (support multiple filename variants just in case)
+        current_dir = plots_dir / analysis_id
         p2p_variants = [
             f"{analysis_id}-P1_N1_peak_to_peak.png",
             f"{analysis_id}-P1<->N1_peak_to_peak.png",
             f"{analysis_id}-P1↔N1_peak_to_peak.png",
         ]
-        p2p_file = next((v for v in p2p_variants if (analysis_dir / v).exists()), None)
+        p2p_file = next((v for v in p2p_variants if (current_dir / v).exists()), None)
         if p2p_file:
             p2p_rel = f"assets/plots/{analysis_id}/{p2p_file}"
             alt = f"P1↔N1 peak to peak for {analysis_id}"
