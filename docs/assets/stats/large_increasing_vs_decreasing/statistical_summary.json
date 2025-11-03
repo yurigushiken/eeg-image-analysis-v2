@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 02:46:52",
+  "timestamp": "2025-11-03 13:45:54",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_large_increasing_vs_decreasing__dv5l50x.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_large_increasing_vs_decreasing_x50gcgaj.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\large_increasing_vs_decreasing\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -44,6 +44,7 @@
     "anova": true,
     "pairwise": true,
     "lmm": true,
+    "lmm_pairwise": true,
     "descriptives": true
   },
   "results": {
@@ -211,7 +212,10 @@
         "aic": 111.98004042707674,
         "bic": 115.84298403827565,
         "converged": true,
-        "output_file": "lmm_Fz_peak_latency_ms.json"
+        "output_file": "lmm_Fz_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
@@ -220,7 +224,10 @@
         "aic": 46.774083968265465,
         "bic": 50.63702757946437,
         "converged": true,
-        "output_file": "lmm_Fz_peak_amplitude_roi.json"
+        "output_file": "lmm_Fz_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -229,7 +236,10 @@
         "aic": 398.438064728524,
         "bic": 407.5812717109695,
         "converged": true,
-        "output_file": "lmm_N1_peak_latency_ms.json"
+        "output_file": "lmm_N1_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "N1_peak_amplitude_roi": {
         "component": "N1",
@@ -238,7 +248,10 @@
         "aic": 180.8188418788963,
         "bic": 189.96204886134177,
         "converged": true,
-        "output_file": "lmm_N1_peak_amplitude_roi.json"
+        "output_file": "lmm_N1_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "P1_peak_latency_ms": {
         "component": "P1",
@@ -247,7 +260,10 @@
         "aic": 190.2161966292275,
         "bic": 196.50667931933492,
         "converged": true,
-        "output_file": "lmm_P1_peak_latency_ms.json"
+        "output_file": "lmm_P1_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "P1_peak_amplitude_roi": {
         "component": "P1",
@@ -256,7 +272,10 @@
         "aic": 98.0900480797418,
         "bic": 104.38053076984922,
         "converged": true,
-        "output_file": "lmm_P1_peak_amplitude_roi.json"
+        "output_file": "lmm_P1_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "P3b_peak_latency_ms": {
         "component": "P3b",
@@ -265,7 +284,10 @@
         "aic": 340.94644284702224,
         "bic": 348.57824547010307,
         "converged": true,
-        "output_file": "lmm_P3b_peak_latency_ms.json"
+        "output_file": "lmm_P3b_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       },
       "P3b_peak_amplitude_roi": {
         "component": "P3b",
@@ -274,7 +296,10 @@
         "aic": 141.14977616767686,
         "bic": 148.78157879075766,
         "converged": true,
-        "output_file": "lmm_P3b_peak_amplitude_roi.json"
+        "output_file": "lmm_P3b_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "Large_Decreasing",
+        "interpretation_note": ""
       }
     },
     "lmm_pairwise": {

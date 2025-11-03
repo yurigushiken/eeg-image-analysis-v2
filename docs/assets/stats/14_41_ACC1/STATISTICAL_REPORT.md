@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 02:33:39
+**Generated:** 2025-11-03 13:28:34
 
 ---
 
@@ -121,6 +121,7 @@ This section presents the results of repeated-measures statistical tests.
 - **SNR**: *β* = 13.19, *SE* = 1.994, *z* = 6.616, *p* < .001
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -161,6 +162,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 0.95, *SE* = 0.263, *z* = 3.633, *p* < .001
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -204,6 +206,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 0.32, *SE* = 0.926, *z* = 0.345, *p* = 0.730
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -244,6 +247,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = -0.48, *SE* = 0.127, *z* = -3.826, *p* < .001
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -286,6 +290,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 1.15, *SE* = 1.183, *z* = 0.972, *p* = 0.331
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -326,6 +331,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 0.64, *SE* = 0.259, *z* = 2.476, *p* = 0.013
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -369,6 +375,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 2.14, *SE* = 1.505, *z* = 1.419, *p* = 0.156
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -409,6 +416,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 0.23, *SE* = 0.077, *z* = 2.998, *p* = 0.003
 
 _Reference condition: **Decreasing 4 to 1** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**

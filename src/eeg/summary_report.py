@@ -418,6 +418,18 @@ class StatisticalReportGenerator:
                         # Document reference condition if available
                         if reference_condition:
                             lines.append(f"_Reference condition: **{reference_condition}** (all condition effects are contrasts vs. this baseline)._")
+                        # If multiple condition levels are present, add guidance to consult LMM pairwise
+                        try:
+                            n_cond_rows = 0
+                            for eff in summary[1:]:
+                                n = str(eff.get('name', ''))
+                                if n.startswith('condition['):
+                                    n_cond_rows += 1
+                        except Exception:
+                            n_cond_rows = 0
+                        if n_cond_rows >= 2 and lmm_pairwise_df is not None and len(lmm_pairwise_df) > 0:
+                            lines.append("_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._")
+                        lines.append("")
 
                         lines.append("_Note: LMM uses all available subject data via maximum likelihood estimation._")
                         lines.append("")

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 02:42:56
+**Generated:** 2025-11-03 13:40:19
 
 ---
 
@@ -139,6 +139,8 @@ This section presents the results of repeated-measures statistical tests.
 - **SNR**: *β* = 3.47, *SE* = 1.856, *z* = 1.868, *p* = 0.062
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -176,6 +178,8 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 - **SNR**: *β* = 0.97, *SE* = 0.141, *z* = 6.875, *p* < .001
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -216,6 +220,8 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 - **SNR**: *β* = 0.50, *SE* = 0.728, *z* = 0.687, *p* = 0.492
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -268,6 +274,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = -0.54, *SE* = 0.076, *z* = -7.131, *p* < .001
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -323,6 +331,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 2.53, *SE* = 2.163, *z* = 1.171, *p* = 0.242
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -360,6 +370,8 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 - **SNR**: *β* = 0.97, *SE* = 0.237, *z* = 4.072, *p* < .001
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -400,6 +412,8 @@ _Pairwise tests could not be computed (insufficient paired samples)._
 - **SNR**: *β* = 0.67, *SE* = 1.915, *z* = 0.348, *p* = 0.728
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -452,6 +466,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = 0.72, *SE* = 0.082, *z* = 8.785, *p* < .001
 
 _Reference condition: **1 to 3** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**

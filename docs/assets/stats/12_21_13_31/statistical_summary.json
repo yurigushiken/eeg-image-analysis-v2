@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 02:32:40",
+  "timestamp": "2025-11-03 13:27:31",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_21_13_31_97uvyj_c.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_12_21_13_31_435y68kx.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\12_21_13_31\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -44,6 +44,7 @@
     "anova": true,
     "pairwise": true,
     "lmm": true,
+    "lmm_pairwise": true,
     "descriptives": true
   },
   "results": {
@@ -186,7 +187,10 @@
         "aic": 370.2151477956029,
         "bic": 382.8617852239951,
         "converged": true,
-        "output_file": "lmm_Fz_peak_latency_ms.json"
+        "output_file": "lmm_Fz_peak_latency_ms.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "Fz_peak_amplitude_roi": {
         "component": "Fz",
@@ -195,7 +199,10 @@
         "aic": 164.04327441943312,
         "bic": 176.68991184782536,
         "converged": true,
-        "output_file": "lmm_Fz_peak_amplitude_roi.json"
+        "output_file": "lmm_Fz_peak_amplitude_roi.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -204,7 +211,10 @@
         "aic": 687.2806617118081,
         "bic": 704.1276964426579,
         "converged": true,
-        "output_file": "lmm_N1_peak_latency_ms.json"
+        "output_file": "lmm_N1_peak_latency_ms.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "N1_peak_amplitude_roi": {
         "component": "N1",
@@ -213,7 +223,10 @@
         "aic": 326.1285808887059,
         "bic": 342.9756156195557,
         "converged": true,
-        "output_file": "lmm_N1_peak_amplitude_roi.json"
+        "output_file": "lmm_N1_peak_amplitude_roi.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "P1_peak_latency_ms": {
         "component": "P1",
@@ -222,7 +235,10 @@
         "aic": 485.6934409080446,
         "bic": 500.6953839927853,
         "converged": true,
-        "output_file": "lmm_P1_peak_latency_ms.json"
+        "output_file": "lmm_P1_peak_latency_ms.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "P1_peak_amplitude_roi": {
         "component": "P1",
@@ -231,7 +247,10 @@
         "aic": 233.34525494462645,
         "bic": 248.34719802936718,
         "converged": true,
-        "output_file": "lmm_P1_peak_amplitude_roi.json"
+        "output_file": "lmm_P1_peak_amplitude_roi.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "P3b_peak_latency_ms": {
         "component": "P3b",
@@ -240,7 +259,10 @@
         "aic": 766.6350592284545,
         "bic": 783.0416971814302,
         "converged": true,
-        "output_file": "lmm_P3b_peak_latency_ms.json"
+        "output_file": "lmm_P3b_peak_latency_ms.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       },
       "P3b_peak_amplitude_roi": {
         "component": "P3b",
@@ -249,7 +271,10 @@
         "aic": 365.8638869696839,
         "bic": 382.2705249226597,
         "converged": true,
-        "output_file": "lmm_P3b_peak_amplitude_roi.json"
+        "output_file": "lmm_P3b_peak_amplitude_roi.json",
+        "n_conditions": 4,
+        "reference_condition": "Decreasing 2 to 1",
+        "interpretation_note": "Treatment coding used. Coefficients compare each level to the reference. For complete pairwise differences, see LMM pairwise results."
       }
     },
     "lmm_pairwise": {

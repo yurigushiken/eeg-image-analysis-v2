@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-11-03 02:35:21
+**Generated:** 2025-11-03 13:30:26
 
 ---
 
@@ -122,6 +122,7 @@ _Pairwise test results not available._
 - **SNR**: *β* = -0.96, *SE* = 1.396, *z* = -0.686, *p* = 0.493
 
 _Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**
@@ -162,6 +163,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 - **SNR**: *β* = -0.77, *SE* = 0.099, *z* = -7.851, *p* < .001
 
 _Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
+
 _Note: LMM uses all available subject data via maximum likelihood estimation._
 
 **LMM Pairwise Comparisons:**

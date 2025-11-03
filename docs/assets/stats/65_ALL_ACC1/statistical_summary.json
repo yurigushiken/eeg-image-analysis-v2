@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 02:35:27",
+  "timestamp": "2025-11-03 13:30:32",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ALL_ACC1_a55zj_aj.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ALL_ACC1_nujm51b4.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\65_ALL_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -44,6 +44,7 @@
     "anova": true,
     "pairwise": true,
     "lmm": true,
+    "lmm_pairwise": true,
     "descriptives": true
   },
   "results": {
@@ -165,7 +166,10 @@
         "aic": 297.19252116781996,
         "bic": 305.5103293984682,
         "converged": true,
-        "output_file": "lmm_N1_peak_latency_ms.json"
+        "output_file": "lmm_N1_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "65 ACC1",
+        "interpretation_note": ""
       },
       "N1_peak_amplitude_roi": {
         "component": "N1",
@@ -174,7 +178,10 @@
         "aic": 141.95225218788582,
         "bic": 150.27006041853406,
         "converged": true,
-        "output_file": "lmm_N1_peak_amplitude_roi.json"
+        "output_file": "lmm_N1_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "65 ACC1",
+        "interpretation_note": ""
       },
       "P1_peak_latency_ms": {
         "error": "No data available for component 'P1' after filtering"
@@ -189,7 +196,10 @@
         "aic": 201.69214867105052,
         "bic": 207.98263136115793,
         "converged": true,
-        "output_file": "lmm_P3b_peak_latency_ms.json"
+        "output_file": "lmm_P3b_peak_latency_ms.json",
+        "n_conditions": 2,
+        "reference_condition": "65 ACC1",
+        "interpretation_note": ""
       },
       "P3b_peak_amplitude_roi": {
         "component": "P3b",
@@ -198,7 +208,10 @@
         "aic": 99.3254375722713,
         "bic": 105.61592026237871,
         "converged": true,
-        "output_file": "lmm_P3b_peak_amplitude_roi.json"
+        "output_file": "lmm_P3b_peak_amplitude_roi.json",
+        "n_conditions": 2,
+        "reference_condition": "65 ACC1",
+        "interpretation_note": ""
       }
     },
     "lmm_pairwise": {

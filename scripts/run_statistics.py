@@ -464,6 +464,11 @@ def run_lmm_tests(stats: ERPStatistics, cfg: dict, output_dir: Path):
 
                 # Store for summary
                 key = f"{component}_{dv}"
+                # Count conditions present in filtered data
+                try:
+                    n_conditions = stats.filter_data(component=component, **lmm_filters)['condition'].nunique()
+                except Exception:
+                    n_conditions = None
                 results[key] = {
                     'component': component,
                     'dv': dv,
@@ -471,14 +476,27 @@ def run_lmm_tests(stats: ERPStatistics, cfg: dict, output_dir: Path):
                     'aic': float(result['aic']),
                     'bic': float(result['bic']),
                     'converged': result['converged'],
-                    'output_file': str(output_filename)
+                    'output_file': str(output_filename),
+                    'n_conditions': int(n_conditions) if n_conditions is not None else None,
+                    'reference_condition': result.get('reference_condition'),
+                    'interpretation_note': (
+                        "Treatment coding used. Coefficients compare each level to the reference. "
+                        "For complete pairwise differences, see LMM pairwise results."
+                        if (n_conditions or 0) >= 3 else ""
+                    )
                 }
 
                 # Print to console if enabled
                 if cfg['output']['print_to_console']:
                     print(result['summary'])
                     print(f"\n  AIC: {result['aic']:.2f}, BIC: {result['bic']:.2f}")
-                    print(f"  Converged: {result['converged']}\n")
+                    print(f"  Converged: {result['converged']}")
+                    # Guidance when multiple conditions are present
+                    if (n_conditions or 0) >= 3:
+                        ref = result.get('reference_condition', 'reference')
+                        print(f"  Note: Treatment coding with reference '{ref}'. For all pairwise contrasts, see lmm_pairwise CSV.\n")
+                    else:
+                        print()
 
             except Exception as e:
                 print(f"    ERROR: {e}")
@@ -653,6 +671,7 @@ def create_summary_report(all_results: dict, cfg: dict, output_dir: Path, stats:
         'anova': cfg['tests']['anova']['enabled'],
         'pairwise': cfg['tests']['pairwise']['enabled'],
         'lmm': cfg['tests']['lmm']['enabled'],
+        'lmm_pairwise': cfg['tests'].get('lmm_pairwise', {}).get('enabled', False),
         'descriptives': cfg['descriptives']['enabled']
     }
 
