@@ -1,6 +1,6 @@
 {
   "analysis_id": "cardinality_all",
-  "date_analyzed": "2025-10-20T23:10:36.386106",
+  "date_analyzed": "2025-11-03T02:23:04.146621",
   "baseline_ms": [
     -100,
     0
@@ -55,6 +55,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 144,
+      "n_conditions": 6
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 108.0,
+      "peak_gfp_amplitude": -0.8328816813997492,
+      "fwhm_ms": 28.10478174844087,
+      "window_start_ms": 91.9904589611576,
+      "window_end_ms": 120.09524070959847,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 144,

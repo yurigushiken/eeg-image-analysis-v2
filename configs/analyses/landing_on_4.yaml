@@ -1,53 +1,74 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-
-    - name: "1 to 4"
-      conditions: ["14"]
-      color: "#02d502"  # green
-      linestyle: "-"    # solid
-    - name: "2 to 4"
-      conditions: ["24"]
-      color: "#02d502"  # green
-      linestyle: "--"    # dashed
-    - name: "3 to 4"
-      conditions: ["34"]
-      color: "#02d502"  # green
-      linestyle: ":"    # dotted
-    - name: "Cardinality4"
-      conditions: ["44"]
-      color: "#2c6dde"  # blue
-      linestyle: "-"    # solid
-    - name: "5 to 4"
-      conditions: ["54"]
-      color: "#ef0000"  # red
-      linestyle: ":"   # dotted
-    - name: "6 to 4"
-      conditions: ["64"]
-      color: "#ef0000"  # red
-      linestyle: "-"   # dashed
-
-
-components: ["P1", "N1", "P3b"]
+  - name: 1 to 4
+    conditions:
+    - '14'
+    color: '#02d502'
+    linestyle: '-'
+  - name: 2 to 4
+    conditions:
+    - '24'
+    color: '#02d502'
+    linestyle: --
+  - name: 3 to 4
+    conditions:
+    - '34'
+    color: '#02d502'
+    linestyle: ':'
+  - name: Cardinality4
+    conditions:
+    - '44'
+    color: '#2c6dde'
+    linestyle: '-'
+  - name: 5 to 4
+    conditions:
+    - '54'
+    color: '#ef0000'
+    linestyle: ':'
+  - name: 6 to 4
+    conditions:
+    - '64'
+    color: '#ef0000'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#2c6dde", "#ff00ff", "#ef0000", "#ff4500", "#ff7f00", "#ffbf00"]
-
+  colors:
+  - '#2c6dde'
+  - '#ff00ff'
+  - '#ef0000'
+  - '#ff4500'
+  - '#ff7f00'
+  - '#ffbf00'
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/landing_on_4_any_preceding"
-  tables_dir: "docs/assets/tables/landing_on_4_any_preceding"
-  page: "docs/analysis/landing_on_4_any_preceding.md"
+  page: docs/analysis/landing_on_4_any_preceding.md
+  plots_dir: docs/assets/plots/landing_on_4_any_preceding
+  tables_dir: docs/assets/tables/landing_on_4_any_preceding
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

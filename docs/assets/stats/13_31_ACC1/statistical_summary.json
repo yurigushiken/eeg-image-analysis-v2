@@ -1,16 +1,17 @@
 {
-  "timestamp": "2025-10-30 19:15:58",
+  "timestamp": "2025-11-03 02:33:19",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_ACC1__fvfklud.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_13_31_ACC1_ag2q79au.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\13_31_ACC1\\subject_measurements.csv",
   "components_tested": [
+    "Fz",
     "N1",
     "P1",
     "P3b"
   ],
   "dependent_variables": [
-    "mean_amplitude_roi",
-    "latency_frac_area_ms"
+    "peak_latency_ms",
+    "peak_amplitude_roi"
   ],
   "library_versions": {
     "pingouin": "0.5.5",
@@ -24,8 +25,8 @@
   "analysis_settings": {
     "measurement_window_method": "collapsed_localizer_fwhm",
     "fal_fraction": 0.5,
-    "latency_measure": "fal_50",
-    "amplitude_measure": "mean",
+    "latency_measure": "peak",
+    "amplitude_measure": "peak",
     "filters": {
       "min_snr": null,
       "dropna": true
@@ -35,7 +36,7 @@
   "correction_family": "component",
   "missing_data_policy": "ANOVA and pairwise tests were run on complete cases. Subject-condition combinations with missing latency values or below-threshold SNR were excluded listwise. Linear mixed-effects models retained all subjects with valid measurements to optimally handle missing data.",
   "data_summary": {
-    "n_total_measurements": 144,
+    "n_total_measurements": 192,
     "n_subjects": 24,
     "n_conditions": 2
   },
@@ -47,233 +48,307 @@
   },
   "results": {
     "anova": {
-      "N1_mean_amplitude_roi": {
+      "Fz_peak_latency_ms": {
+        "component": "Fz",
+        "dv": "peak_latency_ms",
+        "test": "ANOVA",
+        "F": 0.5384615384615384,
+        "p_unc": 0.4869154338816687,
+        "output_file": "anova_Fz_peak_latency_ms.csv",
+        "epsilon": 1.0,
+        "effect_size_ng2": 0.03225806451612903
+      },
+      "Fz_peak_amplitude_roi": {
+        "component": "Fz",
+        "dv": "peak_amplitude_roi",
+        "test": "ANOVA",
+        "F": 0.06082139998034249,
+        "p_unc": 0.8122784522812919,
+        "output_file": "anova_Fz_peak_amplitude_roi.csv",
+        "epsilon": 1.0,
+        "effect_size_ng2": 0.004148944993387136
+      },
+      "N1_peak_latency_ms": {
         "component": "N1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 6.185723348798231,
-        "p_unc": 0.02356074798897904,
-        "output_file": "anova_N1_mean_amplitude_roi.csv",
+        "F": 12.136302294197048,
+        "p_unc": 0.0028426197661932796,
+        "output_file": "anova_N1_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.07670095588704129
+        "effect_size_ng2": 0.1149694525609139
       },
-      "N1_latency_frac_area_ms": {
+      "N1_peak_amplitude_roi": {
         "component": "N1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 4.00539571269391,
-        "p_unc": 0.061580494767001906,
-        "output_file": "anova_N1_latency_frac_area_ms.csv",
+        "F": 3.543092176723494,
+        "p_unc": 0.0770261765574752,
+        "output_file": "anova_N1_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.0454586568016867
+        "effect_size_ng2": 0.0659766842115908
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_latency_ms": {
         "component": "P1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.6586637352898921,
-        "p_unc": 0.435923938831157,
-        "output_file": "anova_P1_mean_amplitude_roi.csv",
+        "F": 7.82188841201716,
+        "p_unc": 0.01889917980522911,
+        "output_file": "anova_P1_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.030280712519842358
+        "effect_size_ng2": 0.32530120481927693
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_amplitude_roi": {
         "component": "P1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 5.777192229776152,
-        "p_unc": 0.03708813250573464,
-        "output_file": "anova_P1_latency_frac_area_ms.csv",
+        "F": 2.5291877624064827,
+        "p_unc": 0.14284189829162094,
+        "output_file": "anova_P1_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.2896154771121257
+        "effect_size_ng2": 0.08571031381999557
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_latency_ms": {
         "component": "P3b",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.5545411503745714,
-        "p_unc": 0.4666386288411787,
-        "output_file": "anova_P3b_mean_amplitude_roi.csv",
+        "F": 0.3670258537650409,
+        "p_unc": 0.5526334987043389,
+        "output_file": "anova_P3b_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.010415232047913735
+        "effect_size_ng2": 0.014563317074861089
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_amplitude_roi": {
         "component": "P3b",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 0.546403947945923,
-        "p_unc": 0.46987515954852666,
-        "output_file": "anova_P3b_latency_frac_area_ms.csv",
+        "F": 0.05540253632806326,
+        "p_unc": 0.8167278472671414,
+        "output_file": "anova_P3b_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.014725446022579884
+        "effect_size_ng2": 0.0009250548008739115
       }
     },
     "pairwise": {
-      "N1_mean_amplitude_roi": {
+      "Fz_peak_latency_ms": {
+        "component": "Fz",
+        "dv": "peak_latency_ms",
+        "test": "Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_Fz_peak_latency_ms.csv"
+      },
+      "Fz_peak_amplitude_roi": {
+        "component": "Fz",
+        "dv": "peak_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_Fz_peak_amplitude_roi.csv"
+      },
+      "N1_peak_latency_ms": {
         "component": "N1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "Pairwise",
         "n_comparisons": 1,
         "n_significant": 1,
         "correction": "fdr_bh",
-        "output_file": "pairwise_N1_mean_amplitude_roi.csv"
+        "output_file": "pairwise_N1_peak_latency_ms.csv"
       },
-      "N1_latency_frac_area_ms": {
+      "N1_peak_amplitude_roi": {
         "component": "N1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "fdr_bh",
-        "output_file": "pairwise_N1_latency_frac_area_ms.csv"
+        "output_file": "pairwise_N1_peak_amplitude_roi.csv"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_latency_ms": {
         "component": "P1",
-        "dv": "mean_amplitude_roi",
-        "test": "Pairwise",
-        "n_comparisons": 1,
-        "n_significant": 0,
-        "correction": "fdr_bh",
-        "output_file": "pairwise_P1_mean_amplitude_roi.csv"
-      },
-      "P1_latency_frac_area_ms": {
-        "component": "P1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_latency_ms",
         "test": "Pairwise",
         "n_comparisons": 1,
         "n_significant": 1,
         "correction": "fdr_bh",
-        "output_file": "pairwise_P1_latency_frac_area_ms.csv"
+        "output_file": "pairwise_P1_peak_latency_ms.csv"
       },
-      "P3b_mean_amplitude_roi": {
-        "component": "P3b",
-        "dv": "mean_amplitude_roi",
+      "P1_peak_amplitude_roi": {
+        "component": "P1",
+        "dv": "peak_amplitude_roi",
         "test": "Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "fdr_bh",
-        "output_file": "pairwise_P3b_mean_amplitude_roi.csv"
+        "output_file": "pairwise_P1_peak_amplitude_roi.csv"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_latency_ms": {
         "component": "P3b",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_latency_ms",
         "test": "Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "fdr_bh",
-        "output_file": "pairwise_P3b_latency_frac_area_ms.csv"
+        "output_file": "pairwise_P3b_peak_latency_ms.csv"
+      },
+      "P3b_peak_amplitude_roi": {
+        "component": "P3b",
+        "dv": "peak_amplitude_roi",
+        "test": "Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "fdr_bh",
+        "output_file": "pairwise_P3b_peak_amplitude_roi.csv"
       }
     },
     "lmm": {
-      "N1_mean_amplitude_roi": {
+      "Fz_peak_latency_ms": {
+        "component": "Fz",
+        "dv": "peak_latency_ms",
+        "test": "LMM",
+        "aic": 229.2288884368329,
+        "bic": 235.88991098770893,
+        "converged": true,
+        "output_file": "lmm_Fz_peak_latency_ms.json"
+      },
+      "Fz_peak_amplitude_roi": {
+        "component": "Fz",
+        "dv": "peak_amplitude_roi",
+        "test": "LMM",
+        "aic": 110.6135425901734,
+        "bic": 117.27456514104941,
+        "converged": true,
+        "output_file": "lmm_Fz_peak_amplitude_roi.json"
+      },
+      "N1_peak_latency_ms": {
         "component": "N1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 147.6434921662869,
-        "bic": 156.33184025770373,
+        "aic": 379.2265441257553,
+        "bic": 387.91489221717217,
         "converged": true,
-        "output_file": "lmm_N1_mean_amplitude_roi.json"
+        "output_file": "lmm_N1_peak_latency_ms.json"
       },
-      "N1_latency_frac_area_ms": {
+      "N1_peak_amplitude_roi": {
         "component": "N1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 336.01904661871725,
-        "bic": 344.7073947101341,
+        "aic": 189.12635062460578,
+        "bic": 197.81469871602263,
         "converged": true,
-        "output_file": "lmm_N1_latency_frac_area_ms.json"
+        "output_file": "lmm_N1_peak_amplitude_roi.json"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_latency_ms": {
         "component": "P1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 110.46189007953456,
-        "bic": 117.94442788686696,
+        "aic": 245.55841275879976,
+        "bic": 253.04095056613215,
         "converged": true,
-        "output_file": "lmm_P1_mean_amplitude_roi.json"
+        "output_file": "lmm_P1_peak_latency_ms.json"
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_amplitude_roi": {
         "component": "P1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 204.77349772399128,
-        "bic": 212.25603553132368,
+        "aic": 125.0097249335069,
+        "bic": 132.4922627408393,
         "converged": true,
-        "output_file": "lmm_P1_latency_frac_area_ms.json"
+        "output_file": "lmm_P1_peak_amplitude_roi.json"
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_latency_ms": {
         "component": "P3b",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 194.26964476201903,
-        "bic": 202.7140420325887,
+        "aic": 411.9247734919669,
+        "bic": 420.36917076253656,
         "converged": true,
-        "output_file": "lmm_P3b_mean_amplitude_roi.json"
+        "output_file": "lmm_P3b_peak_latency_ms.json"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_amplitude_roi": {
         "component": "P3b",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 347.5446455129234,
-        "bic": 355.9890427834931,
+        "aic": 203.22291284377013,
+        "bic": 211.6673101143398,
         "converged": true,
-        "output_file": "lmm_P3b_latency_frac_area_ms.json"
+        "output_file": "lmm_P3b_peak_amplitude_roi.json"
       }
     },
     "lmm_pairwise": {
-      "N1_mean_amplitude_roi": {
+      "Fz_peak_latency_ms": {
+        "component": "Fz",
+        "dv": "peak_latency_ms",
+        "test": "LMM_Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "hs",
+        "output_file": "lmm_pairwise_Fz_peak_latency_ms.csv"
+      },
+      "Fz_peak_amplitude_roi": {
+        "component": "Fz",
+        "dv": "peak_amplitude_roi",
+        "test": "LMM_Pairwise",
+        "n_comparisons": 1,
+        "n_significant": 0,
+        "correction": "hs",
+        "output_file": "lmm_pairwise_Fz_peak_amplitude_roi.csv"
+      },
+      "N1_peak_latency_ms": {
         "component": "N1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
-        "n_significant": 0,
+        "n_significant": 1,
         "correction": "hs",
-        "output_file": "lmm_pairwise_N1_mean_amplitude_roi.csv"
+        "output_file": "lmm_pairwise_N1_peak_latency_ms.csv"
       },
-      "N1_latency_frac_area_ms": {
+      "N1_peak_amplitude_roi": {
         "component": "N1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "hs",
-        "output_file": "lmm_pairwise_N1_latency_frac_area_ms.csv"
+        "output_file": "lmm_pairwise_N1_peak_amplitude_roi.csv"
       },
-      "P1_mean_amplitude_roi": {
+      "P1_peak_latency_ms": {
         "component": "P1",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
-        "n_significant": 0,
+        "n_significant": 1,
         "correction": "hs",
-        "output_file": "lmm_pairwise_P1_mean_amplitude_roi.csv"
+        "output_file": "lmm_pairwise_P1_peak_latency_ms.csv"
       },
-      "P1_latency_frac_area_ms": {
+      "P1_peak_amplitude_roi": {
         "component": "P1",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "hs",
-        "output_file": "lmm_pairwise_P1_latency_frac_area_ms.csv"
+        "output_file": "lmm_pairwise_P1_peak_amplitude_roi.csv"
       },
-      "P3b_mean_amplitude_roi": {
+      "P3b_peak_latency_ms": {
         "component": "P3b",
-        "dv": "mean_amplitude_roi",
+        "dv": "peak_latency_ms",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "hs",
-        "output_file": "lmm_pairwise_P3b_mean_amplitude_roi.csv"
+        "output_file": "lmm_pairwise_P3b_peak_latency_ms.csv"
       },
-      "P3b_latency_frac_area_ms": {
+      "P3b_peak_amplitude_roi": {
         "component": "P3b",
-        "dv": "latency_frac_area_ms",
+        "dv": "peak_amplitude_roi",
         "test": "LMM_Pairwise",
         "n_comparisons": 1,
         "n_significant": 0,
         "correction": "hs",
-        "output_file": "lmm_pairwise_P3b_latency_frac_area_ms.csv"
+        "output_file": "lmm_pairwise_P3b_peak_amplitude_roi.csv"
       }
     }
   }

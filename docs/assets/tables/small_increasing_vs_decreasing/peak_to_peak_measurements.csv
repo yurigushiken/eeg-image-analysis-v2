@@ -1,0 +1,3 @@
+analysis_id,condition,p1_amp,n1_amp,p2p_amp,p1_lat_ms,n1_lat_ms,roi_channels
+small_increasing_vs_decreasing,Small_Decreasing,1.5081001167858434,-3.155568613693917,4.663668730479761,116.0,176.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83
+small_increasing_vs_decreasing,Small_Increasing,0.6935622441563916,-4.111196752511489,4.80475899666788,100.0,164.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83

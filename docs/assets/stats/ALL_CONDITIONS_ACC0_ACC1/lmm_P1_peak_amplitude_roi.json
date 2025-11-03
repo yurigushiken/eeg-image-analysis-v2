@@ -1,0 +1,44 @@
+{
+  "summary": [
+    {
+      "name": "Intercept",
+      "Coef.": "0.971",
+      "Std.Err.": "0.395",
+      "z": "2.460",
+      "P>|z|": "0.014",
+      "[0.025": "0.197",
+      "0.975]": "1.745"
+    },
+    {
+      "name": "condition[T.All Numerosity Comparisons (Incorrect)]",
+      "Coef.": "0.833",
+      "Std.Err.": "0.377",
+      "z": "2.211",
+      "P>|z|": "0.027",
+      "[0.025": "0.095",
+      "0.975]": "1.571"
+    },
+    {
+      "name": "snr",
+      "Coef.": "0.161",
+      "Std.Err.": "0.058",
+      "z": "2.783",
+      "P>|z|": "0.005",
+      "[0.025": "0.048",
+      "0.975]": "0.275"
+    },
+    {
+      "name": "Group Var",
+      "Coef.": "0.777",
+      "Std.Err.": "1.068",
+      "z": "",
+      "P>|z|": "",
+      "[0.025": "",
+      "0.975]": ""
+    }
+  ],
+  "aic": 87.17781376970932,
+  "bic": 93.83883632058533,
+  "converged": true,
+  "reference_condition": "All Numerosity Comparisons (Correct)"
+}

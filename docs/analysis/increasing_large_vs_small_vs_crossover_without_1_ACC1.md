@@ -8,11 +8,16 @@
 
 ![figure](docs/assets/plots/increasing_large_vs_small_vs_crossover_without_1_ACC1/increasing_large_vs_small_vs_crossover_without_1_ACC1-P3b.png)
 
+![figure](docs/assets/plots/increasing_large_vs_small_vs_crossover_without_1_ACC1/increasing_large_vs_small_vs_crossover_without_1_ACC1-Fz.png)
+
+![figure](docs/assets/plots/increasing_large_vs_small_vs_crossover_without_1_ACC1/increasing_large_vs_small_vs_crossover_without_1_ACC1-P1_N1_peak_to_peak.png)
+
 
 ## Notes
 
 - GFP-based collapsed localizer analysis with 72 subject-condition combinations.
-- Components analyzed: P1, N1, P3b
+- Components analyzed: P1, N1, P3b, Fz
 - P1: Peak at 100 ms, FWHM window [78.8, 112.4] ms (width: 33.7 ms)
 - N1: Peak at 164 ms, FWHM window [134.4, 208.4] ms (width: 74.0 ms)
 - P3b: Peak at 468 ms, FWHM window [423.5, 531.9] ms (width: 108.3 ms)
+- Fz: Peak at 100 ms, FWHM window [83.4, 112.3] ms (width: 28.9 ms)

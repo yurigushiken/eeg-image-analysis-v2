@@ -8,11 +8,16 @@
 
 ![figure](docs/assets/plots/from4_to_any/from4_to_any-P3b.png)
 
+![figure](docs/assets/plots/from4_to_any/from4_to_any-Fz.png)
+
+![figure](docs/assets/plots/from4_to_any/from4_to_any-P1_N1_peak_to_peak.png)
+
 
 ## Notes
 
 - GFP-based collapsed localizer analysis with 120 subject-condition combinations.
-- Components analyzed: P1, N1, P3b
+- Components analyzed: P1, N1, P3b, Fz
 - P1: Peak at 108 ms, FWHM window [92.7, 119.2] ms (width: 26.5 ms)
 - N1: Peak at 180 ms, FWHM window [140.9, 210.0] ms (width: 69.2 ms)
 - P3b: Peak at 456 ms, FWHM window [425.3, 541.4] ms (width: 116.1 ms)
+- Fz: Peak at 104 ms, FWHM window [89.1, 116.9] ms (width: 27.7 ms)

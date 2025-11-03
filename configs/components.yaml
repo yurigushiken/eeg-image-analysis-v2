@@ -25,3 +25,12 @@ components:
       roi_names: [P3B]
       polarity: positive
 # jean P3b window: 435-535
+
+  Fz:
+    window_ms: [80, 120]
+    rois: [Fz]
+    anatomical_region: "Frontal Midline (Fz)"
+    localizer:
+      method: roi
+      roi_names: [Fz]
+      polarity: negative

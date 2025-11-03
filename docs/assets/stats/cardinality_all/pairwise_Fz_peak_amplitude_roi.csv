@@ -1,0 +1,16 @@
+Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
+condition,Cardinality1,Cardinality2,True,True,0.0,two-sided,fdr_bh,nan,-0.9421081997630278,2.9810115797998584
+condition,Cardinality1,Cardinality3,True,True,0.0,two-sided,fdr_bh,nan,-10.537550632989083,12.908026147235889
+condition,Cardinality1,Cardinality4,True,True,0.0,two-sided,fdr_bh,nan,-0.9268853632914387,3.057363379225627
+condition,Cardinality1,Cardinality5,True,True,0.0,two-sided,fdr_bh,nan,-0.018156401422961377,5.049402937576085
+condition,Cardinality1,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-2.1591558755361664,3.049409785424687
+condition,Cardinality2,Cardinality3,True,True,0.0,two-sided,fdr_bh,nan,-0.6439041078703278,1.2474269023170543
+condition,Cardinality2,Cardinality4,True,True,0.0,two-sided,fdr_bh,nan,-0.7668195489000191,1.9124969894308168
+condition,Cardinality2,Cardinality5,True,True,0.0,two-sided,fdr_bh,nan,-1.8014425794619655,0.8255460861529531
+condition,Cardinality2,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-0.7090843423035368,2.032717289301344
+condition,Cardinality3,Cardinality4,True,True,0.0,two-sided,fdr_bh,nan,-0.8959637253440593,3.230505504614009
+condition,Cardinality3,Cardinality5,True,True,0.0,two-sided,fdr_bh,nan,-3.458197603266668,0.8618010778596987
+condition,Cardinality3,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-0.4829379379427494,1.8473924621082198
+condition,Cardinality4,Cardinality5,True,True,0.0,two-sided,fdr_bh,nan,-1.2527562732704833,1.2306475867205613
+condition,Cardinality4,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-1.1053701912072778,1.390548430898269
+condition,Cardinality5,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-1.0409897961445589,1.057919079425452

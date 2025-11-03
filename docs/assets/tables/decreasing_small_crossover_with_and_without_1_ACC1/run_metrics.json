@@ -1,15 +1,17 @@
 {
   "analysis_id": "decreasing_small_crossover_with_and_without_1_ACC1",
-  "duration_seconds": 15.591,
-  "num_figures": 4,
-  "largest_png_bytes": 843921,
-  "total_png_bytes": 2951124,
+  "duration_seconds": 9.388,
+  "num_figures": 6,
+  "largest_png_bytes": 796301,
+  "total_png_bytes": 3873845,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
-    "decreasing_small_crossover_with_and_without_1_ACC1-collapsed_localizer.png": 509560,
-    "decreasing_small_crossover_with_and_without_1_ACC1-P1.png": 793463,
-    "decreasing_small_crossover_with_and_without_1_ACC1-N1.png": 804180,
-    "decreasing_small_crossover_with_and_without_1_ACC1-P3b.png": 843921
+    "decreasing_small_crossover_with_and_without_1_ACC1-collapsed_localizer.png": 574068,
+    "decreasing_small_crossover_with_and_without_1_ACC1-P1.png": 724104,
+    "decreasing_small_crossover_with_and_without_1_ACC1-N1.png": 739805,
+    "decreasing_small_crossover_with_and_without_1_ACC1-P3b.png": 796301,
+    "decreasing_small_crossover_with_and_without_1_ACC1-Fz.png": 724678,
+    "decreasing_small_crossover_with_and_without_1_ACC1-P1_N1_peak_to_peak.png": 314889
   }
 }

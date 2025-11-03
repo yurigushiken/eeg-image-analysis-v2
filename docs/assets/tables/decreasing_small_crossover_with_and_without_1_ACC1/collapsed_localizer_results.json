@@ -1,6 +1,6 @@
 {
   "analysis_id": "decreasing_small_crossover_with_and_without_1_ACC1",
-  "date_analyzed": "2025-10-20T23:13:47.450612",
+  "date_analyzed": "2025-11-03T02:26:03.808805",
   "baseline_ms": [
     -100,
     0
@@ -53,6 +53,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 96,
+      "n_conditions": 4
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 108.0,
+      "peak_gfp_amplitude": -0.719987304075261,
+      "fwhm_ms": 33.26817242411664,
+      "window_start_ms": 88.93467558723623,
+      "window_end_ms": 122.20284801135287,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 96,

@@ -27,7 +27,7 @@ if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
 from eeg.config import load_config, load_components_config, load_electrodes_config
-from eeg.plots import make_collapsed_localizer_figure, make_component_figure, make_erp_figure
+from eeg.plots import make_collapsed_localizer_figure, make_component_figure, make_erp_figure, make_peak_to_peak_figure
 from eeg.report import write_analysis_page, ensure_index_template, update_index_grid
 from eeg.io import (
     discover_epoch_files,
@@ -42,6 +42,49 @@ from eeg.collapsed_localizer import compute_collapsed_localizer, compute_collaps
 from eeg.measures import mean_amplitude, fractional_area_latency, peak_latency, peak_amplitude
 import matplotlib.pyplot as plt
 import mne
+
+# Filesystem-safe figure saver (Windows-safe; normalizes separators)
+def _save_figure(fig, path_like, dpi: int = 300, **kwargs) -> None:
+    from pathlib import Path
+    import os
+    import re
+
+    def _sanitize_filename(name: str) -> str:
+        # Remove control chars and replace invalid Windows characters
+        name = re.sub(r"[\r\n\t]", " ", name)
+        name = re.sub(r"[<>:\\/\|\?\*]", "_", name)
+        return name.strip()
+
+    out_path = Path(path_like)
+    # Sanitize just the filename
+    safe_name = _sanitize_filename(out_path.name)
+    out_path = out_path.with_name(safe_name)
+    # Absolutize (resolve without strict so parent may not exist yet)
+    try:
+        out_path = out_path.expanduser().resolve(strict=False)
+    except Exception:
+        out_path = Path(os.path.abspath(str(out_path)))
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    def _attempt_save(p: Path):
+        fig.savefig(str(p), dpi=dpi, **kwargs)
+
+    try:
+        _attempt_save(out_path)
+    except OSError as e:
+        if getattr(e, 'errno', None) == 22:
+            # Log repr and retry with a simplified absolute path string
+            print(f"[ERROR] savefig failed (EINVAL): path={repr(str(out_path))} error={e}")
+            try:
+                alt = Path(os.path.abspath(str(out_path)))
+                _attempt_save(alt)
+            except Exception as e2:
+                print(f"[ERROR] savefig retry failed: path={repr(str(alt))} error={e2}")
+                raise
+        else:
+            print(f"[ERROR] savefig failed: path={repr(str(out_path))} error={e}")
+            raise
 
 
 def main() -> int:
@@ -326,7 +369,7 @@ def main() -> int:
     except Exception:
         pass
     cl_out_path = os.path.join(plots_dir, f"{analysis_id}-collapsed_localizer.png")
-    cl_fig.savefig(cl_out_path, dpi=int(cfg.plots.get("dpi", 300)))
+    _save_figure(cl_fig, cl_out_path, dpi=int(cfg.plots.get("dpi", 300)))
     plt.close(cl_fig)
     saved_figs.append(cl_out_path)
 
@@ -750,7 +793,7 @@ def main() -> int:
                 pass
 
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
-            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+            _save_figure(fig, out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
             saved_figs.append(out_path)
             saved_figs_map[comp] = out_path
@@ -820,7 +863,7 @@ def main() -> int:
             except Exception:
                 pass
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
-            fig.savefig(out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+            _save_figure(fig, out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
             saved_figs.append(out_path)
             saved_figs_map[comp] = out_path
@@ -829,6 +872,187 @@ def main() -> int:
             print(f"    Warning: Insufficient data to generate ERP for {comp}")
 
     print()
+
+    # === Optional: P1↔N1 Peak-to-Peak (using N1 ROI only) ===
+    # Controlled by YAML: measurement.peak_to_peak.enabled
+    try:
+        p2p_cfg = (getattr(cfg, "measurement", {}) or {}).get("peak_to_peak", {}) or {}
+        # Enable if explicitly requested; otherwise auto-enable when both P1 and N1 are analyzed
+        p2p_enabled = bool(p2p_cfg.get("enabled", False))
+        if not p2p_enabled:
+            try:
+                comps_lower = {str(c).upper() for c in (cfg.components or [])}
+                if "P1" in comps_lower and "N1" in comps_lower:
+                    p2p_enabled = True
+            except Exception:
+                pass
+    except Exception:
+        p2p_cfg = {}
+        p2p_enabled = False
+
+    if p2p_enabled:
+        # Require collapsed-localizer windows for P1 and N1
+        if ("P1" in collapsed_results) and ("N1" in collapsed_results):
+            print("Computing P1<->N1 peak-to-peak (N1 ROI) ...")
+
+            p1_win = (
+                float(collapsed_results["P1"]["window_start_ms"]),
+                float(collapsed_results["P1"]["window_end_ms"]),
+            )
+            n1_win = (
+                float(collapsed_results["N1"]["window_start_ms"]),
+                float(collapsed_results["N1"]["window_end_ms"]),
+            )
+
+            # Determine ROI channels: YAML override or default N1_L/N1_R
+            roi_names = p2p_cfg.get("roi") or components_cfg.get("N1", {}).get("rois", ["N1_L", "N1_R"]) or ["N1_L", "N1_R"]
+            n1_roi_channels = []
+            for rn in roi_names:
+                if rn in electrodes_cfg:
+                    n1_roi_channels.extend(electrodes_cfg[rn])
+            n1_roi_channels = list(dict.fromkeys(n1_roi_channels))  # dedupe, preserve order
+
+            if not n1_roi_channels:
+                print("  Warning: No N1 ROI channels found for peak-to-peak; skipping.")
+            else:
+                # Build curves per condition from grand averages
+                p2p_curves = {}
+                p1_lat_by = {}
+                n1_lat_by = {}
+                p1_amp_by = {}
+                n1_amp_by = {}
+
+                times_ms = None
+                for set_name, evoked_list in set_name_to_evokeds.items():
+                    if len(evoked_list) == 0:
+                        continue
+                    gav = mne.grand_average(evoked_list)
+                    if times_ms is None:
+                        times_ms = (gav.times * 1000.0).astype(float)
+                    try:
+                        roi_ev = gav.copy().pick_channels(n1_roi_channels, ordered=False)
+                        roi_curve = roi_ev.data.mean(axis=0) * 1e6
+                    except Exception as e:
+                        print(f"  Warning: P2P could not extract N1 ROI for {set_name}: {e}")
+                        continue
+
+                    # Compute metrics
+                    from eeg.measures import compute_peak_to_peak_metrics
+                    try:
+                        metrics = compute_peak_to_peak_metrics(
+                            signal=roi_curve,
+                            times_ms=times_ms,
+                            p1_window_ms=p1_win,
+                            n1_window_ms=n1_win,
+                            p_polarity="positive",
+                            n_polarity="negative",
+                        )
+                        p2p_curves[set_name] = roi_curve
+                        p1_lat_by[set_name] = metrics["p1_lat_ms"]
+                        n1_lat_by[set_name] = metrics["n1_lat_ms"]
+                        p1_amp_by[set_name] = metrics["p1_amp"]
+                        n1_amp_by[set_name] = metrics["n1_amp"]
+                    except Exception as e:
+                        print(f"  Warning: P2P computation failed for {set_name}: {e}")
+                        continue
+
+                if p2p_curves and times_ms is not None:
+                    # Assemble p2p deltas per label
+                    p2p_by = {lbl: float(p1_amp_by[lbl] - n1_amp_by[lbl]) for lbl in p1_amp_by.keys() if lbl in n1_amp_by}
+
+                    # Prepare colors/linestyles consistent with component plots
+                    condition_config_map = {item["name"]: item for item in sets}
+                    color_list = cfg.plots.get("colors") or []
+                    base_colors = {label: color_list[i % len(color_list)] for i, label in enumerate(sorted(p2p_curves.keys()))} if color_list else None
+                    def _color_for(label: str, default_color: str) -> str:
+                        if label in condition_config_map and "color" in condition_config_map[label]:
+                            return condition_config_map[label]["color"]
+                        lower = label.lower()
+                        if "increasing" in lower:
+                            return "#2ca02c"
+                        if "decreasing" in lower:
+                            return "#d62728"
+                        return default_color
+                    colors_map = None
+                    if base_colors:
+                        colors_map = {label: _color_for(label, base_colors[label]) for label in base_colors}
+
+                    styles_cfg = cfg.plots.get("linestyles") or {}
+                    base_linestyles = {k: v for k, v in styles_cfg.items()}
+                    def _style_for(label: str) -> str:
+                        if label in condition_config_map and "linestyle" in condition_config_map[label]:
+                            return condition_config_map[label]["linestyle"]
+                        lower = label.lower()
+                        if "cardinality" in lower:
+                            return "-"
+                        if "decreasing" in lower:
+                            return ":"
+                        if "increasing" in lower:
+                            return "--"
+                        return base_linestyles.get(label, "-")
+                    linestyles_map = {label: _style_for(label) for label in p2p_curves.keys()}
+
+                    # Plot with dotted hlines; color per condition
+                    hline_color = str(p2p_cfg.get("hline_color", "#000000"))
+                    hline_style = str(p2p_cfg.get("hline_style", ":"))
+
+                    fig = make_peak_to_peak_figure(
+                        curves_by_label=p2p_curves,
+                        times_ms=times_ms,
+                        p2p_by_label=p2p_by,
+                        p1_lat_by_label=p1_lat_by,
+                        n1_lat_by_label=n1_lat_by,
+                        title=f"{analysis_id}: P1↔N1 peak-to-peak ({response_label})",
+                        subtitle="Using N1 electrode montage (bilateral POT)",
+                        colors=colors_map,
+                        linestyles=linestyles_map,
+                        xlim_ms=(baseline[0], float(times_ms[-1])),
+                        ylimit_uv=ylimit_uv,
+                        hline_color=hline_color,
+                        hline_style=hline_style,
+                        p1_amp_by_label=p1_amp_by,
+                        n1_amp_by_label=n1_amp_by,
+                        epochs_by_label=set_name_to_total_epochs,
+                    )
+                    try:
+                        fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
+                    except Exception:
+                        pass
+                    p2p_path = os.path.join(plots_dir, f"{analysis_id}-P1_N1_peak_to_peak.png")
+                    _save_figure(fig, p2p_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+                    plt.close(fig)
+                    saved_figs.append(p2p_path)
+                    print(f"Saved peak-to-peak plot: {os.path.basename(p2p_path)}")
+
+                    # Write CSV with metrics
+                    import csv
+                    out_csv = os.path.join(tables_dir, "peak_to_peak_measurements.csv")
+                    with open(out_csv, "w", newline="", encoding="utf-8") as f:
+                        writer = csv.DictWriter(
+                            f,
+                            fieldnames=[
+                                "analysis_id", "condition", "p1_amp", "n1_amp", "p2p_amp", "p1_lat_ms", "n1_lat_ms", "roi_channels"
+                            ],
+                        )
+                        writer.writeheader()
+                        for lbl in sorted(p2p_by.keys()):
+                            writer.writerow({
+                                "analysis_id": analysis_id,
+                                "condition": lbl,
+                                "p1_amp": float(p1_amp_by.get(lbl, float("nan"))),
+                                "n1_amp": float(n1_amp_by.get(lbl, float("nan"))),
+                                "p2p_amp": float(p2p_by.get(lbl, float("nan"))),
+                                "p1_lat_ms": float(p1_lat_by.get(lbl, float("nan"))),
+                                "n1_lat_ms": float(n1_lat_by.get(lbl, float("nan"))),
+                                "roi_channels": ";".join(n1_roi_channels),
+                            })
+                    print(f"Saved peak-to-peak measurements: {os.path.basename(out_csv)}")
+                else:
+                    print("  Warning: Insufficient data to generate peak-to-peak plot.")
+        else:
+            print("  Warning: P1/N1 collapsed-localizer windows unavailable; skipping peak-to-peak.")
+
+    # Fz is now a first-class component; bespoke overlay code removed.
 
     # === Save Scientific Measurements ===
     # Save collapsed localizer results (component-level GFP measurements)
@@ -950,3 +1174,18 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+# Helper to build topomap vectors from a GAV around center latency for arbitrary ROI-based figure
+def _build_topomaps_for_roi(gav, center_latency_ms: float, half_window_ms: float):
+    """
+    Return (vector_in_uV, info) averaged over [center-half, center+half] ms.
+    """
+    try:
+        tmin = (center_latency_ms - half_window_ms) / 1000.0
+        tmax = (center_latency_ms + half_window_ms) / 1000.0
+        evk_win = gav.copy().crop(tmin=tmin, tmax=tmax)
+        mean_vec = evk_win.data.mean(axis=1) * 1e6
+        return mean_vec, gav.info
+    except Exception as e:
+        raise

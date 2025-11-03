@@ -1,37 +1,62 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Decreasing Small (no 1)"
-      conditions: ["32"]
-      color: "#984ea3"  # Purple
-      linestyle: "-"    # Solid
-    - name: "Decreasing Crossover (no 1)"
-      conditions: ["42", "52", "43", "53", "63"]
-      color: "#ff7f00"  # Orange
-      linestyle: "-"    # Solid
-    - name: "Decreasing Large (no 1)"
-      conditions: ["54", "64", "65"]
-      color: "#4daf4a"  # Green
-      linestyle: "-"    # Solid
-components: ["P1", "N1", "P3b"]
+  - name: Decreasing Small (no 1)
+    conditions:
+    - '32'
+    color: '#984ea3'
+    linestyle: '-'
+  - name: Decreasing Crossover (no 1)
+    conditions:
+    - '42'
+    - '52'
+    - '43'
+    - '53'
+    - '63'
+    color: '#ff7f00'
+    linestyle: '-'
+  - name: Decreasing Large (no 1)
+    conditions:
+    - '54'
+    - '64'
+    - '65'
+    color: '#4daf4a'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#984ea3", "#ff7f00", "#4daf4a"]
+  colors:
+  - '#984ea3'
+  - '#ff7f00'
+  - '#4daf4a'
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/decreasing_large_vs_small_vs_crossover_without_1"
-  tables_dir: "docs/assets/tables/decreasing_large_vs_small_vs_crossover_without_1"
-  page: "docs/analysis/decreasing_large_vs_small_vs_crossover_without_1.md"
+  page: docs/analysis/decreasing_large_vs_small_vs_crossover_without_1.md
+  plots_dir: docs/assets/plots/decreasing_large_vs_small_vs_crossover_without_1
+  tables_dir: docs/assets/tables/decreasing_large_vs_small_vs_crossover_without_1
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

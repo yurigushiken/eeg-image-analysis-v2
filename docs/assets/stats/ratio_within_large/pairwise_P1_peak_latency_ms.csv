@@ -1,0 +1,4 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
+condition,Large Ratio 0.67 (4:6),Large Ratio 0.8 (4:5),True,True,-2.0,5.0,two-sided,0.10193947882985828,0.15290921824478743,fdr_bh,1.254,-0.26919095102908325,-1.8203402169655112,0.1281119925122126
+condition,Large Ratio 0.67 (4:6),Large Ratio 0.83 (5:6),True,True,0.0,5.0,two-sided,1.0,1.0,fdr_bh,0.373,0.0,-0.9248457483180409,0.9248457483180409
+condition,Large Ratio 0.8 (4:5),Large Ratio 0.83 (5:6),True,True,2.0,5.0,two-sided,0.10193947882985828,0.15290921824478743,fdr_bh,1.254,0.28867513459481337,-0.21153578183799226,1.4714173585354162

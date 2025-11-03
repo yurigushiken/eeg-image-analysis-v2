@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:17:24
+**Generated:** 2025-11-03 02:35:21
 
 ---
 
@@ -10,14 +10,14 @@
 **Number of Subjects:** 24
 **Number of Conditions:** 2
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,41 +35,52 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
+
+_No descriptive statistics available._
+
+#### Amplitude (Peak)
+
+_No descriptive statistics available._
+
+
+### 2.2 N1 Component
+
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 Correct | 15 | -4.44 µV | 1.60 | 0.41 | [-6.95, -2.09] |
-| 65 Incorrect | 24 | -3.46 µV | 2.37 | 0.48 | [-10.98, -0.16] |
+| 65 Correct | 15 | 174.40 ms | 22.52 | 5.81 | [136.00, 204.00] |
+| 65 Incorrect | 24 | 168.33 ms | 19.20 | 3.92 | [140.00, 204.00] |
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 Correct | 15 | 170.61 ms | 11.63 | 3.00 | [151.35, 189.44] |
-| 65 Incorrect | 24 | 172.08 ms | 12.36 | 2.52 | [153.87, 198.69] |
+| 65 Correct | 15 | -7.58 µV | 1.94 | 0.50 | [-10.73, -4.78] |
+| 65 Incorrect | 24 | -5.62 µV | 2.41 | 0.49 | [-13.60, -2.09] |
 
 
-### 2.2 P1 Component
+### 2.3 P1 Component
 
-#### Mean Amplitude (ROI)
-
-_No descriptive statistics available._
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 _No descriptive statistics available._
 
-
-### 2.3 P3b Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 _No descriptive statistics available._
 
-#### Latency (50% Fractional Area)
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+_No descriptive statistics available._
+
+#### Amplitude (Peak)
 
 _No descriptive statistics available._
 
@@ -80,16 +91,35 @@ _No descriptive statistics available._
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
+
+_LMM results not available._
+
+_ANOVA results not available._
+
+_Pairwise test results not available._
+
+#### Amplitude (Peak)
+
+_LMM results not available._
+
+_ANOVA results not available._
+
+_Pairwise test results not available._
+
+
+### 3.2 N1 Component
+
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 131.12, BIC = 139.44
-- **65 Incorrect vs 65 Correct**: *β* = 0.98, *SE* = 0.376, *z* = 2.616, *p* = 0.009
-- **SNR**: *β* = -0.77, *SE* = 0.083, *z* = -9.213, *p* < .001
+- AIC = 349.33, BIC = 357.65
+- **65 Incorrect vs 65 Correct**: *β* = -6.11, *SE* = 4.904, *z* = -1.247, *p* = 0.212
+- **SNR**: *β* = -0.96, *SE* = 1.396, *z* = -0.686, *p* = 0.493
 
 _Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -100,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 Correct - 65 Incorrect | -0.98 | 0.38 | -2.62 | 0.009 | 0.009 | ** |
+| 65 Correct - 65 Incorrect | 6.11 | 4.90 | 1.25 | 0.212 | 0.212 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -108,7 +138,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.80, *p* = 0.201, η²_G = 0.039
+- *F* = 1.42, *p* = 0.253, η²_G = 0.024
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -117,19 +147,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 Correct vs 65 Incorrect | -1.34 | 14 | = 0.201 | -0.39 [-0.92, 0.22] | small | n.s. |
+| 65 Correct vs 65 Incorrect | 1.19 | 14 | = 0.253 | 0.31 [-0.26, 0.87] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 305.03, BIC = 313.34
-- **65 Incorrect vs 65 Correct**: *β* = 1.18, *SE* = 2.833, *z* = 0.417, *p* = 0.676
-- **SNR**: *β* = -1.65, *SE* = 0.794, *z* = -2.080, *p* = 0.038
+- AIC = 143.87, BIC = 152.19
+- **65 Incorrect vs 65 Correct**: *β* = 1.98, *SE* = 0.444, *z* = 4.463, *p* < .001
+- **SNR**: *β* = -0.77, *SE* = 0.099, *z* = -7.851, *p* < .001
 
 _Reference condition: **65 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -140,7 +170,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 Correct - 65 Incorrect | -1.18 | 2.83 | -0.42 | 0.676 | 0.676 | n.s. |
+| 65 Correct - 65 Incorrect | -1.98 | 0.44 | -4.46 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -148,8 +178,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.02, *p* = 0.892, η²_G = 0.000
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 6.28, *p* = 0.025, η²_G = 0.129
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -157,23 +187,15 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 Correct vs 65 Incorrect | -0.14 | 14 | = 0.892 | -0.04 [-0.59, 0.52] | negligible | n.s. |
+| 65 Correct vs 65 Incorrect | -2.51 | 14 | = 0.025 | -0.74 [-1.26, -0.04] | medium | * |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.2 P1 Component
+### 3.3 P1 Component
 
-#### Mean Amplitude (ROI)
-
-_LMM results not available._
-
-_ANOVA results not available._
-
-_Pairwise test results not available._
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 _LMM results not available._
 
@@ -181,10 +203,7 @@ _ANOVA results not available._
 
 _Pairwise test results not available._
 
-
-### 3.3 P3b Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 _LMM results not available._
 
@@ -192,7 +211,18 @@ _ANOVA results not available._
 
 _Pairwise test results not available._
 
-#### Latency (50% Fractional Area)
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+_LMM results not available._
+
+_ANOVA results not available._
+
+_Pairwise test results not available._
+
+#### Amplitude (Peak)
 
 _LMM results not available._
 
@@ -207,7 +237,8 @@ _Pairwise test results not available._
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**N1 amplitude:** Significant main effect of condition (*p* = 0.025). Post-hoc tests revealed:
+  - 65 Correct showed smaller amplitude than 65 Incorrect (*d* = -0.74)
 
 ### Research Implications
 
@@ -219,7 +250,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -241,13 +278,13 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
 #### Amplitude
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

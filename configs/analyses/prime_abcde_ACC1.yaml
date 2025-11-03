@@ -1,62 +1,223 @@
 dataset:
-  root: "data/lab_data_original_with_primes"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
-
+  root: data/lab_data_original_with_primes
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ACC1"
+  response: ACC1
   min_epochs_per_set: 1
   condition_sets:
-    - name: "a"
-      conditions: ["12", "13", "14", "21", "23", "24", "25", "31", "32", "34", "35", "36", "41", "42", "43", "45", "46", "52", "53", "54", "56", "63", "64", "65"]
-      color: "#02d502"
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["1a.jpg", "2a.jpg", "3a.jpg", "4a.jpg", "5a.jpg", "6a.jpg"]
-    - name: "b"
-      conditions: ["12", "13", "14", "21", "23", "24", "25", "31", "32", "34", "35", "36", "41", "42", "43", "45", "46", "52", "53", "54", "56", "63", "64", "65"]
-      color: "#9900ff"
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["1b.jpg", "2b.jpg", "3b.jpg", "4b.jpg", "5b.jpg", "6b.jpg"]
-    - name: "c"
-      conditions: ["12", "13", "14", "21", "23", "24", "25", "31", "32", "34", "35", "36", "41", "42", "43", "45", "46", "52", "53", "54", "56", "63", "64", "65"]
-      color: "#ff7f00"
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["1c.jpg", "2c.jpg", "3c.jpg", "4c.jpg", "5c.jpg", "6c.jpg"]
-    - name: "d"
-      conditions: ["12", "13", "14", "21", "23", "24", "25", "31", "32", "34", "35", "36", "41", "42", "43", "45", "46", "52", "53", "54", "56", "63", "64", "65"]
-      color: "#40e0d0"
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["1d.jpg", "2d.jpg", "3d.jpg", "4d.jpg", "5d.jpg", "6d.jpg"]
-    - name: "e"
-      conditions: ["12", "13", "14", "21", "23", "24", "25", "31", "32", "34", "35", "36", "41", "42", "43", "45", "46", "52", "53", "54", "56", "63", "64", "65"]
-      color: "#ef0000"
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["1e.jpg", "2e.jpg", "3e.jpg", "4e.jpg", "5e.jpg", "6e.jpg"]
-
-components: ["P1", "N1", "P3b"]
-
+  - name: a
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '63'
+    - '64'
+    - '65'
+    color: '#02d502'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 1a.jpg
+      - 2a.jpg
+      - 3a.jpg
+      - 4a.jpg
+      - 5a.jpg
+      - 6a.jpg
+  - name: b
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '63'
+    - '64'
+    - '65'
+    color: '#9900ff'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 1b.jpg
+      - 2b.jpg
+      - 3b.jpg
+      - 4b.jpg
+      - 5b.jpg
+      - 6b.jpg
+  - name: c
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '63'
+    - '64'
+    - '65'
+    color: '#ff7f00'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 1c.jpg
+      - 2c.jpg
+      - 3c.jpg
+      - 4c.jpg
+      - 5c.jpg
+      - 6c.jpg
+  - name: d
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '63'
+    - '64'
+    - '65'
+    color: '#40e0d0'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 1d.jpg
+      - 2d.jpg
+      - 3d.jpg
+      - 4d.jpg
+      - 5d.jpg
+      - 6d.jpg
+  - name: e
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '63'
+    - '64'
+    - '65'
+    color: '#ef0000'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 1e.jpg
+      - 2e.jpg
+      - 3e.jpg
+      - 4e.jpg
+      - 5e.jpg
+      - 6e.jpg
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
-
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
-
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#02d502", "#9900ff", "#ff7f00", "#40e0d0", "#ef0000"]
-
+  colors:
+  - '#02d502'
+  - '#9900ff'
+  - '#ff7f00'
+  - '#40e0d0'
+  - '#ef0000'
 outputs:
-  page: "docs/analysis/prime_abcde_ACC1.md"
-  plots_dir: "docs/assets/plots/prime_abcde_ACC1"
-  tables_dir: "docs/assets/tables/prime_abcde_ACC1"
-
+  page: docs/analysis/prime_abcde_ACC1.md
+  plots_dir: docs/assets/plots/prime_abcde_ACC1
+  tables_dir: docs/assets/tables/prime_abcde_ACC1
 measurement:
-  latency: fal
-  amplitude: mean
-
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

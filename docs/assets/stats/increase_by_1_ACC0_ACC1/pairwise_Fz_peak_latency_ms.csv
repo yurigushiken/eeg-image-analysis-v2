@@ -1,0 +1,2 @@
+Contrast,A,B,Paired,Parametric,dof,alternative,BF10,cohen,ci_lower,ci_upper
+condition,Increase by 1 (Correct),Increase by 1 (Incorrect),True,True,1.0,two-sided,nan,0.0,,

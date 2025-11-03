@@ -1,0 +1,4 @@
+Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
+condition,Decreasing Crossover (no 1),Decreasing Large (no 1),True,True,0.0,two-sided,fdr_bh,nan,-93.69546088338335,68.3467713351411
+condition,Decreasing Crossover (no 1),Decreasing Small (no 1),True,True,0.0,two-sided,fdr_bh,nan,-3.335733038148433,0.8793381090903072
+condition,Decreasing Large (no 1),Decreasing Small (no 1),True,True,0.0,two-sided,fdr_bh,nan,-2.1845041956910305,2.973408743781848

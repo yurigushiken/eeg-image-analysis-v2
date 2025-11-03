@@ -1,6 +1,6 @@
 {
   "analysis_id": "prime_11",
-  "date_analyzed": "2025-10-23T18:24:57.418431",
+  "date_analyzed": "2025-11-03T02:35:00.717517",
   "baseline_ms": [
     -100,
     0
@@ -40,6 +40,20 @@
       "search_range_ms": [
         125.0,
         200.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 85,
+      "n_conditions": 5
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 108.0,
+      "peak_gfp_amplitude": -0.7736186649664865,
+      "fwhm_ms": 45.57709835573621,
+      "window_start_ms": 91.12231892321552,
+      "window_end_ms": 136.69941727895173,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 85,

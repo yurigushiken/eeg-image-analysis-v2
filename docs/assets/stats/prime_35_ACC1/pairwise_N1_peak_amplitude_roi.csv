@@ -1,0 +1,11 @@
+Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
+condition,3a,3b,True,True,0.0,two-sided,fdr_bh,nan,-1.2252745179340194,0.3793460320648875
+condition,3a,3c,True,True,0.0,two-sided,fdr_bh,nan,-0.9349246481649316,0.20857605808459773
+condition,3a,3d,True,True,0.0,two-sided,fdr_bh,nan,-1.3018890811509283,1.9674883651571866
+condition,3a,3e,True,True,0.0,two-sided,fdr_bh,nan,-0.4435455504160415,0.7732246156059825
+condition,3b,3c,True,True,0.0,two-sided,fdr_bh,nan,-0.6298187189296495,0.9153299253882533
+condition,3b,3d,True,True,0.0,two-sided,fdr_bh,nan,-2.101208221887462,3.28395811750297
+condition,3b,3e,True,True,0.0,two-sided,fdr_bh,nan,-0.44208938383804597,1.5427082226843374
+condition,3c,3d,True,True,0.0,two-sided,fdr_bh,nan,-0.5639039312462286,1.6971731896687292
+condition,3c,3e,True,True,0.0,two-sided,fdr_bh,nan,0.05800336597839295,1.42206180342165
+condition,3d,3e,True,True,0.0,two-sided,fdr_bh,nan,-1.3252738441159135,1.9288198720642618

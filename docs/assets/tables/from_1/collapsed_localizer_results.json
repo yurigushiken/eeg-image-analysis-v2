@@ -1,6 +1,6 @@
 {
   "analysis_id": "from_1",
-  "date_analyzed": "2025-10-20T23:16:42.434359",
+  "date_analyzed": "2025-11-03T02:26:14.100873",
   "baseline_ms": [
     -100,
     0
@@ -53,6 +53,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 96,
+      "n_conditions": 4
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 100.0,
+      "peak_gfp_amplitude": 0.016398478498970165,
+      "fwhm_ms": 26.70571653113126,
+      "window_start_ms": 86.77302313226093,
+      "window_end_ms": 113.47873966339219,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 96,

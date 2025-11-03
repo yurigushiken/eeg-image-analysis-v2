@@ -1,61 +1,83 @@
 dataset:
-  root: "data/lab_data_original_with_primes"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
-
+  root: data/lab_data_original_with_primes
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "2a"
-      conditions: ["22"]
-      color: "#02d502"  # Green
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["2a.jpg"]
-    - name: "2b"
-      conditions: ["22"]
-      color: "#9900ff"  # Purple
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["2b.jpg"]
-    - name: "2c"
-      conditions: ["22"]
-      color: "#ff7f00"  # Orange
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["2c.jpg"]
-    - name: "2d"
-      conditions: ["22"]
-      color: "#40e0d0"  # Turquoise
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["2d.jpg"]
-    - name: "2e"
-      conditions: ["22"]
-      color: "#ef0000"  # Red
-      linestyle: "-"
-      metadata_filters:
-        Prime5: ["2e.jpg"]
-
-components: ["P1", "N1", "P3b"]
-
+  - name: 2a
+    conditions:
+    - '22'
+    color: '#02d502'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 2a.jpg
+  - name: 2b
+    conditions:
+    - '22'
+    color: '#9900ff'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 2b.jpg
+  - name: 2c
+    conditions:
+    - '22'
+    color: '#ff7f00'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 2c.jpg
+  - name: 2d
+    conditions:
+    - '22'
+    color: '#40e0d0'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 2d.jpg
+  - name: 2e
+    conditions:
+    - '22'
+    color: '#ef0000'
+    linestyle: '-'
+    metadata_filters:
+      Prime5:
+      - 2e.jpg
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
-
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
-
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#02d502", "#9900ff", "#ff7f00", "#40e0d0", "#ef0000"]
-
+  colors:
+  - '#02d502'
+  - '#9900ff'
+  - '#ff7f00'
+  - '#40e0d0'
+  - '#ef0000'
 outputs:
-  page: "docs/analysis/prime_22.md"
-  plots_dir: "docs/assets/plots/prime_22"
-  tables_dir: "docs/assets/tables/prime_22"
-
+  page: docs/analysis/prime_22.md
+  plots_dir: docs/assets/plots/prime_22
+  tables_dir: docs/assets/tables/prime_22
 measurement:
-  latency: fal
-  amplitude: mean
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

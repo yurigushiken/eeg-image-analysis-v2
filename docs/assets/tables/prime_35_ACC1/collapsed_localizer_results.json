@@ -1,6 +1,6 @@
 {
   "analysis_id": "prime_35_ACC1",
-  "date_analyzed": "2025-10-23T22:56:39.824997",
+  "date_analyzed": "2025-11-03T02:35:49.222203",
   "baseline_ms": [
     -100,
     0
@@ -54,6 +54,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 91,
+      "n_conditions": 5
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -0.7730595561235046,
+      "fwhm_ms": 33.441670204550974,
+      "window_start_ms": 84.94992250210629,
+      "window_end_ms": 118.39159270665726,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 91,

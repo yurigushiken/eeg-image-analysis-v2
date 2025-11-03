@@ -244,3 +244,75 @@ def peak_amplitude(
         polarity = "negative" if np.mean(sig) < 0 else "positive"
 
     return float(np.min(sig) if polarity == "negative" else np.max(sig))
+
+
+def compute_peak_to_peak_metrics(
+    signal: np.ndarray,
+    times_ms: np.ndarray,
+    p1_window_ms: Tuple[float, float],
+    n1_window_ms: Tuple[float, float],
+    p_polarity: str = "positive",
+    n_polarity: str = "negative",
+) -> dict:
+    """
+    Compute P1↔N1 peak-to-peak metrics from a single ROI waveform.
+
+    This function is designed for the N1 ROI waveform, but measures both
+    P1 (positive) and N1 (negative) peaks within their respective windows.
+
+    Returns dict with keys:
+      - p1_amp
+      - n1_amp
+      - p2p_amp (p1_amp - n1_amp)
+      - p1_lat_ms
+      - n1_lat_ms
+    """
+    # Validate windows have samples
+    p1_mask = _window_mask(times_ms, p1_window_ms)
+    n1_mask = _window_mask(times_ms, n1_window_ms)
+    if not np.any(p1_mask):
+        raise ValueError(
+            f"P1 window [{p1_window_ms[0]}, {p1_window_ms[1]}] ms has no samples"
+        )
+    if not np.any(n1_mask):
+        raise ValueError(
+            f"N1 window [{n1_window_ms[0]}, {n1_window_ms[1]}] ms has no samples"
+        )
+
+    # Compute peak latencies
+    p1_lat = peak_latency(
+        signal=signal,
+        times_ms=times_ms,
+        window_ms=p1_window_ms,
+        polarity=p_polarity,
+    )
+    n1_lat = peak_latency(
+        signal=signal,
+        times_ms=times_ms,
+        window_ms=n1_window_ms,
+        polarity=n_polarity,
+    )
+
+    # Compute peak amplitudes
+    p1_amp = peak_amplitude(
+        signal=signal,
+        times_ms=times_ms,
+        window_ms=p1_window_ms,
+        polarity=p_polarity,
+    )
+    n1_amp = peak_amplitude(
+        signal=signal,
+        times_ms=times_ms,
+        window_ms=n1_window_ms,
+        polarity=n_polarity,
+    )
+
+    p2p = float(p1_amp - n1_amp)
+
+    return {
+        "p1_amp": float(p1_amp),
+        "n1_amp": float(n1_amp),
+        "p2p_amp": p2p,
+        "p1_lat_ms": float(p1_lat),
+        "n1_lat_ms": float(n1_lat),
+    }

@@ -1,0 +1,2 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,BF10,cohen,ci_lower,ci_upper
+condition,Large Ratio 0.67 (4:6),Small Ratio 0.67 (2:3),True,True,-1.6239486760133715,7.0,two-sided,0.14841540201665532,0.867,-0.5128225940683707,-1.476445576578988,0.32814045547101744

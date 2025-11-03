@@ -1,23 +1,23 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:17:00
+**Generated:** 2025-11-03 02:34:49
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 123
+**Total Measurements:** 164
 **Number of Subjects:** 24
 **Number of Conditions:** 2
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,55 +35,72 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| 54 Correct | 22 | -3.99 µV | 2.08 | 0.44 | [-7.16, -0.68] |
-| 54 Incorrect | 14 | -5.63 µV | 3.55 | 0.95 | [-15.56, -1.26] |
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 54 Correct | 22 | 180.79 ms | 8.64 | 1.84 | [166.37, 199.37] |
-| 54 Incorrect | 14 | 182.61 ms | 5.32 | 1.42 | [172.65, 189.83] |
+| 54 Correct | 6 | 110.67 ms | 10.33 | 4.22 | [100.00, 120.00] |
+| 54 Incorrect | 8 | 110.00 ms | 9.07 | 3.21 | [100.00, 120.00] |
 
-
-### 2.2 P1 Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 54 Correct | 12 | 2.11 µV | 1.32 | 0.38 | [0.52, 3.95] |
-| 54 Incorrect | 7 | 3.09 µV | 2.75 | 1.04 | [0.43, 8.47] |
-
-#### Latency (50% Fractional Area)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| 54 Correct | 12 | 106.42 ms | 8.07 | 2.33 | [90.42, 115.64] |
-| 54 Incorrect | 7 | 106.27 ms | 11.59 | 4.38 | [88.89, 122.93] |
+| 54 Correct | 6 | 3.97 µV | 1.31 | 0.54 | [2.30, 5.88] |
+| 54 Incorrect | 8 | 4.85 µV | 3.36 | 1.19 | [0.58, 9.44] |
 
 
-### 2.3 P3b Component
+### 2.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 54 Correct | 21 | 3.78 µV | 2.77 | 0.60 | [0.56, 8.51] |
-| 54 Incorrect | 10 | 4.52 µV | 5.75 | 1.82 | [0.10, 17.04] |
+| 54 Correct | 22 | 181.09 ms | 18.69 | 3.98 | [152.00, 212.00] |
+| 54 Incorrect | 14 | 184.86 ms | 13.51 | 3.61 | [156.00, 212.00] |
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 54 Correct | 21 | 489.76 ms | 16.10 | 3.51 | [452.35, 517.77] |
-| 54 Incorrect | 10 | 485.73 ms | 22.08 | 6.98 | [453.25, 529.59] |
+| 54 Correct | 22 | -6.18 µV | 2.92 | 0.62 | [-14.15, -1.51] |
+| 54 Incorrect | 14 | -8.39 µV | 3.87 | 1.03 | [-19.27, -3.28] |
+
+
+### 2.3 P1 Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 54 Correct | 12 | 108.67 ms | 12.86 | 3.71 | [88.00, 124.00] |
+| 54 Incorrect | 7 | 107.43 ms | 13.15 | 4.97 | [92.00, 124.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 54 Correct | 12 | 3.61 µV | 1.66 | 0.48 | [1.04, 6.06] |
+| 54 Incorrect | 7 | 6.84 µV | 4.06 | 1.53 | [3.33, 15.30] |
+
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 54 Correct | 21 | 493.14 ms | 31.35 | 6.84 | [440.00, 532.00] |
+| 54 Incorrect | 10 | 482.40 ms | 28.61 | 9.05 | [440.00, 532.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| 54 Correct | 21 | 6.18 µV | 2.93 | 0.64 | [2.03, 11.69] |
+| 54 Incorrect | 10 | 8.12 µV | 6.45 | 2.04 | [2.03, 22.05] |
 
 
 ---
@@ -92,16 +109,16 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 164.59, BIC = 172.51
-- **54 Incorrect vs 54 Correct**: *β* = -2.42, *SE* = 0.669, *z* = -3.613, *p* < .001
-- **SNR**: *β* = -0.67, *SE* = 0.145, *z* = -4.591, *p* < .001
+- AIC = 101.52, BIC = 104.71
+- **54 Incorrect vs 54 Correct**: *β* = -2.48, *SE* = 1.173, *z* = -2.114, *p* = 0.034
+- **SNR**: *β* = -0.19, *SE* = 0.785, *z* = -0.248, *p* = 0.804
 
 _Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -112,7 +129,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | 2.42 | 0.67 | 3.61 | < .001 | < .001 | *** |
+| 54 Correct - 54 Incorrect | 2.48 | 1.17 | 2.11 | 0.034 | 0.034 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -120,7 +137,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.73, *p* = 0.213, η²_G = 0.046
+- *F* = 4.00, *p* = 0.184, η²_G = 0.026
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -129,19 +146,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | 1.31 | 12 | = 0.213 | 0.42 [-0.26, 0.99] | small | n.s. |
+| 54 Correct vs 54 Incorrect | 2.00 | 2 | = 0.184 | 0.27 [-2.05, 4.36] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 255.14, BIC = 263.06
-- **54 Incorrect vs 54 Correct**: *β* = 1.37, *SE* = 2.617, *z* = 0.523, *p* = 0.601
-- **SNR**: *β* = -0.34, *SE* = 0.511, *z* = -0.673, *p* = 0.501
+- AIC = 63.73, BIC = 66.92
+- **54 Incorrect vs 54 Correct**: *β* = 0.80, *SE* = 1.131, *z* = 0.705, *p* = 0.481
+- **SNR**: *β* = 1.50, *SE* = 0.502, *z* = 2.994, *p* = 0.003
 
 _Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -152,7 +169,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | -1.37 | 2.62 | -0.52 | 0.601 | 0.601 | n.s. |
+| 54 Correct - 54 Incorrect | -0.80 | 1.13 | -0.71 | 0.481 | 0.481 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -160,7 +177,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.04, *p* = 0.849, η²_G = 0.002
+- *F* = 0.83, *p* = 0.458, η²_G = 0.231
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -169,105 +186,22 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | -0.19 | 12 | = 0.849 | -0.08 [-0.66, 0.55] | negligible | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-
-### 3.2 P1 Component
-
-#### Mean Amplitude (ROI)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 63.40, BIC = 68.13
-- **54 Incorrect vs 54 Correct**: *β* = 0.81, *SE* = 0.443, *z* = 1.821, *p* = 0.069
-- **SNR**: *β* = 1.14, *SE* = 0.197, *z* = 5.791, *p* < .001
-
-_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | -0.81 | 0.44 | -1.82 | 0.069 | 0.069 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 2.00, *p* = 0.293, η²_G = 0.184
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with uncorrected correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | -1.41 | 2 | = 0.293 | -0.77 [-3.68, 2.05] | medium | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-#### Latency (50% Fractional Area)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 142.13, BIC = 146.85
-- **54 Incorrect vs 54 Correct**: *β* = -5.42, *SE* = 2.260, *z* = -2.400, *p* = 0.016
-- **SNR**: *β* = 1.87, *SE* = 0.987, *z* = 1.891, *p* = 0.059
-
-_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | 5.42 | 2.26 | 2.40 | 0.016 | 0.016 | * |
-
-_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 1.51, *p* = 0.344, η²_G = 0.074
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with uncorrected correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | 1.23 | 2 | = 0.344 | 0.46 [-2.07, 3.49] | small | n.s. |
+| 54 Correct vs 54 Incorrect | -0.91 | 2 | = 0.458 | -0.89 [-3.18, 2.12] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.3 P3b Component
+### 3.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 165.06, BIC = 172.23
-- **54 Incorrect vs 54 Correct**: *β* = 2.45, *SE* = 1.229, *z* = 1.995, *p* = 0.046
-- **SNR**: *β* = 0.77, *SE* = 0.207, *z* = 3.693, *p* < .001
+- AIC = 310.72, BIC = 318.64
+- **54 Incorrect vs 54 Correct**: *β* = 1.25, *SE* = 5.635, *z* = 0.221, *p* = 0.825
+- **SNR**: *β* = -1.91, *SE* = 1.127, *z* = -1.696, *p* = 0.090
 
 _Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -278,7 +212,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | -2.45 | 1.23 | -2.00 | 0.046 | 0.046 | * |
+| 54 Correct - 54 Incorrect | -1.25 | 5.64 | -0.22 | 0.825 | 0.825 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -286,7 +220,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.08, *p* = 0.788, η²_G = 0.002
+- *F* = 0.10, *p* = 0.759, η²_G = 0.005
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -295,19 +229,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | -0.28 | 9 | = 0.788 | -0.09 [-0.80, 0.63] | negligible | n.s. |
+| 54 Correct vs 54 Incorrect | -0.31 | 12 | = 0.759 | -0.14 [-0.69, 0.52] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 275.41, BIC = 282.58
-- **54 Incorrect vs 54 Correct**: *β* = -5.05, *SE* = 6.947, *z* = -0.728, *p* = 0.467
-- **SNR**: *β* = -0.50, *SE* = 1.013, *z* = -0.495, *p* = 0.621
+- AIC = 183.03, BIC = 190.95
+- **54 Incorrect vs 54 Correct**: *β* = -3.16, *SE* = 0.912, *z* = -3.464, *p* = 0.001
+- **SNR**: *β* = -0.74, *SE* = 0.187, *z* = -3.970, *p* < .001
 
 _Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -318,7 +252,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 54 Correct - 54 Incorrect | 5.05 | 6.95 | 0.73 | 0.467 | 0.467 | n.s. |
+| 54 Correct - 54 Incorrect | 3.16 | 0.91 | 3.46 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -326,7 +260,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.11, *p* = 0.748, η²_G = 0.006
+- *F* = 2.84, *p* = 0.118, η²_G = 0.091
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -335,7 +269,173 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 54 Correct vs 54 Incorrect | 0.33 | 9 | = 0.748 | 0.14 [-0.61, 0.82] | negligible | n.s. |
+| 54 Correct vs 54 Incorrect | 1.69 | 12 | = 0.118 | 0.61 [-0.17, 1.10] | medium | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.3 P1 Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 142.16, BIC = 146.89
+- **54 Incorrect vs 54 Correct**: *β* = -14.42, *SE* = 0.327, *z* = -44.056, *p* < .001
+- **SNR**: *β* = 3.11, *SE* = 0.163, *z* = 19.087, *p* < .001
+
+_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 54 Correct - 54 Incorrect | 14.42 | 0.33 | 44.06 | < .001 | < .001 | *** |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 9.14, *p* = 0.094, η²_G = 0.205
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 54 Correct vs 54 Incorrect | 3.02 | 2 | = 0.094 | 0.83 [-2.20, 5.69] | large | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 77.32, BIC = 82.04
+- **54 Incorrect vs 54 Correct**: *β* = 2.85, *SE* = 0.724, *z* = 3.937, *p* < .001
+- **SNR**: *β* = 1.66, *SE* = 0.256, *z* = 6.482, *p* < .001
+
+_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 54 Correct - 54 Incorrect | -2.85 | 0.72 | -3.94 | < .001 | < .001 | *** |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 2.13, *p* = 0.282, η²_G = 0.270
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 54 Correct vs 54 Incorrect | -1.46 | 2 | = 0.282 | -0.99 [-3.73, 2.05] | large | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 306.34, BIC = 313.51
+- **54 Incorrect vs 54 Correct**: *β* = -11.59, *SE* = 10.380, *z* = -1.116, *p* = 0.264
+- **SNR**: *β* = 0.87, *SE* = 1.736, *z* = 0.501, *p* = 0.617
+
+_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 54 Correct - 54 Incorrect | 11.59 | 10.38 | 1.12 | 0.264 | 0.264 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 3.11, *p* = 0.112, η²_G = 0.103
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 54 Correct vs 54 Incorrect | 1.76 | 9 | = 0.112 | 0.64 [-0.21, 1.33] | medium | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 176.36, BIC = 183.53
+- **54 Incorrect vs 54 Correct**: *β* = 3.54, *SE* = 1.449, *z* = 2.440, *p* = 0.015
+- **SNR**: *β* = 0.71, *SE* = 0.234, *z* = 3.048, *p* = 0.002
+
+_Reference condition: **54 Correct** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| 54 Correct - 54 Incorrect | -3.54 | 1.45 | -2.44 | 0.015 | 0.015 | * |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.23, *p* = 0.296, η²_G = 0.037
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| 54 Correct vs 54 Incorrect | -1.11 | 9 | = 0.296 | -0.37 [-1.09, 0.39] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -347,7 +447,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**P1 latency:** Marginal trend toward condition differences (*p* = 0.094)
 
 ### Research Implications
 
@@ -359,7 +459,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -381,7 +487,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
@@ -403,7 +509,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

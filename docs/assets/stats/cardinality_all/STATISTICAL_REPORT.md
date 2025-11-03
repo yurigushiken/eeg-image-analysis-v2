@@ -1,23 +1,23 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:17:51
+**Generated:** 2025-11-03 02:35:57
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 432
+**Total Measurements:** 576
 **Number of Subjects:** 24
 **Number of Conditions:** 6
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,79 +35,104 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Cardinality1 | 15 | -2.43 µV | 2.41 | 0.62 | [-8.29, -0.01] |
-| Cardinality2 | 22 | -3.21 µV | 1.92 | 0.41 | [-7.72, -0.19] |
-| Cardinality3 | 22 | -3.37 µV | 1.70 | 0.36 | [-7.86, -1.05] |
-| Cardinality4 | 22 | -3.94 µV | 2.41 | 0.51 | [-9.95, -1.01] |
-| Cardinality5 | 24 | -3.82 µV | 2.50 | 0.51 | [-9.48, -0.00] |
-| Cardinality6 | 23 | -3.56 µV | 2.30 | 0.48 | [-7.83, 0.01] |
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality1 | 15 | 177.49 ms | 15.59 | 4.03 | [152.29, 203.67] |
-| Cardinality2 | 22 | 172.57 ms | 12.17 | 2.60 | [150.03, 193.06] |
-| Cardinality3 | 22 | 172.69 ms | 8.86 | 1.89 | [156.19, 194.49] |
-| Cardinality4 | 22 | 174.23 ms | 9.22 | 1.97 | [155.68, 192.80] |
-| Cardinality5 | 24 | 174.90 ms | 11.35 | 2.32 | [148.04, 203.01] |
-| Cardinality6 | 23 | 175.51 ms | 12.05 | 2.51 | [157.54, 203.60] |
+| Cardinality1 | 8 | 106.50 ms | 13.17 | 4.66 | [92.00, 120.00] |
+| Cardinality2 | 10 | 104.00 ms | 12.36 | 3.91 | [92.00, 120.00] |
+| Cardinality3 | 12 | 106.67 ms | 11.98 | 3.46 | [92.00, 120.00] |
+| Cardinality4 | 8 | 107.50 ms | 13.60 | 4.81 | [92.00, 120.00] |
+| Cardinality5 | 10 | 114.00 ms | 11.66 | 3.69 | [92.00, 120.00] |
+| Cardinality6 | 9 | 112.44 ms | 11.57 | 3.86 | [92.00, 120.00] |
 
-
-### 2.2 P1 Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality1 | 19 | 2.65 µV | 2.51 | 0.57 | [0.17, 10.40] |
-| Cardinality2 | 12 | 2.08 µV | 1.77 | 0.51 | [0.46, 6.44] |
-| Cardinality3 | 14 | 2.20 µV | 2.07 | 0.55 | [0.10, 7.31] |
-| Cardinality4 | 12 | 2.13 µV | 1.52 | 0.44 | [0.24, 4.82] |
-| Cardinality5 | 14 | 1.90 µV | 1.53 | 0.41 | [-0.04, 4.57] |
-| Cardinality6 | 12 | 1.93 µV | 1.87 | 0.54 | [0.12, 6.89] |
-
-#### Latency (50% Fractional Area)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Cardinality1 | 19 | 110.14 ms | 5.50 | 1.26 | [98.41, 118.85] |
-| Cardinality2 | 12 | 109.06 ms | 4.24 | 1.22 | [102.40, 118.25] |
-| Cardinality3 | 14 | 108.59 ms | 4.99 | 1.33 | [98.69, 119.31] |
-| Cardinality4 | 12 | 107.52 ms | 4.81 | 1.39 | [99.51, 114.92] |
-| Cardinality5 | 14 | 106.86 ms | 3.88 | 1.04 | [96.17, 112.33] |
-| Cardinality6 | 12 | 108.49 ms | 5.07 | 1.46 | [100.34, 118.88] |
+| Cardinality1 | 8 | 3.58 µV | 2.16 | 0.76 | [1.49, 8.10] |
+| Cardinality2 | 10 | 2.56 µV | 1.72 | 0.54 | [0.81, 6.80] |
+| Cardinality3 | 12 | 2.41 µV | 1.03 | 0.30 | [0.99, 4.66] |
+| Cardinality4 | 8 | 2.54 µV | 1.61 | 0.57 | [0.69, 5.93] |
+| Cardinality5 | 10 | 2.22 µV | 1.50 | 0.47 | [0.63, 5.06] |
+| Cardinality6 | 9 | 2.47 µV | 1.19 | 0.40 | [0.70, 3.62] |
 
 
-### 2.3 P3b Component
+### 2.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality1 | 14 | 1.57 µV | 1.71 | 0.46 | [0.18, 5.50] |
-| Cardinality2 | 13 | 2.62 µV | 1.70 | 0.47 | [0.21, 6.61] |
-| Cardinality3 | 16 | 3.19 µV | 2.03 | 0.51 | [0.84, 8.10] |
-| Cardinality4 | 11 | 3.30 µV | 2.61 | 0.79 | [0.21, 8.28] |
-| Cardinality5 | 14 | 1.81 µV | 1.38 | 0.37 | [-0.02, 5.00] |
-| Cardinality6 | 14 | 3.40 µV | 2.42 | 0.65 | [0.08, 9.36] |
+| Cardinality1 | 15 | 177.87 ms | 19.18 | 4.95 | [144.00, 204.00] |
+| Cardinality2 | 22 | 174.36 ms | 20.72 | 4.42 | [144.00, 204.00] |
+| Cardinality3 | 22 | 168.18 ms | 15.93 | 3.40 | [144.00, 200.00] |
+| Cardinality4 | 22 | 171.27 ms | 19.93 | 4.25 | [144.00, 204.00] |
+| Cardinality5 | 24 | 171.67 ms | 16.04 | 3.27 | [144.00, 196.00] |
+| Cardinality6 | 23 | 174.26 ms | 16.04 | 3.34 | [144.00, 204.00] |
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality1 | 14 | 457.62 ms | 10.14 | 2.71 | [442.18, 478.70] |
-| Cardinality2 | 13 | 458.10 ms | 6.39 | 1.77 | [445.04, 468.12] |
-| Cardinality3 | 16 | 459.15 ms | 5.71 | 1.43 | [449.70, 469.63] |
-| Cardinality4 | 11 | 457.62 ms | 4.43 | 1.33 | [448.03, 463.60] |
-| Cardinality5 | 14 | 457.01 ms | 7.91 | 2.11 | [440.76, 468.56] |
-| Cardinality6 | 14 | 463.25 ms | 6.17 | 1.65 | [456.48, 479.55] |
+| Cardinality1 | 15 | -4.90 µV | 1.85 | 0.48 | [-9.64, -2.66] |
+| Cardinality2 | 22 | -5.64 µV | 2.44 | 0.52 | [-10.50, -1.57] |
+| Cardinality3 | 22 | -5.19 µV | 2.04 | 0.43 | [-10.83, -1.55] |
+| Cardinality4 | 22 | -5.95 µV | 3.12 | 0.67 | [-13.09, -1.82] |
+| Cardinality5 | 24 | -5.96 µV | 2.55 | 0.52 | [-12.06, -1.67] |
+| Cardinality6 | 23 | -5.73 µV | 2.88 | 0.60 | [-11.14, -0.87] |
+
+
+### 2.3 P1 Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality1 | 19 | 113.68 ms | 8.88 | 2.04 | [96.00, 120.00] |
+| Cardinality2 | 12 | 107.00 ms | 10.25 | 2.96 | [96.00, 120.00] |
+| Cardinality3 | 14 | 110.00 ms | 9.25 | 2.47 | [96.00, 120.00] |
+| Cardinality4 | 12 | 109.67 ms | 9.57 | 2.76 | [96.00, 120.00] |
+| Cardinality5 | 14 | 106.00 ms | 7.32 | 1.96 | [96.00, 120.00] |
+| Cardinality6 | 12 | 109.00 ms | 8.20 | 2.37 | [96.00, 120.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality1 | 19 | 4.41 µV | 2.89 | 0.66 | [1.20, 13.26] |
+| Cardinality2 | 12 | 3.07 µV | 1.84 | 0.53 | [1.36, 7.57] |
+| Cardinality3 | 14 | 3.25 µV | 2.36 | 0.63 | [0.79, 8.96] |
+| Cardinality4 | 12 | 3.28 µV | 1.83 | 0.53 | [0.96, 6.93] |
+| Cardinality5 | 14 | 2.66 µV | 1.69 | 0.45 | [0.35, 5.37] |
+| Cardinality6 | 12 | 2.97 µV | 2.08 | 0.60 | [0.77, 8.25] |
+
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality1 | 14 | 461.71 ms | 14.53 | 3.88 | [440.00, 480.00] |
+| Cardinality2 | 13 | 456.31 ms | 15.36 | 4.26 | [440.00, 480.00] |
+| Cardinality3 | 16 | 458.25 ms | 11.59 | 2.90 | [440.00, 476.00] |
+| Cardinality4 | 11 | 455.27 ms | 8.73 | 2.63 | [440.00, 472.00] |
+| Cardinality5 | 14 | 455.14 ms | 16.17 | 4.32 | [440.00, 480.00] |
+| Cardinality6 | 14 | 466.57 ms | 14.09 | 3.76 | [440.00, 480.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality1 | 14 | 3.04 µV | 1.84 | 0.49 | [1.05, 7.06] |
+| Cardinality2 | 13 | 3.78 µV | 2.08 | 0.58 | [0.41, 8.49] |
+| Cardinality3 | 16 | 4.49 µV | 2.23 | 0.56 | [1.30, 9.60] |
+| Cardinality4 | 11 | 4.18 µV | 2.57 | 0.78 | [0.65, 8.96] |
+| Cardinality5 | 14 | 2.64 µV | 1.36 | 0.36 | [0.35, 5.39] |
+| Cardinality6 | 14 | 4.55 µV | 2.34 | 0.63 | [1.85, 9.61] |
 
 
 ---
@@ -116,20 +141,20 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 468.71, BIC = 494.38
-- **Cardinality2 vs Cardinality1**: *β* = -0.94, *SE* = 0.415, *z* = -2.263, *p* = 0.024
-- **Cardinality3 vs Cardinality1**: *β* = -0.94, *SE* = 0.419, *z* = -2.249, *p* = 0.025
-- **Cardinality4 vs Cardinality1**: *β* = -1.07, *SE* = 0.420, *z* = -2.543, *p* = 0.011
-- **Cardinality5 vs Cardinality1**: *β* = -1.06, *SE* = 0.412, *z* = -2.581, *p* = 0.010
-- **Cardinality6 vs Cardinality1**: *β* = -1.08, *SE* = 0.412, *z* = -2.633, *p* = 0.008
-- **SNR**: *β* = -0.44, *SE* = 0.046, *z* = -9.570, *p* < .001
+- AIC = 456.09, BIC = 474.48
+- **Cardinality2 vs Cardinality1**: *β* = -0.46, *SE* = 5.332, *z* = -0.087, *p* = 0.931
+- **Cardinality3 vs Cardinality1**: *β* = 1.33, *SE* = 5.154, *z* = 0.258, *p* = 0.797
+- **Cardinality4 vs Cardinality1**: *β* = 2.54, *SE* = 5.536, *z* = 0.460, *p* = 0.646
+- **Cardinality5 vs Cardinality1**: *β* = 10.01, *SE* = 5.411, *z* = 1.850, *p* = 0.064
+- **Cardinality6 vs Cardinality1**: *β* = 7.98, *SE* = 5.625, *z* = 1.418, *p* = 0.156
+- **SNR**: *β* = 2.60, *SE* = 1.827, *z* = 1.425, *p* = 0.154
 
 _Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -140,21 +165,120 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | 0.94 | 0.41 | 2.26 | 0.024 | 0.250 | n.s. |
-| Cardinality1 - Cardinality3 | 0.94 | 0.42 | 2.25 | 0.025 | 0.250 | n.s. |
-| Cardinality1 - Cardinality4 | 1.07 | 0.42 | 2.54 | 0.011 | 0.134 | n.s. |
-| Cardinality1 - Cardinality5 | 1.06 | 0.41 | 2.58 | 0.010 | 0.129 | n.s. |
-| Cardinality1 - Cardinality6 | 1.09 | 0.41 | 2.63 | 0.008 | 0.120 | n.s. |
-| Cardinality2 - Cardinality3 | 0.00 | 0.37 | 0.01 | 0.994 | 1.000 | n.s. |
-| Cardinality2 - Cardinality4 | 0.13 | 0.38 | 0.34 | 0.730 | 1.000 | n.s. |
-| Cardinality2 - Cardinality5 | 0.13 | 0.37 | 0.34 | 0.733 | 1.000 | n.s. |
-| Cardinality2 - Cardinality6 | 0.15 | 0.37 | 0.40 | 0.690 | 1.000 | n.s. |
-| Cardinality3 - Cardinality4 | 0.13 | 0.38 | 0.34 | 0.735 | 1.000 | n.s. |
-| Cardinality3 - Cardinality5 | 0.12 | 0.36 | 0.34 | 0.737 | 1.000 | n.s. |
-| Cardinality3 - Cardinality6 | 0.14 | 0.37 | 0.39 | 0.696 | 1.000 | n.s. |
-| Cardinality4 - Cardinality5 | -0.00 | 0.36 | -0.01 | 0.990 | 1.000 | n.s. |
-| Cardinality4 - Cardinality6 | 0.02 | 0.37 | 0.04 | 0.964 | 1.000 | n.s. |
-| Cardinality5 - Cardinality6 | 0.02 | 0.36 | 0.06 | 0.954 | 1.000 | n.s. |
+| Cardinality1 - Cardinality2 | 0.46 | 5.33 | 0.09 | 0.931 | 0.998 | n.s. |
+| Cardinality1 - Cardinality3 | -1.33 | 5.15 | -0.26 | 0.797 | 0.998 | n.s. |
+| Cardinality1 - Cardinality4 | -2.54 | 5.54 | -0.46 | 0.646 | 0.998 | n.s. |
+| Cardinality1 - Cardinality5 | -10.01 | 5.41 | -1.85 | 0.064 | 0.606 | n.s. |
+| Cardinality1 - Cardinality6 | -7.98 | 5.62 | -1.42 | 0.156 | 0.845 | n.s. |
+| Cardinality2 - Cardinality3 | -1.79 | 4.69 | -0.38 | 0.703 | 0.998 | n.s. |
+| Cardinality2 - Cardinality4 | -3.01 | 5.20 | -0.58 | 0.563 | 0.997 | n.s. |
+| Cardinality2 - Cardinality5 | -10.47 | 4.95 | -2.12 | 0.034 | 0.408 | n.s. |
+| Cardinality2 - Cardinality6 | -8.44 | 5.13 | -1.65 | 0.100 | 0.716 | n.s. |
+| Cardinality3 - Cardinality4 | -1.22 | 5.05 | -0.24 | 0.810 | 0.998 | n.s. |
+| Cardinality3 - Cardinality5 | -8.68 | 4.79 | -1.81 | 0.070 | 0.611 | n.s. |
+| Cardinality3 - Cardinality6 | -6.65 | 4.91 | -1.35 | 0.176 | 0.845 | n.s. |
+| Cardinality4 - Cardinality5 | -7.46 | 5.27 | -1.42 | 0.157 | 0.845 | n.s. |
+| Cardinality4 - Cardinality6 | -5.43 | 5.45 | -1.00 | 0.319 | 0.954 | n.s. |
+| Cardinality5 - Cardinality6 | 2.03 | 5.02 | 0.40 | 0.686 | 0.998 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+_ANOVA results not available._
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Pairwise tests could not be computed (insufficient paired samples)._
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 182.79, BIC = 201.17
+- **Cardinality2 vs Cardinality1**: *β* = -0.14, *SE* = 0.416, *z* = -0.341, *p* = 0.733
+- **Cardinality3 vs Cardinality1**: *β* = -0.56, *SE* = 0.428, *z* = -1.318, *p* = 0.187
+- **Cardinality4 vs Cardinality1**: *β* = -0.91, *SE* = 0.418, *z* = -2.168, *p* = 0.030
+- **Cardinality5 vs Cardinality1**: *β* = -0.30, *SE* = 0.415, *z* = -0.728, *p* = 0.467
+- **Cardinality6 vs Cardinality1**: *β* = -0.35, *SE* = 0.445, *z* = -0.787, *p* = 0.431
+- **SNR**: *β* = 0.83, *SE* = 0.141, *z* = 5.922, *p* < .001
+
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality1 - Cardinality2 | 0.14 | 0.42 | 0.34 | 0.733 | 0.989 | n.s. |
+| Cardinality1 - Cardinality3 | 0.56 | 0.43 | 1.32 | 0.187 | 0.898 | n.s. |
+| Cardinality1 - Cardinality4 | 0.91 | 0.42 | 2.17 | 0.030 | 0.368 | n.s. |
+| Cardinality1 - Cardinality5 | 0.30 | 0.41 | 0.73 | 0.467 | 0.989 | n.s. |
+| Cardinality1 - Cardinality6 | 0.35 | 0.45 | 0.79 | 0.431 | 0.989 | n.s. |
+| Cardinality2 - Cardinality3 | 0.42 | 0.35 | 1.20 | 0.232 | 0.929 | n.s. |
+| Cardinality2 - Cardinality4 | 0.76 | 0.39 | 1.95 | 0.051 | 0.521 | n.s. |
+| Cardinality2 - Cardinality5 | 0.16 | 0.37 | 0.43 | 0.667 | 0.989 | n.s. |
+| Cardinality2 - Cardinality6 | 0.21 | 0.38 | 0.54 | 0.588 | 0.989 | n.s. |
+| Cardinality3 - Cardinality4 | 0.34 | 0.40 | 0.86 | 0.392 | 0.989 | n.s. |
+| Cardinality3 - Cardinality5 | -0.26 | 0.38 | -0.69 | 0.491 | 0.989 | n.s. |
+| Cardinality3 - Cardinality6 | -0.21 | 0.38 | -0.56 | 0.577 | 0.989 | n.s. |
+| Cardinality4 - Cardinality5 | -0.60 | 0.39 | -1.54 | 0.125 | 0.823 | n.s. |
+| Cardinality4 - Cardinality6 | -0.56 | 0.40 | -1.38 | 0.167 | 0.889 | n.s. |
+| Cardinality5 - Cardinality6 | 0.05 | 0.38 | 0.13 | 0.898 | 0.989 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+_ANOVA results not available._
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Pairwise tests could not be computed (insufficient paired samples)._
+
+
+### 3.2 N1 Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 1055.35, BIC = 1081.02
+- **Cardinality2 vs Cardinality1**: *β* = -3.17, *SE* = 3.884, *z* = -0.816, *p* = 0.414
+- **Cardinality3 vs Cardinality1**: *β* = -8.07, *SE* = 3.930, *z* = -2.053, *p* = 0.040
+- **Cardinality4 vs Cardinality1**: *β* = -6.50, *SE* = 3.941, *z* = -1.649, *p* = 0.099
+- **Cardinality5 vs Cardinality1**: *β* = -6.50, *SE* = 3.867, *z* = -1.682, *p* = 0.093
+- **Cardinality6 vs Cardinality1**: *β* = -4.33, *SE* = 3.859, *z* = -1.123, *p* = 0.262
+- **SNR**: *β* = 0.16, *SE* = 0.447, *z* = 0.362, *p* = 0.717
+
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality1 - Cardinality2 | 3.17 | 3.88 | 0.82 | 0.414 | 0.976 | n.s. |
+| Cardinality1 - Cardinality3 | 8.07 | 3.93 | 2.05 | 0.040 | 0.459 | n.s. |
+| Cardinality1 - Cardinality4 | 6.50 | 3.94 | 1.65 | 0.099 | 0.743 | n.s. |
+| Cardinality1 - Cardinality5 | 6.50 | 3.87 | 1.68 | 0.093 | 0.743 | n.s. |
+| Cardinality1 - Cardinality6 | 4.33 | 3.86 | 1.12 | 0.262 | 0.964 | n.s. |
+| Cardinality2 - Cardinality3 | 4.90 | 3.48 | 1.41 | 0.159 | 0.875 | n.s. |
+| Cardinality2 - Cardinality4 | 3.33 | 3.52 | 0.95 | 0.345 | 0.974 | n.s. |
+| Cardinality2 - Cardinality5 | 3.33 | 3.44 | 0.97 | 0.333 | 0.974 | n.s. |
+| Cardinality2 - Cardinality6 | 1.16 | 3.42 | 0.34 | 0.734 | 0.987 | n.s. |
+| Cardinality3 - Cardinality4 | -1.57 | 3.52 | -0.45 | 0.656 | 0.987 | n.s. |
+| Cardinality3 - Cardinality5 | -1.56 | 3.41 | -0.46 | 0.647 | 0.987 | n.s. |
+| Cardinality3 - Cardinality6 | -3.74 | 3.43 | -1.09 | 0.277 | 0.964 | n.s. |
+| Cardinality4 - Cardinality5 | 0.00 | 3.39 | 0.00 | 0.999 | 0.999 | n.s. |
+| Cardinality4 - Cardinality6 | -2.17 | 3.43 | -0.63 | 0.527 | 0.987 | n.s. |
+| Cardinality5 - Cardinality6 | -2.17 | 3.36 | -0.65 | 0.517 | 0.987 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -162,8 +286,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.21, *p* = 0.316, η²_G = 0.048
-- Greenhouse-Geisser corrected: *p* = 0.321 (ε = 0.588)
+- *F* = 1.06, *p* = 0.394, η²_G = 0.032
+- Greenhouse-Geisser corrected: *p* = 0.372 (ε = 0.477)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -172,37 +296,37 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 0.55 | 11 | = 0.740 | 0.24 [-0.28, 0.85] | small | n.s. |
-| Cardinality1 vs Cardinality3 | 0.82 | 11 | = 0.643 | 0.30 [-0.29, 0.95] | small | n.s. |
-| Cardinality1 vs Cardinality4 | 1.29 | 11 | = 0.544 | 0.51 [-0.19, 1.01] | medium | n.s. |
-| Cardinality1 vs Cardinality5 | 1.54 | 11 | = 0.544 | 0.61 [-0.09, 1.08] | medium | n.s. |
-| Cardinality1 vs Cardinality6 | 1.25 | 11 | = 0.544 | 0.45 [-0.11, 1.06] | small | n.s. |
-| Cardinality2 vs Cardinality3 | 0.37 | 11 | = 0.765 | 0.06 [-0.30, 0.65] | negligible | n.s. |
-| Cardinality2 vs Cardinality4 | 1.44 | 11 | = 0.544 | 0.32 [-0.07, 0.87] | small | n.s. |
-| Cardinality2 vs Cardinality5 | 1.28 | 11 | = 0.544 | 0.42 [-0.12, 0.79] | small | n.s. |
-| Cardinality2 vs Cardinality6 | 0.84 | 11 | = 0.643 | 0.25 [-0.22, 0.67] | small | n.s. |
-| Cardinality3 vs Cardinality4 | 1.20 | 11 | = 0.544 | 0.28 [-0.09, 0.88] | small | n.s. |
-| Cardinality3 vs Cardinality5 | 1.46 | 11 | = 0.544 | 0.38 [-0.12, 0.79] | small | n.s. |
-| Cardinality3 vs Cardinality6 | 0.85 | 11 | = 0.643 | 0.21 [-0.32, 0.60] | small | n.s. |
-| Cardinality4 vs Cardinality5 | 0.35 | 11 | = 0.765 | 0.08 [-0.50, 0.39] | negligible | n.s. |
-| Cardinality4 vs Cardinality6 | -0.31 | 11 | = 0.765 | -0.07 [-0.66, 0.24] | negligible | n.s. |
-| Cardinality5 vs Cardinality6 | -0.63 | 11 | = 0.736 | -0.15 [-0.60, 0.27] | negligible | n.s. |
+| Cardinality1 vs Cardinality2 | 0.25 | 11 | = 0.869 | 0.09 [-0.43, 0.68] | negligible | n.s. |
+| Cardinality1 vs Cardinality3 | 1.81 | 11 | = 0.488 | 0.43 [-0.09, 1.21] | small | n.s. |
+| Cardinality1 vs Cardinality4 | 2.05 | 11 | = 0.488 | 0.52 [-0.06, 1.18] | medium | n.s. |
+| Cardinality1 vs Cardinality5 | 1.05 | 11 | = 0.666 | 0.30 [-0.10, 1.07] | small | n.s. |
+| Cardinality1 vs Cardinality6 | 0.48 | 11 | = 0.743 | 0.15 [-0.32, 0.80] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | 0.90 | 11 | = 0.666 | 0.26 [-0.17, 0.78] | small | n.s. |
+| Cardinality2 vs Cardinality4 | 1.05 | 11 | = 0.666 | 0.35 [-0.31, 0.60] | small | n.s. |
+| Cardinality2 vs Cardinality5 | 0.64 | 11 | = 0.668 | 0.15 [-0.33, 0.56] | negligible | n.s. |
+| Cardinality2 vs Cardinality6 | 0.13 | 11 | = 0.900 | 0.04 [-0.37, 0.52] | negligible | n.s. |
+| Cardinality3 vs Cardinality4 | 0.79 | 11 | = 0.668 | 0.13 [-0.53, 0.40] | negligible | n.s. |
+| Cardinality3 vs Cardinality5 | -0.88 | 11 | = 0.666 | -0.14 [-0.64, 0.26] | negligible | n.s. |
+| Cardinality3 vs Cardinality6 | -1.62 | 11 | = 0.497 | -0.28 [-0.73, 0.19] | small | n.s. |
+| Cardinality4 vs Cardinality5 | -1.12 | 11 | = 0.666 | -0.26 [-0.47, 0.41] | small | n.s. |
+| Cardinality4 vs Cardinality6 | -2.05 | 11 | = 0.488 | -0.37 [-0.68, 0.22] | small | n.s. |
+| Cardinality5 vs Cardinality6 | -0.69 | 11 | = 0.668 | -0.14 [-0.53, 0.34] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 938.67, BIC = 964.34
-- **Cardinality2 vs Cardinality1**: *β* = -4.93, *SE* = 2.459, *z* = -2.005, *p* = 0.045
-- **Cardinality3 vs Cardinality1**: *β* = -3.72, *SE* = 2.489, *z* = -1.496, *p* = 0.135
-- **Cardinality4 vs Cardinality1**: *β* = -3.05, *SE* = 2.495, *z* = -1.224, *p* = 0.221
-- **Cardinality5 vs Cardinality1**: *β* = -2.56, *SE* = 2.449, *z* = -1.045, *p* = 0.296
-- **Cardinality6 vs Cardinality1**: *β* = -2.50, *SE* = 2.444, *z* = -1.023, *p* = 0.306
-- **SNR**: *β* = -0.27, *SE* = 0.283, *z* = -0.956, *p* = 0.339
+- AIC = 523.91, BIC = 549.58
+- **Cardinality2 vs Cardinality1**: *β* = -1.09, *SE* = 0.506, *z* = -2.156, *p* = 0.031
+- **Cardinality3 vs Cardinality1**: *β* = -0.55, *SE* = 0.512, *z* = -1.078, *p* = 0.281
+- **Cardinality4 vs Cardinality1**: *β* = -0.88, *SE* = 0.514, *z* = -1.717, *p* = 0.086
+- **Cardinality5 vs Cardinality1**: *β* = -0.95, *SE* = 0.504, *z* = -1.895, *p* = 0.058
+- **Cardinality6 vs Cardinality1**: *β* = -1.02, *SE* = 0.503, *z* = -2.035, *p* = 0.042
+- **SNR**: *β* = -0.41, *SE* = 0.057, *z* = -7.224, *p* < .001
 
 _Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -213,21 +337,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | 4.93 | 2.46 | 2.00 | 0.045 | 0.499 | n.s. |
-| Cardinality1 - Cardinality3 | 3.72 | 2.49 | 1.50 | 0.135 | 0.868 | n.s. |
-| Cardinality1 - Cardinality4 | 3.05 | 2.50 | 1.22 | 0.221 | 0.961 | n.s. |
-| Cardinality1 - Cardinality5 | 2.56 | 2.45 | 1.05 | 0.296 | 0.974 | n.s. |
-| Cardinality1 - Cardinality6 | 2.50 | 2.44 | 1.02 | 0.306 | 0.974 | n.s. |
-| Cardinality2 - Cardinality3 | -1.21 | 2.20 | -0.55 | 0.584 | 0.997 | n.s. |
-| Cardinality2 - Cardinality4 | -1.88 | 2.23 | -0.84 | 0.400 | 0.983 | n.s. |
-| Cardinality2 - Cardinality5 | -2.37 | 2.18 | -1.09 | 0.277 | 0.974 | n.s. |
-| Cardinality2 - Cardinality6 | -2.43 | 2.17 | -1.12 | 0.262 | 0.974 | n.s. |
-| Cardinality3 - Cardinality4 | -0.67 | 2.23 | -0.30 | 0.764 | 0.997 | n.s. |
-| Cardinality3 - Cardinality5 | -1.16 | 2.16 | -0.54 | 0.590 | 0.997 | n.s. |
-| Cardinality3 - Cardinality6 | -1.22 | 2.18 | -0.56 | 0.574 | 0.997 | n.s. |
-| Cardinality4 - Cardinality5 | -0.49 | 2.14 | -0.23 | 0.818 | 0.997 | n.s. |
-| Cardinality4 - Cardinality6 | -0.55 | 2.17 | -0.26 | 0.799 | 0.997 | n.s. |
-| Cardinality5 - Cardinality6 | -0.06 | 2.12 | -0.03 | 0.977 | 0.997 | n.s. |
+| Cardinality1 - Cardinality2 | 1.09 | 0.51 | 2.16 | 0.031 | 0.377 | n.s. |
+| Cardinality1 - Cardinality3 | 0.55 | 0.51 | 1.08 | 0.281 | 0.963 | n.s. |
+| Cardinality1 - Cardinality4 | 0.88 | 0.51 | 1.72 | 0.086 | 0.660 | n.s. |
+| Cardinality1 - Cardinality5 | 0.96 | 0.50 | 1.89 | 0.058 | 0.541 | n.s. |
+| Cardinality1 - Cardinality6 | 1.02 | 0.50 | 2.03 | 0.042 | 0.451 | n.s. |
+| Cardinality2 - Cardinality3 | -0.54 | 0.45 | -1.19 | 0.234 | 0.946 | n.s. |
+| Cardinality2 - Cardinality4 | -0.21 | 0.46 | -0.46 | 0.648 | 0.998 | n.s. |
+| Cardinality2 - Cardinality5 | -0.14 | 0.45 | -0.31 | 0.760 | 0.999 | n.s. |
+| Cardinality2 - Cardinality6 | -0.07 | 0.45 | -0.15 | 0.879 | 0.999 | n.s. |
+| Cardinality3 - Cardinality4 | 0.33 | 0.46 | 0.72 | 0.470 | 0.988 | n.s. |
+| Cardinality3 - Cardinality5 | 0.40 | 0.44 | 0.91 | 0.364 | 0.973 | n.s. |
+| Cardinality3 - Cardinality6 | 0.47 | 0.45 | 1.06 | 0.291 | 0.963 | n.s. |
+| Cardinality4 - Cardinality5 | 0.07 | 0.44 | 0.16 | 0.869 | 0.999 | n.s. |
+| Cardinality4 - Cardinality6 | 0.14 | 0.45 | 0.32 | 0.751 | 0.999 | n.s. |
+| Cardinality5 - Cardinality6 | 0.07 | 0.44 | 0.16 | 0.874 | 0.999 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -235,7 +359,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.29, *p* = 0.916, η²_G = 0.010
+- *F* = 1.29, *p* = 0.280, η²_G = 0.044
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -244,40 +368,40 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 0.57 | 11 | = 0.923 | 0.21 [-0.18, 0.97] | small | n.s. |
-| Cardinality1 vs Cardinality3 | 0.25 | 11 | = 0.923 | 0.06 [-0.38, 0.84] | negligible | n.s. |
-| Cardinality1 vs Cardinality4 | 0.34 | 11 | = 0.923 | 0.12 [-0.36, 0.81] | negligible | n.s. |
-| Cardinality1 vs Cardinality5 | 0.21 | 11 | = 0.923 | 0.06 [-0.30, 0.83] | negligible | n.s. |
-| Cardinality1 vs Cardinality6 | -0.34 | 11 | = 0.923 | -0.09 [-0.38, 0.74] | negligible | n.s. |
-| Cardinality2 vs Cardinality3 | -0.67 | 11 | = 0.923 | -0.15 [-0.48, 0.45] | negligible | n.s. |
-| Cardinality2 vs Cardinality4 | -0.31 | 11 | = 0.923 | -0.11 [-0.64, 0.28] | negligible | n.s. |
-| Cardinality2 vs Cardinality5 | -0.57 | 11 | = 0.923 | -0.14 [-0.60, 0.29] | negligible | n.s. |
-| Cardinality2 vs Cardinality6 | -1.10 | 11 | = 0.923 | -0.29 [-0.58, 0.31] | small | n.s. |
-| Cardinality3 vs Cardinality4 | 0.18 | 11 | = 0.923 | 0.05 [-0.44, 0.50] | negligible | n.s. |
-| Cardinality3 vs Cardinality5 | 0.02 | 11 | = 0.985 | 0.00 [-0.51, 0.37] | negligible | n.s. |
-| Cardinality3 vs Cardinality6 | -0.92 | 11 | = 0.923 | -0.16 [-0.58, 0.33] | negligible | n.s. |
-| Cardinality4 vs Cardinality5 | -0.20 | 11 | = 0.923 | -0.05 [-0.57, 0.32] | negligible | n.s. |
-| Cardinality4 vs Cardinality6 | -0.70 | 11 | = 0.923 | -0.22 [-0.54, 0.35] | small | n.s. |
-| Cardinality5 vs Cardinality6 | -0.80 | 11 | = 0.923 | -0.16 [-0.44, 0.42] | negligible | n.s. |
+| Cardinality1 vs Cardinality2 | 0.90 | 11 | = 0.632 | 0.39 [-0.25, 0.89] | small | n.s. |
+| Cardinality1 vs Cardinality3 | 1.07 | 11 | = 0.632 | 0.36 [-0.26, 0.98] | small | n.s. |
+| Cardinality1 vs Cardinality4 | 1.30 | 11 | = 0.632 | 0.50 [-0.24, 0.95] | small | n.s. |
+| Cardinality1 vs Cardinality5 | 2.33 | 11 | = 0.593 | 0.87 [-0.06, 1.12] | large | n.s. |
+| Cardinality1 vs Cardinality6 | 1.19 | 11 | = 0.632 | 0.40 [-0.17, 0.98] | small | n.s. |
+| Cardinality2 vs Cardinality3 | -0.34 | 11 | = 0.792 | -0.07 [-0.61, 0.33] | negligible | n.s. |
+| Cardinality2 vs Cardinality4 | 0.82 | 11 | = 0.632 | 0.18 [-0.27, 0.65] | negligible | n.s. |
+| Cardinality2 vs Cardinality5 | 1.11 | 11 | = 0.632 | 0.36 [-0.27, 0.62] | small | n.s. |
+| Cardinality2 vs Cardinality6 | 0.25 | 11 | = 0.804 | 0.06 [-0.32, 0.57] | negligible | n.s. |
+| Cardinality3 vs Cardinality4 | 0.93 | 11 | = 0.632 | 0.24 [-0.14, 0.82] | small | n.s. |
+| Cardinality3 vs Cardinality5 | 1.65 | 11 | = 0.632 | 0.47 [-0.04, 0.89] | small | n.s. |
+| Cardinality3 vs Cardinality6 | 0.51 | 11 | = 0.779 | 0.12 [-0.24, 0.68] | negligible | n.s. |
+| Cardinality4 vs Cardinality5 | 0.39 | 11 | = 0.792 | 0.10 [-0.46, 0.43] | negligible | n.s. |
+| Cardinality4 vs Cardinality6 | -0.76 | 11 | = 0.632 | -0.10 [-0.56, 0.33] | negligible | n.s. |
+| Cardinality5 vs Cardinality6 | -1.05 | 11 | = 0.632 | -0.24 [-0.53, 0.33] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.2 P1 Component
+### 3.3 P1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 272.06, BIC = 293.83
-- **Cardinality2 vs Cardinality1**: *β* = -0.27, *SE* = 0.365, *z* = -0.735, *p* = 0.462
-- **Cardinality3 vs Cardinality1**: *β* = -0.24, *SE* = 0.351, *z* = -0.694, *p* = 0.488
-- **Cardinality4 vs Cardinality1**: *β* = -0.50, *SE* = 0.362, *z* = -1.378, *p* = 0.168
-- **Cardinality5 vs Cardinality1**: *β* = -0.73, *SE* = 0.347, *z* = -2.112, *p* = 0.035
-- **Cardinality6 vs Cardinality1**: *β* = -0.46, *SE* = 0.371, *z* = -1.225, *p* = 0.221
-- **SNR**: *β* = 0.77, *SE* = 0.069, *z* = 11.175, *p* < .001
+- AIC = 601.11, BIC = 622.88
+- **Cardinality2 vs Cardinality1**: *β* = -5.90, *SE* = 2.852, *z* = -2.069, *p* = 0.039
+- **Cardinality3 vs Cardinality1**: *β* = -3.45, *SE* = 2.734, *z* = -1.263, *p* = 0.207
+- **Cardinality4 vs Cardinality1**: *β* = -4.53, *SE* = 2.839, *z* = -1.596, *p* = 0.111
+- **Cardinality5 vs Cardinality1**: *β* = -7.93, *SE* = 2.713, *z* = -2.923, *p* = 0.003
+- **Cardinality6 vs Cardinality1**: *β* = -4.69, *SE* = 2.883, *z* = -1.627, *p* = 0.104
+- **SNR**: *β* = 1.27, *SE* = 0.519, *z* = 2.456, *p* = 0.014
 
 _Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -288,21 +412,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | 0.27 | 0.36 | 0.74 | 0.462 | 0.998 | n.s. |
-| Cardinality1 - Cardinality3 | 0.24 | 0.35 | 0.69 | 0.488 | 0.998 | n.s. |
-| Cardinality1 - Cardinality4 | 0.50 | 0.36 | 1.38 | 0.168 | 0.924 | n.s. |
-| Cardinality1 - Cardinality5 | 0.73 | 0.35 | 2.11 | 0.035 | 0.411 | n.s. |
-| Cardinality1 - Cardinality6 | 0.45 | 0.37 | 1.22 | 0.221 | 0.950 | n.s. |
-| Cardinality2 - Cardinality3 | -0.02 | 0.39 | -0.06 | 0.949 | 0.998 | n.s. |
-| Cardinality2 - Cardinality4 | 0.23 | 0.40 | 0.57 | 0.568 | 0.998 | n.s. |
-| Cardinality2 - Cardinality5 | 0.46 | 0.39 | 1.20 | 0.230 | 0.950 | n.s. |
-| Cardinality2 - Cardinality6 | 0.19 | 0.40 | 0.46 | 0.644 | 0.998 | n.s. |
-| Cardinality3 - Cardinality4 | 0.25 | 0.39 | 0.65 | 0.518 | 0.998 | n.s. |
-| Cardinality3 - Cardinality5 | 0.49 | 0.38 | 1.29 | 0.196 | 0.942 | n.s. |
-| Cardinality3 - Cardinality6 | 0.21 | 0.39 | 0.54 | 0.587 | 0.998 | n.s. |
-| Cardinality4 - Cardinality5 | 0.23 | 0.39 | 0.61 | 0.545 | 0.998 | n.s. |
-| Cardinality4 - Cardinality6 | -0.04 | 0.41 | -0.11 | 0.915 | 0.998 | n.s. |
-| Cardinality5 - Cardinality6 | -0.28 | 0.38 | -0.72 | 0.470 | 0.998 | n.s. |
+| Cardinality1 - Cardinality2 | 5.90 | 2.85 | 2.07 | 0.039 | 0.423 | n.s. |
+| Cardinality1 - Cardinality3 | 3.45 | 2.73 | 1.26 | 0.207 | 0.901 | n.s. |
+| Cardinality1 - Cardinality4 | 4.53 | 2.84 | 1.60 | 0.111 | 0.759 | n.s. |
+| Cardinality1 - Cardinality5 | 7.93 | 2.71 | 2.92 | 0.003 | 0.051 | n.s. |
+| Cardinality1 - Cardinality6 | 4.69 | 2.88 | 1.63 | 0.104 | 0.759 | n.s. |
+| Cardinality2 - Cardinality3 | -2.45 | 3.03 | -0.81 | 0.420 | 0.978 | n.s. |
+| Cardinality2 - Cardinality4 | -1.37 | 3.16 | -0.43 | 0.665 | 0.996 | n.s. |
+| Cardinality2 - Cardinality5 | 2.03 | 3.04 | 0.67 | 0.504 | 0.985 | n.s. |
+| Cardinality2 - Cardinality6 | -1.21 | 3.17 | -0.38 | 0.703 | 0.996 | n.s. |
+| Cardinality3 - Cardinality4 | 1.08 | 3.06 | 0.35 | 0.725 | 0.996 | n.s. |
+| Cardinality3 - Cardinality5 | 4.48 | 2.93 | 1.53 | 0.127 | 0.776 | n.s. |
+| Cardinality3 - Cardinality6 | 1.24 | 3.04 | 0.41 | 0.684 | 0.996 | n.s. |
+| Cardinality4 - Cardinality5 | 3.40 | 3.02 | 1.12 | 0.261 | 0.934 | n.s. |
+| Cardinality4 - Cardinality6 | 0.16 | 3.17 | 0.05 | 0.959 | 0.996 | n.s. |
+| Cardinality5 - Cardinality6 | -3.24 | 3.02 | -1.07 | 0.283 | 0.934 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -310,7 +434,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.97, *p* = 0.456, η²_G = 0.110
+- *F* = 1.68, *p* = 0.176, η²_G = 0.218
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -319,37 +443,37 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 2.14 | 5 | = 0.812 | 0.58 [-0.21, 1.13] | medium | n.s. |
-| Cardinality1 vs Cardinality3 | 1.24 | 5 | = 0.812 | 0.74 [-0.41, 0.88] | medium | n.s. |
-| Cardinality1 vs Cardinality4 | 1.45 | 5 | = 0.812 | 0.55 [-0.23, 1.10] | medium | n.s. |
-| Cardinality1 vs Cardinality5 | 1.29 | 5 | = 0.812 | 0.77 [-0.30, 0.94] | medium | n.s. |
-| Cardinality1 vs Cardinality6 | 1.34 | 5 | = 0.812 | 0.61 [-0.21, 1.32] | medium | n.s. |
-| Cardinality2 vs Cardinality3 | 0.40 | 5 | = 0.924 | 0.21 [-0.92, 0.52] | small | n.s. |
-| Cardinality2 vs Cardinality4 | -0.37 | 5 | = 0.924 | -0.10 [-1.26, 0.35] | negligible | n.s. |
-| Cardinality2 vs Cardinality5 | 0.41 | 5 | = 0.924 | 0.27 [-0.58, 0.86] | small | n.s. |
-| Cardinality2 vs Cardinality6 | 0.16 | 5 | = 0.924 | 0.08 [-0.68, 1.00] | negligible | n.s. |
-| Cardinality3 vs Cardinality4 | -0.77 | 5 | = 0.924 | -0.35 [-1.10, 0.60] | small | n.s. |
-| Cardinality3 vs Cardinality5 | 0.10 | 5 | = 0.924 | 0.07 [-0.61, 0.94] | negligible | n.s. |
-| Cardinality3 vs Cardinality6 | -0.24 | 5 | = 0.924 | -0.11 [-0.56, 1.00] | negligible | n.s. |
-| Cardinality4 vs Cardinality5 | 0.58 | 5 | = 0.924 | 0.41 [-0.51, 0.94] | small | n.s. |
-| Cardinality4 vs Cardinality6 | 0.54 | 5 | = 0.924 | 0.18 [-0.82, 0.85] | negligible | n.s. |
-| Cardinality5 vs Cardinality6 | -0.26 | 5 | = 0.924 | -0.16 [-0.66, 0.69] | negligible | n.s. |
+| Cardinality1 vs Cardinality2 | 1.69 | 5 | = 0.441 | 1.01 [-0.25, 1.07] | large | n.s. |
+| Cardinality1 vs Cardinality3 | 1.51 | 5 | = 0.441 | 0.89 [-0.10, 1.28] | large | n.s. |
+| Cardinality1 vs Cardinality4 | 1.35 | 5 | = 0.441 | 0.69 [-0.17, 1.17] | medium | n.s. |
+| Cardinality1 vs Cardinality5 | 3.00 | 5 | = 0.316 | 1.82 [-0.10, 1.20] | large | n.s. |
+| Cardinality1 vs Cardinality6 | 2.09 | 5 | = 0.441 | 1.18 [-0.30, 1.20] | large | n.s. |
+| Cardinality2 vs Cardinality3 | -0.10 | 5 | = 0.988 | -0.07 [-0.85, 0.59] | negligible | n.s. |
+| Cardinality2 vs Cardinality4 | -0.94 | 5 | = 0.533 | -0.54 [-0.81, 0.73] | medium | n.s. |
+| Cardinality2 vs Cardinality5 | 0.75 | 5 | = 0.610 | 0.53 [-0.60, 0.84] | medium | n.s. |
+| Cardinality2 vs Cardinality6 | -0.13 | 5 | = 0.988 | -0.08 [-0.98, 0.70] | negligible | n.s. |
+| Cardinality3 vs Cardinality4 | -0.96 | 5 | = 0.533 | -0.45 [-1.02, 0.66] | small | n.s. |
+| Cardinality3 vs Cardinality5 | 1.35 | 5 | = 0.441 | 0.60 [-0.38, 1.23] | medium | n.s. |
+| Cardinality3 vs Cardinality6 | 0.00 | 5 | = 1.000 | 0.00 [-0.42, 1.18] | negligible | n.s. |
+| Cardinality4 vs Cardinality5 | 1.86 | 5 | = 0.441 | 1.23 [-0.43, 1.03] | large | n.s. |
+| Cardinality4 vs Cardinality6 | 2.71 | 5 | = 0.316 | 0.55 [-0.90, 0.77] | medium | n.s. |
+| Cardinality5 vs Cardinality6 | -1.14 | 5 | = 0.512 | -0.69 [-1.14, 0.26] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 505.55, BIC = 527.32
-- **Cardinality2 vs Cardinality1**: *β* = -0.81, *SE* = 1.617, *z* = -0.502, *p* = 0.615
-- **Cardinality3 vs Cardinality1**: *β* = -1.56, *SE* = 1.546, *z* = -1.011, *p* = 0.312
-- **Cardinality4 vs Cardinality1**: *β* = -2.77, *SE* = 1.607, *z* = -1.727, *p* = 0.084
-- **Cardinality5 vs Cardinality1**: *β* = -3.30, *SE* = 1.534, *z* = -2.151, *p* = 0.031
-- **Cardinality6 vs Cardinality1**: *β* = -1.63, *SE* = 1.625, *z* = -1.005, *p* = 0.315
-- **SNR**: *β* = 0.28, *SE* = 0.290, *z* = 0.963, *p* = 0.336
+- AIC = 313.10, BIC = 334.87
+- **Cardinality2 vs Cardinality1**: *β* = -1.09, *SE* = 0.475, *z* = -2.287, *p* = 0.022
+- **Cardinality3 vs Cardinality1**: *β* = -0.97, *SE* = 0.456, *z* = -2.128, *p* = 0.033
+- **Cardinality4 vs Cardinality1**: *β* = -1.11, *SE* = 0.470, *z* = -2.369, *p* = 0.018
+- **Cardinality5 vs Cardinality1**: *β* = -1.75, *SE* = 0.450, *z* = -3.877, *p* < .001
+- **Cardinality6 vs Cardinality1**: *β* = -1.16, *SE* = 0.482, *z* = -2.401, *p* = 0.016
+- **SNR**: *β* = 0.80, *SE* = 0.089, *z* = 8.967, *p* < .001
 
 _Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -360,21 +484,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | 0.81 | 1.62 | 0.50 | 0.615 | 0.992 | n.s. |
-| Cardinality1 - Cardinality3 | 1.56 | 1.55 | 1.01 | 0.312 | 0.979 | n.s. |
-| Cardinality1 - Cardinality4 | 2.77 | 1.61 | 1.73 | 0.084 | 0.708 | n.s. |
-| Cardinality1 - Cardinality5 | 3.30 | 1.53 | 2.15 | 0.031 | 0.381 | n.s. |
-| Cardinality1 - Cardinality6 | 1.63 | 1.63 | 1.00 | 0.315 | 0.979 | n.s. |
-| Cardinality2 - Cardinality3 | 0.75 | 1.72 | 0.44 | 0.663 | 0.992 | n.s. |
-| Cardinality2 - Cardinality4 | 1.96 | 1.79 | 1.09 | 0.274 | 0.979 | n.s. |
-| Cardinality2 - Cardinality5 | 2.49 | 1.72 | 1.45 | 0.148 | 0.876 | n.s. |
-| Cardinality2 - Cardinality6 | 0.82 | 1.79 | 0.46 | 0.646 | 0.992 | n.s. |
-| Cardinality3 - Cardinality4 | 1.21 | 1.73 | 0.70 | 0.484 | 0.990 | n.s. |
-| Cardinality3 - Cardinality5 | 1.74 | 1.66 | 1.05 | 0.296 | 0.979 | n.s. |
-| Cardinality3 - Cardinality6 | 0.07 | 1.72 | 0.04 | 0.967 | 0.992 | n.s. |
-| Cardinality4 - Cardinality5 | 0.53 | 1.71 | 0.31 | 0.759 | 0.992 | n.s. |
-| Cardinality4 - Cardinality6 | -1.14 | 1.79 | -0.64 | 0.525 | 0.990 | n.s. |
-| Cardinality5 - Cardinality6 | -1.67 | 1.71 | -0.97 | 0.330 | 0.979 | n.s. |
+| Cardinality1 - Cardinality2 | 1.09 | 0.47 | 2.29 | 0.022 | 0.236 | n.s. |
+| Cardinality1 - Cardinality3 | 0.97 | 0.46 | 2.13 | 0.033 | 0.311 | n.s. |
+| Cardinality1 - Cardinality4 | 1.11 | 0.47 | 2.37 | 0.018 | 0.209 | n.s. |
+| Cardinality1 - Cardinality5 | 1.75 | 0.45 | 3.88 | < .001 | 0.002 | ** |
+| Cardinality1 - Cardinality6 | 1.16 | 0.48 | 2.40 | 0.016 | 0.206 | n.s. |
+| Cardinality2 - Cardinality3 | -0.12 | 0.50 | -0.23 | 0.817 | 0.999 | n.s. |
+| Cardinality2 - Cardinality4 | 0.03 | 0.53 | 0.05 | 0.959 | 0.999 | n.s. |
+| Cardinality2 - Cardinality5 | 0.66 | 0.50 | 1.31 | 0.189 | 0.849 | n.s. |
+| Cardinality2 - Cardinality6 | 0.07 | 0.53 | 0.13 | 0.893 | 0.999 | n.s. |
+| Cardinality3 - Cardinality4 | 0.14 | 0.51 | 0.28 | 0.780 | 0.999 | n.s. |
+| Cardinality3 - Cardinality5 | 0.78 | 0.49 | 1.58 | 0.114 | 0.701 | n.s. |
+| Cardinality3 - Cardinality6 | 0.19 | 0.51 | 0.37 | 0.712 | 0.999 | n.s. |
+| Cardinality4 - Cardinality5 | 0.63 | 0.50 | 1.26 | 0.207 | 0.849 | n.s. |
+| Cardinality4 - Cardinality6 | 0.04 | 0.53 | 0.08 | 0.934 | 0.999 | n.s. |
+| Cardinality5 - Cardinality6 | -0.59 | 0.50 | -1.18 | 0.238 | 0.850 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -382,7 +506,83 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.10, *p* = 0.099, η²_G = 0.180
+- *F* = 1.38, *p* = 0.265, η²_G = 0.151
+- Greenhouse-Geisser corrected: *p* = 0.293 (ε = 0.472)
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality1 vs Cardinality2 | 2.95 | 5 | = 0.480 | 0.75 [0.07, 1.53] | medium | n.s. |
+| Cardinality1 vs Cardinality3 | 1.49 | 5 | = 0.647 | 0.84 [-0.17, 1.19] | large | n.s. |
+| Cardinality1 vs Cardinality4 | 1.70 | 5 | = 0.647 | 0.70 [-0.12, 1.25] | medium | n.s. |
+| Cardinality1 vs Cardinality5 | 1.61 | 5 | = 0.647 | 0.96 [-0.03, 1.29] | large | n.s. |
+| Cardinality1 vs Cardinality6 | 1.42 | 5 | = 0.647 | 0.72 [-0.15, 1.42] | medium | n.s. |
+| Cardinality2 vs Cardinality3 | 0.24 | 5 | = 0.909 | 0.13 [-1.01, 0.45] | negligible | n.s. |
+| Cardinality2 vs Cardinality4 | -0.40 | 5 | = 0.909 | -0.13 [-1.17, 0.42] | negligible | n.s. |
+| Cardinality2 vs Cardinality5 | 0.46 | 5 | = 0.909 | 0.29 [-0.52, 0.92] | small | n.s. |
+| Cardinality2 vs Cardinality6 | 0.00 | 5 | = 0.997 | 0.00 [-0.73, 0.95] | negligible | n.s. |
+| Cardinality3 vs Cardinality4 | -0.70 | 5 | = 0.909 | -0.27 [-1.22, 0.50] | small | n.s. |
+| Cardinality3 vs Cardinality5 | 0.20 | 5 | = 0.909 | 0.15 [-0.55, 1.00] | negligible | n.s. |
+| Cardinality3 vs Cardinality6 | -0.36 | 5 | = 0.909 | -0.11 [-0.54, 1.02] | negligible | n.s. |
+| Cardinality4 vs Cardinality5 | 0.65 | 5 | = 0.909 | 0.46 [-0.41, 1.06] | small | n.s. |
+| Cardinality4 vs Cardinality6 | 0.44 | 5 | = 0.909 | 0.12 [-0.92, 0.75] | negligible | n.s. |
+| Cardinality5 vs Cardinality6 | -0.37 | 5 | = 0.909 | -0.26 [-0.75, 0.59] | small | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 670.96, BIC = 692.62
+- **Cardinality2 vs Cardinality1**: *β* = -6.87, *SE* = 5.071, *z* = -1.356, *p* = 0.175
+- **Cardinality3 vs Cardinality1**: *β* = -6.15, *SE* = 4.980, *z* = -1.236, *p* = 0.217
+- **Cardinality4 vs Cardinality1**: *β* = -8.28, *SE* = 5.348, *z* = -1.549, *p* = 0.121
+- **Cardinality5 vs Cardinality1**: *β* = -7.82, *SE* = 4.951, *z* = -1.579, *p* = 0.114
+- **Cardinality6 vs Cardinality1**: *β* = 2.11, *SE* = 5.137, *z* = 0.411, *p* = 0.681
+- **SNR**: *β* = 1.38, *SE* = 0.772, *z* = 1.786, *p* = 0.074
+
+_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality1 - Cardinality2 | 6.87 | 5.07 | 1.36 | 0.175 | 0.823 | n.s. |
+| Cardinality1 - Cardinality3 | 6.15 | 4.98 | 1.24 | 0.217 | 0.858 | n.s. |
+| Cardinality1 - Cardinality4 | 8.28 | 5.35 | 1.55 | 0.121 | 0.737 | n.s. |
+| Cardinality1 - Cardinality5 | 7.82 | 4.95 | 1.58 | 0.114 | 0.737 | n.s. |
+| Cardinality1 - Cardinality6 | -2.11 | 5.14 | -0.41 | 0.681 | 1.000 | n.s. |
+| Cardinality2 - Cardinality3 | -0.72 | 4.89 | -0.15 | 0.883 | 1.000 | n.s. |
+| Cardinality2 - Cardinality4 | 1.41 | 5.38 | 0.26 | 0.793 | 1.000 | n.s. |
+| Cardinality2 - Cardinality5 | 0.94 | 5.01 | 0.19 | 0.850 | 1.000 | n.s. |
+| Cardinality2 - Cardinality6 | -8.99 | 5.06 | -1.78 | 0.076 | 0.640 | n.s. |
+| Cardinality3 - Cardinality4 | 2.13 | 5.14 | 0.41 | 0.679 | 1.000 | n.s. |
+| Cardinality3 - Cardinality5 | 1.67 | 4.82 | 0.35 | 0.730 | 1.000 | n.s. |
+| Cardinality3 - Cardinality6 | -8.26 | 4.75 | -1.74 | 0.082 | 0.641 | n.s. |
+| Cardinality4 - Cardinality5 | -0.46 | 5.26 | -0.09 | 0.930 | 1.000 | n.s. |
+| Cardinality4 - Cardinality6 | -10.39 | 5.27 | -1.97 | 0.049 | 0.505 | n.s. |
+| Cardinality5 - Cardinality6 | -9.93 | 4.97 | -2.00 | 0.046 | 0.505 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 3.67, *p* = 0.090, η²_G = 0.675
 - **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -391,40 +591,37 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 0.93 | 5 | = 0.543 | 0.65 [-0.57, 0.71] | medium | n.s. |
-| Cardinality1 vs Cardinality3 | 1.87 | 5 | = 0.480 | 0.93 [-0.26, 1.07] | large | n.s. |
-| Cardinality1 vs Cardinality4 | 1.19 | 5 | = 0.480 | 0.55 [-0.10, 1.27] | medium | n.s. |
-| Cardinality1 vs Cardinality5 | 2.48 | 5 | = 0.480 | 1.21 [-0.26, 0.99] | large | n.s. |
-| Cardinality1 vs Cardinality6 | 0.87 | 5 | = 0.543 | 0.32 [-0.49, 0.97] | small | n.s. |
-| Cardinality2 vs Cardinality3 | 0.85 | 5 | = 0.543 | 0.49 [-0.34, 1.15] | small | n.s. |
-| Cardinality2 vs Cardinality4 | -0.25 | 5 | = 0.816 | -0.10 [-0.38, 1.22] | negligible | n.s. |
-| Cardinality2 vs Cardinality5 | 1.36 | 5 | = 0.480 | 0.83 [-0.37, 1.11] | large | n.s. |
-| Cardinality2 vs Cardinality6 | -0.27 | 5 | = 0.816 | -0.14 [-0.73, 0.95] | negligible | n.s. |
-| Cardinality3 vs Cardinality4 | -1.21 | 5 | = 0.480 | -0.56 [-1.07, 0.63] | medium | n.s. |
-| Cardinality3 vs Cardinality5 | 1.43 | 5 | = 0.480 | 0.31 [-0.40, 1.20] | small | n.s. |
-| Cardinality3 vs Cardinality6 | -1.30 | 5 | = 0.480 | -0.50 [-0.63, 0.91] | medium | n.s. |
-| Cardinality4 vs Cardinality5 | 1.68 | 5 | = 0.480 | 0.88 [-0.53, 0.91] | large | n.s. |
-| Cardinality4 vs Cardinality6 | -0.25 | 5 | = 0.816 | -0.07 [-1.40, 0.38] | negligible | n.s. |
-| Cardinality5 vs Cardinality6 | -1.90 | 5 | = 0.480 | -0.78 [-1.23, 0.20] | medium | n.s. |
+| Cardinality1 vs Cardinality2 | 0.40 | 1 | = 0.758 | 0.44 [-0.25, 1.28] | small | n.s. |
+| Cardinality1 vs Cardinality3 | 1.80 | 1 | = 0.536 | 2.18 [-0.53, 0.83] | large | n.s. |
+| Cardinality1 vs Cardinality4 | 2.50 | 1 | = 0.536 | 3.16 [-0.82, 1.31] | large | n.s. |
+| Cardinality1 vs Cardinality5 | 13.00 | 1 | = 0.339 | 13.00 [-0.55, 1.01] | large | n.s. |
+| Cardinality1 vs Cardinality6 | -1.67 | 1 | = 0.536 | -2.24 [-0.98, 0.48] | large | n.s. |
+| Cardinality2 vs Cardinality3 | 1.00 | 1 | = 0.536 | 0.51 [-0.74, 0.53] | medium | n.s. |
+| Cardinality2 vs Cardinality4 | 1.00 | 1 | = 0.536 | 0.63 [-0.33, 2.18] | medium | n.s. |
+| Cardinality2 vs Cardinality5 | 1.00 | 1 | = 0.536 | 1.00 [-0.70, 0.64] | large | n.s. |
+| Cardinality2 vs Cardinality6 | -1.29 | 1 | = 0.536 | -0.98 [-1.38, 0.27] | large | n.s. |
+| Cardinality3 vs Cardinality4 | 1.00 | 1 | = 0.536 | 0.20 [-0.57, 1.14] | small | n.s. |
+| Cardinality3 vs Cardinality5 | 1.00 | 1 | = 0.536 | 1.00 [-0.62, 0.65] | large | n.s. |
+| Cardinality3 vs Cardinality6 | -7.00 | 1 | = 0.339 | -3.13 [-1.43, 0.14] | large | n.s. |
+| Cardinality4 vs Cardinality5 | 1.00 | 1 | = 0.536 | 1.00 [-0.86, 0.81] | large | n.s. |
+| Cardinality4 vs Cardinality6 | -15.00 | 1 | = 0.339 | -4.16 [-1.25, 0.36] | large | n.s. |
+| Cardinality5 vs Cardinality6 | -9.00 | 1 | = 0.339 | -9.00 [-1.73, 0.06] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-
-### 3.3 P3b Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 275.55, BIC = 297.21
-- **Cardinality2 vs Cardinality1**: *β* = 0.21, *SE* = 0.397, *z* = 0.520, *p* = 0.603
-- **Cardinality3 vs Cardinality1**: *β* = 0.19, *SE* = 0.395, *z* = 0.480, *p* = 0.631
-- **Cardinality4 vs Cardinality1**: *β* = 0.85, *SE* = 0.427, *z* = 1.999, *p* = 0.046
-- **Cardinality5 vs Cardinality1**: *β* = -0.32, *SE* = 0.395, *z* = -0.811, *p* = 0.417
-- **Cardinality6 vs Cardinality1**: *β* = 0.40, *SE* = 0.405, *z* = 0.995, *p* = 0.320
-- **SNR**: *β* = 0.74, *SE* = 0.070, *z* = 10.480, *p* < .001
+- AIC = 299.79, BIC = 321.45
+- **Cardinality2 vs Cardinality1**: *β* = -0.00, *SE* = 0.457, *z* = -0.008, *p* = 0.994
+- **Cardinality3 vs Cardinality1**: *β* = 0.22, *SE* = 0.455, *z* = 0.491, *p* = 0.623
+- **Cardinality4 vs Cardinality1**: *β* = 0.47, *SE* = 0.493, *z* = 0.955, *p* = 0.340
+- **Cardinality5 vs Cardinality1**: *β* = -0.78, *SE* = 0.456, *z* = -1.699, *p* = 0.089
+- **Cardinality6 vs Cardinality1**: *β* = 0.23, *SE* = 0.466, *z* = 0.502, *p* = 0.616
+- **SNR**: *β* = 0.68, *SE* = 0.081, *z* = 8.314, *p* < .001
 
 _Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -435,21 +632,21 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | -0.21 | 0.40 | -0.52 | 0.603 | 0.985 | n.s. |
-| Cardinality1 - Cardinality3 | -0.19 | 0.39 | -0.48 | 0.631 | 0.985 | n.s. |
-| Cardinality1 - Cardinality4 | -0.85 | 0.43 | -2.00 | 0.046 | 0.479 | n.s. |
-| Cardinality1 - Cardinality5 | 0.32 | 0.40 | 0.81 | 0.417 | 0.961 | n.s. |
-| Cardinality1 - Cardinality6 | -0.40 | 0.41 | -1.00 | 0.320 | 0.933 | n.s. |
-| Cardinality2 - Cardinality3 | 0.02 | 0.38 | 0.04 | 0.965 | 0.985 | n.s. |
-| Cardinality2 - Cardinality4 | -0.65 | 0.43 | -1.52 | 0.130 | 0.783 | n.s. |
-| Cardinality2 - Cardinality5 | 0.53 | 0.39 | 1.36 | 0.173 | 0.850 | n.s. |
-| Cardinality2 - Cardinality6 | -0.20 | 0.40 | -0.49 | 0.622 | 0.985 | n.s. |
-| Cardinality3 - Cardinality4 | -0.66 | 0.41 | -1.62 | 0.105 | 0.734 | n.s. |
-| Cardinality3 - Cardinality5 | 0.51 | 0.37 | 1.36 | 0.173 | 0.850 | n.s. |
-| Cardinality3 - Cardinality6 | -0.21 | 0.38 | -0.57 | 0.570 | 0.985 | n.s. |
-| Cardinality4 - Cardinality5 | 1.17 | 0.41 | 2.85 | 0.004 | 0.065 | n.s. |
-| Cardinality4 - Cardinality6 | 0.45 | 0.41 | 1.10 | 0.273 | 0.922 | n.s. |
-| Cardinality5 - Cardinality6 | -0.72 | 0.39 | -1.85 | 0.065 | 0.580 | n.s. |
+| Cardinality1 - Cardinality2 | 0.00 | 0.46 | 0.01 | 0.994 | 1.000 | n.s. |
+| Cardinality1 - Cardinality3 | -0.22 | 0.46 | -0.49 | 0.623 | 0.999 | n.s. |
+| Cardinality1 - Cardinality4 | -0.47 | 0.49 | -0.96 | 0.340 | 0.983 | n.s. |
+| Cardinality1 - Cardinality5 | 0.78 | 0.46 | 1.70 | 0.089 | 0.646 | n.s. |
+| Cardinality1 - Cardinality6 | -0.23 | 0.47 | -0.50 | 0.616 | 0.999 | n.s. |
+| Cardinality2 - Cardinality3 | -0.23 | 0.44 | -0.52 | 0.606 | 0.999 | n.s. |
+| Cardinality2 - Cardinality4 | -0.47 | 0.49 | -0.96 | 0.336 | 0.983 | n.s. |
+| Cardinality2 - Cardinality5 | 0.77 | 0.44 | 1.73 | 0.083 | 0.646 | n.s. |
+| Cardinality2 - Cardinality6 | -0.24 | 0.46 | -0.52 | 0.606 | 0.999 | n.s. |
+| Cardinality3 - Cardinality4 | -0.25 | 0.47 | -0.52 | 0.600 | 0.999 | n.s. |
+| Cardinality3 - Cardinality5 | 1.00 | 0.43 | 2.32 | 0.020 | 0.250 | n.s. |
+| Cardinality3 - Cardinality6 | -0.01 | 0.43 | -0.02 | 0.981 | 1.000 | n.s. |
+| Cardinality4 - Cardinality5 | 1.25 | 0.48 | 2.62 | 0.009 | 0.123 | n.s. |
+| Cardinality4 - Cardinality6 | 0.24 | 0.47 | 0.50 | 0.618 | 0.999 | n.s. |
+| Cardinality5 - Cardinality6 | -1.01 | 0.45 | -2.24 | 0.025 | 0.283 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -457,7 +654,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.28, *p* = 0.907, η²_G = 0.189
+- *F* = 0.41, *p* = 0.827, η²_G = 0.220
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -466,93 +663,21 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 1.88 | 1 | = 0.990 | 0.79 [-0.97, 0.48] | medium | n.s. |
-| Cardinality1 vs Cardinality3 | -0.13 | 1 | = 0.990 | -0.18 [-1.30, 0.15] | negligible | n.s. |
-| Cardinality1 vs Cardinality4 | -7.44 | 1 | = 0.990 | -0.06 [-2.25, 0.30] | negligible | n.s. |
-| Cardinality1 vs Cardinality5 | -0.03 | 1 | = 0.990 | -0.04 [-1.23, 0.38] | negligible | n.s. |
-| Cardinality1 vs Cardinality6 | -0.98 | 1 | = 0.990 | -0.45 [-1.57, 0.05] | small | n.s. |
-| Cardinality2 vs Cardinality3 | -0.73 | 1 | = 0.990 | -0.98 [-0.95, 0.35] | large | n.s. |
-| Cardinality2 vs Cardinality4 | -2.09 | 1 | = 0.990 | -0.87 [-1.84, 0.48] | large | n.s. |
-| Cardinality2 vs Cardinality5 | -0.78 | 1 | = 0.990 | -1.10 [-0.45, 0.91] | large | n.s. |
-| Cardinality2 vs Cardinality6 | -1.27 | 1 | = 0.990 | -0.91 [-0.99, 0.56] | large | n.s. |
-| Cardinality3 vs Cardinality4 | 0.09 | 1 | = 0.990 | 0.13 [-0.82, 0.85] | negligible | n.s. |
-| Cardinality3 vs Cardinality5 | 0.57 | 1 | = 0.990 | 0.17 [-0.11, 1.26] | negligible | n.s. |
-| Cardinality3 vs Cardinality6 | -0.24 | 1 | = 0.990 | -0.32 [-0.74, 0.69] | small | n.s. |
-| Cardinality4 vs Cardinality5 | 0.02 | 1 | = 0.990 | 0.02 [-0.56, 1.14] | negligible | n.s. |
-| Cardinality4 vs Cardinality6 | -0.90 | 1 | = 0.990 | -0.41 [-0.90, 0.65] | small | n.s. |
-| Cardinality5 vs Cardinality6 | -0.35 | 1 | = 0.990 | -0.45 [-1.19, 0.41] | small | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-#### Latency (50% Fractional Area)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 563.83, BIC = 585.49
-- **Cardinality2 vs Cardinality1**: *β* = -0.08, *SE* = 2.605, *z* = -0.031, *p* = 0.975
-- **Cardinality3 vs Cardinality1**: *β* = 0.51, *SE* = 2.565, *z* = 0.200, *p* = 0.841
-- **Cardinality4 vs Cardinality1**: *β* = -0.54, *SE* = 2.780, *z* = -0.196, *p* = 0.845
-- **Cardinality5 vs Cardinality1**: *β* = -1.07, *SE* = 2.554, *z* = -0.419, *p* = 0.675
-- **Cardinality6 vs Cardinality1**: *β* = 4.67, *SE* = 2.656, *z* = 1.758, *p* = 0.079
-- **SNR**: *β* = 0.53, *SE* = 0.405, *z* = 1.301, *p* = 0.193
-
-_Reference condition: **Cardinality1** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality1 - Cardinality2 | 0.08 | 2.60 | 0.03 | 0.975 | 1.000 | n.s. |
-| Cardinality1 - Cardinality3 | -0.51 | 2.57 | -0.20 | 0.841 | 1.000 | n.s. |
-| Cardinality1 - Cardinality4 | 0.54 | 2.78 | 0.20 | 0.845 | 1.000 | n.s. |
-| Cardinality1 - Cardinality5 | 1.07 | 2.55 | 0.42 | 0.675 | 1.000 | n.s. |
-| Cardinality1 - Cardinality6 | -4.67 | 2.66 | -1.76 | 0.079 | 0.627 | n.s. |
-| Cardinality2 - Cardinality3 | -0.59 | 2.52 | -0.24 | 0.813 | 1.000 | n.s. |
-| Cardinality2 - Cardinality4 | 0.46 | 2.78 | 0.17 | 0.868 | 1.000 | n.s. |
-| Cardinality2 - Cardinality5 | 0.99 | 2.57 | 0.39 | 0.700 | 1.000 | n.s. |
-| Cardinality2 - Cardinality6 | -4.75 | 2.61 | -1.82 | 0.069 | 0.605 | n.s. |
-| Cardinality3 - Cardinality4 | 1.06 | 2.66 | 0.40 | 0.691 | 1.000 | n.s. |
-| Cardinality3 - Cardinality5 | 1.58 | 2.47 | 0.64 | 0.522 | 0.999 | n.s. |
-| Cardinality3 - Cardinality6 | -4.15 | 2.46 | -1.69 | 0.091 | 0.648 | n.s. |
-| Cardinality4 - Cardinality5 | 0.53 | 2.72 | 0.19 | 0.847 | 1.000 | n.s. |
-| Cardinality4 - Cardinality6 | -5.21 | 2.71 | -1.92 | 0.054 | 0.543 | n.s. |
-| Cardinality5 - Cardinality6 | -5.74 | 2.57 | -2.24 | 0.025 | 0.320 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 15 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 1.79, *p* = 0.269, η²_G = 0.519
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with FDR correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality1 vs Cardinality2 | 0.55 | 1 | = 0.785 | 0.69 [-0.40, 1.07] | medium | n.s. |
-| Cardinality1 vs Cardinality3 | 1.44 | 1 | = 0.713 | 1.75 [-0.62, 0.72] | large | n.s. |
-| Cardinality1 vs Cardinality4 | 2.74 | 1 | = 0.669 | 3.59 [-1.58, 0.63] | large | n.s. |
-| Cardinality1 vs Cardinality5 | 4.43 | 1 | = 0.535 | 2.58 [-0.84, 0.70] | large | n.s. |
-| Cardinality1 vs Cardinality6 | -0.25 | 1 | = 0.902 | -0.31 [-1.66, 0.00] | small | n.s. |
-| Cardinality2 vs Cardinality3 | 5.08 | 1 | = 0.535 | 1.00 [-0.90, 0.39] | large | n.s. |
-| Cardinality2 vs Cardinality4 | 0.64 | 1 | = 0.785 | 0.54 [-0.77, 1.38] | medium | n.s. |
-| Cardinality2 vs Cardinality5 | 0.16 | 1 | = 0.902 | 0.17 [-0.54, 0.81] | negligible | n.s. |
-| Cardinality2 vs Cardinality6 | -4.39 | 1 | = 0.535 | -0.70 [-1.43, 0.24] | medium | n.s. |
-| Cardinality3 vs Cardinality4 | -0.93 | 1 | = 0.713 | -0.83 [-0.51, 1.21] | large | n.s. |
-| Cardinality3 vs Cardinality5 | -1.02 | 1 | = 0.713 | -1.11 [-0.52, 0.75] | large | n.s. |
-| Cardinality3 vs Cardinality6 | -40.54 | 1 | = 0.236 | -1.52 [-1.94, -0.16] | large | n.s. |
-| Cardinality4 vs Cardinality5 | -1.43 | 1 | = 0.713 | -2.01 [-1.19, 0.53] | large | n.s. |
-| Cardinality4 vs Cardinality6 | -1.50 | 1 | = 0.713 | -1.33 [-1.40, 0.26] | large | n.s. |
-| Cardinality5 vs Cardinality6 | -0.94 | 1 | = 0.713 | -1.03 [-1.94, -0.06] | large | n.s. |
+| Cardinality1 vs Cardinality2 | 1.76 | 1 | = 0.824 | 0.60 [-0.86, 0.58] | medium | n.s. |
+| Cardinality1 vs Cardinality3 | -0.25 | 1 | = 0.985 | -0.34 [-1.28, 0.16] | small | n.s. |
+| Cardinality1 vs Cardinality4 | 0.66 | 1 | = 0.985 | 0.06 [-1.45, 0.72] | negligible | n.s. |
+| Cardinality1 vs Cardinality5 | 0.04 | 1 | = 0.985 | 0.05 [-0.85, 0.69] | negligible | n.s. |
+| Cardinality1 vs Cardinality6 | -2.75 | 1 | = 0.824 | -0.46 [-1.42, 0.15] | small | n.s. |
+| Cardinality2 vs Cardinality3 | -0.93 | 1 | = 0.985 | -1.32 [-0.95, 0.35] | large | n.s. |
+| Cardinality2 vs Cardinality4 | -2.23 | 1 | = 0.824 | -0.58 [-1.92, 0.45] | medium | n.s. |
+| Cardinality2 vs Cardinality5 | -0.66 | 1 | = 0.985 | -0.91 [-0.43, 0.93] | large | n.s. |
+| Cardinality2 vs Cardinality6 | -2.16 | 1 | = 0.824 | -1.03 [-1.04, 0.52] | large | n.s. |
+| Cardinality3 vs Cardinality4 | 0.32 | 1 | = 0.985 | 0.45 [-0.69, 0.99] | small | n.s. |
+| Cardinality3 vs Cardinality5 | 2.36 | 1 | = 0.824 | 0.64 [-0.02, 1.39] | medium | n.s. |
+| Cardinality3 vs Cardinality6 | -0.19 | 1 | = 0.985 | -0.25 [-0.65, 0.78] | small | n.s. |
+| Cardinality4 vs Cardinality5 | -0.02 | 1 | = 0.985 | -0.03 [-0.45, 1.30] | negligible | n.s. |
+| Cardinality4 vs Cardinality6 | -2.10 | 1 | = 0.824 | -0.53 [-0.90, 0.64] | medium | n.s. |
+| Cardinality5 vs Cardinality6 | -0.48 | 1 | = 0.985 | -0.60 [-1.39, 0.26] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -564,7 +689,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P1 latency:** Marginal trend toward condition differences (*p* = 0.099)
+**P3b latency:** Marginal trend toward condition differences (*p* = 0.090)
 
 ### Research Implications
 
@@ -576,7 +701,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -598,7 +729,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
@@ -620,7 +751,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

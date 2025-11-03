@@ -1,6 +1,6 @@
 {
   "analysis_id": "ratio_within_large",
-  "date_analyzed": "2025-10-30T19:13:00.612737",
+  "date_analyzed": "2025-11-03T02:37:39.875422",
   "baseline_ms": [
     -100,
     0
@@ -52,6 +52,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -0.7588782628139082,
+      "fwhm_ms": 25.26185722859657,
+      "window_start_ms": 88.54288050591646,
+      "window_end_ms": 113.80473773451303,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 72,

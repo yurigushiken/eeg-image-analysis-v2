@@ -1,23 +1,23 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:15:44
+**Generated:** 2025-11-03 02:32:59
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 144
+**Total Measurements:** 192
 **Number of Subjects:** 24
 **Number of Conditions:** 2
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,55 +35,72 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 16 | -2.97 µV | 2.10 | 0.52 | [-8.75, -0.23] |
-| Increasing 1 to 2 | 22 | -3.58 µV | 1.84 | 0.39 | [-7.09, -0.37] |
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 16 | 178.05 ms | 6.54 | 1.64 | [162.74, 186.43] |
-| Increasing 1 to 2 | 22 | 174.87 ms | 11.07 | 2.36 | [158.18, 201.34] |
+| Decreasing 2 to 1 | 7 | 99.43 ms | 17.19 | 6.50 | [84.00, 124.00] |
+| Increasing 1 to 2 | 14 | 111.14 ms | 14.98 | 4.00 | [84.00, 124.00] |
 
-
-### 2.2 P1 Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 18 | 3.04 µV | 2.38 | 0.56 | [0.06, 7.80] |
-| Increasing 1 to 2 | 9 | 1.20 µV | 0.68 | 0.23 | [0.41, 2.26] |
-
-#### Latency (50% Fractional Area)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 18 | 114.11 ms | 8.02 | 1.89 | [97.65, 130.61] |
-| Increasing 1 to 2 | 9 | 106.32 ms | 8.74 | 2.91 | [93.36, 117.60] |
+| Decreasing 2 to 1 | 7 | 4.50 µV | 1.88 | 0.71 | [1.15, 7.15] |
+| Increasing 1 to 2 | 14 | 3.22 µV | 1.83 | 0.49 | [0.68, 6.15] |
 
 
-### 2.3 P3b Component
+### 2.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 21 | 3.97 µV | 3.01 | 0.66 | [0.01, 9.89] |
-| Increasing 1 to 2 | 17 | 3.60 µV | 2.84 | 0.69 | [-0.04, 10.30] |
+| Decreasing 2 to 1 | 16 | 180.25 ms | 12.00 | 3.00 | [160.00, 204.00] |
+| Increasing 1 to 2 | 22 | 171.64 ms | 17.19 | 3.66 | [148.00, 204.00] |
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Decreasing 2 to 1 | 21 | 495.78 ms | 18.68 | 4.08 | [461.20, 543.79] |
-| Increasing 1 to 2 | 17 | 490.10 ms | 19.43 | 4.71 | [443.84, 528.35] |
+| Decreasing 2 to 1 | 16 | -5.20 µV | 2.57 | 0.64 | [-10.79, -1.72] |
+| Increasing 1 to 2 | 22 | -5.80 µV | 2.13 | 0.45 | [-9.87, -2.38] |
+
+
+### 2.3 P1 Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 2 to 1 | 18 | 120.22 ms | 11.92 | 2.81 | [92.00, 132.00] |
+| Increasing 1 to 2 | 9 | 104.89 ms | 17.29 | 5.76 | [88.00, 128.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 2 to 1 | 18 | 4.77 µV | 2.44 | 0.58 | [1.72, 9.13] |
+| Increasing 1 to 2 | 9 | 2.32 µV | 1.14 | 0.38 | [0.78, 4.20] |
+
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 2 to 1 | 21 | 503.81 ms | 32.92 | 7.18 | [436.00, 544.00] |
+| Increasing 1 to 2 | 17 | 491.06 ms | 37.59 | 9.12 | [440.00, 544.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Decreasing 2 to 1 | 21 | 6.12 µV | 3.08 | 0.67 | [1.72, 11.08] |
+| Increasing 1 to 2 | 17 | 5.73 µV | 3.00 | 0.73 | [1.86, 11.52] |
 
 
 ---
@@ -92,16 +109,16 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 138.52, BIC = 146.71
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.22, *SE* = 0.394, *z* = -0.550, *p* = 0.582
-- **SNR**: *β* = -0.47, *SE* = 0.079, *z* = -5.977, *p* < .001
+- AIC = 182.58, BIC = 187.80
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = 12.59, *SE* = 6.840, *z* = 1.841, *p* = 0.066
+- **SNR**: *β* = 1.91, *SE* = 2.368, *z* = 0.805, *p* = 0.421
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -112,7 +129,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 0.22 | 0.39 | 0.55 | 0.582 | 0.582 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | -12.59 | 6.84 | -1.84 | 0.066 | 0.066 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -120,7 +137,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.80, *p* = 0.116, η²_G = 0.057
+- *F* = 4.45, *p* = 0.126, η²_G = 0.458
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -129,19 +146,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.67 | 14 | = 0.116 | 0.47 [-0.15, 1.01] | small | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | -2.11 | 3 | = 0.126 | -1.59 [-3.04, 0.93] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 277.47, BIC = 285.66
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -2.14, *SE* = 1.874, *z* = -1.141, *p* = 0.254
-- **SNR**: *β* = -0.86, *SE* = 0.464, *z* = -1.845, *p* = 0.065
+- AIC = 71.72, BIC = 76.94
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.58, *SE* = 0.295, *z* = -1.973, *p* = 0.048
+- **SNR**: *β* = 0.90, *SE* = 0.209, *z* = 4.292, *p* < .001
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -152,7 +169,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 2.14 | 1.87 | 1.14 | 0.254 | 0.254 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 0.58 | 0.29 | 1.97 | 0.048 | 0.048 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -160,50 +177,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.11, *p* = 0.168, η²_G = 0.032
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with uncorrected correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.45 | 14 | = 0.168 | 0.35 [-0.20, 0.95] | small | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-
-### 3.2 P1 Component
-
-#### Mean Amplitude (ROI)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 100.51, BIC = 106.99
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -1.07, *SE* = 0.515, *z* = -2.082, *p* = 0.037
-- **SNR**: *β* = 0.52, *SE* = 0.093, *z* = 5.564, *p* < .001
-
-_Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 1.07 | 0.51 | 2.08 | 0.037 | 0.037 | * |
-
-_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 9.90, *p* = 0.014, η²_G = 0.356
+- *F* = 13.61, *p* = 0.035, η²_G = 0.168
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -212,19 +186,22 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.15 | 8 | = 0.014 | 1.40 [0.09, 2.01] | large | * |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.69 | 3 | = 0.035 | 0.78 [-0.77, 4.46] | medium | * |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+
+### 3.2 N1 Component
+
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 193.50, BIC = 199.98
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -7.20, *SE* = 2.170, *z* = -3.319, *p* = 0.001
-- **SNR**: *β* = 0.51, *SE* = 0.425, *z* = 1.203, *p* = 0.229
+- AIC = 316.85, BIC = 325.04
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -7.81, *SE* = 3.654, *z* = -2.137, *p* = 0.033
+- **SNR**: *β* = -0.94, *SE* = 0.813, *z* = -1.158, *p* = 0.247
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -235,7 +212,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 7.20 | 2.17 | 3.32 | < .001 | < .001 | *** |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 7.81 | 3.65 | 2.14 | 0.033 | 0.033 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -243,7 +220,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 14.12, *p* = 0.006, η²_G = 0.272
+- *F* = 5.21, *p* = 0.039, η²_G = 0.083
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -252,22 +229,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.76 | 8 | = 0.006 | 1.15 [0.23, 2.28] | large | ** |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 2.28 | 14 | = 0.039 | 0.58 [-0.01, 1.19] | medium | * |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-
-### 3.3 P3b Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 162.83, BIC = 171.02
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.43, *SE* = 0.437, *z* = -0.985, *p* = 0.324
-- **SNR**: *β* = 0.66, *SE* = 0.083, *z* = 7.940, *p* < .001
+- AIC = 163.04, BIC = 171.23
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.39, *SE* = 0.519, *z* = -0.759, *p* = 0.448
+- **SNR**: *β* = -0.42, *SE* = 0.109, *z* = -3.866, *p* < .001
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -278,7 +252,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 0.43 | 0.44 | 0.99 | 0.324 | 0.324 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 0.39 | 0.52 | 0.76 | 0.448 | 0.448 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -286,8 +260,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.36, *p* = 0.557, η²_G = 0.010
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 3.57, *p* = 0.080, η²_G = 0.063
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -295,19 +269,22 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.60 | 15 | = 0.557 | 0.19 [-0.39, 0.69] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.89 | 14 | = 0.080 | 0.50 [-0.10, 1.07] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+
+### 3.3 P1 Component
+
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 338.51, BIC = 346.70
-- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -4.94, *SE* = 5.604, *z* = -0.882, *p* = 0.378
-- **SNR**: *β* = -0.58, *SE* = 1.033, *z* = -0.558, *p* = 0.577
+- AIC = 219.64, BIC = 226.12
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -13.60, *SE* = 3.668, *z* = -3.707, *p* < .001
+- **SNR**: *β* = 0.91, *SE* = 0.711, *z* = 1.283, *p* = 0.200
 
 _Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -318,7 +295,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Decreasing 2 to 1 - Increasing 1 to 2 | 4.94 | 5.60 | 0.88 | 0.378 | 0.378 | n.s. |
+| Decreasing 2 to 1 - Increasing 1 to 2 | 13.60 | 3.67 | 3.71 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -326,7 +303,90 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.11, *p* = 0.748, η²_G = 0.003
+- *F* = 15.16, *p* = 0.005, η²_G = 0.238
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.89 | 8 | = 0.005 | 1.05 [0.25, 2.34] | large | ** |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 109.61, BIC = 116.09
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -1.69, *SE* = 0.650, *z* = -2.599, *p* = 0.009
+- **SNR**: *β* = 0.50, *SE* = 0.112, *z* = 4.480, *p* < .001
+
+_Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Decreasing 2 to 1 - Increasing 1 to 2 | 1.69 | 0.65 | 2.60 | 0.009 | 0.009 | ** |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 13.59, *p* = 0.006, η²_G = 0.442
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 3.69 | 8 | = 0.006 | 1.68 [0.21, 2.25] | large | ** |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 385.93, BIC = 394.12
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -12.72, *SE* = 10.887, *z* = -1.169, *p* = 0.243
+- **SNR**: *β* = -0.62, *SE* = 2.085, *z* = -0.297, *p* = 0.767
+
+_Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Decreasing 2 to 1 - Increasing 1 to 2 | 12.72 | 10.89 | 1.17 | 0.243 | 0.243 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.07, *p* = 0.316, η²_G = 0.032
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -335,7 +395,47 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.33 | 15 | = 0.748 | 0.10 [-0.45, 0.62] | negligible | n.s. |
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 1.04 | 15 | = 0.316 | 0.35 [-0.28, 0.80] | small | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 178.14, BIC = 186.32
+- **Increasing 1 to 2 vs Decreasing 2 to 1**: *β* = -0.48, *SE* = 0.507, *z* = -0.938, *p* = 0.348
+- **SNR**: *β* = 0.55, *SE* = 0.098, *z* = 5.640, *p* < .001
+
+_Reference condition: **Decreasing 2 to 1** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Decreasing 2 to 1 - Increasing 1 to 2 | 0.48 | 0.51 | 0.94 | 0.348 | 0.348 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 0.45, *p* = 0.514, η²_G = 0.010
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Decreasing 2 to 1 vs Increasing 1 to 2 | 0.67 | 15 | = 0.514 | 0.20 [-0.37, 0.70] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -347,10 +447,15 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P1 amplitude:** Significant main effect of condition (*p* = 0.014). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 1.40)
-**P1 latency:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
-  - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 1.15)
+**Fz amplitude:** Significant main effect of condition (*p* = 0.035). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 0.78)
+**N1 latency:** Significant main effect of condition (*p* = 0.039). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 0.58)
+**N1 amplitude:** Marginal trend toward condition differences (*p* = 0.080)
+**P1 latency:** Significant main effect of condition (*p* = 0.005). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater latency than Increasing 1 to 2 (*d* = 1.05)
+**P1 amplitude:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
+  - Decreasing 2 to 1 showed greater amplitude than Increasing 1 to 2 (*d* = 1.68)
 
 ### Research Implications
 
@@ -362,7 +467,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -384,7 +495,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
@@ -406,7 +517,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

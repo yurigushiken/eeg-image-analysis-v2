@@ -1,37 +1,65 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Decrease by 1"
-      conditions: ["21", "32", "43", "54", "65"]
-      color: "#ef0000"  # Red (decreasing)
-      linestyle: ":"    # Dotted (by 1)
-    - name: "Decrease by 2"
-      conditions: ["31", "42", "53", "64"]
-      color: "#ef0000"  # Red (decreasing)
-      linestyle: "--"   # Dashed (by 2)
-    - name: "Decrease by 3"
-      conditions: ["41", "52", "63"]
-      color: "#ef0000"  # Red (decreasing)
-      linestyle: "-"    # Solid (by 3)
-components: ["P1", "N1", "P3b"]
+  - name: Decrease by 1
+    conditions:
+    - '21'
+    - '32'
+    - '43'
+    - '54'
+    - '65'
+    color: '#ef0000'
+    linestyle: ':'
+  - name: Decrease by 2
+    conditions:
+    - '31'
+    - '42'
+    - '53'
+    - '64'
+    color: '#ef0000'
+    linestyle: --
+  - name: Decrease by 3
+    conditions:
+    - '41'
+    - '52'
+    - '63'
+    color: '#ef0000'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#ef0000", "#ef0000", "#ef0000"]
+  colors:
+  - '#ef0000'
+  - '#ef0000'
+  - '#ef0000'
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/decrease_by_123"
-  tables_dir: "docs/assets/tables/decrease_by_123"
-  page: "docs/analysis/decrease_by_123.md"
+  page: docs/analysis/decrease_by_123.md
+  plots_dir: docs/assets/plots/decrease_by_123
+  tables_dir: docs/assets/tables/decrease_by_123
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

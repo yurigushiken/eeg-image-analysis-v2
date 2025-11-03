@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:17:36
+**Generated:** 2025-11-03 02:35:35
 
 ---
 
@@ -10,14 +10,14 @@
 **Number of Subjects:** 24
 **Number of Conditions:** 2
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,55 +35,66 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 24 | -3.45 µV | 1.71 | 0.35 | [-7.71, -0.09] |
-| All Numerosity Comparisons (Incorrect) | 23 | -3.50 µV | 1.50 | 0.31 | [-7.25, -0.53] |
+_No descriptive statistics available._
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 24 | 174.39 ms | 10.09 | 2.06 | [156.68, 203.44] |
-| All Numerosity Comparisons (Incorrect) | 23 | 172.38 ms | 7.09 | 1.48 | [155.39, 184.63] |
+_No descriptive statistics available._
 
 
-### 2.2 P1 Component
+### 2.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 17 | 1.02 µV | 1.11 | 0.27 | [-0.03, 4.00] |
-| All Numerosity Comparisons (Incorrect) | 11 | 1.31 µV | 1.47 | 0.44 | [-0.01, 4.76] |
+| All Numerosity Comparisons (Correct) | 24 | 175.50 ms | 16.78 | 3.42 | [144.00, 204.00] |
+| All Numerosity Comparisons (Incorrect) | 23 | 169.57 ms | 17.00 | 3.55 | [140.00, 204.00] |
 
-#### Latency (50% Fractional Area)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 17 | 104.60 ms | 6.30 | 1.53 | [88.70, 113.25] |
-| All Numerosity Comparisons (Incorrect) | 11 | 104.79 ms | 7.18 | 2.17 | [88.41, 113.09] |
-
-
-### 2.3 P3b Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 20 | 3.39 µV | 2.32 | 0.52 | [0.07, 8.14] |
-| All Numerosity Comparisons (Incorrect) | 11 | 2.56 µV | 2.16 | 0.65 | [0.25, 6.29] |
+| All Numerosity Comparisons (Correct) | 24 | -5.06 µV | 1.95 | 0.40 | [-9.41, -1.46] |
+| All Numerosity Comparisons (Incorrect) | 23 | -5.04 µV | 1.99 | 0.42 | [-9.29, -1.15] |
 
-#### Latency (50% Fractional Area)
+
+### 2.3 P1 Component
+
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| All Numerosity Comparisons (Correct) | 20 | 479.25 ms | 15.21 | 3.40 | [431.22, 507.26] |
-| All Numerosity Comparisons (Incorrect) | 11 | 471.43 ms | 7.65 | 2.31 | [457.31, 481.33] |
+| All Numerosity Comparisons (Correct) | 17 | 108.47 ms | 8.70 | 2.11 | [92.00, 116.00] |
+| All Numerosity Comparisons (Incorrect) | 11 | 108.73 ms | 8.91 | 2.69 | [92.00, 116.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| All Numerosity Comparisons (Correct) | 17 | 1.80 µV | 1.40 | 0.34 | [0.33, 4.84] |
+| All Numerosity Comparisons (Incorrect) | 11 | 2.22 µV | 1.66 | 0.50 | [0.62, 5.98] |
+
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| All Numerosity Comparisons (Correct) | 20 | 482.40 ms | 30.25 | 6.76 | [436.00, 532.00] |
+| All Numerosity Comparisons (Incorrect) | 11 | 469.45 ms | 24.61 | 7.42 | [436.00, 524.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| All Numerosity Comparisons (Correct) | 20 | 4.31 µV | 2.46 | 0.55 | [1.07, 8.85] |
+| All Numerosity Comparisons (Incorrect) | 11 | 3.47 µV | 2.35 | 0.71 | [0.92, 7.92] |
 
 
 ---
@@ -92,16 +103,35 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
+
+_LMM results not available._
+
+_ANOVA results not available._
+
+_Pairwise test results not available._
+
+#### Amplitude (Peak)
+
+_LMM results not available._
+
+_ANOVA results not available._
+
+_Pairwise test results not available._
+
+
+### 3.2 N1 Component
+
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 138.92, BIC = 148.18
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -0.28, *SE* = 0.181, *z* = -1.555, *p* = 0.120
-- **SNR**: *β* = -0.03, *SE* = 0.009, *z* = -3.089, *p* = 0.002
+- AIC = 401.77, BIC = 411.02
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -5.73, *SE* = 4.241, *z* = -1.351, *p* = 0.177
+- **SNR**: *β* = -0.03, *SE* = 0.180, *z* = -0.163, *p* = 0.870
 
 _Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -112,7 +142,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 0.28 | 0.18 | 1.56 | 0.120 | 0.120 | n.s. |
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 5.73 | 4.24 | 1.35 | 0.177 | 0.177 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -120,7 +150,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.44, *p* = 0.515, η²_G = 0.001
+- *F* = 1.70, *p* = 0.206, η²_G = 0.021
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -129,19 +159,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | -0.66 | 22 | = 0.515 | -0.06 [-0.57, 0.30] | negligible | n.s. |
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 1.30 | 22 | = 0.206 | 0.28 [-0.17, 0.71] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 320.64, BIC = 329.89
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -1.54, *SE* = 1.306, *z* = -1.182, *p* = 0.237
-- **SNR**: *β* = -0.05, *SE* = 0.062, *z* = -0.765, *p* = 0.445
+- AIC = 160.15, BIC = 169.40
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -0.29, *SE* = 0.219, *z* = -1.308, *p* = 0.191
+- **SNR**: *β* = -0.03, *SE* = 0.011, *z* = -2.454, *p* = 0.014
 
 _Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -152,7 +182,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 1.54 | 1.31 | 1.18 | 0.237 | 0.237 | n.s. |
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 0.29 | 0.22 | 1.31 | 0.191 | 0.191 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -160,7 +190,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.54, *p* = 0.471, η²_G = 0.002
+- *F* = 0.11, *p* = 0.742, η²_G = 0.000
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -169,22 +199,22 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 0.73 | 22 | = 0.471 | 0.10 [-0.28, 0.59] | negligible | n.s. |
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | -0.33 | 22 | = 0.742 | -0.03 [-0.50, 0.36] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.2 P1 Component
+### 3.3 P1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 75.91, BIC = 82.57
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = 0.82, *SE* = 0.318, *z* = 2.577, *p* = 0.010
-- **SNR**: *β* = 0.17, *SE* = 0.051, *z* = 3.303, *p* = 0.001
+- AIC = 191.82, BIC = 198.49
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -0.71, *SE* = 1.527, *z* = -0.467, *p* = 0.640
+- **SNR**: *β* = 0.33, *SE* = 0.218, *z* = 1.519, *p* = 0.129
 
 _Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -195,7 +225,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | -0.82 | 0.32 | -2.58 | 0.010 | 0.010 | ** |
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 0.71 | 1.53 | 0.47 | 0.640 | 0.640 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -203,90 +233,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.01, *p* = 0.929, η²_G = 0.000
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with uncorrected correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 0.09 | 10 | = 0.929 | 0.02 [-0.64, 0.70] | negligible | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-#### Latency (50% Fractional Area)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 186.55, BIC = 193.21
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -0.92, *SE* = 1.858, *z* = -0.493, *p* = 0.622
-- **SNR**: *β* = 0.15, *SE* = 0.253, *z* = 0.593, *p* = 0.553
-
-_Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 0.92 | 1.86 | 0.49 | 0.622 | 0.622 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 2.28, *p* = 0.162, η²_G = 0.037
-- **Interpretation:** The main effect of condition was **not significant**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with uncorrected correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 1.51 | 10 | = 0.162 | 0.37 [-0.25, 1.16] | small | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-
-### 3.3 P3b Component
-
-#### Mean Amplitude (ROI)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 122.94, BIC = 130.11
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = 1.20, *SE* = 0.605, *z* = 1.984, *p* = 0.047
-- **SNR**: *β* = 0.20, *SE* = 0.036, *z* = 5.680, *p* < .001
-
-_Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | -1.20 | 0.60 | -1.98 | 0.047 | 0.047 | * |
-
-_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 3.53, *p* = 0.090, η²_G = 0.100
+- *F* = 4.22, *p* = 0.067, η²_G = 0.030
 - **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -295,19 +242,19 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 1.88 | 10 | = 0.090 | 0.64 [-0.16, 1.29] | medium | n.s. |
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 2.06 | 10 | = 0.067 | 0.33 [-0.11, 1.35] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 254.93, BIC = 262.10
-- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -5.52, *SE* = 5.679, *z* = -0.973, *p* = 0.331
-- **SNR**: *β* = 0.22, *SE* = 0.306, *z* = 0.728, *p* = 0.467
+- AIC = 87.18, BIC = 93.84
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = 0.83, *SE* = 0.377, *z* = 2.211, *p* = 0.027
+- **SNR**: *β* = 0.16, *SE* = 0.058, *z* = 2.783, *p* = 0.005
 
 _Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -318,7 +265,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 5.52 | 5.68 | 0.97 | 0.331 | 0.331 | n.s. |
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | -0.83 | 0.38 | -2.21 | 0.027 | 0.027 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -326,7 +273,90 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 4.31, *p* = 0.065, η²_G = 0.208
+- *F* = 0.01, *p* = 0.938, η²_G = 0.000
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 0.08 | 10 | = 0.938 | 0.01 [-0.65, 0.70] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 300.84, BIC = 308.01
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = -16.67, *SE* = 10.966, *z* = -1.520, *p* = 0.129
+- **SNR**: *β* = -0.51, *SE* = 0.645, *z* = -0.791, *p* = 0.429
+
+_Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | 16.67 | 10.97 | 1.52 | 0.129 | 0.129 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.12, *p* = 0.314, η²_G = 0.033
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with uncorrected correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 1.06 | 10 | = 0.314 | 0.35 [-0.37, 1.01] | small | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 129.68, BIC = 136.85
+- **All Numerosity Comparisons (Incorrect) vs All Numerosity Comparisons (Correct)**: *β* = 0.99, *SE* = 0.657, *z* = 1.507, *p* = 0.132
+- **SNR**: *β* = 0.19, *SE* = 0.040, *z* = 4.814, *p* < .001
+
+_Reference condition: **All Numerosity Comparisons (Correct)** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| All Numerosity Comparisons (Correct) - All Numerosity Comparisons (Incorrect) | -0.99 | 0.66 | -1.51 | 0.132 | 0.132 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 4.31, *p* = 0.065, η²_G = 0.092
 - **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -335,7 +365,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 2.08 | 10 | = 0.065 | 0.98 [-0.11, 1.36] | large | n.s. |
+| All Numerosity Comparisons (Correct) vs All Numerosity Comparisons (Incorrect) | 2.08 | 10 | = 0.065 | 0.61 [-0.11, 1.36] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -347,8 +377,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P3b amplitude:** Marginal trend toward condition differences (*p* = 0.090)
-**P3b latency:** Marginal trend toward condition differences (*p* = 0.065)
+**P1 latency:** Marginal trend toward condition differences (*p* = 0.067)
+**P3b amplitude:** Marginal trend toward condition differences (*p* = 0.065)
 
 ### Research Implications
 
@@ -360,7 +390,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -382,7 +418,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
@@ -404,7 +440,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

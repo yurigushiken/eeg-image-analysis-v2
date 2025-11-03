@@ -6,6 +6,62 @@ Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZp
 
 This project is a **YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures, subject- and condition-level measurements, and an analysis website. You define each analysis in a simple YAML configuration file (Phase 1/2A), then run inferential statistics and plots from subject-level measurements (Phases 2B–2C).
 
+## Recent Enhancements (2025-11)
+
+The following upgrades were added across the pipeline and website.
+
+- Peak-to-Peak integration (P1↔N1) into the main pipeline
+  - New figure per analysis: `<analysis_id>-P1_N1_peak_to_peak.png`
+  - Legend redesigned as a compact box with: waveform style sample (no triangle), condition name, and colored `Δ = X µV`
+  - Legend now left-justified and includes per-condition epoch counts, e.g. `ConditionA (123 epochs)  Δ = 4.2 µV`
+  - Subtitle added under title: `Using N1 electrode montage (bilateral POT)`
+  - CSV written: `peak_to_peak_measurements.csv`
+  - Stats intentionally NOT generated for P2P (by design)
+
+- Fz promoted to a first-class component
+  - `Fz` added to `configs/components.yaml` with ROI localizer (negative polarity) and window `[80,120]` ms
+  - Include `Fz` in `components:` lists to generate the standard ERP+topomap figure and include it in stats
+  - Collapsed localizer now shows an `Fz` panel when `Fz` is analyzed
+  - Statistics now include `Fz` end-to-end: ANOVA, LMM, pairwise, descriptives, and plots (box/violin/effect sizes)
+
+- Website gallery: six columns in the following order
+  - Collapsed Localizer, Fz, P1, N1, P3b, P1↔N1 P2P
+  - Implemented both in index updates and the rebuild script
+
+- YAML additions and defaults
+  - Optional block to enable P2P explicitly per analysis:
+    ```yaml
+    measurement:
+      peak_to_peak:
+        enabled: true
+        roi: [N1_L, N1_R]     # defaults to N1 rois if omitted
+        hline_color: "#000000"
+        hline_style: ":"
+    ```
+  - If both `P1` and `N1` are present in `components`, P2P auto-enables even without this block
+
+- Rebuild script and stats display
+  - `scripts/rebuild_website_index.py` now scans and emits the six-column layout (Collapsed, Fz, P1, N1, P3b, P2P)
+  - Website stats section (`src/eeg/report.py`) now surfaces `Fz` stats alongside P1/N1/P3b
+
+### Updated Commands
+
+```powershell
+# Run all analyses (generates Collapsed, Fz, P1, N1, P3b, and P1↔N1 P2P)
+conda activate eeg-image; python scripts/run_all_analyses.py
+
+# Run statistics for all analyses (now includes Fz wherever present)
+conda activate eeg-image; python scripts/run_all_statistics.py
+
+# Rebuild the website index with the six-column order
+conda activate eeg-image; python scripts/rebuild_website_index.py
+```
+
+### Notes on Legends and Styles
+
+- Standard ERP plots: legends may display extra context (e.g., peak latency and epochs) automatically.
+- Peak-to-peak legend: each row shows a small style sample (line only), the condition name with epoch count, and a colored `Δ = X µV` value; the triangle is removed from the sample to reduce clutter.
+
 ## Quick Start
 
 ### 0. YAML Config Files
@@ -674,3 +730,7 @@ If you use this pipeline in your research, please cite:
 ---
 
 **Built with**: [Spec-Driven Development](https://github.com/github/spec-kit) | **Powered by**: [MNE-Python](https://mne.tools) | **Hosted on**: GitHub Pages
+
+
+
+Fz electroodes 11, 4, 5, 12, 19, 18, 16, 10

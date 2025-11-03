@@ -1,46 +1,68 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Increasing 2 to 3"
-      conditions: ["23"]
-      color: "#02d502"  # Green (increasing)
-      linestyle: "--"   # Dashed
-    - name: "Decreasing 3 to 2"
-      conditions: ["32"]
-      color: "#ef0000"  # Red (decreasing)
-      linestyle: "--"   # Dashed
-    - name: "Cardinality3"
-      conditions: ["33"]
-      color: "#9900ff"  # purple
-      linestyle: "-"    # Solid
-    - name: "Cardinality2"
-      conditions: ["22"]
-      color: "#2c6dde"  # Light blue
-      linestyle: "-"    # Solid
-
-components: ["P1", "N1", "P3b"]
+  - name: Increasing 2 to 3
+    conditions:
+    - '23'
+    color: '#02d502'
+    linestyle: --
+  - name: Decreasing 3 to 2
+    conditions:
+    - '32'
+    color: '#ef0000'
+    linestyle: --
+  - name: Cardinality3
+    conditions:
+    - '33'
+    color: '#9900ff'
+    linestyle: '-'
+  - name: Cardinality2
+    conditions:
+    - '22'
+    color: '#2c6dde'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
+  colors:
+  - '#ef0000'
+  - '#2c6dde'
+  - '#02d502'
+  - '#9900ff'
+  - '#9900ff'
+  - '#ffff33'
   linestyles:
-    NC: "-"
-    Decrease: ":"
-    Increasing: "--"
+    NC: '-'
+    Decrease: ':'
+    Increasing: --
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/32_23_22_33"
-  tables_dir: "docs/assets/tables/32_23_22_33"
-  page: "docs/analysis/32_23_22_33.md"
+  page: docs/analysis/32_23_22_33.md
+  plots_dir: docs/assets/plots/32_23_22_33
+  tables_dir: docs/assets/tables/32_23_22_33
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

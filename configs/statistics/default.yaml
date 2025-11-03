@@ -51,6 +51,7 @@ correction_family: "component"
 
 # Which ERP components to analyze
 components:
+  - Fz
   - N1
   - P1
   - P3b
@@ -58,10 +59,10 @@ components:
 # Dependent variables to test (project-wide default: peak metrics)
 # Options: 'latency_frac_area_ms', 'mean_amplitude_roi', 'peak_latency_ms', 'peak_amplitude_roi'
 dependent_variables:
-  # - peak_latency_ms
-  # - peak_amplitude_roi
-  - mean_amplitude_roi
-  - latency_frac_area_ms
+  - peak_latency_ms
+  - peak_amplitude_roi
+  # - mean_amplitude_roi
+  # - latency_frac_area_ms
 
 # ============================================================================
 # Statistical Tests Configuration

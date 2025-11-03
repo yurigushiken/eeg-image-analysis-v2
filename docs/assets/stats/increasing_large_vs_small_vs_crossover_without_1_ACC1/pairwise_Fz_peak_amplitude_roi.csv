@@ -1,0 +1,4 @@
+Contrast,A,B,Paired,Parametric,T,dof,alternative,p-unc,p-corr,p-adjust,BF10,cohen,ci_lower,ci_upper
+condition,Increasing Crossover (no 1),Increasing Large (no 1),True,True,-35.412996429430464,1.0,two-sided,0.01797223348859656,0.05391670046578968,fdr_bh,3.203,-3.462492228580083,-11.442666646582033,0.8707940227716504
+condition,Increasing Crossover (no 1),Increasing Small (no 1),True,True,-2.7559877338975234,1.0,two-sided,0.22159018491792962,0.33238527737689444,fdr_bh,1.242,-2.130305622111124,-2.868300822838565,0.9665944005458144
+condition,Increasing Large (no 1),Increasing Small (no 1),True,True,-1.483556625926805,1.0,two-sided,0.3775796647986681,0.3775796647986681,fdr_bh,0.886,-1.192426427829636,-2.4391971783770026,2.5317366655958833

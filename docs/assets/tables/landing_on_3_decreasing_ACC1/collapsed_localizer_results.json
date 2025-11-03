@@ -1,6 +1,6 @@
 {
   "analysis_id": "landing_on_3_decreasing_ACC1",
-  "date_analyzed": "2025-10-20T23:22:08.132800",
+  "date_analyzed": "2025-11-03T02:33:20.054034",
   "baseline_ms": [
     -100,
     0
@@ -52,6 +52,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 72,
+      "n_conditions": 3
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -1.121351452286743,
+      "fwhm_ms": 32.0910483426951,
+      "window_start_ms": 84.87892327231609,
+      "window_end_ms": 116.96997161501119,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 72,

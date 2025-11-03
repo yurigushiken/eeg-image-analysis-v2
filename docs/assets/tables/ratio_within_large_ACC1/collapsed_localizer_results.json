@@ -1,6 +1,6 @@
 {
   "analysis_id": "ratio_within_large_ACC1",
-  "date_analyzed": "2025-10-30T19:12:55.487168",
+  "date_analyzed": "2025-11-03T02:37:50.414342",
   "baseline_ms": [
     -100,
     0
@@ -52,6 +52,20 @@
       "search_range_ms": [
         320.0,
         590.0
+      ],
+      "method": "GFP_collapsed_localizer",
+      "n_subjects": 67,
+      "n_conditions": 3
+    },
+    "Fz": {
+      "collapsed_peak_latency_ms": 104.0,
+      "peak_gfp_amplitude": -1.047064917325007,
+      "fwhm_ms": 28.29358734789804,
+      "window_start_ms": 87.92665857607156,
+      "window_end_ms": 116.2202459239696,
+      "search_range_ms": [
+        80.0,
+        120.0
       ],
       "method": "GFP_collapsed_localizer",
       "n_subjects": 67,

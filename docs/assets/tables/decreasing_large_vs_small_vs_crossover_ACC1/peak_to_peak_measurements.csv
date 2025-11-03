@@ -1,0 +1,4 @@
+analysis_id,condition,p1_amp,n1_amp,p2p_amp,p1_lat_ms,n1_lat_ms,roi_channels
+decreasing_large_vs_small_vs_crossover_ACC1,Decreasing Crossover,1.3248013195711388,-4.425338416296398,5.750139735867537,108.0,176.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83
+decreasing_large_vs_small_vs_crossover_ACC1,Decreasing Large,1.2719864249914603,-4.4303859552415235,5.702372380232983,108.0,176.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83
+decreasing_large_vs_small_vs_crossover_ACC1,Decreasing Small,1.4816115371953715,-3.2314270634573354,4.713038600652707,116.0,176.0,E66;E65;E59;E60;E67;E71;E70;E84;E76;E77;E85;E91;E90;E83

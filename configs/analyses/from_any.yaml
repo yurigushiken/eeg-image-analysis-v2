@@ -1,49 +1,98 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "from 1"
-      conditions: ["14", "13", "12", "11"]
-      color: "#ef0000"  # red
-      linestyle: "-"    # solid
-    - name: "from 2"
-      conditions: ["25", "24", "23", "21", "22"]
-      color: "#2c6dde"  # blue
-      linestyle: "-"    # solid
-    - name: "from 3"
-      conditions: ["36", "35", "34", "32", "31", "33"]
-      color: "#ff00ff"  # pink
-      linestyle: "-"    # solid
-    - name: "from 4"
-      conditions: ["46", "45", "43", "42", "41", "44"]
-      color: "#02d502"  # green
-      linestyle: "-"    # solid
-    - name: "from 5"
-      conditions: ["56", "54", "53", "52", "55"]
-      color: "#d76e00"  # orange
-      linestyle: "-"    # solid
-    - name: "from 6"
-      conditions: ["63", "64", "65", "66"]
-      color: "#9900ff"  # purple
-      linestyle: "-"    # solid
-components: ["P1", "N1", "P3b"]
+  - name: from 1
+    conditions:
+    - '14'
+    - '13'
+    - '12'
+    - '11'
+    color: '#ef0000'
+    linestyle: '-'
+  - name: from 2
+    conditions:
+    - '25'
+    - '24'
+    - '23'
+    - '21'
+    - '22'
+    color: '#2c6dde'
+    linestyle: '-'
+  - name: from 3
+    conditions:
+    - '36'
+    - '35'
+    - '34'
+    - '32'
+    - '31'
+    - '33'
+    color: '#ff00ff'
+    linestyle: '-'
+  - name: from 4
+    conditions:
+    - '46'
+    - '45'
+    - '43'
+    - '42'
+    - '41'
+    - '44'
+    color: '#02d502'
+    linestyle: '-'
+  - name: from 5
+    conditions:
+    - '56'
+    - '54'
+    - '53'
+    - '52'
+    - '55'
+    color: '#d76e00'
+    linestyle: '-'
+  - name: from 6
+    conditions:
+    - '63'
+    - '64'
+    - '65'
+    - '66'
+    color: '#9900ff'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
+  colors:
+  - '#ef0000'
+  - '#2c6dde'
+  - '#02d502'
+  - '#9900ff'
+  - '#9900ff'
+  - '#ffff33'
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/from_any"
-  tables_dir: "docs/assets/tables/from_any"
-  page: "docs/analysis/from_any.md"
+  page: docs/analysis/from_any.md
+  plots_dir: docs/assets/plots/from_any
+  tables_dir: docs/assets/tables/from_any
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

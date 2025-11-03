@@ -69,7 +69,7 @@ def ensure_index_template(index_path: str) -> None:
             <!-- AUTO-GENERATED START -->
             <table class="grid-table">
             <thead>
-              <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>
+              <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>
             </thead>
             <tbody>
             </tbody>
@@ -115,7 +115,7 @@ def get_stats_info(analysis_id: str, docs_root: str = "docs") -> Optional[Dict[s
         'peak_amplitude_roi',
     ]
 
-    for component in ['N1', 'P1', 'P3b']:
+    for component in ['Fz', 'P1', 'N1', 'P3b']:
         for measure_type in measure_candidates:
             # Box/violin file names are standardized on dv name
             boxplot_name = f"boxplot_{component}_{measure_type}.png"
@@ -188,7 +188,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Boxplots</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['P1', 'N1', 'P3b']:
+        for component in ['Fz', 'P1', 'N1', 'P3b']:
             if component in stats_info['boxplots']:
                 for plot_path in stats_info['boxplots'][component]:
                     alt = f"Boxplot for {component} in {analysis_id}"
@@ -206,7 +206,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Violin Plots</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['P1', 'N1', 'P3b']:
+        for component in ['Fz', 'P1', 'N1', 'P3b']:
             if component in stats_info['violin_plots']:
                 for plot_path in stats_info['violin_plots'][component]:
                     alt = f"Violin plot for {component} in {analysis_id}"
@@ -224,7 +224,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Effect Sizes</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['P1', 'N1', 'P3b']:
+        for component in ['Fz', 'P1', 'N1', 'P3b']:
             if component in stats_info['effect_sizes']:
                 for plot_path in stats_info['effect_sizes'][component]:
                     alt = f"Effect sizes for {component} in {analysis_id}"
@@ -337,8 +337,34 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     else:
         collapsed_cell = "<td></td>"
 
-    # Build main row with Collapsed Localizer and ERP plots
-    erp_row = f"<tr><td>{analysis_id}</td>{collapsed_cell}{make_cell('P1')}{make_cell('N1')}{make_cell('P3b')}</tr>"
+    # Additional cells: Fz and P1↔N1 p2p
+    # Fz image relative path
+    fz_rel = f"assets/plots/{analysis_id}/{analysis_id}-Fz.png"
+    fz_abs = os.path.join(docs_root, fz_rel)
+    if os.path.exists(fz_abs):
+        alt_fz = f"ERP overlay for Fz in {analysis_id}"
+        fz_cell = (
+            f"<td><a href='{fz_rel}' data-lightbox aria-label='{alt_fz}'><img class='thumb' src='{fz_rel}' alt='{alt_fz}' /></a></td>"
+        )
+    else:
+        fz_cell = "<td></td>"
+
+    # Peak-to-peak image relative path
+    p2p_rel = f"assets/plots/{analysis_id}/{analysis_id}-P1_N1_peak_to_peak.png"
+    p2p_abs = os.path.join(docs_root, p2p_rel)
+    if os.path.exists(p2p_abs):
+        alt_p2p = f"P1↔N1 peak-to-peak for {analysis_id}"
+        p2p_cell = (
+            f"<td><a href='{p2p_rel}' data-lightbox aria-label='{alt_p2p}'><img class='thumb' src='{p2p_rel}' alt='{alt_p2p}' /></a></td>"
+        )
+    else:
+        p2p_cell = "<td></td>"
+
+    # Build main row with desired order: Collapsed, Fz, P1, N1, P3b, P2P
+    erp_row = (
+        f"<tr><td>{analysis_id}</td>"
+        f"{collapsed_cell}{fz_cell}{make_cell('P1')}{make_cell('N1')}{make_cell('P3b')}{p2p_cell}</tr>"
+    )
 
     # Check if statistics exist for this analysis
     # docs_root already determined above
@@ -349,9 +375,9 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     new_rows_for_analysis = [erp_row]
 
     if stats_info:
-        # Add statistics row below ERP row. There are 5 content columns now.
+        # Add statistics row below ERP row. There are 7 content columns now.
         stats_html = generate_stats_html(analysis_id, stats_info)
-        new_rows_for_analysis.append(f"<tr><td colspan='5'>{stats_html}</td></tr>")
+        new_rows_for_analysis.append(f"<tr><td colspan='7'>{stats_html}</td></tr>")
 
     # Update or insert this analysis entry
     analysis_entries[analysis_id] = new_rows_for_analysis
@@ -362,7 +388,7 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     for aid in sorted_ids:
         all_rows.extend(analysis_entries[aid])
 
-    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
+    new_block = "\n<table class=\"grid-table\">\n<thead>\n  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>\n</thead>\n<tbody>\n" + ("\n".join(all_rows) if all_rows else "") + "\n</tbody>\n</table>\n"
     new_content = pre + start_marker + new_block + end_marker + post
 
     with open(index_path, "w", encoding="utf-8") as f:

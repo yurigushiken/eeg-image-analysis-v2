@@ -1,0 +1,7 @@
+Contrast,A,B,Paired,Parametric,dof,alternative,p-adjust,BF10,ci_lower,ci_upper
+condition,3 to 6,4 to 6,True,True,0.0,two-sided,fdr_bh,nan,-2.226780920442058,2.8672935356624065
+condition,3 to 6,5 to 6,True,True,0.0,two-sided,fdr_bh,nan,-1.0208896501096731,2.6538828119651257
+condition,3 to 6,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-1.5912231526421314,1.5912231526421314
+condition,4 to 6,5 to 6,True,True,0.0,two-sided,fdr_bh,nan,-8.955979166314046,9.804507303737902
+condition,4 to 6,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-1.5912231526421314,1.5912231526421314
+condition,5 to 6,Cardinality6,True,True,0.0,two-sided,fdr_bh,nan,-2.3476113815127397,0.580528857927242

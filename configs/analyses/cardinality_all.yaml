@@ -1,51 +1,74 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Cardinality1"
-      conditions: ["11"]
-      color: "#ef0000"  # Red
-      linestyle: "-"    # Solid
-    - name: "Cardinality2"
-      conditions: ["22"]
-      color: "#2c6dde"  # Blue
-      linestyle: "-"    # Solid
-    - name: "Cardinality3"
-      conditions: ["33"]
-      color: "#02d502"  # Green
-      linestyle: "-"    # Solid
-    - name: "Cardinality4"
-      conditions: ["44"]
-      color: "#9900ff"  # Purple
-      linestyle: "-"    # Solid
-    - name: "Cardinality5"
-      conditions: ["55"]
-      color: "#ff7f00"  # Orange
-      linestyle: "-"    # Solid
-    - name: "Cardinality6"
-      conditions: ["66"]
-      color: "#40e0d0"  # Turquoise
-      linestyle: "-"    # Solid
-
-components: ["P1", "N1", "P3b"]
+  - name: Cardinality1
+    conditions:
+    - '11'
+    color: '#ef0000'
+    linestyle: '-'
+  - name: Cardinality2
+    conditions:
+    - '22'
+    color: '#2c6dde'
+    linestyle: '-'
+  - name: Cardinality3
+    conditions:
+    - '33'
+    color: '#02d502'
+    linestyle: '-'
+  - name: Cardinality4
+    conditions:
+    - '44'
+    color: '#9900ff'
+    linestyle: '-'
+  - name: Cardinality5
+    conditions:
+    - '55'
+    color: '#ff7f00'
+    linestyle: '-'
+  - name: Cardinality6
+    conditions:
+    - '66'
+    color: '#40e0d0'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#ef0000", "#2c6dde", "#02d502", "#9900ff", "#9900ff", "#ffff33"]
+  colors:
+  - '#ef0000'
+  - '#2c6dde'
+  - '#02d502'
+  - '#9900ff'
+  - '#9900ff'
+  - '#ffff33'
 outputs:
-  page: "single"
-  plots_dir: "docs/assets/plots/cardinality_all"
-  tables_dir: "docs/assets/tables/cardinality_all"
-  page: "docs/analysis/cardinality_all.md"
-
+  page: docs/analysis/cardinality_all.md
+  plots_dir: docs/assets/plots/cardinality_all
+  tables_dir: docs/assets/tables/cardinality_all
 measurement:
-  latency: fal     # options: peak | fal
-  amplitude: mean  # options: peak | mean (affects reported metrics, not ERP lines)
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'

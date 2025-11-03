@@ -688,3 +688,130 @@ def make_collapsed_localizer_figure(
     return fig
 
 
+
+def make_peak_to_peak_figure(
+    *,
+    curves_by_label: Dict[str, Iterable[float]],
+    times_ms,
+    p2p_by_label: Dict[str, float],
+    p1_lat_by_label: Dict[str, float],
+    n1_lat_by_label: Dict[str, float],
+    title: str,
+    subtitle: Optional[str] = None,
+    colors: Optional[Mapping[str, str]] = None,
+    linestyles: Optional[Mapping[str, str]] = None,
+    xlim_ms: Optional[Tuple[float, float]] = None,
+    ylimit_uv: Optional[float] = None,
+    hline_color: str = "#000000",
+    hline_style: str = ":",
+    p1_amp_by_label: Optional[Dict[str, float]] = None,
+    n1_amp_by_label: Optional[Dict[str, float]] = None,
+    epochs_by_label: Optional[Mapping[str, int]] = None,
+):
+    """
+    Create a P1↔N1 peak-to-peak figure using N1 ROI waveforms.
+
+    - Overlays per-condition ROI curves
+    - Vertical lines at P1 and N1 latencies per condition (color-matched)
+    - Black dotted horizontal lines at P1 and N1 amplitudes per condition
+    - ΔµV annotation per condition
+    """
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(figsize=(6.9, 5.0), constrained_layout=True)
+    try:
+        fig.set_constrained_layout_pads(h_pad=0.35, hspace=0.35, w_pad=0.14, wspace=0.22)
+    except Exception:
+        pass
+
+    # Plot waveforms
+    for label, y in curves_by_label.items():
+        kw = {}
+        if colors and label in colors:
+            kw["color"] = colors[label]
+        if linestyles and label in linestyles:
+            kw["linestyle"] = linestyles[label]
+        ax.plot(times_ms, y, label=label, **kw)
+
+    # Zero line and axes labels
+    ax.axvline(0, color="#999", linewidth=1, alpha=0.6)
+    ax.set_xlabel("Time (ms)")
+    ax.set_ylabel("Amplitude (µV)")
+
+    # Limits
+    if xlim_ms is not None:
+        ax.set_xlim(xlim_ms)
+    if ylimit_uv is not None:
+        try:
+            ax.set_ylim((-float(ylimit_uv), float(ylimit_uv)))
+        except Exception:
+            pass
+
+    # Grid
+    try:
+        from matplotlib.ticker import MultipleLocator
+        ax.xaxis.set_major_locator(MultipleLocator(100))
+        ax.xaxis.set_minor_locator(MultipleLocator(50))
+        ax.yaxis.set_major_locator(MultipleLocator(1))
+    except Exception:
+        pass
+    ax.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
+
+    # Title/subtitle
+    if title:
+        try:
+            fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
+        except Exception:
+            pass
+    if subtitle:
+        try:
+            # Place a bit below the title; leave room above the axes
+            fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
+        except Exception:
+            pass
+
+    # No latency vertical lines in P2P plot (only stimulus onset at 0 remains)
+
+    # Draw horizontal peak amplitude lines (use condition color if provided)
+    if p1_amp_by_label:
+        for label, amp in p1_amp_by_label.items():
+            color = colors[label] if colors and label in colors else hline_color
+            ax.axhline(amp, color=color, linestyle=hline_style, linewidth=0.9, alpha=0.9)
+    if n1_amp_by_label:
+        for label, amp in n1_amp_by_label.items():
+            color = colors[label] if colors and label in colors else hline_color
+            ax.axhline(amp, color=color, linestyle=hline_style, linewidth=0.9, alpha=0.9)
+
+    # Build a compact custom legend-like box with per-row styling using OffsetBox
+    from matplotlib.offsetbox import AnchoredOffsetbox, HPacker, VPacker, DrawingArea, TextArea
+    from matplotlib.lines import Line2D
+    rows = []
+    for label in curves_by_label.keys():
+        if label not in p2p_by_label:
+            continue
+        color = colors[label] if colors and label in colors else hline_color
+        ls = linestyles.get(label, '-') if linestyles else '-'
+
+        # Small line sample (no triangle) to match waveform style
+        da = DrawingArea(22, 8, 0, 0)
+        sample = Line2D([2, 20], [4, 4], color=color, linestyle=ls, linewidth=1.6)
+        da.add_artist(sample)
+
+        # Condition name (black) with epoch count if available, and colored delta text
+        if epochs_by_label and label in epochs_by_label:
+            name_text = f"{label} ({int(epochs_by_label[label])} epochs)"
+        else:
+            name_text = f"{label}"
+        name_t = TextArea(name_text, textprops={"color": "#000", "fontsize": 8})
+        delta_t = TextArea(f"  Δ = {float(p2p_by_label[label]):.1f} µV", textprops={"color": color, "fontsize": 8})
+
+        row = HPacker(children=[da, name_t, delta_t], align="left", pad=0, sep=2)
+        rows.append(row)
+
+    if rows:
+        legend_box = VPacker(children=rows, align="left", pad=0, sep=2)
+        anchored = AnchoredOffsetbox(loc='upper right', child=legend_box, pad=0.3, borderpad=0.3, frameon=True)
+        ax.add_artist(anchored)
+
+    return fig

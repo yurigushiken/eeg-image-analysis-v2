@@ -1,23 +1,23 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2025-10-30 19:16:26
+**Generated:** 2025-11-03 02:34:00
 
 ---
 
 ## 1. Analysis Overview
 
-**Total Measurements:** 288
+**Total Measurements:** 384
 **Number of Subjects:** 24
 **Number of Conditions:** 4
 
-**Components Analyzed:** N1, P1, P3b
-**Dependent Variables:** Mean Amplitude (ROI), Latency (50% Fractional Area)
+**Components Analyzed:** Fz, N1, P1, P3b
+**Dependent Variables:** Latency (Peak), Amplitude (Peak)
 
 ### 1.1 Measurement Methodology
 
 - **Component Detection:** collapsed_localizer_fwhm
-- **Latency Measure:** 50% Fractional Area Latency (temporal midpoint)
-- **Amplitude Measure:** Mean amplitude in ROI within FWHM window
+- **Latency Measure:** Peak latency within FWHM window
+- **Amplitude Measure:** Peak amplitude within FWHM window
 - **Baseline Period:** [-100, 0] ms
 
 ### 1.2 Quality Control Filters
@@ -35,67 +35,88 @@ ANOVA and pairwise tests were run on complete cases. Subject-condition combinati
 
 This section presents means, standard deviations, and sample sizes for each condition.
 
-### 2.1 N1 Component
+### 2.1 Fz Component
 
-#### Mean Amplitude (ROI)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Cardinality2 | 22 | -3.11 µV | 1.83 | 0.39 | [-7.37, -0.14] |
-| Cardinality3 | 22 | -3.22 µV | 1.65 | 0.35 | [-7.54, -0.94] |
-| Decreasing 3 to 2 | 24 | -3.66 µV | 2.11 | 0.43 | [-7.98, -0.23] |
-| Increasing 2 to 3 | 22 | -3.28 µV | 1.41 | 0.30 | [-5.74, -0.32] |
-
-#### Latency (50% Fractional Area)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 22 | 173.03 ms | 13.87 | 2.96 | [147.33, 195.55] |
-| Cardinality3 | 22 | 172.31 ms | 10.44 | 2.23 | [151.69, 197.41] |
-| Decreasing 3 to 2 | 24 | 174.19 ms | 11.00 | 2.25 | [158.22, 206.45] |
-| Increasing 2 to 3 | 22 | 171.96 ms | 7.69 | 1.64 | [154.28, 186.90] |
+| Cardinality2 | 10 | 98.80 ms | 13.21 | 4.18 | [88.00, 120.00] |
+| Cardinality3 | 12 | 106.33 ms | 12.47 | 3.60 | [88.00, 120.00] |
+| Decreasing 3 to 2 | 11 | 103.27 ms | 13.36 | 4.03 | [88.00, 120.00] |
+| Increasing 2 to 3 | 8 | 118.50 ms | 4.24 | 1.50 | [108.00, 120.00] |
 
-
-### 2.2 P1 Component
-
-#### Mean Amplitude (ROI)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 13 | 2.01 µV | 1.83 | 0.51 | [0.25, 6.70] |
-| Cardinality3 | 15 | 2.14 µV | 2.15 | 0.55 | [0.03, 7.32] |
-| Decreasing 3 to 2 | 11 | 1.80 µV | 1.41 | 0.43 | [0.01, 4.07] |
-| Increasing 2 to 3 | 14 | 1.80 µV | 1.36 | 0.36 | [-0.04, 4.27] |
-
-#### Latency (50% Fractional Area)
-
-| Condition | N | Mean | SD | SEM | Range |
-|-----------|---|------|----|----|-------|
-| Cardinality2 | 13 | 111.24 ms | 4.00 | 1.11 | [104.71, 119.13] |
-| Cardinality3 | 15 | 110.45 ms | 4.65 | 1.20 | [101.43, 119.90] |
-| Decreasing 3 to 2 | 11 | 108.71 ms | 3.20 | 0.97 | [102.34, 112.90] |
-| Increasing 2 to 3 | 14 | 110.33 ms | 4.46 | 1.19 | [100.35, 117.09] |
+| Cardinality2 | 10 | 2.64 µV | 1.74 | 0.55 | [0.81, 6.80] |
+| Cardinality3 | 12 | 2.44 µV | 1.03 | 0.30 | [0.99, 4.66] |
+| Decreasing 3 to 2 | 11 | 3.14 µV | 2.03 | 0.61 | [0.99, 7.96] |
+| Increasing 2 to 3 | 8 | 2.90 µV | 2.02 | 0.71 | [0.98, 6.96] |
 
 
-### 2.3 P3b Component
+### 2.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 12 | 2.48 µV | 1.83 | 0.53 | [0.30, 7.32] |
-| Cardinality3 | 16 | 2.36 µV | 2.03 | 0.51 | [0.06, 6.61] |
-| Decreasing 3 to 2 | 19 | 3.98 µV | 3.28 | 0.75 | [0.04, 11.98] |
-| Increasing 2 to 3 | 18 | 3.93 µV | 2.94 | 0.69 | [0.09, 9.80] |
+| Cardinality2 | 22 | 174.36 ms | 21.86 | 4.66 | [140.00, 208.00] |
+| Cardinality3 | 22 | 167.82 ms | 16.54 | 3.53 | [140.00, 200.00] |
+| Decreasing 3 to 2 | 24 | 175.33 ms | 22.28 | 4.55 | [140.00, 208.00] |
+| Increasing 2 to 3 | 22 | 171.45 ms | 19.33 | 4.12 | [140.00, 208.00] |
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality2 | 12 | 464.74 ms | 13.25 | 3.83 | [441.62, 480.57] |
-| Cardinality3 | 16 | 465.80 ms | 24.91 | 6.23 | [423.68, 525.48] |
-| Decreasing 3 to 2 | 19 | 480.47 ms | 23.59 | 5.41 | [426.83, 524.17] |
-| Increasing 2 to 3 | 18 | 472.30 ms | 20.80 | 4.90 | [428.70, 520.61] |
+| Cardinality2 | 22 | -5.75 µV | 2.52 | 0.54 | [-10.78, -1.57] |
+| Cardinality3 | 22 | -5.19 µV | 2.03 | 0.43 | [-10.83, -1.55] |
+| Decreasing 3 to 2 | 24 | -5.77 µV | 2.55 | 0.52 | [-10.33, -1.35] |
+| Increasing 2 to 3 | 22 | -5.27 µV | 1.96 | 0.42 | [-10.61, -0.91] |
+
+
+### 2.3 P1 Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality2 | 13 | 111.69 ms | 8.40 | 2.33 | [100.00, 120.00] |
+| Cardinality3 | 15 | 111.47 ms | 7.98 | 2.06 | [100.00, 120.00] |
+| Decreasing 3 to 2 | 11 | 108.36 ms | 6.80 | 2.05 | [100.00, 120.00] |
+| Increasing 2 to 3 | 14 | 111.14 ms | 8.76 | 2.34 | [100.00, 120.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality2 | 13 | 3.04 µV | 1.79 | 0.50 | [1.11, 7.57] |
+| Cardinality3 | 15 | 3.02 µV | 2.39 | 0.62 | [0.79, 8.96] |
+| Decreasing 3 to 2 | 11 | 2.54 µV | 1.70 | 0.51 | [0.54, 5.61] |
+| Increasing 2 to 3 | 14 | 2.77 µV | 1.86 | 0.50 | [0.49, 6.63] |
+
+
+### 2.4 P3b Component
+
+#### Latency (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality2 | 12 | 461.33 ms | 24.97 | 7.21 | [420.00, 496.00] |
+| Cardinality3 | 16 | 467.00 ms | 31.45 | 7.86 | [420.00, 528.00] |
+| Decreasing 3 to 2 | 19 | 481.68 ms | 33.02 | 7.58 | [432.00, 528.00] |
+| Increasing 2 to 3 | 18 | 478.44 ms | 44.55 | 10.50 | [420.00, 528.00] |
+
+#### Amplitude (Peak)
+
+| Condition | N | Mean | SD | SEM | Range |
+|-----------|---|------|----|----|-------|
+| Cardinality2 | 12 | 4.50 µV | 2.29 | 0.66 | [1.28, 10.57] |
+| Cardinality3 | 16 | 4.51 µV | 2.20 | 0.55 | [1.80, 9.60] |
+| Decreasing 3 to 2 | 19 | 6.30 µV | 4.09 | 0.94 | [1.68, 17.81] |
+| Increasing 2 to 3 | 18 | 5.85 µV | 3.54 | 0.83 | [1.42, 13.70] |
 
 
 ---
@@ -104,18 +125,18 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 This section presents the results of repeated-measures statistical tests.
 
-### 3.1 N1 Component
+### 3.1 Fz Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 285.57, BIC = 303.07
-- **Cardinality3 vs Cardinality2**: *β* = -0.02, *SE* = 0.284, *z* = -0.065, *p* = 0.948
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = 0.01, *SE* = 0.285, *z* = 0.027, *p* = 0.979
-- **Increasing 2 to 3 vs Cardinality2**: *β* = 0.09, *SE* = 0.285, *z* = 0.303, *p* = 0.762
-- **SNR**: *β* = -0.44, *SE* = 0.048, *z* = -9.203, *p* < .001
+- AIC = 328.81, BIC = 340.80
+- **Cardinality3 vs Cardinality2**: *β* = 7.51, *SE* = 4.788, *z* = 1.570, *p* = 0.117
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 4.33, *SE* = 4.938, *z* = 0.877, *p* = 0.381
+- **Increasing 2 to 3 vs Cardinality2**: *β* = 19.48, *SE* = 5.435, *z* = 3.585, *p* < .001
+- **SNR**: *β* = 0.14, *SE* = 1.663, *z* = 0.081, *p* = 0.935
 
 _Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -126,12 +147,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | 0.02 | 0.28 | 0.06 | 0.948 | 1.000 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | -0.01 | 0.29 | -0.03 | 0.979 | 1.000 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | -0.09 | 0.29 | -0.30 | 0.762 | 0.999 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | -0.03 | 0.28 | -0.09 | 0.926 | 1.000 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | -0.10 | 0.28 | -0.37 | 0.708 | 0.999 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | -0.08 | 0.28 | -0.28 | 0.777 | 0.999 | n.s. |
+| Cardinality2 - Cardinality3 | -7.51 | 4.79 | -1.57 | 0.117 | 0.310 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -4.33 | 4.94 | -0.88 | 0.381 | 0.616 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | -19.48 | 5.44 | -3.58 | < .001 | 0.002 | ** |
+| Cardinality3 - Decreasing 3 to 2 | 3.18 | 4.71 | 0.68 | 0.499 | 0.616 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | -11.97 | 5.21 | -2.30 | 0.021 | 0.083 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | -15.15 | 5.22 | -2.90 | 0.004 | 0.018 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -139,7 +160,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.94, *p* = 0.134, η²_G = 0.041
+- *F* = 1.00, *p* = 0.500, η²_G = 0.333
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -148,26 +169,26 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | 0.72 | 19 | = 0.573 | 0.16 [-0.31, 0.63] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 2.26 | 19 | = 0.213 | 0.48 [-0.10, 0.82] | small | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.87 | 19 | = 0.573 | 0.24 [-0.28, 0.67] | small | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | 1.80 | 19 | = 0.262 | 0.37 [-0.06, 0.86] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | 0.29 | 19 | = 0.775 | 0.08 [-0.41, 0.48] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | -1.32 | 19 | = 0.404 | -0.33 [-0.77, 0.14] | small | n.s. |
+| Cardinality2 vs Cardinality3 | -1.00 | 1 | = 0.500 | -1.00 [-1.28, 0.62] | large | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | nan | 1 | n/a | 0.00 [-1.18, 0.69] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -1.00 | 1 | = 0.500 | -1.00 [-2.83, 2.24] | large | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 1.00 | 1 | = 0.500 | 1.00 [-0.48, 1.48] | large | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | nan | 1 | n/a | n/a [-2.52, 0.52] | n/a | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | -1.00 | 1 | = 0.500 | -1.00 [-2.73, 1.00] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 682.72, BIC = 700.22
-- **Cardinality3 vs Cardinality2**: *β* = -0.41, *SE* = 2.582, *z* = -0.159, *p* = 0.873
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = 1.25, *SE* = 2.595, *z* = 0.483, *p* = 0.629
-- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.67, *SE* = 2.596, *z* = -0.256, *p* = 0.798
-- **SNR**: *β* = -0.26, *SE* = 0.429, *z* = -0.611, *p* = 0.541
+- AIC = 145.16, BIC = 157.16
+- **Cardinality3 vs Cardinality2**: *β* = -0.17, *SE* = 0.481, *z* = -0.361, *p* = 0.718
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 0.01, *SE* = 0.488, *z* = 0.018, *p* = 0.986
+- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.45, *SE* = 0.556, *z* = -0.800, *p* = 0.424
+- **SNR**: *β* = 0.91, *SE* = 0.158, *z* = 5.739, *p* < .001
 
 _Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -178,12 +199,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | 0.41 | 2.58 | 0.16 | 0.873 | 0.992 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | -1.25 | 2.59 | -0.48 | 0.629 | 0.981 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | 0.67 | 2.60 | 0.26 | 0.798 | 0.992 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | -1.66 | 2.57 | -0.65 | 0.517 | 0.974 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | 0.25 | 2.55 | 0.10 | 0.921 | 0.992 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | 1.92 | 2.54 | 0.76 | 0.450 | 0.972 | n.s. |
+| Cardinality2 - Cardinality3 | 0.17 | 0.48 | 0.36 | 0.718 | 0.979 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -0.01 | 0.49 | -0.02 | 0.986 | 0.986 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | 0.44 | 0.56 | 0.80 | 0.424 | 0.949 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | -0.18 | 0.49 | -0.37 | 0.708 | 0.979 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | 0.27 | 0.54 | 0.50 | 0.617 | 0.979 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | 0.45 | 0.53 | 0.86 | 0.391 | 0.949 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -191,7 +212,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.09, *p* = 0.966, η²_G = 0.002
+- *F* = 0.59, *p* = 0.664, η²_G = 0.344
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -200,29 +221,29 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | 0.11 | 19 | = 0.969 | 0.02 [-0.44, 0.49] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -0.30 | 19 | = 0.969 | -0.08 [-0.48, 0.40] | negligible | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.04 | 19 | = 0.969 | 0.01 [-0.46, 0.48] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -0.50 | 19 | = 0.969 | -0.15 [-0.55, 0.34] | negligible | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -0.10 | 19 | = 0.969 | -0.02 [-0.41, 0.48] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.49 | 19 | = 0.969 | 0.14 [-0.31, 0.58] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | 3.37 | 1 | = 0.367 | 0.76 [-0.62, 1.28] | medium | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -0.17 | 1 | = 0.891 | -0.24 [-1.19, 0.69] | small | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 7.40 | 1 | = 0.367 | 1.06 [-2.08, 3.39] | large | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -0.67 | 1 | = 0.749 | -0.91 [-1.17, 0.70] | large | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 4.49 | 1 | = 0.367 | 0.39 [-1.47, 1.04] | small | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.84 | 1 | = 0.749 | 1.17 [-1.53, 1.66] | large | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.2 P1 Component
+### 3.2 N1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 178.41, BIC = 192.20
-- **Cardinality3 vs Cardinality2**: *β* = 0.06, *SE* = 0.390, *z* = 0.143, *p* = 0.886
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = -0.24, *SE* = 0.427, *z* = -0.562, *p* = 0.574
-- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.23, *SE* = 0.398, *z* = -0.576, *p* = 0.564
-- **SNR**: *β* = 0.80, *SE* = 0.113, *z* = 7.114, *p* < .001
+- AIC = 792.25, BIC = 809.75
+- **Cardinality3 vs Cardinality2**: *β* = -5.47, *SE* = 4.752, *z* = -1.152, *p* = 0.249
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 1.17, *SE* = 4.772, *z* = 0.244, *p* = 0.807
+- **Increasing 2 to 3 vs Cardinality2**: *β* = -1.69, *SE* = 4.776, *z* = -0.353, *p* = 0.724
+- **SNR**: *β* = -0.41, *SE* = 0.792, *z* = -0.524, *p* = 0.600
 
 _Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -233,12 +254,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | -0.06 | 0.39 | -0.14 | 0.886 | 0.987 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | 0.24 | 0.43 | 0.56 | 0.574 | 0.975 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | 0.23 | 0.40 | 0.58 | 0.564 | 0.975 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | 0.30 | 0.41 | 0.72 | 0.470 | 0.975 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | 0.29 | 0.39 | 0.74 | 0.461 | 0.975 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | -0.01 | 0.42 | -0.02 | 0.980 | 0.987 | n.s. |
+| Cardinality2 - Cardinality3 | 5.47 | 4.75 | 1.15 | 0.249 | 0.762 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -1.17 | 4.77 | -0.24 | 0.807 | 0.924 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | 1.69 | 4.78 | 0.35 | 0.724 | 0.924 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | -6.64 | 4.73 | -1.40 | 0.160 | 0.649 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | -3.79 | 4.69 | -0.81 | 0.419 | 0.886 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | 2.85 | 4.67 | 0.61 | 0.542 | 0.904 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -246,7 +267,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.26, *p* = 0.850, η²_G = 0.032
+- *F* = 0.67, *p* = 0.577, η²_G = 0.018
+- Greenhouse-Geisser corrected: *p* = 0.535 (ε = 0.744)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -255,26 +277,26 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -0.08 | 5 | = 0.941 | -0.04 [-0.90, 0.54] | negligible | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 0.52 | 5 | = 0.939 | 0.32 [-0.85, 1.01] | small | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.63 | 5 | = 0.939 | 0.37 [-0.58, 0.97] | small | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | 0.65 | 5 | = 0.939 | 0.30 [-0.59, 0.96] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | 0.69 | 5 | = 0.939 | 0.34 [-0.54, 1.01] | small | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.08 | 5 | = 0.941 | 0.04 [-1.19, 0.69] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | 1.36 | 19 | = 0.565 | 0.31 [-0.17, 0.78] | small | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -0.09 | 19 | = 0.928 | -0.03 [-0.50, 0.39] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.57 | 19 | = 0.694 | 0.13 [-0.34, 0.60] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.52 | 19 | = 0.565 | -0.35 [-0.69, 0.21] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -0.65 | 19 | = 0.694 | -0.19 [-0.62, 0.27] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.59 | 19 | = 0.694 | 0.16 [-0.41, 0.48] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
-#### Latency (50% Fractional Area)
+#### Amplitude (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 311.64, BIC = 325.43
-- **Cardinality3 vs Cardinality2**: *β* = -0.90, *SE* = 1.476, *z* = -0.612, *p* = 0.541
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = -2.43, *SE* = 1.608, *z* = -1.511, *p* = 0.131
-- **Increasing 2 to 3 vs Cardinality2**: *β* = -1.00, *SE* = 1.494, *z* = -0.670, *p* = 0.503
-- **SNR**: *β* = 0.11, *SE* = 0.407, *z* = 0.267, *p* = 0.789
+- AIC = 339.49, BIC = 356.99
+- **Cardinality3 vs Cardinality2**: *β* = 0.56, *SE* = 0.363, *z* = 1.535, *p* = 0.125
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 0.58, *SE* = 0.366, *z* = 1.581, *p* = 0.114
+- **Increasing 2 to 3 vs Cardinality2**: *β* = 0.66, *SE* = 0.366, *z* = 1.799, *p* = 0.072
+- **SNR**: *β* = -0.47, *SE* = 0.063, *z* = -7.414, *p* < .001
 
 _Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -285,12 +307,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | 0.90 | 1.48 | 0.61 | 0.541 | 0.877 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | 2.43 | 1.61 | 1.51 | 0.131 | 0.569 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | 1.00 | 1.49 | 0.67 | 0.503 | 0.877 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | 1.53 | 1.61 | 0.95 | 0.342 | 0.876 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | 0.10 | 1.44 | 0.07 | 0.946 | 0.946 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | -1.43 | 1.62 | -0.88 | 0.378 | 0.876 | n.s. |
+| Cardinality2 - Cardinality3 | -0.56 | 0.36 | -1.54 | 0.125 | 0.454 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -0.58 | 0.37 | -1.58 | 0.114 | 0.454 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | -0.66 | 0.37 | -1.80 | 0.072 | 0.361 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | -0.02 | 0.36 | -0.06 | 0.956 | 0.989 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | -0.10 | 0.36 | -0.28 | 0.779 | 0.989 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | -0.08 | 0.36 | -0.22 | 0.822 | 0.989 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -298,7 +320,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.77, *p* = 0.530, η²_G = 0.096
+- *F* = 0.90, *p* = 0.445, η²_G = 0.015
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -307,29 +329,29 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | 1.04 | 5 | = 0.838 | 0.65 [-0.29, 1.22] | medium | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | 0.28 | 5 | = 0.967 | 0.18 [-0.79, 1.06] | negligible | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | 0.24 | 5 | = 0.967 | 0.16 [-0.65, 0.89] | negligible | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.23 | 5 | = 0.838 | -0.55 [-0.70, 0.84] | medium | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -0.88 | 5 | = 0.838 | -0.50 [-0.84, 0.70] | small | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.04 | 5 | = 0.967 | 0.02 [-1.20, 0.68] | negligible | n.s. |
+| Cardinality2 vs Cardinality3 | -0.78 | 19 | = 0.621 | -0.16 [-0.65, 0.30] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 0.79 | 19 | = 0.621 | 0.15 [-0.36, 0.53] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -0.18 | 19 | = 0.856 | -0.04 [-0.51, 0.43] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 1.67 | 19 | = 0.621 | 0.31 [-0.14, 0.77] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 0.66 | 19 | = 0.621 | 0.14 [-0.41, 0.48] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.97 | 19 | = 0.621 | -0.21 [-0.70, 0.20] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 
-### 3.3 P3b Component
+### 3.3 P1 Component
 
-#### Mean Amplitude (ROI)
+#### Latency (Peak)
 
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 256.91, BIC = 272.13
-- **Cardinality3 vs Cardinality2**: *β* = -0.04, *SE* = 0.504, *z* = -0.087, *p* = 0.931
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = 0.92, *SE* = 0.497, *z* = 1.851, *p* = 0.064
-- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.05, *SE* = 0.535, *z* = -0.087, *p* = 0.931
-- **SNR**: *β* = 0.66, *SE* = 0.072, *z* = 9.159, *p* < .001
+- AIC = 379.91, BIC = 393.71
+- **Cardinality3 vs Cardinality2**: *β* = -0.41, *SE* = 2.921, *z* = -0.142, *p* = 0.887
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = -3.35, *SE* = 3.127, *z* = -1.071, *p* = 0.284
+- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.59, *SE* = 3.002, *z* = -0.197, *p* = 0.844
+- **SNR**: *β* = 1.04, *SE* = 0.768, *z* = 1.353, *p* = 0.176
 
 _Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -340,12 +362,12 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | 0.04 | 0.50 | 0.09 | 0.931 | 1.000 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | -0.92 | 0.50 | -1.85 | 0.064 | 0.233 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | 0.05 | 0.53 | 0.09 | 0.931 | 1.000 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | -0.96 | 0.44 | -2.17 | 0.030 | 0.148 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | 0.00 | 0.47 | 0.00 | 0.996 | 1.000 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | 0.97 | 0.43 | 2.22 | 0.026 | 0.148 | n.s. |
+| Cardinality2 - Cardinality3 | 0.41 | 2.92 | 0.14 | 0.887 | 0.996 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | 3.35 | 3.13 | 1.07 | 0.284 | 0.866 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | 0.59 | 3.00 | 0.20 | 0.844 | 0.996 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | 2.93 | 3.05 | 0.96 | 0.336 | 0.871 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | 0.18 | 2.85 | 0.06 | 0.951 | 0.996 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | -2.76 | 3.13 | -0.88 | 0.378 | 0.871 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -353,59 +375,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.99, *p* = 0.051, η²_G = 0.159
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
-
-**Pairwise Comparisons (Supplementary Analysis):**
-
-_Post-hoc paired t-tests on complete cases with FDR correction:_
-
-| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
-|------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -1.56 | 8 | = 0.278 | -0.48 [-0.92, 0.44] | small | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -2.01 | 8 | = 0.236 | -0.87 [-1.21, 0.15] | large | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -2.42 | 8 | = 0.236 | -1.08 [-1.75, -0.05] | large | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.29 | 8 | = 0.282 | -0.55 [-0.99, 0.16] | medium | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | -1.45 | 8 | = 0.278 | -0.68 [-0.92, 0.32] | medium | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 0.15 | 8 | = 0.886 | 0.03 [-0.29, 0.79] | negligible | n.s. |
-
-_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
-_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
-
-#### Latency (50% Fractional Area)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 593.87, BIC = 609.09
-- **Cardinality3 vs Cardinality2**: *β* = 0.88, *SE* = 8.065, *z* = 0.110, *p* = 0.913
-- **Decreasing 3 to 2 vs Cardinality2**: *β* = 15.16, *SE* = 7.835, *z* = 1.935, *p* = 0.053
-- **Increasing 2 to 3 vs Cardinality2**: *β* = 6.35, *SE* = 8.228, *z* = 0.771, *p* = 0.440
-- **SNR**: *β* = 0.51, *SE* = 1.015, *z* = 0.502, *p* = 0.616
-
-_Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality2 - Cardinality3 | -0.88 | 8.07 | -0.11 | 0.913 | 0.913 | n.s. |
-| Cardinality2 - Decreasing 3 to 2 | -15.16 | 7.84 | -1.93 | 0.053 | 0.245 | n.s. |
-| Cardinality2 - Increasing 2 to 3 | -6.35 | 8.23 | -0.77 | 0.440 | 0.825 | n.s. |
-| Cardinality3 - Decreasing 3 to 2 | -14.27 | 7.15 | -2.00 | 0.046 | 0.245 | n.s. |
-| Cardinality3 - Increasing 2 to 3 | -5.46 | 7.48 | -0.73 | 0.465 | 0.825 | n.s. |
-| Decreasing 3 to 2 - Increasing 2 to 3 | 8.81 | 7.00 | 1.26 | 0.208 | 0.607 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-**Repeated-Measures ANOVA (Supplementary Analysis):**
-
-- *F* = 1.22, *p* = 0.324, η²_G = 0.097
+- *F* = 0.04, *p* = 0.987, η²_G = 0.007
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -414,12 +384,171 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality2 vs Cardinality3 | -0.70 | 8 | = 0.605 | -0.37 [-0.73, 0.62] | small | n.s. |
-| Cardinality2 vs Decreasing 3 to 2 | -1.61 | 8 | = 0.605 | -0.72 [-1.09, 0.24] | medium | n.s. |
-| Cardinality2 vs Increasing 2 to 3 | -0.70 | 8 | = 0.605 | -0.39 [-0.96, 0.49] | small | n.s. |
-| Cardinality3 vs Decreasing 3 to 2 | -1.28 | 8 | = 0.605 | -0.45 [-1.29, -0.06] | small | n.s. |
-| Cardinality3 vs Increasing 2 to 3 | 0.08 | 8 | = 0.941 | 0.03 [-0.87, 0.36] | negligible | n.s. |
-| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.03 | 8 | = 0.605 | 0.50 [-0.29, 0.79] | medium | n.s. |
+| Cardinality2 vs Cardinality3 | 0.00 | 5 | = 1.000 | 0.00 [-0.56, 0.88] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 0.00 | 5 | = 1.000 | 0.00 [-0.88, 0.97] | negligible | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -0.29 | 5 | = 1.000 | -0.18 [-0.68, 0.86] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 0.00 | 5 | = 1.000 | 0.00 [-0.34, 1.28] | negligible | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -0.32 | 5 | = 1.000 | -0.16 [-0.72, 0.81] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.34 | 5 | = 1.000 | -0.17 [-0.99, 0.86] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 204.71, BIC = 218.51
+- **Cardinality3 vs Cardinality2**: *β* = -0.02, *SE* = 0.508, *z* = -0.032, *p* = 0.974
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = -0.47, *SE* = 0.552, *z* = -0.851, *p* = 0.395
+- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.28, *SE* = 0.515, *z* = -0.553, *p* = 0.580
+- **SNR**: *β* = 0.81, *SE* = 0.144, *z* = 5.605, *p* < .001
+
+_Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality2 - Cardinality3 | 0.02 | 0.51 | 0.03 | 0.974 | 0.974 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | 0.47 | 0.55 | 0.85 | 0.395 | 0.950 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | 0.28 | 0.51 | 0.55 | 0.580 | 0.969 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | 0.45 | 0.53 | 0.86 | 0.392 | 0.950 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | 0.27 | 0.50 | 0.53 | 0.593 | 0.969 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | -0.19 | 0.54 | -0.34 | 0.734 | 0.969 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 0.22, *p* = 0.884, η²_G = 0.025
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality2 vs Cardinality3 | -0.24 | 5 | = 0.822 | -0.13 [-0.96, 0.49] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | 0.40 | 5 | = 0.822 | 0.26 [-0.92, 0.93] | small | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | 0.28 | 5 | = 0.822 | 0.17 [-0.56, 1.00] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | 0.81 | 5 | = 0.822 | 0.33 [-0.58, 0.97] | small | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | 0.59 | 5 | = 0.822 | 0.27 [-0.53, 1.03] | small | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | -0.29 | 5 | = 0.822 | -0.11 [-1.34, 0.57] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 650.93, BIC = 666.15
+- **Cardinality3 vs Cardinality2**: *β* = 3.53, *SE* = 11.021, *z* = 0.320, *p* = 0.749
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 19.45, *SE* = 10.842, *z* = 1.794, *p* = 0.073
+- **Increasing 2 to 3 vs Cardinality2**: *β* = 19.45, *SE* = 11.581, *z* = 1.679, *p* = 0.093
+- **SNR**: *β* = -1.70, *SE* = 1.528, *z* = -1.110, *p* = 0.267
+
+_Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality2 - Cardinality3 | -3.53 | 11.02 | -0.32 | 0.749 | 0.937 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -19.45 | 10.84 | -1.79 | 0.073 | 0.365 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | -19.45 | 11.58 | -1.68 | 0.093 | 0.386 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | -15.91 | 9.73 | -1.64 | 0.102 | 0.386 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | -15.92 | 10.39 | -1.53 | 0.126 | 0.386 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | -0.00 | 9.59 | -0.00 | 1.000 | 1.000 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.07, *p* = 0.381, η²_G = 0.071
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality2 vs Cardinality3 | -0.16 | 8 | = 0.879 | -0.07 [-0.75, 0.60] | negligible | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -1.79 | 8 | = 0.482 | -0.80 [-1.21, 0.15] | large | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -0.42 | 8 | = 0.879 | -0.15 [-0.84, 0.60] | negligible | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.55 | 8 | = 0.482 | -0.63 [-1.04, 0.13] | medium | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -0.18 | 8 | = 0.879 | -0.08 [-0.95, 0.29] | negligible | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.20 | 8 | = 0.530 | 0.45 [-0.57, 0.49] | small | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 294.22, BIC = 309.45
+- **Cardinality3 vs Cardinality2**: *β* = 0.16, *SE* = 0.681, *z* = 0.235, *p* = 0.815
+- **Decreasing 3 to 2 vs Cardinality2**: *β* = 1.27, *SE* = 0.673, *z* = 1.896, *p* = 0.058
+- **Increasing 2 to 3 vs Cardinality2**: *β* = -0.09, *SE* = 0.727, *z* = -0.121, *p* = 0.904
+- **SNR**: *β* = 0.73, *SE* = 0.097, *z* = 7.488, *p* < .001
+
+_Reference condition: **Cardinality2** (all condition effects are contrasts vs. this baseline)._
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality2 - Cardinality3 | -0.16 | 0.68 | -0.23 | 0.815 | 0.972 | n.s. |
+| Cardinality2 - Decreasing 3 to 2 | -1.28 | 0.67 | -1.90 | 0.058 | 0.258 | n.s. |
+| Cardinality2 - Increasing 2 to 3 | 0.09 | 0.73 | 0.12 | 0.904 | 0.972 | n.s. |
+| Cardinality3 - Decreasing 3 to 2 | -1.12 | 0.60 | -1.86 | 0.062 | 0.258 | n.s. |
+| Cardinality3 - Increasing 2 to 3 | 0.25 | 0.64 | 0.39 | 0.698 | 0.972 | n.s. |
+| Decreasing 3 to 2 - Increasing 2 to 3 | 1.36 | 0.59 | 2.32 | 0.020 | 0.116 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 6 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 3.70, *p* = 0.025, η²_G = 0.172
+- **Interpretation:** The main effect of condition was **significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality2 vs Cardinality3 | -1.46 | 8 | = 0.256 | -0.41 [-0.99, 0.38] | small | n.s. |
+| Cardinality2 vs Decreasing 3 to 2 | -2.53 | 8 | = 0.109 | -0.95 [-1.32, 0.07] | large | n.s. |
+| Cardinality2 vs Increasing 2 to 3 | -2.51 | 8 | = 0.109 | -0.97 [-1.80, -0.08] | large | n.s. |
+| Cardinality3 vs Decreasing 3 to 2 | -1.59 | 8 | = 0.256 | -0.70 [-0.95, 0.20] | medium | n.s. |
+| Cardinality3 vs Increasing 2 to 3 | -1.35 | 8 | = 0.256 | -0.64 [-0.84, 0.38] | medium | n.s. |
+| Decreasing 3 to 2 vs Increasing 2 to 3 | 1.11 | 8 | = 0.300 | 0.22 [-0.18, 0.92] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -431,7 +560,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P3b amplitude:** Marginal trend toward condition differences (*p* = 0.051)
+**P3b amplitude:** Significant main effect of condition (*p* = 0.025) (no significant pairwise comparisons)
 
 ### Research Implications
 
@@ -443,7 +572,13 @@ _[Researchers should interpret these findings in the context of their theoretica
 
 The following plots are available in the `plots/` subdirectory:
 
-### 5.1 N1 Component
+### 5.1 Fz Component
+
+#### Latency
+
+#### Amplitude
+
+### 5.2 N1 Component
 
 #### Latency
 
@@ -465,7 +600,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![N1 Amplitude Violin](plots/violin_N1_mean_amplitude_roi.png)
 
-### 5.2 P1 Component
+### 5.3 P1 Component
 
 #### Latency
 
@@ -487,7 +622,7 @@ The following plots are available in the `plots/` subdirectory:
 
 ![P1 Amplitude Violin](plots/violin_P1_mean_amplitude_roi.png)
 
-### 5.3 P3b Component
+### 5.4 P3b Component
 
 #### Latency
 

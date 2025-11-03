@@ -32,9 +32,9 @@ def main() -> int:
     for analysis_dir in analysis_dirs:
         analysis_id = analysis_dir.name
 
-        # Find component plots
+        # Find component plots including Fz
         component_to_image = {}
-        for component in ['P1', 'N1', 'P3b']:
+        for component in ['Fz', 'P1', 'N1', 'P3b']:
             plot_file = analysis_dir / f"{analysis_id}-{component}.png"
             if plot_file.exists():
                 rel_path = f"assets/plots/{analysis_id}/{analysis_id}-{component}.png"
@@ -68,6 +68,18 @@ def main() -> int:
         else:
             cells.append("<td></td>")
 
+        # Order: Collapsed, Fz, P1, N1, P3b, p2p
+        # Fz cell
+        img_fz = component_to_image.get('Fz')
+        if img_fz:
+            alt = f"ERP overlay for Fz in {analysis_id}"
+            cells.append(
+                f"<td><a href='{img_fz}' data-lightbox aria-label='{alt}'>"
+                f"<img class='thumb' src='{img_fz}' alt='{alt}' /></a></td>"
+            )
+        else:
+            cells.append("<td></td>")
+
         for component in ['P1', 'N1', 'P3b']:
             img = component_to_image.get(component)
             if img:
@@ -79,6 +91,17 @@ def main() -> int:
             else:
                 cells.append("<td></td>")
 
+        # Add P2P cell if present
+        p2p_rel = f"assets/plots/{analysis_id}/{analysis_id}-P1_N1_peak_to_peak.png"
+        if (analysis_dir / f"{analysis_id}-P1_N1_peak_to_peak.png").exists():
+            alt = f"P1↔N1 peak-to-peak for {analysis_id}"
+            cells.append(
+                f"<td><a href='{p2p_rel}' data-lightbox aria-label='{alt}'>"
+                f"<img class='thumb' src='{p2p_rel}' alt='{alt}' /></a></td>"
+            )
+        else:
+            cells.append("<td></td>")
+
         erp_row = f"<tr>{''.join(cells)}</tr>"
         all_rows.append(erp_row)
 
@@ -86,8 +109,8 @@ def main() -> int:
         stats_info = get_stats_info(analysis_id, str(docs_dir))
         if stats_info:
             stats_html = generate_stats_html(analysis_id, stats_info)
-            # Include Collapsed Localizer column in colspan (5 content cols)
-            stats_row = f"<tr><td colspan='5'>{stats_html}</td></tr>"
+            # Span all columns (Analysis + 6 content columns)
+            stats_row = f"<tr><td colspan='7'>{stats_html}</td></tr>"
             all_rows.append(stats_row)
             print(f"[OK] {analysis_id} (with statistics)")
         else:
@@ -113,7 +136,7 @@ def main() -> int:
         f"{start_marker}\n"
         '<table class="grid-table">\n'
         '<thead>\n'
-        '  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>P1</th><th>N1</th><th>P3b</th></tr>\n'
+        '  <tr><th>Analysis</th><th>Collapsed Localizer</th><th>Fz</th><th>P1</th><th>N1</th><th>P3b</th><th>P1↔N1 p2p</th></tr>\n'
         '</thead>\n'
         '<tbody>\n'
         f"{''.join(all_rows)}\n"

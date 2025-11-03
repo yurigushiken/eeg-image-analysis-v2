@@ -1,98 +1,146 @@
 dataset:
-  root: "data/lab_data_original"
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
 selection:
-  response: "ALL"   # default (not actually used since both sets override)
+  response: ALL
   min_epochs_per_set: 1
   condition_sets:
-    - name: "Acc1 (incorrect)"
-      # All valid numerosity pairs (gap ≤ 3, excluding cardinality 11/22/33/44/55/66)
-      # Includes BOTH "from X" pairs (XY) and "to X" pairs (YX)
-      # Numerosities 1-6 only (no 7 in this study)
-      conditions: [
-        # === Numerosity 1 ===
-        # From 1 (gap ≤ 3): 12, 13, 14
-        "12", "13", "14",
-        # To 1 (gap ≤ 3): 21, 31, 41
-        "21", "31", "41",
-
-        # === Numerosity 2 ===
-        # From 2 (gap ≤ 3): 21, 23, 24, 25
-        "21", "23", "24", "25",
-        # To 2 (gap ≤ 3): 12, 32, 42, 52
-        "12", "32", "42", "52",
-
-        # === Numerosity 3 ===
-        # From 3 (all 1-6 except 33 cardinality): 31, 32, 34, 35, 36
-        "31", "32", "34", "35", "36",
-        # To 3 (all 1-6 except 33 cardinality): 13, 23, 43, 53, 63
-        "13", "23", "43", "53", "63",
-
-        # === Numerosity 4 ===
-        # From 4 (all 1-6 except 44 cardinality): 41, 42, 43, 45, 46
-        "41", "42", "43", "45", "46",
-        # To 4 (all 1-6 except 44 cardinality): 14, 24, 34, 54, 64
-        "14", "24", "34", "54", "64",
-
-        # === Numerosity 5 ===
-        # From 5 (all 1-6 except 55 cardinality): 51, 52, 53, 54, 56
-        "52", "53", "54", "56",
-        # To 5 (gap ≤ 3): 25, 35, 45, 65
-        "25", "35", "45", "65",
-
-        # === Numerosity 6 ===
-        # From 6 (all 1-6 except 66 cardinality): 61, 62, 63, 64, 65
-        "63", "64", "65",
-        # To 6 (gap ≤ 3): 36, 46, 56
-        "36", "46", "56"
-      ]
-      response: "ACC0"     # Incorrect responses only (Target.ACC == 0)
-      color: "#ef0000"     # Red for errors
-      linestyle: "-"
-    - name: "Acc1 (correct)"
-      # Same conditions as above (both "from" and "to" pairs for numerosities 1-6)
-      conditions: [
-        # === Numerosity 1 ===
-        "12", "13", "14",                    # From 1
-        "21", "31", "41",                    # To 1
-
-        # === Numerosity 2 ===
-        "21", "23", "24", "25",              # From 2
-        "12", "32", "42", "52",              # To 2
-
-        # === Numerosity 3 ===
-        "31", "32", "34", "35", "36",        # From 3
-        "13", "23", "43", "53", "63",        # To 3
-
-        # === Numerosity 4 ===
-        "41", "42", "43", "45", "46",        # From 4
-        "14", "24", "34", "54", "64",        # To 4
-
-        # === Numerosity 5 ===
-        "52", "53", "54", "56",        # From 5
-        "25", "35", "45", "65",              # To 5
-
-        # === Numerosity 6 ===
-        "63", "64", "65",        # From 6
-        "36", "46", "56"                     # To 6
-      ]
-      response: "ACC1"     # Correct responses only (Target.ACC == 1)
-      color: "#02d502"     # Green for correct
-      linestyle: "-"
-components: ["P1", "N1", "P3b"]
+  - name: Acc1 (incorrect)
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '31'
+    - '41'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '12'
+    - '32'
+    - '42'
+    - '52'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '13'
+    - '23'
+    - '43'
+    - '53'
+    - '63'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '14'
+    - '24'
+    - '34'
+    - '54'
+    - '64'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '25'
+    - '35'
+    - '45'
+    - '65'
+    - '63'
+    - '64'
+    - '65'
+    - '36'
+    - '46'
+    - '56'
+    response: ACC0
+    color: '#ef0000'
+    linestyle: '-'
+  - name: Acc1 (correct)
+    conditions:
+    - '12'
+    - '13'
+    - '14'
+    - '21'
+    - '31'
+    - '41'
+    - '21'
+    - '23'
+    - '24'
+    - '25'
+    - '12'
+    - '32'
+    - '42'
+    - '52'
+    - '31'
+    - '32'
+    - '34'
+    - '35'
+    - '36'
+    - '13'
+    - '23'
+    - '43'
+    - '53'
+    - '63'
+    - '41'
+    - '42'
+    - '43'
+    - '45'
+    - '46'
+    - '14'
+    - '24'
+    - '34'
+    - '54'
+    - '64'
+    - '52'
+    - '53'
+    - '54'
+    - '56'
+    - '25'
+    - '35'
+    - '45'
+    - '65'
+    - '63'
+    - '64'
+    - '65'
+    - '36'
+    - '46'
+    - '56'
+    response: ACC1
+    color: '#02d502'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
 preprocessing:
-  baseline_ms: [-100, 0]
+  baseline_ms:
+  - -100
+  - 0
 roi:
   min_channels: 4
 plots:
-  formats: ["png"]
+  formats:
+  - png
   dpi: 300
-  colors: ["#ef0000", "#02d502"]
+  colors:
+  - '#ef0000'
+  - '#02d502'
 outputs:
-  plots_dir: "docs/assets/plots/AAcc0_vs_Acc1"
-  tables_dir: "docs/assets/tables/Acc0_vs_Acc1"
-  page: "docs/analysis/Acc0_vs_Acc1.md"
+  plots_dir: docs/assets/plots/AAcc0_vs_Acc1
+  tables_dir: docs/assets/tables/Acc0_vs_Acc1
+  page: docs/analysis/Acc0_vs_Acc1.md
 measurement:
-  latency: fal
-  amplitude: mean
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi:
+    - N1_L
+    - N1_R
+    hline_color: '#000000'
+    hline_style: ':'
