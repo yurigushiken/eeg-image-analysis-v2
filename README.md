@@ -1,736 +1,160 @@
-# EEG Image Analysis v2 – YAML-Driven ERP Pipeline
+# EEG Numerical Change Detection Analysis Pipeline
 
-Download the data here https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZpuZeM0nJjyMoPFPM?usp=drive_link
+**[Download the data (LCN Lab members only)](https://drive.google.com/drive/folders/1mJu-efTMwXCqSteZpuZeM0nJjyMoPFPM?usp=drive_link)**
 
-## Overview
+## Scientific Motivation
 
-This project is a **YAML-driven ERP analysis pipeline** that transforms raw EEG epoch data into publication-ready figures, subject- and condition-level measurements, and an analysis website. You define each analysis in a simple YAML configuration file (Phase 1/2A), then run inferential statistics and plots from subject-level measurements (Phases 2B–2C).
+An automated ERP analysis pipeline for investigating neural signatures of numerical change detection from 128-channel EEG data, examining how the brain processes numerical transitions within and across the Parallel Individuation (PI) and Approximate Number System (ANS) ranges (1-6).
 
-## Recent Enhancements (2025-11)
+## Study Background
 
-The following upgrades were added across the pipeline and website.
+**Paradigm:** Visual oddball numerical change detection task
+- **Participants:** 24 adults
+- **Stimuli:** Dot arrays (1-6 dots, non-symbolic)
+- **Task:** Detect changes in numerosity after 3-5 prime presentations
+- **Data:** ~3000 usable trials, 128-channel EGI HydroCel EEG
 
-- Peak-to-Peak integration (P1↔N1) into the main pipeline
-  - New figure per analysis: `<analysis_id>-P1_N1_peak_to_peak.png`
-  - Legend redesigned as a compact box with: waveform style sample (no triangle), condition name, and colored `Δ = X µV`
-  - Legend now left-justified and includes per-condition epoch counts, e.g. `ConditionA (123 epochs)  Δ = 4.2 µV`
-  - Subtitle added under title: `Using N1 electrode montage (bilateral POT)`
-  - CSV written: `peak_to_peak_measurements.csv`
-  - Stats intentionally NOT generated for P2P (by design)
+**Key Manipulations:**
+- **Numerical transitions:** e.g., 2→3, 4→5, 1→4 (±3 range)
+- **Direction effects:** Increasing vs. Decreasing
+- **System crossover:** Small (1-3, PI) vs. Large (4-6, ANS)
+- **Response accuracy:** Correct (ACC1) vs. All responses (ALL)
 
-- Fz promoted to a first-class component
-  - `Fz` added to `configs/components.yaml` with ROI localizer (negative polarity) and window `[80,120]` ms
-  - Include `Fz` in `components:` lists to generate the standard ERP+topomap figure and include it in stats
-  - Collapsed localizer now shows an `Fz` panel when `Fz` is analyzed
-  - Statistics now include `Fz` end-to-end: ANOVA, LMM, pairwise, descriptives, and plots (box/violin/effect sizes)
+**Theoretical Framework:**
+- **Parallel Individuation (PI):** Precise tracking of small quantities (1-3)
+- **Approximate Number System (ANS):** Ratio-dependent estimation for larger quantities (4-6)
+- **Research Question:** Do PI and ANS show distinct neural signatures during numerical change detection?
 
-- Website gallery: six columns in the following order
-  - Collapsed Localizer, Fz, P1, N1, P3b, P1↔N1 P2P
-  - Implemented both in index updates and the rebuild script
+## What This Pipeline Does
 
-- YAML additions and defaults
-  - Optional block to enable P2P explicitly per analysis:
-    ```yaml
-    measurement:
-      peak_to_peak:
-        enabled: true
-        roi: [N1_L, N1_R]     # defaults to N1 rois if omitted
-        hline_color: "#000000"
-        hline_style: ":"
-    ```
-  - If both `P1` and `N1` are present in `components`, P2P auto-enables even without this block
+**Input:** Preprocessed EEG epochs (`.fif` files)
+**Output:** Publication-ready figures, statistical analyses, and interactive website
 
-- Rebuild script and stats display
-  - `scripts/rebuild_website_index.py` now scans and emits the six-column layout (Collapsed, Fz, P1, N1, P3b, P2P)
-  - Website stats section (`src/eeg/report.py`) now surfaces `Fz` stats alongside P1/N1/P3b
+**Core Functions:**
+- Extracts ERP components (P1, N1, P3b, Fz) with data-driven windows
+- Runs statistical analyses (Linear Mixed Models, ANOVA, pairwise tests)
+- Generates publication figures (waveforms, topographies, stats plots)
+- Creates interactive website gallery of all analyses
 
-### Updated Commands
-
-```powershell
-# Run all analyses (generates Collapsed, Fz, P1, N1, P3b, and P1↔N1 P2P)
-conda activate eeg-image; python scripts/run_all_analyses.py
-
-# Run statistics for all analyses (now includes Fz wherever present)
-conda activate eeg-image; python scripts/run_all_statistics.py
-
-# Rebuild the website index with the six-column order
-conda activate eeg-image; python scripts/rebuild_website_index.py
-```
-
-### Notes on Legends and Styles
-
-- Standard ERP plots: legends may display extra context (e.g., peak latency and epochs) automatically.
-- Peak-to-peak legend: each row shows a small style sample (line only), the condition name with epoch count, and a colored `Δ = X µV` value; the triangle is removed from the sample to reduce clutter.
+**Key Features:**
+- YAML-driven configuration (no code editing needed)
+- Reproducible and deterministic outputs
+- Handles missing data optimally (LMM)
+- Quality control metrics (SNR, trial counts)
 
 ## Quick Start
 
-### 0. YAML Config Files
-
-Analyses are defined in YAML files under `configs/analyses/`. Just edit a copy of an existing YAML and run it.
-(jackie, tell them the command how, with configs\analyses\12_13_ACC1.yaml as example)
-
-What to edit for a new analysis:
-- Duplicate a similar file in `configs/analyses/` and rename it.
-- In `selection.condition_sets`, list the condition codes you want to compare (i.e. 23, 43, 66) and give each set a name.
-- Set per-set `response` (ALL, ACC1, ACC0), `color`, and `linestyle`.
-- Update `outputs.*` to a new folder/name so results don’t overwrite others.
-
-Fields (what they mean):
-- `dataset.root` — Folder with your preprocessed epoch files (`*.fif`).
-- `dataset.pattern` — Filename pattern to find subject files (e.g., `sub-*_preprocessed-epo.fif`).
-- `dataset.montage_sfp` — Electrode layout file used to map channels to positions.
-- `selection.response` — Which trials to include by accuracy: `ALL`, `ACC1` (correct), or `ACC0` (incorrect). Defaults for all sets unless overridden per set.
-- `selection.min_epochs_per_set` — Minimum number of trials per subject per set to keep that subject in the grand average.
-- `selection.condition_sets[]` — The comparisons you want on a single plot:
-  - `name` — Label shown in legends and page text.
-  - `conditions` — List of numeric codes to include in that set (e.g., `["12", "13"]`).
-  - `response` — Optional per-set override (`ALL`, `ACC1`, or `ACC0`).
-  - `color` — Optional color for this set’s ERP line (hex like `#2c6dde`).
-  - `linestyle` — Optional line style: `"-"` (solid), `"--"` (dashed), `":"` (dotted).
-- `components` — Which ERP components to analyze (e.g., `P1`, `N1`, `P3b`).
-- `preprocessing.baseline_ms` — Time window (ms) for baseline correction, typically `[-100, 0]`.
-- `roi.min_channels` — Minimum number of ROI channels required for a subject to be included.
-- `plots.formats` — Image formats to write (e.g., `png`).
-- `plots.dpi` — Image resolution.
-- `plots.colors` — Fallback color palette used if a set does not specify `color`.
-- `plots.linestyles` — Optional shorthand mapping for style presets (used by some templates).
-- `outputs.plots_dir` — Where to save figures.
-- `outputs.tables_dir` — Where to save CSV/JSON results.
-- `outputs.page` — Path for the generated analysis page (Markdown) under `docs/`.
-- `measurement.latency` — How the latency is selected: `peak` or `fal` (fractional area latency).
-- `measurement.amplitude` — Reported amplitude metric: `peak` or `mean` within the window.
-
-Color and line-style rules (house style):
-- Directional meaning (when comparing increasing vs decreasing):
-  - Red `#ef0000` ≈ decreasing or “error/ACC0” emphasis.
-  - Green `#02d502` ≈ increasing or “correct/ACC1” emphasis.
-  - Blue `#2c6dde` ≈ “no change/same” (cardinality like 11, 22, 33) or a neutral baseline.
-- Group palettes (when grouping by source level instead of direction):
-  - Colors may map to groups (e.g., all “from 2” trials = blue) rather than direction.
-- Multi-class category comparisons:
-  - Qualitative colors distinguish categories (e.g., purple for small, orange for crossover, green for large). In these cases, category palette overrides the direction colors above.
-- Line styles (used to differentiate within a color):
-  - Preference order: solid > dashed > dotted.
-  - Style helps separate multiple lines of the same color (e.g., solid for larger step, dashed for medium, dotted for small), but exact mapping can vary by file.
-- Overrides: If a `condition_set` defines `color` or `linestyle`, that explicit choice wins. Otherwise, the pipeline falls back to `plots.colors` and a default solid style.
-
-Tip: Browse `configs/analyses/` for examples that match your needs (e.g., “increasing vs decreasing”, “landing on N”, “from N to any”). Start from the closest example and only change the condition lists, outputs, and (optionally) the look (color/style).
-
-### 1. Environment Setup
+### Installation
 
 ```bash
-# Clone the repository
+# Clone and setup environment
 git clone <repository-url>
 cd eeg-image-analysis-v2
-
-# Create and activate the conda environment
 conda env create -f environment.yml
 conda activate eeg-image
-
-# Verify installation
-python -c "import mne; print(f'MNE version: {mne.__version__}')"
 ```
 
-**Environment details:**
-- Python: `3.12`
-- Key dependencies: `mne==1.10.1`, `numpy`, `pandas`, `matplotlib`, `pyyaml`, `pytest`
-- See [environment.yml](environment.yml) for complete pinned dependencies
-
-### 2. Run Your First Analysis
+### Run an Analysis
 
 ```bash
-# Run the sample "Small Increasing vs Decreasing" analysis (default dataset)
+# Run ERP analysis
 python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing.yaml
 
-# (Optional) Run statistics for that analysis using the default stats config
-# Update input_csv in configs/statistics/default.yaml if needed
+# Run statistics
 python scripts/run_statistics.py --config configs/statistics/default.yaml
+
+# View results
+cd docs && python -m http.server 8000
+# Open http://localhost:8000
 ```
 
-**What happens:**
-1. Loads subject epoch files from `data/`
-2. Selects trials by condition codes (e.g., "12", "13" for increasing)
-3. Computes P1, N1, P3b component ERPs with ROI aggregation
-4. Generates overlay plots and peak-locked topomaps
-5. Writes figures to `docs/assets/plots/small_increasing_vs_decreasing/`
-6. Creates analysis page at `docs/analysis/small_increasing_vs_decreasing.md`
-7. Updates `docs/index.md` with thumbnails and lightbox
+## Data Requirements
 
-**Expected outputs:**
-- Figures: `docs/assets/plots/small_increasing_vs_decreasing/{P1,N1,P3b}.png`
-- Collapsed localizer figure: `docs/assets/plots/small_increasing_vs_decreasing-collapsed_localizer.png`
-- Analysis page: `docs/analysis/small_increasing_vs_decreasing.md`
-- QC report: `docs/assets/tables/small_increasing_vs_decreasing/qc_summary.csv`
-- Runtime metrics: `docs/assets/tables/small_increasing_vs_decreasing/run_metrics.json`
-- Collapsed localizer JSON: `docs/assets/tables/small_increasing_vs_decreasing/collapsed_localizer_results.json`
-- Subject-level measurements (Phase 2A): `docs/assets/tables/small_increasing_vs_decreasing/subject_measurements.csv`
-  - Per subject × component × condition: `latency_frac_area_ms`, `mean_amplitude_roi`, `snr`, window metadata
-- Condition-level summary (descriptive): `docs/assets/tables/small_increasing_vs_decreasing/condition_measurements.csv`
-  - Per component × condition: `mean_amplitude_roi`, `latency_frac_area_ms`, window metadata
+**Format:** Preprocessed EEG epochs in MNE-Python `.fif` format
+**Montage:** 128-channel EGI HydroCel
+**Metadata:** Condition codes, accuracy (`Target.ACC`)
 
-### 3. View the Website
-
-```bash
-# Serve locally with Python's built-in server
-cd docs
-python -m http.server 8000
-
-# Open http://localhost:8000 in your browser
-# Or publish to GitHub Pages (see documentation)
+Place your preprocessed data in:
+```
+data/hpf_1.5_lpf_35_baseline-on/
+├── sub-02_preprocessed-epo.fif
+├── sub-03_preprocessed-epo.fif
+└── ...
 ```
 
 ## Project Structure
 
 ```
 eeg-image-analysis-v2/
-├── configs/                          # Configuration files
-│   ├── electrodes.yaml               # ROI electrode mappings (N1_L, N1_R, P1, P3B)
-│   ├── components.yaml               # Component time windows (P1, N1, P3b)
-│   └── analyses/                     # Analysis YAML configurations
-│       ├── small_increasing_vs_decreasing.yaml
-│       ├── cardinality_within_small.yaml
-│       └── from1_to_any.yaml
-├── src/eeg/                          # Core analysis & statistics library
-│   ├── config.py                     # YAML schema loading/validation
-│   ├── io.py                         # Epochs I/O, montage enforcement
-│   ├── select.py                     # Trial selection (ACC1 filter, condition sets)
-│   ├── erp.py                        # Subject/grand average computation
-│   ├── measures.py                   # Component metrics (peak amplitude/latency)
-│   ├── plots.py                      # ERP overlays and topomaps
-│   ├── report.py                     # Markdown page generation and index grid
-│   ├── statistics.py                 # Phase 2B: ANOVA, pairwise tests, LMM, descriptives
-│   └── stats_plots.py                # Phase 2C: Boxplot, violin, and effect size plots
-├── scripts/
-│   ├── run_analysis.py               # Run a single analysis from YAML (Phase 1/2A)
-│   ├── run_all_analyses.py           # Batch all YAMLs in configs/analyses/
-│   ├── run_statistics.py             # Run inferential stats + plots (Phases 2B–2C)
-│   ├── run_all_statistics.py         # Batch stats for all completed analyses
-│   └── create_stat_configs.py        # Generate per-analysis stats YAMLs
-├── docs/                             # Published website (GitHub Pages)
-│   ├── index.md                      # Auto-generated analysis gallery
-│   ├── analysis/                     # Per-analysis pages
-│   └── assets/                       # Figures and tables
-│       ├── plots/<analysis_id>/      # PNG figures
-│       └── tables/<analysis_id>/     # CSV tables and QC reports
-├── tests/                            # Unit and smoke tests
-├── data/                             # Raw epoch files (gitignored)
-├── assets/net/                       # Montage file
-│   └── AdultAverageNet128_v1.sfp
-├── environment.yml                   # Conda environment specification
-├── STATISTICS_WORKFLOW.md            # Stats workflow overview
-├── PHASE2_ENHANCED_SPEC.md           # Phase 2C enhancements and rationale
-└── PHASE2_IMPLEMENTATION_PLAN.md     # Implementation notes
+├── configs/
+│   ├── analyses/              # ~80 analysis configurations (YAML)
+│   ├── electrodes.yaml        # ROI electrode definitions
+│   ├── components.yaml        # Component time windows
+│   └── statistics/
+├── src/eeg/                   # Core analysis library
+├── scripts/                   # Run scripts
+├── docs/                      # Generated website (GitHub Pages)
+└── data/                      # Your preprocessed epochs (gitignored)
 ```
 
-## Understanding the YAML Configuration
+## Key Methods
 
-Each analysis is defined by a YAML file with these key sections:
+**Component Detection:**
+- Collapsed localizer with FWHM windowing (avoids circularity)
+- ROI-based averaging (14 electrodes for N1)
 
-```yaml
-dataset:
-  root: "data/hpf_1.5_lpf_35_baseline-on"   # or your own dataset root
-  pattern: "sub-*_preprocessed-epo.fif"
-  montage_sfp: "assets/net/AdultAverageNet128_v1.sfp"
+**Statistics:**
+- LMM-first approach (optimal for missing data)
+- Complete reporting: LMM, ANOVA, pairwise comparisons
 
-# Trial selection
-selection:
-  response: "ALL"  # Default: "ALL", "ACC1" (correct), or "ACC0" (incorrect)
-  min_epochs_per_set: 8
-  condition_sets:
-    - name: "Small_Increasing"
-      conditions: ["12", "13", "23"]  # Explicit numeric condition codes
-      # metadata_filters:
-      #   Prime5: ["5a.jpg", "5b.jpg"]  # Optional metadata filters (AND across listed columns)
-      # response: "ALL"   # Optional: override default per-set
-    - name: "Small_Decreasing"
-      conditions: ["32", "31", "21"]
-      # response: "ACC1"  # Optional: override default per-set (correct only)
-      # response: "ACC0"  # Optional: override default per-set (incorrect only)
+**Measurements:**
+- Peak amplitude/latency (default)
+- Fractional area latency (alternative)
+- Peak-to-peak (P1-N1)
 
-# Components to analyze
-components: ["P1", "N1", "P3b"]
+## Example Analyses
 
-# Preprocessing
-preprocessing:
-  baseline_ms: [-100, 0]
+Browse [configs/analyses/](configs/analyses/) for ~80 pre-configured analyses:
 
-# ROI configuration
-roi:
-  min_channels: 4  # Minimum channels required for ROI inclusion
+- `increase_by_1.yaml` - Small transitions (1→2, 2→3)
+- `from1_to_any.yaml` - All transitions from 1
+- `landing_on_3_any_preceding.yaml` - All transitions ending at 3
+- `cardinality_within_small.yaml` - Within PI range (1-3)
+- `ALL_CONDITIONS_ACC0_ACC1.yaml` - Error vs. correct comparison
 
-# Plotting options
-plots:
-  dpi: 300
-  colors: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#6a3d9a", "#ffff33"]
-  linestyles:
-    NC: "-"
-    Decrease: ":"
-    Increasing: "--"
+## Creating New Analyses
 
-# Output paths
-outputs:
-  plots_dir: "docs/assets/plots/small_increasing_vs_decreasing"
-  tables_dir: "docs/assets/tables/small_increasing_vs_decreasing"
-  page: "docs/analysis/small_increasing_vs_decreasing.md"
-  # Figures are saved as <analysis_id>-<Component>.png (e.g., small_increasing_vs_decreasing-P1.png)
-```
+1. Copy an existing YAML: `cp configs/analyses/example.yaml configs/analyses/my_analysis.yaml`
+2. Edit condition codes and output paths
+3. Run: `python scripts/run_analysis.py --config configs/analyses/my_analysis.yaml`
 
-See [configs/analyses/](configs/analyses/) for complete examples.
+See [methodology.md](methodology.md) for detailed documentation.
 
-## The Data
-
-This repository analyzes preprocessed EEG epochs in MNE-Python FIF format:
-
-### Dataset options
-- Default: `data/lab-data-original` (empty in Git; place your converted FIFs here)
-- Alternate: `data/hpf_1.5_lpf_35_baseline-on` (empty in Git)
-
-Both directories include a small README placeholder and are kept empty in version control. Real data are gitignored. To switch datasets, edit `dataset.root` in the YAML(s) under `configs/analyses/`.
-
-**Dataset characteristics:**
-- 24 subjects (files like `sub-02_preprocessed-epo.fif`)
-- ~270 epochs per subject
-- 129 channels (128-channel EGI net + 1 reference)
-- 250 Hz sampling rate
-- Epoch duration: ~0.696s (-100 to 496 ms for )
-
-**Metadata columns** (in each epochs file):
-- `Condition`: Two-digit code (e.g., "12", "23", "33")
-- `Target.ACC`: Response accuracy (0 or 1)
-- `direction`: Trial direction ("I"=increasing, "D"=decreasing, "NC"=no change)
-- `change_group`: Combined category ("iSS", "dLL", "NC", etc.)
-- `size`: Size feature ("SS", "LL", "cross", "NC")
-- Plus: `SubjectID`, `Block`, `Trial`, `Procedure`, `Target.RT`, `Trial_Continuous`
-
-**Why explicit numeric conditions?**
-This pipeline uses explicit numeric condition codes (e.g., `["12", "13"]`) rather than metadata-only filters. This provides maximum clarity and reproducibility—you see exactly which trials are included in each analysis.
-
-## How It Works: The Pipeline Flow
-
-```
-1. YAML Config → Load analysis configuration
-                ↓
-2. Discovery   → Find all subject epoch files matching pattern
-                ↓
-3. Subject Loop → For each subject:
-                  ├─ Load epochs from FIF
-                  ├─ Apply montage (enforce E-code mapping)
-                  ├─ Filter by response (ALL or ACC1)
-                  ├─ Apply baseline correction
-                  ├─ Select trials by condition codes
-                  └─ Compute subject-level evoked per condition set
-                ↓
-4. Grand Average → Equal-weight averaging across subjects
-                   Compute SEM for uncertainty bands
-                ↓
-5. Metrics      → For each component (P1, N1, P3b):
-                 ├─ Detect cohort peak via collapsed localizer within the configured search range
-                 │    - Default: ROI-based (per `configs/components.yaml`)
-                 │    - Optional: Global GFP if `localizer.method: gfp`
-                 ├─ Compute FWHM window around that peak
-                 ├─ Aggregate ROI channels
-                 ├─ Compute amplitude/latency metrics within the FWHM window
-                 └─ Extract topomap averaged over ±FWHM/2 centered on the selected latency
-                ↓
-6. Plotting     → Generate composite figures:
-                  ├─ Top panel: ERP overlay with SEM; colored vertical lines mark the selected latency (Peak by default)
-                  └─ Bottom panels: Per-condition topomaps averaged over ±FWHM/2 centered on the selected latency; subtitle notes ROI- or GFP-derived window
-                ↓
-7. Reporting    → Write analysis page (Markdown)
-                  Update index.md with thumbnails
-                  Save QC summary CSV
-                  Record runtime metrics JSON
-```
-
-**Measurement defaults (peak-first) and architectural decisions (the "why"):**
-
-- **Subject-first averaging**: We compute evoked responses per subject, then average subjects with equal weight. This prevents subjects with more trials from dominating the grand average.
-
-- **ROI aggregation**: Instead of single-channel analysis, we average across predefined regions of interest (e.g., N1_L, N1_R for N1 component). This improves signal-to-noise and reflects the spatial distribution of components.
-
-- **Collapsed localizer FWHM windows**: Component windows come from a collapsed localizer (no manual ±20 ms). By default we use ROI-based localizer peaks specified in `configs/components.yaml`; you can switch to global GFP by setting `localizer.method: gfp`. All conditions share the same cohort window per component; amplitudes and latencies are measured within this unbiased window. ERP figure subtitles indicate whether the window is ROI-derived or GFP-derived.
-- **Peak-first defaults (new):** By default, subject-level latency and amplitude now use peak-based measurements within the unbiased FWHM window:
-  - `peak_latency_ms`: time of signed extremum (P*=maximum, N*=minimum)
-  - `peak_amplitude_roi`: signed amplitude at that extremum
-  You can switch to the previous behavior (FAL + Mean) via YAML (see below).
-  Topomaps are averaged over ±FWHM/2 centered on the selected latency (Peak by default).
-
-- **Fractional Area Latency (FAL)**: You can alternatively measure component timing using the 50% fractional area latency—the time point where cumulative area under the curve reaches 50%. This is robust and noise-resistant and remains available.
-- **Graceful fallback for visuals**: If a component's GFP window cannot be detected (e.g., near epoch edge), the ERP overlay is still rendered (no dashed line/topomaps). Statistical measurements are recorded only when a valid GFP window exists.
-
-- **Deterministic design**: NumPy random seed is set, dependencies are pinned, and outputs are bit-identical across runs—critical for scientific reproducibility.
-
-## Common Use Cases
-
-### Run analysis with response filtering
-
-Filter trials by accuracy using the `response` parameter:
+## Batch Processing
 
 ```bash
-# Accurate responses only (ACC1 filter)
-python scripts/run_analysis.py --config configs/analyses/small_increasing_vs_decreasing_ACC1.yaml
+# Run all analyses
+python scripts/run_all_analyses.py
 
-# Compare error (ACC0) vs correct (ACC1) trials across all conditions
-python scripts/run_analysis.py --config configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml
-```
-
-### Analyze cardinality effects (same-number pairs)
-```bash
-python scripts/run_analysis.py --config configs/analyses/cardinality_within_small.yaml
-```
-
-### Compare response accuracy effects (ACC0 vs ACC1)
-
-**Advanced feature:** You can compare the same experimental condition(s) with different response filters in a single analysis by using **per-set response overrides**. This allows direct visualization of how response accuracy affects ERP morphology.
-
-#### Example 1: Compare ALL vs ACC1 for a single condition
-
-Configuration: [56_ALL_ACC1.yaml](configs/analyses/56_ALL_ACC1.yaml)
-```yaml
-selection:
-  response: "ALL"   # Default response filter for all sets
-  condition_sets:
-    - name: "56 ALL"
-      conditions: ["56"]
-      response: "ALL"      # Override: use ALL responses
-      color: "#9900ff"
-      linestyle: "-"
-    - name: "56 ACC1"
-      conditions: ["56"]
-      response: "ACC1"     # Override: use only correct responses
-      color: "#d76e00"
-      linestyle: "--"
-```
-
-#### Example 2: Compare incorrect (ACC0) vs correct (ACC1) across all numerosity conditions
-
-**New capability!** Configuration: [ALL_CONDITIONS_ACC0_ACC1.yaml](configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml)
-```yaml
-selection:
-  response: "ALL"   # Default (not used since both sets override)
-  condition_sets:
-    - name: "All Numerosity Comparisons (Incorrect)"
-      # All valid numerosity pairs: gap ≤ 3, excluding cardinality (11/22/33/44/55/66)
-      # Total: 32 conditions
-      conditions: [
-        "12", "13", "14",                    # From 1
-        "21", "23", "24", "25",              # From 2
-        "31", "32", "34", "35", "36",        # From 3 (all except 33)
-        "41", "42", "43", "45", "46",        # From 4 (all except 44)
-        "51", "52", "53", "54", "56",        # From 5 (all except 55)
-        "61", "62", "63", "64", "65",        # From 6 (all except 66)
-        "74", "75", "76"                     # From 7
-      ]
-      response: "ACC0"     # Only incorrect responses (Target.ACC == 0)
-      color: "#ef0000"     # Red for errors
-      linestyle: "-"
-    - name: "All Numerosity Comparisons (Correct)"
-      conditions: [
-        "12", "13", "14",                    # From 1
-        "21", "23", "24", "25",              # From 2
-        "31", "32", "34", "35", "36",        # From 3 (all except 33)
-        "41", "42", "43", "45", "46",        # From 4 (all except 44)
-        "51", "52", "53", "54", "56",        # From 5 (all except 55)
-        "61", "62", "63", "64", "65",        # From 6 (all except 66)
-        "74", "75", "76"                     # From 7
-      ]
-      response: "ACC1"     # Only correct responses (Target.ACC == 1)
-      color: "#02d502"     # Green for correct
-      linestyle: "-"
-```
-
-**How it works:**
-1. Set a **default** `response` filter at the top level (`ALL`, `ACC1`, or `ACC0`)
-2. **Override** for specific condition sets by adding `response:` to individual sets
-3. Each set filters trials independently before computing ERPs
-4. The analysis title will show **"MIXED"** when multiple response filters are used
-
-**Response filter options:**
-- `ALL`: All trials regardless of accuracy
-- `ACC1`: Only correct responses (Target.ACC == 1)
-- `ACC0`: Only incorrect responses (Target.ACC == 0) - **newly added!**
-
-**Use cases:**
-- **Error monitoring research:** Compare error-related ERPs (ACC0) vs correct-trial ERPs (ACC1)
-- **Performance effects:** Assess how accuracy affects ERP morphology for the same condition
-- **Error-related negativity (ERN):** Isolate error trials across all experimental conditions
-- **Validation:** Confirm that ACC1 filtering doesn't introduce selection bias
-
-**Scientific applications:**
-This is particularly powerful for:
-- **Error processing studies:** The Error-Related Negativity (ERN) and Positivity (Pe) components
-- **Conflict monitoring:** Comparing error vs correct trials in conflict tasks
-- **Feedback processing:** Examining neural responses to performance feedback
-- **Individual differences:** Relating error-trial ERPs to behavioral or clinical measures
-
-See working examples: [56_ALL_ACC1.yaml](configs/analyses/56_ALL_ACC1.yaml), [65_ALL_ACC1.yaml](configs/analyses/65_ALL_ACC1.yaml), and [ALL_CONDITIONS_ACC0_ACC1.yaml](configs/analyses/ALL_CONDITIONS_ACC0_ACC1.yaml)
-
-### Create a new analysis
-1. Copy an existing YAML from `configs/analyses/`
-2. Edit the `condition_sets` to define your trial groups
-3. Adjust `components`, `baseline_ms`, `plots` as needed
-4. Run: `python scripts/run_analysis.py --config configs/analyses/your_analysis.yaml`
-5. (Optional) Run statistics: `python scripts/run_all_statistics.py`
-
-## Statistical Analysis Ready
-
-The pipeline now generates both:
-- **Subject-level measurements (Phase 2A)** for inferential statistics: `docs/assets/tables/<analysis_id>/subject_measurements.csv`
-- **Condition-level summaries** for descriptive stats/figures: `docs/assets/tables/<analysis_id>/condition_measurements.csv`
-
-### Subject-level measurements (Phase 2A)
-
-Each `subject_measurements.csv` row (subject × component × condition) contains at least:
-- `peak_latency_ms`: Peak latency within FWHM window (default DV for timing)
-- `peak_amplitude_roi`: Peak amplitude within FWHM window (default DV for amplitude)
-- `latency_frac_area_ms`, `mean_amplitude_roi`: Alternative DVs (enabled for backward compatibility)
-- `snr`, `baseline_noise_uv`: QC metrics
-- `collapsed_peak_latency_ms`, `window_start_ms`, `window_end_ms`, `fwhm_ms`: Window metadata (collapsed localizer)
-
-**Example (N1)**:
-```csv
-subject_id,component,condition,latency_frac_area_ms,mean_amplitude_roi,peak_latency_ms,window_start_ms,window_end_ms,fwhm_ms,snr
-02,N1,Cardinality1,172.8,-2.72,168.0,140.2,212.6,72.4,3.1
-03,N1,Cardinality2,174.6,-2.45,168.0,140.2,212.6,72.4,2.7
-04,N1,Cardinality3,175.9,-3.19,168.0,140.2,212.6,72.4,3.4
-```
-
-**Key insight**: `collapsed_peak_latency_ms` is constant per component (from collapsed localizer), while subject-level `peak_latency_ms` and/or `latency_frac_area_ms` are computed within that component’s FWHM window.
-
-### Condition-level summaries (descriptive)
-`condition_measurements.csv` summarizes per-component × condition means to support descriptive tables/figures. Use `subject_measurements.csv` for inferential tests.
-
-### Phase 2B: Statistical Testing Module (LMM-First Approach)
-
-The pipeline implements a modern **LMM-first** statistical approach that prioritizes robustness and statistical power:
-
-**Primary Analysis:**
-- **Linear Mixed-Effects Models (LMM)** - handles missing data optimally via maximum likelihood estimation
-
-**Supplementary Analyses:**
-- **Repeated-measures ANOVA** - traditional approach (complete cases only, reported with effective N)
-- **Pairwise t-tests** with multiple comparison correction (FDR, Bonferroni, Holm)
-- **Descriptive statistics** by condition
-
-**Why LMM-First?**
-- Uses **all available subject data** (not just complete cases)
-- **Higher statistical power** when data has missingness
-- Handles unbalanced designs naturally
-- Can include covariates like SNR for quality control
-- Recommended by Baayen et al. (2008) for within-subjects designs with missing data
-
-**Significance stars on plots** use LMM p-values (with ANOVA fallback if LMM unavailable).
-
-#### Run Statistical Analysis
-
-```bash
-# Run statistics using default configuration
-python scripts/run_statistics.py --config configs/statistics/default.yaml
-
-# Results are saved to: docs/assets/stats/<analysis_id>/
- 
-# Batch all analyses that have subject_measurements.csv:
+# Run all statistics
 python scripts/run_all_statistics.py
 
-# Generate per-analysis stats configs (optional):
-python scripts/create_stat_configs.py
-```
-
-**What it generates:**
-- `anova_<component>_<measure>.csv` - ANOVA F-tests with effect sizes
-- `pairwise_<component>_<measure>.csv` - All pairwise comparisons with corrections
-- `lmm_<component>_<measure>.json` - Mixed model summaries with AIC/BIC
-- `descriptives_<component>_<measure>.csv` - Means, SDs, SEMs by condition
-- `statistical_summary.json` - Combined results summary
-
-#### Configure Statistical Tests
-
-Edit `configs/statistics/default.yaml` to control:
-
-```yaml
-# Input data
-input_csv: "docs/assets/tables/landing_on_2/subject_measurements.csv"
-
-# Quality control filters
-filters:
-  min_snr: null  # Optional: minimum SNR threshold (e.g., 2.0) to exclude low-quality data
-                 # Recommended: keep null and use SNR as covariate in LMM instead
-
-# Which tests to run
-tests:
-  anova:
-    enabled: true
-  pairwise:
-    enabled: true
-    correction: fdr_bh  # or 'bonf', 'holm', 'none'
-  lmm:
-    enabled: true
-    fixed: condition + snr  # RECOMMENDED: Include SNR as covariate to statistically control for data quality
-                            # Alternatives: 'condition' (no covariate), 'condition * snr' (interaction)
-
-# Components and dependent variables
-components: ["N1", "P1", "P3b"]
-dependent_variables:
-  - peak_latency_ms
-  - peak_amplitude_roi
-```
-
-## Configuring measurement methods (per analysis)
-
-Each analysis YAML can optionally set measurement modes (defaults shown):
-
-```yaml
-measurement:
-  latency: peak      # options: peak | fal
-  amplitude: peak    # options: peak | mean
-```
-
-Plots respect this choice: colored verticals and topomap captions show “Peak” or “FAL” latency, and topomap averaging is centered on that same latency.
-
-#### Example Results
-
-**ANOVA on N1 Latency** (from landing_on_2 analysis):
-- F(4,24) = 2.49, p = .070, η²_G = 0.064
-- Suggests trend toward latency differences between conditions
-
-**Pairwise Comparisons** (FDR-corrected):
-- 3→2 vs 4→2: t(6) = -1.14, p = .546 (n.s.)
-- 3→2 vs increasing 1→2: t(6) = 1.02, p = .546 (n.s.)
-
-**Descriptive Statistics:**
-```
-Condition           Mean (ms)   SD      SEM     N
-3 to 2              174.0       7.3     1.8     17
-4 to 2              175.7       7.1     1.8     16
-increasing 1 to 2   173.1       9.1     2.2     17
-```
-
-**Scientific Reference**: Kiesel et al. (2008) found fractional area latency has lower measurement error than peak latency, making it ideal for detecting subtle timing differences.
-
-## Testing
-
-```bash
-# Run all tests
-pytest tests/
-
-# Run specific test modules
-pytest tests/test_measures.py            # Phase 1: Fractional area latency functions (17 tests)
-pytest tests/test_subject_measurements.py # Phase 2A: Subject-level data collection (19 tests)
-pytest tests/test_statistics.py          # Phase 2B: Statistical analysis functions (23 tests)
-```
-
-**Test Coverage:**
-- **Phase 1**: Fractional area latency computation, polarity handling, edge cases
-- **Phase 2A**: Subject measurement collection, QC metrics (SNR, baseline noise), CSV structure
-- **Phase 2B**: ANOVA, pairwise t-tests, LMM, data filtering, output formatting
-
-## Documentation and Links
-
-- Website: `docs/` (served via GitHub Pages)
-- Analyses: `docs/analysis/` pages and thumbnails on `docs/index.md`
-- Guides: `docs/GFP_ANALYSIS_GUIDE.md`, `docs/DATA_OUTPUTS_GUIDE.md`, `STATISTICS_WORKFLOW.md`
-
-## Website Publishing (GitHub Pages)
-
-The `docs/` directory is ready for GitHub Pages deployment:
-
-1. **Enable GitHub Pages** in your repository settings
-2. **Set source to**: `main` branch, `/docs` folder
-3. **Access your site at**: `https://<username>.github.io/<repository>/`
-
-### Rebuilding the Website Index
-
-**IMPORTANT**: Before creating a pull request or pushing changes to the repository, rebuild the website index to ensure all analyses are properly listed:
-
-```bash
+# Rebuild website
 python scripts/rebuild_website_index.py
 ```
 
-This script:
-- Scans `docs/assets/plots/` for all analyses
-- Updates `docs/index.md` with thumbnails and links
-- Verifies that each analysis has corresponding statistics
-- Reports the total number of analyses found
+## Website Publishing
 
-**Example output:**
-```
-Found 78 analyses with plots
+Enable GitHub Pages: Repository Settings → Pages → Source: `main` branch, `/docs` folder
 
-[OK] increasing_large_vs_small_vs_crossover_ACC1 (with statistics)
-[OK] decreasing_large_vs_small_vs_crossover_without_1_ACC1 (with statistics)
-...
-
-[OK] Index rebuilt with 78 analyses
-  Index file: D:\eeg-image-analysis-v2\docs\index.md
-```
-
-The index page serves as the main navigation for your GitHub Pages site, providing clickable thumbnails for all ERP analyses
-
-The homepage ([docs/index.md](docs/index.md)) displays an auto-generated grid:
-- Each row = one analysis (sorted alphabetically)
-- Each column = component thumbnail (P1, N1, P3b)
-- Click thumbnail → full-size overlay with accessibility features
-
-## Performance and Success Criteria
-
-**From our specification (see `PHASE2_ENHANCED_SPEC.md`):**
-
-- ✅ **SC-001**: End-to-end run completes in <10 minutes on 24 subjects (typical laptop: 16GB RAM, 4-core CPU)
-- ✅ **SC-002**: Bit-identical outputs on re-runs (deterministic, reproducible)
-- ✅ **SC-003**: Condition sets have ≥8 epochs per subject (median); empty sets reported clearly
-
-**Asset size constraints:**
-- Individual PNG ≤ 2 MB
-- Total analysis assets ≤ 20 MB
-- Verified via `run_metrics.json` in each analysis
-
-## Troubleshooting
-
-### Common Issues
-
-**1. "Montage cannot be applied"**
-- Ensure `assets/net/AdultAverageNet128_v1.sfp` exists
-- Check that your epochs use standard EGI 128-channel naming
-
-**2. "Required metadata columns missing: ['Target.ACC']"**
-- You're using `response: "ACC1"` but epochs don't have `Target.ACC` column
-- Solution: Use `response: "ALL"` or verify your epochs metadata
-
-**3. "No subjects met inclusion criteria"**
-- Your `min_epochs_per_set` threshold is too high
-- Lower the threshold in your YAML or check your condition codes
-
-**4. Empty plots directory**
-- Check that `data/` contains `.fif` files matching your `pattern`
-- Verify file paths are correct in the YAML
-
-### Get Help
-
-- See `docs/GFP_ANALYSIS_GUIDE.md` for the analysis method and decisions
-- See `docs/DATA_OUTPUTS_GUIDE.md` for a map of generated files
-- See `STATISTICS_WORKFLOW.md` for Phases 2B–2C usage and examples
-- Open an issue with your YAML configuration and error messages
-
-## Contributing
-
-Please propose changes via YAML configuration when possible; open issues/PRs for code changes.
-
-## License
-
-[Add your license here]
+Access at: `https://<username>.github.io/<repository>/`
 
 ## Citation
 
-If you use this pipeline in your research, please cite:
-
 ```
-[Add citation information when published]
+[Citation information will be added upon publication]
 ```
 
 ---
 
-**Built with**: [Spec-Driven Development](https://github.com/github/spec-kit) | **Powered by**: [MNE-Python](https://mne.tools) | **Hosted on**: GitHub Pages
-
-
-
-Fz electroodes 11, 4, 5, 12, 19, 18, 16, 10
+**Built with:** MNE-Python | **Statistics:** statsmodels + pingouin | **Powered by:** Python 3.12

@@ -71,6 +71,9 @@ venv/
 /tests/
 /data_plots/
 
+# Run logs (generated analysis logs)
+/run_logs/
+
 nul
 
 
