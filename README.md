@@ -142,19 +142,3 @@ python scripts/run_all_statistics.py
 # Rebuild website
 python scripts/rebuild_website_index.py
 ```
-
-## Website Publishing
-
-Enable GitHub Pages: Repository Settings → Pages → Source: `main` branch, `/docs` folder
-
-Access at: `https://<username>.github.io/<repository>/`
-
-## Citation
-
-```
-[Citation information will be added upon publication]
-```
-
----
-
-**Built with:** MNE-Python | **Statistics:** statsmodels + pingouin | **Powered by:** Python 3.12

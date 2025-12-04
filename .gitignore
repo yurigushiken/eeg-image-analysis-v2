@@ -68,6 +68,7 @@ venv/
 /lab_data/
 
 /(archive)/
+/reference_files/
 /tests/
 /data_plots/
 
