@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import Dict, Iterable, Optional, Mapping, Tuple, List
 
 import matplotlib
@@ -8,6 +9,16 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+
+
+def _format_condition_label(label: str) -> str:
+    """Format condition labels for clearer legends."""
+    text = str(label)
+    m = re.fullmatch(r"\s*cardinality[\s_-]*(\d+)\s*", text, flags=re.IGNORECASE)
+    if m:
+        n = m.group(1)
+        return f"{n} to {n}"
+    return text
 
 
 def _generate_acronym_footnote(
@@ -116,7 +127,7 @@ def make_erp_figure(
             kw["color"] = colors[label]
         if linestyles and label in linestyles:
             kw["linestyle"] = linestyles[label]
-        legend_label = label
+        legend_label = _format_condition_label(label)
         try:
             if epochs_by_label and label in epochs_by_label:
                 legend_label = f"{legend_label} [{int(epochs_by_label[label])} epochs]"
@@ -236,11 +247,11 @@ def make_component_figure(
                 kw["linestyle"] = linestyles[label]
 
             # If this specific label used fallback, add asterisk to legend
-            display_label = label
+            display_label = _format_condition_label(label)
             if topomap_by_label and label in topomap_by_label:
                 tup = topomap_by_label[label]
                 if len(tup) > 3 and tup[3]:
-                    display_label = f"{label}*"
+                    display_label = f"{display_label}*"
 
             # Append peak legend info if available: (123ms, 4.5 µV)
             try:
@@ -397,11 +408,11 @@ def make_component_figure(
         if linestyles and label in linestyles:
             kw["linestyle"] = linestyles[label]
         # If this specific label used fallback, add asterisk to legend
-        display_label = label
+        display_label = _format_condition_label(label)
         if label in topomap_by_label:
             tup = topomap_by_label[label]
             if len(tup) > 3 and tup[3]:  # used_fallback=True
-                display_label = f"{label}*"
+                display_label = f"{display_label}*"
 
         # Append peak legend info if available: (123ms, 4.5 µV)
         try:
@@ -869,7 +880,7 @@ def make_peak_to_peak_figure(
             kw["color"] = colors[label]
         if linestyles and label in linestyles:
             kw["linestyle"] = linestyles[label]
-        ax.plot(times_ms, y, label=label, **kw)
+        ax.plot(times_ms, y, label=_format_condition_label(label), **kw)
 
     # Zero line and axes labels
     ax.axvline(0, color="#999", linewidth=1, alpha=0.6)
@@ -938,9 +949,9 @@ def make_peak_to_peak_figure(
 
         # Condition name (black) with epoch count if available, and colored delta text
         if epochs_by_label and label in epochs_by_label:
-            name_text = f"{label} ({int(epochs_by_label[label])} epochs)"
+            name_text = f"{_format_condition_label(label)} ({int(epochs_by_label[label])} epochs)"
         else:
-            name_text = f"{label}"
+            name_text = _format_condition_label(label)
         name_t = TextArea(name_text, textprops={"color": "#000", "fontsize": 8})
         delta_t = TextArea(f"  Δ = {float(p2p_by_label[label]):.1f} µV", textprops={"color": color, "fontsize": 8})
 
