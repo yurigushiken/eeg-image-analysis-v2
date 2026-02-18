@@ -90,6 +90,11 @@ def _save_figure(fig, path_like, dpi: int = 300, **kwargs) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run GFP-based ERP analysis")
     parser.add_argument("--config", required=True, help="Path to analysis YAML")
+    parser.add_argument(
+        "--save-no-topo",
+        action="store_true",
+        help="Additionally save overlay-only publication variants (no topo row) as '*-no_topo.png' (not linked in pages/index).",
+    )
     args = parser.parse_args()
 
     # Determinism: ensure any incidental randomness is fixed for reproducibility
@@ -122,13 +127,6 @@ def main() -> int:
     )
 
     analysis_id = os.path.splitext(os.path.basename(page_path))[0]
-    # Build stamp for figure footers: analysis_id · cfg:<hash> · YYYY-MM-DD
-    try:
-        with open(args.config, 'rb') as _f:
-            _cfg_hash = hashlib.sha1(_f.read()).hexdigest()[:7]
-    except Exception:
-        _cfg_hash = "unknown"
-    build_stamp = f"{analysis_id} · cfg:{_cfg_hash} · {dt.datetime.now().date().isoformat()}"
     saved_figs = []
 
     # Handle no-data case with synthetic placeholder
@@ -364,10 +362,6 @@ def main() -> int:
         subtitle=f"baseline {baseline} ms; collapsed across all conditions; FWHM windows",
         xlim_ms=xlim_ms,
     )
-    try:
-        cl_fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
-    except Exception:
-        pass
     cl_out_path = os.path.join(plots_dir, f"{analysis_id}-collapsed_localizer.png")
     _save_figure(cl_fig, cl_out_path, dpi=int(cfg.plots.get("dpi", 300)))
     plt.close(cl_fig)
@@ -793,11 +787,6 @@ def main() -> int:
                 highlight_channels=roi_channels,
                 epochs_by_label=set_name_to_total_epochs,
             )
-            try:
-                fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
-            except Exception:
-                pass
-
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             _save_figure(fig, out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
@@ -805,6 +794,34 @@ def main() -> int:
             saved_figs_map[comp] = out_path
 
             print(f"    Saved: {os.path.basename(out_path)}")
+
+            # Optional: also save overlay-only variant (no topo row), not referenced anywhere.
+            if bool(getattr(args, "save_no_topo", False)):
+                fig_no_topo = make_component_figure(
+                    curves_by_label=curves_by_label,
+                    times_ms=times_ms,
+                    topomap_by_label=topomap_by_label,
+                    info=gav_info,
+                    title=f"{analysis_id}: {comp} ({response_label})",
+                    subtitle=f"baseline {baseline} ms; {method_label} FWHM window: [{window_start:.1f}, {window_end:.1f}] ms",
+                    colors=colors,
+                    linestyles=linestyles,
+                    xlim_ms=xlim_ms,
+                    latencies_by_label=latencies_by_label,
+                    peak_amplitudes_by_label=peak_amplitudes_by_label,
+                    legend_peak_latencies_by_label=legend_peak_latencies_by_label,
+                    latency_annotation_label=("Peak" if latency_mode == "peak" else "FAL"),
+                    ylimit_uv=ylimit_uv,
+                    include_topomaps=False,
+                    include_title=False,
+                    include_subtitle=False,
+                    highlight_channels=None,
+                    epochs_by_label=set_name_to_total_epochs,
+                )
+                out_path_no_topo = os.path.join(plots_dir, f"{analysis_id}-{comp}-no_topo.png")
+                _save_figure(fig_no_topo, out_path_no_topo, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+                plt.close(fig_no_topo)
+                print(f"    Saved (no topo): {os.path.basename(out_path_no_topo)}")
         elif curves_by_label and times_ms is not None:
             # Overlay-only ERP figure (no topomaps, no dashed GFP lines)
             # === NEW: Build condition_name -> config dict for easy lookup ===
@@ -864,16 +881,33 @@ def main() -> int:
                 ylimit_uv=ylimit_uv,
                 epochs_by_label=set_name_to_total_epochs,
             )
-            try:
-                fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
-            except Exception:
-                pass
             out_path = os.path.join(plots_dir, f"{analysis_id}-{comp}.png")
             _save_figure(fig, out_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
             plt.close(fig)
             saved_figs.append(out_path)
             saved_figs_map[comp] = out_path
             print(f"    Saved (ERP only): {os.path.basename(out_path)}")
+
+            # Optional: also save overlay-only publication variant (no topo row),
+            # without the bottom-right build stamp watermark.
+            if bool(getattr(args, "save_no_topo", False)):
+                fig_no_topo = make_erp_figure(
+                    curves_by_label=curves_by_label,
+                    times_ms=times_ms,
+                    title=f"{analysis_id}: {comp} ({response_label})",
+                    subtitle=f"baseline {baseline} ms; Component window unavailable",
+                    colors=colors,
+                    linestyles=linestyles,
+                    xlim_ms=xlim_ms,
+                    ylimit_uv=ylimit_uv,
+                    epochs_by_label=set_name_to_total_epochs,
+                    include_title=False,
+                    include_subtitle=False,
+                )
+                out_path_no_topo = os.path.join(plots_dir, f"{analysis_id}-{comp}-no_topo.png")
+                _save_figure(fig_no_topo, out_path_no_topo, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+                plt.close(fig_no_topo)
+                print(f"    Saved (no topo): {os.path.basename(out_path_no_topo)}")
         else:
             print(f"    Warning: Insufficient data to generate ERP for {comp}")
 
@@ -1019,10 +1053,6 @@ def main() -> int:
                         n1_amp_by_label=n1_amp_by,
                         epochs_by_label=set_name_to_total_epochs,
                     )
-                    try:
-                        fig.text(0.995, 0.002, build_stamp, ha="right", va="bottom", fontsize=6, color="#666")
-                    except Exception:
-                        pass
                     p2p_path = os.path.join(plots_dir, f"{analysis_id}-P1_N1_peak_to_peak.png")
                     _save_figure(fig, p2p_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
                     plt.close(fig)

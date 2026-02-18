@@ -81,6 +81,8 @@ def make_erp_figure(
     xlim_ms: Optional[Tuple[float, float]] = None,
     ylimit_uv: Optional[float] = None,
     epochs_by_label: Optional[Mapping[str, int]] = None,
+    include_title: bool = True,
+    include_subtitle: bool = True,
 ):
     """
     Create an ERP overlay figure.
@@ -125,7 +127,7 @@ def make_erp_figure(
     ax.set_xlabel("Time (ms)")
     ax.set_ylabel("Amplitude (µV)")
     # Use figure-level title to keep consistent placement across figures
-    if title:
+    if title and include_title:
         try:
             fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
         except Exception:
@@ -154,7 +156,7 @@ def make_erp_figure(
     ax.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
 
     # Avoid overlapping text at the top; use figure-level subtitle instead
-    if subtitle:
+    if subtitle and include_subtitle:
         # Place subtitle just below the main title at figure level
         try:
             fig.text(0.5, 0.90, subtitle, ha="center", fontsize=9)
@@ -185,6 +187,9 @@ def make_component_figure(
     highlight_channels: Optional[List[str]] = None,
     latency_annotation_label: Optional[str] = "FAL",
     epochs_by_label: Optional[Mapping[str, int]] = None,
+    include_topomaps: bool = True,
+    include_title: bool = True,
+    include_subtitle: bool = True,
 ):
     """
     Create a composite figure with ERP overlay (top) and topomaps (bottom).
@@ -210,6 +215,138 @@ def make_component_figure(
     Returns:
         matplotlib Figure object
     """
+    # If requested, generate overlay-only figure (publication variant) with no topomaps.
+    # This must not create any additional axes (no topo row, no colorbar) and must not
+    # add the "Yellow sensors = ..." caption which is only meaningful with topomaps.
+    if not include_topomaps:
+        fig, ax_overlay = plt.subplots(figsize=(7.475, 4.9))
+
+        # Check if any condition used fallback (for overlay annotation)
+        any_fallback = False
+        for tup in (topomap_by_label or {}).values():
+            if len(tup) > 3 and tup[3]:  # Fourth element exists and is True
+                any_fallback = True
+                break
+
+        for label, y in curves_by_label.items():
+            kw = {}
+            if colors and label in colors:
+                kw["color"] = colors[label]
+            if linestyles and label in linestyles:
+                kw["linestyle"] = linestyles[label]
+
+            # If this specific label used fallback, add asterisk to legend
+            display_label = label
+            if topomap_by_label and label in topomap_by_label:
+                tup = topomap_by_label[label]
+                if len(tup) > 3 and tup[3]:
+                    display_label = f"{label}*"
+
+            # Append peak legend info if available: (123ms, 4.5 µV)
+            try:
+                peak_ms_val = None
+                if legend_peak_latencies_by_label and label in legend_peak_latencies_by_label:
+                    peak_ms_val = legend_peak_latencies_by_label[label]
+                peak_amp_val = None
+                if peak_amplitudes_by_label and label in peak_amplitudes_by_label:
+                    peak_amp_val = peak_amplitudes_by_label[label]
+                if peak_ms_val is not None and not np.isnan(peak_ms_val) and peak_amp_val is not None and not np.isnan(peak_amp_val):
+                    display_label = f"{display_label} ({float(peak_ms_val):.0f}ms, {float(peak_amp_val):.1f} µV)"
+            except Exception:
+                pass
+
+            # Append total epochs if provided
+            try:
+                if epochs_by_label and label in epochs_by_label:
+                    display_label = f"{display_label} [{int(epochs_by_label[label])} epochs]"
+            except Exception:
+                pass
+
+            ax_overlay.plot(times_ms, y, label=display_label, **kw)
+
+        ax_overlay.axvline(0, color="#999", linewidth=1, alpha=0.6)
+
+        # Per-condition latency lines (Peak or FAL)
+        if latencies_by_label:
+            for label, fal_ms in latencies_by_label.items():
+                if colors and label in colors:
+                    color = colors[label]
+                else:
+                    color = "#444"
+                ls = linestyles.get(label, "-") if linestyles else "-"
+                ax_overlay.axvline(
+                    fal_ms,
+                    color=color,
+                    alpha=0.7,
+                    linestyle=ls,
+                    linewidth=0.8,
+                    zorder=5,
+                )
+
+        # Per-condition peak amplitude reference lines
+        if peak_amplitudes_by_label:
+            for label, peak_amp in peak_amplitudes_by_label.items():
+                try:
+                    amp_val = float(peak_amp)
+                except Exception:
+                    continue
+                if colors and label in colors:
+                    color = colors[label]
+                else:
+                    color = "#666"
+                ls = linestyles.get(label, "-") if linestyles else "-"
+                ax_overlay.axhline(
+                    y=amp_val,
+                    color=color,
+                    linestyle=ls,
+                    linewidth=0.8,
+                    alpha=0.6,
+                    zorder=3,
+                )
+
+        if title and include_title:
+            try:
+                fig.suptitle(title, fontsize=11, fontweight="bold", y=0.97, va="bottom")
+            except Exception:
+                pass
+
+        ax_overlay.set_xlabel("Time (ms)")
+        ax_overlay.set_ylabel("Amplitude (µV)")
+
+        if xlim_ms is not None:
+            ax_overlay.set_xlim(xlim_ms)
+        if ylimit_uv is not None:
+            try:
+                ax_overlay.set_ylim((-float(ylimit_uv), float(ylimit_uv)))
+            except Exception:
+                pass
+
+        try:
+            from matplotlib.ticker import MultipleLocator
+
+            ax_overlay.xaxis.set_major_locator(MultipleLocator(100))
+            ax_overlay.xaxis.set_minor_locator(MultipleLocator(50))
+            ax_overlay.yaxis.set_major_locator(MultipleLocator(1))
+        except Exception:
+            pass
+        ax_overlay.grid(True, which="major", linestyle=":", linewidth=0.5, alpha=0.3)
+        ax_overlay.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
+
+        legend_title = "* = fallback window used" if any_fallback else None
+        ax_overlay.legend(loc="upper left", fontsize=7, title=legend_title, title_fontsize=7, frameon=True, framealpha=0.9)
+
+        if subtitle and include_subtitle:
+            try:
+                enhanced_subtitle = subtitle
+                if latencies_by_label:
+                    label = latency_annotation_label or "FAL"
+                    enhanced_subtitle += f" | Vertical lines = {label} Latency"
+                fig.text(0.5, 0.94, enhanced_subtitle, ha="center", va="top", fontsize=9)
+            except Exception:
+                pass
+
+        return fig
+
     import mne  # local import for plotting
 
     n_cols = max(1, len(topomap_by_label) or 1)

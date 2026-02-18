@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 15:51:15",
+  "timestamp": "2026-01-03 01:19:32",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_prime_44_locd568k.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_prime_44_zzbznph6.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\prime_44\\subject_measurements.csv",
   "components_tested": [
     "Fz",

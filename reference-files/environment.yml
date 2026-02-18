@@ -1,0 +1,20 @@
+name: eeg-image
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - mne==1.10.1
+  - numpy==2.1.*
+  - pandas==2.2.*
+  - matplotlib==3.8.*
+  - scipy==1.12.*
+  - pyyaml==6.0.*
+  - pytest==8.*
+  - jupyter
+  - ipython
+  - pip
+  - pingouin==0.5.*
+  - statsmodels==0.14.*
+  - pip:
+    - mne-qt-browser

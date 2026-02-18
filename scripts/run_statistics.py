@@ -84,7 +84,6 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
             'dependent_variables': cfg.get('dependent_variables')
         }, sort_keys=True).encode('utf-8')
         cfg_hash = hashlib.sha1(key).hexdigest()[:7]
-    build_stamp = f"{analysis_id} · cfg:{cfg_hash} · {datetime.now().date().isoformat()}"
 
     # Get plot styling
     dpi = plots_cfg.get('dpi', 300)
@@ -178,7 +177,6 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         show_mean=plots_cfg.get('boxplot', {}).get('show_mean', True),
                         dpi=dpi,
                         figsize=figsize,
-                        build_stamp=build_stamp
                     )
                     # Stamp is added inside plotting util below via fig.text if available
 
@@ -200,7 +198,6 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
                         inner=plots_cfg.get('violin', {}).get('inner', 'box'),
                         dpi=dpi,
                         figsize=figsize,
-                        build_stamp=build_stamp
                     )
 
             except Exception as e:

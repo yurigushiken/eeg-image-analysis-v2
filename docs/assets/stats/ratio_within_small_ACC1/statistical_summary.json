@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 15:55:16",
+  "timestamp": "2026-01-03 01:28:43",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_ratio_within_small_ACC1_ulk0qhm1.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_ratio_within_small_ACC1_lzxfh_j8.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\ratio_within_small_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",

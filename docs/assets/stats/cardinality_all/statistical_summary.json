@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 15:36:00",
+  "timestamp": "2026-01-03 00:19:51",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_all_poa6_ap1.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_cardinality_all_rdkdwzag.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\cardinality_all\\subject_measurements.csv",
   "components_tested": [
     "Fz",

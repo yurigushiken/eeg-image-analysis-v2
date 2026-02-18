@@ -7,6 +7,7 @@ are up to date.
 """
 from __future__ import annotations
 
+import argparse
 import os
 import sys
 import glob
@@ -20,6 +21,14 @@ CONFIGS_DIR = os.path.join(REPO_ROOT, "configs", "analyses")
 
 def main() -> int:
     """Run all analysis configurations."""
+    parser = argparse.ArgumentParser(description="Run all analysis configurations sequentially.")
+    parser.add_argument(
+        "--save-no-topo",
+        action="store_true",
+        help="Pass through to run_analysis.py to additionally save '*-no_topo.png' overlay-only variants (not linked).",
+    )
+    args = parser.parse_args()
+
     # Find all YAML config files
     pattern = os.path.join(CONFIGS_DIR, "*.yaml")
     config_files = sorted(glob.glob(pattern))
@@ -42,8 +51,11 @@ def main() -> int:
 
         try:
             # Run analysis as subprocess
+            cmd = [sys.executable, "scripts/run_analysis.py", "--config", config_path]
+            if bool(getattr(args, "save_no_topo", False)):
+                cmd.append("--save-no-topo")
             result = subprocess.run(
-                [sys.executable, "scripts/run_analysis.py", "--config", config_path],
+                cmd,
                 cwd=REPO_ROOT,
                 check=True,
                 capture_output=False,  # Show output in real-time

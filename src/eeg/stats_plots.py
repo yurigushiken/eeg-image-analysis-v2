@@ -14,6 +14,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import warnings
 from pathlib import Path
 from typing import Union, Optional, List, Tuple
 
@@ -348,15 +349,7 @@ def plot_boxplot(
         plt.subplots_adjust(bottom=0.20)  # Increase bottom margin to accommodate both texts
         bottom_used = True
 
-    # Add build stamp (bottom-right) if provided
-    # Place it significantly lower to avoid overlapping with caption
-    if build_stamp:
-        try:
-            # If caption exists, place stamp much lower; otherwise use default position
-            stamp_y = -0.015 if bottom_used else 0.002
-            fig.text(0.995, stamp_y, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
-        except Exception:
-            pass
+    # NOTE: build_stamp intentionally ignored (we no longer stamp figures).
 
     # Improve bottom spacing to avoid x-label/caption overlap
     # Expand rect to give more room at bottom if caption is present
@@ -478,13 +471,7 @@ def plot_violin(
         plt.subplots_adjust(bottom=0.20)  # Increase bottom margin
         bottom_used = True
 
-    # Add build stamp - place lower to avoid overlapping
-    if build_stamp:
-        try:
-            stamp_y = -0.015 if bottom_used else 0.002
-            fig.text(0.995, stamp_y, build_stamp, ha='right', va='bottom', fontsize=6, color='#666')
-        except Exception:
-            pass
+    # NOTE: build_stamp intentionally ignored (we no longer stamp figures).
 
     bottom_rect = 0.03 if bottom_used else 0.02
     plt.tight_layout(rect=(0, bottom_rect, 1, 1))
@@ -596,8 +583,31 @@ def plot_effect_sizes(
     ax.set_title(title, fontsize=14, fontweight='bold')
     ax.grid(axis='x', alpha=0.3)
 
-    # Use constrained_layout and bbox_inches tight to reduce whitespace
-    fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
+    # Save with constrained_layout when possible, but fall back gracefully if
+    # Matplotlib cannot apply it (common with long labels / tight decorations).
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter("always", UserWarning)
+        fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
+
+    if any("constrained_layout not applied" in str(w.message) for w in caught):
+        # Prefer the newer layout engine API when available, but also flip the
+        # legacy constrained_layout flag for compatibility with older versions.
+        try:
+            if hasattr(fig, "set_layout_engine"):
+                fig.set_layout_engine(None)
+        except Exception:
+            pass
+        try:
+            with warnings.catch_warnings():
+                warnings.filterwarnings("ignore", category=PendingDeprecationWarning)
+                fig.set_constrained_layout(False)
+        except Exception:
+            pass
+        try:
+            fig.tight_layout()
+        except Exception:
+            pass
+        fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
     plt.close(fig)
 
     print(f"Effect size plot saved to: {output_path}")

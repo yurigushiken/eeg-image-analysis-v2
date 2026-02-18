@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-03 15:45:05",
+  "timestamp": "2026-01-03 00:59:03",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_increase_decrease_cardinality_ACC1_hu3am7rr.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_increase_decrease_cardinality_ACC1_7ysj55et.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\increase_decrease_cardinality_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
