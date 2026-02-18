@@ -4,6 +4,8 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional
 
+COMPONENT_ORDER = ["Fz", "P1", "N1", "P3b"]
+
 
 def write_analysis_page(page_path: str, title: str, figure_paths: Optional[List[str]] = None, notes: Optional[List[str]] = None) -> None:
     os.makedirs(os.path.dirname(page_path), exist_ok=True)
@@ -152,6 +154,71 @@ def get_stats_info(analysis_id: str, docs_root: str = "docs") -> Optional[Dict[s
     }
 
 
+def _component_plot_rel(
+    analysis_id: str,
+    component: str,
+    docs_root: str,
+    prefer_no_topo: bool = True,
+) -> Optional[str]:
+    """Resolve the preferred component plot path for website display."""
+    plot_dir = Path(docs_root) / "assets" / "plots" / analysis_id
+
+    if prefer_no_topo:
+        no_topo_name = f"{analysis_id}-{component}-no_topo.png"
+        if (plot_dir / no_topo_name).exists():
+            return f"assets/plots/{analysis_id}/{no_topo_name}"
+
+    topo_name = f"{analysis_id}-{component}.png"
+    if (plot_dir / topo_name).exists():
+        return f"assets/plots/{analysis_id}/{topo_name}"
+
+    return None
+
+
+def get_topo_info(analysis_id: str, docs_root: str = "docs") -> Optional[Dict[str, str]]:
+    """Gather topographic (with-topo) ERP images for expandable display."""
+    topo_paths = {}
+    for component in COMPONENT_ORDER:
+        rel = _component_plot_rel(analysis_id, component, docs_root=docs_root, prefer_no_topo=False)
+        if rel:
+            topo_paths[component] = rel
+    return topo_paths or None
+
+
+def generate_topo_html(analysis_id: str, topo_info: Dict[str, str]) -> str:
+    """Generate HTML for expandable topographic ERP figures."""
+    if not topo_info:
+        return ""
+
+    html_parts = []
+    html_parts.append(
+        f'<button class="expand-toggle stats-toggle topo-toggle" '
+        f'data-target="topo-{analysis_id}" '
+        f'data-show-label="Show Topographic Maps" '
+        f'data-hide-label="Hide Topographic Maps" '
+        f'aria-expanded="false" aria-controls="topo-{analysis_id}">Show Topographic Maps</button>'
+    )
+    html_parts.append(f'<div id="topo-{analysis_id}" class="expand-content stats-content topo-content">')
+    html_parts.append('<div class="stats-section">')
+    html_parts.append('<h4>Topographic ERP Figures</h4>')
+    html_parts.append('<div class="stats-plots">')
+
+    for component in COMPONENT_ORDER:
+        rel = topo_info.get(component)
+        if not rel:
+            continue
+        alt = f"ERP with topographic maps for {component} in {analysis_id}"
+        html_parts.append(
+            f'<a href="{rel}" data-lightbox aria-label="{alt}">'
+            f'<img class="thumb" src="{rel}" alt="{alt}" /></a>'
+        )
+
+    html_parts.append('</div>')
+    html_parts.append('</div>')
+    html_parts.append('</div>')
+    return ''.join(html_parts)
+
+
 def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
     """Generate HTML for the expandable statistics section.
 
@@ -166,12 +233,14 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
 
     # Toggle button
     html_parts.append(
-        f'<button class="stats-toggle" data-analysis-id="{analysis_id}" '
-        f'aria-expanded="false" aria-controls="stats-{analysis_id}">Show Statistics</button>'
+        f'<button class="expand-toggle stats-toggle" data-analysis-id="{analysis_id}" '
+        f'data-target="stats-{analysis_id}" data-show-label="Show Statistics" '
+        f'data-hide-label="Hide Statistics" aria-expanded="false" '
+        f'aria-controls="stats-{analysis_id}">Show Statistics</button>'
     )
 
     # Statistics content (initially hidden)
-    html_parts.append(f'<div id="stats-{analysis_id}" class="stats-content">')
+    html_parts.append(f'<div id="stats-{analysis_id}" class="expand-content stats-content">')
 
     # Statistical Report Link
     html_parts.append('<div class="stats-section">')
@@ -188,7 +257,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Boxplots</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['Fz', 'P1', 'N1', 'P3b']:
+        for component in COMPONENT_ORDER:
             if component in stats_info['boxplots']:
                 for plot_path in stats_info['boxplots'][component]:
                     alt = f"Boxplot for {component} in {analysis_id}"
@@ -206,7 +275,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Violin Plots</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['Fz', 'P1', 'N1', 'P3b']:
+        for component in COMPONENT_ORDER:
             if component in stats_info['violin_plots']:
                 for plot_path in stats_info['violin_plots'][component]:
                     alt = f"Violin plot for {component} in {analysis_id}"
@@ -224,7 +293,7 @@ def generate_stats_html(analysis_id: str, stats_info: Dict[str, any]) -> str:
         html_parts.append('<h4>Effect Sizes</h4>')
         html_parts.append('<div class="stats-plots">')
 
-        for component in ['Fz', 'P1', 'N1', 'P3b']:
+        for component in COMPONENT_ORDER:
             if component in stats_info['effect_sizes']:
                 for plot_path in stats_info['effect_sizes'][component]:
                     alt = f"Effect sizes for {component} in {analysis_id}"
@@ -307,8 +376,19 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
     if current_analysis:
         analysis_entries[current_analysis] = current_rows
 
+    def _pick_visible_component_image(comp: str, fallback_rel: Optional[str] = None) -> Optional[str]:
+        preferred = _component_plot_rel(
+            analysis_id=analysis_id,
+            component=comp,
+            docs_root=docs_root,
+            prefer_no_topo=True,
+        )
+        if preferred:
+            return preferred
+        return fallback_rel
+
     def make_cell(comp: str) -> str:
-        img = component_to_image.get(comp)
+        img = _pick_visible_component_image(comp, component_to_image.get(comp))
         if not img:
             return "<td></td>"
         alt = f"ERP overlay for {comp} in {analysis_id}"
@@ -339,9 +419,8 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
 
     # Additional cells: Fz and P1↔N1 p2p
     # Fz image relative path
-    fz_rel = f"assets/plots/{analysis_id}/{analysis_id}-Fz.png"
-    fz_abs = os.path.join(docs_root, fz_rel)
-    if os.path.exists(fz_abs):
+    fz_rel = _pick_visible_component_image("Fz", component_to_image.get("Fz"))
+    if fz_rel:
         alt_fz = f"ERP overlay for Fz in {analysis_id}"
         fz_cell = (
             f"<td><a href='{fz_rel}' data-lightbox aria-label='{alt_fz}'><img class='thumb' src='{fz_rel}' alt='{alt_fz}' /></a></td>"
@@ -376,18 +455,21 @@ def update_index_grid(index_path: str, analysis_id: str, component_to_image: Dic
         f"{collapsed_cell}{fz_cell}{make_cell('P1')}{make_cell('N1')}{make_cell('P3b')}{p2p_cell}</tr>"
     )
 
-    # Check if statistics exist for this analysis
-    # docs_root already determined above
-
-    stats_info = get_stats_info(analysis_id, docs_root)
-
     # Build the new entry for this analysis
     new_rows_for_analysis = [erp_row]
 
+    details_html_parts = []
+
+    topo_info = get_topo_info(analysis_id, docs_root)
+    if topo_info:
+        details_html_parts.append(generate_topo_html(analysis_id, topo_info))
+
+    stats_info = get_stats_info(analysis_id, docs_root)
     if stats_info:
-        # Add statistics row below ERP row. There are 7 content columns now.
-        stats_html = generate_stats_html(analysis_id, stats_info)
-        new_rows_for_analysis.append(f"<tr><td colspan='7'>{stats_html}</td></tr>")
+        details_html_parts.append(generate_stats_html(analysis_id, stats_info))
+
+    if details_html_parts:
+        new_rows_for_analysis.append(f"<tr><td colspan='7'>{''.join(details_html_parts)}</td></tr>")
 
     # Update or insert this analysis entry
     analysis_entries[analysis_id] = new_rows_for_analysis

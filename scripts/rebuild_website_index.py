@@ -10,7 +10,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from eeg.report import get_stats_info, generate_stats_html
+from eeg.report import get_stats_info, generate_stats_html, get_topo_info, generate_topo_html
 
 
 def main() -> int:
@@ -32,11 +32,15 @@ def main() -> int:
     for analysis_dir in analysis_dirs:
         analysis_id = analysis_dir.name
 
-        # Find component plots including Fz
+        # Find component plots including Fz (prefer no-topo if available).
         component_to_image = {}
         for component in ['Fz', 'P1', 'N1', 'P3b']:
-            plot_file = analysis_dir / f"{analysis_id}-{component}.png"
-            if plot_file.exists():
+            no_topo_file = analysis_dir / f"{analysis_id}-{component}-no_topo.png"
+            topo_file = analysis_dir / f"{analysis_id}-{component}.png"
+            if no_topo_file.exists():
+                rel_path = f"assets/plots/{analysis_id}/{analysis_id}-{component}-no_topo.png"
+                component_to_image[component] = rel_path
+            elif topo_file.exists():
                 rel_path = f"assets/plots/{analysis_id}/{analysis_id}-{component}.png"
                 component_to_image[component] = rel_path
 
@@ -112,16 +116,24 @@ def main() -> int:
         erp_row = f"<tr>{''.join(cells)}</tr>"
         all_rows.append(erp_row)
 
+        details_html_parts = []
+
+        topo_info = get_topo_info(analysis_id, str(docs_dir))
+        if topo_info:
+            details_html_parts.append(generate_topo_html(analysis_id, topo_info))
+
         # Check for statistics
         stats_info = get_stats_info(analysis_id, str(docs_dir))
         if stats_info:
-            stats_html = generate_stats_html(analysis_id, stats_info)
-            # Span all columns (Analysis + 6 content columns)
-            stats_row = f"<tr><td colspan='7'>{stats_html}</td></tr>"
-            all_rows.append(stats_row)
-            print(f"[OK] {analysis_id} (with statistics)")
+            details_html_parts.append(generate_stats_html(analysis_id, stats_info))
+            print(f"[OK] {analysis_id} (with details)")
         else:
             print(f"[OK] {analysis_id}")
+
+        if details_html_parts:
+            # Span all columns (Analysis + 6 content columns)
+            details_row = f"<tr><td colspan='7'>{''.join(details_html_parts)}</td></tr>"
+            all_rows.append(details_row)
 
     # Read current index
     with open(index_path, 'r', encoding='utf-8') as f:

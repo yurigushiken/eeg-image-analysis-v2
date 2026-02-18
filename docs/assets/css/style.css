@@ -340,9 +340,11 @@ pre code {
 }
 
 /* Expandable Statistics Section */
+.expand-toggle,
 .stats-toggle {
     display: inline-block;
     margin-top: 0.5rem;
+    margin-right: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     color: white;
@@ -354,20 +356,24 @@ pre code {
     transition: background-color 0.2s;
 }
 
+.expand-toggle:hover,
 .stats-toggle:hover {
     background-color: var(--primary-hover);
 }
 
+.expand-toggle::before,
 .stats-toggle::before {
     content: '▸ ';
     display: inline-block;
     transition: transform 0.2s;
 }
 
+.expand-toggle.expanded::before,
 .stats-toggle.expanded::before {
     transform: rotate(90deg);
 }
 
+.expand-content,
 .stats-content {
     display: none;
     margin-top: 1rem;
@@ -377,6 +383,7 @@ pre code {
     border: 1px solid var(--border-color);
 }
 
+.expand-content.show,
 .stats-content.show {
     display: block;
 }
@@ -443,10 +450,12 @@ pre code {
         color: inherit;
     }
 
+    .expand-toggle,
     .stats-toggle {
         display: none;
     }
 
+    .expand-content,
     .stats-content {
         display: block;
     }
