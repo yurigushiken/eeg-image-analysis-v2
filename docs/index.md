@@ -10,6 +10,7 @@ title: EEG ERP Analyses
 Default thumbnails show ERP overlays without topographic maps. Use "Show Topographic Maps" to expand the topo versions.
 
 <p><a href="https://github.com/yurigushiken/eeg-image-analysis-v2/blob/main/methodology.md" target="_blank">Link to methodology document explaining 'peak' amplitude and latency.</a></p>
+<p><a href="poster-plots.html">Poster Plots (curated figures)</a></p>
 
 <!-- AUTO-GENERATED START -->
 <table class="grid-table">

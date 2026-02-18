@@ -1,0 +1,43 @@
+{
+  "dataset": {
+    "n_subjects": 24,
+    "n_change_trials_for_accuracy": 3660,
+    "n_correct_trials_with_valid_rt": 601,
+    "rt_min_ms": 150.0,
+    "rt_max_ms": 1500.0
+  },
+  "accuracy_gee": {
+    "coef_log_odds_D_vs_I": 0.46744778839853035,
+    "se": 0.09540464611931658,
+    "p_value": 9.601565211510095e-07,
+    "odds_ratio_D_vs_I": 1.5959158760531102,
+    "odds_ratio_ci95_low": 1.3237315524427808,
+    "odds_ratio_ci95_high": 1.9240664610118974
+  },
+  "accuracy_subject_level": {
+    "n_subjects": 24,
+    "mean_diff_D_minus_I": 0.06678190292977092,
+    "ci95_low": 0.0368625756223306,
+    "ci95_high": 0.09670123023721124,
+    "t": 4.617379605977353,
+    "p_two_sided": 0.00012079410319315179,
+    "p_one_sided_D_gt_I": 6.0397051596575893e-05,
+    "cohens_dz": 0.9425186652814799
+  },
+  "rt_gee_distance": {
+    "coef_log_rt_per_distance_step": -0.02278836492519055,
+    "se": 0.0075724727943783515,
+    "p_value": 0.002617909427446194,
+    "percent_change_per_distance_step": -2.2530671320814544
+  },
+  "rt_subject_level_distance_trend": {
+    "n_subjects": 24,
+    "mean_slope_ms_per_distance": -13.04752620065131,
+    "ci95_low": -20.78813847701924,
+    "ci95_high": -5.306913924283384,
+    "t": -3.486915945205294,
+    "p_two_sided": 0.0019905164295775657,
+    "p_one_sided_negative_slope": 0.0009952582147887828,
+    "cohens_dz": -0.7117637368106231
+  }
+}

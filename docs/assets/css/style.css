@@ -513,3 +513,38 @@ pre code {
     opacity: 0.45;
     cursor: default;
 }
+
+/* Poster page */
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+
+.poster-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.poster-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.poster-thumb {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 0.25rem;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+}
+
+.poster-erp-table td,
+.poster-erp-table th {
+    text-align: center;
+}
