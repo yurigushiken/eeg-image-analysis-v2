@@ -519,6 +519,147 @@ def main() -> int:
         print(f"Saved subject-level measurements: {os.path.basename(subj_csv_path)}")
         print(f"  Recorded {len(subject_measurements_output)} subject-component-condition measurements\n")
 
+        # === Phase 2A-bis: Subject-Level P1-N1 Peak-to-Peak ===
+        # Compute per-subject P2P from a single ROI waveform (N1 montage),
+        # using collapsed-localizer windows for P1 and N1.
+        import pandas as _pd
+        if ("P1" in collapsed_results) and ("N1" in collapsed_results):
+            _p2p_cfg = (meas_cfg.get("peak_to_peak", {}) or {}) if isinstance(meas_cfg, dict) else {}
+            _roi_names = _p2p_cfg.get("roi") or components_cfg.get("N1", {}).get("rois", ["N1_L", "N1_R"]) or ["N1_L", "N1_R"]
+            _n1_roi_channels = []
+            for _rn in _roi_names:
+                if _rn in electrodes_cfg:
+                    _n1_roi_channels.extend(electrodes_cfg[_rn])
+            _n1_roi_channels = list(dict.fromkeys(_n1_roi_channels))
+
+            if not _n1_roi_channels:
+                print("Warning: Subject-level P2P skipped (no N1 ROI channels found).")
+            else:
+                _p1_win = (
+                    float(collapsed_results["P1"]["window_start_ms"]),
+                    float(collapsed_results["P1"]["window_end_ms"]),
+                )
+                _n1_win = (
+                    float(collapsed_results["N1"]["window_start_ms"]),
+                    float(collapsed_results["N1"]["window_end_ms"]),
+                )
+                _p2p_rows = []
+                from eeg.measures import compute_peak_to_peak_metrics as _compute_peak_to_peak_metrics
+                for _sm in subject_measurements:
+                    _subj_id = _sm["subject_id"]
+                    _condition = _sm["condition"]
+                    _evoked = _sm["evoked"]
+                    _n_epochs = _sm["n_epochs"]
+                    try:
+                        _roi_ev = _evoked.copy().pick_channels(_n1_roi_channels, ordered=False)
+                        _roi_curve = _roi_ev.data.mean(axis=0) * 1e6
+                        _times_ms = (_evoked.times * 1000.0).astype(float)
+                        _metrics = _compute_peak_to_peak_metrics(
+                            signal=_roi_curve,
+                            times_ms=_times_ms,
+                            p1_window_ms=_p1_win,
+                            n1_window_ms=_n1_win,
+                            p_polarity="positive",
+                            n_polarity="negative",
+                        )
+                        _p2p_rows.append({
+                            "subject_id": _subj_id,
+                            "condition": _condition,
+                            "p1_amp": float(_metrics["p1_amp"]),
+                            "p1_lat_ms": float(_metrics["p1_lat_ms"]),
+                            "n_epochs": int(_n_epochs),
+                            "n1_amp": float(_metrics["n1_amp"]),
+                            "n1_lat_ms": float(_metrics["n1_lat_ms"]),
+                            "p2p_amp": float(_metrics["p2p_amp"]),
+                        })
+                    except Exception as _e:
+                        print(
+                            f"  Warning: Subject-level P2P failed for subject {_subj_id}, "
+                            f"condition '{_condition}': {_e}"
+                        )
+
+                _merged = _pd.DataFrame(_p2p_rows)
+                if _merged.empty:
+                    print("Warning: Subject-level P2P skipped (no valid subject-condition records).")
+                else:
+                    _merged = _merged[
+                        ["subject_id", "condition", "p1_amp", "p1_lat_ms", "n_epochs", "n1_amp", "n1_lat_ms", "p2p_amp"]
+                    ].copy()
+                    _p2p_csv = os.path.join(tables_dir, "subject_peak_to_peak.csv")
+                    _merged.to_csv(_p2p_csv, index=False)
+                    print(f"Saved subject-level peak-to-peak: {os.path.basename(_p2p_csv)}")
+                    print(f"  {len(_merged)} subject-condition P2P records (P1_peak - N1_peak)\n")
+
+                    # --- Statistical tests on P2P amplitude ---
+                    _conditions = sorted(_merged["condition"].unique())
+                    if len(_conditions) >= 2:
+                        print("--- P1-N1 Peak-to-Peak Statistics ---")
+                        try:
+                            import pingouin as _pg
+
+                            # Ensure balanced design for rm_anova: keep only subjects with all conditions
+                            _subj_counts = _merged.groupby("subject_id")["condition"].nunique()
+                            _complete_subjs = _subj_counts[_subj_counts == len(_conditions)].index
+                            _balanced = _merged[_merged["subject_id"].isin(_complete_subjs)].copy()
+                            print(f"  Subjects with complete data: {len(_complete_subjs)} / {_merged['subject_id'].nunique()}")
+
+                            if len(_complete_subjs) >= 3:
+                                # Descriptives
+                                _desc = _balanced.groupby("condition")["p2p_amp"].agg(["mean", "std", "count"]).reset_index()
+                                _desc["sem"] = _desc["std"] / _desc["count"].apply(lambda x: x ** 0.5)
+                                print("\n  Descriptive statistics (P2P amplitude, uV):")
+                                for _, row in _desc.iterrows():
+                                    print(f"    {row['condition']}: M = {row['mean']:.3f}, SD = {row['std']:.3f}, SEM = {row['sem']:.3f}, n = {int(row['count'])}")
+
+                                # Repeated-measures ANOVA
+                                _anova = _pg.rm_anova(data=_balanced, dv="p2p_amp", within="condition", subject="subject_id", detailed=True)
+                                print(f"\n  Repeated-measures ANOVA on P2P amplitude:")
+                                _anova_row = _anova.iloc[0]
+                                # pingouin may use 'ddof1'/'ddof2' or 'DF' depending on version
+                                if 'ddof1' in _anova.columns:
+                                    _df1, _df2 = int(_anova_row['ddof1']), int(_anova.iloc[1]['ddof2'] if len(_anova) > 1 else _anova_row['ddof2'])
+                                else:
+                                    _df1 = int(_anova_row['DF'])
+                                    _df2 = int(_anova.iloc[1]['DF']) if len(_anova) > 1 else "?"
+                                _es_col = 'np2' if 'np2' in _anova.columns else 'ng2'
+                                _es_val = _anova_row.get(_es_col, float('nan'))
+                                _es_label = "eta2p" if _es_col == 'np2' else "eta2G"
+                                print(f"    F({_df1}, {_df2}) = {_anova_row['F']:.3f}, p = {_anova_row['p-unc']:.4f}, {_es_label} = {_es_val:.3f}")
+                                if 'eps' in _anova.columns and not _pd.isna(_anova_row.get('eps', float('nan'))):
+                                    print(f"    Sphericity (eps) = {_anova_row['eps']:.3f}")
+
+                                # Pairwise t-tests with FDR correction
+                                _pw = _pg.pairwise_tests(data=_balanced, dv="p2p_amp", within="condition", subject="subject_id", padjust="fdr_bh", effsize="cohen")
+                                print(f"\n  Pairwise comparisons (paired t-tests, FDR-corrected):")
+                                for _, row in _pw.iterrows():
+                                    sig = "*" if row.get("p-corr", row.get("p-unc", 1)) < 0.05 else ""
+                                    p_col = "p-corr" if "p-corr" in row.index else "p-unc"
+                                    print(f"    {row['A']} vs {row['B']}: t({row['dof']:.0f}) = {row['T']:.3f}, p(FDR) = {row[p_col]:.4f}, d = {row['cohen']:.3f} {sig}")
+
+                                # Save stats to JSON
+                                _stats_out = {
+                                    "analysis_id": analysis_id,
+                                    "measure": "P1_N1_peak_to_peak_amplitude",
+                                    "n_subjects_complete": int(len(_complete_subjs)),
+                                    "n_subjects_total": int(_merged["subject_id"].nunique()),
+                                    "descriptives": _desc.to_dict(orient="records"),
+                                    "rm_anova": _anova.to_dict(orient="records"),
+                                    "pairwise_tests": _pw.to_dict(orient="records"),
+                                }
+                                _stats_json_path = os.path.join(tables_dir, "peak_to_peak_statistics.json")
+                                import json as _json
+                                with open(_stats_json_path, "w", encoding="utf-8") as _f:
+                                    _json.dump(_stats_out, _f, indent=2, default=str)
+                                print(f"\n  Saved P2P statistics: {os.path.basename(_stats_json_path)}")
+                            else:
+                                print("  Insufficient complete subjects for rm_anova (need >= 3)")
+                        except ImportError:
+                            print("  pingouin not installed; skipping P2P statistics")
+                        except Exception as _e:
+                            print(f"  P2P statistics error: {_e}")
+                        print("--- End P2P Statistics ---\n")
+        else:
+            print("Warning: Subject-level P2P skipped (P1 and/or N1 localizer windows unavailable).")
     # === Per-Condition Analysis (using GFP-derived windows) ===
     print("Generating per-condition analyses...")
     print("(Using FWHM windows from collapsed localizer)\n")
@@ -1035,14 +1176,12 @@ def main() -> int:
                     hline_color = str(p2p_cfg.get("hline_color", "#000000"))
                     hline_style = str(p2p_cfg.get("hline_style", ":"))
 
-                    fig = make_peak_to_peak_figure(
+                    p2p_common_kw = dict(
                         curves_by_label=p2p_curves,
                         times_ms=times_ms,
                         p2p_by_label=p2p_by,
                         p1_lat_by_label=p1_lat_by,
                         n1_lat_by_label=n1_lat_by,
-                        title=f"{analysis_id}: P1↔N1 peak-to-peak ({response_label})",
-                        subtitle="Using N1 electrode montage (bilateral POT)",
                         colors=colors_map,
                         linestyles=linestyles_map,
                         xlim_ms=(baseline[0], float(times_ms[-1])),
@@ -1052,12 +1191,32 @@ def main() -> int:
                         p1_amp_by_label=p1_amp_by,
                         n1_amp_by_label=n1_amp_by,
                         epochs_by_label=set_name_to_total_epochs,
+                        match_hline_linestyles=True,
+                    )
+
+                    fig = make_peak_to_peak_figure(
+                        title=f"{analysis_id}: P1↔N1 peak-to-peak ({response_label})",
+                        subtitle="Using N1 electrode montage (bilateral POT)",
+                        **p2p_common_kw,
                     )
                     p2p_path = os.path.join(plots_dir, f"{analysis_id}-P1_N1_peak_to_peak.png")
                     _save_figure(fig, p2p_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
                     plt.close(fig)
                     saved_figs.append(p2p_path)
                     print(f"Saved peak-to-peak plot: {os.path.basename(p2p_path)}")
+
+                    if bool(getattr(args, "save_no_topo", False)):
+                        fig_no_title = make_peak_to_peak_figure(
+                            title=f"{analysis_id}: P1↔N1 peak-to-peak ({response_label})",
+                            subtitle="Using N1 electrode montage (bilateral POT)",
+                            include_title=False,
+                            include_subtitle=False,
+                            **p2p_common_kw,
+                        )
+                        p2p_no_title_path = os.path.join(plots_dir, f"{analysis_id}-P1_N1_peak_to_peak-no_topo.png")
+                        _save_figure(fig_no_title, p2p_no_title_path, dpi=int(cfg.plots.get("dpi", 300)), bbox_inches="tight")
+                        plt.close(fig_no_title)
+                        print(f"    Saved (no title): {os.path.basename(p2p_no_title_path)}")
 
                     # Write CSV with metrics
                     import csv

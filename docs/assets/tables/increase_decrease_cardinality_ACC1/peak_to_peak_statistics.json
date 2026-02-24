@@ -1,0 +1,98 @@
+{
+  "analysis_id": "increase_decrease_cardinality_ACC1",
+  "measure": "P1_N1_peak_to_peak_amplitude",
+  "n_subjects_complete": 24,
+  "n_subjects_total": 24,
+  "descriptives": [
+    {
+      "condition": "Decreasing (any step)",
+      "mean": 6.68621050294076,
+      "std": 2.505182030603526,
+      "count": 24,
+      "sem": 0.5113681406473393
+    },
+    {
+      "condition": "Increasing (any step)",
+      "mean": 7.165775650441566,
+      "std": 2.706247309950998,
+      "count": 24,
+      "sem": 0.5524104189299616
+    },
+    {
+      "condition": "No Change",
+      "mean": 6.387773932088625,
+      "std": 2.527103938375839,
+      "count": 24,
+      "sem": 0.5158429313332159
+    }
+  ],
+  "rm_anova": [
+    {
+      "Source": "condition",
+      "SS": 7.3946703302366465,
+      "DF": 2,
+      "MS": 3.6973351651183233,
+      "F": 6.195919153404523,
+      "p-unc": 0.004143150638289753,
+      "ng2": 0.015831974860665184,
+      "eps": 0.9537611921931555
+    },
+    {
+      "Source": "Error",
+      "SS": 27.449909107027167,
+      "DF": 46,
+      "MS": 0.5967371545005906,
+      "F": NaN,
+      "p-unc": NaN,
+      "ng2": NaN,
+      "eps": NaN
+    }
+  ],
+  "pairwise_tests": [
+    {
+      "Contrast": "condition",
+      "A": "Decreasing (any step)",
+      "B": "Increasing (any step)",
+      "Paired": true,
+      "Parametric": true,
+      "T": -1.9493306490016673,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.06355288235914482,
+      "p-corr": 0.09532932353871723,
+      "p-adjust": "fdr_bh",
+      "BF10": "1.078",
+      "cohen": -0.18390678958025192
+    },
+    {
+      "Contrast": "condition",
+      "A": "Decreasing (any step)",
+      "B": "No Change",
+      "Paired": true,
+      "Parametric": true,
+      "T": 1.4434517994044418,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.1623765713139732,
+      "p-corr": 0.1623765713139732,
+      "p-adjust": "fdr_bh",
+      "BF10": "0.536",
+      "cohen": 0.11860762326560723
+    },
+    {
+      "Contrast": "condition",
+      "A": "Increasing (any step)",
+      "B": "No Change",
+      "Paired": true,
+      "Parametric": true,
+      "T": 3.630832784072744,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.0014001142316023972,
+      "p-corr": 0.004200342694807192,
+      "p-adjust": "fdr_bh",
+      "BF10": "26.131",
+      "cohen": 0.2971504348952326
+    }
+  ]
+}

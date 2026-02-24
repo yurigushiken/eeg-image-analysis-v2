@@ -1,0 +1,59 @@
+{
+  "analysis_id": "increase_decrease_ACC1",
+  "measure": "P1_N1_peak_to_peak_amplitude",
+  "n_subjects_complete": 24,
+  "n_subjects_total": 24,
+  "descriptives": [
+    {
+      "condition": "Decreasing",
+      "mean": 6.64815936190617,
+      "std": 2.5401487470108233,
+      "count": 24,
+      "sem": 0.5185056917455462
+    },
+    {
+      "condition": "Increasing",
+      "mean": 7.220130452073945,
+      "std": 2.704535124092206,
+      "count": 24,
+      "sem": 0.5520609204550575
+    }
+  ],
+  "rm_anova": [
+    {
+      "Source": "condition",
+      "SS": 3.9258111358525563,
+      "DF": 1,
+      "MS": 3.9258111358525563,
+      "F": 4.754965805322363,
+      "p-unc": 0.039698494337675125,
+      "ng2": 0.012246585651417861,
+      "eps": 1.0
+    },
+    {
+      "Source": "Error",
+      "SS": 18.98933868747082,
+      "DF": 23,
+      "MS": 0.8256234211943835,
+      "F": NaN,
+      "p-unc": NaN,
+      "ng2": NaN,
+      "eps": NaN
+    }
+  ],
+  "pairwise_tests": [
+    {
+      "Contrast": "condition",
+      "A": "Decreasing",
+      "B": "Increasing",
+      "Paired": true,
+      "Parametric": true,
+      "T": -2.1805884080500757,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.03969849433767514,
+      "BF10": "1.562",
+      "cohen": -0.218007550442575
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+dataset:
+  root: data/lab_data_original
+  pattern: sub-*_preprocessed-epo.fif
+  montage_sfp: assets/net/AdultAverageNet128_v1.sfp
+selection:
+  response: ACC1
+  min_epochs_per_set: 1
+  condition_sets:
+  - name: "Landing on 1"
+    conditions: ['21','31','41']
+    color: '#1f77b4'
+    linestyle: '-'
+  - name: "Landing on 2"
+    conditions: ['12','32','42','52']
+    color: '#ff7f0e'
+    linestyle: '-'
+  - name: "Landing on 3"
+    conditions: ['13','23','43','53','63']
+    color: '#2ca02c'
+    linestyle: '-'
+  - name: "Landing on 4"
+    conditions: ['14','24','34','54','64']
+    color: '#d62728'
+    linestyle: '-'
+  - name: "Landing on 5"
+    conditions: ['25','35','45','65']
+    color: '#9467bd'
+    linestyle: '-'
+  - name: "Landing on 6"
+    conditions: ['36','46','56']
+    color: '#8c564b'
+    linestyle: '-'
+components:
+- P1
+- N1
+- P3b
+- Fz
+preprocessing:
+  baseline_ms: [-100, 0]
+roi:
+  min_channels: 4
+plots:
+  formats: [png]
+  dpi: 300
+  colors:
+  - '#1f77b4'
+  - '#ff7f0e'
+  - '#2ca02c'
+  - '#d62728'
+  - '#9467bd'
+  - '#8c564b'
+outputs:
+  page: docs/analysis/landing_on_all_ACC1.md
+  plots_dir: docs/assets/plots/landing_on_all_ACC1
+  tables_dir: docs/assets/tables/landing_on_all_ACC1
+measurement:
+  latency: peak
+  amplitude: peak
+  peak_to_peak:
+    enabled: true
+    roi: [N1_L, N1_R]
+    hline_color: '#000000'
+    hline_style: ':'

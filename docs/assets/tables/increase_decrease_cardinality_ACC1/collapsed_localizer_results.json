@@ -1,6 +1,6 @@
 {
   "analysis_id": "increase_decrease_cardinality_ACC1",
-  "date_analyzed": "2026-02-08T15:21:25.988547",
+  "date_analyzed": "2026-02-23T17:40:17.510147",
   "baseline_ms": [
     -100,
     0
@@ -12,7 +12,7 @@
   "conditions": [
     "Increasing (any step)",
     "Decreasing (any step)",
-    "Cardinality (no change)"
+    "No Change"
   ],
   "components": {
     "P1": {

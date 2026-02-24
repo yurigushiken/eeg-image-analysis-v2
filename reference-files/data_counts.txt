@@ -1,0 +1,71 @@
+Data Handling Investigation (ACC=1 vs ALL) - 2026-01-31
+
+
+about data
+HAPPE v4.1.0 ✅
+1.5-35 Hz bandpass (FIR, not Butterworth) ✅
+60 Hz CleanLine ✅
+Epochs -200 to ~1000 ms ✅
+Baseline -200 to 0 ms ✅
+Average re-reference ✅
+Bad channels identified and interpolated ✅ (80.6-92.2% good channels retained across subjects, range of 8-25 bad channels per subject)
+
+Sources inspected:
+- data_preprocessed/HAPPE_-200-1000-fif/sub-02_preprocessed-epo_metadata.csv
+- data_preprocessed/HAPPE_-200-1000-fif/sub-02_preprocessed-epo.fif (metadata inside epochs)
+- data_preprocessed/HAPPE_-200-1000-fif/sub-*_preprocessed-epo_metadata.csv (all subjects)
+...
+
+Quick confirmation (sub-02):
+- Epochs file contains 270 epochs and metadata columns matching the CSV:
+  SubjectID, Block, Trial, Procedure, Condition, Target.ACC, Target.RT,
+  Trial_Continuous, direction, change_group, size, Prime1..Prime5.
+
+Change-code coverage (ACC=1 only):
+- Subjects total: 24
+- Union of change codes present across ACC=1 data:
+  12, 13, 14, 21, 23, 24, 25, 31, 32, 34, 35, 36,
+  41, 42, 43, 45, 46, 52, 53, 54, 56, 63, 64, 65
+- Subjects missing at least one change code in ACC=1: 9
+- Subjects missing 56 or 65 in ACC=1:
+  02, 03, 04, 08, 10, 15, 21, 22, 28
+- Missing counts (ACC=1):
+  - 56 missing in 6 subjects
+  - 65 missing in 5 subjects  
+
+Change-code coverage (ALL trials):
+- Subjects missing any change code: 0
+- Subjects missing 56 or 65: 0
+
+Interpretation:
+- ACC=1 data are sparse for harder pairs (56, 65), which explains why
+  complete-case RDM analyses on change24 can drop to N=15.
+- ALL data provide full change-code coverage across all 24 subjects.
+
+Trial Counts (verified 2026-02-08)
+Sources: all 24 *_metadata.csv + all 24 *.fif files (counts match exactly)
+
+Per participant (identical across all 24 subjects):
+- Total usable epochs: 270
+- Change trials (prime ≠ target): 216
+- No-change trials (prime = target): 54
+- Trials per change code: 9 (perfectly balanced across all 24 codes)
+
+Across all participants:
+- Total usable epochs: 6,480
+- Total change trials: 5,184
+
+Change trials per target digit per participant:
+- Target 1: 27 (primes 2,3,4)
+- Target 2: 36 (primes 1,3,4,5)
+- Target 3: 45 (primes 1,2,4,5,6)
+- Target 4: 45 (primes 1,2,3,5,6)
+- Target 5: 36 (primes 2,3,4,6)
+- Target 6: 27 (primes 3,4,5)
+
+Notes:
+- Every subject has exactly 270 epochs after HAPPE preprocessing (no trials
+  rejected by artifact masks in any subject).
+- Design constraint: only change trials where |prime - target| ≤ 3 are
+  included, giving 24 distinct prime-target conditions.
+- The 24-condition RSA analysis uses the 216 change trials per participant.

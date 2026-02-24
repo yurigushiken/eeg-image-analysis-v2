@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:54:29
+**Generated:** 2026-02-23 19:24:56
 
 ---
 
@@ -41,25 +41,25 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | 110.89 ms | 6.26 | 1.48 | [92.00, 116.00] |
-| Decrease by 1 | 16 | 106.25 ms | 8.64 | 2.16 | [92.00, 116.00] |
-| Decrease by 2 | 21 | 107.62 ms | 8.75 | 1.91 | [92.00, 116.00] |
-| Decrease by 3 | 18 | 105.11 ms | 8.09 | 1.91 | [92.00, 116.00] |
-| Increase by 1 | 16 | 102.50 ms | 8.75 | 2.19 | [92.00, 116.00] |
-| Increase by 2 | 15 | 104.00 ms | 8.68 | 2.24 | [92.00, 116.00] |
-| Increase by 3 | 14 | 103.14 ms | 7.05 | 1.88 | [92.00, 112.00] |
+| Cardinality (no change) | 24 | 107.17 ms | 8.98 | 1.83 | [92.00, 116.00] |
+| Decrease by 1 | 24 | 106.17 ms | 8.90 | 1.82 | [92.00, 116.00] |
+| Decrease by 2 | 24 | 107.00 ms | 9.08 | 1.85 | [92.00, 116.00] |
+| Decrease by 3 | 24 | 104.83 ms | 9.29 | 1.90 | [92.00, 116.00] |
+| Increase by 1 | 24 | 102.17 ms | 9.73 | 1.99 | [92.00, 116.00] |
+| Increase by 2 | 24 | 102.00 ms | 9.14 | 1.87 | [92.00, 116.00] |
+| Increase by 3 | 24 | 102.00 ms | 8.83 | 1.80 | [92.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | -1.77 µV | 1.24 | 0.29 | [-4.83, -0.25] |
-| Decrease by 1 | 16 | -1.64 µV | 1.20 | 0.30 | [-4.56, -0.23] |
-| Decrease by 2 | 21 | -1.73 µV | 0.99 | 0.22 | [-4.30, -0.45] |
-| Decrease by 3 | 18 | -2.41 µV | 1.59 | 0.38 | [-6.39, -0.34] |
-| Increase by 1 | 16 | -1.75 µV | 1.08 | 0.27 | [-3.74, -0.14] |
-| Increase by 2 | 15 | -1.67 µV | 1.17 | 0.30 | [-4.17, -0.21] |
-| Increase by 3 | 14 | -1.78 µV | 1.04 | 0.28 | [-3.35, -0.46] |
+| Cardinality (no change) | 24 | -1.28 µV | 1.38 | 0.28 | [-4.83, 0.55] |
+| Decrease by 1 | 24 | -1.00 µV | 1.40 | 0.29 | [-4.56, 1.16] |
+| Decrease by 2 | 24 | -1.46 µV | 1.25 | 0.26 | [-4.30, 2.02] |
+| Decrease by 3 | 24 | -1.78 µV | 1.87 | 0.38 | [-6.39, 1.69] |
+| Increase by 1 | 24 | -1.14 µV | 1.28 | 0.26 | [-3.74, 0.92] |
+| Increase by 2 | 24 | -1.03 µV | 1.25 | 0.26 | [-4.17, 0.52] |
+| Increase by 3 | 24 | -1.13 µV | 1.22 | 0.25 | [-3.35, 1.12] |
 
 
 ### 2.2 N1 Component
@@ -68,25 +68,25 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | 176.17 ms | 17.41 | 3.63 | [144.00, 208.00] |
-| Decrease by 1 | 22 | 176.55 ms | 12.73 | 2.71 | [152.00, 208.00] |
+| Cardinality (no change) | 24 | 175.83 ms | 17.11 | 3.49 | [144.00, 208.00] |
+| Decrease by 1 | 24 | 179.00 ms | 14.74 | 3.01 | [152.00, 208.00] |
 | Decrease by 2 | 24 | 177.33 ms | 14.53 | 2.97 | [144.00, 208.00] |
 | Decrease by 3 | 24 | 177.00 ms | 15.02 | 3.07 | [152.00, 208.00] |
-| Increase by 1 | 23 | 169.57 ms | 19.10 | 3.98 | [144.00, 208.00] |
+| Increase by 1 | 24 | 171.17 ms | 20.26 | 4.14 | [144.00, 208.00] |
 | Increase by 2 | 24 | 168.83 ms | 18.42 | 3.76 | [144.00, 200.00] |
-| Increase by 3 | 23 | 170.26 ms | 18.68 | 3.89 | [144.00, 208.00] |
+| Increase by 3 | 24 | 171.83 ms | 19.82 | 4.05 | [144.00, 208.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | -4.80 µV | 2.00 | 0.42 | [-9.57, -1.40] |
-| Decrease by 1 | 22 | -5.16 µV | 1.92 | 0.41 | [-9.90, -2.24] |
+| Cardinality (no change) | 24 | -4.62 µV | 2.14 | 0.44 | [-9.57, -0.60] |
+| Decrease by 1 | 24 | -4.90 µV | 2.05 | 0.42 | [-9.90, -1.23] |
 | Decrease by 2 | 24 | -5.13 µV | 2.10 | 0.43 | [-9.59, -1.53] |
 | Decrease by 3 | 24 | -5.22 µV | 1.97 | 0.40 | [-8.60, -1.48] |
-| Increase by 1 | 23 | -5.11 µV | 2.15 | 0.45 | [-9.46, -0.80] |
+| Increase by 1 | 24 | -5.08 µV | 2.11 | 0.43 | [-9.46, -0.80] |
 | Increase by 2 | 24 | -5.47 µV | 2.43 | 0.50 | [-11.28, -1.22] |
-| Increase by 3 | 23 | -6.29 µV | 2.53 | 0.53 | [-12.86, -2.17] |
+| Increase by 3 | 24 | -6.17 µV | 2.54 | 0.52 | [-12.86, -2.17] |
 
 
 ### 2.3 P1 Component
@@ -95,25 +95,25 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 13 | 111.38 ms | 6.50 | 1.80 | [100.00, 116.00] |
-| Decrease by 1 | 14 | 110.86 ms | 8.07 | 2.16 | [92.00, 116.00] |
-| Decrease by 2 | 17 | 109.88 ms | 8.50 | 2.06 | [92.00, 116.00] |
-| Decrease by 3 | 17 | 109.41 ms | 6.32 | 1.53 | [96.00, 116.00] |
-| Increase by 1 | 17 | 105.41 ms | 9.05 | 2.19 | [92.00, 116.00] |
-| Increase by 2 | 13 | 109.23 ms | 7.00 | 1.94 | [96.00, 116.00] |
-| Increase by 3 | 15 | 102.93 ms | 9.50 | 2.45 | [92.00, 116.00] |
+| Cardinality (no change) | 24 | 106.00 ms | 10.55 | 2.15 | [92.00, 116.00] |
+| Decrease by 1 | 24 | 108.50 ms | 9.68 | 1.98 | [92.00, 116.00] |
+| Decrease by 2 | 24 | 109.50 ms | 8.32 | 1.70 | [92.00, 116.00] |
+| Decrease by 3 | 24 | 107.33 ms | 9.03 | 1.84 | [92.00, 116.00] |
+| Increase by 1 | 24 | 103.67 ms | 9.50 | 1.94 | [92.00, 116.00] |
+| Increase by 2 | 24 | 103.00 ms | 9.60 | 1.96 | [92.00, 116.00] |
+| Increase by 3 | 24 | 100.50 ms | 9.31 | 1.90 | [92.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 13 | 2.47 µV | 1.69 | 0.47 | [0.70, 5.73] |
-| Decrease by 1 | 14 | 2.19 µV | 1.67 | 0.45 | [0.47, 5.23] |
-| Decrease by 2 | 17 | 2.32 µV | 1.29 | 0.31 | [0.54, 5.74] |
-| Decrease by 3 | 17 | 2.61 µV | 1.93 | 0.47 | [0.48, 8.15] |
-| Increase by 1 | 17 | 1.92 µV | 1.45 | 0.35 | [0.54, 4.44] |
-| Increase by 2 | 13 | 2.11 µV | 1.41 | 0.39 | [0.43, 4.70] |
-| Increase by 3 | 15 | 2.20 µV | 1.37 | 0.35 | [0.69, 5.27] |
+| Cardinality (no change) | 24 | 1.27 µV | 1.86 | 0.38 | [-1.29, 5.73] |
+| Decrease by 1 | 24 | 1.09 µV | 1.88 | 0.38 | [-1.32, 5.23] |
+| Decrease by 2 | 24 | 1.53 µV | 1.78 | 0.36 | [-2.32, 5.74] |
+| Decrease by 3 | 24 | 1.94 µV | 2.07 | 0.42 | [-1.76, 8.15] |
+| Increase by 1 | 24 | 1.32 µV | 1.67 | 0.34 | [-1.63, 4.44] |
+| Increase by 2 | 24 | 1.10 µV | 1.60 | 0.33 | [-1.42, 4.70] |
+| Increase by 3 | 24 | 1.39 µV | 1.66 | 0.34 | [-1.07, 5.27] |
 
 
 ### 2.4 P3b Component
@@ -122,25 +122,25 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 470.57 ms | 23.14 | 6.19 | [436.00, 516.00] |
-| Decrease by 1 | 19 | 485.05 ms | 30.05 | 6.89 | [436.00, 532.00] |
-| Decrease by 2 | 19 | 470.32 ms | 27.37 | 6.28 | [420.00, 532.00] |
-| Decrease by 3 | 19 | 479.58 ms | 28.72 | 6.59 | [432.00, 524.00] |
-| Increase by 1 | 17 | 489.88 ms | 39.70 | 9.63 | [420.00, 532.00] |
-| Increase by 2 | 18 | 487.33 ms | 31.50 | 7.43 | [428.00, 532.00] |
-| Increase by 3 | 21 | 479.05 ms | 37.37 | 8.16 | [420.00, 532.00] |
+| Cardinality (no change) | 24 | 463.50 ms | 24.86 | 5.08 | [420.00, 516.00] |
+| Decrease by 1 | 24 | 486.17 ms | 32.26 | 6.58 | [420.00, 532.00] |
+| Decrease by 2 | 24 | 472.33 ms | 32.06 | 6.54 | [420.00, 532.00] |
+| Decrease by 3 | 24 | 480.17 ms | 33.08 | 6.75 | [420.00, 532.00] |
+| Increase by 1 | 24 | 484.50 ms | 40.40 | 8.25 | [420.00, 532.00] |
+| Increase by 2 | 24 | 487.67 ms | 33.40 | 6.82 | [428.00, 532.00] |
+| Increase by 3 | 24 | 478.50 ms | 36.06 | 7.36 | [420.00, 532.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 2.75 µV | 1.66 | 0.44 | [0.90, 5.95] |
-| Decrease by 1 | 19 | 5.16 µV | 2.46 | 0.56 | [1.31, 9.87] |
-| Decrease by 2 | 19 | 4.93 µV | 2.05 | 0.47 | [1.69, 8.68] |
-| Decrease by 3 | 19 | 5.54 µV | 2.91 | 0.67 | [0.72, 12.38] |
-| Increase by 1 | 17 | 4.69 µV | 2.66 | 0.64 | [1.41, 10.19] |
-| Increase by 2 | 18 | 5.45 µV | 2.67 | 0.63 | [1.31, 10.55] |
-| Increase by 3 | 21 | 4.44 µV | 2.61 | 0.57 | [1.25, 10.15] |
+| Cardinality (no change) | 24 | 1.14 µV | 2.72 | 0.56 | [-4.85, 5.95] |
+| Decrease by 1 | 24 | 4.11 µV | 3.08 | 0.63 | [-2.27, 9.87] |
+| Decrease by 2 | 24 | 3.81 µV | 2.92 | 0.60 | [-1.68, 8.68] |
+| Decrease by 3 | 24 | 4.36 µV | 3.49 | 0.71 | [-1.21, 12.38] |
+| Increase by 1 | 24 | 3.02 µV | 3.58 | 0.73 | [-3.53, 10.19] |
+| Increase by 2 | 24 | 4.01 µV | 3.47 | 0.71 | [-2.36, 10.55] |
+| Increase by 3 | 24 | 3.96 µV | 2.76 | 0.56 | [0.21, 10.15] |
 
 
 ---
@@ -156,14 +156,14 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 807.23, BIC = 834.94
-- **Decrease by 1 vs Cardinality (no change)**: *β* = -2.65, *SE* = 2.105, *z* = -1.257, *p* = 0.209
-- **Decrease by 2 vs Cardinality (no change)**: *β* = -1.69, *SE* = 1.923, *z* = -0.876, *p* = 0.381
-- **Decrease by 3 vs Cardinality (no change)**: *β* = -4.42, *SE* = 2.015, *z* = -2.196, *p* = 0.028
-- **Increase by 1 vs Cardinality (no change)**: *β* = -6.70, *SE* = 2.052, *z* = -3.263, *p* = 0.001
-- **Increase by 2 vs Cardinality (no change)**: *β* = -6.40, *SE* = 2.083, *z* = -3.072, *p* = 0.002
-- **Increase by 3 vs Cardinality (no change)**: *β* = -6.21, *SE* = 2.128, *z* = -2.921, *p* = 0.003
-- **SNR**: *β* = 0.87, *SE* = 0.345, *z* = 2.533, *p* = 0.011
+- AIC = 1166.66, BIC = 1197.90
+- **Decrease by 1 vs Cardinality (no change)**: *β* = -0.50, *SE* = 1.853, *z* = -0.272, *p* = 0.785
+- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.05, *SE* = 1.837, *z* = -0.027, *p* = 0.979
+- **Decrease by 3 vs Cardinality (no change)**: *β* = -2.49, *SE* = 1.838, *z* = -1.356, *p* = 0.175
+- **Increase by 1 vs Cardinality (no change)**: *β* = -4.68, *SE* = 1.843, *z* = -2.538, *p* = 0.011
+- **Increase by 2 vs Cardinality (no change)**: *β* = -4.74, *SE* = 1.848, *z* = -2.566, *p* = 0.010
+- **Increase by 3 vs Cardinality (no change)**: *β* = -4.73, *SE* = 1.849, *z* = -2.559, *p* = 0.010
+- **SNR**: *β* = 0.68, *SE* = 0.343, *z* = 1.989, *p* = 0.047
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -176,27 +176,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | 2.65 | 2.11 | 1.26 | 0.209 | 0.904 | n.s. |
-| Cardinality (no change) - Decrease by 2 | 1.68 | 1.92 | 0.88 | 0.381 | 0.970 | n.s. |
-| Cardinality (no change) - Decrease by 3 | 4.42 | 2.01 | 2.20 | 0.028 | 0.366 | n.s. |
-| Cardinality (no change) - Increase by 1 | 6.70 | 2.05 | 3.26 | 0.001 | 0.023 | * |
-| Cardinality (no change) - Increase by 2 | 6.40 | 2.08 | 3.07 | 0.002 | 0.042 | * |
-| Cardinality (no change) - Increase by 3 | 6.22 | 2.13 | 2.92 | 0.003 | 0.064 | n.s. |
-| Decrease by 1 - Decrease by 2 | -0.96 | 2.01 | -0.48 | 0.633 | 0.982 | n.s. |
-| Decrease by 1 - Decrease by 3 | 1.78 | 2.12 | 0.84 | 0.402 | 0.970 | n.s. |
-| Decrease by 1 - Increase by 1 | 4.05 | 2.12 | 1.91 | 0.057 | 0.557 | n.s. |
-| Decrease by 1 - Increase by 2 | 3.76 | 2.17 | 1.73 | 0.084 | 0.680 | n.s. |
-| Decrease by 1 - Increase by 3 | 3.57 | 2.23 | 1.60 | 0.109 | 0.750 | n.s. |
-| Decrease by 2 - Decrease by 3 | 2.74 | 1.91 | 1.44 | 0.151 | 0.835 | n.s. |
-| Decrease by 2 - Increase by 1 | 5.01 | 1.98 | 2.53 | 0.011 | 0.186 | n.s. |
-| Decrease by 2 - Increase by 2 | 4.72 | 2.04 | 2.31 | 0.021 | 0.300 | n.s. |
-| Decrease by 2 - Increase by 3 | 4.53 | 2.07 | 2.19 | 0.029 | 0.366 | n.s. |
-| Decrease by 3 - Increase by 1 | 2.27 | 2.07 | 1.10 | 0.273 | 0.943 | n.s. |
-| Decrease by 3 - Increase by 2 | 1.98 | 2.14 | 0.92 | 0.355 | 0.970 | n.s. |
-| Decrease by 3 - Increase by 3 | 1.79 | 2.15 | 0.83 | 0.404 | 0.970 | n.s. |
-| Increase by 1 - Increase by 2 | -0.30 | 2.17 | -0.14 | 0.892 | 0.995 | n.s. |
-| Increase by 1 - Increase by 3 | -0.48 | 2.19 | -0.22 | 0.826 | 0.995 | n.s. |
-| Increase by 2 - Increase by 3 | -0.19 | 2.23 | -0.08 | 0.934 | 0.995 | n.s. |
+| Cardinality (no change) - Decrease by 1 | 0.50 | 1.85 | 0.27 | 0.785 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 | 0.05 | 1.84 | 0.03 | 0.979 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 | 2.49 | 1.84 | 1.36 | 0.175 | 0.901 | n.s. |
+| Cardinality (no change) - Increase by 1 | 4.68 | 1.84 | 2.54 | 0.011 | 0.195 | n.s. |
+| Cardinality (no change) - Increase by 2 | 4.74 | 1.85 | 2.57 | 0.010 | 0.195 | n.s. |
+| Cardinality (no change) - Increase by 3 | 4.73 | 1.85 | 2.56 | 0.010 | 0.195 | n.s. |
+| Decrease by 1 - Decrease by 2 | -0.46 | 1.85 | -0.25 | 0.805 | 1.000 | n.s. |
+| Decrease by 1 - Decrease by 3 | 1.99 | 1.87 | 1.07 | 0.286 | 0.923 | n.s. |
+| Decrease by 1 - Increase by 1 | 4.17 | 1.84 | 2.27 | 0.023 | 0.272 | n.s. |
+| Decrease by 1 - Increase by 2 | 4.24 | 1.84 | 2.31 | 0.021 | 0.272 | n.s. |
+| Decrease by 1 - Increase by 3 | 4.23 | 1.84 | 2.30 | 0.021 | 0.272 | n.s. |
+| Decrease by 2 - Decrease by 3 | 2.44 | 1.84 | 1.33 | 0.184 | 0.901 | n.s. |
+| Decrease by 2 - Increase by 1 | 4.63 | 1.84 | 2.52 | 0.012 | 0.195 | n.s. |
+| Decrease by 2 - Increase by 2 | 4.69 | 1.84 | 2.55 | 0.011 | 0.195 | n.s. |
+| Decrease by 2 - Increase by 3 | 4.68 | 1.84 | 2.54 | 0.011 | 0.195 | n.s. |
+| Decrease by 3 - Increase by 1 | 2.18 | 1.85 | 1.18 | 0.238 | 0.923 | n.s. |
+| Decrease by 3 - Increase by 2 | 2.25 | 1.86 | 1.21 | 0.226 | 0.923 | n.s. |
+| Decrease by 3 - Increase by 3 | 2.24 | 1.86 | 1.20 | 0.229 | 0.923 | n.s. |
+| Increase by 1 - Increase by 2 | 0.07 | 1.84 | 0.04 | 0.971 | 1.000 | n.s. |
+| Increase by 1 - Increase by 3 | 0.05 | 1.84 | 0.03 | 0.976 | 1.000 | n.s. |
+| Increase by 2 - Increase by 3 | -0.01 | 1.84 | -0.01 | 0.995 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -204,8 +204,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.19, *p* = 0.357, η²_G = 0.096
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 3.17, *p* = 0.006, η²_G = 0.058
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -213,27 +213,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | 1.19 | 3 | = 0.693 | 0.51 [-0.49, 0.79] | medium | n.s. |
-| Cardinality (no change) vs Decrease by 2 | 1.00 | 3 | = 0.693 | 0.22 [-0.28, 0.80] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 | 1.57 | 3 | = 0.693 | 0.84 [-0.27, 0.98] | large | n.s. |
-| Cardinality (no change) vs Increase by 1 | 1.57 | 3 | = 0.693 | 0.93 [0.09, 1.40] | large | n.s. |
-| Cardinality (no change) vs Increase by 2 | 0.77 | 3 | = 0.693 | 0.31 [0.01, 1.28] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 | 1.57 | 3 | = 0.693 | 0.62 [0.40, 1.99] | medium | n.s. |
-| Decrease by 1 vs Decrease by 2 | -0.77 | 3 | = 0.693 | -0.32 [-0.49, 0.67] | small | n.s. |
-| Decrease by 1 vs Decrease by 3 | 0.00 | 3 | = 1.000 | 0.00 [-0.82, 0.53] | negligible | n.s. |
-| Decrease by 1 vs Increase by 1 | 1.57 | 3 | = 0.693 | 0.39 [-0.25, 1.07] | small | n.s. |
-| Decrease by 1 vs Increase by 2 | -1.00 | 3 | = 0.693 | -0.13 [-0.34, 1.05] | negligible | n.s. |
-| Decrease by 1 vs Increase by 3 | 0.00 | 3 | = 1.000 | 0.00 [-0.27, 1.38] | negligible | n.s. |
-| Decrease by 2 vs Decrease by 3 | 0.77 | 3 | = 0.693 | 0.46 [-0.32, 0.72] | small | n.s. |
-| Decrease by 2 vs Increase by 1 | 1.21 | 3 | = 0.693 | 0.73 [-0.15, 1.01] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | 0.40 | 3 | = 0.887 | 0.15 [-0.18, 1.09] | negligible | n.s. |
-| Decrease by 2 vs Increase by 3 | 0.77 | 3 | = 0.693 | 0.37 [-0.08, 1.22] | small | n.s. |
-| Decrease by 3 vs Increase by 1 | 1.19 | 3 | = 0.693 | 0.48 [-0.36, 0.86] | small | n.s. |
-| Decrease by 3 vs Increase by 2 | -0.33 | 3 | = 0.888 | -0.16 [-0.48, 0.88] | negligible | n.s. |
-| Decrease by 3 vs Increase by 3 | 0.00 | 3 | = 1.000 | 0.00 [-0.43, 0.86] | negligible | n.s. |
-| Increase by 1 vs Increase by 2 | -1.41 | 3 | = 0.693 | -0.49 [-1.23, 0.28] | small | n.s. |
-| Increase by 1 vs Increase by 3 | -1.19 | 3 | = 0.693 | -0.42 [-0.73, 0.61] | small | n.s. |
-| Increase by 2 vs Increase by 3 | 0.52 | 3 | = 0.837 | 0.14 [-1.10, 0.37] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 | 0.92 | 23 | = 0.512 | 0.11 [-0.24, 0.61] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 | 0.11 | 23 | = 0.981 | 0.02 [-0.40, 0.45] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 | 1.07 | 23 | = 0.459 | 0.26 [-0.21, 0.65] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 | 2.85 | 23 | = 0.064 | 0.53 [0.12, 1.04] | medium | n.s. |
+| Cardinality (no change) vs Increase by 2 | 2.88 | 23 | = 0.064 | 0.57 [0.13, 1.05] | medium | n.s. |
+| Cardinality (no change) vs Increase by 3 | 3.71 | 23 | = 0.024 | 0.58 [0.28, 1.24] | medium | * |
+| Decrease by 1 vs Decrease by 2 | -0.48 | 23 | = 0.785 | -0.09 [-0.52, 0.33] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 3 | 0.57 | 23 | = 0.752 | 0.15 [-0.31, 0.54] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 2.24 | 23 | = 0.092 | 0.43 [0.01, 0.90] | small | n.s. |
+| Decrease by 1 vs Increase by 2 | 2.34 | 23 | = 0.084 | 0.46 [0.03, 0.92] | small | n.s. |
+| Decrease by 1 vs Increase by 3 | 2.66 | 23 | = 0.066 | 0.47 [0.09, 0.99] | small | n.s. |
+| Decrease by 2 vs Decrease by 3 | 1.05 | 23 | = 0.459 | 0.24 [-0.21, 0.64] | small | n.s. |
+| Decrease by 2 vs Increase by 1 | 2.07 | 23 | = 0.116 | 0.51 [-0.02, 0.86] | medium | n.s. |
+| Decrease by 2 vs Increase by 2 | 2.38 | 23 | = 0.084 | 0.55 [0.04, 0.93] | medium | n.s. |
+| Decrease by 2 vs Increase by 3 | 2.61 | 23 | = 0.066 | 0.56 [0.08, 0.98] | medium | n.s. |
+| Decrease by 3 vs Increase by 1 | 1.13 | 23 | = 0.459 | 0.28 [-0.20, 0.66] | small | n.s. |
+| Decrease by 3 vs Increase by 2 | 1.23 | 23 | = 0.441 | 0.31 [-0.18, 0.68] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | 1.38 | 23 | = 0.378 | 0.31 [-0.15, 0.71] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 0.08 | 23 | = 0.981 | 0.02 [-0.41, 0.44] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 0.12 | 23 | = 0.981 | 0.02 [-0.40, 0.45] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.00 | 23 | = 1.000 | 0.00 [-0.42, 0.42] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -243,14 +243,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 284.74, BIC = 312.45
-- **Decrease by 1 vs Cardinality (no change)**: *β* = -0.13, *SE* = 0.227, *z* = -0.572, *p* = 0.567
-- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.13, *SE* = 0.207, *z* = -0.617, *p* = 0.537
-- **Decrease by 3 vs Cardinality (no change)**: *β* = -0.62, *SE* = 0.217, *z* = -2.870, *p* = 0.004
-- **Increase by 1 vs Cardinality (no change)**: *β* = -0.06, *SE* = 0.221, *z* = -0.282, *p* = 0.778
-- **Increase by 2 vs Cardinality (no change)**: *β* = -0.07, *SE* = 0.225, *z* = -0.312, *p* = 0.755
-- **Increase by 3 vs Cardinality (no change)**: *β* = -0.16, *SE* = 0.229, *z* = -0.702, *p* = 0.483
-- **SNR**: *β* = -0.35, *SE* = 0.038, *z* = -9.261, *p* < .001
+- AIC = 521.67, BIC = 552.91
+- **Decrease by 1 vs Cardinality (no change)**: *β* = 0.10, *SE* = 0.277, *z* = 0.374, *p* = 0.708
+- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.23, *SE* = 0.275, *z* = -0.820, *p* = 0.412
+- **Decrease by 3 vs Cardinality (no change)**: *β* = -0.45, *SE* = 0.275, *z* = -1.636, *p* = 0.102
+- **Increase by 1 vs Cardinality (no change)**: *β* = 0.02, *SE* = 0.276, *z* = 0.072, *p* = 0.942
+- **Increase by 2 vs Cardinality (no change)**: *β* = 0.10, *SE* = 0.277, *z* = 0.363, *p* = 0.717
+- **Increase by 3 vs Cardinality (no change)**: *β* = -0.01, *SE* = 0.277, *z* = -0.036, *p* = 0.971
+- **SNR**: *β* = -0.24, *SE* = 0.052, *z* = -4.626, *p* < .001
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -263,27 +263,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | 0.13 | 0.23 | 0.57 | 0.567 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 | 0.13 | 0.21 | 0.62 | 0.537 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 | 0.62 | 0.22 | 2.87 | 0.004 | 0.083 | n.s. |
-| Cardinality (no change) - Increase by 1 | 0.06 | 0.22 | 0.28 | 0.778 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 | 0.07 | 0.22 | 0.31 | 0.755 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 | 0.16 | 0.23 | 0.70 | 0.483 | 1.000 | n.s. |
-| Decrease by 1 - Decrease by 2 | -0.00 | 0.22 | -0.01 | 0.993 | 1.000 | n.s. |
-| Decrease by 1 - Decrease by 3 | 0.49 | 0.23 | 2.14 | 0.032 | 0.427 | n.s. |
-| Decrease by 1 - Increase by 1 | -0.07 | 0.23 | -0.29 | 0.769 | 1.000 | n.s. |
-| Decrease by 1 - Increase by 2 | -0.06 | 0.23 | -0.25 | 0.799 | 1.000 | n.s. |
-| Decrease by 1 - Increase by 3 | 0.03 | 0.24 | 0.13 | 0.897 | 1.000 | n.s. |
-| Decrease by 2 - Decrease by 3 | 0.50 | 0.21 | 2.41 | 0.016 | 0.266 | n.s. |
-| Decrease by 2 - Increase by 1 | -0.07 | 0.21 | -0.31 | 0.760 | 1.000 | n.s. |
-| Decrease by 2 - Increase by 2 | -0.06 | 0.22 | -0.26 | 0.793 | 1.000 | n.s. |
-| Decrease by 2 - Increase by 3 | 0.03 | 0.22 | 0.15 | 0.882 | 1.000 | n.s. |
-| Decrease by 3 - Increase by 1 | -0.56 | 0.22 | -2.50 | 0.012 | 0.222 | n.s. |
-| Decrease by 3 - Increase by 2 | -0.55 | 0.23 | -2.40 | 0.017 | 0.266 | n.s. |
-| Decrease by 3 - Increase by 3 | -0.46 | 0.23 | -1.99 | 0.046 | 0.533 | n.s. |
-| Increase by 1 - Increase by 2 | 0.01 | 0.23 | 0.03 | 0.974 | 1.000 | n.s. |
-| Increase by 1 - Increase by 3 | 0.10 | 0.24 | 0.42 | 0.676 | 1.000 | n.s. |
-| Increase by 2 - Increase by 3 | 0.09 | 0.24 | 0.38 | 0.706 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 | -0.10 | 0.28 | -0.37 | 0.708 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 | 0.23 | 0.27 | 0.82 | 0.412 | 0.999 | n.s. |
+| Cardinality (no change) - Decrease by 3 | 0.45 | 0.28 | 1.64 | 0.102 | 0.855 | n.s. |
+| Cardinality (no change) - Increase by 1 | -0.02 | 0.28 | -0.07 | 0.942 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 | -0.10 | 0.28 | -0.36 | 0.717 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 | 0.01 | 0.28 | 0.04 | 0.971 | 1.000 | n.s. |
+| Decrease by 1 - Decrease by 2 | 0.33 | 0.28 | 1.19 | 0.233 | 0.986 | n.s. |
+| Decrease by 1 - Decrease by 3 | 0.55 | 0.28 | 1.98 | 0.047 | 0.639 | n.s. |
+| Decrease by 1 - Increase by 1 | 0.08 | 0.28 | 0.30 | 0.761 | 1.000 | n.s. |
+| Decrease by 1 - Increase by 2 | 0.00 | 0.27 | 0.01 | 0.990 | 1.000 | n.s. |
+| Decrease by 1 - Increase by 3 | 0.11 | 0.27 | 0.41 | 0.679 | 1.000 | n.s. |
+| Decrease by 2 - Decrease by 3 | 0.22 | 0.28 | 0.81 | 0.415 | 0.999 | n.s. |
+| Decrease by 2 - Increase by 1 | -0.25 | 0.28 | -0.89 | 0.372 | 0.999 | n.s. |
+| Decrease by 2 - Increase by 2 | -0.33 | 0.28 | -1.18 | 0.237 | 0.986 | n.s. |
+| Decrease by 2 - Increase by 3 | -0.22 | 0.28 | -0.78 | 0.434 | 0.999 | n.s. |
+| Decrease by 3 - Increase by 1 | -0.47 | 0.28 | -1.70 | 0.090 | 0.833 | n.s. |
+| Decrease by 3 - Increase by 2 | -0.55 | 0.28 | -1.98 | 0.048 | 0.639 | n.s. |
+| Decrease by 3 - Increase by 3 | -0.44 | 0.28 | -1.58 | 0.114 | 0.872 | n.s. |
+| Increase by 1 - Increase by 2 | -0.08 | 0.27 | -0.29 | 0.770 | 1.000 | n.s. |
+| Increase by 1 - Increase by 3 | 0.03 | 0.27 | 0.11 | 0.913 | 1.000 | n.s. |
+| Increase by 2 - Increase by 3 | 0.11 | 0.27 | 0.40 | 0.688 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -291,8 +291,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 3.03, *p* = 0.032, η²_G = 0.250
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 1.81, *p* = 0.101, η²_G = 0.035
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -300,27 +300,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | -0.43 | 3 | = 0.862 | -0.25 [-0.71, 0.56] | small | n.s. |
-| Cardinality (no change) vs Decrease by 2 | -3.12 | 3 | = 0.243 | -0.28 [-0.53, 0.54] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 | 1.46 | 3 | = 0.390 | 0.49 [-0.16, 1.12] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 | -3.06 | 3 | = 0.243 | -0.96 [-0.70, 0.46] | large | n.s. |
-| Cardinality (no change) vs Increase by 2 | -0.38 | 3 | = 0.862 | -0.20 [-0.71, 0.45] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 3 | -1.50 | 3 | = 0.390 | -0.95 [-0.78, 0.44] | large | n.s. |
-| Decrease by 1 vs Decrease by 2 | -0.12 | 3 | = 0.960 | -0.06 [-0.47, 0.69] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | 1.72 | 3 | = 0.390 | 0.73 [0.08, 1.66] | medium | n.s. |
-| Decrease by 1 vs Increase by 1 | -2.47 | 3 | = 0.243 | -0.82 [-0.55, 0.73] | large | n.s. |
-| Decrease by 1 vs Increase by 2 | 0.34 | 3 | = 0.862 | 0.09 [-0.80, 0.55] | negligible | n.s. |
-| Decrease by 1 vs Increase by 3 | -1.52 | 3 | = 0.390 | -0.81 [-0.96, 0.59] | large | n.s. |
-| Decrease by 2 vs Decrease by 3 | 2.44 | 3 | = 0.243 | 0.71 [0.01, 1.12] | medium | n.s. |
-| Decrease by 2 vs Increase by 1 | -2.48 | 3 | = 0.243 | -0.66 [-0.48, 0.62] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | 0.31 | 3 | = 0.862 | 0.14 [-0.72, 0.49] | negligible | n.s. |
-| Decrease by 2 vs Increase by 3 | -1.00 | 3 | = 0.545 | -0.65 [-0.67, 0.54] | medium | n.s. |
-| Decrease by 3 vs Increase by 1 | -6.84 | 3 | = 0.134 | -1.28 [-2.18, -0.51] | large | n.s. |
-| Decrease by 3 vs Increase by 2 | -1.52 | 3 | = 0.390 | -0.70 [-1.95, -0.25] | medium | n.s. |
-| Decrease by 3 vs Increase by 3 | -2.56 | 3 | = 0.243 | -1.27 [-1.16, 0.18] | large | n.s. |
-| Increase by 1 vs Increase by 2 | 2.69 | 3 | = 0.243 | 0.95 [-0.55, 0.89] | large | n.s. |
-| Increase by 1 vs Increase by 3 | 0.00 | 3 | = 0.999 | 0.00 [-0.41, 0.96] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | -1.37 | 3 | = 0.397 | -0.94 [-0.74, 0.69] | large | n.s. |
+| Cardinality (no change) vs Decrease by 1 | -0.99 | 23 | = 0.638 | -0.20 [-0.63, 0.23] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 | 0.79 | 23 | = 0.709 | 0.14 [-0.26, 0.59] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 | 1.68 | 23 | = 0.366 | 0.31 [-0.09, 0.78] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 | -0.52 | 23 | = 0.779 | -0.10 [-0.53, 0.32] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 | -1.25 | 23 | = 0.589 | -0.19 [-0.68, 0.17] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 | -0.48 | 23 | = 0.779 | -0.11 [-0.52, 0.33] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 2 | 1.66 | 23 | = 0.366 | 0.35 [-0.10, 0.77] | small | n.s. |
+| Decrease by 1 vs Decrease by 3 | 2.35 | 23 | = 0.279 | 0.48 [0.03, 0.93] | small | n.s. |
+| Decrease by 1 vs Increase by 1 | 0.52 | 23 | = 0.779 | 0.11 [-0.32, 0.53] | negligible | n.s. |
+| Decrease by 1 vs Increase by 2 | 0.16 | 23 | = 0.916 | 0.02 [-0.39, 0.46] | negligible | n.s. |
+| Decrease by 1 vs Increase by 3 | 0.43 | 23 | = 0.779 | 0.10 [-0.33, 0.51] | negligible | n.s. |
+| Decrease by 2 vs Decrease by 3 | 0.88 | 23 | = 0.677 | 0.20 [-0.25, 0.61] | small | n.s. |
+| Decrease by 2 vs Increase by 1 | -1.08 | 23 | = 0.624 | -0.25 [-0.65, 0.21] | small | n.s. |
+| Decrease by 2 vs Increase by 2 | -1.61 | 23 | = 0.366 | -0.35 [-0.76, 0.11] | small | n.s. |
+| Decrease by 2 vs Increase by 3 | -1.07 | 23 | = 0.624 | -0.27 [-0.64, 0.21] | small | n.s. |
+| Decrease by 3 vs Increase by 1 | -2.18 | 23 | = 0.279 | -0.40 [-0.89, -0.00] | small | n.s. |
+| Decrease by 3 vs Increase by 2 | -2.39 | 23 | = 0.279 | -0.48 [-0.93, -0.04] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | -1.73 | 23 | = 0.366 | -0.41 [-0.79, 0.08] | small | n.s. |
+| Increase by 1 vs Increase by 2 | -0.45 | 23 | = 0.779 | -0.09 [-0.52, 0.33] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -0.03 | 23 | = 0.976 | -0.01 [-0.43, 0.42] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.34 | 23 | = 0.817 | 0.09 [-0.35, 0.49] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -333,14 +333,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 1296.95, BIC = 1327.88
-- **Decrease by 1 vs Cardinality (no change)**: *β* = 2.83, *SE* = 3.021, *z* = 0.937, *p* = 0.349
-- **Decrease by 2 vs Cardinality (no change)**: *β* = 1.61, *SE* = 2.952, *z* = 0.544, *p* = 0.586
-- **Decrease by 3 vs Cardinality (no change)**: *β* = 1.28, *SE* = 2.959, *z* = 0.433, *p* = 0.665
-- **Increase by 1 vs Cardinality (no change)**: *β* = -4.93, *SE* = 3.015, *z* = -1.635, *p* = 0.102
-- **Increase by 2 vs Cardinality (no change)**: *β* = -6.88, *SE* = 2.969, *z* = -2.316, *p* = 0.021
-- **Increase by 3 vs Cardinality (no change)**: *β* = -4.25, *SE* = 2.994, *z* = -1.421, *p* = 0.155
-- **SNR**: *β* = -0.02, *SE* = 0.209, *z* = -0.111, *p* = 0.912
+- AIC = 1331.65, BIC = 1362.89
+- **Decrease by 1 vs Cardinality (no change)**: *β* = 3.17, *SE* = 2.865, *z* = 1.106, *p* = 0.269
+- **Decrease by 2 vs Cardinality (no change)**: *β* = 1.54, *SE* = 2.873, *z* = 0.536, *p* = 0.592
+- **Decrease by 3 vs Cardinality (no change)**: *β* = 1.22, *SE* = 2.880, *z* = 0.424, *p* = 0.671
+- **Increase by 1 vs Cardinality (no change)**: *β* = -4.59, *SE* = 2.895, *z* = -1.584, *p* = 0.113
+- **Increase by 2 vs Cardinality (no change)**: *β* = -6.93, *SE* = 2.890, *z* = -2.397, *p* = 0.017
+- **Increase by 3 vs Cardinality (no change)**: *β* = -3.95, *SE* = 2.876, *z* = -1.374, *p* = 0.169
+- **SNR**: *β* = -0.04, *SE* = 0.206, *z* = -0.192, *p* = 0.848
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -353,27 +353,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | -2.83 | 3.02 | -0.94 | 0.349 | 0.979 | n.s. |
-| Cardinality (no change) - Decrease by 2 | -1.61 | 2.95 | -0.54 | 0.586 | 0.995 | n.s. |
-| Cardinality (no change) - Decrease by 3 | -1.28 | 2.96 | -0.43 | 0.665 | 0.995 | n.s. |
-| Cardinality (no change) - Increase by 1 | 4.93 | 3.02 | 1.63 | 0.102 | 0.694 | n.s. |
-| Cardinality (no change) - Increase by 2 | 6.88 | 2.97 | 2.32 | 0.021 | 0.284 | n.s. |
-| Cardinality (no change) - Increase by 3 | 4.25 | 2.99 | 1.42 | 0.155 | 0.815 | n.s. |
-| Decrease by 1 - Decrease by 2 | 1.22 | 2.99 | 0.41 | 0.682 | 0.995 | n.s. |
-| Decrease by 1 - Decrease by 3 | 1.55 | 3.00 | 0.52 | 0.606 | 0.995 | n.s. |
-| Decrease by 1 - Increase by 1 | 7.76 | 3.05 | 2.54 | 0.011 | 0.180 | n.s. |
-| Decrease by 1 - Increase by 2 | 9.70 | 3.01 | 3.23 | 0.001 | 0.026 | * |
-| Decrease by 1 - Increase by 3 | 7.08 | 3.03 | 2.34 | 0.019 | 0.284 | n.s. |
-| Decrease by 2 - Decrease by 3 | 0.32 | 2.91 | 0.11 | 0.911 | 0.995 | n.s. |
-| Decrease by 2 - Increase by 1 | 6.54 | 2.96 | 2.21 | 0.027 | 0.337 | n.s. |
-| Decrease by 2 - Increase by 2 | 8.48 | 2.91 | 2.91 | 0.004 | 0.070 | n.s. |
-| Decrease by 2 - Increase by 3 | 5.86 | 2.95 | 1.99 | 0.047 | 0.463 | n.s. |
-| Decrease by 3 - Increase by 1 | 6.21 | 2.95 | 2.11 | 0.035 | 0.395 | n.s. |
-| Decrease by 3 - Increase by 2 | 8.16 | 2.91 | 2.80 | 0.005 | 0.092 | n.s. |
-| Decrease by 3 - Increase by 3 | 5.54 | 2.95 | 1.88 | 0.060 | 0.525 | n.s. |
-| Increase by 1 - Increase by 2 | 1.95 | 2.95 | 0.66 | 0.509 | 0.993 | n.s. |
-| Increase by 1 - Increase by 3 | -0.68 | 2.98 | -0.23 | 0.820 | 0.995 | n.s. |
-| Increase by 2 - Increase by 3 | -2.62 | 2.95 | -0.89 | 0.374 | 0.979 | n.s. |
+| Cardinality (no change) - Decrease by 1 | -3.17 | 2.87 | -1.11 | 0.269 | 0.940 | n.s. |
+| Cardinality (no change) - Decrease by 2 | -1.54 | 2.87 | -0.54 | 0.592 | 0.985 | n.s. |
+| Cardinality (no change) - Decrease by 3 | -1.22 | 2.88 | -0.42 | 0.671 | 0.985 | n.s. |
+| Cardinality (no change) - Increase by 1 | 4.59 | 2.90 | 1.58 | 0.113 | 0.733 | n.s. |
+| Cardinality (no change) - Increase by 2 | 6.93 | 2.89 | 2.40 | 0.017 | 0.234 | n.s. |
+| Cardinality (no change) - Increase by 3 | 3.95 | 2.88 | 1.37 | 0.169 | 0.844 | n.s. |
+| Decrease by 1 - Decrease by 2 | 1.63 | 2.87 | 0.57 | 0.571 | 0.985 | n.s. |
+| Decrease by 1 - Decrease by 3 | 1.95 | 2.88 | 0.68 | 0.499 | 0.984 | n.s. |
+| Decrease by 1 - Increase by 1 | 7.75 | 2.89 | 2.68 | 0.007 | 0.125 | n.s. |
+| Decrease by 1 - Increase by 2 | 10.10 | 2.89 | 3.49 | < .001 | 0.010 | ** |
+| Decrease by 1 - Increase by 3 | 7.12 | 2.88 | 2.48 | 0.013 | 0.203 | n.s. |
+| Decrease by 2 - Decrease by 3 | 0.32 | 2.87 | 0.11 | 0.912 | 0.985 | n.s. |
+| Decrease by 2 - Increase by 1 | 6.13 | 2.87 | 2.13 | 0.033 | 0.395 | n.s. |
+| Decrease by 2 - Increase by 2 | 8.47 | 2.87 | 2.95 | 0.003 | 0.062 | n.s. |
+| Decrease by 2 - Increase by 3 | 5.49 | 2.87 | 1.92 | 0.055 | 0.523 | n.s. |
+| Decrease by 3 - Increase by 1 | 5.81 | 2.87 | 2.03 | 0.043 | 0.458 | n.s. |
+| Decrease by 3 - Increase by 2 | 8.15 | 2.87 | 2.84 | 0.004 | 0.082 | n.s. |
+| Decrease by 3 - Increase by 3 | 5.17 | 2.87 | 1.81 | 0.071 | 0.587 | n.s. |
+| Increase by 1 - Increase by 2 | 2.34 | 2.87 | 0.82 | 0.414 | 0.976 | n.s. |
+| Increase by 1 - Increase by 3 | -0.63 | 2.87 | -0.22 | 0.825 | 0.985 | n.s. |
+| Increase by 2 - Increase by 3 | -2.98 | 2.87 | -1.04 | 0.300 | 0.942 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -381,8 +381,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 3.61, *p* = 0.003, η²_G = 0.080
-- Greenhouse-Geisser corrected: *p* = 0.016 (ε = 0.543)
+- *F* = 3.37, *p* = 0.004, η²_G = 0.041
+- Greenhouse-Geisser corrected: *p* = 0.020 (ε = 0.535)
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -391,27 +391,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | -1.28 | 19 | = 0.322 | -0.26 [-0.74, 0.18] | small | n.s. |
-| Cardinality (no change) vs Decrease by 2 | -1.08 | 19 | = 0.408 | -0.20 [-0.57, 0.30] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 3 | -0.62 | 19 | = 0.714 | -0.17 [-0.52, 0.35] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 | 1.80 | 19 | = 0.167 | 0.38 [-0.12, 0.79] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 | 2.14 | 19 | = 0.137 | 0.46 [0.03, 0.95] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 | 1.31 | 19 | = 0.322 | 0.31 [-0.20, 0.70] | small | n.s. |
-| Decrease by 1 vs Decrease by 2 | 0.24 | 19 | = 0.855 | 0.05 [-0.41, 0.48] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | 0.43 | 19 | = 0.778 | 0.08 [-0.35, 0.54] | negligible | n.s. |
-| Decrease by 1 vs Increase by 1 | 2.49 | 19 | = 0.117 | 0.68 [0.05, 1.03] | medium | n.s. |
-| Decrease by 1 vs Increase by 2 | 3.06 | 19 | = 0.113 | 0.77 [0.19, 1.18] | medium | n.s. |
-| Decrease by 1 vs Increase by 3 | 2.22 | 19 | = 0.137 | 0.59 [0.01, 0.98] | medium | n.s. |
-| Decrease by 2 vs Decrease by 3 | 0.12 | 19 | = 0.906 | 0.03 [-0.40, 0.45] | negligible | n.s. |
-| Decrease by 2 vs Increase by 1 | 2.19 | 19 | = 0.137 | 0.59 [-0.09, 0.80] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | 2.83 | 19 | = 0.113 | 0.67 [0.11, 1.01] | medium | n.s. |
-| Decrease by 2 vs Increase by 3 | 1.93 | 19 | = 0.161 | 0.51 [-0.12, 0.77] | medium | n.s. |
-| Decrease by 3 vs Increase by 1 | 1.81 | 19 | = 0.167 | 0.56 [-0.14, 0.74] | medium | n.s. |
-| Decrease by 3 vs Increase by 2 | 2.51 | 19 | = 0.117 | 0.64 [0.06, 0.96] | medium | n.s. |
-| Decrease by 3 vs Increase by 3 | 2.02 | 19 | = 0.153 | 0.48 [-0.10, 0.79] | small | n.s. |
-| Increase by 1 vs Increase by 2 | 0.48 | 19 | = 0.778 | 0.07 [-0.24, 0.63] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | -0.39 | 19 | = 0.778 | -0.07 [-0.49, 0.38] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | -1.37 | 19 | = 0.322 | -0.15 [-0.82, 0.07] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 | -1.42 | 23 | = 0.274 | -0.20 [-0.72, 0.14] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 | -0.66 | 23 | = 0.601 | -0.09 [-0.56, 0.29] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 | -0.35 | 23 | = 0.805 | -0.07 [-0.49, 0.35] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 | 1.62 | 23 | = 0.248 | 0.25 [-0.10, 0.76] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 | 2.46 | 23 | = 0.098 | 0.39 [0.05, 0.95] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 | 1.27 | 23 | = 0.323 | 0.22 [-0.17, 0.69] | small | n.s. |
+| Decrease by 1 vs Decrease by 2 | 0.73 | 23 | = 0.584 | 0.11 [-0.28, 0.57] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 3 | 0.95 | 23 | = 0.460 | 0.13 [-0.23, 0.62] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 2.43 | 23 | = 0.098 | 0.44 [0.05, 0.94] | small | n.s. |
+| Decrease by 1 vs Increase by 2 | 3.49 | 23 | = 0.041 | 0.61 [0.24, 1.19] | medium | * |
+| Decrease by 1 vs Increase by 3 | 2.29 | 23 | = 0.110 | 0.41 [0.02, 0.91] | small | n.s. |
+| Decrease by 2 vs Decrease by 3 | 0.12 | 23 | = 0.906 | 0.02 [-0.40, 0.45] | negligible | n.s. |
+| Decrease by 2 vs Increase by 1 | 1.69 | 23 | = 0.248 | 0.35 [-0.09, 0.78] | small | n.s. |
+| Decrease by 2 vs Increase by 2 | 2.75 | 23 | = 0.098 | 0.51 [0.11, 1.01] | medium | n.s. |
+| Decrease by 2 vs Increase by 3 | 1.56 | 23 | = 0.253 | 0.32 [-0.11, 0.75] | small | n.s. |
+| Decrease by 3 vs Increase by 1 | 1.43 | 23 | = 0.274 | 0.33 [-0.14, 0.72] | small | n.s. |
+| Decrease by 3 vs Increase by 2 | 2.50 | 23 | = 0.098 | 0.49 [0.06, 0.96] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | 1.63 | 23 | = 0.248 | 0.29 [-0.10, 0.77] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 1.09 | 23 | = 0.401 | 0.12 [-0.20, 0.65] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -0.26 | 23 | = 0.840 | -0.03 [-0.47, 0.37] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | -1.99 | 23 | = 0.176 | -0.16 [-0.85, 0.03] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -421,14 +421,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 569.58, BIC = 600.52
-- **Decrease by 1 vs Cardinality (no change)**: *β* = -0.20, *SE* = 0.319, *z* = -0.612, *p* = 0.540
-- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.30, *SE* = 0.312, *z* = -0.974, *p* = 0.330
-- **Decrease by 3 vs Cardinality (no change)**: *β* = -0.34, *SE* = 0.313, *z* = -1.104, *p* = 0.270
-- **Increase by 1 vs Cardinality (no change)**: *β* = -0.14, *SE* = 0.319, *z* = -0.425, *p* = 0.671
-- **Increase by 2 vs Cardinality (no change)**: *β* = -0.54, *SE* = 0.314, *z* = -1.732, *p* = 0.083
-- **Increase by 3 vs Cardinality (no change)**: *β* = -1.41, *SE* = 0.316, *z* = -4.453, *p* < .001
-- **SNR**: *β* = -0.11, *SE* = 0.022, *z* = -5.005, *p* < .001
+- AIC = 587.36, BIC = 618.60
+- **Decrease by 1 vs Cardinality (no change)**: *β* = -0.27, *SE* = 0.309, *z* = -0.873, *p* = 0.383
+- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.40, *SE* = 0.310, *z* = -1.279, *p* = 0.201
+- **Decrease by 3 vs Cardinality (no change)**: *β* = -0.44, *SE* = 0.311, *z* = -1.407, *p* = 0.159
+- **Increase by 1 vs Cardinality (no change)**: *β* = -0.23, *SE* = 0.312, *z* = -0.737, *p* = 0.461
+- **Increase by 2 vs Cardinality (no change)**: *β* = -0.64, *SE* = 0.312, *z* = -2.036, *p* = 0.042
+- **Increase by 3 vs Cardinality (no change)**: *β* = -1.41, *SE* = 0.310, *z* = -4.552, *p* < .001
+- **SNR**: *β* = -0.11, *SE* = 0.022, *z* = -5.045, *p* < .001
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -441,27 +441,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | 0.20 | 0.32 | 0.61 | 0.540 | 0.998 | n.s. |
-| Cardinality (no change) - Decrease by 2 | 0.30 | 0.31 | 0.97 | 0.330 | 0.988 | n.s. |
-| Cardinality (no change) - Decrease by 3 | 0.35 | 0.31 | 1.10 | 0.270 | 0.983 | n.s. |
-| Cardinality (no change) - Increase by 1 | 0.14 | 0.32 | 0.43 | 0.671 | 0.998 | n.s. |
-| Cardinality (no change) - Increase by 2 | 0.54 | 0.31 | 1.73 | 0.083 | 0.729 | n.s. |
-| Cardinality (no change) - Increase by 3 | 1.41 | 0.32 | 4.45 | < .001 | < .001 | *** |
-| Decrease by 1 - Decrease by 2 | 0.11 | 0.32 | 0.34 | 0.732 | 0.998 | n.s. |
-| Decrease by 1 - Decrease by 3 | 0.15 | 0.32 | 0.47 | 0.636 | 0.998 | n.s. |
-| Decrease by 1 - Increase by 1 | -0.06 | 0.32 | -0.19 | 0.853 | 0.998 | n.s. |
-| Decrease by 1 - Increase by 2 | 0.35 | 0.32 | 1.10 | 0.273 | 0.983 | n.s. |
-| Decrease by 1 - Increase by 3 | 1.21 | 0.32 | 3.79 | < .001 | 0.003 | ** |
-| Decrease by 2 - Decrease by 3 | 0.04 | 0.31 | 0.13 | 0.893 | 0.998 | n.s. |
-| Decrease by 2 - Increase by 1 | -0.17 | 0.31 | -0.54 | 0.590 | 0.998 | n.s. |
-| Decrease by 2 - Increase by 2 | 0.24 | 0.31 | 0.78 | 0.436 | 0.997 | n.s. |
-| Decrease by 2 - Increase by 3 | 1.10 | 0.31 | 3.55 | < .001 | 0.007 | ** |
-| Decrease by 3 - Increase by 1 | -0.21 | 0.31 | -0.67 | 0.501 | 0.998 | n.s. |
-| Decrease by 3 - Increase by 2 | 0.20 | 0.31 | 0.65 | 0.519 | 0.998 | n.s. |
-| Decrease by 3 - Increase by 3 | 1.06 | 0.31 | 3.42 | < .001 | 0.011 | * |
-| Increase by 1 - Increase by 2 | 0.41 | 0.31 | 1.31 | 0.190 | 0.948 | n.s. |
-| Increase by 1 - Increase by 3 | 1.27 | 0.31 | 4.05 | < .001 | 0.001 | ** |
-| Increase by 2 - Increase by 3 | 0.87 | 0.31 | 2.78 | 0.005 | 0.084 | n.s. |
+| Cardinality (no change) - Decrease by 1 | 0.27 | 0.31 | 0.87 | 0.383 | 0.992 | n.s. |
+| Cardinality (no change) - Decrease by 2 | 0.40 | 0.31 | 1.28 | 0.201 | 0.936 | n.s. |
+| Cardinality (no change) - Decrease by 3 | 0.44 | 0.31 | 1.41 | 0.159 | 0.912 | n.s. |
+| Cardinality (no change) - Increase by 1 | 0.23 | 0.31 | 0.74 | 0.461 | 0.995 | n.s. |
+| Cardinality (no change) - Increase by 2 | 0.64 | 0.31 | 2.04 | 0.042 | 0.472 | n.s. |
+| Cardinality (no change) - Increase by 3 | 1.41 | 0.31 | 4.55 | < .001 | < .001 | *** |
+| Decrease by 1 - Decrease by 2 | 0.13 | 0.31 | 0.41 | 0.683 | 0.995 | n.s. |
+| Decrease by 1 - Decrease by 3 | 0.17 | 0.31 | 0.54 | 0.590 | 0.995 | n.s. |
+| Decrease by 1 - Increase by 1 | -0.04 | 0.31 | -0.13 | 0.899 | 0.995 | n.s. |
+| Decrease by 1 - Increase by 2 | 0.37 | 0.31 | 1.17 | 0.241 | 0.952 | n.s. |
+| Decrease by 1 - Increase by 3 | 1.14 | 0.31 | 3.68 | < .001 | 0.004 | ** |
+| Decrease by 2 - Decrease by 3 | 0.04 | 0.31 | 0.13 | 0.895 | 0.995 | n.s. |
+| Decrease by 2 - Increase by 1 | -0.17 | 0.31 | -0.54 | 0.592 | 0.995 | n.s. |
+| Decrease by 2 - Increase by 2 | 0.24 | 0.31 | 0.77 | 0.441 | 0.995 | n.s. |
+| Decrease by 2 - Increase by 3 | 1.02 | 0.31 | 3.29 | 0.001 | 0.018 | * |
+| Decrease by 3 - Increase by 1 | -0.21 | 0.31 | -0.67 | 0.504 | 0.995 | n.s. |
+| Decrease by 3 - Increase by 2 | 0.20 | 0.31 | 0.64 | 0.523 | 0.995 | n.s. |
+| Decrease by 3 - Increase by 3 | 0.98 | 0.31 | 3.15 | 0.002 | 0.027 | * |
+| Increase by 1 - Increase by 2 | 0.40 | 0.31 | 1.31 | 0.191 | 0.936 | n.s. |
+| Increase by 1 - Increase by 3 | 1.18 | 0.31 | 3.82 | < .001 | 0.003 | ** |
+| Increase by 2 - Increase by 3 | 0.78 | 0.31 | 2.51 | 0.012 | 0.175 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -469,7 +469,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 4.56, *p* < .001, η²_G = 0.063
+- *F* = 4.29, *p* < .001, η²_G = 0.043
 - **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -478,27 +478,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | 0.75 | 19 | = 0.566 | 0.10 [-0.28, 0.64] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 2 | 1.34 | 19 | = 0.376 | 0.23 [-0.18, 0.70] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 | 1.26 | 19 | = 0.387 | 0.23 [-0.11, 0.78] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 | 2.08 | 19 | = 0.134 | 0.34 [-0.15, 0.76] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 | 3.36 | 19 | = 0.023 | 0.45 [0.11, 1.04] | small | * |
-| Cardinality (no change) vs Increase by 3 | 5.30 | 19 | < .001 | 0.78 [0.59, 1.74] | medium | *** |
-| Decrease by 1 vs Decrease by 2 | 0.73 | 19 | = 0.566 | 0.13 [-0.34, 0.55] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | 0.71 | 19 | = 0.566 | 0.13 [-0.33, 0.56] | negligible | n.s. |
-| Decrease by 1 vs Increase by 1 | 1.34 | 19 | = 0.376 | 0.23 [-0.20, 0.73] | small | n.s. |
-| Decrease by 1 vs Increase by 2 | 2.84 | 19 | = 0.055 | 0.35 [0.06, 1.01] | small | n.s. |
-| Decrease by 1 vs Increase by 3 | 3.72 | 19 | = 0.015 | 0.69 [0.28, 1.33] | medium | * |
-| Decrease by 2 vs Decrease by 3 | -0.00 | 19 | = 0.996 | -0.00 [-0.36, 0.48] | negligible | n.s. |
-| Decrease by 2 vs Increase by 1 | 0.42 | 19 | = 0.712 | 0.09 [-0.48, 0.38] | negligible | n.s. |
-| Decrease by 2 vs Increase by 2 | 1.01 | 19 | = 0.487 | 0.23 [-0.26, 0.59] | small | n.s. |
-| Decrease by 2 vs Increase by 3 | 2.67 | 19 | = 0.063 | 0.56 [0.08, 1.01] | medium | n.s. |
-| Decrease by 3 vs Increase by 1 | 0.47 | 19 | = 0.711 | 0.09 [-0.51, 0.36] | negligible | n.s. |
-| Decrease by 3 vs Increase by 2 | 1.15 | 19 | = 0.428 | 0.23 [-0.29, 0.55] | small | n.s. |
-| Decrease by 3 vs Increase by 3 | 2.50 | 19 | = 0.068 | 0.57 [0.03, 0.94] | medium | n.s. |
-| Increase by 1 vs Increase by 2 | 0.89 | 19 | = 0.536 | 0.16 [-0.18, 0.70] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 2.48 | 19 | = 0.068 | 0.53 [0.15, 1.10] | medium | n.s. |
-| Increase by 2 vs Increase by 3 | 1.99 | 19 | = 0.142 | 0.33 [0.03, 0.94] | small | n.s. |
+| Cardinality (no change) vs Decrease by 1 | 1.06 | 23 | = 0.473 | 0.13 [-0.21, 0.64] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 | 1.58 | 23 | = 0.250 | 0.24 [-0.11, 0.76] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 | 1.87 | 23 | = 0.174 | 0.29 [-0.06, 0.82] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 | 1.57 | 23 | = 0.250 | 0.22 [-0.11, 0.75] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 | 3.06 | 23 | = 0.039 | 0.37 [0.16, 1.09] | small | * |
+| Cardinality (no change) vs Increase by 3 | 5.01 | 23 | < .001 | 0.66 [0.50, 1.54] | medium | *** |
+| Decrease by 1 vs Decrease by 2 | 0.76 | 23 | = 0.596 | 0.11 [-0.27, 0.58] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 3 | 1.03 | 23 | = 0.473 | 0.16 [-0.22, 0.64] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 0.66 | 23 | = 0.621 | 0.09 [-0.29, 0.56] | negligible | n.s. |
+| Decrease by 1 vs Increase by 2 | 2.41 | 23 | = 0.086 | 0.25 [0.04, 0.94] | small | n.s. |
+| Decrease by 1 vs Increase by 3 | 3.46 | 23 | = 0.022 | 0.55 [0.23, 1.18] | medium | * |
+| Decrease by 2 vs Decrease by 3 | 0.29 | 23 | = 0.815 | 0.04 [-0.36, 0.48] | negligible | n.s. |
+| Decrease by 2 vs Increase by 1 | -0.14 | 23 | = 0.890 | -0.02 [-0.45, 0.39] | negligible | n.s. |
+| Decrease by 2 vs Increase by 2 | 0.79 | 23 | = 0.596 | 0.15 [-0.26, 0.59] | negligible | n.s. |
+| Decrease by 2 vs Increase by 3 | 2.59 | 23 | = 0.069 | 0.45 [0.08, 0.98] | small | n.s. |
+| Decrease by 3 vs Increase by 1 | -0.40 | 23 | = 0.768 | -0.07 [-0.50, 0.34] | negligible | n.s. |
+| Decrease by 3 vs Increase by 2 | 0.63 | 23 | = 0.621 | 0.11 [-0.29, 0.55] | negligible | n.s. |
+| Decrease by 3 vs Increase by 3 | 2.15 | 23 | = 0.110 | 0.42 [-0.00, 0.88] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 1.24 | 23 | = 0.400 | 0.17 [-0.18, 0.68] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 2.83 | 23 | = 0.050 | 0.47 [0.12, 1.03] | small | * |
+| Increase by 2 vs Increase by 3 | 2.15 | 23 | = 0.110 | 0.28 [-0.00, 0.88] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -511,14 +511,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 740.41, BIC = 767.05
-- **Decrease by 1 vs Cardinality (no change)**: *β* = 0.74, *SE* = 2.582, *z* = 0.286, *p* = 0.775
-- **Decrease by 2 vs Cardinality (no change)**: *β* = -0.06, *SE* = 2.473, *z* = -0.025, *p* = 0.980
-- **Decrease by 3 vs Cardinality (no change)**: *β* = -0.01, *SE* = 2.549, *z* = -0.002, *p* = 0.998
-- **Increase by 1 vs Cardinality (no change)**: *β* = -4.00, *SE* = 2.535, *z* = -1.579, *p* = 0.114
-- **Increase by 2 vs Cardinality (no change)**: *β* = -1.43, *SE* = 2.658, *z* = -0.539, *p* = 0.590
-- **Increase by 3 vs Cardinality (no change)**: *β* = -7.69, *SE* = 2.509, *z* = -3.066, *p* = 0.002
-- **SNR**: *β* = 0.24, *SE* = 0.248, *z* = 0.977, *p* = 0.329
+- AIC = 1184.53, BIC = 1215.77
+- **Decrease by 1 vs Cardinality (no change)**: *β* = 2.77, *SE* = 1.961, *z* = 1.413, *p* = 0.158
+- **Decrease by 2 vs Cardinality (no change)**: *β* = 3.67, *SE* = 1.952, *z* = 1.880, *p* = 0.060
+- **Decrease by 3 vs Cardinality (no change)**: *β* = 1.60, *SE* = 1.961, *z* = 0.818, *p* = 0.413
+- **Increase by 1 vs Cardinality (no change)**: *β* = -1.98, *SE* = 1.971, *z* = -1.004, *p* = 0.315
+- **Increase by 2 vs Cardinality (no change)**: *β* = -2.70, *SE* = 1.964, *z* = -1.376, *p* = 0.169
+- **Increase by 3 vs Cardinality (no change)**: *β* = -5.28, *SE* = 1.956, *z* = -2.700, *p* = 0.007
+- **SNR**: *β* = 0.27, *SE* = 0.233, *z* = 1.137, *p* = 0.255
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -531,27 +531,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | -0.74 | 2.58 | -0.29 | 0.775 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 | 0.06 | 2.47 | 0.02 | 0.980 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 | 0.01 | 2.55 | 0.00 | 0.998 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 | 4.00 | 2.53 | 1.58 | 0.114 | 0.794 | n.s. |
-| Cardinality (no change) - Increase by 2 | 1.43 | 2.66 | 0.54 | 0.590 | 0.999 | n.s. |
-| Cardinality (no change) - Increase by 3 | 7.69 | 2.51 | 3.07 | 0.002 | 0.038 | * |
-| Decrease by 1 - Decrease by 2 | 0.80 | 2.40 | 0.33 | 0.739 | 1.000 | n.s. |
-| Decrease by 1 - Decrease by 3 | 0.74 | 2.42 | 0.31 | 0.759 | 1.000 | n.s. |
-| Decrease by 1 - Increase by 1 | 4.74 | 2.40 | 1.97 | 0.048 | 0.548 | n.s. |
-| Decrease by 1 - Increase by 2 | 2.17 | 2.54 | 0.86 | 0.392 | 0.993 | n.s. |
-| Decrease by 1 - Increase by 3 | 8.43 | 2.46 | 3.43 | < .001 | 0.013 | * |
-| Decrease by 2 - Decrease by 3 | -0.06 | 2.30 | -0.02 | 0.981 | 1.000 | n.s. |
-| Decrease by 2 - Increase by 1 | 3.94 | 2.26 | 1.74 | 0.082 | 0.713 | n.s. |
-| Decrease by 2 - Increase by 2 | 1.37 | 2.46 | 0.56 | 0.577 | 0.999 | n.s. |
-| Decrease by 2 - Increase by 3 | 7.63 | 2.33 | 3.27 | 0.001 | 0.021 | * |
-| Decrease by 3 - Increase by 1 | 4.00 | 2.28 | 1.75 | 0.080 | 0.713 | n.s. |
-| Decrease by 3 - Increase by 2 | 1.43 | 2.51 | 0.57 | 0.569 | 0.999 | n.s. |
-| Decrease by 3 - Increase by 3 | 7.69 | 2.40 | 3.21 | 0.001 | 0.025 | * |
-| Increase by 1 - Increase by 2 | -2.57 | 2.45 | -1.05 | 0.295 | 0.979 | n.s. |
-| Increase by 1 - Increase by 3 | 3.69 | 2.36 | 1.56 | 0.118 | 0.794 | n.s. |
-| Increase by 2 - Increase by 3 | 6.26 | 2.50 | 2.50 | 0.012 | 0.192 | n.s. |
+| Cardinality (no change) - Decrease by 1 | -2.77 | 1.96 | -1.41 | 0.158 | 0.787 | n.s. |
+| Cardinality (no change) - Decrease by 2 | -3.67 | 1.95 | -1.88 | 0.060 | 0.525 | n.s. |
+| Cardinality (no change) - Decrease by 3 | -1.60 | 1.96 | -0.82 | 0.413 | 0.881 | n.s. |
+| Cardinality (no change) - Increase by 1 | 1.98 | 1.97 | 1.00 | 0.315 | 0.871 | n.s. |
+| Cardinality (no change) - Increase by 2 | 2.70 | 1.96 | 1.38 | 0.169 | 0.787 | n.s. |
+| Cardinality (no change) - Increase by 3 | 5.28 | 1.96 | 2.70 | 0.007 | 0.099 | n.s. |
+| Decrease by 1 - Decrease by 2 | -0.90 | 1.95 | -0.46 | 0.644 | 0.908 | n.s. |
+| Decrease by 1 - Decrease by 3 | 1.17 | 1.95 | 0.60 | 0.549 | 0.908 | n.s. |
+| Decrease by 1 - Increase by 1 | 4.75 | 1.95 | 2.44 | 0.015 | 0.188 | n.s. |
+| Decrease by 1 - Increase by 2 | 5.47 | 1.95 | 2.81 | 0.005 | 0.076 | n.s. |
+| Decrease by 1 - Increase by 3 | 8.05 | 1.95 | 4.14 | < .001 | < .001 | *** |
+| Decrease by 2 - Decrease by 3 | 2.07 | 1.95 | 1.06 | 0.289 | 0.871 | n.s. |
+| Decrease by 2 - Increase by 1 | 5.65 | 1.95 | 2.89 | 0.004 | 0.063 | n.s. |
+| Decrease by 2 - Increase by 2 | 6.37 | 1.95 | 3.27 | 0.001 | 0.019 | * |
+| Decrease by 2 - Increase by 3 | 8.95 | 1.95 | 4.60 | < .001 | < .001 | *** |
+| Decrease by 3 - Increase by 1 | 3.58 | 1.95 | 1.84 | 0.066 | 0.527 | n.s. |
+| Decrease by 3 - Increase by 2 | 4.31 | 1.95 | 2.21 | 0.027 | 0.299 | n.s. |
+| Decrease by 3 - Increase by 3 | 6.88 | 1.95 | 3.54 | < .001 | 0.008 | ** |
+| Increase by 1 - Increase by 2 | 0.72 | 1.95 | 0.37 | 0.711 | 0.908 | n.s. |
+| Increase by 1 - Increase by 3 | 3.30 | 1.95 | 1.69 | 0.090 | 0.613 | n.s. |
+| Increase by 2 - Increase by 3 | 2.58 | 1.95 | 1.32 | 0.185 | 0.787 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -559,9 +559,9 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.15, *p* = 0.068, η²_G = 0.145
-- Greenhouse-Geisser corrected: *p* = 0.156 (ε = 0.324)
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
+- *F* = 5.31, *p* < .001, η²_G = 0.095
+- Greenhouse-Geisser corrected: *p* < .001 (ε = 0.678)
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -569,27 +569,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | 1.00 | 7 | = 0.539 | 0.11 [-0.92, 0.38] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 2 | nan | 7 | n/a | 0.00 [-0.64, 0.64] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 3 | 0.89 | 7 | = 0.540 | 0.43 [-0.72, 0.81] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 | 1.69 | 7 | = 0.336 | 0.77 [-0.27, 1.13] | medium | n.s. |
-| Cardinality (no change) vs Increase by 2 | 2.55 | 7 | = 0.328 | 0.78 [-0.05, 1.45] | medium | n.s. |
-| Cardinality (no change) vs Increase by 3 | 2.03 | 7 | = 0.328 | 0.97 [0.07, 1.44] | large | n.s. |
-| Decrease by 1 vs Decrease by 2 | -1.00 | 7 | = 0.539 | -0.11 [-0.39, 0.90] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | 0.68 | 7 | = 0.608 | 0.35 [-0.72, 0.63] | small | n.s. |
-| Decrease by 1 vs Increase by 1 | 1.49 | 7 | = 0.371 | 0.71 [-0.20, 1.15] | medium | n.s. |
-| Decrease by 1 vs Increase by 2 | 2.16 | 7 | = 0.328 | 0.69 [-0.04, 1.36] | medium | n.s. |
-| Decrease by 1 vs Increase by 3 | 1.77 | 7 | = 0.336 | 0.90 [0.08, 1.55] | large | n.s. |
-| Decrease by 2 vs Decrease by 3 | 0.89 | 7 | = 0.540 | 0.43 [-0.51, 0.70] | small | n.s. |
-| Decrease by 2 vs Increase by 1 | 1.69 | 7 | = 0.336 | 0.77 [-0.34, 0.79] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | 2.55 | 7 | = 0.328 | 0.78 [-0.20, 1.14] | medium | n.s. |
-| Decrease by 2 vs Increase by 3 | 2.03 | 7 | = 0.328 | 0.97 [0.09, 1.39] | large | n.s. |
-| Decrease by 3 vs Increase by 1 | 1.31 | 7 | = 0.419 | 0.41 [-0.03, 1.22] | small | n.s. |
-| Decrease by 3 vs Increase by 2 | 0.54 | 7 | = 0.673 | 0.30 [-0.47, 0.98] | small | n.s. |
-| Decrease by 3 vs Increase by 3 | 1.47 | 7 | = 0.371 | 0.53 [0.06, 1.62] | medium | n.s. |
-| Increase by 1 vs Increase by 2 | -0.42 | 7 | = 0.721 | -0.18 [-0.82, 0.46] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 0.36 | 7 | = 0.732 | 0.05 [-0.12, 1.17] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | 0.71 | 7 | = 0.608 | 0.27 [-0.15, 1.20] | small | n.s. |
+| Cardinality (no change) vs Decrease by 1 | -1.76 | 23 | = 0.148 | -0.25 [-0.79, 0.08] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 | -2.01 | 23 | = 0.099 | -0.37 [-0.85, 0.03] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 | -0.60 | 23 | = 0.645 | -0.14 [-0.55, 0.30] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 | 1.03 | 23 | = 0.389 | 0.23 [-0.22, 0.64] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 | 2.23 | 23 | = 0.082 | 0.30 [0.01, 0.90] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 | 2.86 | 23 | = 0.037 | 0.55 [0.13, 1.04] | medium | * |
+| Decrease by 1 vs Decrease by 2 | -0.54 | 23 | = 0.646 | -0.11 [-0.53, 0.31] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 3 | 0.51 | 23 | = 0.646 | 0.12 [-0.32, 0.53] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 2.19 | 23 | = 0.082 | 0.50 [0.00, 0.89] | medium | n.s. |
+| Decrease by 1 vs Increase by 2 | 2.70 | 23 | = 0.045 | 0.57 [0.10, 1.00] | medium | * |
+| Decrease by 1 vs Increase by 3 | 3.52 | 23 | = 0.013 | 0.84 [0.25, 1.19] | large | * |
+| Decrease by 2 vs Decrease by 3 | 1.10 | 23 | = 0.371 | 0.25 [-0.20, 0.65] | small | n.s. |
+| Decrease by 2 vs Increase by 1 | 2.31 | 23 | = 0.079 | 0.65 [0.03, 0.92] | medium | n.s. |
+| Decrease by 2 vs Increase by 2 | 3.49 | 23 | = 0.013 | 0.72 [0.24, 1.19] | medium | * |
+| Decrease by 2 vs Increase by 3 | 4.25 | 23 | = 0.006 | 1.02 [0.37, 1.36] | large | ** |
+| Decrease by 3 vs Increase by 1 | 1.70 | 23 | = 0.153 | 0.40 [-0.09, 0.78] | small | n.s. |
+| Decrease by 3 vs Increase by 2 | 2.08 | 23 | = 0.093 | 0.46 [-0.02, 0.87] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | 3.40 | 23 | = 0.013 | 0.74 [0.22, 1.17] | medium | * |
+| Increase by 1 vs Increase by 2 | 0.33 | 23 | = 0.747 | 0.07 [-0.36, 0.49] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 2.36 | 23 | = 0.079 | 0.34 [0.04, 0.93] | small | n.s. |
+| Increase by 2 vs Increase by 3 | 1.53 | 23 | = 0.194 | 0.26 [-0.12, 0.75] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -599,14 +599,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 296.57, BIC = 323.21
-- **Decrease by 1 vs Cardinality (no change)**: *β* = 0.31, *SE* = 0.299, *z* = 1.033, *p* = 0.302
-- **Decrease by 2 vs Cardinality (no change)**: *β* = 0.48, *SE* = 0.285, *z* = 1.701, *p* = 0.089
-- **Decrease by 3 vs Cardinality (no change)**: *β* = 0.90, *SE* = 0.297, *z* = 3.023, *p* = 0.003
-- **Increase by 1 vs Cardinality (no change)**: *β* = 0.30, *SE* = 0.293, *z* = 1.038, *p* = 0.299
-- **Increase by 2 vs Cardinality (no change)**: *β* = 0.36, *SE* = 0.308, *z* = 1.186, *p* = 0.236
-- **Increase by 3 vs Cardinality (no change)**: *β* = 0.28, *SE* = 0.289, *z* = 0.980, *p* = 0.327
-- **SNR**: *β* = 0.27, *SE* = 0.031, *z* = 8.622, *p* < .001
+- AIC = 553.78, BIC = 585.02
+- **Decrease by 1 vs Cardinality (no change)**: *β* = -0.03, *SE* = 0.288, *z* = -0.096, *p* = 0.923
+- **Decrease by 2 vs Cardinality (no change)**: *β* = 0.36, *SE* = 0.287, *z* = 1.254, *p* = 0.210
+- **Decrease by 3 vs Cardinality (no change)**: *β* = 0.82, *SE* = 0.288, *z* = 2.850, *p* = 0.004
+- **Increase by 1 vs Cardinality (no change)**: *β* = 0.25, *SE* = 0.290, *z* = 0.875, *p* = 0.382
+- **Increase by 2 vs Cardinality (no change)**: *β* = -0.00, *SE* = 0.288, *z* = -0.009, *p* = 0.993
+- **Increase by 3 vs Cardinality (no change)**: *β* = 0.25, *SE* = 0.287, *z* = 0.863, *p* = 0.388
+- **SNR**: *β* = 0.15, *SE* = 0.035, *z* = 4.375, *p* < .001
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -619,27 +619,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | -0.31 | 0.30 | -1.03 | 0.302 | 0.990 | n.s. |
-| Cardinality (no change) - Decrease by 2 | -0.49 | 0.29 | -1.70 | 0.089 | 0.775 | n.s. |
-| Cardinality (no change) - Decrease by 3 | -0.90 | 0.30 | -3.02 | 0.003 | 0.051 | n.s. |
-| Cardinality (no change) - Increase by 1 | -0.30 | 0.29 | -1.04 | 0.299 | 0.990 | n.s. |
-| Cardinality (no change) - Increase by 2 | -0.37 | 0.31 | -1.19 | 0.236 | 0.977 | n.s. |
-| Cardinality (no change) - Increase by 3 | -0.28 | 0.29 | -0.98 | 0.327 | 0.990 | n.s. |
-| Decrease by 1 - Decrease by 2 | -0.18 | 0.28 | -0.63 | 0.526 | 0.998 | n.s. |
-| Decrease by 1 - Decrease by 3 | -0.59 | 0.28 | -2.08 | 0.038 | 0.500 | n.s. |
-| Decrease by 1 - Increase by 1 | 0.00 | 0.28 | 0.01 | 0.988 | 1.000 | n.s. |
-| Decrease by 1 - Increase by 2 | -0.06 | 0.29 | -0.19 | 0.846 | 1.000 | n.s. |
-| Decrease by 1 - Increase by 3 | 0.03 | 0.28 | 0.09 | 0.929 | 1.000 | n.s. |
-| Decrease by 2 - Decrease by 3 | -0.41 | 0.27 | -1.53 | 0.125 | 0.865 | n.s. |
-| Decrease by 2 - Increase by 1 | 0.18 | 0.26 | 0.69 | 0.489 | 0.998 | n.s. |
-| Decrease by 2 - Increase by 2 | 0.12 | 0.28 | 0.42 | 0.674 | 1.000 | n.s. |
-| Decrease by 2 - Increase by 3 | 0.20 | 0.27 | 0.75 | 0.453 | 0.998 | n.s. |
-| Decrease by 3 - Increase by 1 | 0.59 | 0.27 | 2.22 | 0.026 | 0.412 | n.s. |
-| Decrease by 3 - Increase by 2 | 0.53 | 0.29 | 1.82 | 0.069 | 0.704 | n.s. |
-| Decrease by 3 - Increase by 3 | 0.61 | 0.28 | 2.20 | 0.028 | 0.418 | n.s. |
-| Increase by 1 - Increase by 2 | -0.06 | 0.28 | -0.22 | 0.829 | 1.000 | n.s. |
-| Increase by 1 - Increase by 3 | 0.02 | 0.27 | 0.08 | 0.939 | 1.000 | n.s. |
-| Increase by 2 - Increase by 3 | 0.08 | 0.29 | 0.28 | 0.777 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 | 0.03 | 0.29 | 0.10 | 0.923 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 | -0.36 | 0.29 | -1.25 | 0.210 | 0.960 | n.s. |
+| Cardinality (no change) - Decrease by 3 | -0.82 | 0.29 | -2.85 | 0.004 | 0.080 | n.s. |
+| Cardinality (no change) - Increase by 1 | -0.25 | 0.29 | -0.87 | 0.382 | 0.991 | n.s. |
+| Cardinality (no change) - Increase by 2 | 0.00 | 0.29 | 0.01 | 0.993 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 | -0.25 | 0.29 | -0.86 | 0.388 | 0.991 | n.s. |
+| Decrease by 1 - Decrease by 2 | -0.39 | 0.29 | -1.35 | 0.176 | 0.945 | n.s. |
+| Decrease by 1 - Decrease by 3 | -0.85 | 0.29 | -2.97 | 0.003 | 0.061 | n.s. |
+| Decrease by 1 - Increase by 1 | -0.28 | 0.29 | -0.98 | 0.326 | 0.991 | n.s. |
+| Decrease by 1 - Increase by 2 | -0.03 | 0.29 | -0.09 | 0.930 | 1.000 | n.s. |
+| Decrease by 1 - Increase by 3 | -0.28 | 0.29 | -0.96 | 0.335 | 0.991 | n.s. |
+| Decrease by 2 - Decrease by 3 | -0.46 | 0.29 | -1.61 | 0.107 | 0.836 | n.s. |
+| Decrease by 2 - Increase by 1 | 0.11 | 0.29 | 0.37 | 0.711 | 0.999 | n.s. |
+| Decrease by 2 - Increase by 2 | 0.36 | 0.29 | 1.26 | 0.206 | 0.960 | n.s. |
+| Decrease by 2 - Increase by 3 | 0.11 | 0.29 | 0.39 | 0.696 | 0.999 | n.s. |
+| Decrease by 3 - Increase by 1 | 0.57 | 0.29 | 1.98 | 0.047 | 0.564 | n.s. |
+| Decrease by 3 - Increase by 2 | 0.82 | 0.29 | 2.88 | 0.004 | 0.076 | n.s. |
+| Decrease by 3 - Increase by 3 | 0.57 | 0.29 | 2.00 | 0.045 | 0.564 | n.s. |
+| Increase by 1 - Increase by 2 | 0.26 | 0.29 | 0.89 | 0.371 | 0.991 | n.s. |
+| Increase by 1 - Increase by 3 | 0.01 | 0.29 | 0.02 | 0.985 | 1.000 | n.s. |
+| Increase by 2 - Increase by 3 | -0.25 | 0.29 | -0.88 | 0.381 | 0.991 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -647,9 +647,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.78, *p* = 0.126, η²_G = 0.078
-- Greenhouse-Geisser corrected: *p* = 0.196 (ε = 0.397)
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 1.83, *p* = 0.097, η²_G = 0.023
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -657,27 +656,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | -0.04 | 7 | = 0.967 | -0.02 [-0.57, 0.71] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 2 | -0.25 | 7 | = 0.945 | -0.06 [-0.67, 0.60] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 3 | -0.84 | 7 | = 0.639 | -0.29 [-1.09, 0.48] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 | 1.67 | 7 | = 0.419 | 0.52 [-0.44, 0.92] | medium | n.s. |
-| Cardinality (no change) vs Increase by 2 | 0.78 | 7 | = 0.639 | 0.30 [-0.52, 0.84] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 | 0.73 | 7 | = 0.639 | 0.29 [-0.51, 0.70] | small | n.s. |
-| Decrease by 1 vs Decrease by 2 | -0.13 | 7 | = 0.967 | -0.05 [-0.92, 0.38] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | -1.20 | 7 | = 0.565 | -0.29 [-1.36, 0.11] | small | n.s. |
-| Decrease by 1 vs Increase by 1 | 2.62 | 7 | = 0.181 | 0.58 [-0.42, 0.87] | medium | n.s. |
-| Decrease by 1 vs Increase by 2 | 2.14 | 7 | = 0.293 | 0.34 [-0.32, 0.98] | small | n.s. |
-| Decrease by 1 vs Increase by 3 | 1.42 | 7 | = 0.520 | 0.33 [-0.65, 0.62] | small | n.s. |
-| Decrease by 2 vs Decrease by 3 | -0.65 | 7 | = 0.663 | -0.28 [-0.82, 0.40] | small | n.s. |
-| Decrease by 2 vs Increase by 1 | 1.93 | 7 | = 0.334 | 0.75 [-0.24, 0.90] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | 1.09 | 7 | = 0.599 | 0.44 [-0.26, 1.06] | small | n.s. |
-| Decrease by 2 vs Increase by 3 | 0.91 | 7 | = 0.639 | 0.44 [-0.45, 0.71] | small | n.s. |
-| Decrease by 3 vs Increase by 1 | 3.04 | 7 | = 0.181 | 0.78 [0.03, 1.30] | medium | n.s. |
-| Decrease by 3 vs Increase by 2 | 2.74 | 7 | = 0.181 | 0.57 [0.03, 1.71] | medium | n.s. |
-| Decrease by 3 vs Increase by 3 | 3.03 | 7 | = 0.181 | 0.57 [0.19, 1.84] | medium | n.s. |
-| Increase by 1 vs Increase by 2 | -0.85 | 7 | = 0.639 | -0.23 [-0.67, 0.61] | small | n.s. |
-| Increase by 1 vs Increase by 3 | -1.29 | 7 | = 0.557 | -0.24 [-0.97, 0.27] | small | n.s. |
-| Increase by 2 vs Increase by 3 | -0.05 | 7 | = 0.967 | -0.01 [-0.79, 0.49] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 | 0.61 | 23 | = 0.744 | 0.10 [-0.30, 0.55] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 | -1.02 | 23 | = 0.611 | -0.14 [-0.63, 0.22] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 | -2.03 | 23 | = 0.381 | -0.34 [-0.85, 0.03] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 | -0.14 | 23 | = 0.935 | -0.03 [-0.45, 0.39] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 | 0.64 | 23 | = 0.744 | 0.10 [-0.29, 0.55] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 | -0.38 | 23 | = 0.822 | -0.07 [-0.50, 0.34] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 2 | -1.56 | 23 | = 0.399 | -0.24 [-0.75, 0.11] | small | n.s. |
+| Decrease by 1 vs Decrease by 3 | -3.00 | 23 | = 0.066 | -0.43 [-1.07, -0.15] | small | n.s. |
+| Decrease by 1 vs Increase by 1 | -0.72 | 23 | = 0.744 | -0.13 [-0.57, 0.28] | negligible | n.s. |
+| Decrease by 1 vs Increase by 2 | -0.05 | 23 | = 0.964 | -0.01 [-0.43, 0.41] | negligible | n.s. |
+| Decrease by 1 vs Increase by 3 | -1.09 | 23 | = 0.604 | -0.17 [-0.65, 0.21] | negligible | n.s. |
+| Decrease by 2 vs Decrease by 3 | -1.25 | 23 | = 0.572 | -0.21 [-0.68, 0.17] | small | n.s. |
+| Decrease by 2 vs Increase by 1 | 0.58 | 23 | = 0.744 | 0.12 [-0.31, 0.54] | negligible | n.s. |
+| Decrease by 2 vs Increase by 2 | 1.57 | 23 | = 0.399 | 0.26 [-0.11, 0.75] | small | n.s. |
+| Decrease by 2 vs Increase by 3 | 0.38 | 23 | = 0.822 | 0.08 [-0.34, 0.50] | negligible | n.s. |
+| Decrease by 3 vs Increase by 1 | 1.64 | 23 | = 0.399 | 0.33 [-0.10, 0.77] | small | n.s. |
+| Decrease by 3 vs Increase by 2 | 3.07 | 23 | = 0.066 | 0.45 [0.17, 1.09] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | 1.75 | 23 | = 0.399 | 0.29 [-0.08, 0.79] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 0.68 | 23 | = 0.744 | 0.14 [-0.28, 0.56] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -0.24 | 23 | = 0.902 | -0.04 [-0.47, 0.37] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | -1.19 | 23 | = 0.572 | -0.18 [-0.67, 0.19] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -690,14 +689,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 1229.21, BIC = 1257.65
-- **Decrease by 1 vs Cardinality (no change)**: *β* = 10.84, *SE* = 9.438, *z* = 1.148, *p* = 0.251
-- **Decrease by 2 vs Cardinality (no change)**: *β* = -5.20, *SE* = 9.438, *z* = -0.551, *p* = 0.581
-- **Decrease by 3 vs Cardinality (no change)**: *β* = 3.78, *SE* = 9.705, *z* = 0.390, *p* = 0.697
-- **Increase by 1 vs Cardinality (no change)**: *β* = 17.77, *SE* = 9.589, *z* = 1.853, *p* = 0.064
-- **Increase by 2 vs Cardinality (no change)**: *β* = 13.28, *SE* = 9.864, *z* = 1.347, *p* = 0.178
-- **Increase by 3 vs Cardinality (no change)**: *β* = 5.07, *SE* = 9.067, *z* = 0.559, *p* = 0.576
-- **SNR**: *β* = 0.54, *SE* = 0.592, *z* = 0.908, *p* = 0.364
+- AIC = 1630.22, BIC = 1661.46
+- **Decrease by 1 vs Cardinality (no change)**: *β* = 22.39, *SE* = 7.589, *z* = 2.950, *p* = 0.003
+- **Decrease by 2 vs Cardinality (no change)**: *β* = 8.52, *SE* = 7.611, *z* = 1.120, *p* = 0.263
+- **Decrease by 3 vs Cardinality (no change)**: *β* = 16.25, *SE* = 7.706, *z* = 2.109, *p* = 0.035
+- **Increase by 1 vs Cardinality (no change)**: *β* = 20.66, *SE* = 7.636, *z* = 2.705, *p* = 0.007
+- **Increase by 2 vs Cardinality (no change)**: *β* = 23.77, *SE* = 7.693, *z* = 3.089, *p* = 0.002
+- **Increase by 3 vs Cardinality (no change)**: *β* = 14.87, *SE* = 7.510, *z* = 1.980, *p* = 0.048
+- **SNR**: *β* = 0.11, *SE* = 0.502, *z* = 0.227, *p* = 0.820
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -710,27 +709,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | -10.84 | 9.44 | -1.15 | 0.251 | 0.977 | n.s. |
-| Cardinality (no change) - Decrease by 2 | 5.20 | 9.44 | 0.55 | 0.581 | 0.994 | n.s. |
-| Cardinality (no change) - Decrease by 3 | -3.78 | 9.70 | -0.39 | 0.697 | 0.994 | n.s. |
-| Cardinality (no change) - Increase by 1 | -17.77 | 9.59 | -1.85 | 0.064 | 0.695 | n.s. |
-| Cardinality (no change) - Increase by 2 | -13.28 | 9.86 | -1.35 | 0.178 | 0.947 | n.s. |
-| Cardinality (no change) - Increase by 3 | -5.07 | 9.07 | -0.56 | 0.576 | 0.994 | n.s. |
-| Decrease by 1 - Decrease by 2 | 16.04 | 8.24 | 1.95 | 0.052 | 0.634 | n.s. |
-| Decrease by 1 - Decrease by 3 | 7.06 | 8.31 | 0.85 | 0.396 | 0.989 | n.s. |
-| Decrease by 1 - Increase by 1 | -6.93 | 8.52 | -0.81 | 0.416 | 0.989 | n.s. |
-| Decrease by 1 - Increase by 2 | -2.45 | 8.39 | -0.29 | 0.771 | 0.994 | n.s. |
-| Decrease by 1 - Increase by 3 | 5.77 | 8.10 | 0.71 | 0.476 | 0.989 | n.s. |
-| Decrease by 2 - Decrease by 3 | -8.99 | 8.27 | -1.09 | 0.277 | 0.977 | n.s. |
-| Decrease by 2 - Increase by 1 | -22.97 | 8.53 | -2.69 | 0.007 | 0.138 | n.s. |
-| Decrease by 2 - Increase by 2 | -18.49 | 8.44 | -2.19 | 0.029 | 0.440 | n.s. |
-| Decrease by 2 - Increase by 3 | -10.27 | 8.09 | -1.27 | 0.204 | 0.959 | n.s. |
-| Decrease by 3 - Increase by 1 | -13.99 | 8.58 | -1.63 | 0.103 | 0.843 | n.s. |
-| Decrease by 3 - Increase by 2 | -9.50 | 8.43 | -1.13 | 0.260 | 0.977 | n.s. |
-| Decrease by 3 - Increase by 3 | -1.29 | 8.18 | -0.16 | 0.875 | 0.994 | n.s. |
-| Increase by 1 - Increase by 2 | 4.49 | 8.69 | 0.52 | 0.606 | 0.994 | n.s. |
-| Increase by 1 - Increase by 3 | 12.70 | 8.36 | 1.52 | 0.129 | 0.889 | n.s. |
-| Increase by 2 - Increase by 3 | 8.21 | 8.40 | 0.98 | 0.329 | 0.981 | n.s. |
+| Cardinality (no change) - Decrease by 1 | -22.39 | 7.59 | -2.95 | 0.003 | 0.062 | n.s. |
+| Cardinality (no change) - Decrease by 2 | -8.52 | 7.61 | -1.12 | 0.263 | 0.974 | n.s. |
+| Cardinality (no change) - Decrease by 3 | -16.25 | 7.71 | -2.11 | 0.035 | 0.473 | n.s. |
+| Cardinality (no change) - Increase by 1 | -20.66 | 7.64 | -2.71 | 0.007 | 0.122 | n.s. |
+| Cardinality (no change) - Increase by 2 | -23.76 | 7.69 | -3.09 | 0.002 | 0.041 | * |
+| Cardinality (no change) - Increase by 3 | -14.87 | 7.51 | -1.98 | 0.048 | 0.543 | n.s. |
+| Decrease by 1 - Decrease by 2 | 13.86 | 7.49 | 1.85 | 0.064 | 0.630 | n.s. |
+| Decrease by 1 - Decrease by 3 | 6.13 | 7.51 | 0.82 | 0.414 | 0.983 | n.s. |
+| Decrease by 1 - Increase by 1 | 1.73 | 7.49 | 0.23 | 0.818 | 0.994 | n.s. |
+| Decrease by 1 - Increase by 2 | -1.38 | 7.51 | -0.18 | 0.854 | 0.994 | n.s. |
+| Decrease by 1 - Increase by 3 | 7.52 | 7.52 | 1.00 | 0.317 | 0.981 | n.s. |
+| Decrease by 2 - Decrease by 3 | -7.73 | 7.50 | -1.03 | 0.303 | 0.981 | n.s. |
+| Decrease by 2 - Increase by 1 | -12.14 | 7.49 | -1.62 | 0.105 | 0.789 | n.s. |
+| Decrease by 2 - Increase by 2 | -15.24 | 7.50 | -2.03 | 0.042 | 0.518 | n.s. |
+| Decrease by 2 - Increase by 3 | -6.34 | 7.53 | -0.84 | 0.399 | 0.983 | n.s. |
+| Decrease by 3 - Increase by 1 | -4.41 | 7.49 | -0.59 | 0.557 | 0.983 | n.s. |
+| Decrease by 3 - Increase by 2 | -7.51 | 7.49 | -1.00 | 0.316 | 0.981 | n.s. |
+| Decrease by 3 - Increase by 3 | 1.39 | 7.59 | 0.18 | 0.855 | 0.994 | n.s. |
+| Increase by 1 - Increase by 2 | -3.11 | 7.49 | -0.41 | 0.678 | 0.989 | n.s. |
+| Increase by 1 - Increase by 3 | 5.79 | 7.54 | 0.77 | 0.443 | 0.983 | n.s. |
+| Increase by 2 - Increase by 3 | 8.90 | 7.58 | 1.17 | 0.241 | 0.972 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -738,9 +737,9 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.34, *p* = 0.250, η²_G = 0.055
-- Greenhouse-Geisser corrected: *p* = 0.274 (ε = 0.554)
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 2.52, *p* = 0.024, η²_G = 0.056
+- Greenhouse-Geisser corrected: *p* = 0.046 (ε = 0.675)
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -748,27 +747,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | -1.77 | 12 | = 0.634 | -0.61 [-1.08, 0.14] | medium | n.s. |
-| Cardinality (no change) vs Decrease by 2 | 0.13 | 12 | = 0.945 | 0.05 [-0.50, 0.66] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 3 | -0.38 | 12 | = 0.839 | -0.14 [-0.71, 0.50] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 | -1.51 | 12 | = 0.634 | -0.58 [-1.05, 0.21] | medium | n.s. |
-| Cardinality (no change) vs Increase by 2 | -0.65 | 12 | = 0.787 | -0.26 [-0.87, 0.31] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 | -0.31 | 12 | = 0.839 | -0.12 [-0.77, 0.40] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 2 | 2.51 | 12 | = 0.513 | 0.59 [0.15, 1.26] | medium | n.s. |
-| Decrease by 1 vs Decrease by 3 | 1.28 | 12 | = 0.634 | 0.43 [-0.21, 0.84] | small | n.s. |
-| Decrease by 1 vs Increase by 1 | -0.35 | 12 | = 0.839 | -0.09 [-0.64, 0.43] | negligible | n.s. |
-| Decrease by 1 vs Increase by 2 | 1.23 | 12 | = 0.634 | 0.31 [-0.62, 0.38] | small | n.s. |
-| Decrease by 1 vs Increase by 3 | 1.11 | 12 | = 0.634 | 0.38 [-0.38, 0.59] | small | n.s. |
-| Decrease by 2 vs Decrease by 3 | -0.60 | 12 | = 0.787 | -0.17 [-0.76, 0.25] | negligible | n.s. |
-| Decrease by 2 vs Increase by 1 | -2.19 | 12 | = 0.513 | -0.57 [-1.15, 0.00] | medium | n.s. |
-| Decrease by 2 vs Increase by 2 | -0.94 | 12 | = 0.696 | -0.27 [-1.02, 0.06] | small | n.s. |
-| Decrease by 2 vs Increase by 3 | -0.56 | 12 | = 0.787 | -0.15 [-0.70, 0.27] | negligible | n.s. |
-| Decrease by 3 vs Increase by 1 | -1.28 | 12 | = 0.634 | -0.44 [-0.96, 0.14] | small | n.s. |
-| Decrease by 3 vs Increase by 2 | -0.58 | 12 | = 0.787 | -0.11 [-0.93, 0.17] | negligible | n.s. |
-| Decrease by 3 vs Increase by 3 | 0.00 | 12 | = 1.000 | 0.00 [-0.38, 0.59] | negligible | n.s. |
-| Increase by 1 vs Increase by 2 | 1.08 | 12 | = 0.634 | 0.34 [-0.39, 0.68] | small | n.s. |
-| Increase by 1 vs Increase by 3 | 1.16 | 12 | = 0.634 | 0.41 [-0.13, 0.94] | small | n.s. |
-| Increase by 2 vs Increase by 3 | 0.54 | 12 | = 0.787 | 0.10 [-0.14, 0.89] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 | -3.38 | 23 | = 0.054 | -0.79 [-1.16, -0.22] | medium | n.s. |
+| Cardinality (no change) vs Decrease by 2 | -1.18 | 23 | = 0.478 | -0.31 [-0.67, 0.19] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 | -2.26 | 23 | = 0.142 | -0.57 [-0.91, -0.02] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 | -2.29 | 23 | = 0.142 | -0.63 [-0.91, -0.02] | medium | n.s. |
+| Cardinality (no change) vs Increase by 2 | -2.79 | 23 | = 0.110 | -0.82 [-1.02, -0.11] | large | n.s. |
+| Cardinality (no change) vs Increase by 3 | -1.85 | 23 | = 0.229 | -0.48 [-0.82, 0.06] | small | n.s. |
+| Decrease by 1 vs Decrease by 2 | 2.35 | 23 | = 0.142 | 0.43 [0.03, 0.92] | small | n.s. |
+| Decrease by 1 vs Decrease by 3 | 0.88 | 23 | = 0.582 | 0.18 [-0.25, 0.61] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 0.22 | 23 | = 0.827 | 0.05 [-0.38, 0.47] | negligible | n.s. |
+| Decrease by 1 vs Increase by 2 | -0.22 | 23 | = 0.827 | -0.05 [-0.47, 0.38] | negligible | n.s. |
+| Decrease by 1 vs Increase by 3 | 0.93 | 23 | = 0.582 | 0.22 [-0.24, 0.62] | small | n.s. |
+| Decrease by 2 vs Decrease by 3 | -1.12 | 23 | = 0.481 | -0.24 [-0.66, 0.20] | small | n.s. |
+| Decrease by 2 vs Increase by 1 | -1.40 | 23 | = 0.366 | -0.33 [-0.72, 0.14] | small | n.s. |
+| Decrease by 2 vs Increase by 2 | -1.88 | 23 | = 0.229 | -0.47 [-0.82, 0.05] | small | n.s. |
+| Decrease by 2 vs Increase by 3 | -0.73 | 23 | = 0.665 | -0.18 [-0.57, 0.28] | negligible | n.s. |
+| Decrease by 3 vs Increase by 1 | -0.48 | 23 | = 0.786 | -0.12 [-0.52, 0.33] | negligible | n.s. |
+| Decrease by 3 vs Increase by 2 | -1.64 | 23 | = 0.302 | -0.23 [-0.77, 0.10] | small | n.s. |
+| Decrease by 3 vs Increase by 3 | 0.34 | 23 | = 0.815 | 0.05 [-0.35, 0.49] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | -0.37 | 23 | = 0.815 | -0.09 [-0.50, 0.35] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 0.59 | 23 | = 0.736 | 0.16 [-0.30, 0.54] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 1.55 | 23 | = 0.312 | 0.26 [-0.12, 0.75] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -778,14 +777,14 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 462.81, BIC = 491.25
-- **Decrease by 1 vs Cardinality (no change)**: *β* = 2.08, *SE* = 0.423, *z* = 4.916, *p* < .001
-- **Decrease by 2 vs Cardinality (no change)**: *β* = 1.91, *SE* = 0.422, *z* = 4.536, *p* < .001
-- **Decrease by 3 vs Cardinality (no change)**: *β* = 2.31, *SE* = 0.438, *z* = 5.266, *p* < .001
-- **Increase by 1 vs Cardinality (no change)**: *β* = 1.49, *SE* = 0.428, *z* = 3.493, *p* < .001
-- **Increase by 2 vs Cardinality (no change)**: *β* = 1.92, *SE* = 0.444, *z* = 4.318, *p* < .001
-- **Increase by 3 vs Cardinality (no change)**: *β* = 1.86, *SE* = 0.406, *z* = 4.594, *p* < .001
-- **SNR**: *β* = 0.18, *SE* = 0.029, *z* = 6.470, *p* < .001
+- AIC = 666.14, BIC = 697.37
+- **Decrease by 1 vs Cardinality (no change)**: *β* = 2.73, *SE* = 0.381, *z* = 7.162, *p* < .001
+- **Decrease by 2 vs Cardinality (no change)**: *β* = 2.40, *SE* = 0.382, *z* = 6.285, *p* < .001
+- **Decrease by 3 vs Cardinality (no change)**: *β* = 2.87, *SE* = 0.387, *z* = 7.413, *p* < .001
+- **Increase by 1 vs Cardinality (no change)**: *β* = 1.59, *SE* = 0.383, *z* = 4.151, *p* < .001
+- **Increase by 2 vs Cardinality (no change)**: *β* = 2.52, *SE* = 0.386, *z* = 6.535, *p* < .001
+- **Increase by 3 vs Cardinality (no change)**: *β* = 2.70, *SE* = 0.376, *z* = 7.181, *p* < .001
+- **SNR**: *β* = 0.10, *SE* = 0.026, *z* = 3.644, *p* < .001
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -798,27 +797,27 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 | -2.08 | 0.42 | -4.92 | < .001 | < .001 | *** |
-| Cardinality (no change) - Decrease by 2 | -1.91 | 0.42 | -4.54 | < .001 | < .001 | *** |
-| Cardinality (no change) - Decrease by 3 | -2.31 | 0.44 | -5.27 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 1 | -1.49 | 0.43 | -3.49 | < .001 | 0.008 | ** |
-| Cardinality (no change) - Increase by 2 | -1.92 | 0.44 | -4.32 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 3 | -1.86 | 0.41 | -4.59 | < .001 | < .001 | *** |
-| Decrease by 1 - Decrease by 2 | 0.16 | 0.36 | 0.45 | 0.653 | 0.995 | n.s. |
-| Decrease by 1 - Decrease by 3 | -0.23 | 0.37 | -0.63 | 0.529 | 0.995 | n.s. |
-| Decrease by 1 - Increase by 1 | 0.58 | 0.38 | 1.55 | 0.120 | 0.834 | n.s. |
-| Decrease by 1 - Increase by 2 | 0.16 | 0.37 | 0.43 | 0.664 | 0.995 | n.s. |
-| Decrease by 1 - Increase by 3 | 0.21 | 0.36 | 0.60 | 0.551 | 0.995 | n.s. |
-| Decrease by 2 - Decrease by 3 | -0.39 | 0.37 | -1.08 | 0.281 | 0.974 | n.s. |
-| Decrease by 2 - Increase by 1 | 0.42 | 0.38 | 1.12 | 0.263 | 0.974 | n.s. |
-| Decrease by 2 - Increase by 2 | -0.00 | 0.37 | -0.01 | 0.995 | 0.999 | n.s. |
-| Decrease by 2 - Increase by 3 | 0.05 | 0.36 | 0.14 | 0.889 | 0.999 | n.s. |
-| Decrease by 3 - Increase by 1 | 0.81 | 0.38 | 2.15 | 0.032 | 0.384 | n.s. |
-| Decrease by 3 - Increase by 2 | 0.39 | 0.37 | 1.05 | 0.293 | 0.974 | n.s. |
-| Decrease by 3 - Increase by 3 | 0.44 | 0.36 | 1.23 | 0.219 | 0.960 | n.s. |
-| Increase by 1 - Increase by 2 | -0.42 | 0.38 | -1.10 | 0.270 | 0.974 | n.s. |
-| Increase by 1 - Increase by 3 | -0.37 | 0.37 | -1.01 | 0.313 | 0.974 | n.s. |
-| Increase by 2 - Increase by 3 | 0.05 | 0.37 | 0.14 | 0.888 | 0.999 | n.s. |
+| Cardinality (no change) - Decrease by 1 | -2.73 | 0.38 | -7.16 | < .001 | < .001 | *** |
+| Cardinality (no change) - Decrease by 2 | -2.40 | 0.38 | -6.29 | < .001 | < .001 | *** |
+| Cardinality (no change) - Decrease by 3 | -2.87 | 0.39 | -7.41 | < .001 | < .001 | *** |
+| Cardinality (no change) - Increase by 1 | -1.59 | 0.38 | -4.15 | < .001 | < .001 | *** |
+| Cardinality (no change) - Increase by 2 | -2.53 | 0.39 | -6.54 | < .001 | < .001 | *** |
+| Cardinality (no change) - Increase by 3 | -2.70 | 0.38 | -7.18 | < .001 | < .001 | *** |
+| Decrease by 1 - Decrease by 2 | 0.33 | 0.38 | 0.87 | 0.384 | 0.982 | n.s. |
+| Decrease by 1 - Decrease by 3 | -0.14 | 0.38 | -0.38 | 0.703 | 0.995 | n.s. |
+| Decrease by 1 - Increase by 1 | 1.14 | 0.38 | 3.03 | 0.002 | 0.034 | * |
+| Decrease by 1 - Increase by 2 | 0.20 | 0.38 | 0.53 | 0.593 | 0.995 | n.s. |
+| Decrease by 1 - Increase by 3 | 0.02 | 0.38 | 0.06 | 0.949 | 0.995 | n.s. |
+| Decrease by 2 - Decrease by 3 | -0.47 | 0.38 | -1.25 | 0.211 | 0.907 | n.s. |
+| Decrease by 2 - Increase by 1 | 0.81 | 0.38 | 2.16 | 0.031 | 0.293 | n.s. |
+| Decrease by 2 - Increase by 2 | -0.13 | 0.38 | -0.33 | 0.738 | 0.995 | n.s. |
+| Decrease by 2 - Increase by 3 | -0.30 | 0.38 | -0.80 | 0.424 | 0.982 | n.s. |
+| Decrease by 3 - Increase by 1 | 1.28 | 0.38 | 3.41 | < .001 | 0.010 | ** |
+| Decrease by 3 - Increase by 2 | 0.34 | 0.37 | 0.92 | 0.358 | 0.982 | n.s. |
+| Decrease by 3 - Increase by 3 | 0.17 | 0.38 | 0.44 | 0.659 | 0.995 | n.s. |
+| Increase by 1 - Increase by 2 | -0.93 | 0.38 | -2.49 | 0.013 | 0.143 | n.s. |
+| Increase by 1 - Increase by 3 | -1.11 | 0.38 | -2.94 | 0.003 | 0.042 | * |
+| Increase by 2 - Increase by 3 | -0.18 | 0.38 | -0.46 | 0.642 | 0.995 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 21 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -826,7 +825,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 9.71, *p* < .001, η²_G = 0.195
+- *F* = 15.78, *p* < .001, η²_G = 0.100
+- Greenhouse-Geisser corrected: *p* < .001 (ε = 0.579)
 - **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -835,27 +835,27 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 | -4.29 | 12 | = 0.008 | -1.59 [-1.78, -0.34] | large | ** |
-| Cardinality (no change) vs Decrease by 2 | -4.66 | 12 | = 0.008 | -1.68 [-1.97, -0.45] | large | ** |
-| Cardinality (no change) vs Decrease by 3 | -4.11 | 12 | = 0.008 | -1.62 [-1.92, -0.36] | large | ** |
-| Cardinality (no change) vs Increase by 1 | -2.88 | 12 | = 0.048 | -1.09 [-1.49, -0.11] | large | * |
-| Cardinality (no change) vs Increase by 2 | -4.17 | 12 | = 0.008 | -1.44 [-1.80, -0.35] | large | ** |
-| Cardinality (no change) vs Increase by 3 | -3.56 | 12 | = 0.017 | -1.32 [-1.65, -0.26] | large | * |
-| Decrease by 1 vs Decrease by 2 | 0.81 | 12 | = 0.509 | 0.15 [-0.32, 0.68] | negligible | n.s. |
-| Decrease by 1 vs Decrease by 3 | -1.06 | 12 | = 0.409 | -0.19 [-0.86, 0.19] | negligible | n.s. |
-| Decrease by 1 vs Increase by 1 | 2.66 | 12 | = 0.056 | 0.30 [0.22, 1.46] | small | n.s. |
-| Decrease by 1 vs Increase by 2 | -0.15 | 12 | = 0.886 | -0.02 [-0.63, 0.37] | negligible | n.s. |
-| Decrease by 1 vs Increase by 3 | 1.46 | 12 | = 0.323 | 0.17 [-0.08, 0.92] | negligible | n.s. |
-| Decrease by 2 vs Decrease by 3 | -1.39 | 12 | = 0.333 | -0.34 [-0.84, 0.19] | small | n.s. |
-| Decrease by 2 vs Increase by 1 | 1.14 | 12 | = 0.388 | 0.20 [-0.18, 0.92] | negligible | n.s. |
-| Decrease by 2 vs Increase by 2 | -0.73 | 12 | = 0.528 | -0.16 [-0.70, 0.33] | negligible | n.s. |
-| Decrease by 2 vs Increase by 3 | 0.20 | 12 | = 0.886 | 0.04 [-0.28, 0.69] | negligible | n.s. |
-| Decrease by 3 vs Increase by 1 | 2.64 | 12 | = 0.056 | 0.46 [0.06, 1.23] | small | n.s. |
-| Decrease by 3 vs Increase by 2 | 0.81 | 12 | = 0.509 | 0.15 [-0.31, 0.77] | negligible | n.s. |
-| Decrease by 3 vs Increase by 3 | 1.97 | 12 | = 0.152 | 0.34 [0.10, 1.16] | small | n.s. |
-| Increase by 1 vs Increase by 2 | -2.03 | 12 | = 0.152 | -0.30 [-1.26, -0.08] | small | n.s. |
-| Increase by 1 vs Increase by 3 | -1.23 | 12 | = 0.383 | -0.14 [-0.82, 0.23] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | 1.19 | 12 | = 0.383 | 0.18 [-0.11, 0.93] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 | -6.17 | 23 | < .001 | -1.02 [-1.82, -0.69] | large | *** |
+| Cardinality (no change) vs Decrease by 2 | -6.29 | 23 | < .001 | -0.94 [-1.85, -0.71] | large | *** |
+| Cardinality (no change) vs Decrease by 3 | -5.17 | 23 | < .001 | -1.03 [-1.58, -0.53] | large | *** |
+| Cardinality (no change) vs Increase by 1 | -3.38 | 23 | = 0.007 | -0.59 [-1.16, -0.22] | medium | ** |
+| Cardinality (no change) vs Increase by 2 | -5.81 | 23 | < .001 | -0.92 [-1.74, -0.64] | large | *** |
+| Cardinality (no change) vs Increase by 3 | -5.49 | 23 | < .001 | -1.03 [-1.66, -0.58] | large | *** |
+| Decrease by 1 vs Decrease by 2 | 1.00 | 23 | = 0.493 | 0.10 [-0.22, 0.63] | negligible | n.s. |
+| Decrease by 1 vs Decrease by 3 | -0.77 | 23 | = 0.588 | -0.08 [-0.58, 0.27] | negligible | n.s. |
+| Decrease by 1 vs Increase by 1 | 3.98 | 23 | = 0.002 | 0.32 [0.33, 1.30] | small | ** |
+| Decrease by 1 vs Increase by 2 | 0.34 | 23 | = 0.776 | 0.03 [-0.35, 0.49] | negligible | n.s. |
+| Decrease by 1 vs Increase by 3 | 0.60 | 23 | = 0.673 | 0.05 [-0.30, 0.55] | negligible | n.s. |
+| Decrease by 2 vs Decrease by 3 | -1.45 | 23 | = 0.279 | -0.17 [-0.73, 0.13] | negligible | n.s. |
+| Decrease by 2 vs Increase by 1 | 2.36 | 23 | = 0.052 | 0.24 [0.04, 0.93] | small | n.s. |
+| Decrease by 2 vs Increase by 2 | -0.57 | 23 | = 0.673 | -0.06 [-0.54, 0.31] | negligible | n.s. |
+| Decrease by 2 vs Increase by 3 | -0.47 | 23 | = 0.707 | -0.05 [-0.52, 0.33] | negligible | n.s. |
+| Decrease by 3 vs Increase by 1 | 3.12 | 23 | = 0.011 | 0.38 [0.17, 1.10] | small | * |
+| Decrease by 3 vs Increase by 2 | 0.85 | 23 | = 0.567 | 0.10 [-0.25, 0.60] | negligible | n.s. |
+| Decrease by 3 vs Increase by 3 | 1.16 | 23 | = 0.419 | 0.13 [-0.19, 0.66] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | -3.42 | 23 | = 0.007 | -0.28 [-1.17, -0.23] | small | ** |
+| Increase by 1 vs Increase by 3 | -2.88 | 23 | = 0.018 | -0.29 [-1.04, -0.13] | small | * |
+| Increase by 2 vs Increase by 3 | 0.15 | 23 | = 0.879 | 0.02 [-0.39, 0.45] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -867,20 +867,35 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**Fz amplitude:** Significant main effect of condition (*p* = 0.032) (no significant pairwise comparisons)
-**N1 latency:** Significant main effect of condition (*p* = 0.003) (no significant pairwise comparisons)
+**Fz latency:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
+  - Cardinality (no change) showed greater latency than Increase by 3 (*d* = 0.58)
+**N1 latency:** Significant main effect of condition (*p* = 0.004). Post-hoc tests revealed:
+  - Decrease by 1 showed greater latency than Increase by 2 (*d* = 0.61)
 **N1 amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
-  - Cardinality (no change) showed greater amplitude than Increase by 2 (*d* = 0.45)
-  - Cardinality (no change) showed greater amplitude than Increase by 3 (*d* = 0.78)
-  - Decrease by 1 showed greater amplitude than Increase by 3 (*d* = 0.69)
-**P1 latency:** Marginal trend toward condition differences (*p* = 0.068)
+  - Cardinality (no change) showed greater amplitude than Increase by 2 (*d* = 0.37)
+  - Cardinality (no change) showed greater amplitude than Increase by 3 (*d* = 0.66)
+  - Decrease by 1 showed greater amplitude than Increase by 3 (*d* = 0.55)
+  - Increase by 1 showed greater amplitude than Increase by 3 (*d* = 0.47)
+**P1 latency:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Cardinality (no change) showed greater latency than Increase by 3 (*d* = 0.55)
+  - Decrease by 1 showed greater latency than Increase by 2 (*d* = 0.57)
+  - Decrease by 1 showed greater latency than Increase by 3 (*d* = 0.84)
+  - Decrease by 2 showed greater latency than Increase by 2 (*d* = 0.72)
+  - Decrease by 2 showed greater latency than Increase by 3 (*d* = 1.02)
+  - Decrease by 3 showed greater latency than Increase by 3 (*d* = 0.74)
+**P1 amplitude:** Marginal trend toward condition differences (*p* = 0.097)
+**P3b latency:** Significant main effect of condition (*p* = 0.024) (no significant pairwise comparisons)
 **P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
-  - Cardinality (no change) showed smaller amplitude than Decrease by 1 (*d* = -1.59)
-  - Cardinality (no change) showed smaller amplitude than Decrease by 2 (*d* = -1.68)
-  - Cardinality (no change) showed smaller amplitude than Decrease by 3 (*d* = -1.62)
-  - Cardinality (no change) showed smaller amplitude than Increase by 1 (*d* = -1.09)
-  - Cardinality (no change) showed smaller amplitude than Increase by 2 (*d* = -1.44)
-  - Cardinality (no change) showed smaller amplitude than Increase by 3 (*d* = -1.32)
+  - Cardinality (no change) showed smaller amplitude than Decrease by 1 (*d* = -1.02)
+  - Cardinality (no change) showed smaller amplitude than Decrease by 2 (*d* = -0.94)
+  - Cardinality (no change) showed smaller amplitude than Decrease by 3 (*d* = -1.03)
+  - Cardinality (no change) showed smaller amplitude than Increase by 1 (*d* = -0.59)
+  - Cardinality (no change) showed smaller amplitude than Increase by 2 (*d* = -0.92)
+  - Cardinality (no change) showed smaller amplitude than Increase by 3 (*d* = -1.03)
+  - Decrease by 1 showed greater amplitude than Increase by 1 (*d* = 0.32)
+  - Decrease by 3 showed greater amplitude than Increase by 1 (*d* = 0.38)
+  - Increase by 1 showed smaller amplitude than Increase by 2 (*d* = -0.28)
+  - Increase by 1 showed smaller amplitude than Increase by 3 (*d* = -0.29)
 
 ### Research Implications
 

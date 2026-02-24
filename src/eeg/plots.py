@@ -856,6 +856,9 @@ def make_peak_to_peak_figure(
     p1_amp_by_label: Optional[Dict[str, float]] = None,
     n1_amp_by_label: Optional[Dict[str, float]] = None,
     epochs_by_label: Optional[Mapping[str, int]] = None,
+    include_title: bool = True,
+    include_subtitle: bool = True,
+    match_hline_linestyles: bool = False,
 ):
     """
     Create a P1↔N1 peak-to-peak figure using N1 ROI waveforms.
@@ -908,12 +911,12 @@ def make_peak_to_peak_figure(
     ax.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.15)
 
     # Title/subtitle
-    if title:
+    if title and include_title:
         try:
             fig.suptitle(title, fontsize=12, fontweight="bold", y=0.98)
         except Exception:
             pass
-    if subtitle:
+    if subtitle and include_subtitle:
         try:
             # Place a bit below the title; leave room above the axes
             fig.text(0.5, 0.93, subtitle, ha="center", fontsize=9)
@@ -922,15 +925,19 @@ def make_peak_to_peak_figure(
 
     # No latency vertical lines in P2P plot (only stimulus onset at 0 remains)
 
-    # Draw horizontal peak amplitude lines (use condition color if provided)
+    # Draw horizontal peak amplitude lines (always black; linestyle matches waveform)
     if p1_amp_by_label:
         for label, amp in p1_amp_by_label.items():
-            color = colors[label] if colors and label in colors else hline_color
-            ax.axhline(amp, color=color, linestyle=hline_style, linewidth=0.9, alpha=0.9)
+            ls = hline_style
+            if match_hline_linestyles and linestyles and label in linestyles:
+                ls = linestyles[label]
+            ax.axhline(amp, color=hline_color, linestyle=ls, linewidth=0.9, alpha=0.9)
     if n1_amp_by_label:
         for label, amp in n1_amp_by_label.items():
-            color = colors[label] if colors and label in colors else hline_color
-            ax.axhline(amp, color=color, linestyle=hline_style, linewidth=0.9, alpha=0.9)
+            ls = hline_style
+            if match_hline_linestyles and linestyles and label in linestyles:
+                ls = linestyles[label]
+            ax.axhline(amp, color=hline_color, linestyle=ls, linewidth=0.9, alpha=0.9)
 
     # Build a compact custom legend-like box with per-row styling using OffsetBox
     from matplotlib.offsetbox import AnchoredOffsetbox, HPacker, VPacker, DrawingArea, TextArea
@@ -953,7 +960,7 @@ def make_peak_to_peak_figure(
         else:
             name_text = _format_condition_label(label)
         name_t = TextArea(name_text, textprops={"color": "#000", "fontsize": 8})
-        delta_t = TextArea(f"  Δ = {float(p2p_by_label[label]):.1f} µV", textprops={"color": color, "fontsize": 8})
+        delta_t = TextArea(f"  Δ = {float(p2p_by_label[label]):.1f} µV", textprops={"color": "#000", "fontsize": 8})
 
         row = HPacker(children=[da, name_t, delta_t], align="left", pad=0, sep=2)
         rows.append(row)

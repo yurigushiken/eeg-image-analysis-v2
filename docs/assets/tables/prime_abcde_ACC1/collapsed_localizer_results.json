@@ -1,6 +1,6 @@
 {
   "analysis_id": "prime_abcde_ACC1",
-  "date_analyzed": "2026-02-08T15:35:40.626859",
+  "date_analyzed": "2026-02-23T12:05:03.957712",
   "baseline_ms": [
     -100,
     0
@@ -19,10 +19,10 @@
   "components": {
     "P1": {
       "collapsed_peak_latency_ms": 108.0,
-      "peak_gfp_amplitude": 0.5961853506410383,
-      "fwhm_ms": 29.534993467694676,
-      "window_start_ms": 90.46328541520356,
-      "window_end_ms": 119.99827888289823,
+      "peak_gfp_amplitude": 1.1476992893868225,
+      "fwhm_ms": 35.98174044925133,
+      "window_start_ms": 86.5016893620824,
+      "window_end_ms": 122.48342981133374,
       "search_range_ms": [
         60.0,
         120.0
@@ -33,10 +33,10 @@
     },
     "N1": {
       "collapsed_peak_latency_ms": 172.0,
-      "peak_gfp_amplitude": -4.119257506104908,
-      "fwhm_ms": 70.8820728631222,
-      "window_start_ms": 140.25579533489864,
-      "window_end_ms": 211.13786819802084,
+      "peak_gfp_amplitude": -3.7501475373547013,
+      "fwhm_ms": 75.66484025921977,
+      "window_start_ms": 138.3199935526951,
+      "window_end_ms": 213.98483381191488,
       "search_range_ms": [
         125.0,
         200.0
@@ -46,11 +46,11 @@
       "n_conditions": 5
     },
     "P3b": {
-      "collapsed_peak_latency_ms": 472.0,
-      "peak_gfp_amplitude": 2.900252525573979,
-      "fwhm_ms": 116.0492196867666,
-      "window_start_ms": 423.0848447303681,
-      "window_end_ms": 539.1340644171347,
+      "collapsed_peak_latency_ms": 468.0,
+      "peak_gfp_amplitude": 2.4359091496183614,
+      "fwhm_ms": 32.42416265668021,
+      "window_start_ms": 451.742267773261,
+      "window_end_ms": 484.1664304299412,
       "search_range_ms": [
         320.0,
         590.0
@@ -61,10 +61,10 @@
     },
     "Fz": {
       "collapsed_peak_latency_ms": 104.0,
-      "peak_gfp_amplitude": -0.7434579475227862,
-      "fwhm_ms": 28.29341091353166,
-      "window_start_ms": 88.17629267627976,
-      "window_end_ms": 116.46970358981142,
+      "peak_gfp_amplitude": -1.4259255178990737,
+      "fwhm_ms": 36.661477207068174,
+      "window_start_ms": 85.33101098223437,
+      "window_end_ms": 121.99248818930255,
       "search_range_ms": [
         80.0,
         120.0

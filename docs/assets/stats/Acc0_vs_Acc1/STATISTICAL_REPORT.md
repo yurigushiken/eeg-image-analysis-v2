@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:18:58
+**Generated:** 2026-02-23 19:15:28
 
 ---
 
@@ -41,15 +41,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 17 | 101.65 ms | 7.22 | 1.75 | [88.00, 112.00] |
-| Acc1 (incorrect) | 13 | 104.31 ms | 6.82 | 1.89 | [92.00, 112.00] |
+| Acc1 (correct) | 24 | 103.50 ms | 8.11 | 1.66 | [88.00, 112.00] |
+| Acc1 (incorrect) | 24 | 102.33 ms | 8.25 | 1.68 | [88.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 17 | -1.40 µV | 1.06 | 0.26 | [-4.34, -0.31] |
-| Acc1 (incorrect) | 13 | -1.92 µV | 1.27 | 0.35 | [-5.37, -0.95] |
+| Acc1 (correct) | 24 | -1.05 µV | 1.05 | 0.21 | [-4.34, 0.18] |
+| Acc1 (incorrect) | 24 | -0.94 µV | 1.50 | 0.31 | [-5.37, 1.43] |
 
 
 ### 2.2 N1 Component
@@ -59,14 +59,14 @@ This section presents means, standard deviations, and sample sizes for each cond
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
 | Acc1 (correct) | 24 | 175.50 ms | 16.78 | 3.42 | [144.00, 204.00] |
-| Acc1 (incorrect) | 23 | 169.57 ms | 17.00 | 3.55 | [140.00, 204.00] |
+| Acc1 (incorrect) | 24 | 171.00 ms | 18.05 | 3.69 | [140.00, 204.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
 | Acc1 (correct) | 24 | -5.06 µV | 1.95 | 0.40 | [-9.41, -1.46] |
-| Acc1 (incorrect) | 23 | -5.04 µV | 1.99 | 0.42 | [-9.29, -1.15] |
+| Acc1 (incorrect) | 24 | -4.94 µV | 2.02 | 0.41 | [-9.29, -1.15] |
 
 
 ### 2.3 P1 Component
@@ -75,15 +75,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 17 | 108.47 ms | 8.70 | 2.11 | [92.00, 116.00] |
-| Acc1 (incorrect) | 11 | 108.73 ms | 8.91 | 2.69 | [92.00, 116.00] |
+| Acc1 (correct) | 24 | 105.33 ms | 10.92 | 2.23 | [88.00, 116.00] |
+| Acc1 (incorrect) | 24 | 103.00 ms | 10.63 | 2.17 | [88.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 17 | 1.80 µV | 1.40 | 0.34 | [0.33, 4.84] |
-| Acc1 (incorrect) | 11 | 2.22 µV | 1.66 | 0.50 | [0.62, 5.98] |
+| Acc1 (correct) | 24 | 1.20 µV | 1.51 | 0.31 | [-0.72, 4.84] |
+| Acc1 (incorrect) | 24 | 1.08 µV | 1.65 | 0.34 | [-1.47, 5.98] |
 
 
 ### 2.4 P3b Component
@@ -92,15 +92,15 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 20 | 482.40 ms | 30.25 | 6.76 | [436.00, 532.00] |
-| Acc1 (incorrect) | 11 | 469.45 ms | 24.61 | 7.42 | [436.00, 524.00] |
+| Acc1 (correct) | 24 | 482.17 ms | 31.32 | 6.39 | [428.00, 532.00] |
+| Acc1 (incorrect) | 24 | 482.50 ms | 32.66 | 6.67 | [436.00, 532.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Acc1 (correct) | 20 | 4.31 µV | 2.46 | 0.55 | [1.07, 8.85] |
-| Acc1 (incorrect) | 11 | 3.47 µV | 2.35 | 0.71 | [0.92, 7.92] |
+| Acc1 (correct) | 24 | 3.47 µV | 2.97 | 0.61 | [-1.62, 8.85] |
+| Acc1 (incorrect) | 24 | 1.14 µV | 3.07 | 0.63 | [-4.93, 7.92] |
 
 
 ---
@@ -116,9 +116,9 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 202.67, BIC = 209.67
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = 3.06, *SE* = 1.948, *z* = 1.572, *p* = 0.116
-- **SNR**: *β* = 0.40, *SE* = 0.317, *z* = 1.248, *p* = 0.212
+- AIC = 338.08, BIC = 347.43
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -1.66, *SE* = 1.630, *z* = -1.020, *p* = 0.308
+- **SNR**: *β* = -0.36, *SE* = 0.333, *z* = -1.075, *p* = 0.282
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -130,7 +130,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | -3.06 | 1.95 | -1.57 | 0.116 | 0.116 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 1.66 | 1.63 | 1.02 | 0.308 | 0.308 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -138,7 +138,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.41, *p* = 0.539, η²_G = 0.007
+- *F* = 0.48, *p* = 0.493, η²_G = 0.005
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -147,7 +147,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | -0.64 | 10 | = 0.539 | -0.16 [-0.87, 0.49] | negligible | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | 0.70 | 23 | = 0.493 | 0.14 [-0.28, 0.57] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -157,9 +157,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 79.07, BIC = 86.08
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -0.86, *SE* = 0.234, *z* = -3.674, *p* < .001
-- **SNR**: *β* = -0.17, *SE* = 0.038, *z* = -4.323, *p* < .001
+- AIC = 149.34, BIC = 158.69
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = 0.03, *SE* = 0.201, *z* = 0.162, *p* = 0.871
+- **SNR**: *β* = -0.05, *SE* = 0.043, *z* = -1.227, *p* = 0.220
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -171,7 +171,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | 0.86 | 0.23 | 3.67 | < .001 | < .001 | *** |
+| Acc1 (correct) - Acc1 (incorrect) | -0.03 | 0.20 | -0.16 | 0.871 | 0.871 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -179,7 +179,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.31, *p* = 0.587, η²_G = 0.005
+- *F* = 0.30, *p* = 0.591, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -188,7 +188,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 0.56 | 10 | = 0.587 | 0.13 [-0.51, 0.85] | negligible | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | -0.55 | 23 | = 0.591 | -0.08 [-0.53, 0.31] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -201,9 +201,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 401.77, BIC = 411.02
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -5.73, *SE* = 4.241, *z* = -1.351, *p* = 0.177
-- **SNR**: *β* = -0.03, *SE* = 0.180, *z* = -0.163, *p* = 0.870
+- AIC = 410.72, BIC = 420.08
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -4.58, *SE* = 4.061, *z* = -1.126, *p* = 0.260
+- **SNR**: *β* = -0.01, *SE* = 0.180, *z* = -0.033, *p* = 0.973
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -215,7 +215,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | 5.73 | 4.24 | 1.35 | 0.177 | 0.177 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 4.57 | 4.06 | 1.13 | 0.260 | 0.260 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -223,7 +223,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.70, *p* = 0.206, η²_G = 0.021
+- *F* = 1.69, *p* = 0.206, η²_G = 0.017
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -232,7 +232,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 1.30 | 22 | = 0.206 | 0.28 [-0.17, 0.71] | small | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | 1.30 | 23 | = 0.206 | 0.26 [-0.16, 0.70] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -242,9 +242,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 160.15, BIC = 169.40
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -0.29, *SE* = 0.219, *z* = -1.308, *p* = 0.191
-- **SNR**: *β* = -0.03, *SE* = 0.011, *z* = -2.454, *p* = 0.014
+- AIC = 167.06, BIC = 176.42
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -0.16, *SE* = 0.228, *z* = -0.713, *p* = 0.476
+- **SNR**: *β* = -0.02, *SE* = 0.011, *z* = -2.010, *p* = 0.044
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -256,7 +256,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | 0.29 | 0.22 | 1.31 | 0.191 | 0.191 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 0.16 | 0.23 | 0.71 | 0.476 | 0.476 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -264,7 +264,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.11, *p* = 0.742, η²_G = 0.000
+- *F* = 0.45, *p* = 0.510, η²_G = 0.001
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -273,7 +273,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | -0.33 | 22 | = 0.742 | -0.03 [-0.50, 0.36] | negligible | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | -0.67 | 23 | = 0.510 | -0.06 [-0.56, 0.29] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -286,9 +286,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 191.82, BIC = 198.49
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -0.71, *SE* = 1.527, *z* = -0.467, *p* = 0.640
-- **SNR**: *β* = 0.33, *SE* = 0.218, *z* = 1.519, *p* = 0.129
+- AIC = 365.67, BIC = 375.02
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -1.20, *SE* = 2.613, *z* = -0.458, *p* = 0.647
+- **SNR**: *β* = 0.36, *SE* = 0.450, *z* = 0.803, *p* = 0.422
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -300,7 +300,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | 0.71 | 1.53 | 0.47 | 0.640 | 0.640 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 1.20 | 2.61 | 0.46 | 0.647 | 0.647 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -308,8 +308,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 4.22, *p* = 0.067, η²_G = 0.030
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
+- *F* = 1.07, *p* = 0.312, η²_G = 0.012
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -317,7 +317,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 2.06 | 10 | = 0.067 | 0.33 [-0.11, 1.35] | small | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | 1.03 | 23 | = 0.312 | 0.22 [-0.22, 0.64] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -327,9 +327,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 87.18, BIC = 93.84
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = 0.83, *SE* = 0.377, *z* = 2.211, *p* = 0.027
-- **SNR**: *β* = 0.16, *SE* = 0.058, *z* = 2.783, *p* = 0.005
+- AIC = 153.99, BIC = 163.35
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = 0.15, *SE* = 0.230, *z* = 0.659, *p* = 0.510
+- **SNR**: *β* = 0.09, *SE* = 0.047, *z* = 1.870, *p* = 0.062
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -341,7 +341,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | -0.83 | 0.38 | -2.21 | 0.027 | 0.027 | * |
+| Acc1 (correct) - Acc1 (incorrect) | -0.15 | 0.23 | -0.66 | 0.510 | 0.510 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -349,7 +349,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.01, *p* = 0.938, η²_G = 0.000
+- *F* = 0.47, *p* = 0.498, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -358,7 +358,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 0.08 | 10 | = 0.938 | 0.01 [-0.65, 0.70] | negligible | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | 0.69 | 23 | = 0.498 | 0.08 [-0.28, 0.56] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -371,9 +371,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 300.84, BIC = 308.01
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -16.67, *SE* = 10.966, *z* = -1.520, *p* = 0.129
-- **SNR**: *β* = -0.51, *SE* = 0.645, *z* = -0.791, *p* = 0.429
+- AIC = 471.43, BIC = 480.79
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -13.46, *SE* = 10.309, *z* = -1.305, *p* = 0.192
+- **SNR**: *β* = -1.44, *SE* = 0.604, *z* = -2.391, *p* = 0.017
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -385,7 +385,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | 16.67 | 10.97 | 1.52 | 0.129 | 0.129 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 13.46 | 10.31 | 1.31 | 0.192 | 0.192 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -393,7 +393,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.12, *p* = 0.314, η²_G = 0.033
+- *F* = 0.00, *p* = 0.973, η²_G = 0.000
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -402,7 +402,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 1.06 | 10 | = 0.314 | 0.35 [-0.37, 1.01] | small | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | -0.03 | 23 | = 0.973 | -0.01 [-0.43, 0.42] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -412,9 +412,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 129.68, BIC = 136.85
-- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = 0.99, *SE* = 0.657, *z* = 1.507, *p* = 0.132
-- **SNR**: *β* = 0.19, *SE* = 0.040, *z* = 4.814, *p* < .001
+- AIC = 221.40, BIC = 230.75
+- **Acc1 (incorrect) vs Acc1 (correct)**: *β* = -1.29, *SE* = 0.497, *z* = -2.589, *p* = 0.010
+- **SNR**: *β* = 0.11, *SE* = 0.035, *z* = 3.145, *p* = 0.002
 
 _Reference condition: **Acc1 (correct)** (all condition effects are contrasts vs. this baseline)._
 
@@ -426,7 +426,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Acc1 (correct) - Acc1 (incorrect) | -0.99 | 0.66 | -1.51 | 0.132 | 0.132 | n.s. |
+| Acc1 (correct) - Acc1 (incorrect) | 1.29 | 0.50 | 2.59 | 0.010 | 0.010 | ** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -434,8 +434,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 4.31, *p* = 0.065, η²_G = 0.092
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
+- *F* = 28.79, *p* < .001, η²_G = 0.135
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -443,7 +443,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Acc1 (correct) vs Acc1 (incorrect) | 2.08 | 10 | = 0.065 | 0.61 [-0.11, 1.36] | medium | n.s. |
+| Acc1 (correct) vs Acc1 (incorrect) | 5.37 | 23 | < .001 | 0.77 [0.56, 1.63] | medium | *** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -455,8 +455,8 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P1 latency:** Marginal trend toward condition differences (*p* = 0.067)
-**P3b amplitude:** Marginal trend toward condition differences (*p* = 0.065)
+**P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Acc1 (correct) showed greater amplitude than Acc1 (incorrect) (*d* = 0.77)
 
 ### Research Implications
 

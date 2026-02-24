@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:55:38
+**Generated:** 2026-02-23 19:25:16
 
 ---
 
@@ -41,37 +41,37 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | 109.11 ms | 4.91 | 1.16 | [92.00, 112.00] |
-| Decrease by 1 (Correct) | 15 | 101.87 ms | 7.69 | 1.99 | [92.00, 112.00] |
-| Decrease by 1 (Incorrect) | 12 | 103.67 ms | 7.13 | 2.06 | [92.00, 112.00] |
-| Decrease by 2 (Correct) | 21 | 106.10 ms | 7.44 | 1.62 | [92.00, 112.00] |
-| Decrease by 2 (Incorrect) | 12 | 107.00 ms | 6.18 | 1.78 | [96.00, 112.00] |
-| Decrease by 3 (Correct) | 19 | 103.79 ms | 7.60 | 1.74 | [92.00, 112.00] |
-| Decrease by 3 (Incorrect) | 7 | 99.43 ms | 8.77 | 3.32 | [92.00, 112.00] |
-| Increase by 1 (Correct) | 17 | 101.41 ms | 7.48 | 1.81 | [92.00, 112.00] |
-| Increase by 1 (Incorrect) | 17 | 101.18 ms | 8.22 | 1.99 | [92.00, 112.00] |
-| Increase by 2 (Correct) | 14 | 102.57 ms | 7.46 | 1.99 | [92.00, 112.00] |
-| Increase by 2 (Incorrect) | 10 | 103.20 ms | 7.50 | 2.37 | [92.00, 112.00] |
-| Increase by 3 (Correct) | 12 | 102.00 ms | 6.93 | 2.00 | [92.00, 112.00] |
-| Increase by 3 (Incorrect) | 12 | 101.00 ms | 6.85 | 1.98 | [92.00, 112.00] |
+| Cardinality (no change) | 24 | 105.83 ms | 7.73 | 1.58 | [92.00, 112.00] |
+| Decrease by 1 (Correct) | 24 | 104.17 ms | 7.95 | 1.62 | [92.00, 112.00] |
+| Decrease by 1 (Incorrect) | 24 | 102.00 ms | 7.82 | 1.60 | [92.00, 112.00] |
+| Decrease by 2 (Correct) | 24 | 105.50 ms | 7.72 | 1.58 | [92.00, 112.00] |
+| Decrease by 2 (Incorrect) | 20 | 105.00 ms | 7.77 | 1.74 | [92.00, 112.00] |
+| Decrease by 3 (Correct) | 24 | 103.83 ms | 8.13 | 1.66 | [92.00, 112.00] |
+| Decrease by 3 (Incorrect) | 14 | 100.00 ms | 8.88 | 2.37 | [92.00, 112.00] |
+| Increase by 1 (Correct) | 24 | 101.17 ms | 8.30 | 1.69 | [92.00, 112.00] |
+| Increase by 1 (Incorrect) | 24 | 101.17 ms | 8.63 | 1.76 | [92.00, 112.00] |
+| Increase by 2 (Correct) | 24 | 101.33 ms | 8.14 | 1.66 | [92.00, 112.00] |
+| Increase by 2 (Incorrect) | 20 | 101.60 ms | 8.15 | 1.82 | [92.00, 112.00] |
+| Increase by 3 (Correct) | 24 | 101.67 ms | 8.33 | 1.70 | [92.00, 112.00] |
+| Increase by 3 (Incorrect) | 21 | 101.71 ms | 8.25 | 1.80 | [92.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | -1.69 µV | 1.27 | 0.30 | [-4.83, -0.25] |
-| Decrease by 1 (Correct) | 15 | -1.60 µV | 1.21 | 0.31 | [-4.56, -0.23] |
-| Decrease by 1 (Incorrect) | 12 | -2.82 µV | 2.07 | 0.60 | [-8.16, -0.71] |
-| Decrease by 2 (Correct) | 21 | -1.66 µV | 0.98 | 0.21 | [-4.30, -0.45] |
-| Decrease by 2 (Incorrect) | 12 | -3.63 µV | 2.73 | 0.79 | [-8.85, -0.41] |
-| Decrease by 3 (Correct) | 19 | -2.34 µV | 1.57 | 0.36 | [-6.39, -0.34] |
-| Decrease by 3 (Incorrect) | 7 | -6.97 µV | 4.55 | 1.72 | [-15.27, -1.35] |
-| Increase by 1 (Correct) | 17 | -1.66 µV | 1.07 | 0.26 | [-3.74, -0.14] |
-| Increase by 1 (Incorrect) | 17 | -2.02 µV | 1.31 | 0.32 | [-4.54, -0.28] |
-| Increase by 2 (Correct) | 14 | -1.62 µV | 1.18 | 0.32 | [-4.17, -0.21] |
-| Increase by 2 (Incorrect) | 10 | -2.46 µV | 1.27 | 0.40 | [-4.91, -1.07] |
-| Increase by 3 (Correct) | 12 | -1.98 µV | 0.97 | 0.28 | [-3.35, -0.70] |
-| Increase by 3 (Incorrect) | 12 | -3.54 µV | 3.06 | 0.88 | [-8.80, -0.28] |
+| Cardinality (no change) | 24 | -1.22 µV | 1.38 | 0.28 | [-4.83, 0.55] |
+| Decrease by 1 (Correct) | 24 | -0.93 µV | 1.42 | 0.29 | [-4.56, 1.56] |
+| Decrease by 1 (Incorrect) | 24 | -0.96 µV | 2.55 | 0.52 | [-8.16, 3.16] |
+| Decrease by 2 (Correct) | 24 | -1.40 µV | 1.23 | 0.25 | [-4.30, 2.02] |
+| Decrease by 2 (Incorrect) | 20 | -1.80 µV | 3.22 | 0.72 | [-8.85, 2.66] |
+| Decrease by 3 (Correct) | 24 | -1.72 µV | 1.91 | 0.39 | [-6.39, 1.69] |
+| Decrease by 3 (Incorrect) | 14 | -2.75 µV | 5.95 | 1.59 | [-15.27, 7.50] |
+| Increase by 1 (Correct) | 24 | -1.11 µV | 1.29 | 0.26 | [-3.74, 1.09] |
+| Increase by 1 (Incorrect) | 24 | -1.37 µV | 1.53 | 0.31 | [-4.54, 0.72] |
+| Increase by 2 (Correct) | 24 | -0.99 µV | 1.23 | 0.25 | [-4.17, 0.52] |
+| Increase by 2 (Incorrect) | 20 | -0.76 µV | 2.28 | 0.51 | [-4.91, 3.23] |
+| Increase by 3 (Correct) | 24 | -1.11 µV | 1.23 | 0.25 | [-3.35, 1.12] |
+| Increase by 3 (Incorrect) | 21 | -1.35 µV | 4.17 | 0.91 | [-8.80, 9.52] |
 
 
 ### 2.2 N1 Component
@@ -80,37 +80,37 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | 176.00 ms | 17.10 | 3.57 | [144.00, 204.00] |
-| Decrease by 1 (Correct) | 22 | 176.36 ms | 12.28 | 2.62 | [152.00, 204.00] |
-| Decrease by 1 (Incorrect) | 22 | 170.55 ms | 17.52 | 3.74 | [144.00, 192.00] |
+| Cardinality (no change) | 24 | 175.67 ms | 16.80 | 3.43 | [144.00, 204.00] |
+| Decrease by 1 (Correct) | 24 | 178.67 ms | 14.09 | 2.88 | [152.00, 204.00] |
+| Decrease by 1 (Incorrect) | 24 | 173.33 ms | 19.23 | 3.92 | [144.00, 204.00] |
 | Decrease by 2 (Correct) | 24 | 177.17 ms | 14.18 | 2.89 | [144.00, 204.00] |
-| Decrease by 2 (Incorrect) | 15 | 177.07 ms | 20.25 | 5.23 | [148.00, 204.00] |
+| Decrease by 2 (Incorrect) | 20 | 175.40 ms | 20.03 | 4.48 | [144.00, 204.00] |
 | Decrease by 3 (Correct) | 24 | 176.83 ms | 14.68 | 3.00 | [152.00, 204.00] |
-| Decrease by 3 (Incorrect) | 9 | 174.22 ms | 16.26 | 5.42 | [148.00, 204.00] |
-| Increase by 1 (Correct) | 23 | 169.39 ms | 18.75 | 3.91 | [144.00, 204.00] |
-| Increase by 1 (Incorrect) | 22 | 176.55 ms | 16.30 | 3.47 | [144.00, 204.00] |
+| Decrease by 3 (Incorrect) | 14 | 176.00 ms | 19.15 | 5.12 | [144.00, 204.00] |
+| Increase by 1 (Correct) | 24 | 170.83 ms | 19.65 | 4.01 | [144.00, 204.00] |
+| Increase by 1 (Incorrect) | 24 | 177.50 ms | 16.29 | 3.33 | [144.00, 204.00] |
 | Increase by 2 (Correct) | 24 | 168.83 ms | 18.42 | 3.76 | [144.00, 200.00] |
-| Increase by 2 (Incorrect) | 18 | 171.33 ms | 18.21 | 4.29 | [144.00, 196.00] |
-| Increase by 3 (Correct) | 23 | 170.09 ms | 18.33 | 3.82 | [144.00, 204.00] |
-| Increase by 3 (Incorrect) | 20 | 167.00 ms | 19.46 | 4.35 | [144.00, 204.00] |
+| Increase by 2 (Incorrect) | 20 | 171.60 ms | 17.26 | 3.86 | [144.00, 196.00] |
+| Increase by 3 (Correct) | 24 | 171.50 ms | 19.21 | 3.92 | [144.00, 204.00] |
+| Increase by 3 (Incorrect) | 21 | 168.00 ms | 19.51 | 4.26 | [144.00, 204.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | -4.79 µV | 2.00 | 0.42 | [-9.57, -1.40] |
-| Decrease by 1 (Correct) | 22 | -5.15 µV | 1.92 | 0.41 | [-9.90, -2.24] |
-| Decrease by 1 (Incorrect) | 22 | -5.43 µV | 2.49 | 0.53 | [-13.51, -2.14] |
+| Cardinality (no change) | 24 | -4.62 µV | 2.14 | 0.44 | [-9.57, -0.60] |
+| Decrease by 1 (Correct) | 24 | -4.86 µV | 2.07 | 0.42 | [-9.90, -1.23] |
+| Decrease by 1 (Incorrect) | 24 | -5.15 µV | 2.57 | 0.52 | [-13.51, -1.23] |
 | Decrease by 2 (Correct) | 24 | -5.12 µV | 2.11 | 0.43 | [-9.59, -1.53] |
-| Decrease by 2 (Incorrect) | 15 | -5.77 µV | 2.55 | 0.66 | [-10.77, -1.58] |
+| Decrease by 2 (Incorrect) | 20 | -4.84 µV | 2.93 | 0.66 | [-10.77, 0.08] |
 | Decrease by 3 (Correct) | 24 | -5.22 µV | 1.97 | 0.40 | [-8.60, -1.48] |
-| Decrease by 3 (Incorrect) | 9 | -7.75 µV | 5.40 | 1.80 | [-16.59, -0.49] |
-| Increase by 1 (Correct) | 23 | -5.10 µV | 2.17 | 0.45 | [-9.46, -0.56] |
-| Increase by 1 (Incorrect) | 22 | -5.93 µV | 2.32 | 0.49 | [-9.82, -1.37] |
+| Decrease by 3 (Incorrect) | 14 | -6.05 µV | 5.01 | 1.34 | [-16.59, -0.45] |
+| Increase by 1 (Correct) | 24 | -5.07 µV | 2.13 | 0.44 | [-9.46, -0.56] |
+| Increase by 1 (Incorrect) | 24 | -5.49 µV | 2.67 | 0.55 | [-9.82, -0.34] |
 | Increase by 2 (Correct) | 24 | -5.47 µV | 2.43 | 0.50 | [-11.28, -1.22] |
-| Increase by 2 (Incorrect) | 18 | -6.07 µV | 2.35 | 0.55 | [-11.01, -2.34] |
-| Increase by 3 (Correct) | 23 | -6.29 µV | 2.53 | 0.53 | [-12.86, -2.06] |
-| Increase by 3 (Incorrect) | 20 | -6.71 µV | 3.15 | 0.70 | [-13.50, -1.48] |
+| Increase by 2 (Incorrect) | 20 | -5.58 µV | 2.68 | 0.60 | [-11.01, -0.68] |
+| Increase by 3 (Correct) | 24 | -6.16 µV | 2.55 | 0.52 | [-12.86, -2.06] |
+| Increase by 3 (Incorrect) | 21 | -6.47 µV | 3.26 | 0.71 | [-13.50, -1.48] |
 
 
 ### 2.3 P1 Component
@@ -119,37 +119,37 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 13 | 111.38 ms | 6.50 | 1.80 | [100.00, 116.00] |
-| Decrease by 1 (Correct) | 14 | 110.86 ms | 8.07 | 2.16 | [92.00, 116.00] |
-| Decrease by 1 (Incorrect) | 11 | 105.82 ms | 8.65 | 2.61 | [92.00, 116.00] |
-| Decrease by 2 (Correct) | 17 | 109.88 ms | 8.50 | 2.06 | [92.00, 116.00] |
-| Decrease by 2 (Incorrect) | 12 | 111.00 ms | 7.26 | 2.10 | [96.00, 116.00] |
-| Decrease by 3 (Correct) | 17 | 109.41 ms | 6.32 | 1.53 | [96.00, 116.00] |
-| Decrease by 3 (Incorrect) | 7 | 105.71 ms | 10.55 | 3.99 | [92.00, 116.00] |
-| Increase by 1 (Correct) | 17 | 105.41 ms | 9.05 | 2.19 | [92.00, 116.00] |
-| Increase by 1 (Incorrect) | 11 | 103.27 ms | 10.40 | 3.14 | [92.00, 116.00] |
-| Increase by 2 (Correct) | 13 | 109.23 ms | 7.00 | 1.94 | [96.00, 116.00] |
-| Increase by 2 (Incorrect) | 12 | 106.00 ms | 8.44 | 2.44 | [92.00, 116.00] |
-| Increase by 3 (Correct) | 15 | 102.93 ms | 9.50 | 2.45 | [92.00, 116.00] |
-| Increase by 3 (Incorrect) | 11 | 101.82 ms | 9.18 | 2.77 | [92.00, 116.00] |
+| Cardinality (no change) | 24 | 106.00 ms | 10.55 | 2.15 | [92.00, 116.00] |
+| Decrease by 1 (Correct) | 24 | 108.50 ms | 9.68 | 1.98 | [92.00, 116.00] |
+| Decrease by 1 (Incorrect) | 24 | 103.00 ms | 9.31 | 1.90 | [92.00, 116.00] |
+| Decrease by 2 (Correct) | 24 | 109.50 ms | 8.32 | 1.70 | [92.00, 116.00] |
+| Decrease by 2 (Incorrect) | 20 | 109.20 ms | 8.72 | 1.95 | [92.00, 116.00] |
+| Decrease by 3 (Correct) | 24 | 107.33 ms | 9.03 | 1.84 | [92.00, 116.00] |
+| Decrease by 3 (Incorrect) | 14 | 105.71 ms | 10.01 | 2.68 | [92.00, 116.00] |
+| Increase by 1 (Correct) | 24 | 103.67 ms | 9.50 | 1.94 | [92.00, 116.00] |
+| Increase by 1 (Incorrect) | 24 | 101.33 ms | 10.33 | 2.11 | [92.00, 116.00] |
+| Increase by 2 (Correct) | 24 | 103.00 ms | 9.60 | 1.96 | [92.00, 116.00] |
+| Increase by 2 (Incorrect) | 20 | 102.40 ms | 9.48 | 2.12 | [92.00, 116.00] |
+| Increase by 3 (Correct) | 24 | 100.50 ms | 9.31 | 1.90 | [92.00, 116.00] |
+| Increase by 3 (Incorrect) | 21 | 102.86 ms | 10.05 | 2.19 | [92.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 13 | 2.47 µV | 1.69 | 0.47 | [0.70, 5.73] |
-| Decrease by 1 (Correct) | 14 | 2.19 µV | 1.67 | 0.45 | [0.47, 5.23] |
-| Decrease by 1 (Incorrect) | 11 | 3.85 µV | 2.44 | 0.73 | [0.86, 8.84] |
-| Decrease by 2 (Correct) | 17 | 2.32 µV | 1.29 | 0.31 | [0.54, 5.74] |
-| Decrease by 2 (Incorrect) | 12 | 3.48 µV | 2.04 | 0.59 | [1.10, 7.73] |
-| Decrease by 3 (Correct) | 17 | 2.61 µV | 1.93 | 0.47 | [0.48, 8.15] |
-| Decrease by 3 (Incorrect) | 7 | 5.96 µV | 4.68 | 1.77 | [1.30, 12.94] |
-| Increase by 1 (Correct) | 17 | 1.92 µV | 1.45 | 0.35 | [0.54, 4.44] |
-| Increase by 1 (Incorrect) | 11 | 2.11 µV | 1.12 | 0.34 | [0.93, 4.59] |
-| Increase by 2 (Correct) | 13 | 2.11 µV | 1.41 | 0.39 | [0.43, 4.70] |
-| Increase by 2 (Incorrect) | 12 | 2.26 µV | 1.92 | 0.56 | [0.29, 7.59] |
-| Increase by 3 (Correct) | 15 | 2.20 µV | 1.37 | 0.35 | [0.69, 5.27] |
-| Increase by 3 (Incorrect) | 11 | 4.30 µV | 2.65 | 0.80 | [0.78, 8.76] |
+| Cardinality (no change) | 24 | 1.27 µV | 1.86 | 0.38 | [-1.29, 5.73] |
+| Decrease by 1 (Correct) | 24 | 1.09 µV | 1.88 | 0.38 | [-1.32, 5.23] |
+| Decrease by 1 (Incorrect) | 24 | 1.54 µV | 2.87 | 0.59 | [-3.73, 8.84] |
+| Decrease by 2 (Correct) | 24 | 1.53 µV | 1.78 | 0.36 | [-2.32, 5.74] |
+| Decrease by 2 (Incorrect) | 20 | 1.91 µV | 2.92 | 0.65 | [-3.15, 7.73] |
+| Decrease by 3 (Correct) | 24 | 1.94 µV | 2.07 | 0.42 | [-1.76, 8.15] |
+| Decrease by 3 (Incorrect) | 14 | 2.47 µV | 5.47 | 1.46 | [-8.18, 12.94] |
+| Increase by 1 (Correct) | 24 | 1.32 µV | 1.67 | 0.34 | [-1.63, 4.44] |
+| Increase by 1 (Incorrect) | 24 | 1.18 µV | 1.32 | 0.27 | [-0.65, 4.59] |
+| Increase by 2 (Correct) | 24 | 1.10 µV | 1.60 | 0.33 | [-1.42, 4.70] |
+| Increase by 2 (Incorrect) | 20 | 1.20 µV | 2.26 | 0.51 | [-3.39, 7.59] |
+| Increase by 3 (Correct) | 24 | 1.39 µV | 1.66 | 0.34 | [-1.07, 5.27] |
+| Increase by 3 (Incorrect) | 21 | 1.59 µV | 3.59 | 0.78 | [-3.94, 8.76] |
 
 
 ### 2.4 P3b Component
@@ -158,37 +158,37 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 470.57 ms | 23.14 | 6.19 | [436.00, 516.00] |
-| Decrease by 1 (Correct) | 19 | 484.84 ms | 29.71 | 6.82 | [436.00, 528.00] |
-| Decrease by 1 (Incorrect) | 10 | 498.80 ms | 19.51 | 6.17 | [472.00, 528.00] |
-| Decrease by 2 (Correct) | 19 | 470.11 ms | 26.88 | 6.17 | [420.00, 528.00] |
-| Decrease by 2 (Incorrect) | 11 | 460.00 ms | 34.78 | 10.49 | [420.00, 528.00] |
-| Decrease by 3 (Correct) | 19 | 479.58 ms | 28.72 | 6.59 | [432.00, 524.00] |
-| Decrease by 3 (Incorrect) | 5 | 479.20 ms | 43.58 | 19.49 | [420.00, 524.00] |
-| Increase by 1 (Correct) | 17 | 489.41 ms | 39.19 | 9.51 | [420.00, 528.00] |
-| Increase by 1 (Incorrect) | 9 | 471.11 ms | 31.23 | 10.41 | [420.00, 528.00] |
-| Increase by 2 (Correct) | 18 | 483.11 ms | 29.67 | 6.99 | [428.00, 528.00] |
-| Increase by 2 (Incorrect) | 12 | 472.00 ms | 31.17 | 9.00 | [420.00, 528.00] |
-| Increase by 3 (Correct) | 21 | 477.33 ms | 35.13 | 7.67 | [420.00, 528.00] |
-| Increase by 3 (Incorrect) | 13 | 470.77 ms | 30.17 | 8.37 | [420.00, 524.00] |
+| Cardinality (no change) | 24 | 463.50 ms | 24.86 | 5.08 | [420.00, 516.00] |
+| Decrease by 1 (Correct) | 24 | 485.67 ms | 31.56 | 6.44 | [420.00, 528.00] |
+| Decrease by 1 (Incorrect) | 24 | 482.33 ms | 37.09 | 7.57 | [420.00, 528.00] |
+| Decrease by 2 (Correct) | 24 | 469.00 ms | 28.78 | 5.87 | [420.00, 528.00] |
+| Decrease by 2 (Incorrect) | 20 | 464.40 ms | 33.44 | 7.48 | [420.00, 528.00] |
+| Decrease by 3 (Correct) | 24 | 478.83 ms | 31.35 | 6.40 | [420.00, 528.00] |
+| Decrease by 3 (Incorrect) | 14 | 483.71 ms | 41.55 | 11.11 | [420.00, 528.00] |
+| Increase by 1 (Correct) | 24 | 484.00 ms | 39.81 | 8.13 | [420.00, 528.00] |
+| Increase by 1 (Incorrect) | 24 | 473.17 ms | 36.40 | 7.43 | [420.00, 528.00] |
+| Increase by 2 (Correct) | 24 | 484.33 ms | 31.98 | 6.53 | [428.00, 528.00] |
+| Increase by 2 (Incorrect) | 20 | 468.20 ms | 28.18 | 6.30 | [420.00, 528.00] |
+| Increase by 3 (Correct) | 24 | 477.00 ms | 34.03 | 6.95 | [420.00, 528.00] |
+| Increase by 3 (Incorrect) | 21 | 470.67 ms | 34.35 | 7.50 | [420.00, 524.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 2.75 µV | 1.66 | 0.44 | [0.90, 5.95] |
-| Decrease by 1 (Correct) | 19 | 5.16 µV | 2.45 | 0.56 | [1.31, 9.87] |
-| Decrease by 1 (Incorrect) | 10 | 4.57 µV | 3.06 | 0.97 | [1.14, 10.56] |
-| Decrease by 2 (Correct) | 19 | 4.92 µV | 2.04 | 0.47 | [1.69, 8.68] |
-| Decrease by 2 (Incorrect) | 11 | 8.15 µV | 5.71 | 1.72 | [2.46, 20.39] |
-| Decrease by 3 (Correct) | 19 | 5.54 µV | 2.91 | 0.67 | [0.72, 12.38] |
-| Decrease by 3 (Incorrect) | 5 | 5.47 µV | 3.93 | 1.76 | [2.16, 10.70] |
-| Increase by 1 (Correct) | 17 | 4.65 µV | 2.62 | 0.63 | [1.41, 10.19] |
-| Increase by 1 (Incorrect) | 9 | 3.85 µV | 3.16 | 1.05 | [1.16, 9.88] |
-| Increase by 2 (Correct) | 18 | 5.42 µV | 2.70 | 0.64 | [1.31, 10.55] |
-| Increase by 2 (Incorrect) | 12 | 6.10 µV | 3.12 | 0.90 | [2.59, 10.89] |
-| Increase by 3 (Correct) | 21 | 4.41 µV | 2.60 | 0.57 | [1.25, 10.15] |
-| Increase by 3 (Incorrect) | 13 | 5.87 µV | 2.74 | 0.76 | [2.47, 12.49] |
+| Cardinality (no change) | 24 | 1.14 µV | 2.72 | 0.56 | [-4.85, 5.95] |
+| Decrease by 1 (Correct) | 24 | 4.11 µV | 3.07 | 0.63 | [-2.27, 9.87] |
+| Decrease by 1 (Incorrect) | 24 | 1.86 µV | 3.43 | 0.70 | [-5.71, 10.56] |
+| Decrease by 2 (Correct) | 24 | 3.79 µV | 2.93 | 0.60 | [-1.71, 8.68] |
+| Decrease by 2 (Incorrect) | 20 | 4.47 µV | 6.23 | 1.39 | [-7.70, 20.39] |
+| Decrease by 3 (Correct) | 24 | 4.34 µV | 3.52 | 0.72 | [-1.21, 12.38] |
+| Decrease by 3 (Incorrect) | 14 | 2.05 µV | 4.54 | 1.21 | [-9.67, 10.70] |
+| Increase by 1 (Correct) | 24 | 2.99 µV | 3.55 | 0.73 | [-3.53, 10.19] |
+| Increase by 1 (Incorrect) | 24 | 1.28 µV | 3.03 | 0.62 | [-2.88, 9.88] |
+| Increase by 2 (Correct) | 24 | 3.99 µV | 3.48 | 0.71 | [-2.36, 10.55] |
+| Increase by 2 (Incorrect) | 20 | 3.88 µV | 3.83 | 0.86 | [-2.53, 10.89] |
+| Increase by 3 (Correct) | 24 | 3.93 µV | 2.75 | 0.56 | [0.21, 10.15] |
+| Increase by 3 (Incorrect) | 21 | 3.95 µV | 3.59 | 0.78 | [-2.26, 12.49] |
 
 
 ---
@@ -204,20 +204,20 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 1262.22, BIC = 1313.84
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -5.63, *SE* = 2.227, *z* = -2.530, *p* = 0.011
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -4.56, *SE* = 2.333, *z* = -1.956, *p* = 0.050
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -2.14, *SE* = 2.007, *z* = -1.067, *p* = 0.286
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.82, *SE* = 2.344, *z* = -0.776, *p* = 0.438
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -4.55, *SE* = 2.076, *z* = -2.193, *p* = 0.028
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -9.28, *SE* = 2.824, *z* = -3.287, *p* = 0.001
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -7.07, *SE* = 2.103, *z* = -3.361, *p* = 0.001
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -6.37, *SE* = 2.143, *z* = -2.974, *p* = 0.003
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -6.36, *SE* = 2.219, *z* = -2.866, *p* = 0.004
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -5.32, *SE* = 2.484, *z* = -2.141, *p* = 0.032
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -6.25, *SE* = 2.334, *z* = -2.676, *p* = 0.007
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -6.64, *SE* = 2.370, *z* = -2.801, *p* = 0.005
-- **SNR**: *β* = 0.74, *SE* = 0.295, *z* = 2.493, *p* = 0.013
+- AIC = 2012.40, BIC = 2071.17
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -1.50, *SE* = 1.962, *z* = -0.763, *p* = 0.445
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -3.78, *SE* = 1.958, *z* = -1.930, *p* = 0.054
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.32, *SE* = 1.957, *z* = -0.164, *p* = 0.869
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -0.90, *SE* = 2.075, *z* = -0.435, *p* = 0.664
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -2.15, *SE* = 1.961, *z* = -1.098, *p* = 0.272
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -5.65, *SE* = 2.301, *z* = -2.455, *p* = 0.014
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -4.58, *SE* = 1.959, *z* = -2.340, *p* = 0.019
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -4.40, *SE* = 1.969, *z* = -2.236, *p* = 0.025
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -4.32, *SE* = 1.963, *z* = -2.198, *p* = 0.028
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -4.39, *SE* = 2.061, *z* = -2.132, *p* = 0.033
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -4.03, *SE* = 1.960, *z* = -2.056, *p* = 0.040
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -3.97, *SE* = 2.038, *z* = -1.948, *p* = 0.051
+- **SNR**: *β* = 0.34, *SE* = 0.275, *z* = 1.248, *p* = 0.212
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -230,323 +230,84 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | 5.63 | 2.23 | 2.53 | 0.011 | 0.558 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | 4.56 | 2.33 | 1.96 | 0.050 | 0.962 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | 2.14 | 2.01 | 1.07 | 0.286 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | 1.82 | 2.34 | 0.78 | 0.438 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Correct) | 4.55 | 2.08 | 2.19 | 0.028 | 0.854 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | 9.28 | 2.82 | 3.29 | 0.001 | 0.075 | n.s. |
-| Cardinality (no change) - Increase by 1 (Correct) | 7.07 | 2.10 | 3.36 | < .001 | 0.059 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | 6.37 | 2.14 | 2.97 | 0.003 | 0.201 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | 6.36 | 2.22 | 2.87 | 0.004 | 0.268 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 5.32 | 2.48 | 2.14 | 0.032 | 0.885 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | 6.25 | 2.33 | 2.68 | 0.007 | 0.421 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 6.64 | 2.37 | 2.80 | 0.005 | 0.315 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -1.07 | 2.43 | -0.44 | 0.660 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -3.49 | 2.12 | -1.65 | 0.099 | 0.997 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -3.81 | 2.47 | -1.55 | 0.122 | 0.999 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | -1.08 | 2.18 | -0.50 | 0.619 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 3.65 | 2.92 | 1.25 | 0.212 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | 1.44 | 2.23 | 0.64 | 0.520 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.74 | 2.24 | 0.33 | 0.742 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.73 | 2.36 | 0.31 | 0.758 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -0.31 | 2.60 | -0.12 | 0.904 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 0.61 | 2.45 | 0.25 | 0.802 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 1.00 | 2.45 | 0.41 | 0.682 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -2.42 | 2.26 | -1.07 | 0.284 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -2.74 | 2.58 | -1.06 | 0.287 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -0.01 | 2.33 | -0.00 | 0.997 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 4.72 | 3.02 | 1.57 | 0.117 | 0.999 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 2.51 | 2.35 | 1.07 | 0.286 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 1.81 | 2.38 | 0.76 | 0.448 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 1.80 | 2.49 | 0.72 | 0.471 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.76 | 2.70 | 0.28 | 0.779 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 1.68 | 2.55 | 0.66 | 0.509 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 2.08 | 2.58 | 0.81 | 0.421 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -0.32 | 2.29 | -0.14 | 0.888 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 2.41 | 1.98 | 1.22 | 0.222 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 7.14 | 2.76 | 2.59 | 0.010 | 0.499 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | 4.93 | 2.03 | 2.43 | 0.015 | 0.652 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 4.23 | 2.05 | 2.07 | 0.039 | 0.923 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 4.22 | 2.17 | 1.95 | 0.052 | 0.963 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 3.18 | 2.42 | 1.31 | 0.189 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | 4.11 | 2.27 | 1.81 | 0.071 | 0.986 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 4.50 | 2.27 | 1.98 | 0.048 | 0.956 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 2.73 | 2.38 | 1.15 | 0.250 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 7.47 | 3.05 | 2.45 | 0.014 | 0.635 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 5.25 | 2.37 | 2.22 | 0.026 | 0.839 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 4.55 | 2.38 | 1.91 | 0.056 | 0.970 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 4.54 | 2.46 | 1.85 | 0.065 | 0.981 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 3.50 | 2.71 | 1.29 | 0.196 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 4.43 | 2.61 | 1.70 | 0.090 | 0.995 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 4.82 | 2.59 | 1.86 | 0.062 | 0.979 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 4.73 | 2.80 | 1.69 | 0.091 | 0.995 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | 2.52 | 2.10 | 1.20 | 0.230 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 1.82 | 2.12 | 0.86 | 0.391 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 1.81 | 2.24 | 0.81 | 0.419 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 0.77 | 2.50 | 0.31 | 0.759 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 1.69 | 2.31 | 0.73 | 0.464 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 2.09 | 2.33 | 0.89 | 0.372 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -2.22 | 2.85 | -0.78 | 0.437 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -2.91 | 2.89 | -1.01 | 0.313 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -2.93 | 2.94 | -0.99 | 0.320 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -3.96 | 3.12 | -1.27 | 0.203 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -3.04 | 3.02 | -1.00 | 0.315 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -2.65 | 3.02 | -0.88 | 0.381 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -0.70 | 2.16 | -0.32 | 0.747 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.71 | 2.26 | -0.31 | 0.754 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -1.75 | 2.51 | -0.70 | 0.486 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.82 | 2.37 | -0.35 | 0.728 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -0.43 | 2.37 | -0.18 | 0.856 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.01 | 2.28 | -0.01 | 0.996 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -1.05 | 2.53 | -0.41 | 0.678 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.12 | 2.39 | -0.05 | 0.959 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 0.27 | 2.36 | 0.11 | 0.910 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -1.04 | 2.61 | -0.40 | 0.690 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | -0.11 | 2.48 | -0.05 | 0.964 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 0.28 | 2.50 | 0.11 | 0.911 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.93 | 2.72 | 0.34 | 0.733 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.32 | 2.70 | 0.49 | 0.626 | 1.000 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 0.39 | 2.60 | 0.15 | 0.880 | 1.000 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
-
-_Pairwise test results not available._
-
-#### Amplitude (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 659.32, BIC = 710.93
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -0.26, *SE* = 0.431, *z* = -0.596, *p* = 0.551
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -1.28, *SE* = 0.454, *z* = -2.817, *p* = 0.005
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.24, *SE* = 0.390, *z* = -0.612, *p* = 0.541
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -2.28, *SE* = 0.457, *z* = -4.975, *p* < .001
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -0.62, *SE* = 0.403, *z* = -1.543, *p* = 0.123
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -5.35, *SE* = 0.552, *z* = -9.695, *p* < .001
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -0.13, *SE* = 0.410, *z* = -0.308, *p* = 0.758
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -0.86, *SE* = 0.417, *z* = -2.069, *p* = 0.039
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -0.14, *SE* = 0.432, *z* = -0.312, *p* = 0.755
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.51, *SE* = 0.486, *z* = -3.112, *p* = 0.002
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -0.17, *SE* = 0.453, *z* = -0.377, *p* = 0.706
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -2.45, *SE* = 0.462, *z* = -5.309, *p* < .001
-- **SNR**: *β* = -0.49, *SE* = 0.059, *z* = -8.339, *p* < .001
-
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
-_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | 0.26 | 0.43 | 0.60 | 0.551 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | 1.28 | 0.45 | 2.82 | 0.005 | 0.211 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | 0.24 | 0.39 | 0.61 | 0.541 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | 2.28 | 0.46 | 4.97 | < .001 | < .001 | *** |
-| Cardinality (no change) - Decrease by 3 (Correct) | 0.62 | 0.40 | 1.54 | 0.123 | 0.980 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | 5.35 | 0.55 | 9.69 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 1 (Correct) | 0.13 | 0.41 | 0.31 | 0.758 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | 0.86 | 0.42 | 2.07 | 0.039 | 0.766 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | 0.13 | 0.43 | 0.31 | 0.755 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 1.51 | 0.49 | 3.11 | 0.002 | 0.091 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | 0.17 | 0.45 | 0.38 | 0.706 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 2.45 | 0.46 | 5.31 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 1.02 | 0.47 | 2.16 | 0.031 | 0.698 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -0.02 | 0.41 | -0.04 | 0.965 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 2.02 | 0.48 | 4.23 | < .001 | 0.001 | ** |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.36 | 0.42 | 0.86 | 0.390 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 5.09 | 0.57 | 8.92 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | -0.13 | 0.43 | -0.30 | 0.763 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.61 | 0.44 | 1.39 | 0.166 | 0.991 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | -0.12 | 0.46 | -0.27 | 0.789 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 1.25 | 0.51 | 2.48 | 0.013 | 0.431 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | -0.09 | 0.48 | -0.18 | 0.857 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 2.20 | 0.48 | 4.59 | < .001 | < .001 | *** |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -1.04 | 0.44 | -2.36 | 0.018 | 0.540 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | 1.00 | 0.50 | 1.99 | 0.047 | 0.822 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -0.66 | 0.45 | -1.44 | 0.148 | 0.989 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 4.07 | 0.59 | 6.90 | < .001 | < .001 | *** |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -1.15 | 0.46 | -2.52 | 0.012 | 0.408 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | -0.42 | 0.46 | -0.90 | 0.371 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -1.14 | 0.49 | -2.36 | 0.018 | 0.540 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.23 | 0.53 | 0.44 | 0.659 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | -1.11 | 0.50 | -2.23 | 0.026 | 0.639 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.17 | 0.50 | 2.33 | 0.020 | 0.547 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 2.04 | 0.45 | 4.56 | < .001 | < .001 | *** |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.38 | 0.38 | 0.99 | 0.320 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 5.11 | 0.54 | 9.50 | < .001 | < .001 | *** |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | -0.11 | 0.40 | -0.28 | 0.776 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 0.62 | 0.40 | 1.56 | 0.118 | 0.980 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | -0.10 | 0.42 | -0.25 | 0.805 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 1.27 | 0.47 | 2.70 | 0.007 | 0.277 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | -0.07 | 0.44 | -0.15 | 0.878 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 2.21 | 0.44 | 5.00 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -1.65 | 0.46 | -3.58 | < .001 | 0.018 | * |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 3.08 | 0.60 | 5.15 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -2.15 | 0.46 | -4.66 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -1.41 | 0.46 | -3.06 | 0.002 | 0.106 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -2.14 | 0.48 | -4.46 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | -0.76 | 0.53 | -1.44 | 0.151 | 0.989 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | -2.10 | 0.51 | -4.15 | < .001 | 0.002 | ** |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.18 | 0.50 | 0.35 | 0.725 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 4.73 | 0.55 | 8.66 | < .001 | < .001 | *** |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | -0.50 | 0.41 | -1.21 | 0.225 | 0.998 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 0.24 | 0.41 | 0.58 | 0.561 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | -0.49 | 0.43 | -1.12 | 0.262 | 0.999 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 0.89 | 0.49 | 1.83 | 0.067 | 0.913 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | -0.45 | 0.45 | -1.00 | 0.318 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 1.83 | 0.46 | 4.02 | < .001 | 0.003 | ** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -5.23 | 0.56 | -9.37 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -4.49 | 0.57 | -7.94 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -5.22 | 0.57 | -9.08 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -3.84 | 0.61 | -6.32 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -5.18 | 0.59 | -8.76 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -2.90 | 0.59 | -4.91 | < .001 | < .001 | *** |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 0.74 | 0.42 | 1.75 | 0.080 | 0.937 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.01 | 0.44 | 0.02 | 0.985 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 1.39 | 0.49 | 2.82 | 0.005 | 0.211 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | 0.04 | 0.46 | 0.10 | 0.923 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 2.33 | 0.46 | 5.03 | < .001 | < .001 | *** |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.73 | 0.44 | -1.64 | 0.101 | 0.967 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.65 | 0.50 | 1.31 | 0.191 | 0.995 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.69 | 0.47 | -1.48 | 0.138 | 0.987 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.59 | 0.46 | 3.45 | < .001 | 0.028 | * |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 1.38 | 0.51 | 2.70 | 0.007 | 0.277 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | 0.04 | 0.48 | 0.07 | 0.940 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 2.32 | 0.49 | 4.76 | < .001 | < .001 | *** |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -1.34 | 0.53 | -2.53 | 0.012 | 0.407 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.94 | 0.53 | 1.78 | 0.074 | 0.928 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 2.28 | 0.51 | 4.49 | < .001 | < .001 | *** |
-
-_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
-
-_Pairwise test results not available._
-
-
-### 3.2 N1 Component
-
-#### Latency (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 2183.78, BIC = 2241.30
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 2.36, *SE* = 3.524, *z* = 0.668, *p* = 0.504
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -4.66, *SE* = 3.563, *z* = -1.308, *p* = 0.191
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 1.44, *SE* = 3.444, *z* = 0.419, *p* = 0.675
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 2.61, *SE* = 4.028, *z* = 0.648, *p* = 0.517
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 1.14, *SE* = 3.448, *z* = 0.331, *p* = 0.741
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 0.29, *SE* = 4.770, *z* = 0.062, *p* = 0.951
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -5.13, *SE* = 3.505, *z* = -1.463, *p* = 0.143
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 1.62, *SE* = 3.522, *z* = 0.461, *p* = 0.644
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -6.82, *SE* = 3.456, *z* = -1.975, *p* = 0.048
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -4.28, *SE* = 3.756, *z* = -1.139, *p* = 0.255
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -4.50, *SE* = 3.489, *z* = -1.290, *p* = 0.197
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -10.48, *SE* = 3.700, *z* = -2.833, *p* = 0.005
-- **SNR**: *β* = -0.07, *SE* = 0.189, *z* = -0.396, *p* = 0.692
-
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
-_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | -2.36 | 3.52 | -0.67 | 0.504 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | 4.66 | 3.56 | 1.31 | 0.191 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | -1.44 | 3.44 | -0.42 | 0.675 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | -2.61 | 4.03 | -0.65 | 0.517 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Correct) | -1.14 | 3.45 | -0.33 | 0.741 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | -0.30 | 4.77 | -0.06 | 0.951 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Correct) | 5.13 | 3.50 | 1.46 | 0.143 | 0.998 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | -1.63 | 3.52 | -0.46 | 0.644 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | 6.82 | 3.46 | 1.97 | 0.048 | 0.960 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 4.28 | 3.76 | 1.14 | 0.255 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | 4.50 | 3.49 | 1.29 | 0.197 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 10.48 | 3.70 | 2.83 | 0.005 | 0.287 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 7.02 | 3.61 | 1.94 | 0.052 | 0.967 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.91 | 3.49 | 0.26 | 0.794 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.26 | 4.05 | -0.06 | 0.950 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 1.22 | 3.49 | 0.35 | 0.728 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 2.06 | 4.79 | 0.43 | 0.667 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | 7.48 | 3.55 | 2.11 | 0.035 | 0.903 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.73 | 3.57 | 0.20 | 0.838 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 9.18 | 3.50 | 2.62 | 0.009 | 0.466 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 6.63 | 3.79 | 1.75 | 0.080 | 0.991 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 6.86 | 3.53 | 1.94 | 0.052 | 0.967 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 12.84 | 3.75 | 3.43 | < .001 | 0.047 | * |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -6.10 | 3.55 | -1.72 | 0.086 | 0.991 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -7.27 | 3.98 | -1.83 | 0.068 | 0.984 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -5.80 | 3.57 | -1.63 | 0.104 | 0.995 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -4.95 | 4.74 | -1.04 | 0.296 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 0.47 | 3.63 | 0.13 | 0.897 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | -6.29 | 3.58 | -1.76 | 0.079 | 0.991 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 2.16 | 3.59 | 0.60 | 0.546 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.38 | 3.78 | -0.10 | 0.919 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | -0.16 | 3.59 | -0.04 | 0.965 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 5.82 | 3.67 | 1.58 | 0.113 | 0.996 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -1.17 | 4.02 | -0.29 | 0.772 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.30 | 3.40 | 0.09 | 0.929 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 1.15 | 4.76 | 0.24 | 0.809 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | 6.57 | 3.45 | 1.91 | 0.057 | 0.973 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | -0.18 | 3.50 | -0.05 | 0.959 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 8.27 | 3.40 | 2.43 | 0.015 | 0.662 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 5.72 | 3.74 | 1.53 | 0.126 | 0.997 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | 5.94 | 3.44 | 1.73 | 0.084 | 0.991 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 11.93 | 3.70 | 3.22 | 0.001 | 0.092 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 1.47 | 4.04 | 0.36 | 0.716 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 2.32 | 5.05 | 0.46 | 0.647 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 7.74 | 4.11 | 1.88 | 0.060 | 0.975 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 0.99 | 4.03 | 0.24 | 0.807 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 9.44 | 4.07 | 2.32 | 0.020 | 0.752 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 6.89 | 4.19 | 1.65 | 0.100 | 0.995 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 7.11 | 4.07 | 1.75 | 0.080 | 0.991 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 13.09 | 4.08 | 3.21 | 0.001 | 0.096 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 0.85 | 4.77 | 0.18 | 0.859 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | 6.27 | 3.45 | 1.82 | 0.069 | 0.984 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | -0.49 | 3.51 | -0.14 | 0.890 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 7.96 | 3.40 | 2.34 | 0.019 | 0.738 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 5.42 | 3.75 | 1.44 | 0.149 | 0.999 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 5.64 | 3.44 | 1.64 | 0.101 | 0.995 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 11.62 | 3.72 | 3.12 | 0.002 | 0.124 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 5.42 | 4.82 | 1.12 | 0.261 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -1.33 | 4.78 | -0.28 | 0.781 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 7.12 | 4.79 | 1.49 | 0.137 | 0.998 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 4.57 | 4.90 | 0.93 | 0.351 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 4.80 | 4.79 | 1.00 | 0.317 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 10.78 | 4.85 | 2.22 | 0.026 | 0.832 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -6.75 | 3.56 | -1.90 | 0.058 | 0.974 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | 1.70 | 3.44 | 0.49 | 0.622 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -0.85 | 3.82 | -0.22 | 0.824 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.63 | 3.48 | -0.18 | 0.857 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 5.35 | 3.81 | 1.41 | 0.160 | 0.999 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | 8.45 | 3.52 | 2.40 | 0.016 | 0.686 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 5.90 | 3.79 | 1.56 | 0.119 | 0.997 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 6.13 | 3.54 | 1.73 | 0.083 | 0.991 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 12.11 | 3.71 | 3.26 | 0.001 | 0.082 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -2.55 | 3.77 | -0.68 | 0.499 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | -2.32 | 3.44 | -0.67 | 0.500 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 3.66 | 3.74 | 0.98 | 0.329 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.22 | 3.79 | 0.06 | 0.953 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 6.20 | 3.88 | 1.60 | 0.110 | 0.996 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 5.98 | 3.76 | 1.59 | 0.111 | 0.996 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Correct) | 1.50 | 1.96 | 0.76 | 0.445 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | 3.78 | 1.96 | 1.93 | 0.054 | 0.972 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | 0.32 | 1.96 | 0.16 | 0.869 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | 0.90 | 2.07 | 0.43 | 0.664 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | 2.15 | 1.96 | 1.10 | 0.272 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | 5.65 | 2.30 | 2.45 | 0.014 | 0.670 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | 4.58 | 1.96 | 2.34 | 0.019 | 0.777 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | 4.40 | 1.97 | 2.24 | 0.025 | 0.854 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | 4.32 | 1.96 | 2.20 | 0.028 | 0.877 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | 4.39 | 2.06 | 2.13 | 0.033 | 0.911 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | 4.03 | 1.96 | 2.06 | 0.040 | 0.942 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | 3.97 | 2.04 | 1.95 | 0.051 | 0.969 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 2.28 | 1.96 | 1.16 | 0.244 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -1.18 | 1.96 | -0.60 | 0.549 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.59 | 2.06 | -0.29 | 0.773 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.66 | 1.97 | 0.33 | 0.739 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 4.15 | 2.30 | 1.80 | 0.072 | 0.991 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 3.09 | 1.96 | 1.58 | 0.115 | 0.999 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 2.91 | 1.96 | 1.48 | 0.138 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 2.82 | 1.96 | 1.44 | 0.150 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 2.90 | 2.06 | 1.41 | 0.160 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 2.53 | 1.96 | 1.29 | 0.196 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 2.47 | 2.03 | 1.22 | 0.223 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -3.46 | 1.96 | -1.77 | 0.077 | 0.992 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -2.88 | 2.07 | -1.39 | 0.165 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -1.63 | 1.96 | -0.83 | 0.408 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 1.87 | 2.30 | 0.81 | 0.416 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 0.80 | 1.96 | 0.41 | 0.681 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.62 | 1.96 | 0.32 | 0.751 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 0.54 | 1.96 | 0.27 | 0.784 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.61 | 2.06 | 0.30 | 0.766 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.25 | 1.96 | 0.13 | 0.898 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 0.19 | 2.03 | 0.09 | 0.925 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 0.58 | 2.07 | 0.28 | 0.779 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 1.83 | 1.96 | 0.93 | 0.350 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 5.33 | 2.30 | 2.31 | 0.021 | 0.795 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | 4.26 | 1.96 | 2.18 | 0.030 | 0.888 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 4.08 | 1.97 | 2.07 | 0.038 | 0.937 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | 3.99 | 1.96 | 2.04 | 0.042 | 0.948 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 4.07 | 2.06 | 1.98 | 0.048 | 0.964 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | 3.71 | 1.96 | 1.89 | 0.058 | 0.979 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 3.65 | 2.04 | 1.79 | 0.073 | 0.991 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 1.25 | 2.09 | 0.60 | 0.550 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 4.75 | 2.40 | 1.98 | 0.048 | 0.964 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 3.68 | 2.07 | 1.78 | 0.075 | 0.991 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 3.50 | 2.06 | 1.70 | 0.089 | 0.996 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 3.41 | 2.06 | 1.65 | 0.098 | 0.997 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 3.49 | 2.16 | 1.62 | 0.106 | 0.998 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 3.13 | 2.06 | 1.52 | 0.130 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 3.07 | 2.13 | 1.44 | 0.150 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 3.50 | 2.31 | 1.52 | 0.130 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | 2.43 | 1.97 | 1.24 | 0.217 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 2.25 | 1.99 | 1.13 | 0.258 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 2.16 | 1.98 | 1.09 | 0.274 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 2.24 | 2.07 | 1.08 | 0.279 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 1.88 | 1.97 | 0.95 | 0.341 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 1.82 | 2.05 | 0.89 | 0.376 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -1.07 | 2.30 | -0.46 | 0.643 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -1.25 | 2.31 | -0.54 | 0.589 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -1.33 | 2.30 | -0.58 | 0.563 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -1.26 | 2.39 | -0.53 | 0.599 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -1.62 | 2.30 | -0.70 | 0.482 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -1.68 | 2.37 | -0.71 | 0.479 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -0.18 | 1.96 | -0.09 | 0.926 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.27 | 1.96 | -0.14 | 0.891 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -0.19 | 2.06 | -0.09 | 0.926 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.55 | 1.96 | -0.28 | 0.778 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -0.61 | 2.03 | -0.30 | 0.763 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.09 | 1.96 | -0.04 | 0.965 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.01 | 2.07 | -0.00 | 0.996 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.37 | 1.96 | -0.19 | 0.850 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -0.43 | 2.03 | -0.21 | 0.832 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 0.08 | 2.06 | 0.04 | 0.970 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | -0.29 | 1.96 | -0.15 | 0.884 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | -0.35 | 2.03 | -0.17 | 0.865 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -0.36 | 2.06 | -0.18 | 0.860 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.42 | 2.13 | -0.20 | 0.843 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -0.06 | 2.03 | -0.03 | 0.976 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -554,8 +315,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.76, *p* = 0.689, η²_G = 0.098
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 1.74, *p* = 0.070, η²_G = 0.126
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -563,84 +324,84 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 (Correct) | 0.00 | 3 | = 1.000 | 0.00 [-0.74, 0.18] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 1 (Incorrect) | 1.57 | 3 | = 0.787 | 0.34 [-0.24, 0.68] | small | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Correct) | 0.00 | 3 | = 1.000 | 0.00 [-0.57, 0.30] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Incorrect) | 0.36 | 3 | = 0.961 | 0.13 [-0.86, 0.31] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Correct) | -1.41 | 3 | = 0.787 | -0.27 [-0.52, 0.35] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.12 | 3 | = 1.000 | 0.11 [-0.90, 0.77] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 (Correct) | 1.57 | 3 | = 0.787 | 0.48 [-0.11, 0.81] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 (Incorrect) | -1.00 | 3 | = 0.824 | -0.06 [-0.65, 0.24] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 2 (Correct) | 1.57 | 3 | = 0.787 | 0.18 [0.02, 0.93] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 2 (Incorrect) | 2.85 | 3 | = 0.728 | 1.06 [-0.21, 0.85] | large | n.s. |
-| Cardinality (no change) vs Increase by 3 (Correct) | -0.54 | 3 | = 0.961 | -0.19 [-0.19, 0.71] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 3 (Incorrect) | 0.87 | 3 | = 0.915 | 0.19 [0.24, 1.34] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 1.44 | 3 | = 0.787 | 0.36 [-0.10, 0.87] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | 0.00 | 3 | = 1.000 | 0.00 [-0.41, 0.48] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 0.31 | 3 | = 0.961 | 0.13 [-0.57, 0.54] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -1.10 | 3 | = 0.811 | -0.28 [-0.35, 0.54] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.12 | 3 | = 1.000 | 0.11 [-0.81, 0.73] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 1.71 | 3 | = 0.787 | 0.49 [0.05, 1.03] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.52 | 3 | = 0.961 | -0.06 [-0.41, 0.52] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 1.57 | 3 | = 0.787 | 0.18 [0.18, 1.16] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 2.96 | 3 | = 0.728 | 1.11 [-0.23, 0.82] | large | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -0.47 | 3 | = 0.961 | -0.20 [0.01, 0.98] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 0.68 | 3 | = 0.961 | 0.19 [0.29, 1.46] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -1.19 | 3 | = 0.811 | -0.38 [-0.87, 0.05] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -0.48 | 3 | = 0.961 | -0.13 [-0.93, 0.21] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -2.10 | 3 | = 0.787 | -0.63 [-0.81, 0.11] | medium | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | -0.21 | 3 | = 1.000 | -0.21 [-0.99, 0.56] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.33 | 3 | = 0.961 | 0.15 [-0.34, 0.55] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | -1.70 | 3 | = 0.787 | -0.38 [-0.73, 0.20] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | -0.54 | 3 | = 0.961 | -0.17 [-0.25, 0.65] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 1.15 | 3 | = 0.811 | 0.65 [-0.56, 0.51] | medium | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | -1.12 | 3 | = 0.811 | -0.54 [-0.49, 0.39] | medium | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.40 | 3 | = 0.961 | -0.09 [-0.04, 1.02] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.29 | 3 | = 0.961 | 0.14 [-0.64, 0.47] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -1.41 | 3 | = 0.787 | -0.31 [-0.40, 0.45] | small | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.13 | 3 | = 1.000 | 0.12 [-0.84, 0.70] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 1.63 | 3 | = 0.787 | 0.52 [-0.08, 0.81] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.33 | 3 | = 0.961 | -0.06 [-0.46, 0.43] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 1.19 | 3 | = 0.811 | 0.20 [0.10, 1.00] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 3.60 | 3 | = 0.728 | 1.21 [-0.13, 0.90] | large | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -0.57 | 3 | = 0.961 | -0.22 [-0.10, 0.78] | small | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 0.58 | 3 | = 0.961 | 0.20 [0.22, 1.28] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -0.82 | 3 | = 0.922 | -0.32 [-0.51, 0.60] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | -0.04 | 3 | = 1.000 | -0.04 [-0.97, 0.88] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 0.44 | 3 | = 0.961 | 0.24 [-0.18, 0.97] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | -0.47 | 3 | = 0.961 | -0.17 [-0.36, 0.81] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 0.00 | 3 | = 1.000 | 0.00 [-0.21, 0.93] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 1.01 | 3 | = 0.824 | 0.62 [-0.47, 0.81] | medium | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -0.57 | 3 | = 0.961 | -0.27 [-0.32, 0.80] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | 0.17 | 3 | = 1.000 | 0.04 [-0.01, 1.41] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.39 | 3 | = 0.961 | 0.35 [-0.67, 0.87] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 1.72 | 3 | = 0.787 | 0.74 [-0.13, 0.75] | medium | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 0.79 | 3 | = 0.925 | 0.19 [-0.46, 0.42] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 1.70 | 3 | = 0.787 | 0.46 [0.05, 0.95] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 3.52 | 3 | = 0.728 | 1.46 [-0.35, 0.65] | large | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 0.29 | 3 | = 0.961 | 0.07 [-0.09, 0.80] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 1.26 | 3 | = 0.811 | 0.40 [0.13, 1.16] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.41 | 3 | = 0.961 | 0.34 [-0.52, 1.05] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.17 | 3 | = 1.000 | -0.16 [-1.03, 0.65] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 0.06 | 3 | = 1.000 | 0.05 [-0.50, 1.07] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 1.12 | 3 | = 0.811 | 0.84 [-0.59, 1.12] | large | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.35 | 3 | = 0.961 | -0.28 [-0.66, 0.88] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.09 | 3 | = 1.000 | 0.09 [-0.82, 1.31] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -1.89 | 3 | = 0.787 | -0.51 [-0.91, 0.02] | medium | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Correct) | -1.57 | 3 | = 0.787 | -0.31 [-0.26, 0.62] | small | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | 1.85 | 3 | = 0.787 | 0.43 [-0.58, 0.45] | small | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Correct) | -1.44 | 3 | = 0.787 | -0.65 [-0.49, 0.38] | medium | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -0.60 | 3 | = 0.961 | -0.22 [-0.21, 0.77] | small | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 2.45 | 3 | = 0.787 | 0.23 [0.01, 0.95] | small | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 2.89 | 3 | = 0.728 | 1.07 [-0.20, 0.90] | large | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | -0.32 | 3 | = 0.961 | -0.12 [-0.15, 0.76] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.21 | 3 | = 0.811 | 0.23 [0.12, 1.21] | small | n.s. |
-| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 2.94 | 3 | = 0.728 | 0.85 [-0.60, 0.40] | large | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Correct) | -1.00 | 3 | = 0.824 | -0.37 [-0.80, 0.09] | small | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 0.18 | 3 | = 1.000 | 0.05 [-0.26, 0.69] | negligible | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | -3.69 | 3 | = 0.728 | -1.31 [-0.51, 0.51] | large | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -1.34 | 3 | = 0.811 | -0.62 [-0.53, 0.58] | medium | n.s. |
-| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.85 | 3 | = 0.915 | 0.34 [-0.10, 0.90] | small | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Correct) | 0.26 | 8 | = 0.929 | 0.06 [-0.17, 0.69] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | 1.04 | 8 | = 0.613 | 0.45 [-0.04, 0.84] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -1.35 | 8 | = 0.528 | -0.33 [-0.38, 0.47] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | 0.68 | 8 | = 0.704 | 0.27 [-0.30, 0.64] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | 0.55 | 8 | = 0.773 | 0.17 [-0.22, 0.63] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | 1.23 | 8 | = 0.585 | 0.56 [-0.09, 1.15] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | 1.44 | 8 | = 0.505 | 0.52 [0.16, 1.08] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | 1.46 | 8 | = 0.505 | 0.45 [0.17, 1.09] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | 2.31 | 8 | = 0.403 | 0.96 [0.13, 1.04] | large | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | 0.23 | 8 | = 0.929 | 0.11 [-0.03, 0.96] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | 1.90 | 8 | = 0.483 | 0.45 [0.23, 1.17] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | 1.70 | 8 | = 0.497 | 0.93 [-0.10, 0.84] | large | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 1.14 | 8 | = 0.590 | 0.44 [-0.21, 0.64] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -1.51 | 8 | = 0.505 | -0.46 [-0.57, 0.27] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 0.88 | 8 | = 0.665 | 0.24 [-0.52, 0.42] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 0.35 | 8 | = 0.913 | 0.13 [-0.39, 0.45] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 1.44 | 8 | = 0.505 | 0.55 [-0.12, 1.10] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 2.00 | 8 | = 0.449 | 0.51 [-0.01, 0.87] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | 1.40 | 8 | = 0.515 | 0.43 [-0.13, 0.74] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 2.45 | 8 | = 0.403 | 0.99 [-0.11, 0.76] | large | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.13 | 8 | = 0.932 | 0.06 [-0.17, 0.79] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 2.29 | 8 | = 0.403 | 0.43 [-0.01, 0.88] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 1.86 | 8 | = 0.483 | 0.97 [-0.19, 0.73] | large | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -2.04 | 8 | = 0.449 | -0.98 [-0.83, 0.05] | large | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -0.67 | 8 | = 0.704 | -0.17 [-0.76, 0.19] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -0.63 | 8 | = 0.723 | -0.31 [-0.61, 0.25] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.76 | 8 | = 0.704 | 0.16 [-0.47, 0.69] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.32 | 8 | = 0.926 | 0.11 [-0.35, 0.50] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 0.12 | 8 | = 0.932 | 0.05 [-0.34, 0.50] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 1.55 | 8 | = 0.497 | 0.58 [-0.36, 0.49] | medium | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.85 | 8 | = 0.665 | -0.37 [-0.50, 0.43] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 0.13 | 8 | = 0.932 | 0.05 [-0.39, 0.45] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.60 | 8 | = 0.497 | 0.54 [-0.40, 0.51] | medium | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 1.55 | 8 | = 0.497 | 0.68 [-0.42, 0.52] | medium | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 2.53 | 8 | = 0.403 | 0.60 [-0.24, 0.62] | medium | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 2.14 | 8 | = 0.449 | 1.01 [0.22, 1.59] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 2.50 | 8 | = 0.403 | 0.99 [-0.01, 0.87] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | 2.08 | 8 | = 0.449 | 0.85 [0.07, 0.97] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 3.82 | 8 | = 0.397 | 1.55 [0.01, 0.90] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 0.98 | 8 | = 0.647 | 0.52 [-0.13, 0.83] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 2.68 | 8 | = 0.403 | 0.85 [0.00, 0.89] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 2.87 | 8 | = 0.403 | 1.56 [-0.16, 0.77] | large | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -0.25 | 8 | = 0.929 | -0.12 [-0.39, 0.54] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 1.79 | 8 | = 0.483 | 0.31 [0.13, 1.62] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 1.25 | 8 | = 0.583 | 0.27 [-0.16, 0.81] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.49 | 8 | = 0.811 | 0.20 [-0.22, 0.73] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 1.80 | 8 | = 0.483 | 0.71 [-0.07, 0.91] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | -0.38 | 8 | = 0.894 | -0.17 [-0.32, 0.68] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | 0.69 | 8 | = 0.704 | 0.20 [-0.16, 0.81] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | 1.67 | 8 | = 0.497 | 0.67 [-0.10, 0.97] | medium | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.92 | 8 | = 0.665 | 0.44 [-0.32, 0.85] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 1.14 | 8 | = 0.590 | 0.39 [-0.17, 0.69] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 0.71 | 8 | = 0.704 | 0.32 [-0.20, 0.66] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 2.36 | 8 | = 0.403 | 0.86 [-0.18, 0.68] | large | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | -0.10 | 8 | = 0.932 | -0.06 [-0.33, 0.61] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 1.15 | 8 | = 0.590 | 0.32 [-0.20, 0.66] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 1.62 | 8 | = 0.497 | 0.83 [-0.26, 0.66] | large | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | -0.16 | 8 | = 0.932 | -0.05 [-0.77, 0.40] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.21 | 8 | = 0.932 | -0.10 [-0.74, 0.43] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 1.11 | 8 | = 0.595 | 0.36 [-0.54, 0.61] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | -1.10 | 8 | = 0.595 | -0.49 [-0.86, 0.43] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.26 | 8 | = 0.929 | -0.10 [-0.75, 0.41] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.87 | 8 | = 0.665 | 0.32 [-0.48, 0.80] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -0.13 | 8 | = 0.932 | -0.05 [-0.42, 0.42] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | 1.04 | 8 | = 0.613 | 0.42 [-0.44, 0.40] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -0.84 | 8 | = 0.665 | -0.45 [-0.49, 0.45] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | -0.24 | 8 | = 0.929 | -0.05 [-0.50, 0.34] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | 0.89 | 8 | = 0.665 | 0.38 [-0.53, 0.39] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 1.18 | 8 | = 0.590 | 0.45 [-0.44, 0.41] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.76 | 8 | = 0.704 | -0.37 [-0.39, 0.55] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.00 | 8 | = 1.000 | 0.00 [-0.47, 0.37] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.72 | 8 | = 0.704 | 0.41 [-0.46, 0.46] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -1.71 | 8 | = 0.497 | -0.92 [-0.47, 0.47] | large | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | -1.34 | 8 | = 0.528 | -0.45 [-0.47, 0.38] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -0.12 | 8 | = 0.932 | -0.06 [-0.55, 0.37] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 0.71 | 8 | = 0.704 | 0.37 [-0.49, 0.45] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 2.67 | 8 | = 0.403 | 0.89 [-0.50, 0.50] | large | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.86 | 8 | = 0.665 | 0.41 [-0.49, 0.42] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -650,20 +411,20 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 1100.05, BIC = 1157.56
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -0.14, *SE* = 0.474, *z* = -0.301, *p* = 0.763
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -1.04, *SE* = 0.479, *z* = -2.164, *p* = 0.030
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.20, *SE* = 0.463, *z* = -0.421, *p* = 0.674
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.41, *SE* = 0.542, *z* = -2.594, *p* = 0.009
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -0.22, *SE* = 0.464, *z* = -0.482, *p* = 0.630
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -3.50, *SE* = 0.641, *z* = -5.451, *p* < .001
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 0.04, *SE* = 0.472, *z* = 0.087, *p* = 0.931
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -1.30, *SE* = 0.474, *z* = -2.753, *p* = 0.006
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -0.39, *SE* = 0.465, *z* = -0.829, *p* = 0.407
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.49, *SE* = 0.505, *z* = -2.944, *p* = 0.003
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -1.30, *SE* = 0.470, *z* = -2.771, *p* = 0.006
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -2.54, *SE* = 0.498, *z* = -5.108, *p* < .001
-- **SNR**: *β* = -0.18, *SE* = 0.025, *z* = -6.961, *p* < .001
+- AIC = 1307.86, BIC = 1366.64
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 0.17, *SE* = 0.591, *z* = 0.290, *p* = 0.772
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.22, *SE* = 0.590, *z* = 0.373, *p* = 0.709
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.19, *SE* = 0.590, *z* = -0.320, *p* = 0.749
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -0.71, *SE* = 0.625, *z* = -1.132, *p* = 0.258
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -0.40, *SE* = 0.591, *z* = -0.670, *p* = 0.503
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -1.54, *SE* = 0.693, *z* = -2.229, *p* = 0.026
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 0.05, *SE* = 0.590, *z* = 0.083, *p* = 0.934
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -0.34, *SE* = 0.593, *z* = -0.567, *p* = 0.571
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 0.10, *SE* = 0.591, *z* = 0.175, *p* = 0.861
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 0.20, *SE* = 0.621, *z* = 0.322, *p* = 0.748
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 0.01, *SE* = 0.591, *z* = 0.025, *p* = 0.980
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -0.28, *SE* = 0.614, *z* = -0.463, *p* = 0.643
+- **SNR**: *β* = -0.24, *SE* = 0.084, *z* = -2.847, *p* = 0.004
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -676,84 +437,84 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | 0.14 | 0.47 | 0.30 | 0.763 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | 1.04 | 0.48 | 2.16 | 0.030 | 0.681 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | 0.20 | 0.46 | 0.42 | 0.674 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | 1.41 | 0.54 | 2.59 | 0.009 | 0.391 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Correct) | 0.22 | 0.46 | 0.48 | 0.630 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | 3.50 | 0.64 | 5.45 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 1 (Correct) | -0.04 | 0.47 | -0.09 | 0.931 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | 1.30 | 0.47 | 2.75 | 0.006 | 0.278 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | 0.39 | 0.46 | 0.83 | 0.407 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 1.49 | 0.51 | 2.94 | 0.003 | 0.174 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | 1.30 | 0.47 | 2.77 | 0.006 | 0.270 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 2.54 | 0.50 | 5.11 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 0.89 | 0.49 | 1.84 | 0.065 | 0.869 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.05 | 0.47 | 0.11 | 0.911 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 1.26 | 0.55 | 2.32 | 0.021 | 0.582 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.08 | 0.47 | 0.17 | 0.863 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 3.35 | 0.64 | 5.21 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | -0.18 | 0.48 | -0.39 | 0.700 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 1.16 | 0.48 | 2.42 | 0.016 | 0.517 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.24 | 0.47 | 0.52 | 0.606 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 1.35 | 0.51 | 2.64 | 0.008 | 0.365 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 1.16 | 0.48 | 2.44 | 0.015 | 0.504 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 2.40 | 0.50 | 4.76 | < .001 | < .001 | *** |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -0.84 | 0.48 | -1.76 | 0.078 | 0.905 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | 0.37 | 0.54 | 0.69 | 0.492 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -0.81 | 0.48 | -1.70 | 0.090 | 0.929 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 2.46 | 0.64 | 3.85 | < .001 | 0.008 | ** |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -1.08 | 0.49 | -2.20 | 0.028 | 0.663 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.27 | 0.48 | 0.56 | 0.578 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -0.65 | 0.48 | -1.35 | 0.177 | 0.994 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.45 | 0.51 | 0.89 | 0.375 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.26 | 0.48 | 0.55 | 0.585 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.51 | 0.49 | 3.05 | 0.002 | 0.133 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 1.21 | 0.54 | 2.24 | 0.025 | 0.642 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.03 | 0.46 | 0.06 | 0.950 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 3.30 | 0.64 | 5.16 | < .001 | < .001 | *** |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | -0.24 | 0.46 | -0.51 | 0.611 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 1.11 | 0.47 | 2.36 | 0.019 | 0.560 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 0.19 | 0.46 | 0.42 | 0.678 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 1.29 | 0.50 | 2.57 | 0.010 | 0.406 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | 1.11 | 0.46 | 2.39 | 0.017 | 0.537 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 2.35 | 0.50 | 4.72 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -1.18 | 0.54 | -2.17 | 0.030 | 0.681 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 2.09 | 0.68 | 3.07 | 0.002 | 0.124 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -1.45 | 0.55 | -2.61 | 0.009 | 0.379 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -0.10 | 0.54 | -0.19 | 0.852 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -1.02 | 0.55 | -1.87 | 0.062 | 0.863 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 0.08 | 0.56 | 0.15 | 0.883 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | -0.10 | 0.55 | -0.19 | 0.848 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.14 | 0.55 | 2.07 | 0.038 | 0.744 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 3.27 | 0.64 | 5.10 | < .001 | < .001 | *** |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | -0.26 | 0.46 | -0.57 | 0.568 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 1.08 | 0.47 | 2.29 | 0.022 | 0.599 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.16 | 0.46 | 0.35 | 0.724 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 1.26 | 0.50 | 2.51 | 0.012 | 0.459 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 1.08 | 0.46 | 2.33 | 0.020 | 0.581 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 2.32 | 0.50 | 4.63 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -3.54 | 0.65 | -5.45 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -2.19 | 0.64 | -3.41 | < .001 | 0.041 | * |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -3.11 | 0.64 | -4.83 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -2.01 | 0.66 | -3.05 | 0.002 | 0.133 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -2.20 | 0.64 | -3.41 | < .001 | 0.041 | * |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -0.95 | 0.65 | -1.46 | 0.144 | 0.985 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 1.35 | 0.48 | 2.81 | 0.005 | 0.249 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.43 | 0.46 | 0.92 | 0.357 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 1.53 | 0.51 | 2.97 | 0.003 | 0.162 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | 1.34 | 0.47 | 2.87 | 0.004 | 0.214 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 2.58 | 0.51 | 5.04 | < .001 | < .001 | *** |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.92 | 0.47 | -1.94 | 0.052 | 0.821 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.18 | 0.51 | 0.36 | 0.719 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.00 | 0.48 | -0.01 | 0.994 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.24 | 0.50 | 2.48 | 0.013 | 0.477 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 1.10 | 0.51 | 2.18 | 0.030 | 0.681 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | 0.92 | 0.46 | 1.98 | 0.048 | 0.804 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 2.16 | 0.50 | 4.28 | < .001 | 0.001 | ** |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -0.19 | 0.51 | -0.37 | 0.714 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.06 | 0.52 | 2.02 | 0.043 | 0.777 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 1.24 | 0.51 | 2.46 | 0.014 | 0.492 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Correct) | -0.17 | 0.59 | -0.29 | 0.772 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | -0.22 | 0.59 | -0.37 | 0.709 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | 0.19 | 0.59 | 0.32 | 0.749 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | 0.71 | 0.63 | 1.13 | 0.258 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | 0.40 | 0.59 | 0.67 | 0.503 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | 1.54 | 0.69 | 2.23 | 0.026 | 0.848 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | -0.05 | 0.59 | -0.08 | 0.934 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | 0.34 | 0.59 | 0.57 | 0.571 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | -0.10 | 0.59 | -0.18 | 0.861 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | -0.20 | 0.62 | -0.32 | 0.748 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | -0.01 | 0.59 | -0.03 | 0.980 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | 0.28 | 0.61 | 0.46 | 0.643 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -0.05 | 0.59 | -0.08 | 0.934 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.36 | 0.59 | 0.61 | 0.543 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 0.88 | 0.62 | 1.41 | 0.157 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.57 | 0.60 | 0.95 | 0.340 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 1.72 | 0.69 | 2.47 | 0.013 | 0.646 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 0.12 | 0.59 | 0.21 | 0.836 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.51 | 0.59 | 0.86 | 0.390 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.07 | 0.59 | 0.11 | 0.909 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -0.03 | 0.62 | -0.05 | 0.963 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 0.16 | 0.59 | 0.26 | 0.791 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 0.46 | 0.61 | 0.74 | 0.456 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 0.41 | 0.59 | 0.69 | 0.489 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | 0.93 | 0.62 | 1.49 | 0.137 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | 0.62 | 0.59 | 1.04 | 0.298 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 1.76 | 0.69 | 2.55 | 0.011 | 0.575 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 0.17 | 0.59 | 0.29 | 0.772 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.56 | 0.59 | 0.94 | 0.348 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 0.12 | 0.59 | 0.20 | 0.844 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.02 | 0.62 | 0.03 | 0.974 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.20 | 0.59 | 0.35 | 0.728 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 0.50 | 0.61 | 0.82 | 0.411 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 0.52 | 0.62 | 0.83 | 0.406 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.21 | 0.59 | 0.35 | 0.726 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 1.36 | 0.69 | 1.96 | 0.050 | 0.975 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | -0.24 | 0.59 | -0.40 | 0.687 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 0.15 | 0.59 | 0.25 | 0.804 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | -0.29 | 0.59 | -0.49 | 0.621 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -0.39 | 0.62 | -0.63 | 0.532 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | -0.20 | 0.59 | -0.34 | 0.730 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 0.10 | 0.61 | 0.16 | 0.876 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -0.31 | 0.63 | -0.49 | 0.621 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 0.84 | 0.72 | 1.16 | 0.247 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -0.76 | 0.62 | -1.21 | 0.225 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -0.37 | 0.62 | -0.60 | 0.549 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -0.81 | 0.62 | -1.31 | 0.192 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | -0.91 | 0.65 | -1.39 | 0.164 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | -0.72 | 0.62 | -1.16 | 0.245 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.42 | 0.64 | -0.66 | 0.510 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 1.15 | 0.69 | 1.65 | 0.098 | 0.999 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | -0.44 | 0.59 | -0.75 | 0.453 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | -0.06 | 0.60 | -0.10 | 0.920 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | -0.50 | 0.60 | -0.84 | 0.401 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | -0.60 | 0.62 | -0.96 | 0.339 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | -0.41 | 0.59 | -0.69 | 0.489 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | -0.11 | 0.62 | -0.18 | 0.857 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -1.59 | 0.69 | -2.30 | 0.022 | 0.800 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -1.21 | 0.70 | -1.74 | 0.082 | 0.997 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -1.65 | 0.69 | -2.37 | 0.018 | 0.735 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -1.74 | 0.72 | -2.43 | 0.015 | 0.689 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -1.56 | 0.69 | -2.25 | 0.025 | 0.837 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -1.26 | 0.71 | -1.77 | 0.077 | 0.996 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 0.38 | 0.59 | 0.65 | 0.515 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.05 | 0.59 | -0.09 | 0.926 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -0.15 | 0.62 | -0.24 | 0.808 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | 0.03 | 0.59 | 0.06 | 0.954 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 0.33 | 0.61 | 0.54 | 0.587 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.44 | 0.59 | -0.75 | 0.456 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.54 | 0.62 | -0.86 | 0.389 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.35 | 0.59 | -0.59 | 0.552 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -0.05 | 0.61 | -0.08 | 0.933 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -0.10 | 0.62 | -0.15 | 0.877 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | 0.09 | 0.59 | 0.15 | 0.881 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 0.39 | 0.61 | 0.63 | 0.526 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.18 | 0.62 | 0.30 | 0.766 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.48 | 0.64 | 0.75 | 0.451 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 0.30 | 0.61 | 0.49 | 0.625 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -761,7 +522,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.54, *p* = 0.873, η²_G = 0.037
+- *F* = 0.58, *p* = 0.854, η²_G = 0.057
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -770,84 +531,501 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 (Correct) | 1.46 | 3 | = 0.988 | 0.38 [-0.29, 0.63] | small | n.s. |
-| Cardinality (no change) vs Decrease by 1 (Incorrect) | 1.11 | 3 | = 0.988 | 0.31 [-0.20, 0.73] | small | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Correct) | 1.96 | 3 | = 0.988 | 0.53 [-0.19, 0.69] | medium | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Incorrect) | 1.44 | 3 | = 0.988 | 0.47 [-0.33, 0.84] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Correct) | 1.47 | 3 | = 0.988 | 0.53 [-0.11, 0.78] | medium | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.23 | 3 | = 0.988 | 0.07 [-0.35, 1.44] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 (Correct) | 0.96 | 3 | = 0.988 | 0.51 [-0.16, 0.75] | medium | n.s. |
-| Cardinality (no change) vs Increase by 1 (Incorrect) | 1.43 | 3 | = 0.988 | 0.41 [0.17, 1.14] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 (Correct) | 3.17 | 3 | = 0.988 | 0.41 [0.12, 1.05] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 (Incorrect) | -0.12 | 3 | = 0.988 | -0.02 [0.07, 1.19] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 3 (Correct) | 2.37 | 3 | = 0.988 | 0.38 [0.59, 1.74] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 (Incorrect) | 1.14 | 3 | = 0.988 | 0.32 [0.12, 1.18] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | -0.61 | 3 | = 0.988 | -0.15 [-0.28, 0.66] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | 0.44 | 3 | = 0.988 | 0.10 [-0.34, 0.55] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 0.25 | 3 | = 0.988 | 0.10 [-0.37, 0.75] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 0.28 | 3 | = 0.988 | 0.06 [-0.32, 0.57] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | -0.54 | 3 | = 0.988 | -0.21 [-0.34, 1.28] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.06 | 3 | = 0.988 | 0.02 [-0.20, 0.73] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.02 | 3 | = 0.988 | -0.01 [0.02, 1.02] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 0.27 | 3 | = 0.988 | 0.05 [0.08, 1.03] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | -1.23 | 3 | = 0.988 | -0.40 [-0.13, 0.94] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -0.04 | 3 | = 0.988 | -0.02 [0.28, 1.33] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | -0.78 | 3 | = 0.988 | -0.09 [0.14, 1.25] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 2.01 | 3 | = 0.988 | 0.29 [-0.49, 0.40] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | 0.67 | 3 | = 0.988 | 0.25 [-0.64, 0.47] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 1.72 | 3 | = 0.988 | 0.27 [-0.47, 0.42] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | -0.28 | 3 | = 0.988 | -0.13 [-0.32, 1.32] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.76 | 3 | = 0.988 | 0.24 [-0.55, 0.34] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 0.44 | 3 | = 0.988 | 0.16 [-0.21, 0.71] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 0.67 | 3 | = 0.988 | 0.19 [-0.36, 0.53] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -1.14 | 3 | = 0.988 | -0.34 [-0.49, 0.57] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 0.34 | 3 | = 0.988 | 0.13 [0.05, 0.99] | negligible | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.29 | 3 | = 0.988 | 0.05 [-0.12, 0.92] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.06 | 3 | = 0.988 | 0.02 [-0.53, 0.58] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -0.19 | 3 | = 0.988 | -0.05 [-0.36, 0.49] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | -0.79 | 3 | = 0.988 | -0.29 [-0.37, 1.24] | small | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Correct) | -0.28 | 3 | = 0.988 | -0.10 [-0.49, 0.38] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.41 | 3 | = 0.988 | -0.11 [-0.08, 0.84] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Correct) | -0.17 | 3 | = 0.988 | -0.04 [-0.26, 0.59] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | -2.57 | 3 | = 0.988 | -0.55 [-0.19, 0.82] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -0.29 | 3 | = 0.988 | -0.12 [0.08, 1.00] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -1.83 | 3 | = 0.988 | -0.21 [0.01, 1.00] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -0.12 | 3 | = 0.988 | -0.06 [-0.62, 0.49] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | -1.26 | 3 | = 0.988 | -0.28 [-0.73, 1.14] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | -0.18 | 3 | = 0.988 | -0.10 [-0.61, 0.50] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | -0.71 | 3 | = 0.988 | -0.11 [-0.38, 0.78] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -0.16 | 3 | = 0.988 | -0.05 [-0.47, 0.64] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | -3.20 | 3 | = 0.988 | -0.48 [-0.86, 0.43] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -0.27 | 3 | = 0.988 | -0.12 [-0.27, 0.86] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.57 | 3 | = 0.988 | -0.19 [-0.43, 0.86] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | -0.53 | 3 | = 0.988 | -0.27 [-0.41, 1.18] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Correct) | -0.26 | 3 | = 0.988 | -0.06 [-0.51, 0.35] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | -0.16 | 3 | = 0.988 | -0.08 [-0.15, 0.75] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Correct) | -0.02 | 3 | = 0.988 | -0.01 [-0.29, 0.55] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | -1.33 | 3 | = 0.988 | -0.55 [-0.23, 0.78] | medium | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Correct) | -0.19 | 3 | = 0.988 | -0.09 [0.03, 0.94] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -0.94 | 3 | = 0.988 | -0.18 [-0.03, 0.96] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.42 | 3 | = 0.988 | 0.24 [-1.18, 0.41] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | 0.67 | 3 | = 0.988 | 0.21 [-1.05, 0.64] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 0.84 | 3 | = 0.988 | 0.23 [-1.24, 0.37] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | -0.35 | 3 | = 0.988 | -0.09 [-1.15, 0.56] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | 0.50 | 3 | = 0.988 | 0.20 [-1.08, 0.49] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.38 | 3 | = 0.988 | 0.15 [-1.55, 0.65] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -0.06 | 3 | = 0.988 | -0.03 [-0.07, 0.85] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Correct) | 0.07 | 3 | = 0.988 | 0.03 [-0.17, 0.71] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -1.00 | 3 | = 0.988 | -0.53 [-0.33, 0.71] | medium | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Correct) | -0.07 | 3 | = 0.988 | -0.04 [0.16, 1.10] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -0.45 | 3 | = 0.988 | -0.14 [-0.05, 0.96] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 0.16 | 3 | = 0.988 | 0.06 [-0.63, 0.27] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -3.52 | 3 | = 0.988 | -0.43 [-0.51, 0.56] | small | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | -0.03 | 3 | = 0.988 | -0.01 [-0.20, 0.70] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.25 | 3 | = 0.988 | -0.09 [-0.35, 0.65] | negligible | n.s. |
-| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -1.94 | 3 | = 0.988 | -0.43 [-0.23, 0.78] | small | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Correct) | -0.24 | 3 | = 0.988 | -0.06 [0.02, 0.94] | negligible | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -0.64 | 3 | = 0.988 | -0.14 [-0.09, 0.88] | negligible | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 1.32 | 3 | = 0.988 | 0.40 [-0.28, 0.77] | small | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 1.19 | 3 | = 0.988 | 0.34 [-0.11, 1.05] | small | n.s. |
-| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | -0.19 | 3 | = 0.988 | -0.08 [-0.34, 0.63] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Correct) | -0.41 | 8 | = 0.983 | -0.14 [-0.63, 0.22] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | -0.17 | 8 | = 0.983 | -0.07 [-0.54, 0.30] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | 0.44 | 8 | = 0.983 | 0.19 [-0.26, 0.59] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | 0.87 | 8 | = 0.983 | 0.36 [-0.33, 0.61] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | 0.73 | 8 | = 0.983 | 0.29 [-0.09, 0.78] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.92 | 8 | = 0.983 | 0.48 [-0.32, 0.85] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | -1.00 | 8 | = 0.983 | -0.42 [-0.51, 0.34] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | -0.56 | 8 | = 0.983 | -0.19 [-0.32, 0.52] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | -0.60 | 8 | = 0.983 | -0.14 [-0.66, 0.19] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | -0.55 | 8 | = 0.983 | -0.27 [-0.58, 0.36] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | -0.24 | 8 | = 0.983 | -0.10 [-0.50, 0.35] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | 0.19 | 8 | = 0.983 | 0.08 [-0.39, 0.52] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 0.05 | 8 | = 0.983 | 0.02 [-0.41, 0.44] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | 0.81 | 8 | = 0.983 | 0.32 [-0.08, 0.79] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 0.96 | 8 | = 0.983 | 0.42 [-0.23, 0.72] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 1.34 | 8 | = 0.983 | 0.38 [0.03, 0.92] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 1.11 | 8 | = 0.983 | 0.52 [-0.25, 0.94] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | -0.70 | 8 | = 0.983 | -0.20 [-0.29, 0.55] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.05 | 8 | = 0.983 | -0.03 [-0.21, 0.64] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 0.06 | 8 | = 0.983 | 0.01 [-0.36, 0.49] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | -0.32 | 8 | = 0.983 | -0.16 [-0.43, 0.51] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 0.09 | 8 | = 0.983 | 0.04 [-0.31, 0.54] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 0.33 | 8 | = 0.983 | 0.13 [-0.35, 0.56] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 0.30 | 8 | = 0.983 | 0.15 [-0.25, 0.60] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | 1.60 | 8 | = 0.983 | 0.34 [-0.28, 0.67] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 0.57 | 8 | = 0.983 | 0.23 [-0.11, 0.76] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 1.08 | 8 | = 0.983 | 0.47 [-0.23, 0.97] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | -0.34 | 8 | = 0.983 | -0.14 [-0.36, 0.49] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | -0.08 | 8 | = 0.983 | -0.04 [-0.28, 0.57] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | -0.03 | 8 | = 0.983 | -0.01 [-0.41, 0.43] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.25 | 8 | = 0.983 | -0.14 [-0.49, 0.45] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 0.02 | 8 | = 0.983 | 0.01 [-0.35, 0.49] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.33 | 8 | = 0.983 | 0.11 [-0.40, 0.51] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.62 | 8 | = 0.983 | 0.31 [-0.33, 0.61] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 0.38 | 8 | = 0.983 | 0.19 [-0.25, 0.61] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.92 | 8 | = 0.983 | 0.44 [-0.32, 0.85] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | -1.64 | 8 | = 0.983 | -0.78 [-0.63, 0.23] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.75 | 8 | = 0.983 | -0.42 [-0.44, 0.40] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | -0.97 | 8 | = 0.983 | -0.34 [-0.75, 0.11] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | -0.89 | 8 | = 0.983 | -0.38 [-0.60, 0.34] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -0.54 | 8 | = 0.983 | -0.28 [-0.62, 0.23] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 0.07 | 8 | = 0.983 | 0.04 [-0.48, 0.43] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -0.43 | 8 | = 0.983 | -0.20 [-0.46, 0.48] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.54 | 8 | = 0.983 | 0.22 [-0.32, 0.99] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | -1.33 | 8 | = 0.983 | -0.54 [-0.64, 0.30] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | -0.99 | 8 | = 0.983 | -0.45 [-0.72, 0.23] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -0.92 | 8 | = 0.983 | -0.42 [-0.68, 0.27] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | -0.89 | 8 | = 0.983 | -0.48 [-0.62, 0.38] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -1.01 | 8 | = 0.983 | -0.40 [-0.68, 0.27] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.34 | 8 | = 0.983 | -0.14 [-0.60, 0.43] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.77 | 8 | = 0.983 | 0.38 [-0.41, 0.75] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | -2.21 | 8 | = 0.983 | -0.66 [-0.84, 0.04] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | -0.91 | 8 | = 0.983 | -0.45 [-0.61, 0.24] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | -1.14 | 8 | = 0.983 | -0.40 [-0.91, -0.02] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | -0.95 | 8 | = 0.983 | -0.44 [-0.67, 0.28] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | -0.78 | 8 | = 0.983 | -0.35 [-0.76, 0.11] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -0.06 | 8 | = 0.983 | -0.02 [-0.51, 0.40] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | -1.31 | 8 | = 0.983 | -0.59 [-0.91, 0.27] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -1.04 | 8 | = 0.983 | -0.53 [-0.84, 0.34] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | -1.05 | 8 | = 0.983 | -0.52 [-0.91, 0.27] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | -1.19 | 8 | = 0.983 | -0.57 [-0.95, 0.35] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -1.05 | 8 | = 0.983 | -0.51 [-0.89, 0.29] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | -0.59 | 8 | = 0.983 | -0.30 [-0.78, 0.49] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | 0.35 | 8 | = 0.983 | 0.20 [-0.28, 0.56] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | 0.66 | 8 | = 0.983 | 0.24 [-0.52, 0.33] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -0.08 | 8 | = 0.983 | -0.04 [-0.53, 0.41] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | 0.57 | 8 | = 0.983 | 0.26 [-0.42, 0.42] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | 0.47 | 8 | = 0.983 | 0.19 [-0.37, 0.54] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 0.09 | 8 | = 0.983 | 0.04 [-0.64, 0.22] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.29 | 8 | = 0.983 | -0.15 [-0.55, 0.38] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.20 | 8 | = 0.983 | 0.07 [-0.60, 0.25] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.29 | 8 | = 0.983 | 0.14 [-0.45, 0.46] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -0.39 | 8 | = 0.983 | -0.17 [-0.50, 0.43] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | 0.07 | 8 | = 0.983 | 0.03 [-0.34, 0.50] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 0.30 | 8 | = 0.983 | 0.12 [-0.35, 0.57] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 0.34 | 8 | = 0.983 | 0.19 [-0.40, 0.53] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 0.43 | 8 | = 0.983 | 0.20 [-0.43, 0.56] | negligible | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.27 | 8 | = 0.983 | 0.11 [-0.39, 0.52] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.2 N1 Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 2371.03, BIC = 2429.80
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 3.01, *SE* = 3.501, *z* = 0.859, *p* = 0.391
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -2.66, *SE* = 3.535, *z* = -0.754, *p* = 0.451
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 1.63, *SE* = 3.506, *z* = 0.465, *p* = 0.642
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.48, *SE* = 3.757, *z* = -0.393, *p* = 0.694
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 1.35, *SE* = 3.511, *z* = 0.384, *p* = 0.701
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 0.77, *SE* = 4.169, *z* = 0.184, *p* = 0.854
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -4.56, *SE* = 3.524, *z* = -1.293, *p* = 0.196
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 1.72, *SE* = 3.505, *z* = 0.491, *p* = 0.623
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -6.59, *SE* = 3.519, *z* = -1.873, *p* = 0.061
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -4.82, *SE* = 3.706, *z* = -1.300, *p* = 0.194
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -4.00, *SE* = 3.509, *z* = -1.141, *p* = 0.254
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -9.53, *SE* = 3.717, *z* = -2.565, *p* = 0.010
+- **SNR**: *β* = -0.13, *SE* = 0.191, *z* = -0.680, *p* = 0.496
+
+_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality (no change) - Decrease by 1 (Correct) | -3.01 | 3.50 | -0.86 | 0.391 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | 2.66 | 3.53 | 0.75 | 0.451 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | -1.63 | 3.51 | -0.46 | 0.642 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | 1.48 | 3.76 | 0.39 | 0.694 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | -1.35 | 3.51 | -0.38 | 0.701 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | -0.76 | 4.17 | -0.18 | 0.854 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | 4.56 | 3.52 | 1.29 | 0.196 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | -1.72 | 3.50 | -0.49 | 0.623 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | 6.59 | 3.52 | 1.87 | 0.061 | 0.981 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | 4.82 | 3.71 | 1.30 | 0.194 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | 4.00 | 3.51 | 1.14 | 0.254 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | 9.53 | 3.72 | 2.56 | 0.010 | 0.531 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 5.67 | 3.54 | 1.60 | 0.109 | 0.998 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 1.38 | 3.51 | 0.39 | 0.695 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 4.48 | 3.76 | 1.19 | 0.233 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 1.66 | 3.51 | 0.47 | 0.637 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 2.24 | 4.17 | 0.54 | 0.591 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 7.56 | 3.52 | 2.15 | 0.032 | 0.889 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 1.28 | 3.51 | 0.37 | 0.714 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 9.60 | 3.52 | 2.73 | 0.006 | 0.377 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 7.82 | 3.71 | 2.11 | 0.035 | 0.907 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 7.01 | 3.51 | 2.00 | 0.046 | 0.952 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 12.54 | 3.72 | 3.37 | < .001 | 0.057 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -4.29 | 3.57 | -1.20 | 0.229 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -1.19 | 3.69 | -0.32 | 0.748 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -4.01 | 3.58 | -1.12 | 0.263 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -3.43 | 4.12 | -0.83 | 0.406 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 1.89 | 3.61 | 0.52 | 0.600 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | -4.39 | 3.52 | -1.25 | 0.212 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 3.93 | 3.60 | 1.09 | 0.276 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 2.15 | 3.69 | 0.58 | 0.559 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 1.34 | 3.58 | 0.37 | 0.708 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 6.87 | 3.65 | 1.88 | 0.060 | 0.980 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 3.11 | 3.80 | 0.82 | 0.413 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.28 | 3.50 | 0.08 | 0.936 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 0.86 | 4.20 | 0.21 | 0.837 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | 6.19 | 3.51 | 1.76 | 0.078 | 0.993 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | -0.09 | 3.52 | -0.03 | 0.979 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | 8.22 | 3.50 | 2.35 | 0.019 | 0.741 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 6.45 | 3.73 | 1.73 | 0.084 | 0.994 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | 5.63 | 3.50 | 1.61 | 0.108 | 0.998 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 11.16 | 3.76 | 2.97 | 0.003 | 0.204 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -2.83 | 3.82 | -0.74 | 0.459 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | -2.24 | 4.28 | -0.52 | 0.600 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 3.08 | 3.86 | 0.80 | 0.425 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -3.20 | 3.73 | -0.86 | 0.391 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 5.11 | 3.84 | 1.33 | 0.183 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 3.34 | 3.87 | 0.86 | 0.388 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 2.53 | 3.81 | 0.66 | 0.508 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 8.06 | 3.82 | 2.11 | 0.035 | 0.907 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 0.58 | 4.22 | 0.14 | 0.890 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | 5.91 | 3.50 | 1.69 | 0.092 | 0.996 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | -0.37 | 3.53 | -0.11 | 0.916 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 7.94 | 3.50 | 2.27 | 0.023 | 0.805 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 6.17 | 3.74 | 1.65 | 0.099 | 0.997 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 5.35 | 3.50 | 1.53 | 0.126 | 0.999 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 10.88 | 3.78 | 2.88 | 0.004 | 0.260 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 5.32 | 4.25 | 1.25 | 0.210 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -0.96 | 4.15 | -0.23 | 0.818 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 7.36 | 4.24 | 1.74 | 0.083 | 0.994 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 5.58 | 4.28 | 1.30 | 0.192 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 4.77 | 4.21 | 1.13 | 0.258 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 10.30 | 4.24 | 2.43 | 0.015 | 0.666 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -6.28 | 3.55 | -1.77 | 0.077 | 0.993 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | 2.03 | 3.50 | 0.58 | 0.562 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 0.26 | 3.77 | 0.07 | 0.945 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.55 | 3.50 | -0.16 | 0.874 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 4.98 | 3.82 | 1.30 | 0.193 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | 8.31 | 3.54 | 2.35 | 0.019 | 0.741 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 6.54 | 3.69 | 1.77 | 0.077 | 0.993 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 5.73 | 3.52 | 1.62 | 0.104 | 0.998 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 11.26 | 3.69 | 3.05 | 0.002 | 0.160 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -1.77 | 3.76 | -0.47 | 0.637 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | -2.59 | 3.50 | -0.74 | 0.460 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 2.94 | 3.81 | 0.77 | 0.440 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -0.81 | 3.74 | -0.22 | 0.827 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 4.72 | 3.83 | 1.23 | 0.218 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 5.53 | 3.78 | 1.46 | 0.143 | 1.000 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 0.81, *p* = 0.642, η²_G = 0.027
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality (no change) vs Decrease by 1 (Correct) | -0.89 | 8 | = 0.827 | -0.07 [-0.70, 0.16] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | 0.00 | 8 | = 1.000 | 0.00 [-0.29, 0.56] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -0.66 | 8 | = 0.904 | -0.10 [-0.56, 0.29] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | 1.64 | 8 | = 0.827 | 0.31 [-0.50, 0.44] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | -1.67 | 8 | = 0.827 | -0.17 [-0.49, 0.35] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.06 | 8 | = 0.983 | 0.02 [-0.70, 0.45] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | 0.47 | 8 | = 0.922 | 0.08 [-0.09, 0.78] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | -1.51 | 8 | = 0.827 | -0.18 [-0.64, 0.21] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | 1.18 | 8 | = 0.827 | 0.09 [0.04, 0.94] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | 1.23 | 8 | = 0.827 | 0.37 [-0.22, 0.73] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | -0.33 | 8 | = 0.968 | -0.04 [-0.16, 0.70] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | 0.43 | 8 | = 0.925 | 0.11 [0.09, 1.07] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 0.32 | 8 | = 0.968 | 0.07 [-0.11, 0.76] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -0.14 | 8 | = 0.983 | -0.02 [-0.29, 0.56] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 1.71 | 8 | = 0.827 | 0.38 [-0.23, 0.73] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -0.88 | 8 | = 0.827 | -0.10 [-0.24, 0.61] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.22 | 8 | = 0.983 | 0.09 [-0.49, 0.67] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.89 | 8 | = 0.827 | 0.15 [0.05, 0.94] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.74 | 8 | = 0.889 | -0.11 [-0.34, 0.51] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 2.40 | 8 | = 0.783 | 0.15 [0.22, 1.16] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 1.34 | 8 | = 0.827 | 0.44 [-0.09, 0.89] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 0.15 | 8 | = 0.983 | 0.02 [0.03, 0.92] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 0.59 | 8 | = 0.905 | 0.17 [0.18, 1.19] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -0.71 | 8 | = 0.903 | -0.10 [-0.64, 0.21] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | 1.30 | 8 | = 0.827 | 0.32 [-0.57, 0.36] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -0.77 | 8 | = 0.882 | -0.17 [-0.59, 0.26] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.05 | 8 | = 0.983 | 0.02 [-0.64, 0.52] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.40 | 8 | = 0.939 | 0.08 [-0.26, 0.59] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | -1.36 | 8 | = 0.827 | -0.18 [-0.65, 0.21] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 0.46 | 8 | = 0.922 | 0.09 [-0.14, 0.73] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 1.50 | 8 | = 0.827 | 0.38 [-0.33, 0.61] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | -0.16 | 8 | = 0.983 | -0.04 [-0.33, 0.52] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.64 | 8 | = 0.904 | 0.11 [0.03, 1.00] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 1.55 | 8 | = 0.827 | 0.43 [-0.34, 0.60] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -0.49 | 8 | = 0.922 | -0.08 [-0.40, 0.45] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.34 | 8 | = 0.968 | 0.12 [-0.68, 0.48] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 1.02 | 8 | = 0.827 | 0.18 [-0.08, 0.80] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.84 | 8 | = 0.852 | -0.10 [-0.45, 0.40] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 1.36 | 8 | = 0.827 | 0.19 [0.10, 1.00] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 2.09 | 8 | = 0.783 | 0.50 [-0.05, 0.93] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 0.21 | 8 | = 0.983 | 0.05 [-0.10, 0.77] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 1.03 | 8 | = 0.827 | 0.21 [0.20, 1.22] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -2.44 | 8 | = 0.783 | -0.49 [-0.61, 0.33] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | -0.60 | 8 | = 0.905 | -0.30 [-0.79, 0.48] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | -0.68 | 8 | = 0.904 | -0.22 [-0.34, 0.60] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | -2.12 | 8 | = 0.783 | -0.49 [-0.50, 0.44] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -0.98 | 8 | = 0.827 | -0.23 [-0.29, 0.65] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 0.05 | 8 | = 0.983 | 0.02 [-0.41, 0.59] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -1.50 | 8 | = 0.827 | -0.34 [-0.41, 0.53] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.78 | 8 | = 0.882 | -0.20 [-0.23, 0.82] | small | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.48 | 8 | = 0.922 | 0.19 [-0.50, 0.65] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 1.07 | 8 | = 0.827 | 0.24 [-0.13, 0.73] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | -0.13 | 8 | = 0.983 | -0.02 [-0.46, 0.38] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 2.14 | 8 | = 0.783 | 0.26 [0.05, 0.95] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 1.67 | 8 | = 0.827 | 0.57 [-0.26, 0.69] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 0.96 | 8 | = 0.827 | 0.11 [-0.09, 0.78] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 1.02 | 8 | = 0.827 | 0.27 [0.04, 1.01] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.16 | 8 | = 0.983 | 0.06 [-0.39, 0.78] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.50 | 8 | = 0.922 | -0.20 [-0.63, 0.52] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 0.16 | 8 | = 0.983 | 0.07 [-0.28, 0.90] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 1.08 | 8 | = 0.827 | 0.35 [-0.29, 1.03] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.17 | 8 | = 0.983 | -0.06 [-0.39, 0.77] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.20 | 8 | = 0.983 | 0.09 [-0.31, 0.99] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -1.75 | 8 | = 0.827 | -0.25 [-0.88, 0.00] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | 0.00 | 8 | = 1.000 | 0.00 [-0.23, 0.62] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | 1.09 | 8 | = 0.827 | 0.26 [-0.43, 0.51] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | -0.54 | 8 | = 0.922 | -0.12 [-0.47, 0.37] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | 0.07 | 8 | = 0.983 | 0.02 [-0.23, 0.70] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 2.41 | 8 | = 0.783 | 0.26 [0.05, 0.94] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 2.26 | 8 | = 0.783 | 0.56 [-0.11, 0.86] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.63 | 8 | = 0.904 | 0.13 [-0.12, 0.75] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.30 | 8 | = 0.827 | 0.28 [0.10, 1.09] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 0.92 | 8 | = 0.827 | 0.27 [-0.53, 0.40] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | -0.92 | 8 | = 0.827 | -0.12 [-0.80, 0.07] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 0.08 | 8 | = 0.983 | 0.02 [-0.33, 0.59] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | -1.13 | 8 | = 0.827 | -0.39 [-0.54, 0.40] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.93 | 8 | = 0.827 | -0.24 [-0.43, 0.56] | small | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.45 | 8 | = 0.922 | 0.14 [-0.21, 0.71] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 1226.17, BIC = 1284.94
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -0.24, *SE* = 0.494, *z* = -0.482, *p* = 0.629
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -1.02, *SE* = 0.499, *z* = -2.040, *p* = 0.041
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.31, *SE* = 0.495, *z* = -0.634, *p* = 0.526
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -0.86, *SE* = 0.531, *z* = -1.629, *p* = 0.103
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -0.34, *SE* = 0.496, *z* = -0.680, *p* = 0.497
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -2.18, *SE* = 0.588, *z* = -3.707, *p* < .001
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -0.05, *SE* = 0.498, *z* = -0.097, *p* = 0.923
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -1.03, *SE* = 0.495, *z* = -2.091, *p* = 0.037
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -0.49, *SE* = 0.497, *z* = -0.991, *p* = 0.322
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -1.44, *SE* = 0.523, *z* = -2.755, *p* = 0.006
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -1.30, *SE* = 0.495, *z* = -2.632, *p* = 0.008
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -2.62, *SE* = 0.525, *z* = -4.996, *p* < .001
+- **SNR**: *β* = -0.19, *SE* = 0.027, *z* = -7.031, *p* < .001
+
+_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality (no change) - Decrease by 1 (Correct) | 0.24 | 0.49 | 0.48 | 0.629 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | 1.02 | 0.50 | 2.04 | 0.041 | 0.884 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | 0.31 | 0.49 | 0.63 | 0.526 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | 0.86 | 0.53 | 1.63 | 0.103 | 0.990 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | 0.34 | 0.50 | 0.68 | 0.497 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | 2.18 | 0.59 | 3.71 | < .001 | 0.015 | * |
+| Cardinality (no change) - Increase by 1 (Correct) | 0.05 | 0.50 | 0.10 | 0.923 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | 1.03 | 0.49 | 2.09 | 0.037 | 0.861 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | 0.49 | 0.50 | 0.99 | 0.322 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | 1.44 | 0.52 | 2.75 | 0.006 | 0.310 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | 1.30 | 0.50 | 2.63 | 0.008 | 0.411 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | 2.62 | 0.52 | 5.00 | < .001 | < .001 | *** |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 0.78 | 0.50 | 1.56 | 0.118 | 0.993 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.08 | 0.49 | 0.15 | 0.879 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 0.63 | 0.53 | 1.18 | 0.238 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.10 | 0.50 | 0.20 | 0.842 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 1.94 | 0.59 | 3.30 | < .001 | 0.065 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | -0.19 | 0.50 | -0.38 | 0.702 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.80 | 0.49 | 1.61 | 0.108 | 0.991 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.25 | 0.50 | 0.51 | 0.609 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 1.20 | 0.52 | 2.30 | 0.022 | 0.717 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 1.07 | 0.50 | 2.15 | 0.031 | 0.828 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 2.38 | 0.53 | 4.54 | < .001 | < .001 | *** |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -0.70 | 0.50 | -1.40 | 0.162 | 0.998 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -0.15 | 0.52 | -0.29 | 0.768 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -0.68 | 0.51 | -1.35 | 0.178 | 0.999 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 1.16 | 0.58 | 2.00 | 0.046 | 0.901 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -0.97 | 0.51 | -1.90 | 0.057 | 0.929 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.02 | 0.50 | 0.03 | 0.974 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -0.53 | 0.51 | -1.03 | 0.301 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.42 | 0.52 | 0.81 | 0.417 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.29 | 0.50 | 0.57 | 0.571 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.60 | 0.51 | 3.12 | 0.002 | 0.116 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 0.55 | 0.54 | 1.03 | 0.305 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 0.02 | 0.49 | 0.05 | 0.962 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 1.87 | 0.59 | 3.15 | 0.002 | 0.105 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | -0.27 | 0.50 | -0.54 | 0.592 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 0.72 | 0.50 | 1.45 | 0.147 | 0.997 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | 0.18 | 0.49 | 0.36 | 0.718 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 1.13 | 0.53 | 2.14 | 0.032 | 0.830 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | 0.99 | 0.49 | 2.00 | 0.045 | 0.901 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 2.31 | 0.53 | 4.35 | < .001 | 0.001 | ** |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -0.53 | 0.54 | -0.98 | 0.328 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 1.32 | 0.60 | 2.18 | 0.029 | 0.812 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -0.82 | 0.54 | -1.50 | 0.134 | 0.996 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 0.17 | 0.53 | 0.32 | 0.747 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -0.37 | 0.54 | -0.69 | 0.493 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 0.58 | 0.55 | 1.06 | 0.291 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 0.44 | 0.54 | 0.82 | 0.414 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.76 | 0.54 | 3.26 | 0.001 | 0.073 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 1.84 | 0.60 | 3.10 | 0.002 | 0.121 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | -0.29 | 0.49 | -0.58 | 0.559 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 0.70 | 0.50 | 1.40 | 0.161 | 0.998 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.16 | 0.49 | 0.31 | 0.753 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 1.10 | 0.53 | 2.09 | 0.037 | 0.861 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 0.97 | 0.49 | 1.96 | 0.050 | 0.911 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 2.29 | 0.53 | 4.28 | < .001 | 0.001 | ** |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -2.13 | 0.60 | -3.56 | < .001 | 0.026 | * |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | -1.15 | 0.59 | -1.96 | 0.050 | 0.911 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -1.69 | 0.60 | -2.82 | 0.005 | 0.263 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -0.74 | 0.60 | -1.22 | 0.221 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -0.88 | 0.59 | -1.48 | 0.140 | 0.997 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 0.44 | 0.60 | 0.74 | 0.461 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 0.99 | 0.50 | 1.97 | 0.049 | 0.910 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.44 | 0.49 | 0.90 | 0.369 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 1.39 | 0.53 | 2.62 | 0.009 | 0.419 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | 1.26 | 0.49 | 2.54 | 0.011 | 0.490 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 2.57 | 0.54 | 4.77 | < .001 | < .001 | *** |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -0.54 | 0.50 | -1.08 | 0.278 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.41 | 0.52 | 0.78 | 0.435 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 0.27 | 0.50 | 0.54 | 0.588 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.59 | 0.52 | 3.05 | 0.002 | 0.138 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 0.95 | 0.53 | 1.79 | 0.074 | 0.966 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | 0.81 | 0.49 | 1.64 | 0.101 | 0.990 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 2.13 | 0.54 | 3.96 | < .001 | 0.005 | ** |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -0.14 | 0.53 | -0.26 | 0.795 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.18 | 0.54 | 2.18 | 0.029 | 0.812 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 1.32 | 0.53 | 2.47 | 0.013 | 0.549 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 0.71, *p* = 0.735, η²_G = 0.033
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality (no change) vs Decrease by 1 (Correct) | 1.97 | 8 | = 0.867 | 0.30 [-0.23, 0.62] | small | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | 0.86 | 8 | = 0.870 | 0.23 [-0.18, 0.67] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | 0.92 | 8 | = 0.867 | 0.22 [-0.12, 0.75] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | -0.09 | 8 | = 0.999 | -0.03 [-0.42, 0.52] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | 1.71 | 8 | = 0.867 | 0.34 [-0.05, 0.82] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.67 | 8 | = 0.870 | 0.31 [-0.31, 0.87] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | 1.45 | 8 | = 0.867 | 0.31 [-0.12, 0.74] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | 0.17 | 8 | = 0.984 | 0.03 [-0.00, 0.88] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | 2.83 | 8 | = 0.867 | 0.36 [0.17, 1.09] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | 1.99 | 8 | = 0.867 | 0.40 [0.04, 1.04] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | 2.50 | 8 | = 0.867 | 0.44 [0.49, 1.53] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | 2.14 | 8 | = 0.867 | 0.58 [0.14, 1.13] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | -0.58 | 8 | = 0.870 | -0.11 [-0.28, 0.57] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -0.65 | 8 | = 0.870 | -0.10 [-0.26, 0.59] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | -1.09 | 8 | = 0.867 | -0.30 [-0.54, 0.40] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 0.03 | 8 | = 0.999 | 0.00 [-0.20, 0.66] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.26 | 8 | = 0.960 | 0.11 [-0.36, 0.81] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.01 | 8 | = 0.999 | 0.00 [-0.27, 0.58] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -1.02 | 8 | = 0.867 | -0.24 [-0.16, 0.70] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 0.76 | 8 | = 0.870 | 0.09 [0.08, 0.98] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.50 | 8 | = 0.870 | 0.13 [-0.12, 0.84] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 0.66 | 8 | = 0.870 | 0.15 [0.25, 1.19] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 1.34 | 8 | = 0.867 | 0.33 [0.13, 1.13] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -0.00 | 8 | = 0.999 | -0.00 [-0.44, 0.40] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -1.08 | 8 | = 0.867 | -0.23 [-0.67, 0.27] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 0.68 | 8 | = 0.870 | 0.13 [-0.39, 0.46] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.47 | 8 | = 0.870 | 0.18 [-0.27, 0.91] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.49 | 8 | = 0.870 | 0.11 [-0.46, 0.38] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | -0.65 | 8 | = 0.870 | -0.17 [-0.29, 0.56] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 0.96 | 8 | = 0.867 | 0.19 [-0.29, 0.55] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.69 | 8 | = 0.870 | 0.23 [-0.41, 0.53] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 1.01 | 8 | = 0.867 | 0.27 [0.09, 1.00] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.51 | 8 | = 0.867 | 0.44 [-0.02, 0.94] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | -1.23 | 8 | = 0.867 | -0.22 [-0.61, 0.33] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 0.67 | 8 | = 0.870 | 0.12 [-0.36, 0.49] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.45 | 8 | = 0.870 | 0.18 [-0.31, 0.87] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 0.50 | 8 | = 0.870 | 0.10 [-0.45, 0.39] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.75 | 8 | = 0.870 | -0.16 [-0.24, 0.61] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 0.91 | 8 | = 0.867 | 0.18 [-0.26, 0.59] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 0.68 | 8 | = 0.870 | 0.22 [-0.27, 0.68] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 0.96 | 8 | = 0.867 | 0.26 [0.08, 0.98] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 1.27 | 8 | = 0.867 | 0.43 [-0.03, 0.92] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | 1.13 | 8 | = 0.867 | 0.32 [-0.27, 0.68] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.93 | 8 | = 0.867 | 0.31 [-0.40, 0.89] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 0.98 | 8 | = 0.867 | 0.30 [-0.34, 0.60] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.26 | 8 | = 0.960 | 0.06 [-0.28, 0.66] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 1.39 | 8 | = 0.867 | 0.35 [-0.18, 0.77] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 1.01 | 8 | = 0.867 | 0.39 [-0.19, 0.83] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | 1.35 | 8 | = 0.867 | 0.42 [-0.01, 0.98] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | 1.55 | 8 | = 0.867 | 0.56 [-0.09, 0.99] | medium | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.23 | 8 | = 0.960 | 0.11 [-0.43, 0.73] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | -0.02 | 8 | = 0.999 | -0.00 [-0.51, 0.33] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | -1.08 | 8 | = 0.867 | -0.26 [-0.30, 0.55] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 0.44 | 8 | = 0.870 | 0.09 [-0.29, 0.55] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 0.39 | 8 | = 0.901 | 0.13 [-0.28, 0.67] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 0.56 | 8 | = 0.870 | 0.16 [-0.01, 0.87] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 1.17 | 8 | = 0.867 | 0.35 [-0.04, 0.91] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | -0.23 | 8 | = 0.960 | -0.11 [-0.75, 0.42] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.59 | 8 | = 0.870 | -0.27 [-0.75, 0.41] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | -0.10 | 8 | = 0.999 | -0.04 [-0.68, 0.48] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | -0.03 | 8 | = 0.999 | -0.01 [-0.62, 0.65] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.01 | 8 | = 0.999 | -0.00 [-0.61, 0.55] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.38 | 8 | = 0.901 | 0.15 [-0.63, 0.64] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -1.13 | 8 | = 0.867 | -0.24 [-0.22, 0.63] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | 0.49 | 8 | = 0.870 | 0.09 [-0.17, 0.69] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | 0.48 | 8 | = 0.870 | 0.13 [-0.30, 0.64] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | 0.63 | 8 | = 0.870 | 0.15 [0.12, 1.03] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | 1.22 | 8 | = 0.867 | 0.33 [-0.04, 0.91] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 1.67 | 8 | = 0.867 | 0.30 [-0.43, 0.41] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 1.17 | 8 | = 0.867 | 0.34 [-0.37, 0.57] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 1.91 | 8 | = 0.867 | 0.37 [-0.09, 0.78] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.49 | 8 | = 0.867 | 0.52 [-0.16, 0.77] | medium | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 0.17 | 8 | = 0.984 | 0.04 [-0.32, 0.63] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | 0.33 | 8 | = 0.926 | 0.05 [-0.01, 0.87] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 1.05 | 8 | = 0.867 | 0.24 [-0.13, 0.81] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 0.06 | 8 | = 0.999 | 0.01 [-0.28, 0.67] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 0.84 | 8 | = 0.870 | 0.21 [-0.18, 0.84] | small | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.61 | 8 | = 0.870 | 0.20 [-0.33, 0.59] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -860,20 +1038,20 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 1197.76, BIC = 1247.94
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 0.70, *SE* = 2.709, *z* = 0.258, *p* = 0.796
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -4.57, *SE* = 2.881, *z* = -1.587, *p* = 0.112
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -0.22, *SE* = 2.585, *z* = -0.085, *p* = 0.933
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 1.03, *SE* = 2.927, *z* = 0.354, *p* = 0.724
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = -0.01, *SE* = 2.643, *z* = -0.006, *p* = 0.995
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = -3.99, *SE* = 3.401, *z* = -1.173, *p* = 0.241
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -4.16, *SE* = 2.630, *z* = -1.580, *p* = 0.114
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -6.14, *SE* = 3.011, *z* = -2.038, *p* = 0.042
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -1.64, *SE* = 2.780, *z* = -0.591, *p* = 0.555
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -4.53, *SE* = 2.891, *z* = -1.566, *p* = 0.117
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -7.63, *SE* = 2.636, *z* = -2.895, *p* = 0.004
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -7.71, *SE* = 2.984, *z* = -2.585, *p* = 0.010
-- **SNR**: *β* = 0.32, *SE* = 0.234, *z* = 1.353, *p* = 0.176
+- AIC = 2081.99, BIC = 2140.76
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 2.77, *SE* = 2.192, *z* = 1.266, *p* = 0.206
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = -2.68, *SE* = 2.196, *z* = -1.222, *p* = 0.222
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 3.67, *SE* = 2.185, *z* = 1.681, *p* = 0.093
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 3.47, *SE* = 2.354, *z* = 1.474, *p* = 0.141
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 1.61, *SE* = 2.192, *z* = 0.734, *p* = 0.463
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 0.55, *SE* = 2.601, *z* = 0.210, *p* = 0.834
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = -1.97, *SE* = 2.200, *z* = -0.897, *p* = 0.370
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = -4.03, *SE* = 2.240, *z* = -1.801, *p* = 0.072
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -2.70, *SE* = 2.194, *z* = -1.229, *p* = 0.219
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -3.59, *SE* = 2.337, *z* = -1.535, *p* = 0.125
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = -5.28, *SE* = 2.188, *z* = -2.411, *p* = 0.016
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -2.79, *SE* = 2.297, *z* = -1.214, *p* = 0.225
+- **SNR**: *β* = 0.27, *SE* = 0.217, *z* = 1.239, *p* = 0.215
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -886,323 +1064,84 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | -0.70 | 2.71 | -0.26 | 0.796 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | 4.57 | 2.88 | 1.59 | 0.112 | 0.997 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | 0.22 | 2.58 | 0.08 | 0.933 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | -1.04 | 2.93 | -0.35 | 0.724 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Correct) | 0.01 | 2.64 | 0.01 | 0.995 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | 3.99 | 3.40 | 1.17 | 0.241 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Correct) | 4.16 | 2.63 | 1.58 | 0.114 | 0.997 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | 6.14 | 3.01 | 2.04 | 0.042 | 0.928 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | 1.64 | 2.78 | 0.59 | 0.555 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 4.53 | 2.89 | 1.57 | 0.117 | 0.997 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | 7.63 | 2.64 | 2.89 | 0.004 | 0.239 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 7.71 | 2.98 | 2.58 | 0.010 | 0.491 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 5.27 | 2.82 | 1.87 | 0.061 | 0.973 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.92 | 2.52 | 0.37 | 0.715 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.34 | 2.80 | -0.12 | 0.904 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 0.71 | 2.53 | 0.28 | 0.778 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 4.69 | 3.32 | 1.41 | 0.158 | 0.999 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | 4.86 | 2.52 | 1.93 | 0.054 | 0.961 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 6.84 | 2.85 | 2.40 | 0.017 | 0.674 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 2.34 | 2.67 | 0.88 | 0.381 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 5.23 | 2.80 | 1.87 | 0.062 | 0.973 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 8.33 | 2.58 | 3.23 | 0.001 | 0.094 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 8.41 | 2.86 | 2.95 | 0.003 | 0.209 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -4.35 | 2.71 | -1.60 | 0.109 | 0.997 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -5.61 | 2.97 | -1.89 | 0.059 | 0.971 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -4.56 | 2.72 | -1.67 | 0.094 | 0.995 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -0.58 | 3.48 | -0.17 | 0.867 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -0.42 | 2.72 | -0.15 | 0.878 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 1.56 | 3.03 | 0.52 | 0.606 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -2.93 | 2.87 | -1.02 | 0.308 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.05 | 2.98 | -0.02 | 0.987 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 3.06 | 2.76 | 1.11 | 0.268 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 3.14 | 3.02 | 1.04 | 0.298 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -1.25 | 2.66 | -0.47 | 0.637 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -0.20 | 2.41 | -0.08 | 0.933 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 3.77 | 3.19 | 1.18 | 0.237 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | 3.94 | 2.38 | 1.65 | 0.098 | 0.996 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 5.92 | 2.73 | 2.16 | 0.030 | 0.862 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 1.42 | 2.57 | 0.55 | 0.580 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 4.31 | 2.66 | 1.62 | 0.105 | 0.996 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | 7.41 | 2.45 | 3.03 | 0.002 | 0.170 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 7.49 | 2.72 | 2.76 | 0.006 | 0.335 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 1.05 | 2.71 | 0.39 | 0.698 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 5.03 | 3.35 | 1.50 | 0.134 | 0.998 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 5.19 | 2.65 | 1.96 | 0.051 | 0.958 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 7.17 | 2.91 | 2.46 | 0.014 | 0.610 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 2.68 | 2.82 | 0.95 | 0.342 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 5.56 | 2.86 | 1.94 | 0.052 | 0.960 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 8.67 | 2.74 | 3.16 | 0.002 | 0.114 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 8.75 | 2.91 | 3.01 | 0.003 | 0.176 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 3.98 | 3.21 | 1.24 | 0.215 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | 4.14 | 2.40 | 1.73 | 0.084 | 0.992 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 6.12 | 2.74 | 2.23 | 0.026 | 0.816 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 1.63 | 2.61 | 0.62 | 0.533 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 4.51 | 2.72 | 1.66 | 0.097 | 0.996 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 7.62 | 2.50 | 3.05 | 0.002 | 0.162 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 7.70 | 2.74 | 2.81 | 0.005 | 0.300 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 0.17 | 3.17 | 0.05 | 0.958 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 2.14 | 3.45 | 0.62 | 0.534 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -2.35 | 3.33 | -0.70 | 0.481 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 0.53 | 3.37 | 0.16 | 0.874 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 3.64 | 3.26 | 1.12 | 0.264 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 3.72 | 3.42 | 1.09 | 0.277 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 1.98 | 2.71 | 0.73 | 0.465 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | -2.51 | 2.56 | -0.98 | 0.327 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 0.37 | 2.67 | 0.14 | 0.890 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | 3.47 | 2.47 | 1.41 | 0.159 | 0.999 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 3.56 | 2.70 | 1.32 | 0.187 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -4.49 | 2.87 | -1.57 | 0.117 | 0.997 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -1.61 | 2.96 | -0.54 | 0.587 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 1.50 | 2.82 | 0.53 | 0.596 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 1.58 | 2.96 | 0.53 | 0.594 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 2.88 | 2.81 | 1.03 | 0.305 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | 5.99 | 2.63 | 2.28 | 0.023 | 0.782 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 6.07 | 2.88 | 2.11 | 0.035 | 0.895 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 3.11 | 2.72 | 1.14 | 0.254 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 3.19 | 2.94 | 1.08 | 0.278 | 1.000 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 0.08 | 2.80 | 0.03 | 0.977 | 1.000 | n.s. |
-
-_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
-
-_Pairwise test results not available._
-
-#### Amplitude (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 629.55, BIC = 679.72
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 0.30, *SE* = 0.495, *z* = 0.603, *p* = 0.547
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 1.82, *SE* = 0.527, *z* = 3.448, *p* = 0.001
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 0.48, *SE* = 0.472, *z* = 1.028, *p* = 0.304
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 2.04, *SE* = 0.537, *z* = 3.804, *p* < .001
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 0.83, *SE* = 0.484, *z* = 1.709, *p* = 0.087
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 4.67, *SE* = 0.624, *z* = 7.490, *p* < .001
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 0.33, *SE* = 0.481, *z* = 0.678, *p* = 0.498
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.48, *SE* = 0.554, *z* = 0.860, *p* = 0.390
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 0.31, *SE* = 0.509, *z* = 0.600, *p* = 0.548
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 1.03, *SE* = 0.532, *z* = 1.929, *p* = 0.054
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 0.24, *SE* = 0.481, *z* = 0.498, *p* = 0.619
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = 2.85, *SE* = 0.547, *z* = 5.210, *p* < .001
-- **SNR**: *β* = 0.28, *SE* = 0.045, *z* = 6.280, *p* < .001
-
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
-_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | -0.30 | 0.50 | -0.60 | 0.547 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | -1.82 | 0.53 | -3.45 | < .001 | 0.031 | * |
-| Cardinality (no change) - Decrease by 2 (Correct) | -0.49 | 0.47 | -1.03 | 0.304 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | -2.04 | 0.54 | -3.80 | < .001 | 0.008 | ** |
-| Cardinality (no change) - Decrease by 3 (Correct) | -0.83 | 0.48 | -1.71 | 0.087 | 0.969 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | -4.67 | 0.62 | -7.49 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 1 (Correct) | -0.33 | 0.48 | -0.68 | 0.498 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | -0.48 | 0.55 | -0.86 | 0.390 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | -0.31 | 0.51 | -0.60 | 0.548 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | -1.03 | 0.53 | -1.93 | 0.054 | 0.890 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | -0.24 | 0.48 | -0.50 | 0.619 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | -2.85 | 0.55 | -5.21 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -1.52 | 0.52 | -2.95 | 0.003 | 0.145 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -0.19 | 0.46 | -0.41 | 0.685 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -1.75 | 0.51 | -3.40 | < .001 | 0.036 | * |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | -0.53 | 0.46 | -1.14 | 0.255 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | -4.37 | 0.61 | -7.16 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | -0.03 | 0.46 | -0.06 | 0.953 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | -0.18 | 0.52 | -0.34 | 0.734 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | -0.01 | 0.49 | -0.01 | 0.988 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -0.73 | 0.51 | -1.42 | 0.156 | 0.996 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 0.06 | 0.47 | 0.12 | 0.901 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | -2.55 | 0.52 | -4.88 | < .001 | < .001 | *** |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 1.33 | 0.50 | 2.68 | 0.007 | 0.283 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -0.23 | 0.55 | -0.41 | 0.679 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | 0.99 | 0.50 | 1.99 | 0.047 | 0.867 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -2.85 | 0.64 | -4.45 | < .001 | < .001 | *** |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 1.49 | 0.50 | 2.99 | 0.003 | 0.128 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 1.34 | 0.56 | 2.41 | 0.016 | 0.501 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 1.51 | 0.53 | 2.87 | 0.004 | 0.171 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.79 | 0.55 | 1.44 | 0.149 | 0.996 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 1.58 | 0.51 | 3.12 | 0.002 | 0.088 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | -1.03 | 0.55 | -1.87 | 0.062 | 0.917 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -1.56 | 0.49 | -3.20 | 0.001 | 0.069 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -0.34 | 0.44 | -0.77 | 0.439 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | -4.19 | 0.58 | -7.16 | < .001 | < .001 | *** |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | 0.16 | 0.43 | 0.37 | 0.714 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 0.01 | 0.50 | 0.02 | 0.986 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 0.18 | 0.47 | 0.38 | 0.702 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -0.54 | 0.49 | -1.11 | 0.267 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | 0.25 | 0.45 | 0.55 | 0.583 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -2.37 | 0.50 | -4.76 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 1.22 | 0.50 | 2.44 | 0.015 | 0.478 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | -2.63 | 0.62 | -4.26 | < .001 | 0.001 | ** |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 1.72 | 0.49 | 3.53 | < .001 | 0.023 | * |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 1.57 | 0.53 | 2.95 | 0.003 | 0.145 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 1.74 | 0.52 | 3.37 | < .001 | 0.039 | * |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 1.02 | 0.52 | 1.94 | 0.052 | 0.890 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 1.80 | 0.50 | 3.59 | < .001 | 0.019 | * |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.81 | 0.53 | -1.52 | 0.128 | 0.993 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | -3.84 | 0.59 | -6.53 | < .001 | < .001 | *** |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | 0.50 | 0.44 | 1.14 | 0.254 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 0.35 | 0.51 | 0.69 | 0.489 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.52 | 0.48 | 1.09 | 0.276 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | -0.20 | 0.50 | -0.40 | 0.692 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 0.59 | 0.46 | 1.28 | 0.200 | 0.999 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | -2.02 | 0.50 | -4.01 | < .001 | 0.004 | ** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 4.34 | 0.58 | 7.49 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 4.19 | 0.64 | 6.60 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 4.36 | 0.61 | 7.12 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 3.64 | 0.62 | 5.87 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 4.43 | 0.60 | 7.41 | < .001 | < .001 | *** |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 1.82 | 0.63 | 2.89 | 0.004 | 0.164 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -0.15 | 0.50 | -0.30 | 0.762 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.02 | 0.47 | 0.04 | 0.966 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -0.70 | 0.49 | -1.43 | 0.152 | 0.996 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | 0.09 | 0.45 | 0.19 | 0.849 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -2.53 | 0.49 | -5.12 | < .001 | < .001 | *** |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | 0.17 | 0.52 | 0.33 | 0.745 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.55 | 0.54 | -1.01 | 0.310 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 0.24 | 0.52 | 0.46 | 0.647 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -2.38 | 0.54 | -4.40 | < .001 | < .001 | *** |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -0.72 | 0.52 | -1.40 | 0.162 | 0.997 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | 0.07 | 0.48 | 0.14 | 0.891 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | -2.55 | 0.53 | -4.83 | < .001 | < .001 | *** |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.79 | 0.50 | 1.57 | 0.116 | 0.989 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -1.83 | 0.54 | -3.39 | < .001 | 0.037 | * |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -2.61 | 0.51 | -5.09 | < .001 | < .001 | *** |
-
-_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
-_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
-
-
-_ANOVA results not available._
-
-_Pairwise test results not available._
-
-
-### 3.4 P3b Component
-
-#### Latency (Peak)
-
-**Linear Mixed-Effects Model (Primary Analysis):**
-
-- Model converged successfully
-- AIC = 1820.64, BIC = 1872.34
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 11.07, *SE* = 9.989, *z* = 1.109, *p* = 0.268
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 28.74, *SE* = 11.440, *z* = 2.512, *p* = 0.012
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = -4.59, *SE* = 10.006, *z* = -0.459, *p* = 0.646
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = -8.13, *SE* = 11.108, *z* = -0.732, *p* = 0.464
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 4.50, *SE* = 10.219, *z* = 0.441, *p* = 0.660
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 9.49, *SE* = 14.662, *z* = 0.647, *p* = 0.518
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 17.12, *SE* = 10.181, *z* = 1.682, *p* = 0.093
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 1.73, *SE* = 11.776, *z* = 0.147, *p* = 0.883
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 9.40, *SE* = 10.368, *z* = 0.907, *p* = 0.364
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = -0.77, *SE* = 10.882, *z* = -0.071, *p* = 0.943
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 3.98, *SE* = 9.641, *z* = 0.413, *p* = 0.680
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = -1.56, *SE* = 10.657, *z* = -0.147, *p* = 0.883
-- **SNR**: *β* = 0.52, *SE* = 0.554, *z* = 0.934, *p* = 0.350
-
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
-_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
-
-_Note: LMM uses all available subject data via maximum likelihood estimation._
-
-**LMM Pairwise Comparisons:**
-
-All pairwise comparisons between conditions (Holm-Sidak correction):
-
-| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
-|------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | -11.07 | 9.99 | -1.11 | 0.268 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | -28.74 | 11.44 | -2.51 | 0.012 | 0.596 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | 4.60 | 10.01 | 0.46 | 0.646 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | 8.13 | 11.11 | 0.73 | 0.464 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Correct) | -4.50 | 10.22 | -0.44 | 0.660 | 1.000 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | -9.49 | 14.66 | -0.65 | 0.518 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 1 (Correct) | -17.12 | 10.18 | -1.68 | 0.093 | 0.998 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | -1.73 | 11.78 | -0.15 | 0.883 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | -9.40 | 10.37 | -0.91 | 0.364 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | 0.77 | 10.88 | 0.07 | 0.943 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Correct) | -3.98 | 9.64 | -0.41 | 0.680 | 1.000 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | 1.56 | 10.66 | 0.15 | 0.883 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -17.66 | 11.02 | -1.60 | 0.109 | 0.999 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 15.67 | 8.87 | 1.77 | 0.077 | 0.995 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 19.21 | 10.75 | 1.79 | 0.074 | 0.994 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 6.57 | 8.92 | 0.74 | 0.461 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 1.59 | 14.34 | 0.11 | 0.912 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | -6.05 | 9.15 | -0.66 | 0.509 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 9.35 | 11.45 | 0.82 | 0.414 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 1.67 | 9.03 | 0.19 | 0.853 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 11.85 | 10.35 | 1.14 | 0.252 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 7.09 | 8.70 | 0.82 | 0.415 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 12.64 | 10.18 | 1.24 | 0.215 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 33.33 | 11.07 | 3.01 | 0.003 | 0.181 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | 36.87 | 12.06 | 3.06 | 0.002 | 0.160 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | 24.24 | 11.22 | 2.16 | 0.031 | 0.887 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | 19.25 | 15.36 | 1.25 | 0.210 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 11.61 | 11.20 | 1.04 | 0.300 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 27.01 | 12.69 | 2.13 | 0.033 | 0.904 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 19.34 | 11.34 | 1.71 | 0.088 | 0.998 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 29.51 | 11.77 | 2.51 | 0.012 | 0.596 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 24.76 | 10.72 | 2.31 | 0.021 | 0.779 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 30.30 | 11.61 | 2.61 | 0.009 | 0.498 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 3.54 | 10.78 | 0.33 | 0.743 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -9.10 | 8.89 | -1.02 | 0.306 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | -14.08 | 14.35 | -0.98 | 0.326 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | -21.72 | 9.16 | -2.37 | 0.018 | 0.729 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | -6.32 | 11.47 | -0.55 | 0.581 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | -14.00 | 9.06 | -1.55 | 0.122 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -3.82 | 10.35 | -0.37 | 0.712 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | -8.58 | 8.70 | -0.99 | 0.324 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -3.03 | 10.19 | -0.30 | 0.766 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -12.63 | 10.95 | -1.15 | 0.248 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | -17.62 | 15.09 | -1.17 | 0.243 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -25.26 | 10.92 | -2.31 | 0.021 | 0.779 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -9.86 | 12.38 | -0.80 | 0.426 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -17.54 | 11.09 | -1.58 | 0.114 | 0.999 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | -7.36 | 11.55 | -0.64 | 0.524 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | -12.11 | 10.44 | -1.16 | 0.246 | 1.000 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | -6.57 | 11.35 | -0.58 | 0.563 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | -4.99 | 14.47 | -0.34 | 0.730 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | -12.62 | 9.20 | -1.37 | 0.170 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 2.77 | 11.62 | 0.24 | 0.811 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | -4.90 | 9.04 | -0.54 | 0.588 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 5.28 | 10.50 | 0.50 | 0.615 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 0.52 | 8.78 | 0.06 | 0.953 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 6.06 | 10.35 | 0.59 | 0.558 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -7.64 | 14.47 | -0.53 | 0.598 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 7.76 | 15.54 | 0.50 | 0.618 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 0.08 | 14.61 | 0.01 | 0.995 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 10.26 | 14.96 | 0.69 | 0.493 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 5.51 | 14.10 | 0.39 | 0.696 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 11.05 | 14.74 | 0.75 | 0.454 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 15.39 | 11.59 | 1.33 | 0.184 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | 7.72 | 9.32 | 0.83 | 0.408 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 17.90 | 10.59 | 1.69 | 0.091 | 0.998 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | 13.14 | 8.97 | 1.46 | 0.143 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 18.69 | 10.35 | 1.80 | 0.071 | 0.993 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -7.67 | 11.77 | -0.65 | 0.514 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 2.50 | 12.19 | 0.21 | 0.837 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -2.25 | 11.15 | -0.20 | 0.840 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 3.29 | 12.00 | 0.27 | 0.784 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 10.18 | 10.71 | 0.95 | 0.342 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | 5.42 | 8.98 | 0.60 | 0.546 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 10.97 | 10.57 | 1.04 | 0.300 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -4.76 | 10.05 | -0.47 | 0.636 | 1.000 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.79 | 11.04 | 0.07 | 0.943 | 1.000 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 5.54 | 9.82 | 0.56 | 0.572 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Correct) | -2.77 | 2.19 | -1.27 | 0.206 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | 2.68 | 2.20 | 1.22 | 0.222 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | -3.67 | 2.19 | -1.68 | 0.093 | 0.990 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | -3.47 | 2.35 | -1.47 | 0.141 | 0.998 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | -1.61 | 2.19 | -0.73 | 0.463 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | -0.55 | 2.60 | -0.21 | 0.834 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | 1.97 | 2.20 | 0.90 | 0.370 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | 4.03 | 2.24 | 1.80 | 0.072 | 0.974 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | 2.70 | 2.19 | 1.23 | 0.219 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | 3.59 | 2.34 | 1.54 | 0.125 | 0.997 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | 5.28 | 2.19 | 2.41 | 0.016 | 0.599 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | 2.79 | 2.30 | 1.21 | 0.225 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 5.46 | 2.18 | 2.50 | 0.012 | 0.519 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -0.90 | 2.18 | -0.41 | 0.681 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.69 | 2.31 | -0.30 | 0.764 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 1.17 | 2.18 | 0.53 | 0.593 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 2.23 | 2.57 | 0.87 | 0.386 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 4.75 | 2.18 | 2.18 | 0.030 | 0.796 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 6.81 | 2.20 | 3.10 | 0.002 | 0.130 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 5.47 | 2.18 | 2.51 | 0.012 | 0.519 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 6.36 | 2.31 | 2.76 | 0.006 | 0.318 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 8.05 | 2.18 | 3.69 | < .001 | 0.017 | * |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 5.56 | 2.27 | 2.45 | 0.014 | 0.564 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -6.36 | 2.18 | -2.91 | 0.004 | 0.218 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -6.15 | 2.31 | -2.66 | 0.008 | 0.393 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -4.29 | 2.18 | -1.97 | 0.049 | 0.924 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -3.23 | 2.57 | -1.26 | 0.209 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -0.71 | 2.18 | -0.33 | 0.745 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 1.35 | 2.20 | 0.62 | 0.538 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 0.01 | 2.18 | 0.01 | 0.995 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.90 | 2.30 | 0.39 | 0.695 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 2.59 | 2.18 | 1.19 | 0.235 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 0.11 | 2.27 | 0.05 | 0.963 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 0.20 | 2.33 | 0.09 | 0.930 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | 2.06 | 2.18 | 0.95 | 0.344 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 3.13 | 2.58 | 1.21 | 0.226 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | 5.65 | 2.19 | 2.58 | 0.010 | 0.457 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 7.71 | 2.21 | 3.48 | < .001 | 0.036 | * |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | 6.37 | 2.18 | 2.92 | 0.004 | 0.216 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 7.26 | 2.31 | 3.14 | 0.002 | 0.116 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | 8.95 | 2.18 | 4.10 | < .001 | 0.003 | ** |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | 6.46 | 2.28 | 2.84 | 0.005 | 0.263 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 1.86 | 2.31 | 0.80 | 0.422 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 2.92 | 2.66 | 1.10 | 0.272 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 5.44 | 2.31 | 2.36 | 0.018 | 0.645 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 7.50 | 2.30 | 3.27 | 0.001 | 0.077 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 6.17 | 2.31 | 2.67 | 0.008 | 0.393 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 7.06 | 2.40 | 2.94 | 0.003 | 0.205 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 8.75 | 2.32 | 3.77 | < .001 | 0.013 | * |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 6.26 | 2.38 | 2.63 | 0.009 | 0.417 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 1.06 | 2.57 | 0.41 | 0.679 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | 3.58 | 2.18 | 1.64 | 0.101 | 0.992 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 5.64 | 2.20 | 2.57 | 0.010 | 0.468 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 4.31 | 2.18 | 1.97 | 0.048 | 0.924 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 5.20 | 2.31 | 2.25 | 0.024 | 0.735 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 6.89 | 2.18 | 3.16 | 0.002 | 0.110 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 4.40 | 2.27 | 1.94 | 0.053 | 0.933 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 2.52 | 2.57 | 0.98 | 0.327 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 4.58 | 2.57 | 1.78 | 0.074 | 0.975 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 3.24 | 2.57 | 1.26 | 0.207 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 4.13 | 2.66 | 1.55 | 0.120 | 0.997 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 5.82 | 2.58 | 2.26 | 0.024 | 0.735 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 3.34 | 2.64 | 1.26 | 0.206 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 2.06 | 2.19 | 0.94 | 0.347 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.72 | 2.18 | 0.33 | 0.740 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 1.61 | 2.30 | 0.70 | 0.483 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | 3.30 | 2.18 | 1.51 | 0.130 | 0.998 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 0.82 | 2.27 | 0.36 | 0.719 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -1.34 | 2.20 | -0.61 | 0.543 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.45 | 2.30 | -0.19 | 0.846 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 1.24 | 2.21 | 0.56 | 0.573 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -1.24 | 2.27 | -0.55 | 0.583 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 0.89 | 2.30 | 0.39 | 0.699 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | 2.58 | 2.18 | 1.18 | 0.237 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 0.09 | 2.27 | 0.04 | 0.967 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 1.69 | 2.31 | 0.73 | 0.465 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.80 | 2.37 | -0.34 | 0.736 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -2.49 | 2.27 | -1.09 | 0.274 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -1210,7 +1149,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.55, *p* = 0.857, η²_G = 0.163
+- *F* = 1.29, *p* = 0.240, η²_G = 0.080
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -1219,84 +1158,84 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 (Correct) | 0.33 | 2 | = 0.993 | 0.22 [-1.08, 0.14] | small | n.s. |
-| Cardinality (no change) vs Decrease by 1 (Incorrect) | -3.05 | 2 | = 0.993 | -3.08 [-2.16, -0.04] | large | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Correct) | 0.00 | 2 | = 1.000 | 0.00 [-0.49, 0.67] | negligible | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Incorrect) | -0.65 | 2 | = 0.993 | -0.35 [-0.49, 1.08] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Correct) | -0.41 | 2 | = 0.993 | -0.23 [-0.71, 0.50] | small | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Incorrect) | -0.12 | 2 | = 0.993 | -0.07 [-2.55, 2.42] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 (Correct) | 0.11 | 2 | = 0.993 | 0.09 [-1.04, 0.22] | negligible | n.s. |
-| Cardinality (no change) vs Increase by 1 (Incorrect) | -0.27 | 2 | = 0.993 | -0.30 [-0.73, 0.94] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 (Correct) | -0.46 | 2 | = 0.993 | -0.34 [-0.86, 0.31] | small | n.s. |
-| Cardinality (no change) vs Increase by 2 (Incorrect) | 0.81 | 2 | = 0.993 | 0.41 [-0.36, 1.25] | small | n.s. |
-| Cardinality (no change) vs Increase by 3 (Correct) | -1.61 | 2 | = 0.993 | -0.95 [-0.76, 0.40] | large | n.s. |
-| Cardinality (no change) vs Increase by 3 (Incorrect) | -1.06 | 2 | = 0.993 | -1.11 [-0.76, 0.78] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | -3.28 | 2 | = 0.993 | -2.18 [-1.62, 0.02] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -0.65 | 2 | = 0.993 | -0.16 [0.15, 1.26] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | -0.50 | 2 | = 0.993 | -0.45 [-0.27, 1.14] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -1.26 | 2 | = 0.993 | -0.35 [-0.22, 0.84] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | -0.27 | 2 | = 0.993 | -0.16 [-1.48, 1.72] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.00 | 2 | = 1.000 | 0.00 [-0.64, 0.43] | negligible | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.40 | 2 | = 0.993 | -0.42 [-0.53, 1.03] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Correct) | -1.64 | 2 | = 0.993 | -0.44 [-0.51, 0.48] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.49 | 2 | = 0.993 | 0.23 [-0.34, 0.96] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -3.78 | 2 | = 0.993 | -0.98 [-0.33, 0.64] | large | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | -1.58 | 2 | = 0.993 | -1.07 [-0.21, 1.13] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 2.22 | 2 | = 0.993 | 1.74 [0.20, 2.23] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | 1.15 | 2 | = 0.993 | 1.15 [-0.51, 1.43] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 1.61 | 2 | = 0.993 | 1.26 [-0.47, 1.11] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.95 | 2 | = 0.993 | 0.82 [-2.12, 3.21] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 1.29 | 2 | = 0.993 | 0.90 [-0.28, 1.36] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 2.29 | 2 | = 0.993 | 1.68 [-0.46, 1.90] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 1.31 | 2 | = 0.993 | 0.91 [-0.17, 1.39] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 2.08 | 2 | = 0.993 | 1.78 [0.12, 2.06] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 0.60 | 2 | = 0.993 | 0.47 [-0.31, 1.19] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.64 | 2 | = 0.993 | 0.80 [-0.09, 1.90] | large | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | -0.39 | 2 | = 0.993 | -0.29 [-0.62, 0.72] | small | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -2.00 | 2 | = 0.993 | -0.19 [-0.77, 0.25] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | -0.14 | 2 | = 0.993 | -0.06 [-1.56, 1.63] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 0.12 | 2 | = 0.993 | 0.09 [-1.14, 0.01] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.20 | 2 | = 0.993 | -0.22 [-0.76, 0.78] | small | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Correct) | -0.82 | 2 | = 0.993 | -0.30 [-0.92, 0.15] | small | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 1.44 | 2 | = 0.993 | 0.35 [-0.65, 0.62] | small | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -6.43 | 2 | = 0.912 | -0.79 [-0.67, 0.30] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -0.97 | 2 | = 0.993 | -0.84 [-0.56, 0.71] | large | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | 0.12 | 2 | = 0.993 | 0.09 [-1.17, 0.24] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.23 | 2 | = 0.993 | 0.12 [-1.81, 1.40] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 0.24 | 2 | = 0.993 | 0.26 [-1.14, 0.35] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.10 | 2 | = 0.993 | 0.10 [-1.19, 0.69] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -0.04 | 2 | = 1.000 | -0.04 [-1.03, 0.35] | negligible | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 1.01 | 2 | = 0.993 | 0.58 [-0.54, 1.17] | medium | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -0.62 | 2 | = 0.993 | -0.48 [-1.08, 0.31] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.40 | 2 | = 0.993 | -0.46 [-1.53, 0.29] | small | n.s. |
-| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.15 | 2 | = 0.993 | 0.06 [-1.63, 1.55] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 0.28 | 2 | = 0.993 | 0.20 [-0.95, 0.15] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 0.00 | 2 | = 1.000 | 0.00 [-0.69, 0.85] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Correct) | -0.38 | 2 | = 0.993 | -0.12 [-0.68, 0.39] | negligible | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 2.31 | 2 | = 0.993 | 0.50 [-0.31, 1.00] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Correct) | -13.00 | 2 | = 0.457 | -0.56 [-0.30, 0.67] | medium | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -0.65 | 2 | = 0.993 | -0.55 [-0.44, 0.85] | medium | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.13 | 2 | = 0.993 | 0.12 [-1.49, 1.71] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.06 | 2 | = 1.000 | -0.07 [-1.61, 1.57] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | -0.25 | 2 | = 0.993 | -0.15 [-1.88, 1.36] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 1.17 | 2 | = 0.993 | 0.30 [-2.08, 3.43] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -1.09 | 2 | = 0.993 | -0.46 [-2.24, 1.16] | small | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | -0.45 | 2 | = 0.993 | -0.43 [-1.85, 1.38] | small | n.s. |
-| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -0.28 | 2 | = 0.993 | -0.21 [-0.64, 0.90] | small | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Correct) | -0.55 | 2 | = 0.993 | -0.27 [-0.40, 0.67] | small | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | 0.16 | 2 | = 0.993 | 0.14 [-0.35, 1.13] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Correct) | -0.81 | 2 | = 0.993 | -0.57 [-0.13, 0.94] | medium | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -1.09 | 2 | = 0.993 | -0.54 [-0.24, 1.08] | medium | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | -0.13 | 2 | = 0.993 | -0.13 [-0.94, 0.61] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.49 | 2 | = 0.993 | 0.56 [-0.79, 1.07] | medium | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | -0.58 | 2 | = 0.993 | -0.64 [-1.00, 0.56] | medium | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -1.15 | 2 | = 0.993 | -0.67 [-1.19, 0.69] | medium | n.s. |
-| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 1.15 | 2 | = 0.993 | 0.57 [-0.39, 0.99] | medium | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Correct) | -1.43 | 2 | = 0.993 | -0.39 [-0.26, 0.75] | small | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -0.55 | 2 | = 0.993 | -0.36 [-0.41, 0.96] | small | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | -4.11 | 2 | = 0.993 | -1.02 [-0.84, 0.45] | large | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -1.11 | 2 | = 0.993 | -1.07 [-0.90, 0.65] | large | n.s. |
-| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.12 | 2 | = 0.993 | 0.10 [-0.46, 0.75] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Correct) | -1.21 | 8 | = 0.703 | -0.25 [-0.79, 0.08] | small | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | 0.13 | 8 | = 0.973 | 0.04 [-0.08, 0.79] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -1.98 | 8 | = 0.608 | -0.49 [-0.85, 0.03] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | -1.05 | 8 | = 0.703 | -0.29 [-0.73, 0.22] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | -0.70 | 8 | = 0.792 | -0.25 [-0.55, 0.30] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | -1.11 | 8 | = 0.703 | -0.30 [-0.77, 0.39] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | 0.00 | 8 | = 1.000 | 0.00 [-0.22, 0.64] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | 0.13 | 8 | = 0.973 | 0.04 [0.00, 0.89] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | 1.17 | 8 | = 0.703 | 0.21 [0.01, 0.90] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | -0.31 | 8 | = 0.931 | -0.13 [-0.11, 0.85] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | 1.41 | 8 | = 0.703 | 0.25 [0.13, 1.04] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | 1.14 | 8 | = 0.703 | 0.52 [-0.18, 0.75] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 0.80 | 8 | = 0.755 | 0.31 [0.06, 0.95] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -0.83 | 8 | = 0.755 | -0.24 [-0.53, 0.31] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | -0.22 | 8 | = 0.973 | -0.04 [-0.47, 0.47] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 0.00 | 8 | = 1.000 | 0.00 [-0.32, 0.53] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | -0.14 | 8 | = 0.973 | -0.05 [-0.50, 0.66] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 1.07 | 8 | = 0.703 | 0.27 [0.00, 0.89] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | 1.02 | 8 | = 0.708 | 0.29 [0.23, 1.18] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 1.54 | 8 | = 0.703 | 0.49 [0.10, 1.00] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.29 | 8 | = 0.931 | 0.15 [0.06, 1.07] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 2.07 | 8 | = 0.608 | 0.54 [0.25, 1.19] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 2.09 | 8 | = 0.608 | 0.83 [0.03, 1.00] | large | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -1.39 | 8 | = 0.703 | -0.59 [-1.10, -0.17] | medium | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -1.06 | 8 | = 0.703 | -0.36 [-0.90, 0.07] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -0.77 | 8 | = 0.763 | -0.32 [-0.79, 0.08] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | -1.08 | 8 | = 0.703 | -0.38 [-0.91, 0.28] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | -0.16 | 8 | = 0.973 | -0.04 [-0.48, 0.36] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 0.00 | 8 | = 1.000 | 0.00 [-0.29, 0.55] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 0.51 | 8 | = 0.852 | 0.18 [-0.42, 0.42] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.46 | 8 | = 0.852 | -0.20 [-0.31, 0.63] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 0.81 | 8 | = 0.755 | 0.23 [-0.17, 0.69] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 1.26 | 8 | = 0.703 | 0.52 [-0.46, 0.46] | medium | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.49 | 8 | = 0.852 | 0.20 [-0.37, 0.57] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 0.96 | 8 | = 0.752 | 0.25 [-0.20, 0.65] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.47 | 8 | = 0.852 | 0.21 [-0.23, 0.96] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 1.37 | 8 | = 0.703 | 0.53 [0.03, 0.92] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | 1.84 | 8 | = 0.608 | 0.53 [0.29, 1.25] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 2.69 | 8 | = 0.608 | 0.78 [0.24, 1.19] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 0.87 | 8 | = 0.755 | 0.43 [0.16, 1.20] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 2.98 | 8 | = 0.608 | 0.83 [0.37, 1.36] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | 2.21 | 8 | = 0.608 | 1.17 [-0.03, 0.93] | large | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | 0.10 | 8 | = 0.973 | 0.05 [-0.31, 0.63] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.00 | 8 | = 1.000 | 0.00 [-0.26, 1.07] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 1.31 | 8 | = 0.703 | 0.31 [-0.00, 0.99] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.88 | 8 | = 0.755 | 0.33 [0.07, 1.09] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 1.63 | 8 | = 0.688 | 0.54 [0.10, 1.12] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 0.43 | 8 | = 0.871 | 0.20 [-0.04, 1.01] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | 1.80 | 8 | = 0.608 | 0.59 [0.28, 1.36] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | 2.42 | 8 | = 0.608 | 0.89 [0.01, 1.12] | large | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | -0.11 | 8 | = 0.973 | -0.05 [-0.48, 0.68] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 0.83 | 8 | = 0.755 | 0.27 [-0.09, 0.78] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 0.76 | 8 | = 0.763 | 0.29 [0.08, 0.98] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 1.23 | 8 | = 0.703 | 0.50 [-0.02, 0.87] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 0.30 | 8 | = 0.931 | 0.15 [-0.15, 0.81] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 1.94 | 8 | = 0.608 | 0.55 [0.22, 1.17] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 1.81 | 8 | = 0.608 | 0.85 [-0.11, 0.83] | large | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 1.05 | 8 | = 0.703 | 0.33 [-0.45, 0.71] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | 0.86 | 8 | = 0.755 | 0.34 [-0.29, 0.89] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 2.22 | 8 | = 0.608 | 0.56 [-0.22, 0.97] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 0.63 | 8 | = 0.824 | 0.21 [-0.30, 1.01] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | 2.23 | 8 | = 0.608 | 0.61 [-0.18, 1.03] | medium | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 2.38 | 8 | = 0.608 | 0.93 [-0.05, 1.35] | large | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | 0.10 | 8 | = 0.973 | 0.04 [-0.22, 0.63] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | 0.57 | 8 | = 0.843 | 0.22 [-0.36, 0.49] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -0.31 | 8 | = 0.931 | -0.15 [-0.37, 0.57] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | 1.21 | 8 | = 0.703 | 0.27 [0.04, 0.93] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | 1.75 | 8 | = 0.619 | 0.56 [-0.41, 0.50] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 0.55 | 8 | = 0.843 | 0.16 [-0.59, 0.26] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.48 | 8 | = 0.852 | -0.18 [-0.45, 0.49] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.69 | 8 | = 0.792 | 0.21 [-0.34, 0.50] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.84 | 8 | = 0.755 | 0.47 [-0.47, 0.44] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -1.18 | 8 | = 0.703 | -0.39 [-0.38, 0.55] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | 0.18 | 8 | = 0.973 | 0.04 [-0.12, 0.75] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 0.61 | 8 | = 0.824 | 0.33 [-0.47, 0.44] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 1.15 | 8 | = 0.703 | 0.44 [-0.29, 0.66] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 1.35 | 8 | = 0.703 | 0.76 [-0.47, 0.53] | medium | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.62 | 8 | = 0.824 | 0.28 [-0.67, 0.25] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -1306,20 +1245,20 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 814.96, BIC = 866.65
-- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 1.56, *SE* = 0.653, *z* = 2.385, *p* = 0.017
-- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 2.13, *SE* = 0.743, *z* = 2.864, *p* = 0.004
-- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 1.37, *SE* = 0.653, *z* = 2.098, *p* = 0.036
-- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 5.26, *SE* = 0.720, *z* = 7.312, *p* < .001
-- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 1.62, *SE* = 0.672, *z* = 2.413, *p* = 0.016
-- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 3.44, *SE* = 0.973, *z* = 3.533, *p* < .001
-- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 1.00, *SE* = 0.665, *z* = 1.510, *p* = 0.131
-- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 1.50, *SE* = 0.764, *z* = 1.959, *p* = 0.050
-- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 1.19, *SE* = 0.680, *z* = 1.752, *p* = 0.080
-- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 3.49, *SE* = 0.706, *z* = 4.936, *p* < .001
-- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 1.44, *SE* = 0.630, *z* = 2.290, *p* = 0.022
-- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = 3.33, *SE* = 0.692, *z* = 4.802, *p* < .001
-- **SNR**: *β* = 0.29, *SE* = 0.039, *z* = 7.628, *p* < .001
+- AIC = 1289.04, BIC = 1347.81
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = -0.12, *SE* = 0.562, *z* = -0.217, *p* = 0.828
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.34, *SE* = 0.563, *z* = 0.605, *p* = 0.545
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 0.30, *SE* = 0.560, *z* = 0.536, *p* = 0.592
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 0.67, *SE* = 0.605, *z* = 1.109, *p* = 0.267
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 0.73, *SE* = 0.562, *z* = 1.291, *p* = 0.197
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 1.13, *SE* = 0.668, *z* = 1.697, *p* = 0.090
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 0.13, *SE* = 0.564, *z* = 0.230, *p* = 0.818
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.05, *SE* = 0.575, *z* = 0.090, *p* = 0.928
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = -0.11, *SE* = 0.563, *z* = -0.189, *p* = 0.850
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 0.31, *SE* = 0.599, *z* = 0.510, *p* = 0.610
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 0.17, *SE* = 0.561, *z* = 0.305, *p* = 0.760
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = 0.41, *SE* = 0.589, *z* = 0.701, *p* = 0.483
+- **SNR**: *β* = 0.06, *SE* = 0.057, *z* = 1.088, *p* = 0.277
 
 _Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -1332,84 +1271,84 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decrease by 1 (Correct) | -1.56 | 0.65 | -2.38 | 0.017 | 0.570 | n.s. |
-| Cardinality (no change) - Decrease by 1 (Incorrect) | -2.13 | 0.74 | -2.86 | 0.004 | 0.213 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Correct) | -1.37 | 0.65 | -2.10 | 0.036 | 0.784 | n.s. |
-| Cardinality (no change) - Decrease by 2 (Incorrect) | -5.26 | 0.72 | -7.31 | < .001 | < .001 | *** |
-| Cardinality (no change) - Decrease by 3 (Correct) | -1.62 | 0.67 | -2.41 | 0.016 | 0.549 | n.s. |
-| Cardinality (no change) - Decrease by 3 (Incorrect) | -3.44 | 0.97 | -3.53 | < .001 | 0.027 | * |
-| Cardinality (no change) - Increase by 1 (Correct) | -1.00 | 0.66 | -1.51 | 0.131 | 0.989 | n.s. |
-| Cardinality (no change) - Increase by 1 (Incorrect) | -1.50 | 0.76 | -1.96 | 0.050 | 0.872 | n.s. |
-| Cardinality (no change) - Increase by 2 (Correct) | -1.19 | 0.68 | -1.75 | 0.080 | 0.945 | n.s. |
-| Cardinality (no change) - Increase by 2 (Incorrect) | -3.49 | 0.71 | -4.94 | < .001 | < .001 | *** |
-| Cardinality (no change) - Increase by 3 (Correct) | -1.44 | 0.63 | -2.29 | 0.022 | 0.633 | n.s. |
-| Cardinality (no change) - Increase by 3 (Incorrect) | -3.33 | 0.69 | -4.80 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -0.57 | 0.72 | -0.80 | 0.424 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.19 | 0.57 | 0.32 | 0.746 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -3.70 | 0.70 | -5.29 | < .001 | < .001 | *** |
-| Decrease by 1 (Correct) - Decrease by 3 (Correct) | -0.06 | 0.58 | -0.11 | 0.911 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | -1.88 | 0.95 | -1.98 | 0.048 | 0.867 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Correct) | 0.55 | 0.59 | 0.93 | 0.350 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 0.06 | 0.74 | 0.08 | 0.935 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.36 | 0.58 | 0.62 | 0.532 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -1.93 | 0.67 | -2.87 | 0.004 | 0.213 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Correct) | 0.11 | 0.56 | 0.20 | 0.840 | 1.000 | n.s. |
-| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | -1.77 | 0.66 | -2.67 | 0.008 | 0.346 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 0.76 | 0.72 | 1.05 | 0.292 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -3.13 | 0.78 | -4.00 | < .001 | 0.004 | ** |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | 0.51 | 0.73 | 0.69 | 0.487 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -1.31 | 1.02 | -1.29 | 0.197 | 0.999 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 1.13 | 0.73 | 1.55 | 0.122 | 0.986 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.63 | 0.82 | 0.77 | 0.442 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 0.94 | 0.74 | 1.27 | 0.204 | 0.999 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | -1.36 | 0.76 | -1.78 | 0.075 | 0.939 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.69 | 0.70 | 0.98 | 0.325 | 1.000 | n.s. |
-| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | -1.20 | 0.75 | -1.59 | 0.112 | 0.982 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -3.89 | 0.70 | -5.55 | < .001 | < .001 | *** |
-| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -0.25 | 0.58 | -0.43 | 0.664 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | -2.07 | 0.95 | -2.17 | 0.030 | 0.736 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Correct) | 0.37 | 0.59 | 0.62 | 0.535 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | -0.13 | 0.75 | -0.17 | 0.867 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Correct) | 0.18 | 0.59 | 0.31 | 0.760 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -2.12 | 0.67 | -3.14 | 0.002 | 0.100 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Correct) | -0.07 | 0.56 | -0.13 | 0.898 | 1.000 | n.s. |
-| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -1.95 | 0.66 | -2.95 | 0.003 | 0.176 | n.s. |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 3.64 | 0.72 | 5.09 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 1.82 | 1.00 | 1.83 | 0.068 | 0.925 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 4.26 | 0.71 | 5.98 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 3.77 | 0.80 | 4.69 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 4.07 | 0.73 | 5.60 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 1.77 | 0.75 | 2.38 | 0.018 | 0.572 | n.s. |
-| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 3.82 | 0.68 | 5.61 | < .001 | < .001 | *** |
-| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 1.94 | 0.73 | 2.63 | 0.008 | 0.367 | n.s. |
-| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | -1.82 | 0.96 | -1.89 | 0.059 | 0.902 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Correct) | 0.62 | 0.60 | 1.04 | 0.300 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 0.13 | 0.76 | 0.17 | 0.869 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.43 | 0.59 | 0.73 | 0.464 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | -1.87 | 0.69 | -2.72 | 0.007 | 0.307 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Correct) | 0.18 | 0.57 | 0.31 | 0.754 | 1.000 | n.s. |
-| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | -1.70 | 0.68 | -2.52 | 0.012 | 0.458 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 2.44 | 0.96 | 2.54 | 0.011 | 0.447 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 1.94 | 1.02 | 1.90 | 0.058 | 0.902 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 2.25 | 0.97 | 2.32 | 0.021 | 0.615 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -0.05 | 0.99 | -0.05 | 0.962 | 1.000 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 2.00 | 0.94 | 2.13 | 0.033 | 0.766 | n.s. |
-| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 0.11 | 0.98 | 0.12 | 0.907 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 1 (Incorrect) | -0.49 | 0.75 | -0.65 | 0.513 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.19 | 0.60 | -0.31 | 0.755 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -2.48 | 0.69 | -3.61 | < .001 | 0.020 | * |
-| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.44 | 0.58 | -0.76 | 0.449 | 1.000 | n.s. |
-| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -2.32 | 0.67 | -3.45 | < .001 | 0.036 | * |
-| Increase by 1 (Incorrect) - Increase by 2 (Correct) | 0.30 | 0.77 | 0.40 | 0.692 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -1.99 | 0.79 | -2.52 | 0.012 | 0.458 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Correct) | 0.05 | 0.73 | 0.07 | 0.942 | 1.000 | n.s. |
-| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -1.83 | 0.78 | -2.35 | 0.019 | 0.588 | n.s. |
-| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -2.29 | 0.70 | -3.28 | 0.001 | 0.064 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Correct) | -0.25 | 0.58 | -0.43 | 0.666 | 1.000 | n.s. |
-| Increase by 2 (Correct) - Increase by 3 (Incorrect) | -2.13 | 0.69 | -3.08 | 0.002 | 0.117 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 2.04 | 0.65 | 3.12 | 0.002 | 0.105 | n.s. |
-| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.16 | 0.72 | 0.23 | 0.822 | 1.000 | n.s. |
-| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -1.88 | 0.64 | -2.94 | 0.003 | 0.176 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Correct) | 0.12 | 0.56 | 0.22 | 0.828 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | -0.34 | 0.56 | -0.60 | 0.545 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | -0.30 | 0.56 | -0.54 | 0.592 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | -0.67 | 0.60 | -1.11 | 0.267 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | -0.73 | 0.56 | -1.29 | 0.197 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | -1.13 | 0.67 | -1.70 | 0.090 | 0.999 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | -0.13 | 0.56 | -0.23 | 0.818 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | -0.05 | 0.57 | -0.09 | 0.928 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | 0.11 | 0.56 | 0.19 | 0.850 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | -0.31 | 0.60 | -0.51 | 0.610 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | -0.17 | 0.56 | -0.31 | 0.760 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | -0.41 | 0.59 | -0.70 | 0.483 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | -0.46 | 0.56 | -0.83 | 0.408 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | -0.42 | 0.56 | -0.75 | 0.451 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.79 | 0.59 | -1.33 | 0.182 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | -0.85 | 0.56 | -1.52 | 0.129 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | -1.25 | 0.66 | -1.90 | 0.057 | 0.990 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | -0.25 | 0.56 | -0.45 | 0.653 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | -0.17 | 0.56 | -0.31 | 0.758 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | -0.02 | 0.56 | -0.03 | 0.978 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -0.43 | 0.59 | -0.72 | 0.469 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | -0.29 | 0.56 | -0.52 | 0.600 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | -0.54 | 0.58 | -0.92 | 0.358 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 0.04 | 0.56 | 0.07 | 0.942 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -0.33 | 0.59 | -0.56 | 0.578 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -0.39 | 0.56 | -0.69 | 0.491 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -0.79 | 0.66 | -1.20 | 0.230 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | 0.21 | 0.56 | 0.38 | 0.706 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.29 | 0.56 | 0.51 | 0.608 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | 0.45 | 0.56 | 0.80 | 0.424 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 0.03 | 0.59 | 0.06 | 0.953 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 0.17 | 0.56 | 0.30 | 0.762 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | -0.07 | 0.58 | -0.13 | 0.900 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -0.37 | 0.60 | -0.62 | 0.535 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -0.43 | 0.56 | -0.76 | 0.447 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | -0.83 | 0.66 | -1.26 | 0.209 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | 0.17 | 0.56 | 0.30 | 0.761 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 0.25 | 0.57 | 0.44 | 0.662 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | 0.41 | 0.56 | 0.73 | 0.468 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -0.01 | 0.59 | -0.01 | 0.992 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | 0.13 | 0.56 | 0.23 | 0.818 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -0.11 | 0.58 | -0.19 | 0.846 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -0.06 | 0.59 | -0.09 | 0.926 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | -0.46 | 0.68 | -0.68 | 0.499 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 0.54 | 0.59 | 0.91 | 0.361 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 0.62 | 0.59 | 1.05 | 0.293 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 0.78 | 0.59 | 1.31 | 0.190 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 0.36 | 0.62 | 0.59 | 0.554 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 0.50 | 0.60 | 0.84 | 0.402 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.26 | 0.61 | 0.42 | 0.673 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | -0.41 | 0.66 | -0.62 | 0.538 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | 0.60 | 0.56 | 1.07 | 0.287 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 0.67 | 0.56 | 1.19 | 0.232 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.83 | 0.56 | 1.49 | 0.137 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 0.42 | 0.59 | 0.71 | 0.477 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 0.55 | 0.56 | 0.99 | 0.321 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 0.31 | 0.58 | 0.54 | 0.591 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 1.00 | 0.66 | 1.52 | 0.128 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 1.08 | 0.66 | 1.64 | 0.101 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | 1.24 | 0.66 | 1.88 | 0.060 | 0.992 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 0.83 | 0.68 | 1.21 | 0.226 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 0.96 | 0.66 | 1.45 | 0.146 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 0.72 | 0.68 | 1.06 | 0.287 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 0.08 | 0.56 | 0.14 | 0.890 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | 0.24 | 0.56 | 0.42 | 0.673 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -0.18 | 0.59 | -0.30 | 0.766 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | -0.04 | 0.56 | -0.07 | 0.941 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -0.28 | 0.58 | -0.49 | 0.625 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | 0.16 | 0.56 | 0.28 | 0.779 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -0.25 | 0.59 | -0.43 | 0.666 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -0.12 | 0.57 | -0.21 | 0.833 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -0.36 | 0.58 | -0.62 | 0.534 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -0.41 | 0.59 | -0.70 | 0.485 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | -0.28 | 0.56 | -0.50 | 0.620 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | -0.52 | 0.58 | -0.89 | 0.371 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.13 | 0.59 | 0.23 | 0.820 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.11 | 0.61 | -0.18 | 0.859 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -0.24 | 0.58 | -0.42 | 0.678 | 1.000 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -1417,7 +1356,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.34, *p* = 0.263, η²_G = 0.288
+- *F* = 0.47, *p* = 0.925, η²_G = 0.040
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -1426,84 +1365,501 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decrease by 1 (Correct) | -1.17 | 2 | = 0.746 | -0.93 [-1.78, -0.34] | large | n.s. |
-| Cardinality (no change) vs Decrease by 1 (Incorrect) | -1.77 | 2 | = 0.746 | -1.60 [-1.71, 0.19] | large | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Correct) | -1.81 | 2 | = 0.746 | -1.51 [-1.98, -0.45] | large | n.s. |
-| Cardinality (no change) vs Decrease by 2 (Incorrect) | -2.17 | 2 | = 0.746 | -1.17 [-1.72, 0.06] | large | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Correct) | -3.01 | 2 | = 0.746 | -0.69 [-1.92, -0.36] | medium | n.s. |
-| Cardinality (no change) vs Decrease by 3 (Incorrect) | -2.30 | 2 | = 0.746 | -1.23 [-4.74, 2.08] | large | n.s. |
-| Cardinality (no change) vs Increase by 1 (Correct) | -0.32 | 2 | = 0.877 | -0.28 [-1.48, -0.10] | small | n.s. |
-| Cardinality (no change) vs Increase by 1 (Incorrect) | -1.22 | 2 | = 0.746 | -0.81 [-1.48, 0.33] | large | n.s. |
-| Cardinality (no change) vs Increase by 2 (Correct) | -1.54 | 2 | = 0.746 | -1.22 [-1.78, -0.34] | large | n.s. |
-| Cardinality (no change) vs Increase by 2 (Incorrect) | -4.01 | 2 | = 0.746 | -1.42 [-2.53, -0.34] | large | n.s. |
-| Cardinality (no change) vs Increase by 3 (Correct) | -2.42 | 2 | = 0.746 | -1.10 [-1.65, -0.26] | large | n.s. |
-| Cardinality (no change) vs Increase by 3 (Incorrect) | -2.71 | 2 | = 0.746 | -1.12 [-2.19, -0.18] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | -1.15 | 2 | = 0.746 | -1.26 [-0.48, 0.97] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -1.11 | 2 | = 0.746 | -1.28 [-0.32, 0.68] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | -1.10 | 2 | = 0.746 | -0.91 [-1.12, 0.28] | large | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | 0.25 | 2 | = 0.892 | 0.20 [-0.87, 0.19] | small | n.s. |
-| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | -0.98 | 2 | = 0.746 | -0.88 [-1.99, 1.29] | large | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.88 | 2 | = 0.746 | 0.99 [0.24, 1.49] | large | n.s. |
-| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.29 | 2 | = 0.877 | -0.28 [-0.38, 1.22] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Correct) | -0.61 | 2 | = 0.760 | -0.66 [-0.61, 0.39] | medium | n.s. |
-| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | -1.43 | 2 | = 0.746 | -1.05 [-0.86, 0.43] | large | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -0.47 | 2 | = 0.798 | -0.39 [-0.05, 0.96] | small | n.s. |
-| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | -0.94 | 2 | = 0.746 | -0.77 [-0.78, 0.50] | medium | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 1.18 | 2 | = 0.746 | 0.44 [-0.88, 0.66] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -0.73 | 2 | = 0.746 | -0.60 [-1.27, 0.63] | medium | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 1.32 | 2 | = 0.746 | 1.16 [-0.84, 0.70] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | -0.59 | 2 | = 0.760 | -0.40 [-2.90, 2.21] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 17.80 | 2 | = 0.245 | 1.82 [-0.55, 1.01] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 0.71 | 2 | = 0.746 | 0.35 [-0.68, 1.51] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 2.50 | 2 | = 0.746 | 0.43 [-1.30, 0.23] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.47 | 2 | = 0.798 | -0.46 [-1.29, 0.33] | small | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 1.10 | 2 | = 0.746 | 0.94 [-0.67, 0.76] | large | n.s. |
-| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.41 | 2 | = 0.830 | -0.34 [-1.03, 0.66] | small | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | -0.88 | 2 | = 0.746 | -0.71 [-1.20, 0.22] | medium | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 1.25 | 2 | = 0.746 | 1.02 [-0.84, 0.18] | large | n.s. |
-| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | -0.79 | 2 | = 0.746 | -0.58 [-2.00, 1.29] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 6.74 | 2 | = 0.554 | 1.93 [-0.15, 0.95] | large | n.s. |
-| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | 0.24 | 2 | = 0.892 | 0.15 [-0.26, 1.39] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 0.29 | 2 | = 0.877 | 0.12 [-0.69, 0.34] | negligible | n.s. |
-| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | -0.76 | 2 | = 0.746 | -0.68 [-1.01, 0.30] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 0.97 | 2 | = 0.746 | 0.78 [-0.27, 0.71] | medium | n.s. |
-| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -0.61 | 2 | = 0.760 | -0.50 [-0.95, 0.35] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | 1.49 | 2 | = 0.746 | 0.94 [-0.35, 1.04] | large | n.s. |
-| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.71 | 2 | = 0.746 | 0.28 [-1.26, 2.05] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 1.35 | 2 | = 0.746 | 1.10 [-0.29, 1.21] | large | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 1.12 | 2 | = 0.746 | 0.72 [-0.46, 1.52] | medium | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 0.94 | 2 | = 0.746 | 0.73 [-0.36, 1.02] | medium | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 0.67 | 2 | = 0.746 | 0.31 [-0.63, 1.06] | small | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | 1.19 | 2 | = 0.746 | 0.84 [-0.16, 1.29] | large | n.s. |
-| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | 1.46 | 2 | = 0.746 | 0.29 [-0.55, 1.16] | small | n.s. |
-| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | -1.53 | 2 | = 0.746 | -0.92 [-2.11, 1.23] | large | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 0.67 | 2 | = 0.746 | 0.57 [0.10, 1.28] | medium | n.s. |
-| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | -0.54 | 2 | = 0.782 | -0.36 [-0.40, 1.20] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Correct) | -0.91 | 2 | = 0.746 | -0.69 [-0.30, 0.78] | medium | n.s. |
-| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | -2.12 | 2 | = 0.746 | -1.07 [-0.83, 0.45] | large | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Correct) | -1.65 | 2 | = 0.746 | -0.46 [0.12, 1.19] | small | n.s. |
-| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -1.50 | 2 | = 0.746 | -0.82 [-0.69, 0.58] | large | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 1.70 | 2 | = 0.746 | 1.17 [-1.10, 2.40] | large | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | 1.76 | 2 | = 0.746 | 0.57 [-1.00, 2.75] | medium | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 0.99 | 2 | = 0.746 | 0.60 [-1.36, 1.87] | medium | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 0.03 | 2 | = 0.985 | 0.02 [-2.47, 2.50] | negligible | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | 1.14 | 2 | = 0.746 | 0.77 [-1.20, 2.17] | medium | n.s. |
-| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | 0.07 | 2 | = 0.977 | 0.03 [-1.93, 1.33] | negligible | n.s. |
-| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -1.37 | 2 | = 0.746 | -0.71 [-0.61, 0.94] | medium | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Correct) | -7.01 | 2 | = 0.554 | -1.29 [-1.34, -0.14] | large | n.s. |
-| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -1.46 | 2 | = 0.746 | -1.39 [-1.24, 0.27] | large | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Correct) | -1.48 | 2 | = 0.746 | -1.24 [-0.84, 0.21] | large | n.s. |
-| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -1.27 | 2 | = 0.746 | -1.05 [-1.03, 0.28] | large | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | -0.20 | 2 | = 0.899 | -0.08 [-1.36, 0.28] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -0.75 | 2 | = 0.746 | -0.63 [-1.81, 0.29] | medium | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.19 | 2 | = 0.899 | 0.14 [-1.04, 0.53] | negligible | n.s. |
-| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.82 | 2 | = 0.746 | -0.51 [-1.69, 0.36] | medium | n.s. |
-| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -0.75 | 2 | = 0.746 | -0.69 [-0.85, 0.51] | medium | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Correct) | 0.51 | 2 | = 0.791 | 0.39 [-0.10, 0.94] | small | n.s. |
-| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -0.67 | 2 | = 0.746 | -0.52 [-0.68, 0.67] | medium | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 1.45 | 2 | = 0.746 | 0.91 [-0.23, 1.09] | large | n.s. |
-| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | 0.02 | 2 | = 0.985 | 0.01 [-0.41, 1.18] | negligible | n.s. |
-| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | -1.03 | 2 | = 0.746 | -0.68 [-0.96, 0.28] | medium | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Correct) | 0.36 | 8 | = 0.992 | 0.13 [-0.30, 0.55] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | -0.44 | 8 | = 0.992 | -0.18 [-0.54, 0.31] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -0.94 | 8 | = 0.969 | -0.21 [-0.63, 0.22] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | -0.93 | 8 | = 0.969 | -0.28 [-0.60, 0.34] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | -0.63 | 8 | = 0.992 | -0.16 [-0.85, 0.03] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | 0.19 | 8 | = 0.992 | 0.10 [-0.77, 0.39] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | 1.38 | 8 | = 0.969 | 0.40 [-0.45, 0.39] | small | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | 0.30 | 8 | = 0.992 | 0.12 [-0.37, 0.47] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | 0.61 | 8 | = 0.992 | 0.22 [-0.29, 0.55] | small | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | 0.53 | 8 | = 0.992 | 0.25 [-0.51, 0.43] | small | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | 0.59 | 8 | = 0.992 | 0.18 [-0.50, 0.34] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | -0.76 | 8 | = 0.992 | -0.23 [-0.60, 0.32] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | -0.92 | 8 | = 0.969 | -0.31 [-0.67, 0.19] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -1.24 | 8 | = 0.969 | -0.38 [-0.75, 0.11] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | -0.93 | 8 | = 0.969 | -0.39 [-0.69, 0.26] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -1.19 | 8 | = 0.969 | -0.32 [-1.07, -0.15] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.06 | 8 | = 0.992 | 0.03 [-0.82, 0.35] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 1.09 | 8 | = 0.969 | 0.28 [-0.57, 0.28] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | -0.09 | 8 | = 0.992 | -0.02 [-0.47, 0.37] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 0.45 | 8 | = 0.992 | 0.08 [-0.43, 0.41] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.19 | 8 | = 0.992 | 0.10 [-0.65, 0.29] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | 0.15 | 8 | = 0.992 | 0.05 [-0.65, 0.21] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | -0.86 | 8 | = 0.974 | -0.32 [-0.63, 0.29] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 0.04 | 8 | = 0.992 | 0.02 [-0.42, 0.43] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -0.27 | 8 | = 0.992 | -0.11 [-0.49, 0.44] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | 0.18 | 8 | = 0.992 | 0.05 [-0.68, 0.18] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.51 | 8 | = 0.992 | 0.22 [-0.67, 0.49] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 1.75 | 8 | = 0.969 | 0.58 [-0.33, 0.51] | medium | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 1.32 | 8 | = 0.969 | 0.32 [-0.29, 0.56] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | 1.30 | 8 | = 0.969 | 0.41 [-0.19, 0.67] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.80 | 8 | = 0.974 | 0.47 [-0.52, 0.42] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | 1.43 | 8 | = 0.969 | 0.38 [-0.35, 0.50] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.27 | 8 | = 0.992 | -0.10 [-0.50, 0.41] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | -0.45 | 8 | = 0.992 | -0.15 [-0.57, 0.37] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | 0.15 | 8 | = 0.992 | 0.04 [-0.68, 0.17] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.43 | 8 | = 0.992 | 0.23 [-0.73, 0.43] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 2.77 | 8 | = 0.633 | 0.77 [-0.31, 0.54] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | 0.99 | 8 | = 0.969 | 0.42 [-0.24, 0.61] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 1.71 | 8 | = 0.969 | 0.55 [-0.11, 0.75] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | 1.55 | 8 | = 0.969 | 0.69 [-0.45, 0.49] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | 1.51 | 8 | = 0.969 | 0.49 [-0.34, 0.50] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -0.33 | 8 | = 0.992 | -0.13 [-0.44, 0.47] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | 0.50 | 8 | = 0.992 | 0.17 [-0.50, 0.44] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | 0.52 | 8 | = 0.992 | 0.28 [-0.49, 0.79] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 2.00 | 8 | = 0.969 | 0.62 [-0.34, 0.60] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.87 | 8 | = 0.974 | 0.40 [-0.20, 0.75] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | 1.07 | 8 | = 0.969 | 0.48 [-0.24, 0.71] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | 1.05 | 8 | = 0.969 | 0.52 [-0.43, 0.57] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | 1.38 | 8 | = 0.969 | 0.45 [-0.31, 0.63] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.04 | 8 | = 0.992 | -0.01 [-0.57, 0.46] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.41 | 8 | = 0.992 | 0.20 [-0.65, 0.51] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 3.09 | 8 | = 0.633 | 0.66 [-0.10, 0.77] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 1.23 | 8 | = 0.969 | 0.34 [-0.05, 0.82] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 2.20 | 8 | = 0.969 | 0.46 [0.17, 1.09] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 1.03 | 8 | = 0.969 | 0.55 [-0.39, 0.55] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 3.00 | 8 | = 0.633 | 0.41 [-0.08, 0.79] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -0.44 | 8 | = 0.992 | -0.14 [-0.33, 0.58] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.25 | 8 | = 0.992 | 0.12 [-0.35, 0.82] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | -0.10 | 8 | = 0.992 | -0.04 [-0.40, 0.77] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | 0.03 | 8 | = 0.992 | 0.01 [-0.34, 0.83] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 0.04 | 8 | = 0.992 | 0.02 [-0.40, 0.89] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.01 | 8 | = 0.995 | -0.00 [-0.38, 0.79] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | -0.44 | 8 | = 0.992 | -0.26 [-0.61, 0.66] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | -1.11 | 8 | = 0.969 | -0.33 [-0.34, 0.51] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | -0.72 | 8 | = 0.992 | -0.23 [-0.28, 0.56] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -0.44 | 8 | = 0.992 | -0.25 [-0.49, 0.45] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | -1.21 | 8 | = 0.969 | -0.25 [-0.47, 0.37] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -1.52 | 8 | = 0.969 | -0.49 [-0.57, 0.35] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | 0.45 | 8 | = 0.992 | 0.12 [-0.37, 0.47] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.24 | 8 | = 0.992 | 0.15 [-0.49, 0.45] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | 0.23 | 8 | = 0.992 | 0.08 [-0.54, 0.31] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.81 | 8 | = 0.974 | -0.32 [-0.59, 0.33] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 0.03 | 8 | = 0.992 | 0.01 [-0.64, 0.31] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | -0.13 | 8 | = 0.992 | -0.04 [-0.67, 0.19] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -1.01 | 8 | = 0.969 | -0.38 [-0.61, 0.30] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | -0.10 | 8 | = 0.992 | -0.05 [-0.43, 0.51] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.80 | 8 | = 0.974 | -0.40 [-0.47, 0.52] | small | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | -0.99 | 8 | = 0.969 | -0.35 [-0.51, 0.41] | small | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+
+### 3.4 P3b Component
+
+#### Latency (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 2870.77, BIC = 2929.54
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 22.70, *SE* = 8.872, *z* = 2.559, *p* = 0.010
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 18.59, *SE* = 8.808, *z* = 2.111, *p* = 0.035
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 6.10, *SE* = 8.890, *z* = 0.686, *p* = 0.493
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 0.70, *SE* = 9.259, *z* = 0.076, *p* = 0.940
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 16.13, *SE* = 8.968, *z* = 1.799, *p* = 0.072
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 20.11, *SE* = 10.334, *z* = 1.947, *p* = 0.052
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 21.15, *SE* = 8.909, *z* = 2.374, *p* = 0.018
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 9.40, *SE* = 8.812, *z* = 1.066, *p* = 0.286
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 21.61, *SE* = 8.956, *z* = 2.412, *p* = 0.016
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 3.51, *SE* = 9.259, *z* = 0.380, *p* = 0.704
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 13.76, *SE* = 8.810, *z* = 1.562, *p* = 0.118
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = 6.44, *SE* = 9.144, *z* = 0.704, *p* = 0.481
+- **SNR**: *β* = -0.22, *SE* = 0.479, *z* = -0.452, *p* = 0.651
+
+_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality (no change) - Decrease by 1 (Correct) | -22.70 | 8.87 | -2.56 | 0.010 | 0.561 | n.s. |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | -18.59 | 8.81 | -2.11 | 0.035 | 0.922 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | -6.10 | 8.89 | -0.69 | 0.493 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | -0.70 | 9.26 | -0.08 | 0.940 | 1.000 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Correct) | -16.13 | 8.97 | -1.80 | 0.072 | 0.992 | n.s. |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | -20.11 | 10.33 | -1.95 | 0.052 | 0.975 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | -21.15 | 8.91 | -2.37 | 0.018 | 0.740 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | -9.40 | 8.81 | -1.07 | 0.286 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | -21.60 | 8.96 | -2.41 | 0.016 | 0.708 | n.s. |
+| Cardinality (no change) - Increase by 2 (Incorrect) | -3.51 | 9.26 | -0.38 | 0.704 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 3 (Correct) | -13.76 | 8.81 | -1.56 | 0.118 | 0.999 | n.s. |
+| Cardinality (no change) - Increase by 3 (Incorrect) | -6.44 | 9.14 | -0.70 | 0.481 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 4.11 | 8.96 | 0.46 | 0.646 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 16.61 | 8.79 | 1.89 | 0.059 | 0.983 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | 22.00 | 9.40 | 2.34 | 0.019 | 0.767 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | 6.57 | 8.81 | 0.75 | 0.456 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 2.59 | 10.47 | 0.25 | 0.805 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 1.55 | 8.80 | 0.18 | 0.860 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 13.31 | 8.97 | 1.48 | 0.138 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 1.10 | 8.81 | 0.12 | 0.901 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | 19.19 | 9.40 | 2.04 | 0.041 | 0.949 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | 8.95 | 8.81 | 1.01 | 0.310 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | 16.27 | 9.31 | 1.75 | 0.081 | 0.995 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | 12.49 | 8.99 | 1.39 | 0.164 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | 17.89 | 9.24 | 1.94 | 0.053 | 0.977 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | 2.46 | 9.09 | 0.27 | 0.787 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -1.52 | 10.32 | -0.15 | 0.882 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -2.56 | 9.01 | -0.28 | 0.776 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 9.19 | 8.79 | 1.05 | 0.296 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -3.01 | 9.07 | -0.33 | 0.740 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | 15.08 | 9.25 | 1.63 | 0.103 | 0.999 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | 4.83 | 8.86 | 0.55 | 0.586 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | 12.15 | 9.12 | 1.33 | 0.183 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | 5.40 | 9.42 | 0.57 | 0.567 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -10.04 | 8.80 | -1.14 | 0.254 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | -14.02 | 10.49 | -1.34 | 0.182 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | -15.05 | 8.79 | -1.71 | 0.087 | 0.996 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | -3.30 | 9.00 | -0.37 | 0.714 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | -15.51 | 8.80 | -1.76 | 0.078 | 0.994 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | 2.58 | 9.42 | 0.27 | 0.784 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | -7.66 | 8.82 | -0.87 | 0.385 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -0.34 | 9.34 | -0.04 | 0.971 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | -15.43 | 9.52 | -1.62 | 0.105 | 0.999 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | -19.42 | 10.70 | -1.81 | 0.070 | 0.991 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | -20.45 | 9.45 | -2.16 | 0.030 | 0.895 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | -8.70 | 9.25 | -0.94 | 0.347 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | -20.91 | 9.51 | -2.20 | 0.028 | 0.877 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | -2.81 | 9.66 | -0.29 | 0.771 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | -13.06 | 9.31 | -1.40 | 0.161 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | -5.74 | 9.56 | -0.60 | 0.549 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | -3.98 | 10.59 | -0.38 | 0.707 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | -5.02 | 8.80 | -0.57 | 0.568 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 6.73 | 9.10 | 0.74 | 0.459 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | -5.47 | 8.79 | -0.62 | 0.534 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | 12.62 | 9.52 | 1.33 | 0.185 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | 2.37 | 8.87 | 0.27 | 0.789 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | 9.70 | 9.44 | 1.03 | 0.304 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | -1.04 | 10.52 | -0.10 | 0.922 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 10.72 | 10.32 | 1.04 | 0.299 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -1.49 | 10.57 | -0.14 | 0.888 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | 16.60 | 10.70 | 1.55 | 0.121 | 0.999 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | 6.36 | 10.38 | 0.61 | 0.540 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | 13.68 | 10.60 | 1.29 | 0.197 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 11.75 | 9.02 | 1.30 | 0.193 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.45 | 8.80 | -0.05 | 0.959 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | 17.64 | 9.44 | 1.87 | 0.062 | 0.985 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | 7.39 | 8.83 | 0.84 | 0.403 | 1.000 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | 14.71 | 9.36 | 1.57 | 0.116 | 0.999 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -12.21 | 9.09 | -1.34 | 0.179 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | 5.88 | 9.25 | 0.64 | 0.525 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -4.36 | 8.87 | -0.49 | 0.623 | 1.000 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | 2.96 | 9.12 | 0.32 | 0.745 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | 18.09 | 9.50 | 1.90 | 0.057 | 0.981 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | 7.85 | 8.87 | 0.89 | 0.376 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | 15.17 | 9.43 | 1.61 | 0.108 | 0.999 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | -10.24 | 9.31 | -1.10 | 0.271 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -2.92 | 9.55 | -0.31 | 0.760 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | 7.32 | 9.20 | 0.80 | 0.426 | 1.000 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 0.80, *p* = 0.649, η²_G = 0.078
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality (no change) vs Decrease by 1 (Correct) | -2.11 | 8 | = 0.812 | -0.85 [-1.16, -0.22] | large | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | -1.88 | 8 | = 0.812 | -0.73 [-0.94, -0.04] | medium | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -0.64 | 8 | = 0.987 | -0.32 [-0.59, 0.26] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | -0.43 | 8 | = 0.987 | -0.15 [-0.50, 0.44] | negligible | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | -2.68 | 8 | = 0.803 | -0.92 [-0.88, 0.00] | large | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | -1.93 | 8 | = 0.812 | -0.60 [-1.47, -0.14] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | -1.12 | 8 | = 0.957 | -0.55 [-0.91, -0.02] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | -1.17 | 8 | = 0.936 | -0.58 [-0.65, 0.20] | medium | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | -2.62 | 8 | = 0.803 | -1.16 [-0.97, -0.07] | large | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | -1.24 | 8 | = 0.936 | -0.59 [-0.51, 0.42] | medium | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | -2.98 | 8 | = 0.803 | -0.86 [-0.80, 0.07] | large | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | -1.24 | 8 | = 0.936 | -0.72 [-0.59, 0.33] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 0.05 | 8 | = 0.987 | 0.03 [-0.35, 0.49] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | 1.69 | 8 | = 0.913 | 0.68 [0.10, 1.01] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 1.09 | 8 | = 0.962 | 0.63 [-0.09, 0.88] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -0.12 | 8 | = 0.987 | -0.04 [-0.22, 0.63] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.23 | 8 | = 0.987 | 0.08 [-0.60, 0.56] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 0.40 | 8 | = 0.987 | 0.15 [-0.38, 0.47] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | 0.37 | 8 | = 0.987 | 0.19 [-0.17, 0.68] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | -0.81 | 8 | = 0.987 | -0.29 [-0.38, 0.46] | small | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | 0.48 | 8 | = 0.987 | 0.19 [-0.05, 0.93] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -0.26 | 8 | = 0.987 | -0.09 [-0.20, 0.65] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | 0.16 | 8 | = 0.987 | 0.08 [-0.06, 0.89] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | 1.25 | 8 | = 0.936 | 0.56 [-0.16, 0.70] | medium | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | 1.21 | 8 | = 0.936 | 0.55 [-0.19, 0.76] | medium | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -0.12 | 8 | = 0.987 | -0.07 [-0.36, 0.49] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | 0.11 | 8 | = 0.987 | 0.06 [-0.72, 0.44] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 0.27 | 8 | = 0.987 | 0.12 [-0.46, 0.39] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 0.56 | 8 | = 0.987 | 0.15 [-0.24, 0.62] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | -0.52 | 8 | = 0.987 | -0.29 [-0.46, 0.38] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.33 | 8 | = 0.987 | 0.15 [-0.16, 0.80] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | -0.20 | 8 | = 0.987 | -0.11 [-0.33, 0.52] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | 0.12 | 8 | = 0.987 | 0.05 [-0.21, 0.71] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.20 | 8 | = 0.987 | 0.10 [-0.42, 0.52] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -1.53 | 8 | = 0.936 | -0.76 [-0.72, 0.14] | medium | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | -0.97 | 8 | = 0.987 | -0.42 [-0.91, 0.27] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | -0.83 | 8 | = 0.987 | -0.37 [-0.84, 0.04] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | -0.88 | 8 | = 0.987 | -0.38 [-0.51, 0.34] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | -2.36 | 8 | = 0.812 | -1.03 [-0.83, 0.04] | large | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | -0.98 | 8 | = 0.987 | -0.40 [-0.36, 0.58] | small | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -1.48 | 8 | = 0.936 | -0.70 [-0.64, 0.22] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -1.22 | 8 | = 0.936 | -0.54 [-0.52, 0.39] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -1.89 | 8 | = 0.812 | -0.69 [-0.99, 0.00] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | -1.24 | 8 | = 0.936 | -0.44 [-0.88, 0.41] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | -0.67 | 8 | = 0.987 | -0.39 [-0.78, 0.17] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | -0.78 | 8 | = 0.987 | -0.40 [-0.74, 0.21] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -2.07 | 8 | = 0.812 | -0.91 [-0.98, 0.01] | large | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | -0.83 | 8 | = 0.987 | -0.41 [-0.52, 0.47] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -1.83 | 8 | = 0.812 | -0.67 [-0.89, 0.08] | medium | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.89 | 8 | = 0.987 | -0.52 [-0.73, 0.31] | medium | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.41 | 8 | = 0.987 | 0.12 [-0.58, 0.58] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 0.44 | 8 | = 0.987 | 0.19 [-0.55, 0.30] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 0.39 | 8 | = 0.987 | 0.23 [-0.31, 0.53] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | -1.17 | 8 | = 0.936 | -0.25 [-0.64, 0.21] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 0.63 | 8 | = 0.987 | 0.24 [-0.08, 0.89] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | -0.28 | 8 | = 0.987 | -0.05 [-0.34, 0.51] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | 0.23 | 8 | = 0.987 | 0.13 [-0.28, 0.63] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 0.10 | 8 | = 0.987 | 0.05 [-0.45, 0.71] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | 0.15 | 8 | = 0.987 | 0.08 [-0.37, 0.80] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | -0.82 | 8 | = 0.987 | -0.32 [-0.61, 0.54] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | 0.17 | 8 | = 0.987 | 0.08 [-0.48, 0.80] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.56 | 8 | = 0.987 | -0.16 [-0.64, 0.51] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | -0.02 | 8 | = 0.998 | -0.01 [-0.50, 0.78] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | 0.06 | 8 | = 0.987 | 0.02 [-0.24, 0.61] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | -1.17 | 8 | = 0.936 | -0.40 [-0.43, 0.41] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | 0.07 | 8 | = 0.987 | 0.02 [-0.10, 0.88] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | -0.48 | 8 | = 0.987 | -0.22 [-0.28, 0.57] | small | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -0.23 | 8 | = 0.987 | -0.07 [-0.18, 0.75] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | -0.85 | 8 | = 0.987 | -0.46 [-0.67, 0.18] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | 0.00 | 8 | = 1.000 | 0.00 [-0.35, 0.59] | negligible | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | -0.44 | 8 | = 0.987 | -0.26 [-0.50, 0.35] | small | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -0.24 | 8 | = 0.987 | -0.10 [-0.36, 0.56] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | 1.37 | 8 | = 0.936 | 0.47 [0.01, 1.01] | small | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | 0.64 | 8 | = 0.987 | 0.17 [-0.19, 0.66] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | 0.71 | 8 | = 0.987 | 0.36 [-0.05, 0.90] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | -0.58 | 8 | = 0.987 | -0.27 [-0.80, 0.16] | small | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.28 | 8 | = 0.987 | -0.11 [-0.45, 0.54] | negligible | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | 0.29 | 8 | = 0.987 | 0.17 [-0.33, 0.58] | negligible | n.s. |
+
+_Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
+_Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
+
+#### Amplitude (Peak)
+
+**Linear Mixed-Effects Model (Primary Analysis):**
+
+- Model converged successfully
+- AIC = 1373.16, BIC = 1431.94
+- **Decrease by 1 (Correct) vs Cardinality (no change)**: *β* = 2.51, *SE* = 0.626, *z* = 4.003, *p* < .001
+- **Decrease by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.92, *SE* = 0.621, *z* = 1.484, *p* = 0.138
+- **Decrease by 2 (Correct) vs Cardinality (no change)**: *β* = 2.14, *SE* = 0.628, *z* = 3.413, *p* = 0.001
+- **Decrease by 2 (Incorrect) vs Cardinality (no change)**: *β* = 3.41, *SE* = 0.653, *z* = 5.226, *p* < .001
+- **Decrease by 3 (Correct) vs Cardinality (no change)**: *β* = 2.52, *SE* = 0.634, *z* = 3.984, *p* < .001
+- **Decrease by 3 (Incorrect) vs Cardinality (no change)**: *β* = 1.89, *SE* = 0.731, *z* = 2.590, *p* = 0.010
+- **Increase by 1 (Correct) vs Cardinality (no change)**: *β* = 1.30, *SE* = 0.629, *z* = 2.061, *p* = 0.039
+- **Increase by 1 (Incorrect) vs Cardinality (no change)**: *β* = 0.36, *SE* = 0.621, *z* = 0.586, *p* = 0.558
+- **Increase by 2 (Correct) vs Cardinality (no change)**: *β* = 2.19, *SE* = 0.633, *z* = 3.460, *p* = 0.001
+- **Increase by 2 (Incorrect) vs Cardinality (no change)**: *β* = 2.66, *SE* = 0.653, *z* = 4.074, *p* < .001
+- **Increase by 3 (Correct) vs Cardinality (no change)**: *β* = 2.57, *SE* = 0.621, *z* = 4.140, *p* < .001
+- **Increase by 3 (Incorrect) vs Cardinality (no change)**: *β* = 3.06, *SE* = 0.646, *z* = 4.739, *p* < .001
+- **SNR**: *β* = 0.18, *SE* = 0.036, *z* = 5.128, *p* < .001
+
+_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
+
+_Note: LMM uses all available subject data via maximum likelihood estimation._
+
+**LMM Pairwise Comparisons:**
+
+All pairwise comparisons between conditions (Holm-Sidak correction):
+
+| Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
+|------------|---|----|----|-----------|---------|-----|
+| Cardinality (no change) - Decrease by 1 (Correct) | -2.51 | 0.63 | -4.00 | < .001 | 0.004 | ** |
+| Cardinality (no change) - Decrease by 1 (Incorrect) | -0.92 | 0.62 | -1.48 | 0.138 | 0.998 | n.s. |
+| Cardinality (no change) - Decrease by 2 (Correct) | -2.14 | 0.63 | -3.41 | < .001 | 0.041 | * |
+| Cardinality (no change) - Decrease by 2 (Incorrect) | -3.41 | 0.65 | -5.23 | < .001 | < .001 | *** |
+| Cardinality (no change) - Decrease by 3 (Correct) | -2.52 | 0.63 | -3.98 | < .001 | 0.005 | ** |
+| Cardinality (no change) - Decrease by 3 (Incorrect) | -1.89 | 0.73 | -2.59 | 0.010 | 0.417 | n.s. |
+| Cardinality (no change) - Increase by 1 (Correct) | -1.30 | 0.63 | -2.06 | 0.039 | 0.876 | n.s. |
+| Cardinality (no change) - Increase by 1 (Incorrect) | -0.36 | 0.62 | -0.59 | 0.558 | 1.000 | n.s. |
+| Cardinality (no change) - Increase by 2 (Correct) | -2.19 | 0.63 | -3.46 | < .001 | 0.036 | * |
+| Cardinality (no change) - Increase by 2 (Incorrect) | -2.66 | 0.65 | -4.07 | < .001 | 0.003 | ** |
+| Cardinality (no change) - Increase by 3 (Correct) | -2.57 | 0.62 | -4.14 | < .001 | 0.003 | ** |
+| Cardinality (no change) - Increase by 3 (Incorrect) | -3.06 | 0.65 | -4.74 | < .001 | < .001 | *** |
+| Decrease by 1 (Correct) - Decrease by 1 (Incorrect) | 1.58 | 0.63 | 2.50 | 0.012 | 0.494 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Correct) | 0.36 | 0.62 | 0.59 | 0.557 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 2 (Incorrect) | -0.91 | 0.66 | -1.37 | 0.171 | 0.999 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Correct) | -0.02 | 0.62 | -0.03 | 0.977 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Decrease by 3 (Incorrect) | 0.61 | 0.74 | 0.83 | 0.408 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Correct) | 1.21 | 0.62 | 1.95 | 0.051 | 0.910 | n.s. |
+| Decrease by 1 (Correct) - Increase by 1 (Incorrect) | 2.14 | 0.63 | 3.38 | < .001 | 0.046 | * |
+| Decrease by 1 (Correct) - Increase by 2 (Correct) | 0.32 | 0.62 | 0.51 | 0.610 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 2 (Incorrect) | -0.16 | 0.66 | -0.23 | 0.814 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Correct) | -0.07 | 0.62 | -0.11 | 0.916 | 1.000 | n.s. |
+| Decrease by 1 (Correct) - Increase by 3 (Incorrect) | -0.55 | 0.66 | -0.84 | 0.401 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Correct) | -1.22 | 0.64 | -1.92 | 0.055 | 0.920 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 2 (Incorrect) | -2.49 | 0.65 | -3.82 | < .001 | 0.009 | ** |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Correct) | -1.60 | 0.64 | -2.49 | 0.013 | 0.499 | n.s. |
+| Decrease by 1 (Incorrect) - Decrease by 3 (Incorrect) | -0.97 | 0.73 | -1.33 | 0.183 | 0.999 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Correct) | -0.37 | 0.64 | -0.59 | 0.557 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 1 (Incorrect) | 0.56 | 0.62 | 0.90 | 0.368 | 1.000 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Correct) | -1.27 | 0.64 | -1.97 | 0.048 | 0.904 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 2 (Incorrect) | -1.74 | 0.65 | -2.67 | 0.008 | 0.365 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Correct) | -1.65 | 0.63 | -2.64 | 0.008 | 0.379 | n.s. |
+| Decrease by 1 (Incorrect) - Increase by 3 (Incorrect) | -2.14 | 0.64 | -3.32 | < .001 | 0.055 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 2 (Incorrect) | -1.27 | 0.67 | -1.91 | 0.056 | 0.920 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Correct) | -0.38 | 0.62 | -0.62 | 0.538 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Decrease by 3 (Incorrect) | 0.25 | 0.74 | 0.33 | 0.738 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Correct) | 0.85 | 0.62 | 1.36 | 0.172 | 0.999 | n.s. |
+| Decrease by 2 (Correct) - Increase by 1 (Incorrect) | 1.78 | 0.64 | 2.80 | 0.005 | 0.268 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Correct) | -0.05 | 0.62 | -0.08 | 0.939 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 2 (Incorrect) | -0.52 | 0.67 | -0.78 | 0.435 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Correct) | -0.43 | 0.62 | -0.69 | 0.490 | 1.000 | n.s. |
+| Decrease by 2 (Correct) - Increase by 3 (Incorrect) | -0.92 | 0.66 | -1.39 | 0.165 | 0.999 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Correct) | 0.89 | 0.67 | 1.32 | 0.186 | 0.999 | n.s. |
+| Decrease by 2 (Incorrect) - Decrease by 3 (Incorrect) | 1.52 | 0.76 | 2.01 | 0.045 | 0.893 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Correct) | 2.12 | 0.67 | 3.17 | 0.001 | 0.089 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 1 (Incorrect) | 3.05 | 0.65 | 4.67 | < .001 | < .001 | *** |
+| Decrease by 2 (Incorrect) - Increase by 2 (Correct) | 1.22 | 0.67 | 1.82 | 0.068 | 0.952 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 2 (Incorrect) | 0.75 | 0.68 | 1.10 | 0.270 | 1.000 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Correct) | 0.84 | 0.66 | 1.28 | 0.199 | 0.999 | n.s. |
+| Decrease by 2 (Incorrect) - Increase by 3 (Incorrect) | 0.35 | 0.68 | 0.52 | 0.600 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Decrease by 3 (Incorrect) | 0.63 | 0.75 | 0.84 | 0.400 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Correct) | 1.23 | 0.62 | 1.98 | 0.048 | 0.904 | n.s. |
+| Decrease by 3 (Correct) - Increase by 1 (Incorrect) | 2.16 | 0.64 | 3.35 | < .001 | 0.050 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Correct) | 0.33 | 0.62 | 0.54 | 0.589 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 2 (Incorrect) | -0.14 | 0.67 | -0.20 | 0.838 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Correct) | -0.05 | 0.63 | -0.08 | 0.940 | 1.000 | n.s. |
+| Decrease by 3 (Correct) - Increase by 3 (Incorrect) | -0.54 | 0.67 | -0.80 | 0.424 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Correct) | 0.60 | 0.74 | 0.80 | 0.423 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 1 (Incorrect) | 1.53 | 0.73 | 2.09 | 0.036 | 0.858 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Correct) | -0.30 | 0.75 | -0.40 | 0.692 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 2 (Incorrect) | -0.77 | 0.76 | -1.02 | 0.310 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Correct) | -0.68 | 0.73 | -0.92 | 0.356 | 1.000 | n.s. |
+| Decrease by 3 (Incorrect) - Increase by 3 (Incorrect) | -1.17 | 0.75 | -1.55 | 0.120 | 0.995 | n.s. |
+| Increase by 1 (Correct) - Increase by 1 (Incorrect) | 0.93 | 0.64 | 1.46 | 0.144 | 0.998 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Correct) | -0.89 | 0.62 | -1.44 | 0.150 | 0.998 | n.s. |
+| Increase by 1 (Correct) - Increase by 2 (Incorrect) | -1.37 | 0.67 | -2.05 | 0.041 | 0.880 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Correct) | -1.28 | 0.62 | -2.05 | 0.041 | 0.880 | n.s. |
+| Increase by 1 (Correct) - Increase by 3 (Incorrect) | -1.76 | 0.66 | -2.66 | 0.008 | 0.367 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Correct) | -1.83 | 0.64 | -2.84 | 0.005 | 0.242 | n.s. |
+| Increase by 1 (Incorrect) - Increase by 2 (Incorrect) | -2.30 | 0.65 | -3.52 | < .001 | 0.029 | * |
+| Increase by 1 (Incorrect) - Increase by 3 (Correct) | -2.21 | 0.63 | -3.53 | < .001 | 0.029 | * |
+| Increase by 1 (Incorrect) - Increase by 3 (Incorrect) | -2.70 | 0.64 | -4.19 | < .001 | 0.002 | ** |
+| Increase by 2 (Correct) - Increase by 2 (Incorrect) | -0.47 | 0.67 | -0.70 | 0.482 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Correct) | -0.38 | 0.63 | -0.61 | 0.541 | 1.000 | n.s. |
+| Increase by 2 (Correct) - Increase by 3 (Incorrect) | -0.87 | 0.67 | -1.30 | 0.193 | 0.999 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Correct) | 0.09 | 0.66 | 0.14 | 0.890 | 1.000 | n.s. |
+| Increase by 2 (Incorrect) - Increase by 3 (Incorrect) | -0.40 | 0.67 | -0.59 | 0.556 | 1.000 | n.s. |
+| Increase by 3 (Correct) - Increase by 3 (Incorrect) | -0.49 | 0.65 | -0.75 | 0.453 | 1.000 | n.s. |
+
+_Note: p-values adjusted using Holm-Sidak method for 78 comparisons._
+_Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
+
+
+**Repeated-Measures ANOVA (Supplementary Analysis):**
+
+- *F* = 1.41, *p* = 0.177, η²_G = 0.062
+- **Interpretation:** The main effect of condition was **not significant**.
+
+**Pairwise Comparisons (Supplementary Analysis):**
+
+_Post-hoc paired t-tests on complete cases with FDR correction:_
+
+| Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
+|------------|-----|------|----------------|-------------|-------------|------|
+| Cardinality (no change) vs Decrease by 1 (Correct) | -3.26 | 8 | = 0.128 | -0.85 [-1.83, -0.69] | large | n.s. |
+| Cardinality (no change) vs Decrease by 1 (Incorrect) | -1.48 | 8 | = 0.573 | -0.44 [-0.76, 0.11] | small | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Correct) | -3.06 | 8 | = 0.153 | -0.87 [-1.84, -0.70] | large | n.s. |
+| Cardinality (no change) vs Decrease by 2 (Incorrect) | -1.02 | 8 | = 0.803 | -0.29 [-1.10, -0.09] | small | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Correct) | -3.35 | 8 | = 0.128 | -1.03 [-1.57, -0.52] | large | n.s. |
+| Cardinality (no change) vs Decrease by 3 (Incorrect) | -1.54 | 8 | = 0.552 | -0.56 [-0.98, 0.22] | medium | n.s. |
+| Cardinality (no change) vs Increase by 1 (Correct) | -0.64 | 8 | = 0.934 | -0.15 [-1.15, -0.21] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 1 (Incorrect) | -0.50 | 8 | = 0.934 | -0.14 [-0.49, 0.36] | negligible | n.s. |
+| Cardinality (no change) vs Increase by 2 (Correct) | -3.38 | 8 | = 0.128 | -0.68 [-1.71, -0.62] | medium | n.s. |
+| Cardinality (no change) vs Increase by 2 (Incorrect) | -3.52 | 8 | = 0.128 | -0.69 [-1.39, -0.30] | medium | n.s. |
+| Cardinality (no change) vs Increase by 3 (Correct) | -3.69 | 8 | = 0.128 | -0.98 [-1.65, -0.58] | large | n.s. |
+| Cardinality (no change) vs Increase by 3 (Incorrect) | -2.33 | 8 | = 0.237 | -0.71 [-1.42, -0.34] | medium | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 1 (Incorrect) | 0.86 | 8 | = 0.878 | 0.25 [0.34, 1.31] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Correct) | -0.19 | 8 | = 0.934 | -0.05 [-0.22, 0.64] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 2 (Incorrect) | 0.30 | 8 | = 0.934 | 0.12 [-0.57, 0.37] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Correct) | -1.04 | 8 | = 0.797 | -0.23 [-0.57, 0.28] | small | n.s. |
+| Decrease by 1 (Correct) vs Decrease by 3 (Incorrect) | 0.15 | 8 | = 0.934 | 0.06 [-0.34, 0.84] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Correct) | 2.84 | 8 | = 0.154 | 0.68 [0.34, 1.32] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 1 (Incorrect) | 1.90 | 8 | = 0.355 | 0.62 [0.46, 1.48] | medium | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Correct) | 0.01 | 8 | = 0.995 | 0.00 [-0.34, 0.51] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 2 (Incorrect) | -0.40 | 8 | = 0.934 | -0.12 [-0.34, 0.60] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Correct) | -0.40 | 8 | = 0.934 | -0.10 [-0.28, 0.56] | negligible | n.s. |
+| Decrease by 1 (Correct) vs Increase by 3 (Incorrect) | -0.55 | 8 | = 0.934 | -0.18 [-0.40, 0.52] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Correct) | -0.99 | 8 | = 0.806 | -0.28 [-1.24, -0.28] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 2 (Incorrect) | -0.07 | 8 | = 0.980 | -0.02 [-0.89, 0.08] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Correct) | -1.31 | 8 | = 0.707 | -0.41 [-1.18, -0.23] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Decrease by 3 (Incorrect) | -0.47 | 8 | = 0.934 | -0.14 [-0.71, 0.45] | negligible | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Correct) | 1.08 | 8 | = 0.796 | 0.30 [-0.79, 0.08] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 1 (Incorrect) | 1.27 | 8 | = 0.721 | 0.29 [-0.13, 0.74] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Correct) | -0.88 | 8 | = 0.878 | -0.21 [-1.24, -0.28] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 2 (Incorrect) | -1.13 | 8 | = 0.796 | -0.28 [-1.01, -0.01] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Correct) | -1.10 | 8 | = 0.796 | -0.33 [-1.18, -0.23] | small | n.s. |
+| Decrease by 1 (Incorrect) vs Increase by 3 (Incorrect) | -1.07 | 8 | = 0.796 | -0.33 [-1.03, -0.06] | small | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 2 (Incorrect) | 0.37 | 8 | = 0.934 | 0.14 [-0.61, 0.33] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Correct) | -0.51 | 8 | = 0.934 | -0.17 [-0.72, 0.14] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Decrease by 3 (Incorrect) | 0.29 | 8 | = 0.934 | 0.09 [-0.40, 0.76] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Correct) | 3.51 | 8 | = 0.128 | 0.70 [0.05, 0.94] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 1 (Incorrect) | 2.91 | 8 | = 0.154 | 0.65 [0.47, 1.50] | medium | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Correct) | 0.16 | 8 | = 0.934 | 0.04 [-0.53, 0.31] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 2 (Incorrect) | -0.27 | 8 | = 0.934 | -0.09 [-0.44, 0.49] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Correct) | -0.19 | 8 | = 0.934 | -0.04 [-0.51, 0.33] | negligible | n.s. |
+| Decrease by 2 (Correct) vs Increase by 3 (Incorrect) | -0.44 | 8 | = 0.934 | -0.15 [-0.50, 0.41] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Correct) | -0.51 | 8 | = 0.934 | -0.21 [-0.42, 0.52] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Decrease by 3 (Incorrect) | -0.25 | 8 | = 0.934 | -0.07 [-0.62, 0.65] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Correct) | 0.62 | 8 | = 0.934 | 0.21 [-0.17, 0.79] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 1 (Incorrect) | 0.77 | 8 | = 0.920 | 0.21 [0.02, 1.01] | small | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Correct) | -0.34 | 8 | = 0.934 | -0.11 [-0.35, 0.59] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 2 (Incorrect) | -0.76 | 8 | = 0.920 | -0.17 [-0.31, 0.69] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Correct) | -0.39 | 8 | = 0.934 | -0.15 [-0.34, 0.60] | negligible | n.s. |
+| Decrease by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.92 | 8 | = 0.855 | -0.21 [-0.54, 0.48] | small | n.s. |
+| Decrease by 3 (Correct) vs Decrease by 3 (Incorrect) | 0.51 | 8 | = 0.934 | 0.21 [-0.32, 0.85] | small | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Correct) | 2.72 | 8 | = 0.172 | 0.85 [0.18, 1.11] | large | n.s. |
+| Decrease by 3 (Correct) vs Increase by 1 (Incorrect) | 2.16 | 8 | = 0.271 | 0.78 [0.34, 1.32] | medium | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Correct) | 0.56 | 8 | = 0.934 | 0.17 [-0.25, 0.60] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 2 (Incorrect) | 0.06 | 8 | = 0.982 | 0.02 [-0.34, 0.60] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Correct) | 0.61 | 8 | = 0.934 | 0.15 [-0.19, 0.67] | negligible | n.s. |
+| Decrease by 3 (Correct) vs Increase by 3 (Incorrect) | -0.17 | 8 | = 0.934 | -0.05 [-0.33, 0.58] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Correct) | 1.21 | 8 | = 0.750 | 0.43 [-0.47, 0.69] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 1 (Incorrect) | 2.29 | 8 | = 0.237 | 0.41 [-0.26, 0.93] | small | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Correct) | -0.15 | 8 | = 0.934 | -0.05 [-0.79, 0.37] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 2 (Incorrect) | -0.44 | 8 | = 0.934 | -0.14 [-0.76, 0.52] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Correct) | -0.34 | 8 | = 0.934 | -0.12 [-0.86, 0.31] | negligible | n.s. |
+| Decrease by 3 (Incorrect) vs Increase by 3 (Incorrect) | -0.76 | 8 | = 0.920 | -0.19 [-1.07, 0.25] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 1 (Incorrect) | 0.01 | 8 | = 0.995 | 0.00 [0.11, 1.02] | negligible | n.s. |
+| Increase by 1 (Correct) vs Increase by 2 (Correct) | -6.87 | 8 | = 0.010 | -0.54 [-1.21, -0.26] | medium | * |
+| Increase by 1 (Correct) vs Increase by 2 (Incorrect) | -1.85 | 8 | = 0.360 | -0.57 [-0.74, 0.21] | medium | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Correct) | -2.86 | 8 | = 0.154 | -0.79 [-1.05, -0.14] | medium | n.s. |
+| Increase by 1 (Correct) vs Increase by 3 (Incorrect) | -1.89 | 8 | = 0.355 | -0.60 [-0.72, 0.21] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Correct) | -2.41 | 8 | = 0.237 | -0.51 [-1.48, -0.46] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 2 (Incorrect) | -1.95 | 8 | = 0.355 | -0.54 [-1.27, -0.21] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Correct) | -2.29 | 8 | = 0.237 | -0.72 [-1.42, -0.41] | medium | n.s. |
+| Increase by 1 (Incorrect) vs Increase by 3 (Incorrect) | -2.30 | 8 | = 0.237 | -0.58 [-1.37, -0.31] | medium | n.s. |
+| Increase by 2 (Correct) vs Increase by 2 (Incorrect) | -0.38 | 8 | = 0.934 | -0.10 [-0.40, 0.54] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Correct) | -0.25 | 8 | = 0.934 | -0.07 [-0.39, 0.45] | negligible | n.s. |
+| Increase by 2 (Correct) vs Increase by 3 (Incorrect) | -0.54 | 8 | = 0.934 | -0.16 [-0.43, 0.48] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Correct) | 0.20 | 8 | = 0.934 | 0.07 [-0.49, 0.44] | negligible | n.s. |
+| Increase by 2 (Incorrect) vs Increase by 3 (Incorrect) | -0.25 | 8 | = 0.934 | -0.06 [-0.56, 0.43] | negligible | n.s. |
+| Increase by 3 (Correct) vs Increase by 3 (Incorrect) | -0.36 | 8 | = 0.934 | -0.13 [-0.41, 0.50] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -1515,7 +1871,7 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-No significant main effects or interactions were detected at the α = .05 level.
+**Fz latency:** Marginal trend toward condition differences (*p* = 0.070)
 
 ### Research Implications
 

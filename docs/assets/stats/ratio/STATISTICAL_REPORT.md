@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 01:23:55
+**Generated:** 2026-02-23 19:33:35
 
 ---
 
@@ -41,21 +41,21 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 16 | 102.50 ms | 8.25 | 2.06 | [92.00, 112.00] |
-| Ratio 0.67 (2:3) | 16 | 104.75 ms | 5.88 | 1.47 | [96.00, 112.00] |
-| Ratio 0.75 (3:4) | 13 | 101.23 ms | 8.55 | 2.37 | [92.00, 112.00] |
-| Ratio 0.8 (4:5) | 15 | 104.00 ms | 7.09 | 1.83 | [92.00, 112.00] |
-| Ratio 0.83 (5:6) | 13 | 104.92 ms | 5.69 | 1.58 | [96.00, 112.00] |
+| Ratio 0.5 (1:2) | 24 | 102.00 ms | 8.67 | 1.77 | [92.00, 112.00] |
+| Ratio 0.67 (2:3) | 24 | 103.33 ms | 7.04 | 1.44 | [92.00, 112.00] |
+| Ratio 0.75 (3:4) | 24 | 103.00 ms | 8.28 | 1.69 | [92.00, 112.00] |
+| Ratio 0.8 (4:5) | 24 | 104.17 ms | 7.41 | 1.51 | [92.00, 112.00] |
+| Ratio 0.83 (5:6) | 24 | 102.00 ms | 7.17 | 1.46 | [92.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 16 | -1.41 µV | 1.13 | 0.28 | [-4.19, -0.19] |
-| Ratio 0.67 (2:3) | 16 | -1.71 µV | 1.05 | 0.26 | [-3.86, -0.27] |
-| Ratio 0.75 (3:4) | 13 | -2.09 µV | 1.34 | 0.37 | [-5.60, -0.73] |
-| Ratio 0.8 (4:5) | 15 | -2.49 µV | 2.08 | 0.54 | [-8.22, -0.19] |
-| Ratio 0.83 (5:6) | 13 | -1.83 µV | 1.25 | 0.35 | [-4.39, -0.35] |
+| Ratio 0.5 (1:2) | 24 | -0.94 µV | 1.18 | 0.24 | [-4.19, 0.89] |
+| Ratio 0.67 (2:3) | 24 | -1.03 µV | 1.35 | 0.28 | [-3.86, 1.46] |
+| Ratio 0.75 (3:4) | 24 | -0.98 µV | 1.63 | 0.33 | [-5.60, 1.98] |
+| Ratio 0.8 (4:5) | 24 | -1.36 µV | 2.26 | 0.46 | [-8.22, 2.18] |
+| Ratio 0.83 (5:6) | 24 | -1.20 µV | 1.29 | 0.26 | [-4.39, 0.82] |
 
 
 ### 2.2 N1 Component
@@ -64,20 +64,20 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 23 | 171.48 ms | 14.39 | 3.00 | [144.00, 204.00] |
-| Ratio 0.67 (2:3) | 23 | 173.22 ms | 19.24 | 4.01 | [144.00, 204.00] |
-| Ratio 0.75 (3:4) | 23 | 170.96 ms | 17.65 | 3.68 | [144.00, 204.00] |
-| Ratio 0.8 (4:5) | 23 | 170.61 ms | 20.52 | 4.28 | [144.00, 204.00] |
+| Ratio 0.5 (1:2) | 24 | 172.83 ms | 15.56 | 3.18 | [144.00, 204.00] |
+| Ratio 0.67 (2:3) | 24 | 174.50 ms | 19.84 | 4.05 | [144.00, 204.00] |
+| Ratio 0.75 (3:4) | 24 | 172.33 ms | 18.53 | 3.78 | [144.00, 204.00] |
+| Ratio 0.8 (4:5) | 24 | 172.00 ms | 21.20 | 4.33 | [144.00, 204.00] |
 | Ratio 0.83 (5:6) | 24 | 175.50 ms | 18.06 | 3.69 | [144.00, 204.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 23 | -5.12 µV | 2.14 | 0.45 | [-9.31, -1.91] |
-| Ratio 0.67 (2:3) | 23 | -5.13 µV | 2.19 | 0.46 | [-9.87, -1.99] |
-| Ratio 0.75 (3:4) | 23 | -5.41 µV | 2.20 | 0.46 | [-10.31, -0.44] |
-| Ratio 0.8 (4:5) | 23 | -5.56 µV | 2.48 | 0.52 | [-10.71, -1.29] |
+| Ratio 0.5 (1:2) | 24 | -5.07 µV | 2.11 | 0.43 | [-9.31, -1.91] |
+| Ratio 0.67 (2:3) | 24 | -5.04 µV | 2.19 | 0.45 | [-9.87, -1.99] |
+| Ratio 0.75 (3:4) | 24 | -5.41 µV | 2.15 | 0.44 | [-10.31, -0.44] |
+| Ratio 0.8 (4:5) | 24 | -5.39 µV | 2.56 | 0.52 | [-10.71, -1.29] |
 | Ratio 0.83 (5:6) | 24 | -5.52 µV | 1.99 | 0.41 | [-9.96, -2.06] |
 
 
@@ -87,21 +87,21 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 15 | 105.60 ms | 7.38 | 1.90 | [92.00, 112.00] |
-| Ratio 0.67 (2:3) | 13 | 106.15 ms | 6.66 | 1.85 | [92.00, 112.00] |
-| Ratio 0.75 (3:4) | 14 | 104.29 ms | 7.76 | 2.07 | [92.00, 112.00] |
-| Ratio 0.8 (4:5) | 12 | 103.00 ms | 8.88 | 2.56 | [92.00, 112.00] |
-| Ratio 0.83 (5:6) | 13 | 103.08 ms | 7.51 | 2.08 | [92.00, 112.00] |
+| Ratio 0.5 (1:2) | 24 | 103.67 ms | 8.42 | 1.72 | [92.00, 112.00] |
+| Ratio 0.67 (2:3) | 24 | 104.50 ms | 7.85 | 1.60 | [92.00, 112.00] |
+| Ratio 0.75 (3:4) | 24 | 102.67 ms | 8.23 | 1.68 | [92.00, 112.00] |
+| Ratio 0.8 (4:5) | 24 | 104.67 ms | 8.48 | 1.73 | [92.00, 112.00] |
+| Ratio 0.83 (5:6) | 24 | 102.67 ms | 8.40 | 1.71 | [92.00, 112.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 15 | 1.78 µV | 1.32 | 0.34 | [0.26, 5.34] |
-| Ratio 0.67 (2:3) | 13 | 1.99 µV | 1.52 | 0.42 | [0.34, 4.44] |
-| Ratio 0.75 (3:4) | 14 | 2.19 µV | 1.62 | 0.43 | [0.33, 5.67] |
-| Ratio 0.8 (4:5) | 12 | 2.98 µV | 1.69 | 0.49 | [0.82, 5.75] |
-| Ratio 0.83 (5:6) | 13 | 2.00 µV | 1.39 | 0.38 | [0.37, 4.00] |
+| Ratio 0.5 (1:2) | 24 | 1.04 µV | 1.48 | 0.30 | [-1.61, 5.34] |
+| Ratio 0.67 (2:3) | 24 | 0.85 µV | 1.77 | 0.36 | [-2.36, 4.44] |
+| Ratio 0.75 (3:4) | 24 | 1.15 µV | 1.78 | 0.36 | [-1.13, 5.67] |
+| Ratio 0.8 (4:5) | 24 | 1.38 µV | 2.08 | 0.42 | [-1.45, 5.75] |
+| Ratio 0.83 (5:6) | 24 | 1.04 µV | 1.84 | 0.38 | [-2.61, 4.00] |
 
 
 ### 2.4 P3b Component
@@ -110,21 +110,21 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 20 | 483.20 ms | 34.50 | 7.71 | [436.00, 540.00] |
-| Ratio 0.67 (2:3) | 18 | 491.11 ms | 35.55 | 8.38 | [436.00, 540.00] |
-| Ratio 0.75 (3:4) | 18 | 491.11 ms | 34.59 | 8.15 | [436.00, 540.00] |
-| Ratio 0.8 (4:5) | 16 | 500.25 ms | 28.79 | 7.20 | [452.00, 540.00] |
-| Ratio 0.83 (5:6) | 12 | 490.33 ms | 42.45 | 12.25 | [436.00, 540.00] |
+| Ratio 0.5 (1:2) | 24 | 479.17 ms | 33.57 | 6.85 | [436.00, 540.00] |
+| Ratio 0.67 (2:3) | 24 | 485.50 ms | 35.79 | 7.31 | [436.00, 540.00] |
+| Ratio 0.75 (3:4) | 24 | 491.33 ms | 33.56 | 6.85 | [436.00, 540.00] |
+| Ratio 0.8 (4:5) | 24 | 497.67 ms | 28.48 | 5.81 | [448.00, 540.00] |
+| Ratio 0.83 (5:6) | 24 | 493.67 ms | 39.49 | 8.06 | [436.00, 540.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Ratio 0.5 (1:2) | 20 | 4.16 µV | 2.59 | 0.58 | [0.62, 8.88] |
-| Ratio 0.67 (2:3) | 18 | 5.06 µV | 3.12 | 0.73 | [1.19, 12.42] |
-| Ratio 0.75 (3:4) | 18 | 5.30 µV | 2.95 | 0.69 | [1.66, 11.73] |
-| Ratio 0.8 (4:5) | 16 | 5.39 µV | 3.04 | 0.76 | [1.32, 11.33] |
-| Ratio 0.83 (5:6) | 12 | 3.56 µV | 2.55 | 0.74 | [1.14, 9.58] |
+| Ratio 0.5 (1:2) | 24 | 3.38 µV | 3.02 | 0.62 | [-2.52, 8.88] |
+| Ratio 0.67 (2:3) | 24 | 3.68 µV | 3.68 | 0.75 | [-2.06, 12.42] |
+| Ratio 0.75 (3:4) | 24 | 3.85 µV | 3.71 | 0.76 | [-3.35, 11.73] |
+| Ratio 0.8 (4:5) | 24 | 3.44 µV | 3.86 | 0.79 | [-3.97, 11.33] |
+| Ratio 0.83 (5:6) | 24 | 1.50 µV | 3.11 | 0.64 | [-4.74, 9.58] |
 
 
 ---
@@ -140,12 +140,12 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 484.58, BIC = 502.90
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.75, *SE* = 1.772, *z* = 0.425, *p* = 0.671
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -1.45, *SE* = 1.844, *z* = -0.784, *p* = 0.433
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 1.06, *SE* = 1.779, *z* = 0.596, *p* = 0.551
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 0.72, *SE* = 1.870, *z* = 0.383, *p* = 0.702
-- **SNR**: *β* = -0.01, *SE* = 0.461, *z* = -0.023, *p* = 0.982
+- AIC = 804.02, BIC = 826.32
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 1.10, *SE* = 1.589, *z* = 0.695, *p* = 0.487
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 0.97, *SE* = 1.565, *z* = 0.618, *p* = 0.537
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 2.09, *SE* = 1.568, *z* = 1.332, *p* = 0.183
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 0.09, *SE* = 1.568, *z* = 0.054, *p* = 0.957
+- **SNR**: *β* = 0.35, *SE* = 0.426, *z* = 0.831, *p* = 0.406
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -158,16 +158,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.75 | 1.77 | -0.42 | 0.671 | 0.996 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 1.45 | 1.84 | 0.78 | 0.433 | 0.981 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -1.06 | 1.78 | -0.60 | 0.551 | 0.992 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -0.72 | 1.87 | -0.38 | 0.702 | 0.996 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 2.20 | 1.84 | 1.19 | 0.233 | 0.908 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.31 | 1.79 | -0.17 | 0.864 | 0.997 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 0.04 | 1.88 | 0.02 | 0.984 | 0.997 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -2.51 | 1.87 | -1.34 | 0.181 | 0.864 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | -2.16 | 2.05 | -1.06 | 0.290 | 0.936 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.34 | 1.88 | 0.18 | 0.855 | 0.997 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -1.10 | 1.59 | -0.69 | 0.487 | 0.994 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -0.97 | 1.57 | -0.62 | 0.537 | 0.994 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -2.09 | 1.57 | -1.33 | 0.183 | 0.867 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -0.09 | 1.57 | -0.05 | 0.957 | 0.995 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 0.14 | 1.58 | 0.09 | 0.931 | 0.995 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.98 | 1.58 | -0.62 | 0.532 | 0.994 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 1.02 | 1.61 | 0.63 | 0.527 | 0.994 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -1.12 | 1.57 | -0.72 | 0.474 | 0.994 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.88 | 1.57 | 0.56 | 0.574 | 0.994 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 2.00 | 1.58 | 1.27 | 0.204 | 0.872 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -175,7 +175,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.14, *p* = 0.450, η²_G = 0.490
+- *F* = 0.67, *p* = 0.617, η²_G = 0.012
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -184,16 +184,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -inf | 1 | < .001 | -2.83 [-0.56, 0.78] | large | *** |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -1.00 | 1 | = 0.833 | -0.73 [-0.85, 0.58] | medium | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -3.00 | 1 | = 0.683 | -4.24 [-1.01, 0.45] | large | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -2.00 | 1 | = 0.738 | -2.83 [-0.84, 0.70] | large | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.33 | 1 | = 0.971 | 0.24 [-0.36, 1.13] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -1.00 | 1 | = 0.833 | -1.41 [-0.72, 0.63] | large | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 0.00 | 1 | = 1.000 | 0.00 [-0.77, 0.77] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.60 | 1 | = 0.937 | -0.73 [-0.96, 0.49] | medium | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.20 | 1 | = 0.971 | -0.24 [-1.48, 1.04] | small | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | inf | 1 | < .001 | 1.41 [-0.34, 1.28] | large | *** |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.77 | 23 | = 0.737 | -0.17 [-0.58, 0.27] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -0.55 | 23 | = 0.737 | -0.12 [-0.54, 0.31] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -1.41 | 23 | = 0.737 | -0.27 [-0.72, 0.14] | small | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 0.00 | 23 | = 1.000 | 0.00 [-0.42, 0.42] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.18 | 23 | = 0.958 | 0.04 [-0.39, 0.46] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -0.55 | 23 | = 0.737 | -0.12 [-0.54, 0.31] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 0.77 | 23 | = 0.737 | 0.19 [-0.27, 0.58] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.98 | 23 | = 0.737 | -0.15 [-0.63, 0.23] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.62 | 23 | = 0.737 | 0.13 [-0.30, 0.55] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 2.18 | 23 | = 0.394 | 0.30 [0.00, 0.89] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -203,12 +203,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 208.96, BIC = 227.28
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.18, *SE* = 0.293, *z* = 0.605, *p* = 0.545
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -0.27, *SE* = 0.307, *z* = -0.874, *p* = 0.382
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -1.07, *SE* = 0.294, *z* = -3.627, *p* < .001
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -0.41, *SE* = 0.307, *z* = -1.323, *p* = 0.186
-- **SNR**: *β* = -0.53, *SE* = 0.072, *z* = -7.366, *p* < .001
+- AIC = 409.17, BIC = 431.47
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.20, *SE* = 0.324, *z* = 0.607, *p* = 0.544
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 0.00, *SE* = 0.319, *z* = 0.011, *p* = 0.991
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -0.32, *SE* = 0.320, *z* = -1.013, *p* = 0.311
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -0.36, *SE* = 0.320, *z* = -1.123, *p* = 0.262
+- **SNR**: *β* = -0.44, *SE* = 0.088, *z* = -4.973, *p* < .001
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -221,16 +221,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.18 | 0.29 | -0.61 | 0.545 | 0.793 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 0.27 | 0.31 | 0.87 | 0.382 | 0.764 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 1.07 | 0.29 | 3.63 | < .001 | 0.003 | ** |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 0.41 | 0.31 | 1.32 | 0.186 | 0.561 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 0.45 | 0.31 | 1.46 | 0.145 | 0.542 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 1.25 | 0.30 | 4.19 | < .001 | < .001 | *** |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 0.58 | 0.31 | 1.88 | 0.060 | 0.312 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.80 | 0.31 | 2.57 | 0.010 | 0.080 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.14 | 0.33 | 0.41 | 0.681 | 0.793 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | -0.66 | 0.31 | -2.13 | 0.033 | 0.208 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.20 | 0.32 | -0.61 | 0.544 | 0.957 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -0.00 | 0.32 | -0.01 | 0.991 | 0.992 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 0.32 | 0.32 | 1.01 | 0.311 | 0.908 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 0.36 | 0.32 | 1.12 | 0.262 | 0.908 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 0.19 | 0.32 | 0.60 | 0.550 | 0.957 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 0.52 | 0.32 | 1.62 | 0.105 | 0.632 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 0.56 | 0.33 | 1.69 | 0.091 | 0.614 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.33 | 0.32 | 1.03 | 0.305 | 0.908 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.36 | 0.32 | 1.13 | 0.258 | 0.908 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.04 | 0.32 | 0.11 | 0.913 | 0.992 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -238,7 +238,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.49, *p* = 0.745, η²_G = 0.168
+- *F* = 0.52, *p* = 0.725, η²_G = 0.010
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -247,16 +247,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -11.94 | 1 | = 0.532 | -1.20 [-0.58, 0.77] | large | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.23 | 1 | = 0.857 | 0.14 [0.01, 1.68] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 0.46 | 1 | = 0.830 | 0.37 [0.05, 1.74] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -1.02 | 1 | = 0.830 | -0.54 [-1.08, 0.49] | medium | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 1.36 | 1 | = 0.830 | 0.74 [-0.44, 1.02] | medium | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.91 | 1 | = 0.830 | 0.70 [-0.16, 1.28] | medium | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.69 | 1 | = 0.830 | 1.01 [-0.48, 1.10] | large | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 0.62 | 1 | = 0.830 | 0.26 [-0.08, 1.53] | small | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.42 | 1 | = 0.830 | -0.35 [-1.29, 1.19] | small | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | -0.53 | 1 | = 0.830 | -0.48 [-0.82, 0.72] | small | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | 0.32 | 23 | = 0.884 | 0.07 [-0.36, 0.49] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.15 | 23 | = 0.884 | 0.03 [-0.39, 0.45] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 1.06 | 23 | = 0.884 | 0.23 [-0.21, 0.64] | small | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 0.83 | 23 | = 0.884 | 0.21 [-0.26, 0.59] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.18 | 23 | = 0.884 | -0.03 [-0.46, 0.39] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.93 | 23 | = 0.884 | 0.18 [-0.24, 0.62] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 0.45 | 23 | = 0.884 | 0.13 [-0.33, 0.52] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 1.09 | 23 | = 0.884 | 0.20 [-0.20, 0.65] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.60 | 23 | = 0.884 | 0.15 [-0.30, 0.55] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | -0.36 | 23 | = 0.884 | -0.09 [-0.50, 0.35] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -269,12 +269,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 966.09, BIC = 988.12
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 1.49, *SE* = 3.554, *z* = 0.420, *p* = 0.675
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -1.13, *SE* = 3.731, *z* = -0.304, *p* = 0.761
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -1.38, *SE* = 3.668, *z* = -0.376, *p* = 0.707
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 2.79, *SE* = 3.671, *z* = 0.761, *p* = 0.447
-- **SNR**: *β* = -0.15, *SE* = 0.302, *z* = -0.493, *p* = 0.622
+- AIC = 996.29, BIC = 1018.59
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 1.41, *SE* = 3.397, *z* = 0.414, *p* = 0.679
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -1.14, *SE* = 3.561, *z* = -0.319, *p* = 0.750
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -1.35, *SE* = 3.497, *z* = -0.387, *p* = 0.699
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 2.11, *SE* = 3.514, *z* = 0.601, *p* = 0.548
+- **SNR**: *β* = -0.16, *SE* = 0.296, *z* = -0.544, *p* = 0.587
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -287,16 +287,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -1.49 | 3.55 | -0.42 | 0.675 | 0.996 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 1.13 | 3.73 | 0.30 | 0.761 | 0.996 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 1.38 | 3.67 | 0.38 | 0.707 | 0.996 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -2.79 | 3.67 | -0.76 | 0.447 | 0.987 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 2.62 | 3.59 | 0.73 | 0.465 | 0.987 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 2.87 | 3.56 | 0.81 | 0.420 | 0.987 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -1.30 | 3.55 | -0.37 | 0.714 | 0.996 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.25 | 3.52 | 0.07 | 0.944 | 0.996 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | -3.93 | 3.51 | -1.12 | 0.263 | 0.936 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | -4.17 | 3.50 | -1.19 | 0.234 | 0.930 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -1.41 | 3.40 | -0.41 | 0.679 | 0.997 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 1.14 | 3.56 | 0.32 | 0.750 | 0.997 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 1.35 | 3.50 | 0.39 | 0.699 | 0.997 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -2.11 | 3.51 | -0.60 | 0.548 | 0.991 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 2.54 | 3.43 | 0.74 | 0.459 | 0.987 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 2.76 | 3.40 | 0.81 | 0.416 | 0.987 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -0.71 | 3.41 | -0.21 | 0.836 | 0.997 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.22 | 3.37 | 0.06 | 0.949 | 0.997 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | -3.25 | 3.37 | -0.97 | 0.334 | 0.974 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | -3.47 | 3.36 | -1.03 | 0.303 | 0.973 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -304,7 +304,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.38, *p* = 0.820, η²_G = 0.006
+- *F* = 0.38, *p* = 0.820, η²_G = 0.005
 - Greenhouse-Geisser corrected: *p* = 0.748 (ε = 0.689)
 - **Interpretation:** The main effect of condition was **not significant**.
 
@@ -314,16 +314,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.56 | 22 | = 0.933 | -0.10 [-0.55, 0.32] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.14 | 22 | = 0.933 | 0.03 [-0.40, 0.46] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 0.38 | 22 | = 0.933 | 0.05 [-0.35, 0.51] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -0.76 | 22 | = 0.933 | -0.17 [-0.59, 0.28] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.78 | 22 | = 0.933 | 0.12 [-0.27, 0.60] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.72 | 22 | = 0.933 | 0.13 [-0.28, 0.59] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | -0.30 | 22 | = 0.933 | -0.06 [-0.50, 0.37] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 0.09 | 22 | = 0.933 | 0.02 [-0.41, 0.45] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.92 | 22 | = 0.933 | -0.19 [-0.63, 0.25] | negligible | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | -0.76 | 22 | = 0.933 | -0.19 [-0.59, 0.28] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.56 | 23 | = 0.933 | -0.09 [-0.54, 0.31] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.14 | 23 | = 0.933 | 0.03 [-0.39, 0.45] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 0.38 | 23 | = 0.933 | 0.04 [-0.35, 0.50] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -0.76 | 23 | = 0.933 | -0.16 [-0.58, 0.27] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.78 | 23 | = 0.933 | 0.11 [-0.27, 0.58] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.72 | 23 | = 0.933 | 0.12 [-0.28, 0.57] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | -0.30 | 23 | = 0.933 | -0.05 [-0.48, 0.36] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 0.09 | 23 | = 0.933 | 0.02 [-0.40, 0.44] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.92 | 23 | = 0.933 | -0.17 [-0.61, 0.24] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | -0.76 | 23 | = 0.933 | -0.18 [-0.58, 0.27] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -333,12 +333,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 396.59, BIC = 418.62
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = -0.30, *SE* = 0.285, *z* = -1.044, *p* = 0.297
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -0.98, *SE* = 0.300, *z* = -3.284, *p* = 0.001
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -1.02, *SE* = 0.294, *z* = -3.461, *p* = 0.001
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -1.07, *SE* = 0.295, *z* = -3.617, *p* < .001
-- **SNR**: *β* = -0.17, *SE* = 0.025, *z* = -6.722, *p* < .001
+- AIC = 414.97, BIC = 437.27
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = -0.24, *SE* = 0.288, *z* = -0.843, *p* = 0.399
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -0.99, *SE* = 0.302, *z* = -3.280, *p* = 0.001
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -0.86, *SE* = 0.296, *z* = -2.903, *p* = 0.004
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -1.02, *SE* = 0.298, *z* = -3.428, *p* = 0.001
+- **SNR**: *β* = -0.17, *SE* = 0.026, *z* = -6.446, *p* < .001
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -351,16 +351,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | 0.30 | 0.28 | 1.04 | 0.297 | 0.755 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 0.98 | 0.30 | 3.28 | 0.001 | 0.008 | ** |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 1.02 | 0.29 | 3.46 | < .001 | 0.005 | ** |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 1.07 | 0.30 | 3.62 | < .001 | 0.003 | ** |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 0.69 | 0.29 | 2.38 | 0.017 | 0.083 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 0.72 | 0.29 | 2.53 | 0.011 | 0.066 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 0.77 | 0.29 | 2.70 | 0.007 | 0.047 | * |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.03 | 0.28 | 0.12 | 0.902 | 0.987 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.08 | 0.28 | 0.30 | 0.767 | 0.987 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.05 | 0.28 | 0.17 | 0.863 | 0.987 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | 0.24 | 0.29 | 0.84 | 0.399 | 0.870 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 0.99 | 0.30 | 3.28 | 0.001 | 0.009 | ** |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 0.86 | 0.30 | 2.90 | 0.004 | 0.029 | * |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 1.02 | 0.30 | 3.43 | < .001 | 0.006 | ** |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 0.75 | 0.29 | 2.57 | 0.010 | 0.059 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 0.62 | 0.29 | 2.15 | 0.032 | 0.149 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 0.78 | 0.29 | 2.70 | 0.007 | 0.048 | * |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -0.13 | 0.29 | -0.46 | 0.648 | 0.922 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.03 | 0.28 | 0.11 | 0.915 | 0.922 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.16 | 0.28 | 0.56 | 0.572 | 0.922 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -368,8 +368,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.89, *p* = 0.474, η²_G = 0.009
-- Greenhouse-Geisser corrected: *p* = 0.449 (ε = 0.725)
+- *F* = 0.83, *p* = 0.509, η²_G = 0.008
+- Greenhouse-Geisser corrected: *p* = 0.481 (ε = 0.747)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -378,16 +378,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | 0.10 | 22 | = 0.933 | 0.01 [-0.41, 0.45] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.83 | 22 | = 0.796 | 0.14 [-0.26, 0.61] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 1.13 | 22 | = 0.710 | 0.19 [-0.20, 0.67] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 1.61 | 22 | = 0.710 | 0.23 [-0.11, 0.78] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.72 | 22 | = 0.796 | 0.13 [-0.28, 0.59] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 1.10 | 22 | = 0.710 | 0.18 [-0.21, 0.67] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.42 | 22 | = 0.710 | 0.22 [-0.15, 0.74] | small | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 0.46 | 22 | = 0.811 | 0.06 [-0.34, 0.53] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.51 | 22 | = 0.811 | 0.09 [-0.33, 0.54] | negligible | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 0.09 | 22 | = 0.933 | 0.01 [-0.41, 0.45] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.14 | 23 | = 0.973 | -0.01 [-0.45, 0.39] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.99 | 23 | = 0.686 | 0.16 [-0.22, 0.63] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | 0.84 | 23 | = 0.686 | 0.14 [-0.25, 0.60] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 1.61 | 23 | = 0.680 | 0.22 [-0.10, 0.76] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.96 | 23 | = 0.686 | 0.17 [-0.23, 0.62] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.93 | 23 | = 0.686 | 0.15 [-0.24, 0.61] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.54 | 23 | = 0.680 | 0.23 [-0.12, 0.75] | small | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.03 | 23 | = 0.973 | -0.01 [-0.43, 0.42] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.33 | 23 | = 0.927 | 0.06 [-0.35, 0.49] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 0.35 | 23 | = 0.927 | 0.06 [-0.35, 0.49] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -400,12 +400,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 440.32, BIC = 457.96
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = -1.25, *SE* = 1.623, *z* = -0.773, *p* = 0.440
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -0.47, *SE* = 1.664, *z* = -0.285, *p* = 0.775
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = -0.65, *SE* = 1.691, *z* = -0.382, *p* = 0.702
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -1.17, *SE* = 1.692, *z* = -0.691, *p* = 0.490
-- **SNR**: *β* = 0.20, *SE* = 0.239, *z* = 0.836, *p* = 0.403
+- AIC = 815.32, BIC = 837.62
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.66, *SE* = 1.634, *z* = 0.405, *p* = 0.686
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = -1.26, *SE* = 1.648, *z* = -0.767, *p* = 0.443
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 0.76, *SE* = 1.645, *z* = 0.459, *p* = 0.646
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -1.27, *SE* = 1.649, *z* = -0.768, *p* = 0.442
+- **SNR**: *β* = -0.25, *SE* = 0.273, *z* = -0.908, *p* = 0.364
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -418,16 +418,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | 1.25 | 1.62 | 0.77 | 0.440 | 0.997 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 0.47 | 1.66 | 0.29 | 0.775 | 1.000 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | 0.65 | 1.69 | 0.38 | 0.702 | 1.000 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 1.17 | 1.69 | 0.69 | 0.490 | 0.998 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -0.78 | 1.74 | -0.45 | 0.654 | 1.000 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.61 | 1.76 | -0.34 | 0.731 | 1.000 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -0.08 | 1.75 | -0.05 | 0.961 | 1.000 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.17 | 1.76 | 0.10 | 0.922 | 1.000 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.69 | 1.72 | 0.40 | 0.687 | 1.000 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.52 | 1.74 | 0.30 | 0.763 | 1.000 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.66 | 1.63 | -0.40 | 0.686 | 0.984 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | 1.26 | 1.65 | 0.77 | 0.443 | 0.970 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -0.75 | 1.64 | -0.46 | 0.646 | 0.984 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 1.27 | 1.65 | 0.77 | 0.442 | 0.970 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 1.92 | 1.63 | 1.18 | 0.236 | 0.909 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.09 | 1.62 | -0.06 | 0.954 | 0.998 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 1.93 | 1.63 | 1.19 | 0.236 | 0.909 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -2.02 | 1.62 | -1.24 | 0.214 | 0.909 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.00 | 1.62 | 0.00 | 0.999 | 0.999 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 2.02 | 1.62 | 1.25 | 0.213 | 0.909 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -435,7 +435,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.35, *p* = 0.293, η²_G = 0.091
+- *F* = 0.67, *p* = 0.618, η²_G = 0.011
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -444,16 +444,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | 1.00 | 4 | = 0.467 | 0.16 [-0.22, 1.20] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 1.37 | 4 | = 0.467 | 0.60 [-0.76, 0.67] | medium | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -1.00 | 4 | = 0.467 | -0.20 [-0.43, 0.94] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 1.18 | 4 | = 0.467 | 0.45 [-0.54, 0.90] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.88 | 4 | = 0.474 | 0.41 [-0.84, 0.84] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -1.63 | 4 | = 0.467 | -0.34 [-1.45, 0.23] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.00 | 4 | = 0.467 | 0.27 [-0.57, 1.13] | small | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -1.58 | 4 | = 0.467 | -0.80 [-0.91, 0.77] | large | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.25 | 4 | = 0.815 | -0.13 [-0.91, 0.76] | negligible | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 2.14 | 4 | = 0.467 | 0.64 [-0.35, 1.43] | medium | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.48 | 23 | = 0.795 | -0.10 [-0.52, 0.33] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | 0.50 | 23 | = 0.795 | 0.12 [-0.32, 0.53] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -0.78 | 23 | = 0.795 | -0.12 [-0.58, 0.27] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 0.60 | 23 | = 0.795 | 0.12 [-0.30, 0.55] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.93 | 23 | = 0.795 | 0.23 [-0.24, 0.62] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -0.11 | 23 | = 1.000 | -0.02 [-0.44, 0.40] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.37 | 23 | = 0.795 | 0.23 [-0.15, 0.71] | small | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -1.02 | 23 | = 0.795 | -0.24 [-0.64, 0.22] | small | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.00 | 23 | = 1.000 | 0.00 [-0.42, 0.42] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 1.91 | 23 | = 0.693 | 0.24 [-0.05, 0.83] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -463,12 +463,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 195.83, BIC = 213.46
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.37, *SE* = 0.286, *z* = 1.305, *p* = 0.192
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 0.67, *SE* = 0.291, *z* = 2.290, *p* = 0.022
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 1.40, *SE* = 0.298, *z* = 4.700, *p* < .001
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 0.57, *SE* = 0.298, *z* = 1.907, *p* = 0.057
-- **SNR**: *β* = 0.23, *SE* = 0.043, *z* = 5.344, *p* < .001
+- AIC = 437.93, BIC = 460.23
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = -0.11, *SE* = 0.338, *z* = -0.330, *p* = 0.741
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 0.23, *SE* = 0.342, *z* = 0.661, *p* = 0.508
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 0.44, *SE* = 0.341, *z* = 1.301, *p* = 0.193
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 0.12, *SE* = 0.342, *z* = 0.345, *p* = 0.730
+- **SNR**: *β* = 0.11, *SE* = 0.059, *z* = 1.838, *p* = 0.066
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -481,16 +481,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.37 | 0.29 | -1.31 | 0.192 | 0.573 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -0.67 | 0.29 | -2.29 | 0.022 | 0.125 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -1.40 | 0.30 | -4.70 | < .001 | < .001 | *** |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -0.57 | 0.30 | -1.91 | 0.057 | 0.253 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -0.29 | 0.30 | -0.97 | 0.331 | 0.700 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -1.03 | 0.31 | -3.34 | < .001 | 0.007 | ** |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -0.20 | 0.31 | -0.64 | 0.523 | 0.773 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -0.74 | 0.31 | -2.39 | 0.017 | 0.111 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.10 | 0.30 | 0.33 | 0.745 | 0.773 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.83 | 0.31 | 2.73 | 0.006 | 0.050 | * |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | 0.11 | 0.34 | 0.33 | 0.741 | 0.983 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -0.23 | 0.34 | -0.66 | 0.508 | 0.983 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -0.44 | 0.34 | -1.30 | 0.193 | 0.855 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -0.12 | 0.34 | -0.34 | 0.730 | 0.983 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -0.34 | 0.34 | -1.00 | 0.316 | 0.952 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.56 | 0.34 | -1.65 | 0.099 | 0.647 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -0.23 | 0.34 | -0.68 | 0.495 | 0.983 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -0.22 | 0.34 | -0.65 | 0.518 | 0.983 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 0.11 | 0.34 | 0.32 | 0.747 | 0.983 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 0.33 | 0.34 | 0.97 | 0.332 | 0.952 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -498,7 +498,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.73, *p* = 0.585, η²_G = 0.039
+- *F* = 0.62, *p* = 0.648, η²_G = 0.009
+- Greenhouse-Geisser corrected: *p* = 0.558 (ε = 0.560)
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -507,16 +508,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.49 | 4 | = 0.793 | -0.18 [-0.71, 0.63] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -1.12 | 4 | = 0.793 | -0.26 [-1.19, 0.31] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -0.90 | 4 | = 0.793 | -0.39 [-1.42, 0.07] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 0.28 | 4 | = 0.793 | 0.11 [-0.87, 0.57] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.33 | 4 | = 0.793 | -0.10 [-0.94, 0.73] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -0.60 | 4 | = 0.793 | -0.22 [-1.22, 0.38] | small | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 1.73 | 4 | = 0.793 | 0.32 [-0.04, 2.00] | small | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.33 | 4 | = 0.793 | -0.11 [-1.14, 0.57] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 1.06 | 4 | = 0.793 | 0.38 [-0.53, 1.18] | small | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 1.71 | 4 | = 0.793 | 0.52 [-0.36, 1.43] | medium | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | 0.95 | 23 | = 0.789 | 0.11 [-0.23, 0.62] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -0.42 | 23 | = 0.789 | -0.07 [-0.51, 0.34] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -1.17 | 23 | = 0.789 | -0.19 [-0.67, 0.19] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -0.01 | 23 | = 0.996 | -0.00 [-0.42, 0.42] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.93 | 23 | = 0.789 | -0.17 [-0.62, 0.24] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -1.90 | 23 | = 0.701 | -0.27 [-0.83, 0.05] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | -0.44 | 23 | = 0.789 | -0.10 [-0.51, 0.33] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.56 | 23 | = 0.789 | -0.12 [-0.54, 0.31] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 0.38 | 23 | = 0.789 | 0.06 [-0.35, 0.50] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 0.68 | 23 | = 0.789 | 0.17 [-0.29, 0.56] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -529,12 +530,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 829.22, BIC = 848.66
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 8.63, *SE* = 8.579, *z* = 1.006, *p* = 0.314
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 7.07, *SE* = 8.707, *z* = 0.811, *p* = 0.417
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 17.47, *SE* = 9.161, *z* = 1.907, *p* = 0.056
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 1.04, *SE* = 10.898, *z* = 0.095, *p* = 0.924
-- **SNR**: *β* = -1.16, *SE* = 0.721, *z* = -1.606, *p* = 0.108
+- AIC = 1185.22, BIC = 1207.52
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 5.51, *SE* = 8.163, *z* = 0.676, *p* = 0.499
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 10.07, *SE* = 8.248, *z* = 1.220, *p* = 0.222
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 15.40, *SE* = 8.365, *z* = 1.841, *p* = 0.066
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = 10.30, *SE* = 8.543, *z* = 1.205, *p* = 0.228
+- **SNR**: *β* = -1.05, *SE* = 0.643, *z* = -1.636, *p* = 0.102
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -547,16 +548,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -8.63 | 8.58 | -1.01 | 0.314 | 0.929 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -7.07 | 8.71 | -0.81 | 0.417 | 0.933 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -17.47 | 9.16 | -1.91 | 0.056 | 0.441 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -1.04 | 10.90 | -0.10 | 0.924 | 0.980 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | 1.57 | 8.81 | 0.18 | 0.859 | 0.980 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -8.84 | 9.15 | -0.97 | 0.334 | 0.929 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 7.60 | 10.62 | 0.72 | 0.474 | 0.933 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -10.41 | 9.17 | -1.13 | 0.257 | 0.907 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 6.03 | 10.37 | 0.58 | 0.561 | 0.933 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 16.43 | 10.51 | 1.56 | 0.118 | 0.677 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -5.52 | 8.16 | -0.68 | 0.499 | 0.984 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -10.07 | 8.25 | -1.22 | 0.222 | 0.896 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -15.40 | 8.37 | -1.84 | 0.066 | 0.493 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | -10.30 | 8.54 | -1.21 | 0.228 | 0.896 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -4.55 | 8.18 | -0.56 | 0.578 | 0.984 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -9.88 | 8.27 | -1.20 | 0.232 | 0.896 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | -4.78 | 8.41 | -0.57 | 0.569 | 0.984 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -5.33 | 8.17 | -0.65 | 0.514 | 0.984 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | -0.23 | 8.25 | -0.03 | 0.978 | 0.984 | n.s. |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 5.10 | 8.18 | 0.62 | 0.533 | 0.984 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -564,8 +565,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.56, *p* = 0.055, η²_G = 0.105
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
+- *F* = 1.46, *p* = 0.221, η²_G = 0.036
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -573,16 +574,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | 0.15 | 9 | = 0.883 | 0.05 [-0.86, 0.16] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -0.27 | 9 | = 0.882 | -0.09 [-0.78, 0.26] | negligible | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -3.44 | 9 | = 0.074 | -0.99 [-1.44, -0.21] | large | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -0.51 | 9 | = 0.882 | -0.19 [-0.99, 0.39] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.44 | 9 | = 0.882 | -0.14 [-0.54, 0.53] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -2.80 | 9 | = 0.099 | -1.00 [-0.83, 0.29] | large | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | -0.89 | 9 | = 0.790 | -0.23 [-1.04, 0.34] | small | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -2.58 | 9 | = 0.099 | -0.81 [-1.24, 0.01] | large | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.34 | 9 | = 0.882 | -0.10 [-0.58, 0.69] | negligible | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 1.91 | 9 | = 0.220 | 0.63 [-0.17, 1.38] | medium | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -0.79 | 23 | = 0.627 | -0.18 [-0.59, 0.26] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -1.70 | 23 | = 0.489 | -0.36 [-0.78, 0.09] | small | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -3.13 | 23 | = 0.047 | -0.59 [-1.10, -0.17] | medium | * |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | -1.50 | 23 | = 0.489 | -0.40 [-0.74, 0.13] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.68 | 23 | = 0.633 | -0.17 [-0.56, 0.29] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | -1.28 | 23 | = 0.536 | -0.38 [-0.69, 0.17] | small | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | -0.85 | 23 | = 0.627 | -0.22 [-0.60, 0.25] | small | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.83 | 23 | = 0.627 | -0.20 [-0.59, 0.26] | small | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | -0.25 | 23 | = 0.802 | -0.06 [-0.47, 0.37] | negligible | n.s. |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 0.46 | 23 | = 0.721 | 0.12 [-0.33, 0.52] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -592,12 +593,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 354.43, BIC = 373.88
-- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 1.00, *SE* = 0.460, *z* = 2.174, *p* = 0.030
-- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 1.30, *SE* = 0.469, *z* = 2.773, *p* = 0.006
-- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 1.51, *SE* = 0.496, *z* = 3.047, *p* = 0.002
-- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -0.18, *SE* = 0.606, *z* = -0.304, *p* = 0.761
-- **SNR**: *β* = 0.20, *SE* = 0.042, *z* = 4.918, *p* < .001
+- AIC = 530.13, BIC = 552.43
+- **Ratio 0.67 (2:3) vs Ratio 0.5 (1:2)**: *β* = 0.39, *SE* = 0.444, *z* = 0.868, *p* = 0.386
+- **Ratio 0.75 (3:4) vs Ratio 0.5 (1:2)**: *β* = 0.68, *SE* = 0.449, *z* = 1.515, *p* = 0.130
+- **Ratio 0.8 (4:5) vs Ratio 0.5 (1:2)**: *β* = 0.37, *SE* = 0.457, *z* = 0.817, *p* = 0.414
+- **Ratio 0.83 (5:6) vs Ratio 0.5 (1:2)**: *β* = -1.45, *SE* = 0.468, *z* = -3.098, *p* = 0.002
+- **SNR**: *β* = 0.11, *SE* = 0.038, *z* = 2.858, *p* = 0.004
 
 _Reference condition: **Ratio 0.5 (1:2)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -610,16 +611,16 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -1.00 | 0.46 | -2.17 | 0.030 | 0.166 | n.s. |
-| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -1.30 | 0.47 | -2.77 | 0.006 | 0.044 | * |
-| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -1.51 | 0.50 | -3.05 | 0.002 | 0.023 | * |
-| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 0.18 | 0.61 | 0.30 | 0.761 | 0.891 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -0.30 | 0.47 | -0.64 | 0.522 | 0.891 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | -0.51 | 0.49 | -1.04 | 0.297 | 0.755 | n.s. |
-| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 1.18 | 0.58 | 2.04 | 0.042 | 0.191 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | -0.21 | 0.49 | -0.43 | 0.669 | 0.891 | n.s. |
-| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 1.49 | 0.56 | 2.63 | 0.008 | 0.058 | n.s. |
-| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 1.70 | 0.57 | 2.98 | 0.003 | 0.025 | * |
+| Ratio 0.5 (1:2) - Ratio 0.67 (2:3) | -0.39 | 0.44 | -0.87 | 0.386 | 0.912 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.75 (3:4) | -0.68 | 0.45 | -1.52 | 0.130 | 0.565 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.8 (4:5) | -0.37 | 0.46 | -0.82 | 0.414 | 0.912 | n.s. |
+| Ratio 0.5 (1:2) - Ratio 0.83 (5:6) | 1.45 | 0.47 | 3.10 | 0.002 | 0.014 | * |
+| Ratio 0.67 (2:3) - Ratio 0.75 (3:4) | -0.30 | 0.45 | -0.66 | 0.507 | 0.912 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.8 (4:5) | 0.01 | 0.45 | 0.03 | 0.979 | 0.979 | n.s. |
+| Ratio 0.67 (2:3) - Ratio 0.83 (5:6) | 1.83 | 0.46 | 3.99 | < .001 | < .001 | *** |
+| Ratio 0.75 (3:4) - Ratio 0.8 (4:5) | 0.31 | 0.44 | 0.69 | 0.489 | 0.912 | n.s. |
+| Ratio 0.75 (3:4) - Ratio 0.83 (5:6) | 2.13 | 0.45 | 4.74 | < .001 | < .001 | *** |
+| Ratio 0.8 (4:5) - Ratio 0.83 (5:6) | 1.82 | 0.44 | 4.10 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 10 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -627,9 +628,9 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 3.22, *p* = 0.023, η²_G = 0.132
-- Greenhouse-Geisser corrected: *p* = 0.069 (ε = 0.460)
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 8.30, *p* < .001, η²_G = 0.058
+- Greenhouse-Geisser corrected: *p* < .001 (ε = 0.665)
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -637,16 +638,16 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -2.28 | 9 | = 0.163 | -0.35 [-0.99, 0.06] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -0.90 | 9 | = 0.563 | -0.22 [-0.98, 0.10] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -1.07 | 9 | = 0.520 | -0.32 [-0.95, 0.16] | small | n.s. |
-| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 2.07 | 9 | = 0.171 | 0.78 [-0.04, 1.46] | medium | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | 0.32 | 9 | = 0.915 | 0.07 [-0.62, 0.45] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.11 | 9 | = 0.915 | 0.04 [-0.51, 0.59] | negligible | n.s. |
-| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 2.37 | 9 | = 0.163 | 0.99 [0.02, 1.57] | large | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | -0.13 | 9 | = 0.915 | -0.04 [-0.52, 0.63] | negligible | n.s. |
-| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 1.79 | 9 | = 0.213 | 0.82 [-0.07, 1.32] | large | n.s. |
-| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 3.53 | 9 | = 0.064 | 0.98 [0.21, 2.03] | large | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.67 (2:3) | -1.18 | 23 | = 0.417 | -0.09 [-0.67, 0.19] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.75 (3:4) | -1.47 | 23 | = 0.308 | -0.14 [-0.73, 0.13] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.8 (4:5) | -0.13 | 23 | = 0.899 | -0.02 [-0.45, 0.40] | negligible | n.s. |
+| Ratio 0.5 (1:2) vs Ratio 0.83 (5:6) | 4.16 | 23 | = 0.004 | 0.61 [0.36, 1.34] | medium | ** |
+| Ratio 0.67 (2:3) vs Ratio 0.75 (3:4) | -0.42 | 23 | = 0.757 | -0.04 [-0.51, 0.34] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.8 (4:5) | 0.56 | 23 | = 0.726 | 0.07 [-0.31, 0.54] | negligible | n.s. |
+| Ratio 0.67 (2:3) vs Ratio 0.83 (5:6) | 3.86 | 23 | = 0.004 | 0.64 [0.31, 1.27] | medium | ** |
+| Ratio 0.75 (3:4) vs Ratio 0.8 (4:5) | 0.79 | 23 | = 0.629 | 0.11 [-0.26, 0.59] | negligible | n.s. |
+| Ratio 0.75 (3:4) vs Ratio 0.83 (5:6) | 3.66 | 23 | = 0.004 | 0.69 [0.27, 1.22] | medium | ** |
+| Ratio 0.8 (4:5) vs Ratio 0.83 (5:6) | 3.63 | 23 | = 0.004 | 0.55 [0.26, 1.22] | medium | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -658,8 +659,11 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**P3b latency:** Marginal trend toward condition differences (*p* = 0.055)
-**P3b amplitude:** Significant main effect of condition (*p* = 0.023) (no significant pairwise comparisons)
+**P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Ratio 0.5 (1:2) showed greater amplitude than Ratio 0.83 (5:6) (*d* = 0.61)
+  - Ratio 0.67 (2:3) showed greater amplitude than Ratio 0.83 (5:6) (*d* = 0.64)
+  - Ratio 0.75 (3:4) showed greater amplitude than Ratio 0.83 (5:6) (*d* = 0.69)
+  - Ratio 0.8 (4:5) showed greater amplitude than Ratio 0.83 (5:6) (*d* = 0.55)
 
 ### Research Implications
 

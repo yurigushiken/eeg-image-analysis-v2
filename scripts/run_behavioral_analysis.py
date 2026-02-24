@@ -141,15 +141,19 @@ def _save_plot_rt_distance(rt_df: pd.DataFrame, out_path: Path) -> None:
         rt_df.groupby(["subject", "distance"], as_index=False)["rt_ms"]
         .mean()
     )
-    group = rt_df.groupby("distance")["rt_ms"].agg(["mean", "sem"]).reset_index()
+    group = (
+        subj_means.groupby("distance")["rt_ms"]
+        .agg(["mean", "std", "count"])
+        .reset_index()
+    )
+    group["sem"] = group["std"] / np.sqrt(group["count"])
+    group["ci95"] = stats.t.ppf(0.975, group["count"] - 1) * group["sem"]
 
     fig, ax = plt.subplots(figsize=(7.4, 5.0))
-    for sub, sub_df in subj_means.groupby("subject"):
-        ax.plot(sub_df["distance"], sub_df["rt_ms"], color="#8f8f8f", alpha=0.30, linewidth=1)
     ax.errorbar(
         group["distance"],
         group["mean"],
-        yerr=group["sem"] * 1.96,
+        yerr=group["ci95"],
         color="#1f77b4",
         marker="o",
         markersize=7,
@@ -187,8 +191,6 @@ def _save_plot_accuracy_direction(change_df: pd.DataFrame, out_path: Path) -> No
 
     fig, ax = plt.subplots(figsize=(6.2, 5.0))
     x = np.array([0, 1])
-    for _, row in sub_acc.iterrows():
-        ax.plot(x, [row["I"], row["D"]], color="#8f8f8f", alpha=0.35, linewidth=1)
     ax.errorbar(
         x,
         [means["I"], means["D"]],
@@ -215,7 +217,13 @@ def _save_plot_accuracy_direction(change_df: pd.DataFrame, out_path: Path) -> No
 
 def _save_poster_figure(rt_df: pd.DataFrame, change_df: pd.DataFrame, out_path: Path) -> None:
     subj_rt = rt_df.groupby(["subject", "distance"], as_index=False)["rt_ms"].mean()
-    rt_group = rt_df.groupby("distance")["rt_ms"].agg(["mean", "sem"]).reset_index()
+    rt_group = (
+        subj_rt.groupby("distance")["rt_ms"]
+        .agg(["mean", "std", "count"])
+        .reset_index()
+    )
+    rt_group["sem"] = rt_group["std"] / np.sqrt(rt_group["count"])
+    rt_group["ci95"] = stats.t.ppf(0.975, rt_group["count"] - 1) * rt_group["sem"]
     sub_acc = (
         change_df.groupby(["subject", "direction_clean"], as_index=False)["acc"]
         .mean()
@@ -226,12 +234,10 @@ def _save_poster_figure(rt_df: pd.DataFrame, change_df: pd.DataFrame, out_path: 
     fig, axes = plt.subplots(1, 2, figsize=(12.8, 5.2))
 
     ax = axes[0]
-    for _, sub_df in subj_rt.groupby("subject"):
-        ax.plot(sub_df["distance"], sub_df["rt_ms"], color="#9a9a9a", alpha=0.25, linewidth=1)
     ax.errorbar(
         rt_group["distance"],
         rt_group["mean"],
-        yerr=rt_group["sem"] * 1.96,
+        yerr=rt_group["ci95"],
         color="#1f77b4",
         marker="o",
         markersize=7,
@@ -246,8 +252,6 @@ def _save_poster_figure(rt_df: pd.DataFrame, change_df: pd.DataFrame, out_path: 
 
     ax = axes[1]
     x = np.array([0, 1])
-    for _, row in sub_acc.iterrows():
-        ax.plot(x, [row["I"], row["D"]], color="#9a9a9a", alpha=0.30, linewidth=1)
     means = [sub_acc["I"].mean(), sub_acc["D"].mean()]
     sems = [stats.sem(sub_acc["I"]), stats.sem(sub_acc["D"])]
     ax.errorbar(
@@ -390,7 +394,7 @@ def run_analysis(
             f"mean slope = {rt_subj['mean_slope_ms_per_distance']:.2f} ms/step, "
             f"95% CI [{rt_subj['ci95_low']:.2f}, {rt_subj['ci95_high']:.2f}], "
             f"t({rt_subj['n_subjects'] - 1}) = {rt_subj['t']:.3f}, "
-            f"p(one-sided, negative slope) = {rt_subj['p_one_sided_negative_slope']:.4g}."
+            f"p(two-sided) = {rt_subj['p_two_sided']:.4g}."
         ),
         "",
         "## Hypothesis 2: Decreasing vs Increasing Accuracy",
@@ -404,7 +408,7 @@ def run_analysis(
             f"mean = {acc_subj['mean_diff_D_minus_I']:.4f}, "
             f"95% CI [{acc_subj['ci95_low']:.4f}, {acc_subj['ci95_high']:.4f}], "
             f"t({acc_subj['n_subjects'] - 1}) = {acc_subj['t']:.3f}, "
-            f"p(one-sided, D>I) = {acc_subj['p_one_sided_D_gt_I']:.4g}."
+            f"p(two-sided) = {acc_subj['p_two_sided']:.4g}."
         ),
         "",
         "## Output Files",

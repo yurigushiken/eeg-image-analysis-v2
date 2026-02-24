@@ -15,6 +15,7 @@ import numpy as np
 from pathlib import Path
 from typing import Union, Optional, Dict, Any, Tuple
 import json
+import re
 
 try:
     import pingouin as pg
@@ -98,7 +99,8 @@ class ERPStatistics:
         component: Optional[str] = None,
         condition: Optional[str] = None,
         min_snr: Optional[float] = None,
-        dropna: bool = True
+        dropna: bool = True,
+        dropna_subset: Optional[list[str]] = None,
     ) -> pd.DataFrame:
         """
         Filter data by component, condition, and/or SNR threshold.
@@ -113,6 +115,9 @@ class ERPStatistics:
             Minimum SNR threshold. Subjects below this will be excluded.
         dropna : bool, default=True
             Whether to drop rows with NaN values.
+        dropna_subset : list[str], optional
+            Column subset to consider for NaN dropping. If None and dropna=True,
+            rows with NaN in any column are removed.
 
         Returns
         -------
@@ -131,9 +136,28 @@ class ERPStatistics:
             filtered = filtered[filtered['snr'] >= min_snr]
 
         if dropna:
-            filtered = filtered.dropna()
+            if dropna_subset:
+                filtered = filtered.dropna(subset=dropna_subset)
+            else:
+                filtered = filtered.dropna()
 
         return filtered
+
+    @staticmethod
+    def _required_columns_for_fixed_effects(
+        fixed_formula: str,
+        available_columns: list[str],
+    ) -> list[str]:
+        """
+        Infer which dataframe columns are referenced by a fixed-effects formula.
+
+        This keeps NaN filtering scoped to model-relevant columns.
+        """
+        required = []
+        for col in available_columns:
+            if re.search(rf"\b{re.escape(col)}\b", fixed_formula):
+                required.append(col)
+        return required
 
     def run_anova(
         self,
@@ -189,17 +213,24 @@ class ERPStatistics:
         if pg is None:
             raise ImportError("pingouin is required for ANOVA. Install with: pip install pingouin")
 
-        # Filter data
-        filtered = self.filter_data(component=component, **filter_kwargs)
-
-        if len(filtered) == 0:
-            raise ValueError(f"No data available for component '{component}' after filtering")
+        local_filters = dict(filter_kwargs)
+        dropna = bool(local_filters.pop("dropna", True))
+        filtered = self.filter_data(component=component, dropna=False, **local_filters)
 
         # Check we have the required columns
         required = [subject, within, dv]
         missing = [col for col in required if col not in filtered.columns]
         if missing:
             raise ValueError(f"Missing columns for ANOVA: {missing}")
+
+        if dropna:
+            filtered = filtered.dropna(subset=required)
+
+        if len(filtered) == 0:
+            raise ValueError(
+                f"No data available for component '{component}' after filtering "
+                f"and NaN handling"
+            )
 
         # Run repeated-measures ANOVA
         result = pg.rm_anova(
@@ -274,11 +305,23 @@ class ERPStatistics:
         if pg is None:
             raise ImportError("pingouin is required for pairwise tests. Install with: pip install pingouin")
 
-        # Filter data
-        filtered = self.filter_data(component=component, **filter_kwargs)
+        local_filters = dict(filter_kwargs)
+        dropna = bool(local_filters.pop("dropna", True))
+        filtered = self.filter_data(component=component, dropna=False, **local_filters)
+
+        required = [subject, within, dv]
+        missing = [col for col in required if col not in filtered.columns]
+        if missing:
+            raise ValueError(f"Missing columns for pairwise tests: {missing}")
+
+        if dropna:
+            filtered = filtered.dropna(subset=required)
 
         if len(filtered) == 0:
-            raise ValueError(f"No data available for component '{component}' after filtering")
+            raise ValueError(
+                f"No data available for component '{component}' after filtering "
+                f"and NaN handling"
+            )
 
         # Run pairwise t-tests
         result = pg.pairwise_tests(
@@ -350,15 +393,34 @@ class ERPStatistics:
         if mixedlm is None:
             raise ImportError("statsmodels is required for LMM. Install with: pip install statsmodels")
 
-        # Filter data - must drop NaN for LMM to work properly
-        filtered = self.filter_data(component=component, dropna=True, **filter_kwargs)
+        local_filters = dict(filter_kwargs)
+        dropna = bool(local_filters.pop("dropna", True))
+        filtered = self.filter_data(component=component, dropna=False, **local_filters)
 
         if len(filtered) == 0:
             raise ValueError(f"No data available for component '{component}' after filtering")
 
-        # Check we have the DV column
-        if dv not in filtered.columns:
-            raise ValueError(f"Dependent variable '{dv}' not found in data")
+        formula_columns = self._required_columns_for_fixed_effects(
+            fixed_formula=fixed,
+            available_columns=list(filtered.columns),
+        )
+        required = list(dict.fromkeys([dv, random] + formula_columns))
+        missing = [col for col in required if col not in filtered.columns]
+        if missing:
+            raise ValueError(f"Missing columns for LMM: {missing}")
+
+        if dropna:
+            filtered = filtered.dropna(subset=required)
+        elif filtered[required].isna().any().any():
+            raise ValueError(
+                "NaN values present in LMM-required columns. "
+                "Set dropna=True or provide complete data."
+            )
+
+        if len(filtered) == 0:
+            raise ValueError(
+                f"No data available for component '{component}' after NaN handling"
+            )
 
         # Sort by group variable and reset index (important for statsmodels)
         filtered = filtered.sort_values(by=[random]).reset_index(drop=True)
@@ -484,15 +546,34 @@ class ERPStatistics:
         if mixedlm is None:
             raise ImportError("statsmodels is required for LMM. Install with: pip install statsmodels")
 
-        # Filter data - must drop NaN for LMM to work properly
-        filtered = self.filter_data(component=component, dropna=True, **filter_kwargs)
+        local_filters = dict(filter_kwargs)
+        dropna = bool(local_filters.pop("dropna", True))
+        filtered = self.filter_data(component=component, dropna=False, **local_filters)
 
         if len(filtered) == 0:
             raise ValueError(f"No data available for component '{component}' after filtering")
 
-        # Check we have the DV column
-        if dv not in filtered.columns:
-            raise ValueError(f"Dependent variable '{dv}' not found in data")
+        formula_columns = self._required_columns_for_fixed_effects(
+            fixed_formula=fixed,
+            available_columns=list(filtered.columns),
+        )
+        required = list(dict.fromkeys([dv, random] + formula_columns))
+        missing = [col for col in required if col not in filtered.columns]
+        if missing:
+            raise ValueError(f"Missing columns for LMM pairwise: {missing}")
+
+        if dropna:
+            filtered = filtered.dropna(subset=required)
+        elif filtered[required].isna().any().any():
+            raise ValueError(
+                "NaN values present in LMM pairwise-required columns. "
+                "Set dropna=True or provide complete data."
+            )
+
+        if len(filtered) == 0:
+            raise ValueError(
+                f"No data available for component '{component}' after NaN handling"
+            )
 
         # Sort by group variable and reset index (important for statsmodels)
         filtered = filtered.sort_values(by=[random]).reset_index(drop=True)
@@ -687,10 +768,22 @@ class ERPStatistics:
         ...     groupby='condition'
         ... )
         """
-        filtered = self.filter_data(component=component, **filter_kwargs)
+        local_filters = dict(filter_kwargs)
+        dropna = bool(local_filters.pop("dropna", True))
+        filtered = self.filter_data(component=component, dropna=False, **local_filters)
+        required = [groupby, dv]
+        missing = [col for col in required if col not in filtered.columns]
+        if missing:
+            raise ValueError(f"Missing columns for descriptives: {missing}")
+
+        if dropna:
+            filtered = filtered.dropna(subset=required)
 
         if len(filtered) == 0:
-            raise ValueError(f"No data available for component '{component}' after filtering")
+            raise ValueError(
+                f"No data available for component '{component}' after filtering "
+                f"and NaN handling"
+            )
 
         descriptives = filtered.groupby(groupby)[dv].describe()
 

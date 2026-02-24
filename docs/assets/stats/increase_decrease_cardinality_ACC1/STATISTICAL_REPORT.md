@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:59:04
+**Generated:** 2026-02-23 19:26:12
 
 ---
 
@@ -41,17 +41,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | 110.89 ms | 6.26 | 1.48 | [92.00, 116.00] |
-| Decreasing (any step) | 17 | 106.59 ms | 7.74 | 1.88 | [96.00, 116.00] |
-| Increasing (any step) | 17 | 103.06 ms | 8.55 | 2.07 | [92.00, 116.00] |
+| Decreasing (any step) | 24 | 107.17 ms | 7.82 | 1.60 | [96.00, 116.00] |
+| Increasing (any step) | 24 | 102.50 ms | 9.35 | 1.91 | [92.00, 116.00] |
+| No Change | 24 | 107.17 ms | 8.98 | 1.83 | [92.00, 116.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 18 | -1.77 µV | 1.24 | 0.29 | [-4.83, -0.25] |
-| Decreasing (any step) | 17 | -1.75 µV | 1.10 | 0.27 | [-4.87, -0.79] |
-| Increasing (any step) | 17 | -1.34 µV | 0.94 | 0.23 | [-3.80, -0.19] |
+| Decreasing (any step) | 24 | -1.25 µV | 1.23 | 0.25 | [-4.87, 0.33] |
+| Increasing (any step) | 24 | -1.03 µV | 0.96 | 0.20 | [-3.80, 0.33] |
+| No Change | 24 | -1.28 µV | 1.38 | 0.28 | [-4.83, 0.55] |
 
 
 ### 2.2 N1 Component
@@ -60,17 +60,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | 176.00 ms | 17.10 | 3.57 | [144.00, 204.00] |
 | Decreasing (any step) | 24 | 177.17 ms | 14.85 | 3.03 | [144.00, 204.00] |
 | Increasing (any step) | 24 | 171.17 ms | 19.02 | 3.88 | [144.00, 204.00] |
+| No Change | 24 | 175.67 ms | 16.80 | 3.43 | [144.00, 204.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 23 | -4.79 µV | 2.00 | 0.42 | [-9.57, -1.40] |
 | Decreasing (any step) | 24 | -4.92 µV | 1.92 | 0.39 | [-9.28, -1.69] |
 | Increasing (any step) | 24 | -5.42 µV | 2.16 | 0.44 | [-9.98, -1.28] |
+| No Change | 24 | -4.62 µV | 2.14 | 0.44 | [-9.57, -0.60] |
 
 
 ### 2.3 P1 Component
@@ -79,17 +79,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 113.43 ms | 7.78 | 2.08 | [100.00, 120.00] |
-| Decreasing (any step) | 17 | 112.47 ms | 7.73 | 1.87 | [100.00, 120.00] |
-| Increasing (any step) | 14 | 106.00 ms | 9.51 | 2.54 | [96.00, 120.00] |
+| Decreasing (any step) | 24 | 111.67 ms | 8.58 | 1.75 | [96.00, 120.00] |
+| Increasing (any step) | 24 | 104.17 ms | 9.10 | 1.86 | [96.00, 120.00] |
+| No Change | 24 | 108.50 ms | 10.44 | 2.13 | [96.00, 120.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 2.51 µV | 1.63 | 0.44 | [0.82, 5.73] |
-| Decreasing (any step) | 17 | 2.21 µV | 1.62 | 0.39 | [0.22, 5.27] |
-| Increasing (any step) | 14 | 1.99 µV | 1.35 | 0.36 | [0.60, 4.54] |
+| Decreasing (any step) | 24 | 1.46 µV | 1.87 | 0.38 | [-2.11, 5.27] |
+| Increasing (any step) | 24 | 1.04 µV | 1.62 | 0.33 | [-1.34, 4.54] |
+| No Change | 24 | 1.30 µV | 1.94 | 0.40 | [-1.32, 5.73] |
 
 
 ### 2.4 P3b Component
@@ -98,17 +98,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 470.57 ms | 23.14 | 6.19 | [436.00, 516.00] |
-| Decreasing (any step) | 19 | 484.00 ms | 26.80 | 6.15 | [436.00, 532.00] |
-| Increasing (any step) | 19 | 483.16 ms | 34.66 | 7.95 | [420.00, 532.00] |
+| Decreasing (any step) | 24 | 481.00 ms | 30.35 | 6.20 | [420.00, 532.00] |
+| Increasing (any step) | 24 | 481.33 ms | 34.94 | 7.13 | [420.00, 532.00] |
+| No Change | 24 | 463.50 ms | 24.86 | 5.08 | [420.00, 516.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Cardinality (no change) | 14 | 2.75 µV | 1.66 | 0.44 | [0.90, 5.95] |
-| Decreasing (any step) | 19 | 4.83 µV | 2.34 | 0.54 | [1.42, 9.02] |
-| Increasing (any step) | 19 | 4.34 µV | 2.48 | 0.57 | [1.09, 8.85] |
+| Decreasing (any step) | 24 | 3.80 µV | 2.95 | 0.60 | [-1.54, 9.02] |
+| Increasing (any step) | 24 | 3.28 µV | 3.05 | 0.62 | [-1.58, 8.85] |
+| No Change | 24 | 1.14 µV | 2.72 | 0.56 | [-4.85, 5.95] |
 
 
 ---
@@ -124,12 +124,12 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 357.95, BIC = 369.66
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = -2.61, *SE* = 2.113, *z* = -1.234, *p* = 0.217
-- **Increasing (any step) vs Cardinality (no change)**: *β* = -7.07, *SE* = 1.802, *z* = -3.924, *p* < .001
-- **SNR**: *β* = 0.06, *SE* = 0.333, *z* = 0.189, *p* = 0.850
+- AIC = 484.84, BIC = 498.50
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -4.72, *SE* = 1.341, *z* = -3.523, *p* < .001
+- **No Change vs Decreasing (any step)**: *β* = -0.07, *SE* = 1.360, *z* = -0.051, *p* = 0.959
+- **SNR**: *β* = -0.05, *SE* = 0.311, *z* = -0.163, *p* = 0.871
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -140,9 +140,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | 2.61 | 2.11 | 1.23 | 0.217 | 0.217 | n.s. |
-| Cardinality (no change) - Increasing (any step) | 7.07 | 1.80 | 3.92 | < .001 | < .001 | *** |
-| Decreasing (any step) - Increasing (any step) | 4.46 | 2.04 | 2.18 | 0.029 | 0.057 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 4.73 | 1.34 | 3.52 | < .001 | < .001 | *** |
+| Decreasing (any step) - No Change | 0.07 | 1.36 | 0.05 | 0.959 | 0.959 | n.s. |
+| Increasing (any step) - No Change | -4.66 | 1.29 | -3.60 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -150,8 +150,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 5.62, *p* = 0.012, η²_G = 0.171
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 8.32, *p* < .001, η²_G = 0.062
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -159,9 +159,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | 0.45 | 10 | = 0.659 | 0.11 [-0.51, 0.77] | negligible | n.s. |
-| Cardinality (no change) vs Increasing (any step) | 2.82 | 10 | = 0.054 | 0.90 [0.24, 1.49] | large | n.s. |
-| Decreasing (any step) vs Increasing (any step) | 2.32 | 10 | = 0.064 | 0.85 [-0.04, 1.36] | large | n.s. |
+| Decreasing (any step) vs Increasing (any step) | 3.16 | 23 | = 0.007 | 0.54 [0.18, 1.11] | medium | ** |
+| Decreasing (any step) vs No Change | 0.00 | 23 | = 1.000 | 0.00 [-0.42, 0.42] | negligible | n.s. |
+| Increasing (any step) vs No Change | -3.20 | 23 | = 0.007 | -0.51 [-1.12, -0.19] | medium | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -171,12 +171,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 107.67, BIC = 119.38
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = 0.44, *SE* = 0.176, *z* = 2.517, *p* = 0.012
-- **Increasing (any step) vs Cardinality (no change)**: *β* = 0.51, *SE* = 0.155, *z* = 3.302, *p* = 0.001
-- **SNR**: *β* = -0.20, *SE* = 0.032, *z* = -5.998, *p* < .001
+- AIC = 174.22, BIC = 187.88
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -0.02, *SE* = 0.172, *z* = -0.113, *p* = 0.910
+- **No Change vs Decreasing (any step)**: *β* = -0.32, *SE* = 0.175, *z* = -1.803, *p* = 0.071
+- **SNR**: *β* = -0.21, *SE* = 0.039, *z* = -5.344, *p* < .001
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -187,9 +187,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | -0.44 | 0.18 | -2.52 | 0.012 | 0.024 | * |
-| Cardinality (no change) - Increasing (any step) | -0.51 | 0.15 | -3.30 | < .001 | 0.003 | ** |
-| Decreasing (any step) - Increasing (any step) | -0.07 | 0.18 | -0.39 | 0.696 | 0.696 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 0.02 | 0.17 | 0.11 | 0.910 | 0.910 | n.s. |
+| Decreasing (any step) - No Change | 0.31 | 0.17 | 1.80 | 0.071 | 0.199 | n.s. |
+| Increasing (any step) - No Change | 0.30 | 0.17 | 1.77 | 0.076 | 0.199 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -197,8 +197,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 3.09, *p* = 0.068, η²_G = 0.032
-- **Interpretation:** The main effect of condition was **marginally significant trend**.
+- *F* = 1.15, *p* = 0.325, η²_G = 0.009
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -206,9 +206,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -0.57 | 10 | = 0.583 | -0.08 [-0.70, 0.58] | negligible | n.s. |
-| Cardinality (no change) vs Increasing (any step) | -2.07 | 10 | = 0.098 | -0.42 [-1.12, 0.02] | small | n.s. |
-| Decreasing (any step) vs Increasing (any step) | -2.09 | 10 | = 0.098 | -0.33 [-1.39, 0.02] | small | n.s. |
+| Decreasing (any step) vs Increasing (any step) | -1.47 | 23 | = 0.296 | -0.20 [-0.73, 0.13] | small | n.s. |
+| Decreasing (any step) vs No Change | 0.14 | 23 | = 0.888 | 0.02 [-0.39, 0.45] | negligible | n.s. |
+| Increasing (any step) vs No Change | 1.33 | 23 | = 0.296 | 0.21 [-0.16, 0.70] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -221,12 +221,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 577.78, BIC = 591.36
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = 1.68, *SE* = 3.198, *z* = 0.526, *p* = 0.599
-- **Increasing (any step) vs Cardinality (no change)**: *β* = -4.31, *SE* = 3.275, *z* = -1.315, *p* = 0.189
-- **SNR**: *β* = -0.02, *SE* = 0.225, *z* = -0.089, *p* = 0.929
+- AIC = 584.40, BIC = 598.06
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -5.99, *SE* = 2.639, *z* = -2.270, *p* = 0.023
+- **No Change vs Decreasing (any step)**: *β* = -1.63, *SE* = 3.124, *z* = -0.520, *p* = 0.603
+- **SNR**: *β* = -0.02, *SE* = 0.224, *z* = -0.075, *p* = 0.940
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -237,9 +237,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | -1.68 | 3.20 | -0.53 | 0.599 | 0.599 | n.s. |
-| Cardinality (no change) - Increasing (any step) | 4.31 | 3.27 | 1.31 | 0.189 | 0.342 | n.s. |
-| Decreasing (any step) - Increasing (any step) | 5.99 | 2.66 | 2.25 | 0.025 | 0.072 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 5.99 | 2.64 | 2.27 | 0.023 | 0.068 | n.s. |
+| Decreasing (any step) - No Change | 1.63 | 3.12 | 0.52 | 0.603 | 0.603 | n.s. |
+| Increasing (any step) - No Change | -4.36 | 3.20 | -1.36 | 0.173 | 0.316 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -247,9 +247,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 2.38, *p* = 0.104, η²_G = 0.022
-- Greenhouse-Geisser corrected: *p* = 0.120 (ε = 0.749)
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 2.70, *p* = 0.078, η²_G = 0.023
+- **Interpretation:** The main effect of condition was **marginally significant trend**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -257,9 +256,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -0.74 | 22 | = 0.467 | -0.10 [-0.59, 0.28] | negligible | n.s. |
-| Cardinality (no change) vs Increasing (any step) | 1.65 | 22 | = 0.170 | 0.24 [-0.10, 0.79] | small | n.s. |
-| Decreasing (any step) vs Increasing (any step) | 1.69 | 22 | = 0.170 | 0.34 [-0.07, 0.80] | small | n.s. |
+| Decreasing (any step) vs Increasing (any step) | 1.79 | 23 | = 0.133 | 0.35 [-0.07, 0.80] | small | n.s. |
+| Decreasing (any step) vs No Change | 0.74 | 23 | = 0.467 | 0.09 [-0.27, 0.58] | negligible | n.s. |
+| Increasing (any step) vs No Change | -1.78 | 23 | = 0.133 | -0.25 [-0.80, 0.07] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -269,12 +268,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 233.66, BIC = 247.23
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = 0.23, *SE* = 0.263, *z* = 0.860, *p* = 0.390
-- **Increasing (any step) vs Cardinality (no change)**: *β* = -0.24, *SE* = 0.271, *z* = -0.901, *p* = 0.368
-- **SNR**: *β* = -0.06, *SE* = 0.020, *z* = -2.744, *p* = 0.006
+- AIC = 243.72, BIC = 257.38
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -0.47, *SE* = 0.224, *z* = -2.105, *p* = 0.035
+- **No Change vs Decreasing (any step)**: *β* = -0.09, *SE* = 0.275, *z* = -0.338, *p* = 0.736
+- **SNR**: *β* = -0.05, *SE* = 0.021, *z* = -2.441, *p* = 0.015
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -285,9 +284,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | -0.23 | 0.26 | -0.86 | 0.390 | 0.600 | n.s. |
-| Cardinality (no change) - Increasing (any step) | 0.24 | 0.27 | 0.90 | 0.368 | 0.600 | n.s. |
-| Decreasing (any step) - Increasing (any step) | 0.47 | 0.21 | 2.24 | 0.025 | 0.074 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 0.47 | 0.22 | 2.11 | 0.035 | 0.102 | n.s. |
+| Decreasing (any step) - No Change | 0.09 | 0.28 | 0.34 | 0.736 | 0.736 | n.s. |
+| Increasing (any step) - No Change | -0.38 | 0.28 | -1.34 | 0.181 | 0.329 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -295,7 +294,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 5.63, *p* = 0.007, η²_G = 0.023
+- *F* = 6.31, *p* = 0.004, η²_G = 0.026
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -304,9 +303,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | 0.83 | 22 | = 0.417 | 0.10 [-0.26, 0.61] | negligible | n.s. |
-| Cardinality (no change) vs Increasing (any step) | 3.61 | 22 | = 0.005 | 0.35 [0.26, 1.24] | small | ** |
-| Decreasing (any step) vs Increasing (any step) | 2.22 | 22 | = 0.055 | 0.26 [0.00, 0.89] | small | n.s. |
+| Decreasing (any step) vs Increasing (any step) | 2.17 | 23 | = 0.060 | 0.25 [0.00, 0.89] | small | n.s. |
+| Decreasing (any step) vs No Change | -1.22 | 23 | = 0.233 | -0.15 [-0.68, 0.18] | negligible | n.s. |
+| Increasing (any step) vs No Change | -3.86 | 23 | = 0.002 | -0.37 [-1.27, -0.30] | small | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -319,12 +318,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 323.57, BIC = 334.41
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = -0.38, *SE* = 2.540, *z* = -0.150, *p* = 0.880
-- **Increasing (any step) vs Cardinality (no change)**: *β* = -7.53, *SE* = 2.518, *z* = -2.989, *p* = 0.003
-- **SNR**: *β* = 0.17, *SE* = 0.248, *z* = 0.701, *p* = 0.483
+- AIC = 510.81, BIC = 524.47
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -7.48, *SE* = 1.686, *z* = -4.438, *p* < .001
+- **No Change vs Decreasing (any step)**: *β* = -3.13, *SE* = 1.692, *z* = -1.852, *p* = 0.064
+- **SNR**: *β* = 0.04, *SE* = 0.214, *z* = 0.175, *p* = 0.861
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -335,9 +334,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | 0.38 | 2.54 | 0.15 | 0.880 | 0.880 | n.s. |
-| Cardinality (no change) - Increasing (any step) | 7.53 | 2.52 | 2.99 | 0.003 | 0.008 | ** |
-| Decreasing (any step) - Increasing (any step) | 7.14 | 2.56 | 2.80 | 0.005 | 0.010 | * |
+| Decreasing (any step) - Increasing (any step) | 7.48 | 1.69 | 4.44 | < .001 | < .001 | *** |
+| Decreasing (any step) - No Change | 3.13 | 1.69 | 1.85 | 0.064 | 0.064 | n.s. |
+| Increasing (any step) - No Change | -4.35 | 1.68 | -2.58 | 0.010 | 0.020 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -345,8 +344,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 5.64, *p* = 0.011, η²_G = 0.194
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 9.64, *p* < .001, η²_G = 0.100
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -354,9 +353,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -0.69 | 11 | = 0.504 | -0.20 [-0.84, 0.44] | small | n.s. |
-| Cardinality (no change) vs Increasing (any step) | 2.43 | 11 | = 0.050 | 0.82 [0.09, 1.47] | large | * |
-| Decreasing (any step) vs Increasing (any step) | 2.73 | 11 | = 0.050 | 1.03 [0.15, 1.57] | large | * |
+| Decreasing (any step) vs Increasing (any step) | 4.01 | 23 | = 0.002 | 0.85 [0.33, 1.31] | large | ** |
+| Decreasing (any step) vs No Change | 2.08 | 23 | = 0.049 | 0.33 [-0.02, 0.87] | small | * |
+| Increasing (any step) vs No Change | -2.50 | 23 | = 0.030 | -0.44 [-0.96, -0.06] | small | * |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -366,12 +365,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 114.44, BIC = 125.28
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = -0.35, *SE* = 0.209, *z* = -1.687, *p* = 0.092
-- **Increasing (any step) vs Cardinality (no change)**: *β* = -0.45, *SE* = 0.201, *z* = -2.236, *p* = 0.025
-- **SNR**: *β* = 0.18, *SE* = 0.023, *z* = 7.758, *p* < .001
+- AIC = 220.68, BIC = 234.34
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -0.35, *SE* = 0.193, *z* = -1.827, *p* = 0.068
+- **No Change vs Decreasing (any step)**: *β* = -0.05, *SE* = 0.194, *z* = -0.250, *p* = 0.803
+- **SNR**: *β* = 0.12, *SE* = 0.026, *z* = 4.684, *p* < .001
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -382,9 +381,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | 0.35 | 0.21 | 1.69 | 0.092 | 0.175 | n.s. |
-| Cardinality (no change) - Increasing (any step) | 0.45 | 0.20 | 2.24 | 0.025 | 0.074 | n.s. |
-| Decreasing (any step) - Increasing (any step) | 0.10 | 0.21 | 0.48 | 0.632 | 0.632 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 0.35 | 0.19 | 1.83 | 0.068 | 0.190 | n.s. |
+| Decreasing (any step) - No Change | 0.05 | 0.19 | 0.25 | 0.803 | 0.803 | n.s. |
+| Increasing (any step) - No Change | -0.30 | 0.19 | -1.58 | 0.115 | 0.216 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -392,7 +391,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.50, *p* = 0.245, η²_G = 0.029
+- *F* = 1.76, *p* = 0.183, η²_G = 0.009
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -401,9 +400,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -0.31 | 11 | = 0.762 | -0.07 [-0.73, 0.55] | negligible | n.s. |
-| Cardinality (no change) vs Increasing (any step) | 1.13 | 11 | = 0.427 | 0.31 [-0.27, 0.97] | small | n.s. |
-| Decreasing (any step) vs Increasing (any step) | 2.19 | 11 | = 0.154 | 0.41 [-0.07, 1.23] | small | n.s. |
+| Decreasing (any step) vs Increasing (any step) | 2.30 | 23 | = 0.092 | 0.24 [0.03, 0.92] | small | n.s. |
+| Decreasing (any step) vs No Change | 0.65 | 23 | = 0.522 | 0.08 [-0.29, 0.56] | negligible | n.s. |
+| Increasing (any step) vs No Change | -1.06 | 23 | = 0.450 | -0.15 [-0.64, 0.21] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -416,12 +415,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 501.46, BIC = 513.17
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = 20.49, *SE* = 10.642, *z* = 1.925, *p* = 0.054
-- **Increasing (any step) vs Cardinality (no change)**: *β* = 18.30, *SE* = 9.691, *z* = 1.888, *p* = 0.059
-- **SNR**: *β* = -0.81, *SE* = 0.536, *z* = -1.505, *p* = 0.132
+- AIC = 695.00, BIC = 708.66
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -1.83, *SE* = 7.170, *z* = -0.255, *p* = 0.798
+- **No Change vs Decreasing (any step)**: *β* = -24.36, *SE* = 8.077, *z* = -3.016, *p* = 0.003
+- **SNR**: *β* = -0.78, *SE* = 0.447, *z* = -1.750, *p* = 0.080
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -432,9 +431,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | -20.49 | 10.64 | -1.93 | 0.054 | 0.154 | n.s. |
-| Cardinality (no change) - Increasing (any step) | -18.30 | 9.69 | -1.89 | 0.059 | 0.154 | n.s. |
-| Decreasing (any step) - Increasing (any step) | 2.19 | 8.04 | 0.27 | 0.785 | 0.785 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 1.83 | 7.17 | 0.26 | 0.798 | 0.798 | n.s. |
+| Decreasing (any step) - No Change | 24.36 | 8.08 | 3.02 | 0.003 | 0.008 | ** |
+| Increasing (any step) - No Change | 22.53 | 7.55 | 2.98 | 0.003 | 0.008 | ** |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -442,9 +441,9 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.63, *p* = 0.543, η²_G = 0.023
-- Greenhouse-Geisser corrected: *p* = 0.476 (ε = 0.632)
-- **Interpretation:** The main effect of condition was **not significant**.
+- *F* = 3.99, *p* = 0.025, η²_G = 0.073
+- Greenhouse-Geisser corrected: *p* = 0.039 (ε = 0.734)
+- **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -452,9 +451,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -0.89 | 13 | = 0.670 | -0.35 [-0.82, 0.35] | small | n.s. |
-| Cardinality (no change) vs Increasing (any step) | -0.79 | 13 | = 0.670 | -0.31 [-0.79, 0.37] | small | n.s. |
-| Decreasing (any step) vs Increasing (any step) | -0.06 | 13 | = 0.954 | -0.01 [-0.65, 0.35] | negligible | n.s. |
+| Decreasing (any step) vs Increasing (any step) | -0.07 | 23 | = 0.945 | -0.01 [-0.44, 0.41] | negligible | n.s. |
+| Decreasing (any step) vs No Change | 2.33 | 23 | = 0.081 | 0.63 [0.03, 0.92] | medium | n.s. |
+| Increasing (any step) vs No Change | 2.03 | 23 | = 0.081 | 0.59 [-0.03, 0.86] | medium | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -464,12 +463,12 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 205.92, BIC = 217.63
-- **Decreasing (any step) vs Cardinality (no change)**: *β* = 0.89, *SE* = 0.578, *z* = 1.540, *p* = 0.124
-- **Increasing (any step) vs Cardinality (no change)**: *β* = 0.76, *SE* = 0.525, *z* = 1.456, *p* = 0.145
-- **SNR**: *β* = 0.14, *SE* = 0.030, *z* = 4.695, *p* < .001
+- AIC = 306.37, BIC = 320.03
+- **Increasing (any step) vs Decreasing (any step)**: *β* = -0.30, *SE* = 0.359, *z* = -0.836, *p* = 0.403
+- **No Change vs Decreasing (any step)**: *β* = -1.96, *SE* = 0.416, *z* = -4.700, *p* < .001
+- **SNR**: *β* = 0.08, *SE* = 0.025, *z* = 3.166, *p* = 0.002
 
-_Reference condition: **Cardinality (no change)** (all condition effects are contrasts vs. this baseline)._
+_Reference condition: **Decreasing (any step)** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
 
 _Note: LMM uses all available subject data via maximum likelihood estimation._
@@ -480,9 +479,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Cardinality (no change) - Decreasing (any step) | -0.89 | 0.58 | -1.54 | 0.124 | 0.327 | n.s. |
-| Cardinality (no change) - Increasing (any step) | -0.76 | 0.52 | -1.46 | 0.145 | 0.327 | n.s. |
-| Decreasing (any step) - Increasing (any step) | 0.13 | 0.41 | 0.31 | 0.756 | 0.756 | n.s. |
+| Decreasing (any step) - Increasing (any step) | 0.30 | 0.36 | 0.84 | 0.403 | 0.403 | n.s. |
+| Decreasing (any step) - No Change | 1.96 | 0.42 | 4.70 | < .001 | < .001 | *** |
+| Increasing (any step) - No Change | 1.66 | 0.38 | 4.32 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -490,8 +489,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 12.78, *p* < .001, η²_G = 0.248
-- Greenhouse-Geisser corrected: *p* = 0.002 (ε = 0.573)
+- *F* = 26.30, *p* < .001, η²_G = 0.140
+- Greenhouse-Geisser corrected: *p* < .001 (ε = 0.608)
 - **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -500,9 +499,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Cardinality (no change) vs Decreasing (any step) | -4.12 | 13 | = 0.004 | -1.40 [-1.83, -0.37] | large | ** |
-| Cardinality (no change) vs Increasing (any step) | -3.14 | 13 | = 0.012 | -1.06 [-1.51, -0.17] | large | * |
-| Decreasing (any step) vs Increasing (any step) | 2.33 | 13 | = 0.037 | 0.22 [0.14, 1.24] | small | * |
+| Decreasing (any step) vs Increasing (any step) | 3.02 | 23 | = 0.006 | 0.17 [0.16, 1.08] | negligible | ** |
+| Decreasing (any step) vs No Change | 5.81 | 23 | < .001 | 0.94 [0.64, 1.74] | large | *** |
+| Increasing (any step) vs No Change | 4.62 | 23 | < .001 | 0.74 [0.44, 1.45] | medium | *** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -514,17 +513,21 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**Fz latency:** Significant main effect of condition (*p* = 0.012) (no significant pairwise comparisons)
-**Fz amplitude:** Marginal trend toward condition differences (*p* = 0.068)
-**N1 amplitude:** Significant main effect of condition (*p* = 0.007). Post-hoc tests revealed:
-  - Cardinality (no change) showed greater amplitude than Increasing (any step) (*d* = 0.35)
-**P1 latency:** Significant main effect of condition (*p* = 0.011). Post-hoc tests revealed:
-  - Cardinality (no change) showed greater latency than Increasing (any step) (*d* = 0.82)
-  - Decreasing (any step) showed greater latency than Increasing (any step) (*d* = 1.03)
+**Fz latency:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Decreasing (any step) showed greater latency than Increasing (any step) (*d* = 0.54)
+  - Increasing (any step) showed smaller latency than No Change (*d* = -0.51)
+**N1 latency:** Marginal trend toward condition differences (*p* = 0.078)
+**N1 amplitude:** Significant main effect of condition (*p* = 0.004). Post-hoc tests revealed:
+  - Increasing (any step) showed smaller amplitude than No Change (*d* = -0.37)
+**P1 latency:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Decreasing (any step) showed greater latency than Increasing (any step) (*d* = 0.85)
+  - Decreasing (any step) showed greater latency than No Change (*d* = 0.33)
+  - Increasing (any step) showed smaller latency than No Change (*d* = -0.44)
+**P3b latency:** Significant main effect of condition (*p* = 0.025) (no significant pairwise comparisons)
 **P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
-  - Cardinality (no change) showed smaller amplitude than Decreasing (any step) (*d* = -1.40)
-  - Cardinality (no change) showed smaller amplitude than Increasing (any step) (*d* = -1.06)
-  - Decreasing (any step) showed greater amplitude than Increasing (any step) (*d* = 0.22)
+  - Decreasing (any step) showed greater amplitude than Increasing (any step) (*d* = 0.17)
+  - Decreasing (any step) showed greater amplitude than No Change (*d* = 0.94)
+  - Increasing (any step) showed greater amplitude than No Change (*d* = 0.74)
 
 ### Research Implications
 

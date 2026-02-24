@@ -1,0 +1,98 @@
+{
+  "analysis_id": "change_by_123_ALL",
+  "measure": "P1_N1_peak_to_peak_amplitude",
+  "n_subjects_complete": 24,
+  "n_subjects_total": 24,
+  "descriptives": [
+    {
+      "condition": "Change by 1",
+      "mean": 6.394596580249417,
+      "std": 2.5244279701001666,
+      "count": 24,
+      "sem": 0.5152967015962765
+    },
+    {
+      "condition": "Change by 2",
+      "mean": 6.801584413669931,
+      "std": 2.5635701418127663,
+      "count": 24,
+      "sem": 0.5232865639396325
+    },
+    {
+      "condition": "Change by 3",
+      "mean": 7.258817681606119,
+      "std": 2.793603679135007,
+      "count": 24,
+      "sem": 0.5702419631202124
+    }
+  ],
+  "rm_anova": [
+    {
+      "Source": "condition",
+      "SS": 8.972635759120955,
+      "DF": 2,
+      "MS": 4.4863178795604775,
+      "F": 7.718581619595373,
+      "p-unc": 0.0012868074654076198,
+      "ng2": 0.01845476381158163,
+      "eps": 0.963069035849447
+    },
+    {
+      "Source": "Error",
+      "SS": 26.736858224814682,
+      "DF": 46,
+      "MS": 0.5812360483655366,
+      "F": NaN,
+      "p-unc": NaN,
+      "ng2": NaN,
+      "eps": NaN
+    }
+  ],
+  "pairwise_tests": [
+    {
+      "Contrast": "condition",
+      "A": "Change by 1",
+      "B": "Change by 2",
+      "Paired": true,
+      "Parametric": true,
+      "T": -1.9804321073000584,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.0597390709701493,
+      "p-corr": 0.06968144938595137,
+      "p-adjust": "fdr_bh",
+      "BF10": "1.131",
+      "cohen": -0.15997481982160122
+    },
+    {
+      "Contrast": "condition",
+      "A": "Change by 1",
+      "B": "Change by 3",
+      "Paired": true,
+      "Parametric": true,
+      "T": -4.0593378686805766,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.0004854242158133725,
+      "p-corr": 0.0014562726474401176,
+      "p-adjust": "fdr_bh",
+      "BF10": "66.25",
+      "cohen": -0.3245998659614116
+    },
+    {
+      "Contrast": "condition",
+      "A": "Change by 2",
+      "B": "Change by 3",
+      "Paired": true,
+      "Parametric": true,
+      "T": -1.9026343295131463,
+      "dof": 23.0,
+      "alternative": "two-sided",
+      "p-unc": 0.06968144938595137,
+      "p-corr": 0.06968144938595137,
+      "p-adjust": "fdr_bh",
+      "BF10": "1.004",
+      "cohen": -0.17054228395019888
+    }
+  ]
+}

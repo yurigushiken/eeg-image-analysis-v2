@@ -1,9 +1,9 @@
 {
   "analysis_id": "ratio_ACC1",
-  "duration_seconds": 26.736,
+  "duration_seconds": 9.423,
   "num_figures": 6,
   "largest_png_bytes": 811688,
-  "total_png_bytes": 3947985,
+  "total_png_bytes": 3940094,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
@@ -12,6 +12,6 @@
     "ratio_ACC1-N1.png": 767695,
     "ratio_ACC1-P3b.png": 811688,
     "ratio_ACC1-Fz.png": 745130,
-    "ratio_ACC1-P1_N1_peak_to_peak.png": 318554
+    "ratio_ACC1-P1_N1_peak_to_peak.png": 310663
   }
 }

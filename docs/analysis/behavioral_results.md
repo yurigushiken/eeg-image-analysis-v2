@@ -2,16 +2,16 @@
 
 ## Data
 - Subjects: 24
-- Change trials used for accuracy: 3660
-- Correct change trials with valid RT (150-1500 ms): 601
+- Change trials used for accuracy: 5184
+- Correct change trials with valid RT (150-1500 ms): 4247
 
 ## Hypothesis 1: Distance Effect on RT
-- GEE model on log(RT), clustered by subject: b = -0.0228 (SE = 0.0076), p = 0.002618; ~-2.25% RT change per +1 distance step.
-- Subject-level linear trend: mean slope = -13.05 ms/step, 95% CI [-20.79, -5.31], t(23) = -3.487, p(one-sided, negative slope) = 0.0009953.
+- GEE model on log(RT), clustered by subject: b = -0.0261 (SE = 0.0033), p = 5.314e-15; ~-2.57% RT change per +1 distance step.
+- Subject-level linear trend: mean slope = -13.60 ms/step, 95% CI [-17.56, -9.64], t(23) = -7.110, p(two-sided) = 3.048e-07.
 
 ## Hypothesis 2: Decreasing vs Increasing Accuracy
-- Logistic GEE (clustered by subject): OR(D vs I) = 1.596, 95% CI [1.324, 1.924], p = 9.602e-07.
-- Subject-level paired effect (D - I): mean = 0.0668, 95% CI [0.0369, 0.0967], t(23) = 4.617, p(one-sided, D>I) = 6.04e-05.
+- Logistic GEE (clustered by subject): OR(D vs I) = 1.596, 95% CI [1.339, 1.904], p = 1.959e-07.
+- Subject-level paired effect (D - I): mean = 0.0648, 95% CI [0.0369, 0.0927], t(23) = 4.800, p(two-sided) = 7.667e-05.
 
 ## Output Files
 - `docs/assets/poster_plots/behavioral/behavior_poster_main.png` (+ SVG)

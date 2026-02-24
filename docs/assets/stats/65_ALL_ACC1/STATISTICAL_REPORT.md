@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:17:41
+**Generated:** 2026-02-23 19:15:10
 
 ---
 
@@ -52,14 +52,14 @@ _No descriptive statistics available._
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 ACC1 | 15 | 174.40 ms | 22.52 | 5.81 | [136.00, 204.00] |
+| 65 ACC1 | 16 | 176.25 ms | 22.98 | 5.74 | [136.00, 204.00] |
 | 65 ALL | 24 | 172.00 ms | 20.60 | 4.20 | [136.00, 204.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 ACC1 | 15 | -7.58 µV | 1.94 | 0.50 | [-10.73, -4.78] |
+| 65 ACC1 | 16 | -7.30 µV | 2.18 | 0.55 | [-10.73, -3.09] |
 | 65 ALL | 24 | -5.92 µV | 2.12 | 0.43 | [-10.60, -2.05] |
 
 
@@ -80,15 +80,15 @@ _No descriptive statistics available._
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 ACC1 | 12 | 545.00 ms | 11.07 | 3.20 | [528.00, 556.00] |
-| 65 ALL | 14 | 540.00 ms | 11.74 | 3.14 | [524.00, 556.00] |
+| 65 ACC1 | 16 | 544.50 ms | 11.85 | 2.96 | [524.00, 556.00] |
+| 65 ALL | 24 | 538.67 ms | 12.79 | 2.61 | [524.00, 556.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| 65 ACC1 | 12 | 5.70 µV | 2.36 | 0.68 | [1.86, 10.24] |
-| 65 ALL | 14 | 3.39 µV | 1.23 | 0.33 | [0.83, 5.37] |
+| 65 ACC1 | 16 | 3.40 µV | 4.94 | 1.23 | [-8.85, 10.24] |
+| 65 ALL | 24 | 1.28 µV | 3.37 | 0.69 | [-10.03, 5.37] |
 
 
 ---
@@ -123,9 +123,9 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 297.19, BIC = 305.51
-- **65 ALL vs 65 ACC1**: *β* = -0.32, *SE* = 0.924, *z* = -0.345, *p* = 0.730
-- **SNR**: *β* = -0.21, *SE* = 0.485, *z* = -0.424, *p* = 0.671
+- AIC = 322.86, BIC = 331.31
+- **65 ALL vs 65 ACC1**: *β* = -0.99, *SE* = 1.705, *z* = -0.580, *p* = 0.562
+- **SNR**: *β* = -0.75, *SE* = 0.890, *z* = -0.840, *p* = 0.401
 
 _Reference condition: **65 ACC1** (all condition effects are contrasts vs. this baseline)._
 
@@ -137,7 +137,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 ACC1 - 65 ALL | 0.32 | 0.92 | 0.34 | 0.730 | 0.730 | n.s. |
+| 65 ACC1 - 65 ALL | 0.99 | 1.70 | 0.58 | 0.562 | 0.562 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -145,7 +145,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.48, *p* = 0.499, η²_G = 0.000
+- *F* = 1.53, *p* = 0.234, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -154,7 +154,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 ACC1 vs 65 ALL | 0.69 | 14 | = 0.499 | 0.02 [-0.38, 0.74] | negligible | n.s. |
+| 65 ACC1 vs 65 ALL | 1.24 | 15 | = 0.234 | 0.08 [-0.24, 0.86] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -164,9 +164,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 141.95, BIC = 150.27
-- **65 ALL vs 65 ACC1**: *β* = 2.04, *SE* = 0.391, *z* = 5.233, *p* < .001
-- **SNR**: *β* = -0.70, *SE* = 0.117, *z* = -5.994, *p* < .001
+- AIC = 145.70, BIC = 154.15
+- **65 ALL vs 65 ACC1**: *β* = 1.95, *SE* = 0.372, *z* = 5.250, *p* < .001
+- **SNR**: *β* = -0.71, *SE* = 0.122, *z* = -5.803, *p* < .001
 
 _Reference condition: **65 ACC1** (all condition effects are contrasts vs. this baseline)._
 
@@ -178,7 +178,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 ACC1 - 65 ALL | -2.04 | 0.39 | -5.23 | < .001 | < .001 | *** |
+| 65 ACC1 - 65 ALL | -1.95 | 0.37 | -5.25 | < .001 | < .001 | *** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -186,7 +186,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 9.61, *p* = 0.008, η²_G = 0.089
+- *F* = 10.80, *p* = 0.005, η²_G = 0.071
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -195,7 +195,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 ACC1 vs 65 ALL | -3.10 | 14 | = 0.008 | -0.60 [-1.44, -0.16] | medium | ** |
+| 65 ACC1 vs 65 ALL | -3.29 | 15 | = 0.005 | -0.54 [-1.44, -0.21] | medium | ** |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -227,9 +227,9 @@ _Pairwise test results not available._
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 201.69, BIC = 207.98
-- **65 ALL vs 65 ACC1**: *β* = -0.06, *SE* = 2.531, *z* = -0.025, *p* = 0.980
-- **SNR**: *β* = 1.56, *SE* = 0.912, *z* = 1.706, *p* = 0.088
+- AIC = 316.23, BIC = 324.67
+- **65 ALL vs 65 ACC1**: *β* = -2.81, *SE* = 2.633, *z* = -1.066, *p* = 0.286
+- **SNR**: *β* = 0.42, *SE* = 0.543, *z* = 0.774, *p* = 0.439
 
 _Reference condition: **65 ACC1** (all condition effects are contrasts vs. this baseline)._
 
@@ -241,7 +241,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 ACC1 - 65 ALL | 0.06 | 2.53 | 0.03 | 0.980 | 0.980 | n.s. |
+| 65 ACC1 - 65 ALL | 2.81 | 2.63 | 1.07 | 0.286 | 0.286 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -249,7 +249,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.31, *p* = 0.591, η²_G = 0.006
+- *F* = 0.14, *p* = 0.718, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -258,7 +258,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 ACC1 vs 65 ALL | -0.56 | 9 | = 0.591 | -0.15 [-0.90, 0.54] | negligible | n.s. |
+| 65 ACC1 vs 65 ALL | 0.37 | 15 | = 0.718 | 0.09 [-0.44, 0.63] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -268,9 +268,9 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 99.33, BIC = 105.62
-- **65 ALL vs 65 ACC1**: *β* = -2.31, *SE* = 0.412, *z* = -5.614, *p* < .001
-- **SNR**: *β* = 0.55, *SE* = 0.133, *z* = 4.148, *p* < .001
+- AIC = 211.31, BIC = 219.76
+- **65 ALL vs 65 ACC1**: *β* = -1.62, *SE* = 0.577, *z* = -2.813, *p* = 0.005
+- **SNR**: *β* = -0.14, *SE* = 0.153, *z* = -0.940, *p* = 0.347
 
 _Reference condition: **65 ACC1** (all condition effects are contrasts vs. this baseline)._
 
@@ -282,7 +282,7 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| 65 ACC1 - 65 ALL | 2.31 | 0.41 | 5.61 | < .001 | < .001 | *** |
+| 65 ACC1 - 65 ALL | 1.62 | 0.58 | 2.81 | 0.005 | 0.005 | ** |
 
 _Note: p-values adjusted using Holm-Sidak method for 1 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -290,7 +290,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 16.76, *p* = 0.003, η²_G = 0.447
+- *F* = 6.97, *p* = 0.019, η²_G = 0.032
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -299,7 +299,7 @@ _Post-hoc paired t-tests on complete cases with uncorrected correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| 65 ACC1 vs 65 ALL | 4.09 | 9 | = 0.003 | 1.71 [0.32, 2.26] | large | ** |
+| 65 ACC1 vs 65 ALL | 2.64 | 15 | = 0.019 | 0.35 [0.07, 1.25] | small | * |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -311,10 +311,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**N1 amplitude:** Significant main effect of condition (*p* = 0.008). Post-hoc tests revealed:
-  - 65 ACC1 showed smaller amplitude than 65 ALL (*d* = -0.60)
-**P3b amplitude:** Significant main effect of condition (*p* = 0.003). Post-hoc tests revealed:
-  - 65 ACC1 showed greater amplitude than 65 ALL (*d* = 1.71)
+**N1 amplitude:** Significant main effect of condition (*p* = 0.005). Post-hoc tests revealed:
+  - 65 ACC1 showed smaller amplitude than 65 ALL (*d* = -0.54)
+**P3b amplitude:** Significant main effect of condition (*p* = 0.019). Post-hoc tests revealed:
+  - 65 ACC1 showed greater amplitude than 65 ALL (*d* = 0.35)
 
 ### Research Implications
 

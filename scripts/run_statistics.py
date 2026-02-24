@@ -94,8 +94,11 @@ def generate_plots(stats: ERPStatistics, cfg: dict, output_dir: Path):
             print(f"  Plotting: {component} - {dv}")
 
             try:
-                # Filter data for this component
-                comp_data = stats.filter_data(component=component, **cfg.get('filters', {}))
+                # Filter data for this component and DV without listwise dropping
+                # on unrelated columns (prevents artificial sample-size reduction).
+                plot_filters = {k: v for k, v in cfg.get('filters', {}).items() if k != 'dropna'}
+                comp_data = stats.filter_data(component=component, dropna=False, **plot_filters)
+                comp_data = comp_data.dropna(subset=['condition', dv])
 
                 if len(comp_data) == 0:
                     print(f"    [SKIPPED] No data after filtering")
@@ -254,8 +257,10 @@ def add_effect_size_cis_to_pairwise(stats: ERPStatistics, result: pd.DataFrame, 
             # Check if this is a paired test (within-subjects)
             is_paired = row.get('Paired', True)  # Default to paired for within-subjects
 
-            # Get data for both conditions (filtered by component)
-            comp_data = stats.filter_data(component=component, **cfg.get('filters', {}))
+            # Get data for both conditions using DV-specific NaN handling only.
+            ci_filters = {k: v for k, v in cfg.get('filters', {}).items() if k != 'dropna'}
+            comp_data = stats.filter_data(component=component, dropna=False, **ci_filters)
+            comp_data = comp_data.dropna(subset=['subject_id', 'condition', dv])
 
             if is_paired:
                 # For paired data, we need matched pairs by subject

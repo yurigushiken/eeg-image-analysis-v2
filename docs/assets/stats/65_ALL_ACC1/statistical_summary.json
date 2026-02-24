@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-01-03 00:17:41",
+  "timestamp": "2026-02-23 19:15:10",
   "analysis_id": "tables",
-  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ALL_ACC1_ed18nl1p.yaml",
+  "config_file": "C:\\Users\\yurig\\AppData\\Local\\Temp\\stats_65_ALL_ACC1_g5q1733a.yaml",
   "input_csv": "D:\\eeg-image-analysis-v2\\docs\\assets\\tables\\65_ALL_ACC1\\subject_measurements.csv",
   "components_tested": [
     "Fz",
@@ -50,64 +50,64 @@
   "results": {
     "anova": {
       "Fz_peak_latency_ms": {
-        "error": "No data available for component 'Fz' after filtering"
+        "error": "No data available for component 'Fz' after filtering and NaN handling"
       },
       "Fz_peak_amplitude_roi": {
-        "error": "No data available for component 'Fz' after filtering"
+        "error": "No data available for component 'Fz' after filtering and NaN handling"
       },
       "N1_peak_latency_ms": {
         "component": "N1",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.48275862068965075,
-        "p_unc": 0.49854531882930186,
+        "F": 1.534446764091858,
+        "p_unc": 0.23448135637287265,
         "output_file": "anova_N1_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.00015883100381194293
+        "effect_size_ng2": 0.0017047628987927495
       },
       "N1_peak_amplitude_roi": {
         "component": "N1",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 9.605049689511684,
-        "p_unc": 0.007844824447502978,
+        "F": 10.80439098133184,
+        "p_unc": 0.004990120376882562,
         "output_file": "anova_N1_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.08864567494162713
+        "effect_size_ng2": 0.07100792341452751
       },
       "P1_peak_latency_ms": {
-        "error": "No data available for component 'P1' after filtering"
+        "error": "No data available for component 'P1' after filtering and NaN handling"
       },
       "P1_peak_amplitude_roi": {
-        "error": "No data available for component 'P1' after filtering"
+        "error": "No data available for component 'P1' after filtering and NaN handling"
       },
       "P3b_peak_latency_ms": {
         "component": "P3b",
         "dv": "peak_latency_ms",
         "test": "ANOVA",
-        "F": 0.31034482758621584,
-        "p_unc": 0.5910512317835996,
+        "F": 0.13513513513513511,
+        "p_unc": 0.7183012567931346,
         "output_file": "anova_P3b_peak_latency_ms.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.006359300476947717
+        "effect_size_ng2": 0.001953125
       },
       "P3b_peak_amplitude_roi": {
         "component": "P3b",
         "dv": "peak_amplitude_roi",
         "test": "ANOVA",
-        "F": 16.761012713273146,
-        "p_unc": 0.0027007399543004587,
+        "F": 6.970685826624526,
+        "p_unc": 0.018550763382772128,
         "output_file": "anova_P3b_peak_amplitude_roi.csv",
         "epsilon": 1.0,
-        "effect_size_ng2": 0.4469162294165633
+        "effect_size_ng2": 0.03220948626363275
       }
     },
     "pairwise": {
       "Fz_peak_latency_ms": {
-        "error": "No data available for component 'Fz' after filtering"
+        "error": "No data available for component 'Fz' after filtering and NaN handling"
       },
       "Fz_peak_amplitude_roi": {
-        "error": "No data available for component 'Fz' after filtering"
+        "error": "No data available for component 'Fz' after filtering and NaN handling"
       },
       "N1_peak_latency_ms": {
         "component": "N1",
@@ -128,10 +128,10 @@
         "output_file": "pairwise_N1_peak_amplitude_roi.csv"
       },
       "P1_peak_latency_ms": {
-        "error": "No data available for component 'P1' after filtering"
+        "error": "No data available for component 'P1' after filtering and NaN handling"
       },
       "P1_peak_amplitude_roi": {
-        "error": "No data available for component 'P1' after filtering"
+        "error": "No data available for component 'P1' after filtering and NaN handling"
       },
       "P3b_peak_latency_ms": {
         "component": "P3b",
@@ -163,8 +163,8 @@
         "component": "N1",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 297.19252116781996,
-        "bic": 305.5103293984682,
+        "aic": 322.8641621541133,
+        "bic": 331.3085594246829,
         "converged": true,
         "output_file": "lmm_N1_peak_latency_ms.json",
         "n_conditions": 2,
@@ -175,8 +175,8 @@
         "component": "N1",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 141.95225218788582,
-        "bic": 150.27006041853406,
+        "aic": 145.7040700812007,
+        "bic": 154.1484673517704,
         "converged": true,
         "output_file": "lmm_N1_peak_amplitude_roi.json",
         "n_conditions": 2,
@@ -193,8 +193,8 @@
         "component": "P3b",
         "dv": "peak_latency_ms",
         "test": "LMM",
-        "aic": 201.69214867105052,
-        "bic": 207.98263136115793,
+        "aic": 316.2305066432559,
+        "bic": 324.6749039138256,
         "converged": true,
         "output_file": "lmm_P3b_peak_latency_ms.json",
         "n_conditions": 2,
@@ -205,8 +205,8 @@
         "component": "P3b",
         "dv": "peak_amplitude_roi",
         "test": "LMM",
-        "aic": 99.3254375722713,
-        "bic": 105.61592026237871,
+        "aic": 211.31412163489574,
+        "bic": 219.75851890546542,
         "converged": true,
         "output_file": "lmm_P3b_peak_amplitude_roi.json",
         "n_conditions": 2,

@@ -1,6 +1,6 @@
 # Statistical Analysis Report: tables
 
-**Generated:** 2026-01-03 00:45:38
+**Generated:** 2026-02-23 19:22:56
 
 ---
 
@@ -41,17 +41,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 17 | 99.53 ms | 8.11 | 1.97 | [88.00, 108.00] |
-| Increase by 2 | 14 | 101.43 ms | 5.57 | 1.49 | [92.00, 108.00] |
-| Increase by 3 | 15 | 100.53 ms | 7.23 | 1.87 | [88.00, 108.00] |
+| Increase by 1 | 24 | 98.83 ms | 8.63 | 1.76 | [88.00, 108.00] |
+| Increase by 2 | 24 | 100.00 ms | 7.46 | 1.52 | [88.00, 108.00] |
+| Increase by 3 | 24 | 100.00 ms | 8.42 | 1.72 | [88.00, 108.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 17 | -1.42 µV | 0.78 | 0.19 | [-3.28, -0.44] |
-| Increase by 2 | 14 | -1.43 µV | 1.18 | 0.31 | [-4.17, -0.18] |
-| Increase by 3 | 15 | -1.60 µV | 1.10 | 0.28 | [-3.87, -0.24] |
+| Increase by 1 | 24 | -0.97 µV | 1.00 | 0.20 | [-3.28, 0.89] |
+| Increase by 2 | 24 | -0.86 µV | 1.16 | 0.24 | [-4.17, 0.73] |
+| Increase by 3 | 24 | -0.97 µV | 1.36 | 0.28 | [-3.87, 2.23] |
 
 
 ### 2.2 N1 Component
@@ -60,17 +60,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 23 | 169.22 ms | 19.35 | 4.03 | [136.00, 208.00] |
+| Increase by 1 | 24 | 170.83 ms | 20.51 | 4.19 | [136.00, 208.00] |
 | Increase by 2 | 24 | 168.17 ms | 19.96 | 4.08 | [136.00, 208.00] |
-| Increase by 3 | 23 | 168.87 ms | 19.11 | 3.98 | [136.00, 208.00] |
+| Increase by 3 | 24 | 170.50 ms | 20.32 | 4.15 | [136.00, 208.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 23 | -5.11 µV | 2.18 | 0.45 | [-9.51, -1.04] |
+| Increase by 1 | 24 | -5.02 µV | 2.18 | 0.44 | [-9.51, -1.04] |
 | Increase by 2 | 24 | -5.43 µV | 2.36 | 0.48 | [-10.65, -0.86] |
-| Increase by 3 | 23 | -6.15 µV | 2.47 | 0.51 | [-12.86, -1.94] |
+| Increase by 3 | 24 | -6.06 µV | 2.45 | 0.50 | [-12.86, -1.94] |
 
 
 ### 2.3 P1 Component
@@ -79,17 +79,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 13 | 98.15 ms | 8.89 | 2.46 | [84.00, 108.00] |
-| Increase by 2 | 15 | 99.20 ms | 10.16 | 2.62 | [80.00, 108.00] |
-| Increase by 3 | 12 | 97.00 ms | 11.20 | 3.23 | [80.00, 108.00] |
+| Increase by 1 | 24 | 96.83 ms | 11.68 | 2.38 | [80.00, 108.00] |
+| Increase by 2 | 24 | 96.17 ms | 11.53 | 2.35 | [80.00, 108.00] |
+| Increase by 3 | 24 | 95.50 ms | 11.93 | 2.44 | [80.00, 108.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 13 | 1.88 µV | 1.08 | 0.30 | [0.63, 3.90] |
-| Increase by 2 | 15 | 1.71 µV | 1.24 | 0.32 | [0.36, 4.70] |
-| Increase by 3 | 12 | 2.29 µV | 1.44 | 0.42 | [0.51, 5.72] |
+| Increase by 1 | 24 | 1.08 µV | 1.28 | 0.26 | [-1.10, 3.90] |
+| Increase by 2 | 24 | 1.11 µV | 1.39 | 0.28 | [-1.41, 4.70] |
+| Increase by 3 | 24 | 1.36 µV | 1.50 | 0.31 | [-0.77, 5.72] |
 
 
 ### 2.4 P3b Component
@@ -98,17 +98,17 @@ This section presents means, standard deviations, and sample sizes for each cond
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 16 | 481.50 ms | 45.51 | 11.38 | [392.00, 532.00] |
-| Increase by 2 | 18 | 472.67 ms | 37.63 | 8.87 | [392.00, 528.00] |
-| Increase by 3 | 19 | 468.84 ms | 42.64 | 9.78 | [400.00, 532.00] |
+| Increase by 1 | 24 | 477.83 ms | 40.77 | 8.32 | [392.00, 532.00] |
+| Increase by 2 | 24 | 476.33 ms | 38.13 | 7.78 | [392.00, 532.00] |
+| Increase by 3 | 24 | 470.67 ms | 43.67 | 8.91 | [392.00, 532.00] |
 
 #### Amplitude (Peak)
 
 | Condition | N | Mean | SD | SEM | Range |
 |-----------|---|------|----|----|-------|
-| Increase by 1 | 16 | 4.17 µV | 2.54 | 0.63 | [0.78, 8.79] |
-| Increase by 2 | 18 | 5.22 µV | 2.59 | 0.61 | [1.07, 9.72] |
-| Increase by 3 | 19 | 4.60 µV | 2.38 | 0.55 | [1.27, 9.96] |
+| Increase by 1 | 24 | 2.44 µV | 3.35 | 0.68 | [-3.42, 8.79] |
+| Increase by 2 | 24 | 3.80 µV | 3.39 | 0.69 | [-2.45, 9.72] |
+| Increase by 3 | 24 | 3.85 µV | 2.59 | 0.53 | [0.31, 9.96] |
 
 
 ---
@@ -124,10 +124,10 @@ This section presents the results of repeated-measures statistical tests.
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 311.47, BIC = 322.44
-- **Increase by 2 vs Increase by 1**: *β* = 0.23, *SE* = 1.795, *z* = 0.126, *p* = 0.899
-- **Increase by 3 vs Increase by 1**: *β* = 0.13, *SE* = 1.697, *z* = 0.075, *p* = 0.940
-- **SNR**: *β* = 0.72, *SE* = 0.518, *z* = 1.397, *p* = 0.162
+- AIC = 490.98, BIC = 504.64
+- **Increase by 2 vs Increase by 1**: *β* = 1.60, *SE* = 1.495, *z* = 1.068, *p* = 0.285
+- **Increase by 3 vs Increase by 1**: *β* = 1.37, *SE* = 1.479, *z* = 0.926, *p* = 0.354
+- **SNR**: *β* = 0.80, *SE* = 0.454, *z* = 1.756, *p* = 0.079
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -140,9 +140,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | -0.23 | 1.79 | -0.13 | 0.899 | 0.999 | n.s. |
-| Increase by 1 - Increase by 3 | -0.13 | 1.70 | -0.08 | 0.940 | 0.999 | n.s. |
-| Increase by 2 - Increase by 3 | 0.10 | 1.76 | 0.06 | 0.955 | 0.999 | n.s. |
+| Increase by 1 - Increase by 2 | -1.60 | 1.50 | -1.07 | 0.285 | 0.635 | n.s. |
+| Increase by 1 - Increase by 3 | -1.37 | 1.48 | -0.93 | 0.354 | 0.635 | n.s. |
+| Increase by 2 - Increase by 3 | 0.23 | 1.48 | 0.15 | 0.878 | 0.878 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -150,8 +150,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.73, *p* = 0.499, η²_G = 0.031
-- Greenhouse-Geisser corrected: *p* = 0.446 (ε = 0.635)
+- *F* = 0.38, *p* = 0.689, η²_G = 0.005
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -160,9 +159,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 1.00 | 8 | = 0.520 | 0.43 [-0.72, 0.72] | small | n.s. |
-| Increase by 1 vs Increase by 3 | 1.84 | 8 | = 0.311 | 0.30 [-0.07, 1.32] | small | n.s. |
-| Increase by 2 vs Increase by 3 | -0.19 | 8 | = 0.855 | -0.07 [-0.84, 0.51] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | -0.61 | 23 | = 0.819 | -0.14 [-0.55, 0.30] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -0.91 | 23 | = 0.819 | -0.14 [-0.61, 0.24] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.00 | 23 | = 1.000 | 0.00 [-0.42, 0.42] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -172,10 +171,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 109.40, BIC = 120.37
-- **Increase by 2 vs Increase by 1**: *β* = -0.16, *SE* = 0.221, *z* = -0.707, *p* = 0.480
-- **Increase by 3 vs Increase by 1**: *β* = -0.33, *SE* = 0.214, *z* = -1.539, *p* = 0.124
-- **SNR**: *β* = -0.35, *SE* = 0.057, *z* = -6.089, *p* < .001
+- AIC = 220.56, BIC = 234.22
+- **Increase by 2 vs Increase by 1**: *β* = -0.00, *SE* = 0.262, *z* = -0.016, *p* = 0.987
+- **Increase by 3 vs Increase by 1**: *β* = -0.05, *SE* = 0.259, *z* = -0.205, *p* = 0.838
+- **SNR**: *β* = -0.22, *SE* = 0.075, *z* = -2.897, *p* = 0.004
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -188,9 +187,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | 0.16 | 0.22 | 0.71 | 0.480 | 0.681 | n.s. |
-| Increase by 1 - Increase by 3 | 0.33 | 0.21 | 1.54 | 0.124 | 0.328 | n.s. |
-| Increase by 2 - Increase by 3 | 0.17 | 0.22 | 0.78 | 0.435 | 0.681 | n.s. |
+| Increase by 1 - Increase by 2 | 0.00 | 0.26 | 0.02 | 0.987 | 0.996 | n.s. |
+| Increase by 1 - Increase by 3 | 0.05 | 0.26 | 0.20 | 0.838 | 0.996 | n.s. |
+| Increase by 2 - Increase by 3 | 0.05 | 0.26 | 0.19 | 0.851 | 0.996 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -198,7 +197,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.06, *p* = 0.945, η²_G = 0.003
+- *F* = 0.11, *p* = 0.893, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -207,9 +206,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 0.24 | 8 | = 0.939 | 0.09 [-0.55, 0.89] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 0.35 | 8 | = 0.939 | 0.13 [-0.36, 0.93] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | 0.08 | 8 | = 0.939 | 0.03 [-0.60, 0.75] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | -0.48 | 23 | = 0.993 | -0.10 [-0.52, 0.33] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -0.01 | 23 | = 0.993 | -0.00 [-0.42, 0.42] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.36 | 23 | = 0.993 | 0.09 [-0.35, 0.50] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -222,10 +221,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 560.13, BIC = 573.62
-- **Increase by 2 vs Increase by 1**: *β* = -3.40, *SE* = 2.294, *z* = -1.484, *p* = 0.138
-- **Increase by 3 vs Increase by 1**: *β* = -1.65, *SE* = 2.315, *z* = -0.713, *p* = 0.476
-- **SNR**: *β* = -0.56, *SE* = 0.291, *z* = -1.911, *p* = 0.056
+- AIC = 573.96, BIC = 587.62
+- **Increase by 2 vs Increase by 1**: *β* = -3.82, *SE* = 2.200, *z* = -1.737, *p* = 0.082
+- **Increase by 3 vs Increase by 1**: *β* = -1.65, *SE* = 2.223, *z* = -0.744, *p* = 0.457
+- **SNR**: *β* = -0.57, *SE* = 0.285, *z* = -2.010, *p* = 0.044
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -238,9 +237,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | 3.41 | 2.29 | 1.48 | 0.138 | 0.359 | n.s. |
-| Increase by 1 - Increase by 3 | 1.65 | 2.32 | 0.71 | 0.476 | 0.672 | n.s. |
-| Increase by 2 - Increase by 3 | -1.75 | 2.21 | -0.79 | 0.428 | 0.672 | n.s. |
+| Increase by 1 - Increase by 2 | 3.82 | 2.20 | 1.74 | 0.082 | 0.227 | n.s. |
+| Increase by 1 - Increase by 3 | 1.65 | 2.22 | 0.74 | 0.457 | 0.521 | n.s. |
+| Increase by 2 - Increase by 3 | -2.17 | 2.13 | -1.02 | 0.308 | 0.521 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -248,7 +247,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 0.64, *p* = 0.530, η²_G = 0.003
+- *F* = 0.85, *p* = 0.435, η²_G = 0.004
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -257,9 +256,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 1.02 | 22 | = 0.477 | 0.13 [-0.22, 0.65] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 0.13 | 22 | = 0.894 | 0.02 [-0.40, 0.46] | negligible | n.s. |
-| Increase by 2 vs Increase by 3 | -1.07 | 22 | = 0.477 | -0.11 [-0.66, 0.21] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | 1.16 | 23 | = 0.385 | 0.13 [-0.19, 0.67] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 0.13 | 23 | = 0.894 | 0.02 [-0.39, 0.45] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | -1.24 | 23 | = 0.385 | -0.12 [-0.68, 0.18] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -269,10 +268,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 266.63, BIC = 280.12
-- **Increase by 2 vs Increase by 1**: *β* = -0.59, *SE* = 0.305, *z* = -1.937, *p* = 0.053
-- **Increase by 3 vs Increase by 1**: *β* = -1.31, *SE* = 0.308, *z* = -4.239, *p* < .001
-- **SNR**: *β* = -0.11, *SE* = 0.039, *z* = -2.930, *p* = 0.003
+- AIC = 272.29, BIC = 285.95
+- **Increase by 2 vs Increase by 1**: *β* = -0.65, *SE* = 0.296, *z* = -2.190, *p* = 0.029
+- **Increase by 3 vs Increase by 1**: *β* = -1.31, *SE* = 0.299, *z* = -4.397, *p* < .001
+- **SNR**: *β* = -0.12, *SE* = 0.038, *z* = -3.042, *p* = 0.002
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -285,9 +284,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | 0.59 | 0.31 | 1.94 | 0.053 | 0.053 | n.s. |
-| Increase by 1 - Increase by 3 | 1.31 | 0.31 | 4.24 | < .001 | < .001 | *** |
-| Increase by 2 - Increase by 3 | 0.71 | 0.29 | 2.43 | 0.015 | 0.030 | * |
+| Increase by 1 - Increase by 2 | 0.65 | 0.30 | 2.19 | 0.029 | 0.039 | * |
+| Increase by 1 - Increase by 3 | 1.31 | 0.30 | 4.40 | < .001 | < .001 | *** |
+| Increase by 2 - Increase by 3 | 0.67 | 0.29 | 2.33 | 0.020 | 0.039 | * |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -295,7 +294,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 5.71, *p* = 0.006, η²_G = 0.034
+- *F* = 6.05, *p* = 0.005, η²_G = 0.034
 - **Interpretation:** The main effect of condition was **significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -304,9 +303,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 1.16 | 22 | = 0.258 | 0.15 [-0.20, 0.68] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 3.15 | 22 | = 0.014 | 0.45 [0.18, 1.13] | small | * |
-| Increase by 2 vs Increase by 3 | 2.27 | 22 | = 0.050 | 0.28 [0.02, 0.93] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 1.39 | 23 | = 0.179 | 0.18 [-0.15, 0.71] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 3.31 | 23 | = 0.009 | 0.45 [0.21, 1.14] | small | ** |
+| Increase by 2 vs Increase by 3 | 2.15 | 23 | = 0.063 | 0.26 [-0.00, 0.88] | small | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -319,10 +318,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 286.28, BIC = 296.41
-- **Increase by 2 vs Increase by 1**: *β* = -3.08, *SE* = 2.057, *z* = -1.499, *p* = 0.134
-- **Increase by 3 vs Increase by 1**: *β* = -4.24, *SE* = 1.988, *z* = -2.133, *p* = 0.033
-- **SNR**: *β* = -0.05, *SE* = 0.914, *z* = -0.055, *p* = 0.956
+- AIC = 545.53, BIC = 559.19
+- **Increase by 2 vs Increase by 1**: *β* = -0.49, *SE* = 2.207, *z* = -0.224, *p* = 0.823
+- **Increase by 3 vs Increase by 1**: *β* = -1.36, *SE* = 2.194, *z* = -0.622, *p* = 0.534
+- **SNR**: *β* = 0.58, *SE* = 0.827, *z* = 0.705, *p* = 0.481
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -335,9 +334,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | 3.08 | 2.06 | 1.50 | 0.134 | 0.250 | n.s. |
-| Increase by 1 - Increase by 3 | 4.24 | 1.99 | 2.13 | 0.033 | 0.096 | n.s. |
-| Increase by 2 - Increase by 3 | 1.16 | 1.95 | 0.59 | 0.553 | 0.553 | n.s. |
+| Increase by 1 - Increase by 2 | 0.49 | 2.21 | 0.22 | 0.823 | 0.906 | n.s. |
+| Increase by 1 - Increase by 3 | 1.37 | 2.19 | 0.62 | 0.534 | 0.899 | n.s. |
+| Increase by 2 - Increase by 3 | 0.87 | 2.21 | 0.39 | 0.694 | 0.906 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -345,7 +344,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.42, *p* = 0.275, η²_G = 0.019
+- *F* = 0.18, *p* = 0.838, η²_G = 0.002
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -354,9 +353,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 1.26 | 7 | = 0.374 | 0.27 [-0.26, 1.39] | small | n.s. |
-| Increase by 1 vs Increase by 3 | 1.66 | 7 | = 0.374 | 0.30 [-0.16, 1.56] | small | n.s. |
-| Increase by 2 vs Increase by 3 | 0.26 | 7 | = 0.802 | 0.05 [-0.43, 0.94] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | 0.25 | 23 | = 0.807 | 0.06 [-0.37, 0.47] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 0.71 | 23 | = 0.807 | 0.11 [-0.28, 0.57] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.33 | 23 | = 0.807 | 0.06 [-0.36, 0.49] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -366,10 +365,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 90.85, BIC = 100.98
-- **Increase by 2 vs Increase by 1**: *β* = 0.43, *SE* = 0.202, *z* = 2.151, *p* = 0.032
-- **Increase by 3 vs Increase by 1**: *β* = 0.61, *SE* = 0.207, *z* = 2.950, *p* = 0.003
-- **SNR**: *β* = 0.51, *SE* = 0.084, *z* = 5.998, *p* < .001
+- AIC = 219.42, BIC = 233.08
+- **Increase by 2 vs Increase by 1**: *β* = 0.13, *SE* = 0.222, *z* = 0.569, *p* = 0.570
+- **Increase by 3 vs Increase by 1**: *β* = 0.26, *SE* = 0.220, *z* = 1.198, *p* = 0.231
+- **SNR**: *β* = 0.33, *SE* = 0.085, *z* = 3.867, *p* < .001
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -382,9 +381,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | -0.43 | 0.20 | -2.15 | 0.032 | 0.062 | n.s. |
-| Increase by 1 - Increase by 3 | -0.61 | 0.21 | -2.95 | 0.003 | 0.009 | ** |
-| Increase by 2 - Increase by 3 | -0.18 | 0.19 | -0.92 | 0.360 | 0.360 | n.s. |
+| Increase by 1 - Increase by 2 | -0.13 | 0.22 | -0.57 | 0.570 | 0.784 | n.s. |
+| Increase by 1 - Increase by 3 | -0.26 | 0.22 | -1.20 | 0.231 | 0.545 | n.s. |
+| Increase by 2 - Increase by 3 | -0.14 | 0.22 | -0.62 | 0.535 | 0.784 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -392,8 +391,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 7.90, *p* = 0.005, η²_G = 0.099
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 0.80, *p* = 0.455, η²_G = 0.009
+- **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -401,9 +400,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | -0.70 | 7 | = 0.507 | -0.15 [-1.02, 0.54] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | -3.23 | 7 | = 0.022 | -0.79 [-2.29, -0.23] | medium | * |
-| Increase by 2 vs Increase by 3 | -4.25 | 7 | = 0.011 | -0.51 [-1.28, 0.16] | medium | * |
+| Increase by 1 vs Increase by 2 | -0.10 | 23 | = 0.923 | -0.02 [-0.44, 0.40] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | -1.15 | 23 | = 0.391 | -0.20 [-0.66, 0.19] | small | n.s. |
+| Increase by 2 vs Increase by 3 | -1.35 | 23 | = 0.391 | -0.17 [-0.71, 0.15] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -416,10 +415,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 554.78, BIC = 566.61
-- **Increase by 2 vs Increase by 1**: *β* = -8.82, *SE* = 13.385, *z* = -0.659, *p* = 0.510
-- **Increase by 3 vs Increase by 1**: *β* = -12.47, *SE* = 13.140, *z* = -0.949, *p* = 0.342
-- **SNR**: *β* = -0.11, *SE* = 1.210, *z* = -0.092, *p* = 0.927
+- AIC = 745.65, BIC = 759.31
+- **Increase by 2 vs Increase by 1**: *β* = -1.45, *SE* = 10.904, *z* = -0.133, *p* = 0.894
+- **Increase by 3 vs Increase by 1**: *β* = -8.86, *SE* = 11.005, *z* = -0.805, *p* = 0.421
+- **SNR**: *β* = -0.97, *SE* = 0.855, *z* = -1.134, *p* = 0.257
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -432,9 +431,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | 8.82 | 13.39 | 0.66 | 0.510 | 0.760 | n.s. |
-| Increase by 1 - Increase by 3 | 12.47 | 13.14 | 0.95 | 0.342 | 0.716 | n.s. |
-| Increase by 2 - Increase by 3 | 3.66 | 12.95 | 0.28 | 0.778 | 0.778 | n.s. |
+| Increase by 1 - Increase by 2 | 1.45 | 10.90 | 0.13 | 0.894 | 0.894 | n.s. |
+| Increase by 1 - Increase by 3 | 8.86 | 11.01 | 0.80 | 0.421 | 0.806 | n.s. |
+| Increase by 2 - Increase by 3 | 7.41 | 11.01 | 0.67 | 0.501 | 0.806 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -442,8 +441,7 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 1.02, *p* = 0.374, η²_G = 0.034
-- Greenhouse-Geisser corrected: *p* = 0.356 (ε = 0.741)
+- *F* = 0.23, *p* = 0.795, η²_G = 0.006
 - **Interpretation:** The main effect of condition was **not significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
@@ -452,9 +450,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | 0.23 | 15 | = 0.825 | 0.08 [-0.48, 0.59] | negligible | n.s. |
-| Increase by 1 vs Increase by 3 | 1.14 | 15 | = 0.408 | 0.39 [-0.26, 0.83] | small | n.s. |
-| Increase by 2 vs Increase by 3 | 1.69 | 15 | = 0.335 | 0.38 [-0.50, 0.50] | small | n.s. |
+| Increase by 1 vs Increase by 2 | 0.15 | 23 | = 0.884 | 0.04 [-0.39, 0.45] | negligible | n.s. |
+| Increase by 1 vs Increase by 3 | 0.56 | 23 | = 0.879 | 0.17 [-0.31, 0.54] | negligible | n.s. |
+| Increase by 2 vs Increase by 3 | 0.55 | 23 | = 0.879 | 0.14 [-0.31, 0.54] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -464,10 +462,10 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 **Linear Mixed-Effects Model (Primary Analysis):**
 
 - Model converged successfully
-- AIC = 199.66, BIC = 211.48
-- **Increase by 2 vs Increase by 1**: *β* = 0.97, *SE* = 0.353, *z* = 2.762, *p* = 0.006
-- **Increase by 3 vs Increase by 1**: *β* = 0.82, *SE* = 0.335, *z* = 2.443, *p* = 0.015
-- **SNR**: *β* = 0.19, *SE* = 0.053, *z* = 3.535, *p* < .001
+- AIC = 302.45, BIC = 316.11
+- **Increase by 2 vs Increase by 1**: *β* = 1.37, *SE* = 0.317, *z* = 4.307, *p* < .001
+- **Increase by 3 vs Increase by 1**: *β* = 1.46, *SE* = 0.323, *z* = 4.503, *p* < .001
+- **SNR**: *β* = 0.02, *SE* = 0.036, *z* = 0.577, *p* = 0.564
 
 _Reference condition: **Increase by 1** (all condition effects are contrasts vs. this baseline)._
 _For complete inference across all condition pairs, see the LMM Pairwise Comparisons below._
@@ -480,9 +478,9 @@ All pairwise comparisons between conditions (Holm-Sidak correction):
 
 | Comparison | β | SE | z | p (unadj) | p (adj) | Sig |
 |------------|---|----|----|-----------|---------|-----|
-| Increase by 1 - Increase by 2 | -0.97 | 0.35 | -2.76 | 0.006 | 0.017 | * |
-| Increase by 1 - Increase by 3 | -0.82 | 0.33 | -2.44 | 0.015 | 0.029 | * |
-| Increase by 2 - Increase by 3 | 0.16 | 0.34 | 0.46 | 0.643 | 0.643 | n.s. |
+| Increase by 1 - Increase by 2 | -1.37 | 0.32 | -4.31 | < .001 | < .001 | *** |
+| Increase by 1 - Increase by 3 | -1.46 | 0.32 | -4.50 | < .001 | < .001 | *** |
+| Increase by 2 - Increase by 3 | -0.09 | 0.32 | -0.28 | 0.782 | 0.782 | n.s. |
 
 _Note: p-values adjusted using Holm-Sidak method for 3 comparisons._
 _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
@@ -490,8 +488,8 @@ _Tests use Wald z-statistics on fixed-effect contrasts (MixedLM)._
 
 **Repeated-Measures ANOVA (Supplementary Analysis):**
 
-- *F* = 6.80, *p* = 0.004, η²_G = 0.052
-- **Interpretation:** The main effect of condition was **significant**.
+- *F* = 12.48, *p* < .001, η²_G = 0.044
+- **Interpretation:** The main effect of condition was **highly significant**.
 
 **Pairwise Comparisons (Supplementary Analysis):**
 
@@ -499,9 +497,9 @@ _Post-hoc paired t-tests on complete cases with FDR correction:_
 
 | Comparison | *t* | *df* | *p* (corrected) | Cohen's *d* | Effect Size | Sig. |
 |------------|-----|------|----------------|-------------|-------------|------|
-| Increase by 1 vs Increase by 2 | -3.48 | 15 | = 0.010 | -0.53 [-1.49, -0.24] | medium | * |
-| Increase by 1 vs Increase by 3 | -2.59 | 15 | = 0.031 | -0.37 [-1.23, -0.06] | small | * |
-| Increase by 2 vs Increase by 3 | 1.17 | 15 | = 0.261 | 0.18 [-0.17, 0.85] | negligible | n.s. |
+| Increase by 1 vs Increase by 2 | -4.63 | 23 | < .001 | -0.41 [-1.45, -0.44] | small | *** |
+| Increase by 1 vs Increase by 3 | -4.45 | 23 | < .001 | -0.47 [-1.41, -0.41] | small | *** |
+| Increase by 2 vs Increase by 3 | -0.15 | 23 | = 0.882 | -0.02 [-0.45, 0.39] | negligible | n.s. |
 
 _Note: These are paired t-tests restricted to subjects with all conditions (listwise deletion). LMM pairwise (if present above) uses all available data via mixed models._
 _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
@@ -513,14 +511,11 @@ _Legend: * p < .05, ** p < .01, *** p < .001; n.s. = not significant_
 
 ### Key Findings
 
-**N1 amplitude:** Significant main effect of condition (*p* = 0.006). Post-hoc tests revealed:
+**N1 amplitude:** Significant main effect of condition (*p* = 0.005). Post-hoc tests revealed:
   - Increase by 1 showed greater amplitude than Increase by 3 (*d* = 0.45)
-**P1 amplitude:** Significant main effect of condition (*p* = 0.005). Post-hoc tests revealed:
-  - Increase by 1 showed smaller amplitude than Increase by 3 (*d* = -0.79)
-  - Increase by 2 showed smaller amplitude than Increase by 3 (*d* = -0.51)
-**P3b amplitude:** Significant main effect of condition (*p* = 0.004). Post-hoc tests revealed:
-  - Increase by 1 showed smaller amplitude than Increase by 2 (*d* = -0.53)
-  - Increase by 1 showed smaller amplitude than Increase by 3 (*d* = -0.37)
+**P3b amplitude:** Significant main effect of condition (*p* < .001). Post-hoc tests revealed:
+  - Increase by 1 showed smaller amplitude than Increase by 2 (*d* = -0.41)
+  - Increase by 1 showed smaller amplitude than Increase by 3 (*d* = -0.47)
 
 ### Research Implications
 

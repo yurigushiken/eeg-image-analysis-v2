@@ -1,0 +1,134 @@
+The Hierarchy of Your Data
+Your data has a nested structure:
+
+
+Study
+ └── 24 Subjects
+      └── Each subject has trials for each condition
+           └── Each trial is classified by the decoder
+The question is: At what level do you want to make claims?
+
+Two Fundamental Approaches
+Approach 1: Fixed Effects (Pool Everything)
+
+Combine all trials from all subjects → One big analysis → One result
+What it claims: "In THIS particular sample of 24 people, the effect exists."
+
+Problem: You can't generalize. Maybe these 24 people are weird. A single unusual subject with many trials can dominate your results.
+
+When used: Rarely in cognitive neuroscience. Sometimes in single-subject clinical cases.
+
+Approach 2: Random Effects (Subject-Level Inference) ✓
+
+For each subject → Compute their effect → Test across subjects
+What it claims: "The effect exists IN THE POPULATION from which these 24 subjects were drawn."
+
+Why it works: Each subject contributes equally (one data point). The variance across subjects reflects true individual differences. If you ran the study again with 24 new people, you'd expect similar results.
+
+This is the standard in cognitive neuroscience and what you're doing.
+
+Your Current Order of Operations
+Let me trace exactly what happens in your pipeline:
+
+
+Step 1: Trial-level predictions
+        For each trial, the decoder predicts class A or B
+        
+Step 2: Subject-level accuracy (within each seed)
+        For subject S, pair 1v2:
+            accuracy_S = (correct predictions) / (total trials for S)
+            
+Step 3: Average across seeds (if multiple)
+        subject_mean_S = mean(accuracy across seeds)
+        [In your case, seeds are identical, so this is a no-op]
+        
+Step 4: Group-level test
+        Take the 24 subject means → t-test vs 50%
+        
+        H₀: μ = 50% (population mean accuracy is chance)
+        H₁: μ > 50% (population can discriminate)
+This order is correct. You're treating subjects as the unit of observation, which allows population-level inference.
+
+Why This Matters for Your Research Questions
+Your Goal: "Show differences in numerical representation depending on condition"
+To make this claim generalizable, you need to show:
+
+Not just "my 24 subjects can distinguish 1 from 5"
+But "PEOPLE IN GENERAL can distinguish 1 from 5"
+Subject-level inference gives you this. When you report p < 0.001 for 1v5, you're saying:
+
+"If we sampled new subjects from this population, we'd expect them to also show above-chance discrimination of 1 vs 5."
+
+The Alternative You're NOT Doing (And Shouldn't)
+Some researchers pool trials across subjects:
+
+
+All 3000 trials combined → Train/test → Report single accuracy
+Problems:
+
+No generalization — Can't claim the effect exists beyond these specific people
+Unequal contribution — Subject with 200 trials counts more than subject with 50 trials
+Pseudoreplication — Trials within a subject aren't independent; treating them as independent inflates your N artificially
+Can't compute valid p-values — What's your N? 3000 trials? But they're not independent samples.
+Visual: Your Pipeline's Logic
+
+Subject 1:  [trials] → 62% accuracy ─┐
+Subject 2:  [trials] → 58% accuracy  │
+Subject 3:  [trials] → 71% accuracy  │
+    ...                              ├──→ t-test on 24 values → p-value
+Subject 23: [trials] → 55% accuracy  │
+Subject 24: [trials] → 64% accuracy ─┘
+
+Question answered: "Is the POPULATION mean > 50%?"
+N = 24 (subjects, not trials)
+For Your Specific Analyses
+Pairwise Decoding (1v2, 1v3, etc.)
+✓ Correct approach: Subject means → t-test
+✓ Your implementation: Doing this correctly
+
+Prime Memory (25v65 as "2v6 in context of 5")
+✓ Same logic applies: Each subject has an accuracy for this contrast → average across subjects → test
+
+Model Comparison (Brain RDM vs Theory RDM)
+✓ Correct approach: Each subject has a correlation (brain↔theory) → t-test across subjects
+✓ Your implementation: Doing this correctly
+
+Temporal Analysis
+✓ Same principle: At each time window, each subject has an accuracy → test across subjects at each window → FDR correct across windows
+
+What Would Be WRONG
+Mistake	Why It's Wrong
+Pooling trials across subjects	Pseudoreplication, no generalization
+Averaging conditions before testing	Loses condition-specific effects
+Testing at trial level	Inflated N, non-independent observations
+Treating seeds as independent observations	Would inflate N from 24 to 72
+You're avoiding all of these mistakes.
+
+The "Order of Operations" Summary
+
+1. Trials → Subject accuracy     (aggregate within subject)
+2. Seeds → Subject mean          (average across seeds, if any variance)
+3. Subjects → Population test    (t-test, N=24)
+4. Pairs/Windows → Correction    (Holm or FDR across multiple tests)
+This is the standard, correct order for cognitive neuroscience research.
+
+One Nuance: Balanced Accuracy at Which Level?
+You compute balanced accuracy at the subject level:
+
+
+For subject S, pair 1v2:
+    Class 1 trials: 8 correct / 10 = 80%
+    Class 2 trials: 5 correct / 8 = 62.5%
+    Balanced accuracy = (80% + 62.5%) / 2 = 71.25%
+This is correct. You're balancing within each subject's data, then averaging balanced accuracies across subjects.
+
+Final Confirmation
+Aspect	Your Approach	Correct?
+Unit of inference	Subject (N=24)	✓
+Averaging order	Trials→Subject→Group	✓
+Balanced accuracy	Computed per subject	✓
+Multiple comparison correction	Holm (static), FDR (temporal)	✓
+Seeds	Averaged before subject-level test	✓
+You're doing this correctly. Your results are interpretable as population-level claims, which is exactly what you want for publication.
+
+Want me to walk through a specific analysis (like prime memory) to show how this logic applies there too?

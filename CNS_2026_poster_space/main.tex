@@ -1,0 +1,102 @@
+\documentclass[final]{article}
+
+\usepackage[paperwidth=90in,paperheight=42in,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{caption}
+\usepackage{helvet}
+\usepackage{url}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.26em}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.18em,topsep=0.18em}
+\captionsetup{font={small},labelfont=bf}
+
+% Subtle Columbia-blue palette.
+\definecolor{ColumbiaBlue}{HTML}{9BC4E2}
+\definecolor{ColumbiaBlueDark}{HTML}{3A6C8E}
+\definecolor{PanelBG}{HTML}{F7FBFF}
+\definecolor{TextDark}{HTML}{1F2A33}
+
+\color{TextDark}
+
+\tcbset{
+  posterbox/.style={
+    colback=PanelBG,
+    colframe=ColumbiaBlueDark,
+    boxrule=1.8pt,
+    arc=7pt,
+    left=12pt,
+    right=12pt,
+    top=10pt,
+    bottom=10pt
+  }
+}
+
+\newcommand{\SectionTitle}[1]{{\color{ColumbiaBlueDark}\bfseries\fontsize{50}{56}\selectfont #1}}
+\newcommand{\BodyText}{\fontsize{30}{36}\selectfont}
+\newcommand{\SmallText}{\fontsize{26}{30}\selectfont}
+
+\begin{document}
+\BodyText
+
+% Header banner with centered title block
+\noindent
+\begin{minipage}[t]{0.16\textwidth}
+  \vspace{0pt}
+  \begin{flushleft}
+    \includegraphics[height=2.8in]{media/tc-logo.png}
+  \end{flushleft}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.66\textwidth}
+  \vspace{0pt}
+  \begin{center}
+    {\color{ColumbiaBlueDark}\bfseries\fontsize{96}{104}\selectfont Neurobehavioral Dynamics of Numerical Change}\par
+    \vspace{0.10em}
+    {\bfseries\fontsize{56}{62}\selectfont Directional and Numerical Distance Processing}\par
+    \vspace{0.18em}
+    {\fontsize{36}{42}\selectfont
+    Vanessa Rhee, Zhiyi Chen, Mischa Gushiken, Kiren Bakhru, Hanyi Xu, Nick Bisbee, Yuexin Li, Jean Ee Tang, Peter Gordon}\par
+    {\fontsize{30}{36}\selectfont
+    Teachers College, Columbia University \quad|\quad Johns Hopkins University \quad|\quad New York University}
+  \end{center}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.16\textwidth}
+  \vspace{0pt}
+  \begin{flushright}
+    \includegraphics[height=2.5in]{media/nyu-logo.png}\hspace{0.16in}
+    \includegraphics[height=2.5in]{media/jhu-logo.png}
+  \end{flushright}
+\end{minipage}
+
+\vspace{0.15in}
+
+% Fixed four-column poster body
+\noindent
+\begin{minipage}[t][36.5in]{0.242\textwidth}
+\vspace{0pt}
+\input{sections/col1}
+\end{minipage}\hfill
+\begin{minipage}[t][36.5in]{0.242\textwidth}
+\vspace{0pt}
+\input{sections/col2}
+\end{minipage}\hfill
+\begin{minipage}[t][36.5in]{0.242\textwidth}
+\vspace{0pt}
+\input{sections/col3}
+\end{minipage}\hfill
+\begin{minipage}[t][36.5in]{0.242\textwidth}
+\vspace{0pt}
+\input{sections/col4}
+\end{minipage}
+
+\end{document}

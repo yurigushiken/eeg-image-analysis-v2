@@ -1,17 +1,17 @@
 {
   "analysis_id": "prime_abcde_ACC1",
-  "duration_seconds": 26.607,
+  "duration_seconds": 11.534,
   "num_figures": 6,
-  "largest_png_bytes": 770471,
-  "total_png_bytes": 3735123,
+  "largest_png_bytes": 746658,
+  "total_png_bytes": 3616680,
   "largest_png_ok": true,
   "cumulative_png_ok": true,
   "figures": {
-    "prime_abcde_ACC1-collapsed_localizer.png": 555559,
-    "prime_abcde_ACC1-P1.png": 705207,
-    "prime_abcde_ACC1-N1.png": 715835,
-    "prime_abcde_ACC1-P3b.png": 770471,
-    "prime_abcde_ACC1-Fz.png": 693391,
-    "prime_abcde_ACC1-P1_N1_peak_to_peak.png": 294660
+    "prime_abcde_ACC1-collapsed_localizer.png": 543883,
+    "prime_abcde_ACC1-P1.png": 669463,
+    "prime_abcde_ACC1-N1.png": 707614,
+    "prime_abcde_ACC1-P3b.png": 746658,
+    "prime_abcde_ACC1-Fz.png": 670017,
+    "prime_abcde_ACC1-P1_N1_peak_to_peak.png": 279045
   }
 }

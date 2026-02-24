@@ -16,7 +16,7 @@ selection:
     response: ACC1
     color: '#d62728'
     linestyle: '-'
-  - name: Cardinality (no change)
+  - name: No Change
     conditions: ['11','22','33','44','55','66']
     response: ALL  # Cardinality data is only available under ALL
     color: '#1f77b4'
